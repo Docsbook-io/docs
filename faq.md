@@ -371,13 +371,13 @@ A: Vercel scales automatically. Don't worry about load.
 
 **Q: Is there a Terms of Service?**
 
-A: Yes, see [Terms](../terms.md) (coming soon).
+A: Yes, see [Terms](https://docsbook.io/terms) (coming soon).
 
 ---
 
 **Q: What about a Privacy Policy?**
 
-A: Yes, see [Privacy](../privacy.md) (coming soon).
+A: Yes, see [Privacy](https://docsbook.io/privacy) (coming soon).
 
 ---
 
