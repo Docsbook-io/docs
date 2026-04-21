@@ -1,6 +1,8 @@
 # Docsbook — User Documentation
 
-Welcome to Docsbook! Here you'll find answers to all questions about how to use our service.
+Welcome to Docsbook!
+
+Here you'll find answers to all questions about how to use our service.
 
 ## Quick Start
 
