@@ -4,7 +4,7 @@
 
 **Q: What is Docsbook?**
 
-A: Docsbook transforms your GitHub documentation into a beautiful site in 30 seconds. Just connect your GitHub repository and you're done!
+A: Docsbook transforms your GitHub documentation into a beautiful site in 5 seconds. Just connect your GitHub repository and you're done!
 
 ---
 

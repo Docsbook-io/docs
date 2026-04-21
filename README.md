@@ -25,4 +25,4 @@ Have questions? [Contact us](mailto:support@docsbook.io)
 
 ---
 
-**Docsbook** — transform your GitHub documentation into a beautiful site in 30 seconds.
+**Docsbook** — transform your GitHub documentation into a beautiful site in 5 seconds.
