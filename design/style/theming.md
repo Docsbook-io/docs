@@ -38,8 +38,8 @@ The visitor's preference is saved in their browser — so returning visitors alw
 When enabled, a sun/moon icon appears in the header or sidebar for visitors to switch themes manually.
 
 You can also control *where* the toggle appears:
-- **In the header** → via [Header Options](../design/header#header-options)
-- **In the sidebar** → via [Sidebar Control](../design/sidebar)
+- **In the header** → via [Header Options](../layout/header#header-options)
+- **In the sidebar** → via [Sidebar Control](../layout/sidebar)
 
 ---
 

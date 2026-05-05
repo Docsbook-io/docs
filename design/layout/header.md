@@ -59,8 +59,8 @@ You can place the theme toggle and language switcher in the header instead of (o
 - Header placement: more visible, less click-depth for new visitors.
 - Sidebar placement: saves header space, better for dense headers.
 
-[Sidebar options →](../design/sidebar)
-[Theming options →](../design/theming)
+[Sidebar options →](./sidebar)
+[Theming options →](../style/theming)
 
 ---
 

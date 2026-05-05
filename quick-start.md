@@ -45,6 +45,6 @@ Your documentation site is live. It automatically syncs with GitHub.
 ---
 
 **Additional guides:**
-- [How to manage documentation](./guides/managing-docs.md)
-- [Setting up a custom domain](./guides/custom-domain.md)
-- [Premium features](./guides/premium.md)
+- [How to manage documentation](./guides/getting-started/managing-docs.md)
+- [Setting up a custom domain](./guides/advanced/custom-domain.md)
+- [Premium features](./guides/advanced/premium.md)

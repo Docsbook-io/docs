@@ -45,7 +45,7 @@ Shows the current page location as a path above the heading:
 Home > Guides > Custom Domain
 ```
 
-[More about breadcrumbs in sidebar settings →](../design/sidebar)
+[More about breadcrumbs in sidebar settings →](../../design/layout/sidebar)
 
 ---
 

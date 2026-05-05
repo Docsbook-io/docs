@@ -29,7 +29,7 @@ You'll see:
 |---|---|
 | Page has mostly 👎 | Rewrite for clarity, add examples, or split into smaller pages |
 | Page has mostly 👍 | Use it as a template for writing new pages |
-| Page has no ratings | It may not be getting traffic — check [Web Analytics](../analytics/overview) |
+| Page has no ratings | It may not be getting traffic — check [Web Analytics](../../analytics/tracking/overview) |
 
 Page feedback is most useful for **instructional pages** (how-to guides, tutorials). For reference pages (API lists, configuration tables), ratings are less meaningful.
 

@@ -54,8 +54,8 @@ The language switcher can appear in the **sidebar**, the **header**, or both.
 | Sidebar | Saves header space when header is already full |
 
 Configure placement in:
-- [Header Options →](../design/header)
-- [Sidebar Control →](../design/sidebar)
+- [Header Options →](../design/layout/header)
+- [Sidebar Control →](../design/layout/sidebar)
 
 ## URL Structure
 

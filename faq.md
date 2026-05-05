@@ -226,7 +226,7 @@ A: Contact support@docsbook.io for special arrangements.
 
 **Q: How do I use my own domain?**
 
-A: Premium feature. Guide: [Custom Domain Setup](./guides/custom-domain.md)
+A: Premium feature. Guide: [Custom Domain Setup](./guides/advanced/custom-domain.md)
 
 TL;DR:
 1. Enter domain in Settings
@@ -263,7 +263,7 @@ A: Usually 15-30 minutes, up to 48 hours maximum.
 
 **Q: How do I translate documentation?**
 
-A: Premium feature. Guide: [Translations](./guides/translation.md)
+A: Premium feature. Guide: [Translations](./guides/advanced/translation.md)
 
 TL;DR:
 1. Open Settings
@@ -396,4 +396,4 @@ Write to [support@docsbook.io](mailto:support@docsbook.io) — we're happy to he
 **Next:**
 - [Quick Start](./quick-start.md)
 - [Core Concepts](./basics.md)
-- [Creating Documentation](./guides/creating-docs.md)
+- [Creating Documentation](./guides/getting-started/creating-docs.md)

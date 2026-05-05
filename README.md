@@ -11,33 +11,33 @@ Here you'll find answers to all questions about how to use our service.
 
 ## Guides
 
-- [How to Create a Documentation Site](./guides/creating-docs.md)
-- [Managing Documentation](./guides/managing-docs.md)
-- [Setting Up a Custom Domain](./guides/custom-domain.md)
-- [Translating Documentation](./guides/translation.md)
-- [Pro Features](./guides/premium.md)
+- [How to Create a Documentation Site](./guides/getting-started/creating-docs.md)
+- [Managing Documentation](./guides/getting-started/managing-docs.md)
+- [Setting Up a Custom Domain](./guides/advanced/custom-domain.md)
+- [Translating Documentation](./guides/advanced/translation.md)
+- [Pro Features](./guides/advanced/premium.md)
 
 ## Analytics
 
-- [Web Analytics](./analytics/overview.md) — Page views, visitors, referrers
-- [Read Time Analytics](./analytics/read-time.md) — How long readers spend on each page
-- [Events Analytics](./analytics/events.md) — AI opens, code copies, link clicks
-- [Countries & Language Analytics](./analytics/countries.md) — Where your readers are and what language they use
+- [Web Analytics](./analytics/tracking/overview.md) — Page views, visitors, referrers
+- [Read Time Analytics](./analytics/reports/read-time.md) — How long readers spend on each page
+- [Events Analytics](./analytics/tracking/events.md) — AI opens, code copies, link clicks
+- [Countries & Language Analytics](./analytics/reports/countries.md) — Where your readers are and what language they use
 
 ## Design
 
-- [Branding & Custom Icons](./design/branding.md) — Name, icon, accent color, white-label
-- [Theming](./design/theming.md) — Light/dark mode and defaults
-- [Sidebar Control](./design/sidebar.md) — Language switcher, search, breadcrumbs
-- [Header Options](./design/header.md) — Links, social icons, search, language toggle
+- [Branding & Custom Icons](./design/style/branding.md) — Name, icon, accent color, white-label
+- [Theming](./design/style/theming.md) — Light/dark mode and defaults
+- [Sidebar Control](./design/layout/sidebar.md) — Language switcher, search, breadcrumbs
+- [Header Options](./design/layout/header.md) — Links, social icons, search, language toggle
 
 ## Content
 
-- [GitHub Integration](./content/github-integration.md) — "Edit on GitHub" link for every page
-- [Content Options](./content/content-options.md) — Scroll to top, prev/next, AI button
-- [Search Options](./content/search.md) — Header and sidebar search
-- [Copy Options](./content/copy.md) — Copy page and copy code buttons
-- [Page Feedback](./content/feedback.md) — Thumbs up/down ratings per page
+- [GitHub Integration](./content/setup/github-integration.md) — "Edit on GitHub" link for every page
+- [Content Options](./content/setup/content-options.md) — Scroll to top, prev/next, AI button
+- [Search Options](./content/features/search.md) — Header and sidebar search
+- [Copy Options](./content/features/copy.md) — Copy page and copy code buttons
+- [Page Feedback](./content/features/feedback.md) — Thumbs up/down ratings per page
 
 ## Translation
 

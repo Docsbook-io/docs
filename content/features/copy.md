@@ -35,7 +35,7 @@ When enabled, every code block shows a small "copy" icon. Clicking it copies the
 
 This is a standard developer experience feature. Most developers expect it — enabling it removes friction from your most technical readers.
 
-**Tip:** This is tracked as an event in [Events Analytics](../analytics/events), so you can see which code examples are copied most often.
+**Tip:** This is tracked as an event in [Events Analytics](../../analytics/tracking/events), so you can see which code examples are copied most often.
 
 ---
 

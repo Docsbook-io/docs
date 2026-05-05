@@ -25,10 +25,10 @@ Shows a language selector inside the sidebar so readers can switch translation l
 
 **When to use:** Enable this when your header is already crowded with other elements.
 
-> Note: Enable *either* the sidebar switcher *or* the [header language selector](../design/header#header-options) — not both. Showing it in two places creates redundancy.
+> Note: Enable *either* the sidebar switcher *or* the [header language selector](./header#header-options) — not both. Showing it in two places creates redundancy.
 
 Requires at least one translation language to be enabled.
-[Set up translations →](../translation/settings)
+[Set up translations →](../../translation/settings)
 
 ---
 
@@ -38,7 +38,7 @@ Adds a search input box directly inside the left sidebar panel.
 
 This is an alternative to the header search button. Some readers prefer sidebar search because it doesn't cover page content.
 
-[More about search options →](../content/search)
+[More about search options →](../../content/features/search)
 
 ---
 

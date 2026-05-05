@@ -21,7 +21,7 @@ Events are shown as a breakdown with counts and percentages for the selected tim
 
 ## How to Use This Data
 
-**High AI opens, low queries** → Visitors are curious about AI but find the suggested questions unclear. Try updating your [custom questions](https://docsbook.io/Docsbook-io/docs/analytics/events).
+**High AI opens, low queries** → Visitors are curious about AI but find the suggested questions unclear. Try updating your [custom questions](https://docsbook.io/Docsbook-io/docs/analytics/tracking/events).
 
 **High code copies** → Your code examples are useful. Consider adding more.
 
