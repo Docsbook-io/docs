@@ -1,5 +1,9 @@
 # Releases
 
+# 0.1.1 - 07.05.2026
+
+Fixed `language switcher visibility` — widget now appears for all visitors whenever enabled in header or sidebar settings, even when no languages have been added yet
+
 ## 0.1.0 - 06.05.2026
 
 - Enhanced `landing analytics cell` — replaced static bar chart mock with a mini dashboard preview showing Visitors, Page Views, a line chart, and Pages/Referrers tables
