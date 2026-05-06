@@ -2,6 +2,8 @@
 
 ## 0.1.1 - 07.05.2026
 
+- Add smooth shadows for the document outline to show if scrolling is available
+- Enhance padding bottom layout for both side bars
 - Enable Bot Protection for server side of every docs
 - Enhance left sidebar Language, Theme Toggle buttons styles to be less rounded and adjust padding for better visual consistency
 - Fixed `Pro features in admin panel` — Pro plan features are now properly accessible when the workspace has a Pro subscription, regardless of the user's account plan
