@@ -1,8 +1,9 @@
 # Releases
 
-# 0.1.1 - 07.05.2026
+## 0.1.1 - 07.05.2026
 
-Fixed `language switcher visibility` — widget now appears for all visitors whenever enabled in header or sidebar settings, even when no languages have been added yet
+- Fixed `Pro features in admin panel` — Pro plan features are now properly accessible when the workspace has a Pro subscription, regardless of the user's account plan
+- Fixed `language switcher visibility` — widget now appears for all visitors whenever enabled in header or sidebar settings, even when no languages have been added yet
 
 ## 0.1.0 - 06.05.2026
 
