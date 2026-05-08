@@ -1,23 +1,16 @@
 # Releases
 
-## 0.4.0 - 08.05.2026
+
+## 0.2.0 - 08.05.2026
 
 - Added `system theme option` — theme pickers now show three choices (Light, Dark, System) instead of a simple toggle; System respects the visitor's OS-level dark/light preference
 - Added `theme dropdown pickers` — replaced theme toggle button with a dropdown menu in both the sidebar footer and top navigation header
-
-## 0.3.0 - 08.05.2026
-
 - Added `auto-translation limits` — per-plan monthly page translation quotas in `admin panel`: Free 30 pages/mo, Pro 300 pages/mo, Enterprise unlimited
 - Added `translation usage tracking` — batch and on-the-fly page translates now count toward monthly limit (+1 per page, not per chunk); limit resets monthly like AI queries
 - Added `Auto-translation limit bar` in `admin analytics` — shows current usage alongside AI query limits in a violet-colored progress bar with monthly reset date
-
-## 0.2.1 - 08.05.2026
-
 - Added `SEO Optimization panel` — admin can enable/disable search engine indexing; when enabled, robots meta allows indexing, canonical URLs and structured JSON-LD are included, and search engine crawling is activated
 - Fixed `DeepSearch and References toggles` — admin panel settings now correctly persist and hide/show the AI mode buttons in the documentation
 - Fixed `AI panel 403 error` — toggling DeepSearch/References in admin settings no longer returns "Starter or Pro required" error
-
-## 0.2.0 - 08.05.2026
 
 - Added `subdomain root page` — when opening `user.docsbook.io/` without a repo, shows a list of all user's documentation projects, or auto-redirects if only one repo exists
 - Added `GitHub URL paste detection` — detects when users paste GitHub URLs incorrectly (e.g., `docsbook.io/https://github.com/user/repo`) and guides them with a helpful banner to use the correct format
