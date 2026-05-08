@@ -1,8 +1,9 @@
 # Releases
 
-## 0.2.1 - 09.05.2026
+## 0.2.2 - 09.05.2026
 
 - Improved `SEO Optimization upsell card` in `admin panel` — when SEO is disabled, shows a centered overlay card with pricing details (Available for free), Learn More link, and Enable button; background content dims to 30% opacity to emphasize the card
+- Improved `Translation tab layout` in `admin panel` — moved Translation Usage card above Visitor Countries and Language Countries sections for better information hierarchy
 
 ## 0.2.0 - 08.05.2026
 
