@@ -1,5 +1,10 @@
 # Releases
 
+## 0.2.0 - 08.05.2026
+
+- Added `subdomain root page` — when opening `user.docsbook.io/` without a repo, shows a list of all user's documentation projects, or auto-redirects if only one repo exists
+- Added `GitHub URL paste detection` — detects when users paste GitHub URLs incorrectly (e.g., `docsbook.io/https://github.com/user/repo`) and guides them with a helpful banner to use the correct format
+
 ## 0.1.1 - 07.05.2026
 
 - Add smooth shadows for the document outline to show if scrolling is available
