@@ -1,5 +1,8 @@
 # Releases
 
+## 0.2.1 - 09.05.2026
+
+- Improved `SEO Optimization upsell card` in `admin panel` — when SEO is disabled, shows a centered overlay card with pricing details (Available for free), Learn More link, and Enable button; background content dims to 30% opacity to emphasize the card
 
 ## 0.2.0 - 08.05.2026
 
