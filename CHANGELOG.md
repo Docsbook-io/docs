@@ -8,6 +8,7 @@
 
 ## 0.2.1 - 08.05.2026
 
+- Added `SEO Optimization panel` — admin can enable/disable search engine indexing; when enabled, robots meta allows indexing, canonical URLs and structured JSON-LD are included, and search engine crawling is activated
 - Fixed `DeepSearch and References toggles` — admin panel settings now correctly persist and hide/show the AI mode buttons in the documentation
 - Fixed `AI panel 403 error` — toggling DeepSearch/References in admin settings no longer returns "Starter or Pro required" error
 
