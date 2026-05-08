@@ -1,5 +1,10 @@
 # Releases
 
+## 0.2.1 - 08.05.2026
+
+- Fixed `DeepSearch and References toggles` — admin panel settings now correctly persist and hide/show the AI mode buttons in the documentation
+- Fixed `AI panel 403 error` — toggling DeepSearch/References in admin settings no longer returns "Starter or Pro required" error
+
 ## 0.2.0 - 08.05.2026
 
 - Added `subdomain root page` — when opening `user.docsbook.io/` without a repo, shows a list of all user's documentation projects, or auto-redirects if only one repo exists
