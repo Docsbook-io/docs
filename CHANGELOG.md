@@ -1,5 +1,10 @@
 # Releases
 
+## 0.4.0 - 08.05.2026
+
+- Added `system theme option` — theme pickers now show three choices (Light, Dark, System) instead of a simple toggle; System respects the visitor's OS-level dark/light preference
+- Added `theme dropdown pickers` — replaced theme toggle button with a dropdown menu in both the sidebar footer and top navigation header
+
 ## 0.3.0 - 08.05.2026
 
 - Added `auto-translation limits` — per-plan monthly page translation quotas in `admin panel`: Free 30 pages/mo, Pro 300 pages/mo, Enterprise unlimited
