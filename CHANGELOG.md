@@ -1,5 +1,14 @@
 # Releases
 
+## 0.4.0 - 10.05.2026
+
+- Added `empty projects state` — users with no accessible repositories after signing in are now redirected to a dedicated onboarding page with step-by-step instructions
+- Added `getting started guide` in documentation — comprehensive guide for creating first documentation project including options to create new or fork example repositories
+- Added `GitHub editing instructions` — users can now edit documentation directly on GitHub web interface with step-by-step instructions for creating, editing, and deleting files
+- Added `Claude Code section` — guide for using Claude Code to edit documentation with AI assistance; includes instructions for staging and committing changes with git
+- Added `VS Code local editing guide` — complete setup and workflow instructions for editing documentation locally with recommended extensions (Markdown All in One, Prettier, Spell Checker)
+- Improved `repository selection flow` — ConnectPicker now shows helpful empty state when no repositories available, with link to create new repository on GitHub
+
 ## 0.3.1 - 09.05.2026
 
 - Fixed `burger menu toggle` — hamburger button in the navigation header now closes the sidebar when clicked again instead of only opening it; users can now dismiss the mobile menu by clicking the burger icon, improving mobile navigation UX
