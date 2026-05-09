@@ -4,6 +4,7 @@
 
 - Improved `sidebar navigation` in `nested documentation` — folders now automatically expand when visiting a nested page, and the sidebar scrolls to keep the active page in view; provides better UX when navigating deeply nested documentation structures
 - Fixed `search widget shortcut display` — now shows `⌘ K` on macOS and `Ctrl K` on Windows/Linux instead of always displaying the Command symbol; keyboard handler already supported both modifiers, but the UI now correctly reflects the appropriate shortcut for each platform
+- Added `inline code selection` — double-clicking on inline `code` now selects all content within the backticks instead of selecting a single word; improves copy-to-clipboard workflow for developers reading code examples
 
 ## 0.2.3 - 09.05.2026
 
