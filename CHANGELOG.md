@@ -7,6 +7,8 @@
 - Improved `Translation tab layout` in `admin panel` — moved Translation Usage card above Visitor Countries and Language Countries sections for better information hierarchy
 - Improved `code syntax highlighting` in `documentation` — switched from CSS color-remap hack to native dual-theme support (github-light for light mode, github-dark for dark mode), delivering native GitHub syntax colors with proper token highlighting in both themes
 - Fixed `feedback button icons` in `documentation outline` — added shrink-0 to prevent icon collapse when button text wraps on long translations
+- Fixed `Language Countries upgrade overlay` in `Translation panel` — overlay with lock icon and upgrade prompt now always visible by default instead of only appearing on hover; added scale animation on hover to clearly indicate clickability
+- Improved `Features cards` in `landing page` — replaced complex hover-reveal pattern with always-visible icon and description for better information discoverability
 
 ## 0.2.0 - 08.05.2026
 
