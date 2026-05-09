@@ -8,6 +8,7 @@
 - Added `Claude Code section` — guide for using Claude Code to edit documentation with AI assistance; includes instructions for staging and committing changes with git
 - Added `VS Code local editing guide` — complete setup and workflow instructions for editing documentation locally with recommended extensions (Markdown All in One, Prettier, Spell Checker)
 - Improved `repository selection flow` — ConnectPicker now shows helpful empty state when no repositories available, with link to create new repository on GitHub
+- Fixed `landing page mobile layout` — hero section gradient shards now adapt to mobile viewport; hero heading size increased for mobile readability; tab switcher made more compact on small screens; gradient blocks now extend properly to edges on mobile without overflow issues
 
 ## 0.3.1 - 09.05.2026
 
