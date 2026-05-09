@@ -1,5 +1,9 @@
 # Releases
 
+## 0.3.0 - 09.05.2026
+
+- Improved `sidebar navigation` in `nested documentation` — folders now automatically expand when visiting a nested page, and the sidebar scrolls to keep the active page in view; provides better UX when navigating deeply nested documentation structures
+
 ## 0.2.3 - 09.05.2026
 
 - Fixed `sidebar jumping during scroll` — removed conflicting fixed positioning constraints (top/bottom) on desktop layout so sticky positioning works correctly when navigation header is enabled; sidebar now stays in place during scrolling
