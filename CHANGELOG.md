@@ -9,6 +9,7 @@
 - Added `VS Code local editing guide` — complete setup and workflow instructions for editing documentation locally with recommended extensions (Markdown All in One, Prettier, Spell Checker)
 - Improved `repository selection flow` — ConnectPicker now shows helpful empty state when no repositories available, with link to create new repository on GitHub
 - Fixed `landing page mobile layout` — hero section gradient shards now adapt to mobile viewport; hero heading size increased for mobile readability; tab switcher made more compact on small screens; gradient blocks now extend properly to edges on mobile without overflow issues
+- Fixed `navigation header sidebar alignment` — header now adds left padding on desktop to match sidebar width, preventing horizontal misalignment between header and content; sidebar and header are visually aligned on lg+ breakpoint
 
 ## 0.3.1 - 09.05.2026
 
