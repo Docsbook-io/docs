@@ -90,12 +90,38 @@ A brief description of what this is.
 - [FAQ](./faq.md)
 ```
 
+## Creating Your First Project
+
+Before creating a workspace, you need a repository with documentation files.
+
+### Option 1: Create a New Repository
+
+1. Go to [GitHub](https://github.com/new)
+2. Create a new repository
+3. Add a `README.md` file with your project description
+4. Create a `docs/` folder with markdown files
+
+### Option 2: Fork an Example Repository
+
+You can fork one of our example repositories to get started quickly:
+
+- **[docsbook-io/docs](https://github.com/docsbook-io/docs)** — Complete documentation example
+- **[docsbook-io/blog](https://github.com/docsbook-io/blog)** — Blog example
+- **[docsbook-io/api-docs](https://github.com/docsbook-io/api-docs)** — API documentation example
+
+**To fork:**
+
+1. Click on the repository link above
+2. Click the **"Fork"** button
+3. Choose where to fork it (your account)
+4. Clone it to your local machine or edit directly on GitHub
+
 ## Creating a Workspace
 
 ### Step 1: Open the Site
 
 1. Go to [docsbook.io](https://docsbook.io)
-2. Click **"Create my docs site"**
+2. Click **"Create my docs site"** or **"Sign in"**
 
 ### Step 2: Sign in with GitHub
 
@@ -154,7 +180,7 @@ Automatically converted to a link to the page in Docsbook.
 
 ### How to Update?
 
-1. **Edit the file** in GitHub or locally
+1. **Edit the file** in GitHub, locally, or with Claude Code
 2. **Commit the changes** to the repository
 3. **Visit the documentation site** (refresh the page)
 4. **See the updates** automatically!
@@ -182,6 +208,140 @@ Edit the text → updates on the site
 ```
 Rename the file → URL and menu update
 ```
+
+## Editing Documentation with GitHub Web Interface
+
+The simplest way to edit documentation without any tools.
+
+### Edit a File
+
+1. Go to your repository on GitHub
+2. Navigate to the file you want to edit
+3. Click the **pencil icon** (Edit this file)
+4. Make your changes in the editor
+5. Click **Commit changes**
+6. Add a commit message (e.g., "Update getting-started.md")
+7. Click **Commit**
+
+### Create a New File
+
+1. Go to your repository
+2. Click **Add file** → **Create new file**
+3. Enter the file name (e.g., `docs/new-page.md`)
+4. Type your markdown content
+5. Click **Commit new file**
+
+### Delete a File
+
+1. Open the file in your repository
+2. Click the **trash icon**
+3. Click **Commit changes**
+
+**Screenshot placeholder: GitHub web editor interface**
+
+## Editing Documentation with Claude Code
+
+Use Claude Code for faster editing and more advanced features.
+
+### Setup
+
+1. [Install Claude Code](https://claude.com/claude-code)
+2. Open your documentation repository in Claude Code
+3. Sign in with your GitHub account
+
+### Edit Files
+
+1. Click on a `.md` file in the sidebar
+2. Make your changes
+3. Claude Code will suggest improvements
+4. Stage and commit your changes with git
+
+### Use AI Assistance
+
+You can ask Claude Code to:
+- **Generate content** — "Write a guide for getting started"
+- **Fix formatting** — "Add proper markdown headers"
+- **Improve text** — "Make this section clearer"
+- **Add examples** — "Add code examples to this section"
+
+### Commit and Push
+
+```bash
+# Stage your changes
+git add docs/
+
+# Commit with a message
+git commit -m "docs: update getting-started guide"
+
+# Push to GitHub
+git push
+```
+
+Your documentation site updates automatically!
+
+**Screenshot placeholder: Claude Code editing interface**
+
+## Manual Editing with VS Code
+
+For advanced users who prefer local editing.
+
+### Setup
+
+1. [Install VS Code](https://code.visualstudio.com/)
+2. [Install Git](https://git-scm.com/)
+3. Clone your repository:
+
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+cd YOUR_REPO
+```
+
+### Edit Files
+
+1. Open the repository in VS Code
+2. Edit `.md` files in the `docs/` folder
+3. Use the built-in preview (Markdown Preview)
+4. Save your changes
+
+### Useful Extensions
+
+- **Markdown All in One** — Better markdown editing
+- **Prettier** — Auto-format on save
+- **Spell Checker** — Check spelling
+- **Code Spell Checker** — Check code comments
+
+### Commit and Push
+
+```bash
+# Check what changed
+git status
+
+# Stage your changes
+git add docs/
+
+# Commit with a message
+git commit -m "docs: update getting-started guide"
+
+# Push to GitHub
+git push
+```
+
+Your documentation site updates automatically!
+
+### Live Preview
+
+To see how your docs look locally:
+
+```bash
+# Install a local markdown server (optional)
+npm install -g http-server
+cd docs
+http-server
+```
+
+Visit `http://localhost:8080` to see your files.
+
+**Screenshot placeholder: VS Code with documentation files**
 
 ## Markdown Content
 
