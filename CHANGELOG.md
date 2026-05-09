@@ -2,6 +2,7 @@
 
 ## 0.2.3 - 09.05.2026
 
+- Fixed `mobile burger menu` — hamburger button now correctly positioned on top-right when header is present and uses proper z-index layering; menu opens/closes smoothly with improved accessibility and visual feedback
 - Fixed `documentation page titles` — removed "| Docsbook" suffix from public documentation page titles to improve user branding; customizable workspace names now display cleanly in browser tabs without Docsbook attribution
 - Fixed `web-vitals analytics` — removed incorrect next-axiom rewrite that generated invalid Axiom endpoints; web-vitals are now collected via server-side API route, eliminating CORS errors on landing page and 404s on workspace subdomains
 - Improved `SEO Optimization upsell card` in `admin panel` — when SEO is disabled, shows a centered overlay card with pricing details (Available for free), Learn More link, and Enable button; background content dims to 30% opacity to emphasize the card
