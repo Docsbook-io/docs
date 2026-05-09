@@ -135,6 +135,8 @@ This is the simplest method. You edit files right in your browser on GitHub — 
 
    ![Screenshot: GitHub file editor with some text being typed](./images/github-editor.png)
 
+4.1 Learn [how to edit Markdown](https://www.markdownguide.org/) files with pretty customization
+
 5. When you're done editing, scroll down to the **Commit changes** section
 6. Optionally, write a short note describing what you changed (e.g. "Update introduction")
 7. Click **Commit changes**
@@ -161,7 +163,7 @@ This is the simplest method. You edit files right in your browser on GitHub — 
 4. Write your content in the editor below
 5. Click **Commit new file**
 
-   ![Screenshot: Commit new file button highlighted](./images/commit-new-file.png)
+   ![Screenshot: Commit new file button highlighted](./images/commit-changes.png)
 
 The new page appears in your Docsbook sidebar automatically.
 
