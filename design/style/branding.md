@@ -31,7 +31,7 @@ Pick a color that matches your product's primary brand color. Avoid very light c
 
 ---
 
-## Custom Icons {#custom-icons}
+## Custom Icons
 
 Set a custom favicon and header icon for your documentation site.
 

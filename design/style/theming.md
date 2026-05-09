@@ -4,7 +4,7 @@ Control the light/dark mode experience for your readers.
 
 ---
 
-## Theming Options {#theming-options}
+## Theming Options
 
 | Setting | What it does |
 |---|---|
@@ -23,7 +23,7 @@ Float Widget → **Design** → **Theme** tab → adjust settings → Save.
 
 ---
 
-## Theme Settings {#theme-settings}
+## Theme Settings
 
 ### Default Theme
 

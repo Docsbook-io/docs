@@ -4,7 +4,7 @@ See where your readers are in the world and which language they read your docs i
 
 ---
 
-## Visitor Countries {#visitor-countries}
+## Visitor Countries
 
 Shows the top 30 countries by visit count, with each country's share of total traffic.
 
@@ -17,7 +17,7 @@ Shows the top 30 countries by visit count, with each country's share of total tr
 
 ---
 
-## Countries Breakdown {#countries-breakdown}
+## Countries Breakdown
 
 Full table view: country name, flag, visit count, and percentage of total visitors.
 
@@ -31,7 +31,7 @@ The breakdown covers up to 30 countries. Countries below the threshold are group
 
 ---
 
-## Language Countries {#language-countries}
+## Language Countries
 
 Shows which countries are reading your translated documentation versions.
 
@@ -48,7 +48,7 @@ For example: if you have Russian enabled, this section shows that Russian-langua
 
 ---
 
-## Language Analytics {#language-analytics}
+## Language Analytics
 
 Traffic split by translation language — how many visitors read each language version of your docs.
 

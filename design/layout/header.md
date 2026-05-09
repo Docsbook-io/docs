@@ -22,7 +22,7 @@ Control what appears in the top navigation bar of your documentation site.
 
 ---
 
-## Header Links {#header-links}
+## Header Links
 
 Add custom navigation links that appear in the top bar — useful for linking to your product, blog, changelog, or support.
 
