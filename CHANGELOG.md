@@ -2,6 +2,7 @@
 
 ## 0.2.3 - 09.05.2026
 
+- Fixed `sidebar jumping during scroll` — removed conflicting fixed positioning constraints (top/bottom) on desktop layout so sticky positioning works correctly when navigation header is enabled; sidebar now stays in place during scrolling
 - Fixed `mobile burger menu` — hamburger button now correctly positioned on top-right when header is present and uses proper z-index layering; menu opens/closes smoothly with improved accessibility and visual feedback
 - Fixed `documentation page titles` — removed "| Docsbook" suffix from public documentation page titles to improve user branding; customizable workspace names now display cleanly in browser tabs without Docsbook attribution
 - Fixed `web-vitals analytics` — removed incorrect next-axiom rewrite that generated invalid Axiom endpoints; web-vitals are now collected via server-side API route, eliminating CORS errors on landing page and 404s on workspace subdomains
