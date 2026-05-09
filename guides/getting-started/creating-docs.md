@@ -93,8 +93,6 @@ Now that you have a GitHub repository, let's connect it to Docsbook to create yo
 
    > Docsbook only reads your repository files — it cannot modify or delete anything.
 
-   ![Screenshot: GitHub authorization dialog with Authorize button highlighted](./images/github-authorize.png)
-
 4. You'll see a list of your repositories. Find the one you just created and click on it
 
    ![Screenshot: Repository list on Docsbook connect page with a repo highlighted](./images/select-repo.png)
@@ -181,126 +179,53 @@ The new page appears in your Docsbook sidebar automatically.
 
 ---
 
-### Option B — Edit with Claude Code (AI-assisted, fast)
+### Option B — Edit with Claude Code (AI-assisted, no terminal needed)
 
-Claude Code is an AI coding assistant that can write and improve documentation for you. Great if you want to produce a lot of content quickly.
+Claude Code is an AI coding assistant that can read, create, and edit your documentation files through conversation — no terminal commands or Git knowledge required. Great if you want to produce a lot of content quickly.
 
 #### Setup (one time)
 
 1. Go to [claude.ai/code](https://claude.ai/code) and download Claude Code
 2. Install it following the on-screen instructions
+3. Open Claude Code and say:
 
-   ![Screenshot: Claude Code download page](./images/claude-code-download.png)
+   > *"Clone my GitHub repository github.com/YOUR-USERNAME/YOUR-REPO-NAME to my computer and open it"*
 
-3. Open your terminal (on Mac: press `⌘ Space`, type "Terminal", press Enter)
-4. Clone your repository to your computer by typing:
+   Claude handles the rest — no terminal needed.
 
-   ```
-   git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
-   ```
+#### Creating and editing documentation
 
-   Then press Enter.
+Just describe what you want in the chat panel:
 
-5. Open the downloaded folder in Claude Code
+**Create a new page**
+> *"Create a new file called `guides/installation.md` with a getting started guide. Include sections for system requirements, installation steps, and first login."*
 
-   ![Screenshot: Claude Code with documentation folder open in sidebar](./images/claude-code-open.png)
+**Edit an existing page**
+> *"Open `guides/quick-start.md` and add a Troubleshooting section at the end with 5 common problems and solutions."*
 
-#### Writing documentation with AI
+**Rewrite or improve**
+> *"Read `guides/quick-start.md` and make it shorter and simpler — aim for someone with no technical background."*
 
-1. Click on any `.md` file in the sidebar to open it
-2. In the chat panel, describe what you want — for example:
-   - *"Write a getting started guide for our product, 3 paragraphs"*
-   - *"Add a section explaining how billing works"*
-   - *"Make this paragraph simpler and shorter"*
-3. Claude writes the content for you. Review it and make any adjustments.
+**Create multiple pages at once**
+> *"Create the following pages: `guides/faq.md` with 10 billing questions, and `api/overview.md` with a REST API overview."*
 
-   ![Screenshot: Claude Code chat with a request typed and the response being written into the file](./images/claude-code-chat.png)
+Claude writes the content and saves the files. Review the result and ask for adjustments if needed.
 
-#### Save and publish your changes
-
-After editing, you need to push your changes back to GitHub:
-
-1. In Claude Code's terminal panel (or your terminal), type these commands one by one:
-
-   ```
-   git add .
-   git commit -m "Update documentation"
-   git push
-   ```
-
-2. Press Enter after each line.
-
-   ![Screenshot: Terminal with git push command completed successfully](./images/git-push.png)
-
-Your Docsbook site updates automatically within seconds.
-
----
-
-### Option C — Edit with VS Code (Full control, local editing)
-
-VS Code is a free text editor that's popular for working with files on your computer. Best choice if you prefer offline editing or work with documentation regularly.
-
-#### Setup (one time)
-
-1. Download and install [VS Code](https://code.visualstudio.com/) — it's free
-
-   ![Screenshot: VS Code download page](./images/vscode-download.png)
-
-2. Download and install [Git](https://git-scm.com/downloads)
-
-   > **What is Git?** Git is a tool that keeps track of changes to your files and lets you upload them to GitHub. It's what makes the "commit" and "push" steps work.
-
-3. Open your terminal:
-   - **Mac**: press `⌘ Space`, type "Terminal", press Enter
-   - **Windows**: press the Windows key, type "Command Prompt", press Enter
-
-4. Type the following command to download your repository to your computer:
-
-   ```
-   git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
-   ```
-
-   Press Enter. A new folder is created on your computer with all your files.
-
-5. In VS Code, go to **File → Open Folder** and select the folder you just downloaded
-
-   ![Screenshot: VS Code with the documentation folder open, showing files in the left sidebar](./images/vscode-folder-open.png)
-
-#### Recommended extensions (optional but helpful)
-
-Click the Extensions icon in the VS Code left sidebar (or press `⌘⇧X` on Mac / `Ctrl+Shift+X` on Windows) and search for:
-
-- **Markdown All in One** — writing helpers (shortcuts, preview, table of contents)
-- **Prettier** — automatically formats your files on save
-- **Code Spell Checker** — underlines spelling mistakes
-
-#### Edit files
-
-1. Click on any `.md` file in the left sidebar to open it
-2. Edit the text
-3. Press `⌘⇧V` (Mac) or `Ctrl+Shift+V` (Windows) to open a live preview on the right
-
-   ![Screenshot: VS Code split view with markdown source on left and preview on right](./images/vscode-split-preview.png)
+![Screenshot: Claude Code chat with a request typed and the response being written into the file](./images/claude-code-chat.png)
 
 #### Save and publish your changes
 
-When you're done editing, open the terminal in VS Code (**Terminal → New Terminal**) and type:
+When you're done, just tell Claude:
 
-```
-git add .
-git commit -m "Update documentation"
-git push
-```
+> *"Commit all changes and push to GitHub."*
 
-Press Enter after each line. Your Docsbook site updates within seconds.
-
-![Screenshot: VS Code terminal showing successful git push output](./images/vscode-git-push.png)
+Claude runs the necessary commands for you. Your Docsbook site updates within seconds.
 
 ---
 
-## Re-connecting or Signing In Again
+## Connect your docs
 
-If you've been signed out or want to connect another repository, go to [docsbook.io/connect](https://docsbook.io/connect) — this page lets you sign in with GitHub and select a repository at any time.
+After, you should connect repository, go to [docsbook.io/connect](https://docsbook.io/connect) — this page lets you sign in with GitHub and select a repository at any time.
 
 ---
 
