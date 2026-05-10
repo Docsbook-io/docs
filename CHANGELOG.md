@@ -3,6 +3,7 @@
 ## 0.6.0 - 10.05.2026
 
 - Improved `heading anchors` — replaced text "#" symbol with SVG link icon, added copy-to-clipboard functionality that copies the full heading link URL on click, and displays success toast notification "Ссылка скопирована"; URL hash updates automatically in browser address bar, improving documentation sharing and navigation experience
+- Added `subheader navigation` — new sub-header displays 1-level folder tabs below the main header with optional hover menus for nested content; includes "Overview" tab and accent color styling with active page indicators, improving navigation for multi-section documentation
 
 ## 0.5.0 - 10.05.2026
 
