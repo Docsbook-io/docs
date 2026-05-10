@@ -2,6 +2,7 @@
 
 ## 0.4.0 - 10.05.2026
 
+- Added `flag icons` to language switcher — replaced emoji and globe icon with circular SVG country flags in sidebar and header language pickers; dropdown now shows native language names (Español, Français, 日本語, etc.) for a more recognizable and polished UX
 - Added `background glow effect` — new customization option to add a soft radial gradient glow around documentation content using the workspace accent color, creating a modern polished appearance similar to popular SaaS products; available in Theme settings when accent color is configured
 - Added `empty projects state` — users with no accessible repositories after signing in are now redirected to a dedicated onboarding page with step-by-step instructions
 - Added `getting started guide` in documentation — comprehensive guide for creating first documentation project including options to create new or fork example repositories
