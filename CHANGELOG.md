@@ -1,5 +1,14 @@
 # Releases
 
+## 0.5.0 - 10.05.2026
+
+- Redesigned `Copy Page button` — updated with modern styling including improved padding, border-radius, and hover states for a more polished UI
+- Added `visual feedback on copy` — shows Check icon instead of text when content is copied to clipboard, providing instant feedback
+- Enhanced `dropdown menu styling` — improved typography, spacing, and hover states throughout the copy options menu
+- Added `Cursor IDE support` — new dropdown option to open documentation pages directly in Cursor IDE
+- Added `Windsurf IDE support` — new dropdown option to open documentation pages directly in Windsurf IDE
+- Improved `dropdown arrow icon` — replaced inline SVG with ChevronDown icon from lucide-react for consistent icon styling
+
 ## 0.4.1 - 10.05.2026
 
 - Added `auto-detect default language` — new "Auto-detect" button in Translation panel uses AI language detection to analyze repository README and determine documentation language; updates language picker to show detected language name and flag instead of generic "Language" label, improving UX for non-English documentation
