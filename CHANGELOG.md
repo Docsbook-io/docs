@@ -1,5 +1,10 @@
 # Releases
 
+## 0.4.1 - 10.05.2026
+
+- Added `auto-detect default language` — new "Auto-detect" button in Translation panel uses AI language detection to analyze repository README and determine documentation language; updates language picker to show detected language name and flag instead of generic "Language" label, improving UX for non-English documentation
+- Improved `language picker UX` — when default language is detected, it displays native language name (e.g., "Русский" for Russian) and corresponding flag instead of globe icon, giving readers immediate clarity about documentation language
+
 ## 0.4.0 - 10.05.2026
 
 - Added `flag icons` to language switcher — replaced emoji and globe icon with circular SVG country flags in sidebar and header language pickers; dropdown now shows native language names (Español, Français, 日本語, etc.) for a more recognizable and polished UX
