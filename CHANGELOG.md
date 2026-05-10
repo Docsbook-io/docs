@@ -1,5 +1,9 @@
 # Releases
 
+## 0.6.0 - 10.05.2026
+
+- Improved `heading anchors` — replaced text "#" symbol with SVG link icon, added copy-to-clipboard functionality that copies the full heading link URL on click, and displays success toast notification "Ссылка скопирована"; URL hash updates automatically in browser address bar, improving documentation sharing and navigation experience
+
 ## 0.5.0 - 10.05.2026
 
 - Redesigned `Copy Page button` — updated with modern styling including improved padding, border-radius, and hover states for a more polished UI
