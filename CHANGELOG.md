@@ -1,5 +1,9 @@
 # Releases
 
+## 0.7.0 - 11.05.2026
+
+- Added `header link colors` — navigation links now support optional background color customization; users can assign unique colors to individual header links (e.g., CTA buttons like "Get Started") with automatic text color contrast (white/black) for readability; existing links without color display as before
+
 ## 0.6.0 - 10.05.2026
 
 - Improved `heading anchors` — replaced text "#" symbol with SVG link icon, added copy-to-clipboard functionality that copies the full heading link URL on click, and displays success toast notification "Ссылка скопирована"; URL hash updates automatically in browser address bar, improving documentation sharing and navigation experience
