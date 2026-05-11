@@ -1,5 +1,9 @@
 # Releases
 
+## 0.8.0 - 11.05.2026
+
+- Improved `Live Preview UX` — replaced modal popup with an animated inline experience; clicking "Live Preview" blurs the background and smoothly animates the input to center with three example doc cards appearing below with staggered animation; clicking outside or pressing Escape closes the overlay
+
 ## 0.7.0 - 11.05.2026
 
 - Added `header link colors` — navigation links now support optional background color customization; users can assign unique colors to individual header links (e.g., CTA buttons like "Get Started") with automatic text color contrast (white/black) for readability; existing links without color display as before
