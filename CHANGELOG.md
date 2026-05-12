@@ -1,5 +1,9 @@
 # Releases
 
+## 0.8.2 - 13.05.2026
+
+- Fixed `sidebar links with active subheader` — when a subheader folder was active, language switcher now correctly inserts language code before the repo segment instead of inside the subfolder path (e.g. `/ru/docs/analytics` instead of `/docs/ru/analytics`)
+
 ## 0.8.1 - 12.05.2026
 
 - Fixed `sidebar dividers` — left sidebar divider now hides when no footer controls or badge are present; right sidebar divider only shows when outline (table of contents) has content above it
