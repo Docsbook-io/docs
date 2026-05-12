@@ -4,6 +4,7 @@
 
 - Fixed `sidebar links with active subheader` — when a subheader folder was active, language switcher now correctly inserts language code before the repo segment instead of inside the subfolder path (e.g. `/ru/docs/analytics` instead of `/docs/ru/analytics`)
 - Fixed `custom AI panel questions` — workspace admin settings now properly load and display custom suggested questions in the AI panel instead of showing default questions
+- Fixed `sidebar footer border visibility` — footer border and spacing no longer display when all footer controls (language picker, theme toggle) are hidden or disabled and badge is not shown
 
 ## 0.8.1 - 12.05.2026
 
