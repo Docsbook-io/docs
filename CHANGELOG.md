@@ -5,6 +5,11 @@
 - Fixed `sidebar dividers` — left sidebar divider now hides when no footer controls or badge are present; right sidebar divider only shows when outline (table of contents) has content above it
 - Fixed `document translation hang` — language switching now returns instantly with original text while translation happens in background; removed blocking LLM calls from render path for both page HTML and sidebar labels; added loading spinner to language picker button and "indexing" banner that shows during background translation
 - Fixed `sidebar text alignment` — multi-line folder names in the left sidebar now align to the left instead of centering when text wraps across multiple lines
+- Added `FAQPage rich snippet` in landing page — structured data schema for FAQ section helps Google display Q&A snippets directly in search results
+- Improved `hero image performance` in landing — replaced plain `<img>` with `next/image` for automatic WebP conversion, preloading, and proper lazy-loading; reduces LCP time on landing page
+- Fixed `Paddle script loading` in landing — moved from synchronous head script to `next/script lazyOnload` strategy to prevent blocking page render; payment modal still works normally when needed
+- Fixed `landing page HTML structure` — moved `<WebVitals>` component inside `<body>` for valid HTML document structure
+- Fixed `landing page heading hierarchy` — corrected section subheadings from `<h3>` to `<h2>` ("GitHub to DocsBook", "Your docs, delivered") for proper semantic structure and SEO
 
 ## 0.8.0 - 11.05.2026
 
