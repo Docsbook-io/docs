@@ -4,6 +4,7 @@
 
 - Fixed `sidebar dividers` — left sidebar divider now hides when no footer controls or badge are present; right sidebar divider only shows when outline (table of contents) has content above it
 - Fixed `document translation hang` — language switching now returns instantly with original text while translation happens in background; removed blocking LLM calls from render path for both page HTML and sidebar labels; added loading spinner to language picker button and "indexing" banner that shows during background translation
+- Fixed `sidebar text alignment` — multi-line folder names in the left sidebar now align to the left instead of centering when text wraps across multiple lines
 
 ## 0.8.0 - 11.05.2026
 
