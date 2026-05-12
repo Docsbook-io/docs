@@ -1,5 +1,9 @@
 # Releases
 
+## 0.8.1 - 12.05.2026
+
+- Fixed `sidebar dividers` — left sidebar divider now hides when no footer controls or badge are present; right sidebar divider only shows when outline (table of contents) has content above it
+
 ## 0.8.0 - 11.05.2026
 
 - Improved `Live Preview UX` — replaced modal popup with an animated inline experience; clicking "Live Preview" blurs the background and smoothly animates the input to center with three example doc cards appearing below with staggered animation; clicking outside or pressing Escape closes the overlay
