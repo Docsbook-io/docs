@@ -3,6 +3,7 @@
 ## 0.8.2 - 13.05.2026
 
 - Fixed `sidebar links with active subheader` — when a subheader folder was active, language switcher now correctly inserts language code before the repo segment instead of inside the subfolder path (e.g. `/ru/docs/analytics` instead of `/docs/ru/analytics`)
+- Fixed `custom AI panel questions` — workspace admin settings now properly load and display custom suggested questions in the AI panel instead of showing default questions
 
 ## 0.8.1 - 12.05.2026
 
