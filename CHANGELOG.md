@@ -10,6 +10,7 @@
 - Fixed `subheader links with enabled translations` — when a translation is enabled in the admin panel, subheader tabs and dropdown menu links now correctly navigate to translated pages instead of the original language version
 - Reorganized `theme and branding settings` in admin panel — merged Theme tab into Branding section, moved Default Theme and Background Glow toggles under Branding, relocated Remove Branding setting to Left Sidebar tab for clearer UI structure
 - Consolidated `page feedback analytics` into Events section — removed standalone Page Feedback block; page ratings (thumbs up/down) now appear as collapsible "Page Rates" group in the main Events dashboard
+- Fixed `AI chat analytics in Chats Analysis` — AI responses now properly populate in the analytics table instead of showing empty; tracking logs the full response text after streaming completes so that response content is visible in the Chats Analysis dashboard
 
 ## 0.8.2 - 13.05.2026
 
