@@ -7,6 +7,7 @@
 - Fixed `HTML img tags with relative src` in markdown — images embedded as HTML tags (e.g., `<img src="public/logo.png">`) now correctly resolve to GitHub Raw URLs instead of remaining as relative paths that fail to load
 - Added `folder visibility toggles` in left sidebar admin panel — workspace owners can now control which top-level folders appear in the documentation sidebar; hidden folders are automatically excluded from Previous / Next page navigation for a cleaner navigation experience
 - Fixed `AI Agent scroll shadow` in admin panel — bottom fade-out gradient indicator now correctly disappears when content is fully visible and scrolled to the bottom
+- Fixed `subheader links with enabled translations` — when a translation is enabled in the admin panel, subheader tabs and dropdown menu links now correctly navigate to translated pages instead of the original language version
 
 ## 0.8.2 - 13.05.2026
 
