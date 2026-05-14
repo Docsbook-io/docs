@@ -1,7 +1,8 @@
 # Releases
 
-## 0.9.0 - 14.05.2026
+## 0.10.0 - 15.05.2026
 
+- Added `bring-your-own-api-key` for AI features — Pro/Enterprise users can now configure custom API keys from OpenRouter, OpenAI, Google Gemini, or Anthropic in the AI Agent admin panel; replaces "Extra Usage" feature; custom keys bypass platform usage limits and allow selecting any model from the provider
 - Fixed `relative image paths` in documentation — image sources with relative paths (e.g., `./public/favicon.svg`, `../assets/image.png`) now properly resolve to correct GitHub Raw URLs instead of creating malformed paths; path normalization handles `./` and `../` segments correctly across all documentation files
 - Fixed `HTML img tags with relative src` in markdown — images embedded as HTML tags (e.g., `<img src="public/logo.png">`) now correctly resolve to GitHub Raw URLs instead of remaining as relative paths that fail to load
 - Added `folder visibility toggles` in left sidebar admin panel — workspace owners can now control which top-level folders appear in the documentation sidebar; hidden folders are automatically excluded from Previous / Next page navigation for a cleaner navigation experience
