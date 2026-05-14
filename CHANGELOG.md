@@ -11,6 +11,7 @@
 - Reorganized `theme and branding settings` in admin panel — merged Theme tab into Branding section, moved Default Theme and Background Glow toggles under Branding, relocated Remove Branding setting to Left Sidebar tab for clearer UI structure
 - Consolidated `page feedback analytics` into Events section — removed standalone Page Feedback block; page ratings (thumbs up/down) now appear as collapsible "Page Rates" group in the main Events dashboard
 - Fixed `AI chat analytics in Chats Analysis` — AI responses now properly populate in the analytics table instead of showing empty; tracking logs the full response text after streaming completes so that response content is visible in the Chats Analysis dashboard
+- Fixed `custom questions inputs` in AI Agent settings — admin panel now always displays exactly 3 question input fields even when fewer are saved, ensuring consistent form layout and allowing users to add or edit questions without reloading
 
 ## 0.8.2 - 13.05.2026
 
