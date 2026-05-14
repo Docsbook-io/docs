@@ -1,5 +1,9 @@
 # Releases
 
+## 0.8.3 - 14.05.2026
+
+- Fixed `relative image paths` in documentation — image sources with relative paths (e.g., `./public/favicon.svg`, `../assets/image.png`) now properly resolve to correct GitHub Raw URLs instead of creating malformed paths; path normalization handles `./` and `../` segments correctly across all documentation files
+
 ## 0.8.2 - 13.05.2026
 
 - Fixed `sidebar links with active subheader` — when a subheader folder was active, language switcher now correctly inserts language code before the repo segment instead of inside the subfolder path (e.g. `/ru/docs/analytics` instead of `/docs/ru/analytics`)
