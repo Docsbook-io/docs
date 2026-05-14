@@ -6,6 +6,7 @@
 - Fixed `relative image paths` in documentation — image sources with relative paths (e.g., `./public/favicon.svg`, `../assets/image.png`) now properly resolve to correct GitHub Raw URLs instead of creating malformed paths; path normalization handles `./` and `../` segments correctly across all documentation files
 - Fixed `HTML img tags with relative src` in markdown — images embedded as HTML tags (e.g., `<img src="public/logo.png">`) now correctly resolve to GitHub Raw URLs instead of remaining as relative paths that fail to load
 - Added `folder visibility toggles` in left sidebar admin panel — workspace owners can now control which top-level folders appear in the documentation sidebar; hidden folders are automatically excluded from Previous / Next page navigation for a cleaner navigation experience
+- Fixed `AI Agent scroll shadow` in admin panel — bottom fade-out gradient indicator now correctly disappears when content is fully visible and scrolled to the bottom
 
 ## 0.8.2 - 13.05.2026
 
