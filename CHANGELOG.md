@@ -21,6 +21,7 @@
 - Added `live Google Font preview` in font picker — font names in the dropdown now display using their actual typeface, giving users a visual preview before applying to documentation; dynamically loads font stylesheets to show typography examples
 - Added `accent color tinting` across documentation UI — inline code, fenced code blocks, kbd shortcuts, and sidebar item hover states now subtly tint with the workspace accent color (4-12% opacity) for visual cohesion with brand settings
 - Improved `header button consistency` in documentation — Ask AI, Search, and Language buttons now use unified transparent background (`bg-muted/20 hover:bg-muted/50`) across both light and dark themes for a polished, cohesive appearance
+- Added `MCP server for AI-powered workspace administration` — new HTTP endpoint at `/api/mcp/server` lets AI assistants (Claude, etc.) administer workspaces via natural language; includes 13 tools for branding, UI, navigation, AI, SEO, domain, translation, and analytics management; features OAuth-style browser auth flow, plan-gating with structured upgrade hints, and Bearer token persistence
 
 ## 0.8.2 - 13.05.2026
 
