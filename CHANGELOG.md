@@ -2,6 +2,7 @@
 
 ## 0.10.0 - 15.05.2026
 
+- Improved `subheader dropdown performance` in documentation — pre-compute folder contents from available files list to eliminate hover-triggered API requests; dropdown now loads instantly without network latency
 - Fixed `Ask AI button styling` — button now uses consistent styling matching the Copy Page button with rounded corners, proper padding, and updated hover state
 - Fixed `browser tab title on root page` — when viewing workspace root documentation, the page title now shows just the workspace name instead of duplicating it (e.g., "agentctl" instead of "agentctl — agentctl")
 - Fixed `favicon background color` — workspace favicon now uses the configured `accentColor` when available, falling back to generated color based on repository name for consistent branding
