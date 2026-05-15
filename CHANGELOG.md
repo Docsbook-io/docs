@@ -16,6 +16,10 @@
 - Fixed `custom questions inputs` in AI Agent settings — admin panel now always displays exactly 3 question input fields even when fewer are saved, ensuring consistent form layout and allowing users to add or edit questions without reloading
 - Fixed `globe icon styling` in language picker — globe icon now matches flag icon size (16px) and inherits text color for visual consistency in the sidebar footer widget
 - Fixed `Paddle checkout initialization` — payment modal now opens correctly when triggered; moved Paddle script to provider component with `onLoad` callback instead of relying on `lazyOnload` strategy to ensure script is fully loaded before initialization
+- Added `per-theme color customization` in Branding panel — workspace owners can now configure separate accent, muted, and base colors for light and dark themes; Colors card includes Light/Dark toggle synced to documentation theme; Accent Color remains consistent across themes for brand continuity
+- Added `live Google Font preview` in font picker — font names in the dropdown now display using their actual typeface, giving users a visual preview before applying to documentation; dynamically loads font stylesheets to show typography examples
+- Added `accent color tinting` across documentation UI — inline code, fenced code blocks, kbd shortcuts, and sidebar item hover states now subtly tint with the workspace accent color (4-12% opacity) for visual cohesion with brand settings
+- Improved `header button consistency` in documentation — Ask AI, Search, and Language buttons now use unified transparent background (`bg-muted/20 hover:bg-muted/50`) across both light and dark themes for a polished, cohesive appearance
 
 ## 0.8.2 - 13.05.2026
 
