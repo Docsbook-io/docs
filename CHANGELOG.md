@@ -9,6 +9,7 @@
 - Fixed `sidebar translation updates` — sidebar labels now translate immediately on the client side when cached, no longer requiring a page refresh to display translated navigation labels
 - Fixed `English language sidebar labels` in documentation — when users explicitly select English from the language widget, sidebar navigation labels now correctly translate to English instead of staying in the original language; the client-side translation hook now handles English as a target language along with other languages, ensuring consistent behavior whether using server cache or on-demand translation
 - Added `header navigation links translation` in documentation — custom navigation links (headerLinks) in documentation header now translate to active language using cached translation logic, same as sidebar labels; subheader folder tabs and "Overview" label also now localize when language is active
+- Fixed `prev/next button page names` in documentation — Previous/Next navigation buttons now display translated page names when language is active instead of showing original language titles; `translatedLabels` prop now correctly passed to PageNav component
 
 ## 0.10.0 - 15.05.2026
 
