@@ -3,6 +3,7 @@
 ## 0.11.0 - 16.05.2026
 
 - Improved `i18n language auto-detection` in documentation — when workspace language is auto-detected as non-English, UI strings now load in the detected language by default instead of always showing English; visitors see fully localized interface without requiring a URL language prefix
+- Fixed `theme override when toggles disabled` in documentation — when theme switching widgets are disabled in both sidebar and header, the admin-configured default theme now always applies instead of allowing `localStorage` to override it with previously selected values
 
 ## 0.10.0 - 15.05.2026
 
