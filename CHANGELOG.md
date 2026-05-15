@@ -2,6 +2,7 @@
 
 ## 0.10.0 - 15.05.2026
 
+- Fixed `Ask AI button styling` — button now uses consistent styling matching the Copy Page button with rounded corners, proper padding, and updated hover state
 - Fixed `browser tab title on root page` — when viewing workspace root documentation, the page title now shows just the workspace name instead of duplicating it (e.g., "agentctl" instead of "agentctl — agentctl")
 - Fixed `favicon background color` — workspace favicon now uses the configured `accentColor` when available, falling back to generated color based on repository name for consistent branding
 - Fixed `workspace icon favicon` — favicon now correctly displays the workspace's custom icon when configured instead of showing the letter fallback; added cache busting and improved content-type validation for external icon URLs
