@@ -4,6 +4,9 @@
 
 - Improved `i18n language auto-detection` in documentation — when workspace language is auto-detected as non-English, UI strings now load in the detected language by default instead of always showing English; visitors see fully localized interface without requiring a URL language prefix
 - Fixed `theme override when toggles disabled` in documentation — when theme switching widgets are disabled in both sidebar and header, the admin-configured default theme now always applies instead of allowing `localStorage` to override it with previously selected values
+- Improved `parallel translation indexing` in admin settings — when activating multiple languages simultaneously, all languages now index in parallel using `Promise.all` instead of sequentially, significantly reducing setup time
+- Improved `stale translation content handling` — when documentation content updates on GitHub, users see a loading popup over the cached translation while the fresh version indexes; ensures transparent indication that an update is in progress instead of silently serving stale content
+- Fixed `sidebar translation updates` — sidebar labels now translate immediately on the client side when cached, no longer requiring a page refresh to display translated navigation labels
 
 ## 0.10.0 - 15.05.2026
 
