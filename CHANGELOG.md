@@ -23,6 +23,7 @@
 - Improved `header button consistency` in documentation — Ask AI, Search, and Language buttons now use unified transparent background (`bg-muted/20 hover:bg-muted/50`) across both light and dark themes for a polished, cohesive appearance
 - Added `MCP server for AI-powered workspace administration` — new HTTP endpoint at `/api/mcp/server` lets AI assistants (Claude, etc.) administer workspaces via natural language; includes 13 tools for branding, UI, navigation, AI, SEO, domain, translation, and analytics management; features OAuth-style browser auth flow, plan-gating with structured upgrade hints, and Bearer token persistence
 - Fixed `z-index stacking in sidebar dropdown` — sidebar active page highlight no longer overlaps with subheader dropdown menu; adjusted z-index layering so dropdown content renders on top
+- Fixed `AI panel z-index over live preview popup` — AI panel now appears above the "Connect GitHub to publish" popup when opening live preview, ensuring users can interact with the panel while preview modal is displayed
 
 ## 0.8.2 - 13.05.2026
 
