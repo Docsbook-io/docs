@@ -1,5 +1,9 @@
 # Releases
 
+## 0.11.0 - 16.05.2026
+
+- Improved `i18n language auto-detection` in documentation — when workspace language is auto-detected as non-English, UI strings now load in the detected language by default instead of always showing English; visitors see fully localized interface without requiring a URL language prefix
+
 ## 0.10.0 - 15.05.2026
 
 - Improved `subheader dropdown performance` in documentation — pre-compute folder contents from available files list to eliminate hover-triggered API requests; dropdown now loads instantly without network latency
