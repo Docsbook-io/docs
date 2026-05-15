@@ -13,6 +13,7 @@
 - Fixed `AI chat analytics in Chats Analysis` — AI responses now properly populate in the analytics table instead of showing empty; tracking logs the full response text after streaming completes so that response content is visible in the Chats Analysis dashboard
 - Fixed `custom questions inputs` in AI Agent settings — admin panel now always displays exactly 3 question input fields even when fewer are saved, ensuring consistent form layout and allowing users to add or edit questions without reloading
 - Fixed `globe icon styling` in language picker — globe icon now matches flag icon size (16px) and inherits text color for visual consistency in the sidebar footer widget
+- Fixed `Paddle checkout initialization` — payment modal now opens correctly when triggered; moved Paddle script to provider component with `onLoad` callback instead of relying on `lazyOnload` strategy to ensure script is fully loaded before initialization
 
 ## 0.8.2 - 13.05.2026
 
