@@ -4,6 +4,7 @@
 
 - Fixed `browser tab title on root page` — when viewing workspace root documentation, the page title now shows just the workspace name instead of duplicating it (e.g., "agentctl" instead of "agentctl — agentctl")
 - Fixed `favicon background color` — workspace favicon now uses the configured `accentColor` when available, falling back to generated color based on repository name for consistent branding
+- Fixed `workspace icon favicon` — favicon now correctly displays the workspace's custom icon when configured instead of showing the letter fallback; added cache busting and improved content-type validation for external icon URLs
 - Added `bring-your-own-api-key` for AI features — Pro/Enterprise users can now configure custom API keys from OpenRouter, OpenAI, Google Gemini, or Anthropic in the AI Agent admin panel; replaces "Extra Usage" feature; custom keys bypass platform usage limits and allow selecting any model from the provider
 - Fixed `relative image paths` in documentation — image sources with relative paths (e.g., `./public/favicon.svg`, `../assets/image.png`) now properly resolve to correct GitHub Raw URLs instead of creating malformed paths; path normalization handles `./` and `../` segments correctly across all documentation files
 - Fixed `HTML img tags with relative src` in markdown — images embedded as HTML tags (e.g., `<img src="public/logo.png">`) now correctly resolve to GitHub Raw URLs instead of remaining as relative paths that fail to load
