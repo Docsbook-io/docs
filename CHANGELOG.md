@@ -7,6 +7,7 @@
 - Improved `parallel translation indexing` in admin settings — when activating multiple languages simultaneously, all languages now index in parallel using `Promise.all` instead of sequentially, significantly reducing setup time
 - Improved `stale translation content handling` — when documentation content updates on GitHub, users see a loading popup over the cached translation while the fresh version indexes; ensures transparent indication that an update is in progress instead of silently serving stale content
 - Fixed `sidebar translation updates` — sidebar labels now translate immediately on the client side when cached, no longer requiring a page refresh to display translated navigation labels
+- Fixed `English language sidebar labels` in documentation — when users explicitly select English from the language widget, sidebar navigation labels now correctly translate to English instead of staying in the original language; the client-side translation hook now handles English as a target language along with other languages, ensuring consistent behavior whether using server cache or on-demand translation
 
 ## 0.10.0 - 15.05.2026
 
