@@ -1,5 +1,9 @@
 # Releases
 
+## 0.12.0 - 17.05.2026
+
+- Added `llms.txt generation` for AI model discovery — `/llms.txt` endpoint now dynamically generates a structured file containing full documentation sitemap, feature descriptions, and guidelines for AI models and LLM crawlers; helps AI systems understand Docsbook documentation structure when indexing
+
 ## 0.11.1 - 17.05.2026
 
 - Improved `documentation content SSR` — article HTML now renders on the server using `dangerouslySetInnerHTML` instead of being injected client-side, ensuring markdown content is present in the initial page HTML for search engines and faster First Contentful Paint
