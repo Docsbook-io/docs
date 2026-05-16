@@ -3,6 +3,7 @@
 ## 0.12.0 - 17.05.2026
 
 - Added `llms.txt generation` for AI model discovery — `/llms.txt` endpoint now dynamically generates a structured file containing full documentation sitemap, feature descriptions, and guidelines for AI models and LLM crawlers; helps AI systems understand Docsbook documentation structure when indexing
+- Fixed `HTML entities in outline headings` — ampersand and other symbols in headings now display correctly in the Outline (table of contents) instead of showing encoded entities like `&#x26;`
 
 ## 0.11.1 - 17.05.2026
 
