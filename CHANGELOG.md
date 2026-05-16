@@ -4,6 +4,7 @@
 
 - Added `llms.txt generation` for AI model discovery — `/llms.txt` endpoint now dynamically generates a structured file containing full documentation sitemap, feature descriptions, and guidelines for AI models and LLM crawlers; helps AI systems understand Docsbook documentation structure when indexing
 - Fixed `HTML entities in outline headings` — ampersand and other symbols in headings now display correctly in the Outline (table of contents) instead of showing encoded entities like `&#x26;`
+- Fixed `sidebar folder collapse interaction` — folder toggle buttons in the documentation sidebar now respond to clicks and properly collapse/expand subfolders; added client-side JavaScript to handle folder state toggling for SSR-rendered sidebar tree
 
 ## 0.11.1 - 17.05.2026
 
