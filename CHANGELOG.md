@@ -1,5 +1,10 @@
 # Releases
 
+## 0.11.1 - 17.05.2026
+
+- Improved `documentation content SSR` — article HTML now renders on the server using `dangerouslySetInnerHTML` instead of being injected client-side, ensuring markdown content is present in the initial page HTML for search engines and faster First Contentful Paint
+- Added `server-side sidebar tree rendering` in documentation — navigation sidebar now renders as static HTML on the server via new `SidebarTree` component; sidebar links and folder structure are included in SSR response instead of being built on the client, improving page speed and SEO
+
 ## 0.11.0 - 16.05.2026
 
 - Improved `i18n language auto-detection` in documentation — when workspace language is auto-detected as non-English, UI strings now load in the detected language by default instead of always showing English; visitors see fully localized interface without requiring a URL language prefix
