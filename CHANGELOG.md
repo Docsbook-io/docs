@@ -5,6 +5,7 @@
 - Added `Source of Truth documentation graph` (Enterprise) — new MCP server feature for Enterprise plan that indexes documentation structure and relationships; AI agents can query `get_doc_graph` to find affected pages when code changes, improving documentation consistency across large projects
 - Added `documentation reindexing endpoint` — new `reindex_doc_graph` MCP tool with 100 reindexes per month for Enterprise; users can manually rebuild the documentation graph from GitHub repository via FloatWidget or API
 - Added `Source of Truth settings panel` — new enterprise-only tab in FloatWidget showing MCP server URL, last indexation time, reindex usage, and reindex button; non-Enterprise workspaces see upgrade modal when attempting to enable
+- Fixed `Source of Truth reindex button` — reindex now uses session authentication instead of MCP bearer token so the button in FloatWidget works correctly for logged-in users; toggle state now persists across page reloads
 
 ## 0.12.0 - 17.05.2026
 
