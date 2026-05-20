@@ -1,5 +1,14 @@
 # Releases
 
+## 0.14.0 - 20.05.2026
+
+- Improved `AI Chat follow-up questions` — AI Chat now generates 3 contextual follow-up questions after each response via a secondary LLM call; follow-ups appear as clickable buttons below the main answer, enabling seamless conversation continuation
+- Improved `AI Chat Thinking indicator` — replaced bouncing dots with animated "Thinking…" text with shimmer effect; provides better visual feedback for ongoing response generation with consistent user experience
+- Improved `AI Chat message actions` — added Share, Copy as Markdown buttons alongside existing Like/Dislike; added More menu (•••) with Report Issue option for better response feedback and sharing
+- Improved `AI Chat welcome screen animations` — implemented stagger animations with fade-in-scale for logo, fade-in-up for title/subtitle, and progressive animation for suggested question buttons; creates polished first-impression when opening the panel
+- Removed `DeepSearch and References feature toggles` — DeepSearch and References buttons removed from AI Chat input and FloatWidget admin settings; simplified feature set focused on core Q&A functionality for all plans
+- Improved `Source of Truth for Enterprise` — automatically enabled for Enterprise workspaces without requiring admin toggle; enables AI Chat to reference documentation structure for better answer quality in Enterprise plans
+
 ## 0.13.0 - 18.05.2026
 
 - Added `Source of Truth documentation graph` (Enterprise) — new MCP server feature for Enterprise plan that indexes documentation structure and relationships; AI agents can query `get_doc_graph` to find affected pages when code changes, improving documentation consistency across large projects
