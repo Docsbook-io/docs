@@ -10,6 +10,12 @@
 - Explicit allow rules for GPTBot, ClaudeBot, PerplexityBot, Google-Extended in `robots.txt`
 - Events webhook endpoint in `API` for receiving real-time workspace events
 
+### Fixed
+- `Preview mode` Connect GitHub button now redirects to main domain `/connect` instead of subdomain path
+
+### Added
+- Confetti animation on `/success` page after successful payment via `canvas-confetti`
+
 ### Improved
 - `AI Panel` input field now receives focus automatically when the panel opens
 - `Organization` schema expanded with founder, email, foundingDate, and social sameAs links
