@@ -9,9 +9,12 @@
 - `llms-full.txt` endpoint with complete product brief for AI crawlers
 - Explicit allow rules for GPTBot, ClaudeBot, PerplexityBot, Google-Extended in `robots.txt`
 - Events webhook endpoint in `API` for receiving real-time workspace events
+- Blog section in `docs` with 5 SEO-optimized posts for distribution — competitor comparisons (Mintlify, Docusaurus), AI search, documentation SEO guide
 
 ### Fixed
 - `Preview mode` Connect GitHub button now redirects to main domain `/connect` instead of subdomain path
+- Replaced PNG logo with inline SVG in `opengraph-image` for correct social preview branding
+- `Copy Page` dropdown now uses fixed positioning to stay within viewport on mobile instead of overflowing off the left edge
 
 ### Added
 - Confetti animation on `/success` page after successful payment via `canvas-confetti`
