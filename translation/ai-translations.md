@@ -37,7 +37,13 @@ This means re-enabling a language that was previously active is instant — no r
 
 ## Translation Quality
 
-Claude produces high-quality technical documentation translations.
+Claude produces high-quality technical documentation translations — the same model that powers Claude.ai, trained on a large corpus of technical writing in dozens of languages.
+
+### Why Claude Outperforms Generic Translation
+
+Generic machine translation (Google Translate, DeepL) is built for general-purpose text. Developer documentation has a different structure: imperative commands, technical terms, code-adjacent prose, and precision-critical instructions where a mistranslation causes a broken setup.
+
+Claude understands context. It knows that "run the command" means `ejecuta el comando`, not `corre el comando`, and that a parameter name should stay in English even when the surrounding sentence is in French. It preserves meaning across sentence restructuring — not just word-for-word substitution.
 
 **Works best for:**
 - Step-by-step guides
@@ -49,6 +55,28 @@ Claude produces high-quality technical documentation translations.
 - Brand-specific terminology
 - Cultural references or idioms
 - Highly domain-specific jargon
+
+### Quality at Scale
+
+Human translators cost $0.10–$0.30 per word. A 50-page documentation site is typically 25,000–40,000 words. That's $2,500–$12,000 per language — before you account for updates.
+
+With Docsbook, translation is included in your plan. Every update to your docs is re-translated automatically for only the changed pages. No invoices. No turnaround time. No coordination overhead.
+
+## SEO Impact of Translations
+
+Every translated language version is a fully separate set of URLs, indexed independently by Google.
+
+```
+docsbook.io/{user}/{repo}        → ranks for English queries
+docsbook.io/{user}/{repo}/es     → ranks for Spanish queries
+docsbook.io/{user}/{repo}/de     → ranks for German queries
+```
+
+Docsbook automatically adds `hreflang` tags to every page, which tells Google which language version to show to which audience. Without these tags, Google may show the wrong language to international visitors — or ignore translated pages entirely.
+
+**What this means in practice:** enabling Spanish translation doesn't just serve your existing Spanish-speaking users better. It creates an entirely new set of pages that rank for Spanish-language searches your English docs never would have appeared in. You're multiplying your search surface area by the number of languages you publish.
+
+A documentation site that was ranking for 500 English queries now ranks for 500 queries in each additional language — passively, without any extra content work.
 
 ## Writing Tips for Better AI Translation
 
