@@ -1,5 +1,29 @@
 # Releases
 
+## 0.15.0 - 22.05.2026
+
+### Added
+- `SoftwareApplication` structured data schema on `Landing Page` for AI search visibility
+- `llms-full.txt` endpoint with complete product brief for AI crawlers
+- Explicit allow rules for GPTBot, ClaudeBot, PerplexityBot, Google-Extended in `robots.txt`
+- Events webhook endpoint in `API` for receiving real-time workspace events
+
+### Improved
+- `Organization` schema expanded with founder, email, foundingDate, and social sameAs links
+- `FAQPage` schema expanded to 9 Q&A pairs with detailed AI-citable answers
+- `WebSite` schema now includes SearchAction for Google Sitelinks Search Box
+- `llms.txt` now serves full product brief — pricing, features, audience, competitors
+- FAQ answers server-rendered in HTML for Googlebot (no JS required to read)
+- Page title, og:title, and twitter:title unified to single consistent value
+- `llms.txt` fallback content replaced with full product brief
+
+### Fixed
+- GitHub icon removed from primary CTA button on `Landing Page`
+
+### Security
+- Added `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy` headers
+- HSTS upgraded with `includeSubDomains` and `preload` directives
+
 ## 0.14.0 - 20.05.2026
 
 ### Improved
