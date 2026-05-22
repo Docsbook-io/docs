@@ -9,6 +9,12 @@
 - Existing `pro` workspaces (legacy $29 one-time) grandfathered as lifetime Pro at no extra cost
 - Existing `enterprise` workspaces auto-migrated to `pro_plus` keeping all features
 
+### Fixed
+- Auth redirect loop after GitHub OAuth — stale `callbackUrl` cookie pointing at a subdomain `/connect` caused an infinite redirect cycle; NextAuth `redirect` callback now normalises any subdomain `/connect` → `docsbook.io/connect`
+- `/connect` on a workspace subdomain now redirects to `docsbook.io/connect` instead of 404
+- `ConnectPage` now redirects to sign-in when the session cookie is present but invalid/expired, preventing a broken `ConnectPicker` state
+- Workspace redirect after sign-in always uses `APP_DOMAIN` instead of the request `host` header, preventing wrong subdomain redirects
+
 ### Added
 - Paddle `SubscriptionPaymentFailed` webhook handler — downgrades workspace to Free and sends Resend email to the owner with payment-update link
 - Subscription management UI in `FloatWidget` pricing tab — shows current plan, subscription status, next billing date, and Manage subscription button linking to Paddle Customer Portal (Pro+ only)
