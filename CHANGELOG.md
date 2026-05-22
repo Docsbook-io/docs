@@ -11,6 +11,7 @@
 - Events webhook endpoint in `API` for receiving real-time workspace events
 
 ### Improved
+- `AI Panel` input field now receives focus automatically when the panel opens
 - `Organization` schema expanded with founder, email, foundingDate, and social sameAs links
 - `FAQPage` schema expanded to 9 Q&A pairs with detailed AI-citable answers
 - `WebSite` schema now includes SearchAction for Google Sitelinks Search Box
