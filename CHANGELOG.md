@@ -20,6 +20,7 @@
 - Confetti animation on `/success` page after successful payment via `canvas-confetti`
 
 ### Improved
+- Search widget UX with breadcrumb paths and "Ask AI assistant" option in `Search Bar`
 - `AI Panel` input field now receives focus automatically when the panel opens
 - `Organization` schema expanded with founder, email, foundingDate, and social sameAs links
 - `FAQPage` schema expanded to 9 Q&A pairs with detailed AI-citable answers
