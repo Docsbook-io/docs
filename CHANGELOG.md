@@ -23,6 +23,8 @@
 - GitHub icon removed from primary CTA button on `Landing Page`
 - Missing top padding in `Content` area when breadcrumbs are disabled
 - Left `Sidebar` collapsible folders not opening when navigating via subheader links without full page reload
+- `Copy Markdown` button no longer shown on pages without a workspace
+- Translation toggle now enabled for preview admins on pages without a workspace
 
 ### Security
 - Added `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy` headers
