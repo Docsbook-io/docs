@@ -25,6 +25,7 @@
 - Left `Sidebar` collapsible folders not opening when navigating via subheader links without full page reload
 - `Copy Markdown` button no longer shown on pages without a workspace
 - Translation toggle now enabled for preview admins on pages without a workspace
+- `MCP Server` tab in admin panel now shows sign-in overlay in preview mode instead of raw content
 
 ### Security
 - Added `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy` headers
