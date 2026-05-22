@@ -1,5 +1,13 @@
 # Releases
 
+## 0.15.1 - 22.05.2026
+
+### Added
+- Animated growth counters in `CtaBand` — 4 stats (workspaces, pages indexed, countries, AI queries) count up over 6 seconds on scroll-into-view
+- Before→After traffic animation in `BentoFeatures` analytics cell — visitors climb from 11 to 1,240 and page views from 34 to 8,900 in a 9-second loop
+- Ticket deflection counter above AI chat mock — shows 0→847 tickets saved this month, growing over 6 seconds
+- Concrete numbers in `SocialProof` tabs — `2,400+ workspaces`, `3× more signups`, `40% fewer tickets`, `15 languages`
+
 ## 0.15.0 - 22.05.2026
 
 ### Added
@@ -10,8 +18,11 @@
 - Explicit allow rules for GPTBot, ClaudeBot, PerplexityBot, Google-Extended in `robots.txt`
 - Events webhook endpoint in `API` for receiving real-time workspace events
 - Blog section in `docs` with 5 SEO-optimized posts for distribution — competitor comparisons (Mintlify, Docusaurus), AI search, documentation SEO guide
+- New `SEO Optimization` page in `docs` explaining automatic meta tags, JSON-LD, static pages, sitemap, canonical URLs, hreflang, and llms.txt — with compounding ROI timeline
+- Expanded `AI Translations` page in `docs` with sections on why Claude outperforms generic translation tools and how each language version is indexed separately for multilingual SEO
 
 ### Fixed
+- Image-only paragraphs (e.g. GitHub release badges) in `prose` content now center-align instead of left-align
 - `Preview mode` Connect GitHub button now redirects to main domain `/connect` instead of subdomain path
 - Replaced PNG logo with inline SVG in `opengraph-image` for correct social preview branding
 - `Copy Page` dropdown now uses fixed positioning to stay within viewport on mobile instead of overflowing off the left edge
