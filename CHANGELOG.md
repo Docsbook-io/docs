@@ -1,5 +1,21 @@
 # Releases
 
+## 0.16.0 - 22.05.2026
+
+### Changed
+- Rework billing model — Pro is now $150 lifetime one-time payment, Pro+ replaces Enterprise as $29/mo subscription with white-label and Source of Truth
+- New AI query limits — `Free` 0/mo, `Pro` 200/mo, `Pro+` 2000/mo (was 20/1000/unlimited)
+- New translation limits — `Free` 0/mo, `Pro` 50/mo, `Pro+` 500/mo (was 30/300/unlimited)
+- Existing `pro` workspaces (legacy $29 one-time) grandfathered as lifetime Pro at no extra cost
+- Existing `enterprise` workspaces auto-migrated to `pro_plus` keeping all features
+
+### Added
+- Paddle `SubscriptionPaymentFailed` webhook handler — downgrades workspace to Free and sends Resend email to the owner with payment-update link
+- Subscription management UI in `FloatWidget` pricing tab — shows current plan, subscription status, next billing date, and Manage subscription button linking to Paddle Customer Portal (Pro+ only)
+- `pricing-spec.md` in `docs/content/setup` — source of truth for the new billing model
+- Two-option upgrade layout in `AiUpgradeModal` and `ProUpgradeModal` — side-by-side Pro lifetime vs Pro+ monthly cards
+- Subscription metadata columns on `workspaces` — `paddle_subscription_id`, `paddle_customer_id`, `subscription_next_billed_at`, `subscription_status`
+
 ## 0.15.2 - 22.05.2026
 
 ### Fixed
