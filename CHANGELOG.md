@@ -1,5 +1,10 @@
 # Releases
 
+## 0.16.1 - 22.05.2026
+
+### Added
+- New `/start` page replaces the `LivePreviewExpanded` modal on "Start for free" — logo, GitHub URL input, Sign in with GitHub, email/Discord support links, social icons, hero-style shards background, cascade animations
+
 ## 0.16.0 - 22.05.2026
 
 ### Changed
@@ -14,6 +19,7 @@
 - `/connect` on a workspace subdomain now redirects to `docsbook.io/connect` instead of 404
 - `ConnectPage` now redirects to sign-in when the session cookie is present but invalid/expired, preventing a broken `ConnectPicker` state
 - Workspace redirect after sign-in always uses `APP_DOMAIN` instead of the request `host` header, preventing wrong subdomain redirects
+- Infinite redirect loop for workspaces whose repo is named `connect` — subdomain middleware no longer intercepts `user.docsbook.io/connect` as a `/connect` auth route
 
 ### Added
 - Paddle `SubscriptionPaymentFailed` webhook handler — downgrades workspace to Free and sends Resend email to the owner with payment-update link
