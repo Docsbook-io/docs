@@ -1,5 +1,10 @@
 # Releases
 
+## 0.15.2 - 22.05.2026
+
+### Fixed
+- Show "AI not enabled" message with owner contact link in `AiPanel` instead of generic error when AI is disabled for a workspace — users now see a helpful message with a link to the project owner's GitHub profile to request enabling the feature
+
 ## 0.15.1 - 22.05.2026
 
 ### Added
