@@ -3,6 +3,8 @@
 ## 0.15.0 - 22.05.2026
 
 ### Added
+- `Get Support` tab in admin panel with email, Discord, and Twitter contacts
+- Email support link in landing `Footer` for quick access to `support@docsbook.io`
 - `SoftwareApplication` structured data schema on `Landing Page` for AI search visibility
 - `llms-full.txt` endpoint with complete product brief for AI crawlers
 - Explicit allow rules for GPTBot, ClaudeBot, PerplexityBot, Google-Extended in `robots.txt`
@@ -19,6 +21,8 @@
 
 ### Fixed
 - GitHub icon removed from primary CTA button on `Landing Page`
+- Missing top padding in `Content` area when breadcrumbs are disabled
+- Left `Sidebar` collapsible folders not opening when navigating via subheader links without full page reload
 
 ### Security
 - Added `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy` headers
