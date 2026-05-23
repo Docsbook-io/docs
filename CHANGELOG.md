@@ -1,5 +1,14 @@
 # Releases
 
+## 0.17.3 - 23.05.2026
+
+### Added
+- Anonymous MCP access: any AI model can now connect to `https://docsbook.io/{owner}/{repo}/api/mcp/server` without authentication and use `get_info`, `get_doc_graph`, and `read_doc_sections` for PRO+ workspaces
+- Scoped MCP endpoint `/{owner}/{repo}/api/mcp/server` — connecting to this URL auto-scopes the server to the specified repository
+- Scoped `/{owner}/{repo}/.well-known/oauth-protected-resource` for OAuth discovery per workspace
+- Every documentation page now includes `<link rel="mcp-server">` meta tag so AI models can auto-discover the MCP server from any docs URL
+- `llms.txt` now includes a full MCP Server section with connect instructions, tool list, and discovery notes
+
 ## 0.17.2 - 23.05.2026
 
 ### Added
