@@ -98,4 +98,4 @@ Docsbook handles the technical SEO automatically so you can focus on writing con
 
 ---
 
-**Ready to turn your docs into a growth channel? [Start with Docsbook →](#)**
+**Ready to turn your docs into a growth channel? [Start with Docsbook →](https://docsbook.io/start)**

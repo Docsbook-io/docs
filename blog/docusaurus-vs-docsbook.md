@@ -81,4 +81,4 @@ Docusaurus is genuinely excellent. For the right team, it's unbeatable. But for 
 
 ---
 
-**Stop configuring. Start documenting. [Try Docsbook free →](#)**
+**Stop configuring. Start documenting. [Try Docsbook free →](https://docsbook.io/start)**
