@@ -3,6 +3,18 @@
 ## 0.17.0 - 23.05.2026
 
 ### Changed
+- Remove live preview modal from landing — `GitHub to DocsBook` input now navigates directly to `/<owner>/<repo>?preview=true` instead of opening an overlay
+- Replace dark-background OG/Twitter image with a landing-style preview — light gradient, "The AI Knowledge Platform" headline, feature badges, and a docs UI mockup — improves appearance when sharing links on X/Twitter
+
+### Fixed
+- Wrap long project names in sidebar to prevent overflow outside the sidebar boundary
+
+### Changed
+- Enable `Ask AI` button near the page title by default for new workspaces — previously off by default
+- Fix system theme not applying correctly due to shared `localStorage` key across workspaces
+- Fix `docs-proxy` route ignoring saved `defaultTheme` and always falling back to `light`
+
+### Changed (previous)
 - Rename `MCP Server` to `MCP Source of Truth` in Pro+ pricing rows and add a hover `?` tooltip explaining the AI-coupled indexing graph
 - Enable Source of Truth by default for Pro+ workspaces — removed the manual toggle from the admin MCP tab
 - Add a Pro+ badge next to `Reindex Usage` that opens the Source of Truth promo modal on click
