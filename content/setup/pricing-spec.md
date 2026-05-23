@@ -1,73 +1,66 @@
 ---
-title: "Pricing Page Specification"
-description: "Docsbook pricing reference — Free, Pro lifetime at $150, and Pro+ at $59/month, with AI query and translation limits broken down per plan."
+title: "Pricing & Plans"
+description: "Docsbook pricing — Free forever, Pro at $150 lifetime, and Pro+ at $59/month — with AI query and translation limits broken down per plan."
 ---
 
-# Pricing Spec
+# Pricing & Plans
 
-## Plans
+Docsbook has three plans. All plans cover unlimited public GitHub repositories.
 
-### Free
+## Free
+
 - $0 forever
-- All basic features: branding, UI settings, navigation, analytics
-- AI queries: 0/mo
-- Translations: 0/mo
-- No custom domain, no SEO, no AI chatbot
+- All basic features: branding, UI settings, navigation, basic analytics
+- No AI chatbot, no translations, no custom domain
 
-### Pro — $150 lifetime (one-time payment)
-- Everything in Free
-- AI chatbot: 200 queries/mo
-- Translation: 50 translations/mo
-- Custom domain
-- SEO tools
-- One-time payment, lifetime access
-- Best for: solo founders, indie devs, projects with predictable usage
+## Pro — $150 lifetime
 
-### Pro+ — $59/month (subscription)
-- Everything in Pro
-- AI chatbot: 2000 queries/mo
-- Translation: 500 translations/mo
-- White-label (hide "Powered by Docsbook")
-- Source of Truth: knowledge graph index with deep search
-- Best for: teams, agencies, brand-conscious customers, heavy usage
+One-time payment, lifetime access. Best for solo founders, indie devs, and projects with predictable usage.
+
+Everything in Free, plus:
+
+- AI chatbot — 200 questions/month
+- Auto-translation — 50 translations/month
+- Custom domain (`docs.yourcompany.com`) with free SSL
+- SEO tools — meta tags, sitemap, OpenGraph, JSON-LD
+
+## Pro+ — $59/month
+
+Monthly subscription. Best for teams, agencies, and brand-conscious customers with heavy usage.
+
+Everything in Pro, plus:
+
+- AI chatbot — 2000 questions/month
+- Auto-translation — 500 translations/month
+- White-label — hide "Powered by Docsbook"
+- Source of Truth — knowledge graph index for AI agents
+- Advanced MCP tools — chat hooks, custom system prompt, translation management
 
 ## Limits Summary
 
-| Feature             | Free | Pro          | Pro+         |
-| ------------------- | ---- | ------------ | ------------ |
-| AI queries/mo       | 0    | 200          | 2000         |
-| Translations/mo     | 0    | 50           | 500          |
-| Custom domain       | ❌    | ✅            | ✅            |
-| SEO                 | ❌    | ✅            | ✅            |
-| White-label         | ❌    | ❌            | ✅            |
-| Source of Truth     | ❌    | ❌            | ✅            |
-| Payment             | —    | $150 one-time| $59/mo       |
-
-## Grandfather Policy
-Existing customers who paid the legacy $29 one-time Pro plan retain their Pro tier at no extra cost — their `plan='pro'` workspace is treated as lifetime Pro (matching the new Pro $150 lifetime tier). No action required from them.
-
-Old "Enterprise" customers (`plan='enterprise'`) are migrated to `plan='pro_plus'` keeping all features.
-
-## Failed Payments (Pro+ only)
-When a Pro+ subscription payment fails:
-1. Webhook `subscription.payment_failed` fires
-2. Workspace is downgraded to `plan='free'` (aiEnabled=false, isPremium=false)
-3. Email is sent to the workspace owner via Resend with a link to update their payment method via the Paddle Customer Portal
+| Feature                | Free | Pro            | Pro+         |
+| ---------------------- | ---- | -------------- | ------------ |
+| GitHub repositories    | ∞    | ∞              | ∞            |
+| AI queries/month       | 0    | 200            | 2000         |
+| Translations/month     | 0    | 50             | 500          |
+| Custom domain          | ❌    | ✅              | ✅            |
+| SEO                    | ❌    | ✅              | ✅            |
+| White-label            | ❌    | ❌              | ✅            |
+| Source of Truth        | ❌    | ❌              | ✅            |
+| Payment                | —    | $150 one-time  | $59/month    |
 
 ## Upgrade Paths
-- Free → Pro: one-time Paddle checkout
-- Free → Pro+: subscription Paddle checkout
-- Pro → Pro+: subscription Paddle checkout (no proration — they keep their lifetime Pro and add Pro+ on top)
-- Pro+ → Free: subscription cancellation via Customer Portal
 
-## Technical Implementation
-- Paddle products:
-  - Pro: one-time price (`PADDLE_PRICE_ID_PRO`)
-  - Pro+: monthly subscription price (`PADDLE_PRICE_ID_PRO_PLUS`)
-- Webhook events:
-  - `TransactionCompleted` → plan=pro (lifetime)
-  - `SubscriptionActivated` → plan=pro_plus
-  - `SubscriptionCanceled` → plan=free
-  - `SubscriptionPaymentFailed` → plan=free + email
-- DB columns added to `workspaces`: `paddle_subscription_id`, `paddle_customer_id`, `subscription_next_billed_at`, `subscription_status`
-- Customer Portal URL: configured via `NEXT_PUBLIC_PADDLE_CUSTOMER_PORTAL_URL`
+- **Free → Pro** — one-time payment, instant activation
+- **Free → Pro+** — monthly subscription, instant activation
+- **Pro → Pro+** — keep your lifetime Pro and add Pro+ on top
+- **Pro+ → Free** — cancel anytime via the Customer Portal
+
+## Refund Policy
+
+Full refund within 30 days, no questions asked. Contact [support@docsbook.io](mailto:support@docsbook.io).
+
+## Related
+
+- [Premium Features](../../guides/advanced/premium.md) — what each paid plan unlocks
+- [AI Chat](../../ai/chat.md), [Translations](../../ai/translations.md), [Source of Truth](../../ai/source-of-truth.md)
