@@ -1,5 +1,26 @@
 # Releases
 
+## 0.17.0 - 23.05.2026
+
+### Changed
+- Rename `MCP Server` to `MCP Source of Truth` in Pro+ pricing rows and add a hover `?` tooltip explaining the AI-coupled indexing graph
+- Enable Source of Truth by default for Pro+ workspaces — removed the manual toggle from the admin MCP tab
+- Add a Pro+ badge next to `Reindex Usage` that opens the Source of Truth promo modal on click
+
+### Added
+- 10 new MCP Example Questions in admin (copy brandbook from a URL, change logo, custom domain, translations, social links, AI key, analytics, reindex, read sections); moved the `authentication module` example to the bottom of the list
+
+## 0.16.3 - 23.05.2026
+
+### Fixed
+- Neutralize green styling on "Get Support" button in workspace settings sidebar — now matches the muted look of other navigation items
+- Remove duplicate `opengraph-image.tsx` inside `[[...path]]` catch-all route that broke the Next.js build (parent route already handles all path scenarios)
+
+## 0.16.2 - 23.05.2026
+
+### Changed
+- Open docs in `?preview=true` mode after submitting GitHub URL on `/start` — newly published documentation now lands directly in Preview Mode
+
 ## 0.16.1 - 22.05.2026
 
 ### Added
