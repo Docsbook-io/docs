@@ -1,3 +1,8 @@
+---
+title: "Quick Start — Publish Docs in 30 Seconds"
+description: "Turn any public GitHub repository into a beautiful documentation site in three steps — sign in with GitHub, pick a repo, share the live URL."
+---
+
 # Quick Start — 3 Minutes
 
 Create a documentation site from GitHub in 3 simple steps.
@@ -38,13 +43,13 @@ Your documentation site is live. It automatically syncs with GitHub.
 ## What's Next?
 
 - Update documentation in GitHub → it appears on the site automatically
-- Set up your custom domain (Premium)
-- Enable translation to other languages (Premium)
-- Hide the "Powered by Docsbook" badge (Premium)
+- Set up your custom domain (PRO)
+- Enable translation to other languages (PRO)
+- Hide the "Powered by Docsbook" badge (PRO+)
 
 ---
 
 **Additional guides:**
 - [How to manage documentation](./guides/getting-started/managing-docs.md)
 - [Setting up a custom domain](./guides/advanced/custom-domain.md)
-- [Premium features](./guides/advanced/premium.md)
+- [PRO and PRO+ plans](./guides/advanced/premium.md)

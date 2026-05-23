@@ -1,3 +1,8 @@
+---
+title: "Why Documentation Matters for SaaS"
+description: "The hidden ROI of great developer documentation — faster onboarding, fewer support tickets, lower churn, and how to measure the cost of bad docs."
+---
+
 # Why Documentation Matters: The Hidden ROI of Developer Experience
 
 ## Introduction

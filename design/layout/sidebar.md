@@ -1,3 +1,8 @@
+---
+title: "Sidebar Layout & Configuration"
+description: "Configure the left navigation panel in Docsbook — sidebar search, breadcrumbs, language switcher, and how readers move between documentation pages."
+---
+
 # Sidebar Control
 
 Configure what appears in the left navigation panel of your documentation.

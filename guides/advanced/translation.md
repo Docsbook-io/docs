@@ -1,14 +1,19 @@
-# Translating Documentation to Other Languages
+---
+title: "How to Enable AI Translations"
+description: "Step-by-step guide to enable AI-powered translations in Docsbook — pick target languages, let Claude translate, and serve indexed pages per locale."
+---
+
+# How to Translate Your Documentation
 
 Automatically translate your documentation to any language.
 
-**Required:** Premium subscription ($29 one-time)
+**Required:** PRO ($150 lifetime) or PRO+ ($59/month)
 
 ## What Is Automatic Translation?
 
 Docsbook can translate all your documentation to other languages **automatically**.
 
-Just select the languages — AI does the rest.
+Select the target languages — AI does the rest.
 
 **Example:**
 
@@ -24,32 +29,32 @@ Visitors see a language selection menu
 
 ## Supported Languages
 
-Docsbook can translate to **100+ languages**:
+Docsbook supports **15 languages** for automatic AI translation:
 
-**Main languages:**
-- English
-- Español (Spanish)
-- Français (French)
-- Deutsch (German)
-- Italiano (Italian)
-- Português (Portuguese)
-- Русский (Russian)
-- 日本語 (Japanese)
-- 中文 (Chinese)
-- 한국어 (Korean)
-- العربية (Arabic)
-- ภาษาไทย (Thai)
-
-Plus 80+ other languages.
+- English (EN)
+- Español / Spanish (ES)
+- Français / French (FR)
+- Deutsch / German (DE)
+- Português / Portuguese (PT)
+- Italiano / Italian (IT)
+- Русский / Russian (RU)
+- 中文 / Chinese (ZH)
+- 日本語 / Japanese (JA)
+- 한국어 / Korean (KO)
+- العربية / Arabic (AR)
+- हिन्दी / Hindi (HI)
+- Türkçe / Turkish (TR)
+- Polski / Polish (PL)
+- Nederlands / Dutch (NL)
 
 ## Enabling Translations
 
-### Step 1: Check Premium
+### Step 1: Check Your Plan
 
-Translation is only available in the Premium subscription.
+Translation is available on PRO and PRO+.
 
 1. Open settings (Float Widget)
-2. Check status — should show "Premium"
+2. Check status — should show "PRO" or "PRO+"
 3. If Free — [upgrade](./premium.md)
 
 ### Step 2: Open Translation Settings
@@ -82,7 +87,7 @@ Translation takes:
 - **Medium (10-50 pages):** 5-10 minutes
 - **Large (> 50 pages):** 15-30 minutes
 
-When done — translated versions appear on the site.
+When done, translated versions appear on the site.
 
 ## How Is Translation Used?
 
@@ -149,11 +154,10 @@ Uses artificial intelligence (Claude from Anthropic) for translation.
 
 ```
 Original English:
-"Getting started is a breeze. Just plug in your URL and boom,
-you're done!"
+"Getting started is straightforward. Enter your URL to finish setup."
 
 Translated Spanish:
-"Comenzar es muy fácil. Solo ingresa tu URL y listo, ¡hemos terminado!"
+"Comenzar es sencillo. Ingresa tu URL para completar la configuración."
 ```
 
 ## Updating Translations
@@ -166,7 +170,7 @@ When you update documentation:
 2. Commit to GitHub
 3. Docsbook notices changes
 4. Translates updates to other languages
-5. Done! Translated versions are updated
+5. Translated versions are updated
 
 This happens automatically — you don't need to do anything.
 
@@ -208,7 +212,7 @@ Adding translations can:
 "To install the package, run the command."
 
 ❌ Bad (hard to translate):
-"Just pip this bad boy and you're golden!"
+"Pip this bad boy and you're golden."
 ```
 
 Plain English translates better.
@@ -217,7 +221,7 @@ Plain English translates better.
 
 ```
 ✅ Good:
-"The setup process is simple."
+"The setup process takes three steps."
 
 ❌ Bad:
 "It's a piece of cake to set up."
@@ -336,11 +340,11 @@ A: Yes, download translations, edit, upload back.
 
 **Q: What if I need a rare language?**
 
-A: Docsbook supports 100+ languages. For a specific one — contact support@docsbook.io.
+A: Docsbook supports 15 languages today. If you need another one, contact support@docsbook.io.
 
 **Q: Is translation free?**
 
-A: Included in Premium subscription. No extra charges.
+A: Translations are included in PRO (50/month) and PRO+ (500/month). No extra per-translation charges below those limits.
 
 **Q: Will translation update when I update docs?**
 
@@ -349,5 +353,5 @@ A: Yes, automatically on the next update.
 ## What's Next?
 
 - [Custom Domain](./custom-domain.md)
-- [Premium Features](./premium.md)
-- [Managing Documentation](./managing-docs.md)
+- [PRO and PRO+ plans](./premium.md)
+- [Managing Documentation](../getting-started/managing-docs.md)

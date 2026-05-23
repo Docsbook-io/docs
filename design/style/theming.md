@@ -1,3 +1,8 @@
+---
+title: "Theming — Light, Dark, System"
+description: "Control the light and dark mode experience in your Docsbook site — toggle the theme switcher and set the default theme readers see on first visit."
+---
+
 # Theming
 
 Control the light/dark mode experience for your readers.

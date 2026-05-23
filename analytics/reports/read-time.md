@@ -1,3 +1,8 @@
+---
+title: "Read Time Report"
+description: "Measure how long readers actually spend on each documentation page — average read time and pages ranked by real engagement, not just page views."
+---
+
 # Read Time Analytics
 
 Find out how long visitors actually spend on each page — not just whether they opened it.

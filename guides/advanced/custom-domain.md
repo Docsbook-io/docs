@@ -1,8 +1,13 @@
+---
+title: "How to Set Up a Custom Domain"
+description: "Point docs.yourcompany.com at Docsbook with automatic SSL — branding, SEO, and trust benefits of serving documentation under your own domain."
+---
+
 # Setting Up a Custom Domain
 
 Use your own domain instead of `docsbook.io` for your documentation.
 
-**Required:** Premium subscription ($29 one-time)
+**Required:** PRO ($150 lifetime) or PRO+ ($59/month)
 
 ## Why Use a Custom Domain?
 
@@ -11,7 +16,7 @@ Use your own domain instead of `docsbook.io` for your documentation.
 - 🎯 **Branding** — documentation under your own domain
 - 📈 **SEO** — links to your domain improve your ranking
 - 🔐 **Trust** — visitors see your domain, not someone else's
-- 💼 **Professionalism** — looks like your own product
+- 💼 **Brand consistency** — looks like your own product
 
 ### Examples
 
@@ -28,7 +33,7 @@ docs.mycompany.com
 1. **Your own domain** — registered by you
    - If you don't have one — buy on [GoDaddy](https://www.godaddy.com), [Namecheap](https://www.namecheap.com), or another registrar
 
-2. **Premium subscription** — $29 one-time
+2. **PRO or PRO+ plan** — PRO is $150 lifetime, PRO+ is $59/month
    - If you haven't upgraded yet — [do it now](./premium.md)
 
 3. **Access to DNS settings** — at your domain registrar
@@ -194,7 +199,7 @@ nslookup docs.example.com
 
 **Solutions:**
 1. Wait 1 hour — certificate is being created
-2. Make sure DNS has updated
+2. Verify DNS has updated
 3. Check domain name for typos
 4. Contact [support@docsbook.io](mailto:support@docsbook.io)
 
@@ -253,7 +258,7 @@ Update links to your documentation everywhere:
 ### 3. Set Up Email (Optional)
 
 Now that you have a domain, you can add email:
-- [Google Workspace](https://workspace.google.com) — professional Gmail
+- [Google Workspace](https://workspace.google.com) — business Gmail
 - [Zoho Mail](https://www.zoho.com/mail) — free option
 - [Protonmail](https://proton.me) — private email
 
@@ -269,5 +274,5 @@ Now that the site is under your domain:
 ## What's Next?
 
 - [Translating Documentation](./translation.md)
-- [More Premium Features](./premium.md)
-- [Managing Documentation](./managing-docs.md)
+- [PRO and PRO+ plans](./premium.md)
+- [Managing Documentation](../getting-started/managing-docs.md)

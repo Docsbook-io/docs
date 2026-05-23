@@ -1,3 +1,8 @@
+---
+title: "Webhook Events Reference"
+description: "Subscribe to Docsbook workspace events — content indexed, translations, AI chat, feedback, plan changes — with HMAC-signed retries and typed payloads."
+---
+
 # Webhooks
 
 Docsbook can notify your systems about events that happen inside a workspace —

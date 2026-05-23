@@ -1,3 +1,8 @@
+---
+title: "Docsbook vs Docusaurus: Which to Choose"
+description: "Docusaurus is free but expensive in engineering time. Compare setup, hosting, search, and maintenance trade-offs against Docsbook to pick the right fit."
+---
+
 # Docusaurus vs Docsbook: When Free Costs More Than You Think
 
 ## Overview

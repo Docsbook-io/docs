@@ -1,3 +1,8 @@
+---
+title: "Header Layout & Navigation"
+description: "Customize the top navigation bar of your Docsbook site — header links, social icons, theme toggle, search button, and language switcher placement."
+---
+
 # Header Options
 
 Control what appears in the top navigation bar of your documentation site.

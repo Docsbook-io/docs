@@ -1,3 +1,8 @@
+---
+title: "Full-Text Search"
+description: "Configure full-text search across your Docsbook documentation — header search button, sidebar search box, and how readers find content instantly."
+---
+
 # Search Options
 
 Configure how visitors search your documentation.

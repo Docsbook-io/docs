@@ -1,3 +1,8 @@
+---
+title: "GitHub Integration"
+description: "Enable an Edit on GitHub link on every Docsbook page so readers can fix typos or contribute updates directly from your documentation site."
+---
+
 # GitHub Integration
 
 Let readers jump directly to edit any page on GitHub — making community contributions effortless.

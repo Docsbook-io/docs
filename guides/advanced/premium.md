@@ -1,282 +1,126 @@
-# Premium Subscription
+---
+title: "PRO and PRO+ Plans Overview"
+description: "What Docsbook PRO ($150 lifetime) and PRO+ ($59/month) unlock — custom domain, AI chat, automatic translations, white-label, SEO, and Source of Truth for AI agents."
+---
 
-Get access to advanced Docsbook features for $29 one-time.
+# PRO and PRO+ Plans
 
-## What's Included in Premium?
-
-### 🎯 Core Features
-
-| Feature | Free | Premium |
-|---------|------|---------|
-| Repositories | 1 | Unlimited |
-| Custom domain | ❌ | ✅ |
-| Hide "Powered by Docsbook" | ❌ | ✅ |
-| Automatic translation | ❌ | ✅ |
-| GitHub sync | ✅ | ✅ |
-| SEO optimization | ✅ | ✅ |
-| Mobile-friendly | ✅ | ✅ |
-
-### 💰 Pricing
-
-- **$29 USD** — one-time, for life
-- **No monthly subscriptions**
-- **First 100 customers: $19** (if you joined early)
-
-## Premium Features in Detail
-
-### 1. Unlimited Repositories
-
-**Free:** Only 1 public repository
-
-**Premium:** Connect as many repos as you want
-
-```
-Examples:
-✅ docs.example.com      (repo 1)
-✅ api.example.com       (repo 2)
-✅ guide.example.com     (repo 3)
-✅ and more
-```
-
-Each has its own settings and can be updated independently.
-
-### 2. Custom Domain
-
-Instead of:
-```
-docsbook.io/yourname/repo
-```
-
-Use:
-```
-docs.yourcompany.com
-```
-
-**Benefits:**
-- Professional look
-- Better for SEO
-- Under your brand
-- Builds trust
-
-**How to set up:** [Domain Guide](./custom-domain.md)
-
-### 3. Hide "Powered by Docsbook"
-
-In the Free version there's a badge at the bottom:
-
-```
-Powered by Docsbook
-```
-
-In Premium you can hide it.
-
-**To hide it:**
-1. Open Settings
-2. Check **Hide "Powered by Docsbook"**
-3. Save
-
-The badge disappears from all pages.
-
-### 4. Automatic Translation
-
-Translate documentation to other languages **automatically**.
-
-**How it works:**
-1. Select languages (Spanish, French, etc.)
-2. Docsbook translates all pages in minutes
-3. Visitors see a language selection menu
-4. Can translate to 100+ languages
-
-**How to set up:** [Translation Guide](./translation.md)
-
-### 5. Priority Support
-
-Premium customers get:
-- Faster support responses
-- Direct contact with the team
-- Setup help
-
-Contact: [support@docsbook.io](mailto:support@docsbook.io)
-
-## How to Pay?
-
-### Method 1: Through Docsbook Interface
-
-1. Open your documentation site
-2. Open Float Widget (bottom right)
-3. Click **"Upgrade to Premium"** or **"⭐ Premium"**
-4. Stripe payment form opens
-5. Enter your card details
-6. Payment processed
-
-### Method 2: Through Dashboard
-
-1. Open [docsbook.io](https://docsbook.io)
-2. Open Dashboard
-3. Find your workspace
-4. Click **"Upgrade"**
-5. Follow payment instructions
-
-## Payment & Security
-
-### Which Cards Are Accepted?
-
-- Visa ✅
-- Mastercard ✅
-- American Express ✅
-- Apple Pay ✅
-- Google Pay ✅
-
-### Is Payment Secure?
-
-Yes, completely safe.
-
-**Why:**
-- Payment is processed by **Stripe** (global payment leader)
-- Docsbook **never** sees your card number
-- Uses **SSL encryption**
-- Meets **PCI DSS** standards
-
-### Refunds
-
-If you're not happy:
-- Full refund within first 30 days
-- Contact support@docsbook.io
-- No questions asked
-
-## After Payment
-
-### What Happens Immediately?
-
-1. **Payment processed** ✅
-2. **Workspace becomes Premium** ✅
-3. **All features available** ✅
-
-### Where Are My New Features?
-
-1. Open Float Widget
-2. You'll see **"✨ Premium"** label
-3. In Settings new options open:
-   - Custom domain
-   - Hide badge
-   - Translation languages
-
-### Do I Need to Do Anything Else?
-
-No, everything is ready automatically!
-
-## Premium Use Cases
-
-### Company
-
-```
-Have 3 GitHub repos:
-1. api-docs         → docs.company.com/api
-2. sdk-docs         → docs.company.com/sdk
-3. guides           → docs.company.com/guides
-
-Premium allows:
-✅ Connect all 3 repos
-✅ One domain for all
-✅ Hide "Powered by Docsbook"
-✅ Support when needed
-```
-
-### Open-Source Project
-
-```
-GitHub repo: awesome-library
-
-Premium allows:
-✅ docs.awesome-lib.dev (custom domain)
-✅ Hide "Powered by Docsbook"
-✅ Translate to 10 languages
-✅ More visitors thanks to SEO
-```
-
-### Freelancer
-
-```
-Creating documentation for clients
-
-Premium allows:
-✅ docs.client1.com
-✅ docs.client2.com
-✅ Unlimited clients!
-✅ Hide "Powered by Docsbook" for each
-```
-
-## Premium FAQ
-
-**Q: How long until features activate?**
-
-A: Instantly! As soon as payment goes through.
-
-**Q: Can I choose which features?**
-
-A: No, Premium includes everything at once.
-
-**Q: What if I buy multiple times?**
-
-A: Don't worry, duplicate payments are refunded.
-
-**Q: Will there be price increases?**
-
-A: No, $29 is permanent. You pay once.
-
-**Q: Can I cancel Premium?**
-
-A: Premium is activated on your account. No cancellation, but 30-day refund available.
-
-**Q: What if I forget my payment details?**
-
-A: Stripe stores them securely. You can pay again later from your profile.
-
-**Q: Is Premium valid for all my workspaces?**
-
-A: No, Premium is purchased per workspace. But it's affordable ($29 per workspace).
+Docsbook has three plans. Free is free forever. PRO is a one-time lifetime purchase. PRO+ is a monthly subscription that adds white-label and higher AI limits.
 
 ## Plan Comparison
 
-### Free
+| Feature | Free ($0) | PRO ($150 lifetime) | PRO+ ($59/mo) |
+|---------|------|------|------|
+| Public repositories | Unlimited | Unlimited | Unlimited |
+| GitHub sync | ✅ | ✅ | ✅ |
+| Branding & themes | ✅ | ✅ | ✅ |
+| Custom domain | ❌ | ✅ | ✅ |
+| AI chat | ❌ | ✅ 200/mo | ✅ 2000/mo |
+| AI translations (15 languages) | ❌ | ✅ 50/mo | ✅ 500/mo |
+| Full SEO (sitemap, OG, JSON-LD) | ❌ | ✅ | ✅ |
+| Analytics period | 24h | 30 days | 30 days |
+| Hide "Powered by Docsbook" | ❌ | ❌ | ✅ |
+| Source of Truth (doc graph for AI) | ❌ | ❌ | ✅ |
 
-```
-☑ One repository
-☑ docsbook.io domain
-☑ GitHub sync
-☑ SEO optimization
-☑ Mobile-friendly
-☑ Beautiful design
-✗ Custom domain
-✗ Translation
-✗ Hide badge
-✗ Priority support
+## What PRO Includes
 
-Price: Free
-```
+### 1. Custom Domain
 
-### Premium
+Instead of `docsbook.io/yourname/repo`, use `docs.yourcompany.com`.
 
-```
-☑ Unlimited repositories
-☑ Custom domain
-☑ GitHub sync
-☑ SEO optimization
-☑ Mobile-friendly
-☑ Beautiful design
-☑ Hide "Powered by Docsbook"
-☑ Automatic translation (100+ languages)
-☑ Priority support
+- Branded URL
+- Better for SEO
+- Free SSL via Vercel
 
-Price: $29 (one-time)
-```
+**How to set up:** [Domain Guide](./custom-domain.md)
 
-## What's Next?
+### 2. AI Chat
+
+A chatbot trained on your documentation. 200 requests/month included on PRO, 2000/month on PRO+. Configure your own provider and API key (OpenRouter, OpenAI, Gemini, Anthropic) if you want unlimited use.
+
+### 3. Automatic Translation
+
+Translate to **15 languages**: English, Spanish, French, German, Portuguese, Italian, Russian, Chinese, Japanese, Korean, Arabic, Hindi, Turkish, Polish, Dutch.
+
+PRO: 50 translations/month. PRO+: 500/month.
+
+**How to set up:** [Translation Guide](./translation.md)
+
+### 4. SEO
+
+Meta tags, sitemap.xml, OpenGraph, Twitter cards, JSON-LD (WebSite, Organization, FAQ), canonical URLs. Each language version is indexed separately.
+
+### 5. Extended Analytics
+
+Free shows the last 24 hours. PRO and PRO+ show 7 / 14 / 30 days of views, visitors, top pages, referrers, and search queries.
+
+## What PRO+ Adds on Top
+
+### White-Label
+
+Hide the "Powered by Docsbook" badge across all pages.
+
+### Higher AI & Translation Limits
+
+- AI chat: 2000 requests/month (vs 200 on PRO)
+- Translations: 500/month (vs 50 on PRO)
+
+### Source of Truth
+
+A structured graph of your entire documentation, available to AI agents via the MCP tools `get_doc_graph`, `read_doc_sections`, and `reindex_doc_graph`. Useful if you want Claude, Cursor, or other agents to answer questions about your product from canonical docs.
+
+## How to Pay
+
+1. Open your workspace in the Float Widget
+2. Click **Upgrade**
+3. Pick PRO ($150 lifetime) or PRO+ ($59/mo)
+4. Paddle checkout opens (overlay)
+5. Enter card details, confirm
+
+### Accepted Payment Methods
+
+Visa, Mastercard, American Express, Apple Pay, Google Pay.
+
+### Is Payment Secure?
+
+Yes. Payments are processed by **Paddle** — the Merchant of Record. Docsbook never sees your card number. Paddle handles SSL, PCI DSS, EU VAT, and US sales tax.
+
+### Refunds
+
+Full refund within the first 30 days. Email support@docsbook.io.
+
+## After Payment
+
+1. **Payment processed** ✅
+2. **Workspace plan upgrades** ✅ (Free → PRO or PRO+)
+3. **All features available immediately** ✅
+
+You'll see a **PRO** or **PRO+** label in the Float Widget. New options open in Settings (custom domain, AI chat, languages, etc.).
+
+## FAQ
+
+**Q: How long until features activate?**
+
+A: Instantly, as soon as Paddle confirms the payment.
+
+**Q: Is PRO truly lifetime?**
+
+A: Yes — $150 one-time, no renewals, for the lifetime of that workspace.
+
+**Q: Can I cancel PRO+?**
+
+A: Yes, cancel anytime in your billing portal. The workspace downgrades to Free at the end of the billing period.
+
+**Q: Is the paid plan per workspace?**
+
+A: Yes. Billing is per workspace, so each workspace is upgraded separately.
+
+**Q: Will the price increase?**
+
+A: PRO+ is currently $59/month. If we change pricing, existing subscribers keep their original rate.
+
+## What's Next
 
 - [How to Set Up a Custom Domain](./custom-domain.md)
 - [How to Enable Translations](./translation.md)
-- [Managing Documentation](./managing-docs.md)
-
----
-
-Ready for Premium? **[Upgrade Now](#upgrade)**
+- [Managing Documentation](../getting-started/managing-docs.md)

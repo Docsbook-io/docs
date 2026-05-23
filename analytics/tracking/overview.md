@@ -1,3 +1,8 @@
+---
+title: "Analytics Overview"
+description: "Track page views, unique visitors, top pages, referrers, and live online readers for your documentation — privacy-first analytics with no third-party trackers."
+---
+
 # Web Analytics
 
 Know exactly how many people read your docs and where they come from — without any third-party trackers.

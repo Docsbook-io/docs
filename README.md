@@ -1,3 +1,8 @@
+---
+title: "Docsbook Documentation"
+description: "Official Docsbook documentation — quick start, guides, analytics, design, AI chat, translations, custom domains, and MCP server reference in one place."
+---
+
 # Docsbook — Documentation
 
 Welcome to Docsbook!

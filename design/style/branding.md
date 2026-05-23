@@ -1,3 +1,8 @@
+---
+title: "Branding — Colors, Fonts, Logos"
+description: "Match your documentation to your product — custom name, accent color, logo, fonts, and remove the Powered by Docsbook badge on Pro plans."
+---
+
 # Branding
 
 Make your documentation feel like your product — not a generic template.

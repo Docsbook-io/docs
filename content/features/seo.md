@@ -1,3 +1,8 @@
+---
+title: "SEO Features in Docsbook"
+description: "Automatic SEO for documentation — static HTML, fast Core Web Vitals, meta tags, OpenGraph, sitemaps, and per-language indexing without any configuration."
+---
+
 # SEO Optimization
 
 Docsbook handles technical SEO automatically so your documentation ranks on Google without configuration.

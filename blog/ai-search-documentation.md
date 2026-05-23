@@ -1,3 +1,8 @@
+---
+title: "AI Search for Documentation Explained"
+description: "Why keyword search fails in docs and how AI-powered semantic search understands developer intent — the shift from string matching to question answering."
+---
+
 # AI Search in Documentation: Why Keyword Search Is Dead
 
 ## The Problem with Traditional Search

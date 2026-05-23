@@ -1,3 +1,8 @@
+---
+title: "Copy Page & Markdown Buttons"
+description: "Let readers copy a full page as markdown or copy code blocks with one click — perfect for pasting context into ChatGPT, Claude, or other AI assistants."
+---
+
 # Copy Options
 
 Give readers easy ways to copy your documentation content.

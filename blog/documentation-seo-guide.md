@@ -1,3 +1,8 @@
+---
+title: "Documentation SEO: Complete Guide"
+description: "How to rank developer documentation on Google and AI search — page speed, structure, keyword targeting, and content patterns that win high-intent queries."
+---
+
 # Documentation SEO: How to Rank Your Docs on Google (and AI Search)
 
 ## Why Documentation SEO Is Underrated

@@ -1,3 +1,8 @@
+---
+title: "Tracked Events Reference"
+description: "Every interaction Docsbook tracks — AI chat opens, code copies, outbound clicks, sidebar navigation, language switches — for engagement insights."
+---
+
 # Events Analytics
 
 Track what visitors *do* on your docs — not just what they view.

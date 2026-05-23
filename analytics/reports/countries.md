@@ -1,3 +1,8 @@
+---
+title: "Visitor Countries Report"
+description: "See the top 30 countries your documentation readers come from and what language they use — make informed decisions about which translations to enable."
+---
+
 # Countries & Language Analytics
 
 See where your readers are in the world and which language they read your docs in.

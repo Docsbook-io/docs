@@ -1,8 +1,13 @@
+---
+title: "Docsbook vs Mintlify: Honest Comparison"
+description: "Side-by-side comparison of Mintlify and Docsbook on pricing, setup, GitHub sync, AI chat, and translations to help you choose the right docs platform."
+---
+
 # Mintlify vs Docsbook: Which Documentation Platform Is Right for You?
 
 ## Overview
 
-Mintlify has become the go-to documentation platform for Y Combinator startups and fast-growing SaaS companies. It's polished, AI-first, and beloved by developer teams. But is it the right choice for every company?
+Mintlify is a popular documentation platform for Y Combinator startups and fast-growing SaaS companies. It's AI-first and used by developer teams. But is it the right choice for every company?
 
 In this post, we break down the key differences between Mintlify and Docsbook to help you make an informed decision.
 
@@ -10,7 +15,7 @@ In this post, we break down the key differences between Mintlify and Docsbook to
 
 | Feature | Mintlify | Docsbook |
 |---|---|---|
-| Pricing | From $150/mo | From $29/mo |
+| Pricing | From $150/mo | From $59/mo |
 | Setup time | 30 min | 5 min |
 | GitHub sync | ✓ | ✓ |
 | AI search | ✓ | ✓ |
@@ -24,7 +29,7 @@ In this post, we break down the key differences between Mintlify and Docsbook to
 
 Mintlify's starter plan starts at **$150/month**. For early-stage startups and indie developers, that's a significant commitment before you've validated your product.
 
-Docsbook starts at **$29/month** — the same features, without the enterprise-tier price tag. You pay for what you need, when you need it.
+Docsbook starts at **$59/month** — the same features, without the enterprise-tier price tag. You pay for what you need, when you need it.
 
 ## Setup Experience
 
@@ -36,9 +41,9 @@ Both platforms are GitHub-native. You connect your repo, and documentation deplo
 
 ## AI Search: Under the Hood
 
-Mintlify's AI search is impressive. It supports natural language queries and can surface answers from across your docs.
+Mintlify's AI search supports natural language queries and surfaces answers from across your docs.
 
-Docsbook takes it further: our AI search also generates citations, works with multi-language docs, and is accessible via API — so you can embed it into your product, not just your docs site.
+Docsbook's AI search generates citations, works with multi-language docs, and is accessible via API — so you can embed it into your product, not just your docs site.
 
 ## SEO: Where Docsbook Wins
 
@@ -69,7 +74,7 @@ Docsbook is built SEO-first:
 
 ## Conclusion
 
-Mintlify is an excellent product. If you can afford it and are deep in their ecosystem, it delivers. But for teams that want great documentation without enterprise pricing — Docsbook is the smarter choice.
+Mintlify is a strong product. If you can afford it and are deep in their ecosystem, it delivers. For teams that want quality documentation without enterprise pricing, Docsbook is the more cost-effective choice.
 
 ---
 

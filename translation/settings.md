@@ -1,3 +1,8 @@
+---
+title: "Translation Settings"
+description: "Configure multi-language publishing in Docsbook — enable target languages, toggle the language switcher in the sidebar or header, and control translations."
+---
+
 # Translation Settings
 
 Publish your documentation in multiple languages — automatically, with no manual work.

@@ -1,3 +1,8 @@
+---
+title: "Content Options & Settings"
+description: "Show or hide UI elements around your documentation content — scroll-to-top, prev/next buttons, breadcrumbs, and Ask AI placement options."
+---
+
 # Content Options
 
 Control the UI elements that appear around your page content.

@@ -1,3 +1,8 @@
+---
+title: "AI-Powered Translations"
+description: "How Docsbook auto-translates documentation with Claude AI — incremental re-translation on GitHub push, cached delivery, and zero translation files to maintain."
+---
+
 # AI Translations
 
 How Docsbook automatically translates your documentation using Claude AI.

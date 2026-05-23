@@ -1,3 +1,8 @@
+---
+title: "Core Concepts: Workspaces in Docsbook"
+description: "Learn the core concepts behind Docsbook — what a workspace is, how it connects to your GitHub repo, and how markdown becomes a documentation site."
+---
+
 # Core Concepts
 
 ## What is a Workspace?
@@ -16,7 +21,7 @@ A workspace includes:
                     ↓
 2. Docsbook reads markdown files from GitHub
                     ↓
-3. Transforms them into a beautiful site
+3. Transforms them into a documentation site
                     ↓
 4. Site is available at: docsbook.io/{user}/{repo}
                     ↓
@@ -57,7 +62,7 @@ Displayed as:
 The center area shows the content of the selected markdown file.
 
 **Features:**
-- Beautiful formatting
+- Formatted text
 - Syntax highlighting
 - Tables and lists
 - Links to other pages
@@ -91,7 +96,7 @@ When you are **logged in** and viewing **your own documentation**, a widget appe
 ```
 ┌─────────────────────────┐
 │ 👤 alice               │
-│ ✨ Premium             │
+│ ✨ PRO                 │
 │ ⚙️ Settings            │
 │ 🚪 Sign out            │
 └─────────────────────────┘
@@ -100,7 +105,7 @@ When you are **logged in** and viewing **your own documentation**, a widget appe
 ### What can you do with the widget?
 
 1. **See avatar** — click for the menu
-2. **See status** — Free or Premium
+2. **See status** — Free, PRO, or PRO+
 3. **Open settings** — to change domain, enable translation
 4. **Sign out** — log out
 
@@ -110,10 +115,10 @@ Your documentation is **open to everyone**. Even if the repository is private, t
 
 Benefits:
 - SEO optimization (indexed by Google)
-- Beautiful look instead of plain GitHub
+- Polished design instead of plain GitHub
 - Fast loading
 - Mobile-friendly
-- Full-text search (coming soon)
+- Full-text search
 
 ## GitHub Synchronization
 
@@ -143,28 +148,39 @@ Docsbook **does not use webhooks**. Instead:
 - ❌ Branch information
 - ❌ Other formats (`.txt`, `.rst`, etc.)
 
-## Free vs Premium
+## Free, PRO, and PRO+
 
-### Free Plan
+### Free ($0 forever)
 
-- ✅ 1 public repository
+- ✅ Unlimited public repositories
 - ✅ GitHub synchronization
-- ✅ SEO optimization
-- ✅ Beautiful design
+- ✅ Customizable design (brand, themes, fonts)
 - ✅ Mobile-friendly
+- ✅ Basic analytics (last 24h)
 - ❌ Custom domain
-- ❌ Remove "Powered by Docsbook"
-- ❌ Translations to other languages
+- ❌ AI chat
+- ❌ AI translations
+- ❌ Full SEO
 
-### Premium ($29 one-time lifetime)
+### PRO ($150 one-time, lifetime)
 
-Get everything from Free, plus:
+Everything in Free, plus:
 
-- ✅ Unlimited repositories
-- ✅ Custom domain (docs.example.com)
-- ✅ Remove "Powered by Docsbook" badge
-- ✅ Translation to any language
+- ✅ Custom domain (docs.example.com) with free SSL
+- ✅ AI chat (200 requests/month)
+- ✅ AI translations (50/month, 15 languages)
+- ✅ Full SEO (sitemap, OpenGraph, JSON-LD)
+- ✅ Analytics for 7 / 14 / 30 days
 - ✅ Priority support
+
+### PRO+ ($59/month)
+
+Everything in PRO, plus:
+
+- ✅ White-label (hide "Powered by Docsbook")
+- ✅ Higher AI limits (2000 requests/month)
+- ✅ Higher translation limits (500/month)
+- ✅ Source of Truth (doc graph for AI agents)
 
 ## How to Get Started?
 

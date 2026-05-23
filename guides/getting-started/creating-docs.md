@@ -1,17 +1,22 @@
+---
+title: "Creating Your First Docs Site"
+description: "Beginner-friendly walkthrough to create your first Docsbook site from GitHub — what you need, screenshots, and tips even if you've never used GitHub before."
+---
+
 # Creating a Documentation Site
 
 This guide walks you through setting up your first documentation site on Docsbook — no coding experience required. Each step includes screenshots so you always know exactly where to click.
 
 ## What You'll Need
 
-Before starting, make sure you have:
+Before starting, ensure you have:
 
 - **A computer with internet access** — any OS works (Windows, Mac, Linux)
 - **A free GitHub account** — this is where your documentation files will live
 
 If you don't have a GitHub account yet, go to [github.com](https://github.com) and click **Sign up** — it's free and takes about two minutes.
 
-> **What is GitHub?** GitHub is a popular website where people store and share files — especially for documentation and software projects. Think of it like Google Drive, but specifically designed for text files and code. Docsbook reads your files from GitHub and turns them into a beautiful documentation website.
+> **What is GitHub?** GitHub is a website where people store and share files — especially for documentation and software projects. Think of it like Google Drive, designed for text files and code. Docsbook reads your files from GitHub and turns them into a documentation website.
 
 ---
 
@@ -33,7 +38,7 @@ If you don't have a GitHub account yet, go to [github.com](https://github.com) a
 
 ### Option A — Start with an Example (Recommended for beginners)
 
-The easiest way to get started is to copy one of our ready-made example repositories. This is called **forking** — it creates your own personal copy of the repository that you can freely edit.
+Copy one of our ready-made example repositories. This is called **forking** — it creates your own copy of the repository that you can edit.
 
 1. Go to [github.com/docsbook-io/docs](https://github.com/docsbook-io/docs)
 2. You'll see a page with files and a description
@@ -42,7 +47,7 @@ The easiest way to get started is to copy one of our ready-made example reposito
 
 3. Click the **Fork** button in the top-right corner of the page
 
-   > **What does Fork mean?** "Forking" means making your own personal copy of someone else's repository. It's like pressing "Duplicate" on a Google Doc. Your copy is completely independent — changes you make won't affect the original.
+   > **What does Fork mean?** "Forking" means making your own copy of someone else's repository. It's like pressing "Duplicate" on a Google Doc. Your copy is independent — changes you make won't affect the original.
 
 4. A dialog appears. Leave all settings as they are and click **Create fork**
 
@@ -52,7 +57,7 @@ The easiest way to get started is to copy one of our ready-made example reposito
 
    ![Screenshot: Your newly forked repository page](./images/forked-repo.png)
 
-**Done!** You now have a repository with example documentation files ready to edit.
+**Done.** You now have a repository with example documentation files ready to edit.
 
 ---
 
@@ -60,7 +65,7 @@ The easiest way to get started is to copy one of our ready-made example reposito
 
 If you prefer to begin with a blank slate:
 
-1. Make sure you're signed in to GitHub
+1. Sign in to GitHub
 2. Go to [github.com/new](https://github.com/new)
 
    ![Screenshot: GitHub new repository form](./images/new-repo-form.png)
@@ -81,7 +86,7 @@ If you prefer to begin with a blank slate:
 
 ## Step 3 — Connect Your Repository to Docsbook
 
-Now that you have a GitHub repository, let's connect it to Docsbook to create your documentation site.
+Connect your GitHub repository to Docsbook to create your documentation site.
 
 1. Go to [docsbook.io/connect](https://docsbook.io/connect)
 
@@ -114,7 +119,7 @@ There are three ways to edit your documentation files. Choose the one that feels
 
 ### Option A — Edit Directly on GitHub (Easiest, no setup needed)
 
-This is the simplest method. You edit files right in your browser on GitHub — no software to install.
+Edit files in your browser on GitHub — no software to install.
 
 #### Edit an existing page
 
@@ -181,7 +186,7 @@ The new page appears in your Docsbook sidebar automatically.
 
 ### Option B — Edit with Claude Code (AI-assisted, no terminal needed)
 
-Claude Code is an AI coding assistant that can read, create, and edit your documentation files through conversation — no terminal commands or Git knowledge required. Great if you want to produce a lot of content quickly.
+Claude Code is an AI coding assistant that can read, create, and edit your documentation files through conversation — no terminal commands or Git knowledge required. Useful for producing a lot of content quickly.
 
 #### Setup (one time)
 
@@ -195,7 +200,7 @@ Claude Code is an AI coding assistant that can read, create, and edit your docum
 
 #### Creating and editing documentation
 
-Just describe what you want in the chat panel:
+Describe what you want in the chat panel:
 
 **Create a new page**
 > *"Create a new file called `guides/installation.md` with a getting started guide. Include sections for system requirements, installation steps, and first login."*
@@ -204,7 +209,7 @@ Just describe what you want in the chat panel:
 > *"Open `guides/quick-start.md` and add a Troubleshooting section at the end with 5 common problems and solutions."*
 
 **Rewrite or improve**
-> *"Read `guides/quick-start.md` and make it shorter and simpler — aim for someone with no technical background."*
+> *"Read `guides/quick-start.md` and make it shorter — aim for someone with no technical background."*
 
 **Create multiple pages at once**
 > *"Create the following pages: `guides/faq.md` with 10 billing questions, and `api/overview.md` with a REST API overview."*
@@ -215,7 +220,7 @@ Claude writes the content and saves the files. Review the result and ask for adj
 
 #### Save and publish your changes
 
-When you're done, just tell Claude:
+When you're done, tell Claude:
 
 > *"Commit all changes and push to GitHub."*
 
@@ -307,12 +312,12 @@ Docsbook builds the sidebar navigation automatically from your file and folder s
 **Tips:**
 - File and folder names become the page titles (hyphens are replaced with spaces)
 - `README.md` inside a folder becomes the index page for that folder
-- Lowercase names with hyphens work best for URLs: `getting-started.md` → `/getting-started`
+- Lowercase names with hyphens produce cleaner URLs: `getting-started.md` → `/getting-started`
 
 ---
 
 ## Next Steps
 
 - [Managing Your Documentation Site](./managing-docs.md)
-- [Setting Up a Custom Domain](./custom-domain.md)
-- [Premium Features](./premium.md)
+- [Setting Up a Custom Domain](../advanced/custom-domain.md)
+- [PRO and PRO+ plans](../advanced/premium.md)

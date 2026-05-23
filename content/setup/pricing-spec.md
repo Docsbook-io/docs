@@ -1,3 +1,8 @@
+---
+title: "Pricing Page Specification"
+description: "Docsbook pricing reference — Free, Pro lifetime at $150, and Pro+ at $59/month, with AI query and translation limits broken down per plan."
+---
+
 # Pricing Spec
 
 ## Plans
@@ -18,7 +23,7 @@
 - One-time payment, lifetime access
 - Best for: solo founders, indie devs, projects with predictable usage
 
-### Pro+ — $29/month (subscription)
+### Pro+ — $59/month (subscription)
 - Everything in Pro
 - AI chatbot: 2000 queries/mo
 - Translation: 500 translations/mo
@@ -36,7 +41,7 @@
 | SEO                 | ❌    | ✅            | ✅            |
 | White-label         | ❌    | ❌            | ✅            |
 | Source of Truth     | ❌    | ❌            | ✅            |
-| Payment             | —    | $150 one-time| $29/mo       |
+| Payment             | —    | $150 one-time| $59/mo       |
 
 ## Grandfather Policy
 Existing customers who paid the legacy $29 one-time Pro plan retain their Pro tier at no extra cost — their `plan='pro'` workspace is treated as lifetime Pro (matching the new Pro $150 lifetime tier). No action required from them.

@@ -1,3 +1,8 @@
+---
+title: "Page Feedback (Thumbs Up/Down)"
+description: "Collect thumbs-up and thumbs-down ratings on every documentation page — frictionless feedback that surfaces weak content in your Docsbook analytics."
+---
+
 # Page Feedback
 
 Collect thumbs-up / thumbs-down ratings from readers on every page.
