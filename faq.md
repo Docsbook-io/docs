@@ -10,7 +10,7 @@ A: Docsbook transforms your GitHub documentation into a beautiful site in 5 seco
 
 **Q: Do I need to pay to get started?**
 
-A: No! The free plan includes 1 repository, GitHub sync, and beautiful design. Premium ($29 one-time) adds a custom domain, translations, and more.
+A: No! The free plan includes 1 repository, GitHub sync, and beautiful design. Premium ($9/month or $79/year) adds a custom domain, translations, and more.
 
 ---
 
