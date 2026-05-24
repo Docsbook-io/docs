@@ -12,6 +12,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Changed
 - Moved "Get Support" out of the admin sidebar — replaced the bulky "Help & Support" section with a subtle "Need help? Contact support" footer link pinned to the bottom of the settings modal sidebar, freeing vertical space
+- Reordered and trimmed the floating admin toolbar — now 5 quick-access buttons (Analytics, AI Chat, AI Translations, Design, SEO) instead of 6; removed setup-once entries (Custom Domain, MCP Server) and surfaced SEO, which was previously only reachable via the settings modal
 
 ## 0.18.0 - 24.05.2026
 
