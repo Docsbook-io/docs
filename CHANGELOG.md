@@ -5,6 +5,16 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## 0.18.3 - 24.05.2026
+
+### Changed
+- Pivoted pricing FAQ from one-time lifetime to subscription model — PRO now $19/month or $190/year, PRO+ stays $59/month or $590/year (annual saves 2 months)
+- Replaced legacy "Will the price increase?" answer with a price-lock guarantee for active subscriptions
+
+### Added
+- New FAQ sections covering subscription model, cancel behaviour, GitBook migration (3-step guide), annual vs monthly trade-offs, and grandfathered lifetime users
+- Updated refund Q&A — 30-day money-back on first payment, prorated refunds for annual after the window
+
 ## 0.18.2 - 24.05.2026
 
 ### Added
