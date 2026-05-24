@@ -34,6 +34,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Reordered and trimmed the floating admin toolbar — now 5 quick-access buttons (Analytics, AI Chat, AI Translations, Design, SEO) instead of 6; removed setup-once entries (Custom Domain, MCP Server) and surfaced SEO, which was previously only reachable via the settings modal
 
 ### Fixed
+- AI Skills cards in the admin no longer 404 on workspace subdomains — clicking a card now opens an in-place modal with the full `SKILL.md` (description, install snippets for 7 AI clients, keywords, MCP tools, GitHub link) instead of routing to `/skills/<name>` which only exists on `docsbook.io`. Landing-page behavior is unchanged
 - Mobile adaptation for `/mcp` promo page — Hero `pt-28` reduced to `pt-20` on mobile, H1 base set to `text-3xl`, endpoint URL no longer overflows the screen
 - `CopyCommand` on mobile — reduced padding/height, font-size scaled down, long install command no longer breaks the layout
 - `AiClientsRow` — `gap-x-5` on mobile (was 9) so client icons line up more evenly at 375px
