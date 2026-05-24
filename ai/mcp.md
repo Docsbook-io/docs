@@ -19,13 +19,108 @@ https://docsbook.io/api/mcp/server
 
 Authentication is OAuth 2.0 Authorization Code with PKCE. Bearer tokens are returned to the client and refreshed transparently.
 
-## Install in Claude Code
+## Install in your AI client
+
+The Docsbook MCP server is a remote HTTP server with OAuth — every modern MCP client can connect to it using the same endpoint.
+
+### Claude Code
 
 ```bash
 claude mcp add --transport http docsbook https://docsbook.io/api/mcp/server
 ```
 
 The first call opens a browser tab for OAuth. After consent, the tools become available inside Claude Code.
+
+### Cursor
+
+Add the server to `~/.cursor/mcp.json` (or use **Settings → MCP & Integrations → New MCP server**):
+
+```json
+{
+  "mcpServers": {
+    "docsbook": {
+      "url": "https://docsbook.io/api/mcp/server"
+    }
+  }
+}
+```
+
+Reload Cursor — OAuth opens in the browser on first use.
+
+### Codex CLI
+
+Codex stores MCP servers in `~/.codex/config.toml`:
+
+```toml
+[mcp_servers.docsbook]
+url = "https://docsbook.io/api/mcp/server"
+```
+
+### Windsurf
+
+Edit `~/.codeium/windsurf/mcp_config.json` and refresh the Cascade panel:
+
+```json
+{
+  "mcpServers": {
+    "docsbook": {
+      "serverUrl": "https://docsbook.io/api/mcp/server"
+    }
+  }
+}
+```
+
+### Cline
+
+Open **Cline → MCP Servers → Configure MCP Servers** and paste:
+
+```json
+{
+  "mcpServers": {
+    "docsbook": {
+      "url": "https://docsbook.io/api/mcp/server",
+      "transportType": "http"
+    }
+  }
+}
+```
+
+### Gemini CLI
+
+Add to `~/.gemini/settings.json`:
+
+```json
+{
+  "mcpServers": {
+    "docsbook": {
+      "httpUrl": "https://docsbook.io/api/mcp/server"
+    }
+  }
+}
+```
+
+### GitHub Copilot (VS Code)
+
+Create `.vscode/mcp.json` inside your workspace, then enable the server from the Copilot Chat MCP picker:
+
+```json
+{
+  "servers": {
+    "docsbook": {
+      "type": "http",
+      "url": "https://docsbook.io/api/mcp/server"
+    }
+  }
+}
+```
+
+### ChatGPT
+
+ChatGPT supports remote MCP through **Connectors** (Pro / Business / Enterprise plans).
+
+1. Open **ChatGPT → Settings → Connectors → Advanced → Developer mode**.
+2. Click **Create** and paste the URL: `https://docsbook.io/api/mcp/server`.
+3. Authorize in the browser when prompted.
 
 ## Tool categories
 
@@ -65,7 +160,7 @@ Each tool declares a minimum plan. The server returns a structured error when a 
 
 ## Learn more
 
-The full product page lives at [docsbook.io/mcp](https://docsbook.io/mcp), with copy-pasteable install snippets for Claude Code, Cursor, and Cline.
+The full product page lives at [docsbook.io/mcp](https://docsbook.io/mcp), with an interactive install selector for Claude Code, Cursor, Codex, Windsurf, Cline, Gemini CLI, GitHub Copilot, and ChatGPT.
 
 ## Related
 
