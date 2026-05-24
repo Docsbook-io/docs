@@ -5,6 +5,14 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## 0.17.5 - 24.05.2026
+
+### Fixed
+- Mobile adaptation for `/mcp` promo page — Hero `pt-28` уменьшен до `pt-20` на мобиле, H1 базовый `text-3xl`, endpoint URL больше не вылезает за экран
+- `CopyCommand` на мобиле — уменьшены padding/height, font-size промасштабирован, длинная команда установки больше не ломает раскладку
+- `AiClientsRow` — gap-x-5 на мобиле (было 9), иконки клиентов укладываются ровнее на 375px
+- `PromptsFilters` — селекты категории/плана в `grid-cols-2` на мобиле вместо одной строки; padding строк промптов уменьшен, текст промпта `13px` на мобиле
+
 ## 0.17.4 - 23.05.2026
 
 ### Fixed
