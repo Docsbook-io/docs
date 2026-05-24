@@ -5,6 +5,15 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## 0.18.2 - 24.05.2026
+
+### Added
+- Sitelinks-friendly structured data on the landing — added `SiteNavigationElement` JSON-LD for 8 key sections (Quick Start, AI Features, MCP Server, Agent Skills, Documentation, FAQ, Blog, Changelog), an `ItemList` with top destinations, and `WebSite.hasPart` linking the main pages so Google has explicit signals for generating sitelinks under the docsbook.io result
+- New sitemap entries — `/mcp` and `/skills` with priority `0.9`, plus `/connect` with `0.5`, so Google can discover and weigh these promo pages
+
+### Removed
+- Broken `SearchAction` from the landing JSON-LD — it pointed at `/search?q=`, a page that does not exist, sending a negative signal to Google instead of unlocking the Sitelinks Search Box
+
 ## 0.18.1 - 24.05.2026
 
 ### Added
