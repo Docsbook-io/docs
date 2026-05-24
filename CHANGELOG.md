@@ -5,6 +5,12 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## 0.18.0 - 24.05.2026
+
+### Added
+- Install snippets для 8 AI-клиентов на `/mcp` — интерактивный селектор с табами для Claude Code, Cursor, Codex CLI, Windsurf, Cline, Gemini CLI, GitHub Copilot (VS Code) и ChatGPT; каждый показывает свою команду или config (bash/JSON/TOML) с filename и опциональными шагами установки
+- Раздел `Install in your AI client` в [docs/ai/mcp](./ai/mcp.md) расширен с одного Claude-сниппета до 8 подсекций — по одной на каждый клиент
+
 ## 0.17.5 - 24.05.2026
 
 ### Fixed
