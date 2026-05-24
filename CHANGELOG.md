@@ -8,16 +8,16 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ## 0.18.0 - 24.05.2026
 
 ### Added
-- Install snippets для 8 AI-клиентов на `/mcp` — интерактивный селектор с табами для Claude Code, Cursor, Codex CLI, Windsurf, Cline, Gemini CLI, GitHub Copilot (VS Code) и ChatGPT; каждый показывает свою команду или config (bash/JSON/TOML) с filename и опциональными шагами установки
-- Раздел `Install in your AI client` в [docs/ai/mcp](./ai/mcp.md) расширен с одного Claude-сниппета до 8 подсекций — по одной на каждый клиент
+- Install snippets for 8 AI clients on `/mcp` — interactive selector with tabs for Claude Code, Cursor, Codex CLI, Windsurf, Cline, Gemini CLI, GitHub Copilot (VS Code), and ChatGPT; each one shows its own command or config (bash/JSON/TOML) with filename and optional install steps
+- Expanded the `Install in your AI client` section in [docs/ai/mcp](./ai/mcp.md) from a single Claude snippet to 8 subsections — one per client
 
 ## 0.17.5 - 24.05.2026
 
 ### Fixed
-- Mobile adaptation for `/mcp` promo page — Hero `pt-28` уменьшен до `pt-20` на мобиле, H1 базовый `text-3xl`, endpoint URL больше не вылезает за экран
-- `CopyCommand` на мобиле — уменьшены padding/height, font-size промасштабирован, длинная команда установки больше не ломает раскладку
-- `AiClientsRow` — gap-x-5 на мобиле (было 9), иконки клиентов укладываются ровнее на 375px
-- `PromptsFilters` — селекты категории/плана в `grid-cols-2` на мобиле вместо одной строки; padding строк промптов уменьшен, текст промпта `13px` на мобиле
+- Mobile adaptation for `/mcp` promo page — Hero `pt-28` reduced to `pt-20` on mobile, H1 base set to `text-3xl`, endpoint URL no longer overflows the screen
+- `CopyCommand` on mobile — reduced padding/height, font-size scaled down, long install command no longer breaks the layout
+- `AiClientsRow` — `gap-x-5` on mobile (was 9) so client icons line up more evenly at 375px
+- `PromptsFilters` — category/plan selects use `grid-cols-2` on mobile instead of a single row; prompt row padding reduced, prompt text set to `13px` on mobile
 
 ## 0.17.4 - 23.05.2026
 
