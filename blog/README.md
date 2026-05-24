@@ -9,6 +9,7 @@ Long-form posts on how documentation works in 2026 — comparisons with other to
 
 ## In this section
 
+- [How to host documentation from GitHub](./how-to-host-docs-from-github.md) — three ways to turn a repo into a live docs site, compared
 - [Why documentation matters](./why-documentation-matters.md) — the business case for investing in docs
 - [Documentation SEO guide](./documentation-seo-guide.md) — practical SEO for technical content
 - [AI search and documentation](./ai-search-documentation.md) — how ChatGPT, Perplexity, and Claude read your docs
