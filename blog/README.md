@@ -15,6 +15,7 @@ Long-form posts on how documentation works in 2026 — comparisons with other to
 - [AI search and documentation](./ai-search-documentation.md) — how ChatGPT, Perplexity, and Claude read your docs
 - [Docusaurus vs Docsbook](./docusaurus-vs-docsbook.md) — setup, hosting, and total cost compared
 - [Mintlify vs Docsbook](./mintlify-vs-docsbook.md) — features, pricing, and lock-in compared
+- [Why we don't use Notion for docs](./notion-for-docs-engineering-lessons.md) — first-person engineering lessons on why Notion stops working as a docs system
 - [FAQ Reply Notebook](./faq-replies.md) — internal: copy-paste answers for community comments (Reddit, X, HN, IndieHackers)
 
 ## Related
