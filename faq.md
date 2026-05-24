@@ -15,7 +15,7 @@ A: Docsbook transforms your GitHub documentation into a published site in 5 seco
 
 **Q: Do I need to pay to get started?**
 
-A: No. The Free plan ($0) includes unlimited public repositories, GitHub sync, and full design customization. PRO ($150 lifetime) adds a custom domain, AI chat, translations, SEO, and more. PRO+ ($59/month) adds white-label, higher AI/translation limits, and Source of Truth.
+A: No. The Free plan ($0) includes unlimited public repositories, GitHub sync, and full design customization. PRO ($19/month or $190/year) adds a custom domain, AI chat, translations, SEO, and more. PRO+ ($59/month or $590/year) adds white-label, higher AI/translation limits, and Source of Truth.
 
 ---
 
@@ -173,28 +173,97 @@ A: Only you, when logged in. Other people see only the documentation.
 
 ## Paid plans (PRO & PRO+)
 
+**Q: Is Docsbook a subscription?**
+
+A: Yes. PRO and PRO+ are monthly or annual subscriptions, billed per workspace via Paddle. Free stays free forever — no card required. You can cancel or downgrade at any time from the Float Widget.
+
+We moved off the old one-time lifetime model because docs are a living product: AI chat, translations, the MCP server, and Source of Truth all require ongoing infrastructure (LLM tokens, indexing, hosting). A subscription lets us keep shipping and keep limits high.
+
+---
+
 **Q: What is PRO?**
 
-A: A one-time lifetime purchase ($150) per workspace with:
-- Custom domain
-- AI chat (200 requests/month)
-- AI translations (50/month, 15 languages)
-- SEO (meta tags, sitemap, OpenGraph, JSON-LD)
-- Extended analytics (7/14/30 days)
+A: A subscription per workspace — **$19/month or $190/year** (annual = 2 months free). Includes:
+- Custom domain (`docs.yourcompany.com`) with free SSL
+- AI chat trained on your docs (200 requests/month)
+- AI translations to 15 languages (50/month)
+- Full SEO (meta tags, sitemap, OpenGraph, JSON-LD)
+- Extended analytics (7 / 14 / 30 days instead of 24h)
+
+---
 
 **Q: What is PRO+?**
 
-A: A monthly subscription ($59/month) per workspace. Includes everything in PRO, plus:
+A: A subscription per workspace — **$59/month or $590/year** (annual = 2 months free). Everything in PRO, plus:
 - White-label (hide "Powered by Docsbook")
-- Higher AI limits (2000 requests/month)
+- Higher AI limits (2,000 requests/month)
 - Higher translation limits (500/month)
-- Source of Truth (doc graph for AI agents)
+- Source of Truth — full doc graph + 17 LSP-style tools for AI agents
+- Chat hooks (pre/post LLM webhooks)
+- Custom translation pipeline (manual / external mode)
 
 ---
 
 **Q: How much does it cost?**
 
-A: Free $0 forever. PRO $150 one-time (lifetime). PRO+ $59/month.
+A: Free $0 forever. PRO $19/month ($190/year). PRO+ $59/month ($590/year). Billed per workspace.
+
+---
+
+**Q: Annual or monthly — which should I pick?**
+
+A: Annual saves you 2 months (~17%). Pick **monthly** if you're testing the tool, the project is short-lived, or budget needs to be flexible. Pick **annual** if the docs are core to your product or you're using PRO+ for production: you save real money and the price is locked for 12 months.
+
+You can switch from monthly to annual any time — we credit the unused portion.
+
+---
+
+**Q: What happens if I cancel?**
+
+A: Your subscription stays active until the end of the current billing period — no immediate cutoff.
+
+After it ends, the workspace drops to **Free**:
+- The site stays online at `docsbook.io/owner/repo` (forever)
+- Your custom domain stops resolving (revert DNS or re-upgrade)
+- AI chat, translations, SEO, white-label, and Source of Truth turn off
+- All your content stays in GitHub — nothing is deleted
+- Settings (branding, navigation, UI) are preserved — re-upgrading restores everything
+
+There is no lock-in: your docs live in your GitHub repo.
+
+---
+
+**Q: Is there a refund?**
+
+A: Yes. **30-day money-back guarantee** on the first payment — monthly or annual, no questions asked. Email [support@docsbook.io](mailto:support@docsbook.io) and we refund within 1–2 business days.
+
+For annual plans cancelled mid-term after the 30-day window, we issue a prorated refund for unused months on a case-by-case basis. Just write to us.
+
+---
+
+**Q: I bought the old PRO lifetime plan. What happens to me?**
+
+A: Grandfathered. If you bought PRO as a one-time $150 lifetime purchase before we moved to subscriptions, your workspace keeps all PRO features forever at no extra cost — exactly as promised. No downgrade, no surprise bill.
+
+You can still upgrade your lifetime PRO workspace to PRO+ for $59/month if you want white-label, Source of Truth, or higher AI limits.
+
+---
+
+**Q: How do I migrate from GitBook?**
+
+A: Three steps. Most teams finish in under 30 minutes.
+
+1. **Export from GitBook** — GitBook lets you sync to a Git repo, or export as Markdown / `.zip`. Push the resulting `.md` files to a GitHub repository (any structure works — flat, `docs/` folder, nested, whatever).
+2. **Connect to Docsbook** — paste `github.com/your-org/your-repo` on [docsbook.io](https://docsbook.io). Your site goes live in seconds.
+3. **Re-point your domain** — in GitBook, remove the custom domain. In Docsbook PRO, add `docs.yourcompany.com` and update DNS (one CNAME). SSL is provisioned automatically.
+
+What carries over automatically: page structure, internal links (relative `.md` paths are resolved), images, code blocks (GFM), headings, frontmatter.
+
+What you'll redo: branding (colors, logo, fonts — 5 minutes in the Float Widget), navigation (header links, social links), AI chat suggested questions.
+
+Pricing: GitBook starts at ~$8/user/month and scales fast with team size. Docsbook is **flat $19/month per workspace** regardless of team size — most teams save $200+/month switching. See the full comparison: [GitBook vs Docsbook](./blog/docusaurus-vs-docsbook.md).
+
+Stuck? Email [support@docsbook.io](mailto:support@docsbook.io) — we help with migrations for free.
 
 ---
 
@@ -212,15 +281,9 @@ A: Yes. Payments are processed by Paddle (the Merchant of Record). Docsbook neve
 
 ---
 
-**Q: Is there a refund?**
-
-A: Yes, full refund within the first 30 days. Contact support@docsbook.io.
-
----
-
 **Q: Will the price increase?**
 
-A: PRO is $150 lifetime — once you buy it, the price for your workspace never changes.
+A: If prices change, **your existing subscription is locked in**: monthly stays at your current rate for as long as you keep the subscription active; annual is locked for the full 12-month term. You'll only see a new price if you cancel and re-subscribe later.
 
 ---
 
