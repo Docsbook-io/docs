@@ -1,6 +1,7 @@
 ---
 title: "SEO Features in Docsbook"
-description: "Automatic SEO for documentation — static HTML, fast Core Web Vitals, meta tags, OpenGraph, sitemaps, and per-language indexing without any configuration."
+description: "Automatic classical SEO for documentation — static HTML, fast Core Web Vitals, meta tags, OpenGraph, sitemaps, canonical URLs and per-language indexing without any configuration."
+tldr: "Docsbook generates static HTML with meta tags, Open Graph, canonical URLs, sitemap.xml, robots.txt and JSON-LD on every page. Toggle SEO on in the admin SEO / GEO tab — no configuration needed."
 ---
 
 # SEO Optimization
@@ -87,4 +88,4 @@ Every Docsbook page is also structured with clear prose and direct answers — t
 > **Your docs are already SEO-optimized the moment you publish.**
 > [Connect your GitHub repo →](https://docsbook.io/connect)
 
-See also: [AI Translations →](../../translation/ai-translations) · [Search Options →](./search)
+See also: [GEO — Generative Engine Optimization →](./geo) · [AEO — Answer Engine Optimization →](./aeo) · [AI Translations →](../../translation/ai-translations) · [Search Options →](./search)
