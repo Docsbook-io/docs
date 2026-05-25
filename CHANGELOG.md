@@ -5,6 +5,15 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## 0.21.3 - 25.05.2026
+
+### Fixed
+- Mobile `/skills` and `/mcp` pages: added hamburger mobile menu to `Header` with full nav links, "Start for free" and "Log in" CTAs
+- Mobile `/skills` top padding: reduced from `pt-28` to `pt-20` on mobile (consistent with `/mcp`)
+- `SkillsInstallSelector`: install/use columns no longer stack on tablets — now `lg:grid-cols-2`
+- `SkillInstallGuide`: install/use columns now split at `sm:` breakpoint for earlier two-column layout
+- `PromptsFilters`: tags hidden on mobile (`hidden sm:inline-flex`), tool hover-state hidden on mobile to prevent overflow
+
 ## 0.21.2 - 25.05.2026
 
 ### Fixed
