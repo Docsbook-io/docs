@@ -5,6 +5,14 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## 0.21.2 - 25.05.2026
+
+### Fixed
+- Mobile header: removed the second nav-links row on small screens — header now shows only logo + CTA button
+- Hero badge animation on Safari/iOS: `@property` conic-gradient is not supported in Safari; added CSS fallback via `border-beam-rotate` keyframe + `@supports` guard so the animated border renders correctly on all browsers
+- Footer layout on mobile: removed `max-w-4xl mx-auto` from the `<footer>` tag, added `w-full` + horizontal padding on the inner container — background and `border-t` now stretch full-width on all screen sizes
+- Hero top padding reduced from `pt-40` to `pt-28` on mobile (was over-compensating for the now-removed second header row)
+
 ## 0.21.1 - 25.05.2026
 
 ### Added
