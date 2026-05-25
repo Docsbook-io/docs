@@ -136,4 +136,4 @@ The honest answer: if documentation isn't your product, don't build a documentat
 
 Hosting your docs from GitHub used to mean a config repo, a deploy pipeline, and weeks of cleanup. It doesn't anymore.
 
-**Paste your repo URL at [docsbook.io](https://docsbook.io/start) and your documentation site goes live in 30 seconds.**
+**Paste your repo URL at [docsbook.io](https://docsbook.io/start?utm_source=blog&utm_medium=cta&utm_campaign=how_to_host_docs_from_github) and your documentation site goes live in 30 seconds.**

@@ -80,4 +80,4 @@ Keyword search was fine in 2015. In 2025, developers expect to ask questions in 
 
 ---
 
-**Docsbook includes AI-powered search on every plan. [See it in action →](https://docsbook.io/start)**
+**Docsbook includes AI-powered search on every plan. [See it in action →](https://docsbook.io/start?utm_source=blog&utm_medium=cta&utm_campaign=ai_search_documentation)**

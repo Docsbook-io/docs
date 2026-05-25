@@ -77,4 +77,4 @@ Docsbook makes it easy to build documentation that actually works for your users
 
 ---
 
-**Ready to improve your documentation? [Get started with Docsbook today](https://docsbook.io/start).**
+**Ready to improve your documentation? [Get started with Docsbook today](https://docsbook.io/start?utm_source=blog&utm_medium=cta&utm_campaign=why_documentation_matters).**

@@ -367,7 +367,7 @@ If you want managed, enterprise-shaped, and team-collaborative, [GitBook](https:
 
 If you want it live today, with AI, translations, and analytics included for a price that doesn't require a budget meeting — that's what we built.
 
-**Stop configuring. Start documenting. [Try Docsbook free →](https://docsbook.io/start)**
+**Stop configuring. Start documenting. [Try Docsbook free →](https://docsbook.io/start?utm_source=blog&utm_medium=cta&utm_campaign=docusaurus_vs_docsbook)**
 
 ---
 

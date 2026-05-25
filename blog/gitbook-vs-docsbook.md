@@ -173,6 +173,6 @@ If you're the first audience, GitBook is the right call. If you're the second �
 
 ---
 
-**Try Docsbook on your repo in 5 seconds. Free plan is free forever. [Start now →](https://docsbook.io/start)**
+**Try Docsbook on your repo in 5 seconds. Free plan is free forever. [Start now →](https://docsbook.io/start?utm_source=blog&utm_medium=cta&utm_campaign=gitbook_vs_docsbook)**
 
 > PRO is a one-time $150. PRO+ is $59 per month with a 14-day trial.
