@@ -34,6 +34,34 @@ Events are shown as a breakdown with counts and percentages for the selected tim
 
 **High outbound clicks on a specific page** → That page is a good traffic handoff point to your product.
 
+## Drill into a single visitor (MCP, PRO+)
+
+You can investigate what one specific anonymous visitor actually did, end-to-end, via the MCP server.
+
+```text
+get_top_visitors(period: "7d", limit: 25)
+  → [{ visitor_id: "a1b2…", pageview_count: 14, first_seen, last_seen, country }, …]
+
+get_visitor_activity(visitor_id: "a1b2…", period: "7d")
+  → { first_seen, last_seen, country, language, pageview_count,
+      events: [
+        { event: "docs.pageview",     at, path: "guides/quick-start" },
+        { event: "docs.page_feedback", at, path: "guides/quick-start", details: { vote: "down" } },
+        { event: "docs.pageview",     at, path: "faq" },
+        …
+      ] }
+```
+
+**`visitor_id` is a salted SHA-256 hash** of the visitor's IP scoped to your workspace. It's stable across sessions (the same person visiting next week gets the same id), but raw IPs never leave Axiom and are never exposed via MCP.
+
+Use cases:
+
+- "Who looked at our pricing page three times then dropped off?" → filter `get_top_visitors`, then `get_visitor_activity` for each candidate.
+- "This support ticket mentions a confusing page — let me see their full journey." → grab their `visitor_id` from `get_page_journeys` and drill in.
+- "Are AI questions and pageviews coming from the same people, or different cohorts?" → cross-reference `get_visitor_activity` across visitors.
+
+Only events that carry server-side IP (`docs.pageview`, `docs.page_feedback`, `landing.cta_click`) can be attributed to a visitor. Pure client-side events (theme toggles, code copies) are visible in aggregate but not per-visitor.
+
 ---
 
 > **See your events data live.**

@@ -132,7 +132,7 @@ ChatGPT supports remote MCP through **Connectors** (Pro / Business / Enterprise 
 | Doc graph (base) | `get_doc_graph`, `read_doc_sections`, `reindex_doc_graph` |
 | Doc graph (LSP) | `doc_outline`, `doc_search_symbols`, `doc_search_text`, `doc_grep`, `doc_search_paths`, `doc_search_links_to`, `doc_search_links_from`, `doc_search_unresolved`, `doc_search_orphans`, `doc_search_by_anchor`, `doc_resolve_link`, `doc_definition`, `doc_hover`, `doc_canonical_ref`, `doc_breadcrumbs`, `doc_neighbors`, `doc_list_pages` |
 | Translations | `set_translation_mode`, `list_pending_translations`, `approve_translation` |
-| Analytics | `get_analytics`, `get_ai_usage`, `get_failed_searches` |
+| Analytics | `get_analytics`, `get_ai_usage`, `get_failed_searches`, `get_page_journeys`, `get_top_visitors`, `get_visitor_activity`, `query_events` |
 | Webhooks | `register_webhook_*`, `list_webhooks`, `replay_webhook_delivery` |
 | Skills | `find_skill` |
 
@@ -156,7 +156,7 @@ Each tool declares a minimum plan. The server returns a structured error when a 
 |---|---|
 | Free | Workspace, branding, UI, navigation, analytics (24h), `find_skill` |
 | PRO | + AI settings, SEO, domain, languages, chat hooks, translations, deeper analytics |
-| PRO+ | + Doc graph base (`get_doc_graph`, `read_doc_sections`, `reindex_doc_graph`), all 17 LSP-style `doc_*` tools, page journeys, `query_events` |
+| PRO+ | + Doc graph base (`get_doc_graph`, `read_doc_sections`, `reindex_doc_graph`), all 17 LSP-style `doc_*` tools, page journeys, top visitors + visitor activity drill-down, `query_events` |
 
 ## Learn more
 
