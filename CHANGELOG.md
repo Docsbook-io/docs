@@ -7,6 +7,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ## 0.21.4 - 26.05.2026
 
+### Fixed
+- Ask AI on selection bubble: no longer interrupts text selection — bubble appears only after `mouseup`/`touchend` so selecting words and lines works normally
+- Copy button on single-line code blocks: now vertically centered (`top: 50%`) so it appears on hover for all code block heights
+
 ### Chore
 - Optimized Claude Code token usage with `claude-token-optimizer`: added Session Start Protocol, filled `.claude/QUICK_START.md`, `.claude/COMMON_MISTAKES.md`, `.claude/ARCHITECTURE_MAP.md` with project-specific content — auto-loaded tokens reduced from ~137k to ~121k
 
