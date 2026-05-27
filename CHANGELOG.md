@@ -5,6 +5,11 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## 0.21.5 - 27.05.2026
+
+### Changed
+- Restyled TL;DR block in docs to Vercel-style neutral border in `src/app/globals.css` — removed blue accent border-left and background fill, replaced with thin 1px border all around, transparent background, and muted-gray uppercase label for a cleaner minimal look in both light and dark modes
+
 ## 0.21.4 - 26.05.2026
 
 ### Fixed
