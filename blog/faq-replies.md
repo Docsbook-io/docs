@@ -55,7 +55,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 **TL;DR:** Free forever for the basics. PRO is **$150 one-time (lifetime)**. PRO+ is **$59/month** and unlocks white-label, source-of-truth graph, and higher AI/translation limits.
 
-**Long:** Free covers any public GitHub repo, branding, UI controls, navigation, 24h analytics, and base MCP tools. PRO ($150 lifetime) adds AI chat (200 requests/month), AI translations (50/month, 15 languages), custom domain with free SSL, SEO, and longer analytics windows (up to 30 days). PRO+ ($59/month) is for people who want unlimited polish: white-label, 2000 AI requests, 500 translations, the Source of Truth graph + 17 LSP-style MCP tools for agents. Per-workspace billing, not per-seat.
+**Long:** Free covers any public GitHub repo, branding, UI controls, navigation, 24h analytics, and base MCP tools. PRO ($150 lifetime) adds AI chat (200 requests/month), AI translations (50/month, 15 languages), custom domain with free SSL, SEO, and longer analytics windows (up to 30 days). PRO+ ($59/month) is for people who want unlimited polish: white-label, 2000 AI requests, and 500 translations. Per-workspace billing, not per-seat.
 
 ---
 
@@ -189,7 +189,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 **TL;DR:** Yes if your content is well-structured and your `llms.txt` is solid — both of which Docsbook does by default. We see Docsbook-hosted docs cited regularly in Perplexity and ChatGPT Search.
 
-**Long:** AI search citation depends on (1) being indexable (we handle that), (2) being structured so the model can extract concrete claims (heading hierarchy, code blocks, lists — your Markdown already does this), (3) having `llms.txt` (we generate it), (4) being authoritative for the topic (that's on you and how you write). On the technical side, Docsbook removes the usual blockers. We also expose 17 LSP-style MCP tools (PRO+) so AI agents can navigate your docs precisely instead of slurping raw HTML.
+**Long:** AI search citation depends on (1) being indexable (we handle that), (2) being structured so the model can extract concrete claims (heading hierarchy, code blocks, lists — your Markdown already does this), (3) having `llms.txt` (we generate it), (4) being authoritative for the topic (that's on you and how you write). On the technical side, Docsbook removes the usual blockers. For agents working against your repo directly, the local [`docs-sync`](https://github.com/Docsbook-io/docs-claude-plugins) plugin adds LSP-style navigation (`doc_outline`, `doc_search_symbols`, `doc_resolve_link`, etc.) so they can navigate precisely instead of slurping raw HTML.
 
 ---
 
@@ -221,9 +221,9 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 ### Is there an MCP server?
 
-**TL;DR:** Yes — full OAuth 2.0 MCP server at `https://docsbook.io/api/mcp/server` with ~40 tools. Add it to Claude Code or Cursor and your AI agent can manage workspaces, read the doc graph, query analytics, register webhooks, etc.
+**TL;DR:** Yes — full OAuth 2.0 MCP server at `https://docsbook.io/api/mcp/server` with ~40 tools for workspace management, branding, analytics, webhooks, and translations. For doc-graph search use the local `docs-sync` Claude Code plugin (`/plugin install docs-sync@docs-claude-plugins`), not the hosted MCP.
 
-**Long:** Connect with `claude mcp add --transport http https://docsbook.io/api/mcp/server`. After OAuth, the agent gets tools across workspace management (create, branding, UI), content (read doc graph, search by symbol, resolve links), AI chat (system prompt, hooks), translations (approve, upload, delete), analytics (questions, unanswered, failed searches), and webhooks (register, list, replay). PRO+ unlocks 17 LSP-style read/search tools (`doc_outline`, `doc_search_symbols`, `doc_resolve_link`, etc.) for agents that need cheap, precise navigation instead of pulling the whole graph.
+**Long:** Connect the hosted MCP with `claude mcp add --transport http https://docsbook.io/api/mcp/server`. After OAuth, the agent gets tools across workspace management (create, branding, UI), AI chat (system prompt, hooks), translations (approve, upload, delete), analytics (questions, unanswered, failed searches), and webhooks (register, list, replay). For LSP-style doc-graph operations — outline, symbol search, link resolution, references — install the local [`docs-sync`](https://github.com/Docsbook-io/docs-claude-plugins) plugin instead. It bundles `markdown-lsp` and parses the repo on disk, which is faster and cheaper than going over the network.
 
 ---
 
@@ -241,7 +241,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 **TL;DR:** Vercel (global edge), Neon Postgres (US/EU regions), Redis cache, Axiom for logs. All US/EU infrastructure.
 
-**Long:** Standard hosted-SaaS infra. Vercel handles HTTP and CDN globally. Neon is serverless Postgres, we run in their default region with point-in-time recovery. Redis is for caching the doc graph and skills index. Logs and analytics go to Axiom. If you need a specific region commitment for compliance, talk to me — for now we deploy in the standard Vercel/Neon footprint.
+**Long:** Standard hosted-SaaS infra. Vercel handles HTTP and CDN globally. Neon is serverless Postgres, we run in their default region with point-in-time recovery. Redis is for caching the skills index. Logs and analytics go to Axiom. If you need a specific region commitment for compliance, talk to me — for now we deploy in the standard Vercel/Neon footprint.
 
 ---
 
@@ -249,7 +249,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 **TL;DR:** Docsbook itself is closed-source. `markdown-lsp` (our parser) and `docs-skills` (the AI skills catalog) are open source on GitHub.
 
-**Long:** The platform is closed but we OSS the parts that benefit the broader ecosystem. `markdown-lsp` is our LSP-style parser that turns Markdown into a structured doc graph — used internally for the Source of Truth graph and the MCP search tools, and useful for anyone building docs tooling. `docs-skills` is a public catalog of 25 SKILL.md files for AI agents (`docs-analyze`, `docs-seo`, etc.) — works with Docsbook MCP and also standalone.
+**Long:** The platform is closed but we OSS the parts that benefit the broader ecosystem. `markdown-lsp` is our LSP-style parser that turns Markdown into a structured doc graph — it now powers the local [`docs-sync`](https://github.com/Docsbook-io/docs-claude-plugins) Claude Code plugin (no longer a hosted MCP surface), and is useful for anyone building docs tooling. `docs-skills` is a public catalog of 25 SKILL.md files for AI agents (`docs-analyze`, `docs-seo`, etc.) — works with Docsbook MCP and also standalone.
 
 ---
 

@@ -31,11 +31,7 @@ mcp add --transport http https://docsbook.io/api/mcp/server
 
 ## Content and documentation
 
-| Tool                | Min plan | Description                                            |
-| ------------------- | -------- | ------------------------------------------------------ |
-| `get_doc_graph`     | PRO+     | Full documentation graph (`format`: `"toon"` or `"json"`) |
-| `read_doc_sections` | PRO+     | Read specific sections by canonical refs               |
-| `reindex_doc_graph` | PRO+     | Rebuild the graph (limit 100 / month per workspace)    |
+Documentation graph search lives in the local [`docs-sync` Claude Code plugin](https://github.com/Docsbook-io/docs-claude-plugins) — install it with `/plugin install docs-sync@docs-claude-plugins` and the agent gets LSP-style `doc_*` tools running on the working tree.
 
 ## AI chat
 

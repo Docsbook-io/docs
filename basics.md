@@ -180,7 +180,6 @@ Everything in PRO, plus:
 - ✅ White-label (hide "Powered by Docsbook")
 - ✅ Higher AI limits (2000 requests/month)
 - ✅ Higher translation limits (500/month)
-- ✅ Source of Truth (doc graph for AI agents)
 
 ## How to Get Started?
 

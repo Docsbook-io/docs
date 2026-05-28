@@ -15,7 +15,7 @@ A: Docsbook transforms your GitHub documentation into a published site in 5 seco
 
 **Q: Do I need to pay to get started?**
 
-A: No. The Free plan ($0) includes unlimited public repositories, GitHub sync, and full design customization. PRO ($19/month or $190/year) adds a custom domain, AI chat, translations, SEO, and more. PRO+ ($59/month or $590/year) adds white-label, higher AI/translation limits, and Source of Truth.
+A: No. The Free plan ($0) includes unlimited public repositories, GitHub sync, and full design customization. PRO ($19/month or $190/year) adds a custom domain, AI chat, translations, SEO, and more. PRO+ ($59/month or $590/year) adds white-label, higher AI/translation limits, and chat hooks.
 
 ---
 
@@ -177,7 +177,7 @@ A: Only you, when logged in. Other people see only the documentation.
 
 A: Yes. PRO and PRO+ are monthly or annual subscriptions, billed per workspace via Paddle. Free stays free forever — no card required. You can cancel or downgrade at any time from the Float Widget.
 
-We moved off the old one-time lifetime model because docs are a living product: AI chat, translations, the MCP server, and Source of Truth all require ongoing infrastructure (LLM tokens, indexing, hosting). A subscription lets us keep shipping and keep limits high.
+We moved off the old one-time lifetime model because docs are a living product: AI chat, translations, and the MCP server all require ongoing infrastructure (LLM tokens, indexing, hosting). A subscription lets us keep shipping and keep limits high.
 
 ---
 
@@ -198,7 +198,6 @@ A: A subscription per workspace — **$59/month or $590/year** (annual = 2 month
 - White-label (hide "Powered by Docsbook")
 - Higher AI limits (2,000 requests/month)
 - Higher translation limits (500/month)
-- Source of Truth — full doc graph + 17 LSP-style tools for AI agents
 - Chat hooks (pre/post LLM webhooks)
 - Custom translation pipeline (manual / external mode)
 
@@ -225,7 +224,7 @@ A: Your subscription stays active until the end of the current billing period �
 After it ends, the workspace drops to **Free**:
 - The site stays online at `docsbook.io/owner/repo` (forever)
 - Your custom domain stops resolving (revert DNS or re-upgrade)
-- AI chat, translations, SEO, white-label, and Source of Truth turn off
+- AI chat, translations, SEO, and white-label turn off
 - All your content stays in GitHub — nothing is deleted
 - Settings (branding, navigation, UI) are preserved — re-upgrading restores everything
 
@@ -245,7 +244,7 @@ For annual plans cancelled mid-term after the 30-day window, we issue a prorated
 
 A: Grandfathered. If you bought PRO as a one-time $150 lifetime purchase before we moved to subscriptions, your workspace keeps all PRO features forever at no extra cost — exactly as promised. No downgrade, no surprise bill.
 
-You can still upgrade your lifetime PRO workspace to PRO+ for $59/month if you want white-label, Source of Truth, or higher AI limits.
+You can still upgrade your lifetime PRO workspace to PRO+ for $59/month if you want white-label or higher AI limits.
 
 ---
 

@@ -53,7 +53,7 @@ A 2xx response = delivered. Anything else triggers retry until the attempt budge
 | Event | Min plan | Payload fields |
 |---|---|---|
 | `content.indexed` | PRO | `pages_count`, `relations_count`, `indexed_at` |
-| `content.outdated` | PRO | `last_indexed_at`, `repo_head_sha` |
+| `content.outdated` _(deprecated — no longer fired automatically)_ | PRO | `last_indexed_at`, `repo_head_sha` |
 | `translation.needed` | PRO | `source_path`, `language` |
 | `translation.completed` | PRO | `source_path`, `language`, `origin` |
 | `translation.outdated` | PRO | `source_path`, `language`, `source_hash_changed` |

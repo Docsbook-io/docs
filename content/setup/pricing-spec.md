@@ -33,7 +33,6 @@ Everything in Pro, plus:
 - AI chatbot — 2000 questions/month
 - Auto-translation — 500 translations/month
 - White-label — hide "Powered by Docsbook"
-- Source of Truth — knowledge graph index for AI agents
 - Advanced MCP tools — chat hooks, custom system prompt, translation management
 
 ## Limits Summary
@@ -46,7 +45,6 @@ Everything in Pro, plus:
 | Custom domain          | ❌    | ✅              | ✅            |
 | SEO                    | ❌    | ✅              | ✅            |
 | White-label            | ❌    | ❌              | ✅            |
-| Source of Truth        | ❌    | ❌              | ✅            |
 | Payment                | —    | $150 one-time  | $59/month    |
 
 ## Upgrade Paths

@@ -129,24 +129,14 @@ ChatGPT supports remote MCP through **Connectors** (Pro / Business / Enterprise 
 | Workspace | `list_workspaces`, `create_workspace`, `get_workspace` |
 | Branding & UI | `update_branding`, `update_ui_settings`, `update_navigation` |
 | AI chat | `get_chat_system_prompt`, `set_chat_system_prompt`, `set_chat_hooks` |
-| Doc graph (base) | `get_doc_graph`, `read_doc_sections`, `reindex_doc_graph` |
-| Doc graph (LSP) | `doc_outline`, `doc_search_symbols`, `doc_search_text`, `doc_grep`, `doc_search_paths`, `doc_search_links_to`, `doc_search_links_from`, `doc_search_unresolved`, `doc_search_orphans`, `doc_search_by_anchor`, `doc_resolve_link`, `doc_definition`, `doc_hover`, `doc_canonical_ref`, `doc_breadcrumbs`, `doc_neighbors`, `doc_list_pages` |
 | Translations | `set_translation_mode`, `list_pending_translations`, `approve_translation` |
 | Analytics | `get_analytics`, `get_ai_usage`, `get_failed_searches`, `get_page_journeys`, `get_top_visitors`, `get_visitor_activity`, `query_events` |
 | Webhooks | `register_webhook_*`, `list_webhooks`, `replay_webhook_delivery` |
 | Skills | `find_skill` |
 
-## LSP-style doc navigation
+## Doc graph search runs locally
 
-The `doc_*` tools turn the doc graph into a navigable surface in the style of a Language Server Protocol. Instead of dumping the entire graph and asking the model to think, the agent calls cheap targeted queries:
-
-- `doc_search_symbols("oauth")` — fuzzy match across every heading in the workspace.
-- `doc_search_text("Paddle webhook")` — full-text snippets with line/col coordinates.
-- `doc_search_links_to("docs/auth.md")` — every page that links here (incoming references).
-- `doc_resolve_link({ from_page: "index.md", link: "../docs/auth.md#oauth" })` — turns a relative or wiki link into an absolute GitHub URL you can hand back to the user.
-- `doc_hover("docs/auth.md#sessions")` — short title + first sentence, no full body.
-
-Backed by the [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) parser. See the [Source of Truth](./source-of-truth.md) page for the full reference.
+Graph search over your docs (outline, fuzzy headings, full-text, link references, resolve links) is **not** a hosted MCP tool. It runs on the agent's machine via the [`docs-claude-plugins`](https://github.com/Docsbook-io/docs-claude-plugins) package — install once with `/plugin install docs-sync@docs-claude-plugins` and the bundled `markdown-lsp` MCP server exposes the LSP-style `doc_*` tools to Claude Code. See [Source of Truth](./source-of-truth.md) for the tool list and rationale.
 
 ## Plan gating
 
@@ -156,7 +146,7 @@ Each tool declares a minimum plan. The server returns a structured error when a 
 |---|---|
 | Free | Workspace, branding, UI, navigation, analytics (24h), `find_skill` |
 | PRO | + AI settings, SEO, domain, languages, chat hooks, translations, deeper analytics |
-| PRO+ | + Doc graph base (`get_doc_graph`, `read_doc_sections`, `reindex_doc_graph`), all 17 LSP-style `doc_*` tools, page journeys, top visitors + visitor activity drill-down, `query_events` |
+| PRO+ | + page journeys, top visitors + visitor activity drill-down, `query_events` |
 
 ## Learn more
 

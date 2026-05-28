@@ -37,7 +37,7 @@ Available on **all plans**, including Free. There is no quota — agents can fet
 
 ## Customization
 
-The files are generated automatically from the documentation graph. There is no manual file to maintain. When you push new content to GitHub, the next index rebuild updates both `llms.txt` and `llms-full.txt`.
+The files are generated server-side from your published documentation by a dedicated parser — independent of the local Source of Truth graph. There is no manual file to maintain. When you push new content to GitHub, the next index rebuild updates both `llms.txt` and `llms-full.txt`.
 
 The relevant source files are:
 
@@ -48,5 +48,5 @@ src/lib/generate-workspace-llms-txt.ts  # workspace-level
 
 ## Related
 
-- [Source of Truth](./source-of-truth.md) — The graph behind `llms-full.txt`.
-- [MCP Server](./mcp.md) — Same graph exposed to agents via tool calls.
+- [Source of Truth](./source-of-truth.md) — Local doc graph for AI agents, indexed by the `docs-sync` Claude Code plugin.
+- [MCP Server](./mcp.md) — Hosted MCP tools for querying your published docs.

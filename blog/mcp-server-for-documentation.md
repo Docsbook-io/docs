@@ -12,7 +12,7 @@ This post explains what MCP is, what tools a docs MCP server exposes, and how Do
 ## TL;DR
 
 - MCP = standard way for AI agents to call external tools
-- A docs MCP server exposes tools like `get_doc_graph`, `read_doc_sections`, `update_branding`
+- A docs MCP server exposes tools like `get_analytics`, `update_branding`, `set_chat_hooks`
 - Agents discover capabilities, request OAuth, then call tools as part of their work
 - Docsbook ships a managed MCP server at `docsbook.io/api/mcp/server` with ~40 tools
 - This is now a primary AI distribution channel — Mintlify reports 45% of their docs traffic comes from AI agents, with Claude Code at 25% and Cursor at 18%
@@ -29,7 +29,7 @@ Three workflows:
 
 ### 1. Reading docs as structured data
 
-Without MCP, an agent fetches an HTML page, parses it, and hopes the structure is intact. With MCP, the agent calls `get_doc_graph` or `read_doc_sections` and receives clean Markdown or JSON.
+Without MCP, an agent fetches an HTML page, parses it, and hopes the structure is intact. With the local `docs-sync` plugin from [`docs-claude-plugins`](https://github.com/Docsbook-io/docs-claude-plugins) (`/plugin install docs-sync@docs-claude-plugins`), the agent parses the doc graph on disk via the bundled `markdown-lsp` and receives clean Markdown or JSON without a network round-trip.
 
 This means agents:
 
@@ -57,8 +57,6 @@ Docsbook's MCP server exposes ~40 tools across these categories:
 | AI settings | `update_ai_settings`, `set_chat_system_prompt`, `set_chat_hooks` |
 | SEO and domain | `update_seo`, `update_domain` |
 | Translation | `update_languages`, `set_translation_mode`, `approve_translation` |
-| Doc graph | `get_doc_graph`, `read_doc_sections`, `reindex_doc_graph` |
-| LSP-style read & search | `doc_outline`, `doc_search_symbols`, `doc_search_text`, `doc_grep`, `doc_search_links_to`, `doc_resolve_link`, +10 more |
 | Analytics | `get_analytics`, `get_ai_questions`, `get_failed_searches`, `get_negative_feedback`, `get_top_visitors`, `get_visitor_activity` |
 | Webhooks | `register_webhook_*`, `list_webhook_deliveries`, `test_webhook` |
 | Skills | `find_skill` (queries the [docs-skills](https://github.com/Docsbook-io/docs-skills) catalog) |
@@ -73,11 +71,11 @@ The OAuth flow opens in the browser, you authorize, the tools appear in Claude C
 
 Cursor uses the same MCP server with similar UX. ChatGPT and Gemini are adding HTTP MCP support through 2026.
 
-## LSP-style tools are the underrated half
+## LSP-style tools are the underrated half (local plugin, not hosted MCP)
 
-Most docs MCP marketing focuses on read/write. The bigger value for agents is the LSP-style search and navigation surface.
+Most docs MCP marketing focuses on read/write. The bigger value for agents is the LSP-style search and navigation surface — but for a working repo, that surface is better delivered as a **local Claude Code plugin** than as a hosted MCP tool. Disk-local parsing is faster, cheaper, and doesn't require the docs to be published yet.
 
-LSP — Language Server Protocol — is what powers go-to-definition, find-references, and symbol search in VS Code. We applied the same model to docs:
+Docsbook ships this as the [`docs-sync`](https://github.com/Docsbook-io/docs-claude-plugins) plugin (`/plugin install docs-sync@docs-claude-plugins`), which bundles [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp). Install once and the agent gains:
 
 - `doc_outline` — heading hierarchy for a page (no bodies)
 - `doc_search_symbols` — fuzzy subsequence over all headings ("oaf" → "OAuth flow")
@@ -86,7 +84,7 @@ LSP — Language Server Protocol — is what powers go-to-definition, find-refer
 - `doc_resolve_link` — relative or wiki link → absolute GitHub URL with anchor
 - `doc_definition` — `page#anchor` → exact source position
 
-This means an agent can navigate your docs with the same precision a developer navigates code in an IDE. The implementation is open source: [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp).
+LSP — Language Server Protocol — is what powers go-to-definition, find-references, and symbol search in VS Code. The plugin applies the same model to your local docs tree, so an agent navigates with IDE-like precision. The hosted MCP server stays focused on workspace operations (branding, analytics, webhooks, translations) where the cloud actually owns the data.
 
 ## Why this is a real distribution channel
 
@@ -105,11 +103,11 @@ A reasonable docs MCP server requires:
 - HTTP transport + JSON-RPC framing
 - OAuth 2.0 Authorization Code + PKCE flow
 - Tool definitions with typed schemas
-- Read access to your doc graph (parsing, links, anchors)
+- Doc graph parsing for read tools — usually delivered as a local plugin like [`docs-sync`](https://github.com/Docsbook-io/docs-claude-plugins) rather than a hosted endpoint, because disk-local parsing is faster and cheaper
 - Write access if you want config edits
 - Rate limiting and audit logging
 
-About 4–6 engineering weeks if you have not done it before. Docsbook PRO+ includes the managed version at $59/month, or use the Source of Truth graph for the read-only tools.
+About 4–6 engineering weeks if you have not done it before. Docsbook PRO+ includes the managed version at $59/month, and the local `docs-sync` plugin is free for the doc-graph read tools.
 
 ## Related reading
 

@@ -1,6 +1,6 @@
 ---
 title: "PRO and PRO+ Plans Overview"
-description: "What Docsbook PRO ($150 lifetime) and PRO+ ($59/month) unlock — custom domain, AI chat, automatic translations, white-label, SEO, and Source of Truth for AI agents."
+description: "What Docsbook PRO ($150 lifetime) and PRO+ ($59/month) unlock — custom domain, AI chat, automatic translations, white-label, and SEO."
 ---
 
 # PRO and PRO+ Plans
@@ -20,7 +20,6 @@ Docsbook has three plans. Free is free forever. PRO is a one-time lifetime purch
 | Full SEO (sitemap, OG, JSON-LD) | ❌ | ✅ | ✅ |
 | Analytics period | 24h | 30 days | 30 days |
 | Hide "Powered by Docsbook" | ❌ | ❌ | ✅ |
-| Source of Truth (doc graph for AI) | ❌ | ❌ | ✅ |
 
 ## What PRO Includes
 
@@ -64,10 +63,6 @@ Hide the "Powered by Docsbook" badge across all pages.
 
 - AI chat: 2000 requests/month (vs 200 on PRO)
 - Translations: 500/month (vs 50 on PRO)
-
-### Source of Truth
-
-A structured graph of your entire documentation, available to AI agents via the MCP tools `get_doc_graph`, `read_doc_sections`, and `reindex_doc_graph`. Useful if you want Claude, Cursor, or other agents to answer questions about your product from canonical docs.
 
 ## How to Pay
 
