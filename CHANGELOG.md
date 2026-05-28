@@ -5,6 +5,11 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## 0.22.1 - 28.05.2026
+
+### Fixed
+- Fixed broken navigation on `docs.docsbook.io` alias — clicking any sidebar/inline link returned 404 because cached HTML carried the `/docs/` repo prefix while middleware rewrote it again. Added `x-docs-alias` header in `src/proxy.ts` and routed `basePath` to empty in `src/app/[user]/[repo]/[[...path]]/page.tsx` so links render as `/ai/mcp` instead of `/docs/ai/mcp`. Existing `docsbook-io.docsbook.io/docs/*` paths keep working unchanged
+
 ## 0.22.0 - 28.05.2026
 
 ### Removed
