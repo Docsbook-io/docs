@@ -56,11 +56,11 @@ The tool returns matching SKILL.md entries with a `raw_url` field. The agent fet
 
 | | Skill | Subagent |
 |---|---|---|
-| Аналогия | QA Checklist | Jira тикет |
-| Содержит | Workflow, Guardrails, Acceptance Criteria | Pinned модель, инструменты, план |
-| Переиспользуется | Да — в любом проекте | Нет — конкретный контекст |
-| Работает в | Claude Code, Cursor, Copilot, Codex | Claude Code (агентная система) |
-| Установка | `npx docs-skills install` | `npx docs-subagents install` |
+| Analogy | QA Checklist | Jira ticket |
+| Contains | Workflow, Guardrails, Acceptance Criteria | Pinned model, tools, plan |
+| Reusable | Yes — any project | No — specific context |
+| Works in | Claude Code, Cursor, Copilot, Codex | Claude Code (agent system) |
+| Install | `npx docs-skills install` | `npx docs-subagents install` |
 
 ## Catalog page
 

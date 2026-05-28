@@ -10,10 +10,10 @@
 
 Skills и субагенты — разные уровни экосистемы:
 
-| Артефакт | Аналогия | Содержит | Пакет |
+| Artifact | Analogy | Contains | Package |
 |---|---|---|---|
-| Skill (SKILL.md) | QA Checklist — регламент | Workflow, Guardrails, MCP Tools, Acceptance Criteria | [docs-skills](https://github.com/Docsbook-io/docs-skills) |
-| Subagent (.md) | Jira тикет — исполнитель | Pinned модель, инструменты, приоритеты, план, коллаборация | [docs-subagents](https://github.com/Docsbook-io/docs-subagents) |
+| Skill (SKILL.md) | QA Checklist — reusable regulation | Workflow, Guardrails, MCP Tools, Acceptance Criteria | [docs-skills](https://github.com/Docsbook-io/docs-skills) |
+| Subagent (.md) | Jira ticket — executor | Pinned model, tools, priorities, plan, collaboration | [docs-subagents](https://github.com/Docsbook-io/docs-subagents) |
 | Plugin | Сборка | Subagents + MCP + hook, одна команда | [docs-claude-plugins](https://github.com/Docsbook-io/docs-claude-plugins) |
 
 Правило: "Пригодится ли этот текст в другом проекте?" → да = skill, нет = subagent.
