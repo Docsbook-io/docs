@@ -10,6 +10,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Fixed
 
 - Fix `/pricing` route returning 404 — now redirects to `/` instead of broken `pricing.docsbook.io` subdomain
+- Fix `/blog` and `/blog/:path*` returning 500 — now redirects to `docsbook.io/docs/blog` for marketer SEO entry-points
+- Fix SEO/GEO/AEO toggles showing "Active" in anonymous mode — toggle now rolls back and shows an inline error when unauthenticated
+- Fix 503 errors on sidebar RSC prefetch in preview mode — prefetch disabled so navigation still works on click
 
 ## 0.22.2 - 28.05.2026
 
