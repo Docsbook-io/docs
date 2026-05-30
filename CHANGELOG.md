@@ -13,6 +13,12 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Fix `/blog` and `/blog/:path*` returning 500 — now redirects to `docsbook.io/docs/blog` for marketer SEO entry-points
 - Fix SEO/GEO/AEO toggles showing "Active" in anonymous mode — toggle now rolls back and shows an inline error when unauthenticated
 - Fix 503 errors on sidebar RSC prefetch in preview mode — prefetch disabled so navigation still works on click
+- Fix copy button position in multiline code blocks — now anchored to top-left so it's always accessible in long snippets
+- Fix scroll shadow in Webhooks (Events) tab — shadow now appears only when content is scrollable
+
+### Improved
+
+- Resized folder visibility and subheader folder toggles to match the standard Search Bar checkbox size for visual consistency
 
 ## 0.22.2 - 28.05.2026
 
