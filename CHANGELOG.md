@@ -5,6 +5,12 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## 0.22.3 - 30.05.2026
+
+### Fixed
+
+- Fix `/pricing` route returning 404 — now redirects to `/` instead of broken `pricing.docsbook.io` subdomain
+
 ## 0.22.2 - 28.05.2026
 
 ### Changed
