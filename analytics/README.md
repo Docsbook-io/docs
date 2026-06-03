@@ -11,6 +11,7 @@ Docsbook records every page view, search, and feedback action on your documentat
 
 - [Tracking overview](./tracking/overview.md) — what Docsbook measures and where the data comes from
 - [Events](./tracking/events.md) — the full list of events sent to analytics
+- [AI Usage & Costs](./tracking/ai-usage.md) — monitor AI requests and estimated costs per model
 - [Read time](./reports/read-time.md) — how time-on-page is calculated and what it means
 - [Countries](./reports/countries.md) — geographic breakdown of your readers
 
