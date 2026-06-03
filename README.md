@@ -9,8 +9,9 @@ Welcome to Docsbook!
 
 Here you'll find answers to all questions about how to use our service.
 
-## Quick Start
+## Start Here
 
+- [Overview](./overview.md) — What is Docsbook, how it works, and why it matters
 - [Getting Started](./quick-start.md) — How to begin in 3 minutes
 - [Core Concepts](./basics.md) — What a workspace is and how it works
 
