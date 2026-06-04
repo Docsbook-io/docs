@@ -5,6 +5,19 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## 0.24.0 - 04.06.2026
+
+### Added
+
+- **Landing**: New `PricingSection` — 3-column plan comparison block (Free / PRO $150 / PRO+ $59/mo) placed on homepage between CtaBand and FAQ so founders can compare plans at a glance without reading paragraphs
+- **Enterprise**: Add WorkOS SSO/SAML integration scaffold — `@workos-inc/authkit-nextjs` package, `enterprise` plan enum added to `users` and `workspaces` tables, new `workosUserId`, `ssoOrganizationId`, `ssoDomain` columns
+
+### Fixed
+
+- **Landing**: Reframe CI/CD copy in `Features.tsx` to be positive trust signal for devs; add Mintlify to migration sources list alongside Confluence, GitBook, Docusaurus
+- **Landing**: Fix `/skills` install command showing hardcoded "25 skills" — now uses dynamic `index.skills.length` (currently 36)
+- **Admin**: Fix branding Save not updating sidebar/header name live in preview mode — `DocsContentArea` now resolves `previewSettings` fields with workspace fallback for `customName`, `iconUrl`, `logoUrl`, `fontFamily`
+
 ## 0.23.0 - 03.06.2026
 
 ### Added
