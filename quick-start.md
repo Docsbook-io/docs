@@ -1,20 +1,21 @@
 ---
 title: "Quick Start — Publish Docs in 30 Seconds"
-description: "Turn any public GitHub repository into a beautiful documentation site in three steps — sign in with GitHub, pick a repo, share the live URL."
+description: "Turn any public GitHub repository into a beautiful documentation site in three steps — create an account, connect your repo, share the live URL."
 ---
 
 # Quick Start — 3 Minutes
 
 Create a documentation site from GitHub in 3 simple steps.
 
-## Step 1: Sign In with GitHub
+## Step 1: Create your Docsbook account
+<!-- anchor: step-1-sign-in-with-github -->
 
 1. Open [docsbook.io](https://docsbook.io)
 2. Click the **"Create my docs site"** button
-3. Click **"Sign in with GitHub"**
-4. Allow Docsbook access to your GitHub profile
+3. Choose a sign-in method — GitHub, Google, Apple, or email (one-time code)
+4. Complete the sign-in flow for your chosen method
 
-> ✅ Docsbook will only get access to your **public repositories** and profile name.
+> **Note:** Docsbook uses GitHub to read your repository files. If you sign in with Google, Apple, or email, you will be prompted to authorize GitHub access when you connect a repository in Step 2.
 
 ## Step 2: Choose a Repository
 

@@ -92,9 +92,9 @@ Connect your GitHub repository to Docsbook to create your documentation site.
 
    ![Screenshot: Docsbook connect page with Sign in button](./images/docsbook-connect.png)
 
-2. Click **Sign in with GitHub**
+2. Choose a sign-in method — GitHub, Google, Apple, or email (one-time code) — and complete the sign-in flow
 
-3. GitHub asks you to authorize Docsbook. Click **Authorize docsbook**
+3. If you signed in with Google, Apple, or email, Docsbook prompts you to authorize GitHub access. Click **Authorize docsbook**
 
    > Docsbook only reads your repository files — it cannot modify or delete anything.
 
@@ -230,7 +230,7 @@ Claude runs the necessary commands for you. Your Docsbook site updates within se
 
 ## Connect your docs
 
-After, you should connect repository, go to [docsbook.io/connect](https://docsbook.io/connect) — this page lets you sign in with GitHub and select a repository at any time.
+After, you should connect your repository. Go to [docsbook.io/connect](https://docsbook.io/connect) — this page lets you sign in and select a repository at any time.
 
 ---
 

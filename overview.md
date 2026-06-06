@@ -175,8 +175,8 @@ All plans: **unlimited repositories, forever.**
 
 ## Getting Started
 
-1. **Connect your GitHub repo**  
-   Sign in with GitHub at [docsbook.io](https://docsbook.io)
+1. **Create your account**  
+   Sign in with GitHub, Google, Apple, or email at [docsbook.io](https://docsbook.io), then authorize GitHub access to connect your repository
 
 2. **Create a workspace**  
    Pick a public repo — Docsbook indexes it in seconds
