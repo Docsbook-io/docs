@@ -55,13 +55,23 @@ Docsbook will generate the DNS configuration.
 
 ## Step 3: Update DNS
 
-After you click Save, the **Custom Domain** section displays the exact CNAME record to add — no need to look up values manually:
+As soon as you type your domain, the **Custom Domain** section shows the exact DNS record to add, with a **Copy** button on every value — no need to look anything up. The record type depends on whether you use a subdomain or a root domain:
 
-| Name | Type | Value |
+**Subdomain** (recommended, e.g. `docs.example.com`) — add a **CNAME**:
+
+| Name / Host | Type | Value |
 |------|------|-------|
-| your domain (e.g. `docs.example.com`) | CNAME | `cname.vercel-dns.com` |
+| `docs` (just the subdomain) | CNAME | `cname.vercel-dns.com` |
 
-Copy these values directly from the admin panel and add them to your DNS registrar.
+**Root / apex domain** (e.g. `example.com`) — most registrars reject CNAME on the root, so add an **A** record instead:
+
+| Name / Host | Type | Value |
+|------|------|-------|
+| `@` | A | `216.150.1.1` |
+
+> The admin panel shows the precise values for **your** domain (the exact IP or CNAME target Vercel recommends). Always copy from there — the values above are typical defaults.
+
+Copy each value directly from the admin panel and paste it into the matching field at your DNS registrar.
 
 ### Where to Change DNS?
 
@@ -122,7 +132,7 @@ If you want `example.com` (without `docs`):
 
 2. **If you still want root:**
    - Some registrars don't allow CNAME on root
-   - Use an A record instead of CNAME: `76.76.19.0`
+   - Use an **A** record instead of CNAME — copy the exact IP shown in the admin panel for your domain (typically `216.150.1.1`)
    - Contact [support@docsbook.io](mailto:support@docsbook.io) for help
 
 ## Step 4: Wait
