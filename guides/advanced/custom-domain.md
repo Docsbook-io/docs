@@ -55,14 +55,13 @@ Docsbook will generate the DNS configuration.
 
 ## Step 3: Update DNS
 
-Docsbook will provide instructions:
+After you click Save, the **Custom Domain** section displays the exact CNAME record to add — no need to look up values manually:
 
-```
-Add a CNAME record:
-Type:  CNAME
-Name:  docs (or @)
-Value: cname.vercel-dns.com
-```
+| Name | Type | Value |
+|------|------|-------|
+| your domain (e.g. `docs.example.com`) | CNAME | `cname.vercel-dns.com` |
+
+Copy these values directly from the admin panel and add them to your DNS registrar.
 
 ### Where to Change DNS?
 
@@ -132,9 +131,14 @@ After adding the DNS record, updates propagate:
 
 - **Usually:** 15-30 minutes
 - **Maximum:** 48 hours
-- **Check status:** use [DNSChecker](https://dnschecker.org)
 
-Enter your domain → it should show `cname.vercel-dns.com`
+To check propagation, use the built-in **"Check domain status"** button in the **Custom Domain** section of the admin panel. It shows one of three statuses:
+
+- **Domain verified! ✓** (green) — DNS is live, your domain is active.
+- **Waiting for DNS verification** (yellow) — record not yet visible; DNS is still propagating (allow 15–60 minutes).
+- **Conflicting DNS record found** (yellow) — another record is interfering; remove it and try again.
+
+You can also verify using [DNSChecker](https://dnschecker.org): enter your domain and confirm it resolves to `cname.vercel-dns.com`.
 
 ## Step 5: SSL Certificate
 
@@ -154,18 +158,23 @@ https://docs.example.com ✅
 
 ### How to check everything is working?
 
-**Method 1: Simple check**
+**Method 1: Built-in status check (recommended)**
+1. Open the Float Widget → Settings → **Custom Domain**
+2. Click **"Check domain status"**
+3. A green **"Domain verified! ✓"** message confirms your domain is live
+
+**Method 2: Simple check**
 1. Open in browser: `https://your-domain.com`
 2. Your documentation should load
 
-**Method 2: DNS check**
+**Method 3: DNS check**
 ```bash
 # In terminal
 nslookup docs.example.com
 # Should show: cname.vercel-dns.com
 ```
 
-**Method 3: Online service**
+**Method 4: Online service**
 1. Open [mxtoolbox.com](https://mxtoolbox.com)
 2. CNAME lookup
 3. Enter your domain
@@ -208,9 +217,16 @@ nslookup docs.example.com
 **Problem:** Visiting the domain shows a Vercel message
 
 **Solutions:**
-1. Check the domain is added in Docsbook (visible in Settings)
-2. Make sure the DNS CNAME is correct
-3. Wait 1-2 hours for sync
+1. Click **"Check domain status"** in Settings → Custom Domain to see the current verification state
+2. Check the domain is added in Docsbook (visible in Settings)
+3. Make sure the DNS CNAME is correct
+4. Wait 1-2 hours for sync
+
+### CloudFlare proxy conflict
+
+**Problem:** Domain configured but not verifying, or showing SSL errors
+
+**Solution:** If you use CloudFlare, set the DNS record to **DNS only** (grey cloud icon, not orange). The orange cloud (proxy mode) intercepts traffic before Vercel can verify the domain. Switch to grey cloud, then click **"Check domain status"** again.
 
 ## Changing Your Domain
 
