@@ -19,8 +19,13 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Interactive upsell card when Pro/Pro+ features are mentioned in chat.
 - Demo login button for Vercel preview deployments.
 - `watch-issues.sh` script and local agent daemon for automated pipeline tasks.
+- `code-scout` subagent — investigates code by problem description and creates GitHub Issues with technical context, so Buddy stays in orchestration mode without reading code directly.
+- `qa-agent` now accepts a `FOCUS` parameter when called directly via Agent tool, enabling targeted testing without a full `/qa-plan` sweep.
 
 ### Fixed
+- Agent pipeline `agent:working` lock now released automatically on any session exit (trap on EXIT in nohup subprocess) — no more manual lock cleanup after agent crashes.
+- `merger` now finds PRs by branch name `claude/issue-N` as fallback when `Closes #N` body search returns empty — eliminates false NEEDS_HUMAN blocks.
+- `task-builder` now verifies `Closes #N` is present in every PR body and auto-adds it if missing — prevents merger from losing the PR link.
 - Auth `CSRF` error on Vercel preview deploys — `AUTH_URL` now overridden to preview origin.
 - Redirect loop on preview deploys — `vercel.app` added to `isDev` proxy check.
 - Cold-start Neon timeout on preview auth — DB lookup skipped in `preview-bypass` authorize.
