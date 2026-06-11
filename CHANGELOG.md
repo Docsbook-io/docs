@@ -5,6 +5,15 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## 0.26.1 - 11.06.2026
+
+### Fixed
+
+- **Daemon:** Unreleased `agent:working` labels no longer hang forever — added reconcile sweep in `sweep_locks()` to auto-remove labels without live lock files; also fixed repo context (added `-R Docsbook-io/docsbook` to all gh-calls) and network hangs (wrapped git/gh in 20/30s timeouts)
+- **Merger:** Now closes issues explicitly after merge instead of relying on GitHub's unreliable `Closes #N` auto-close for feature branches; added fallback search for already-merged PRs (`--state merged`) to prevent zombie cycles when PR is merged manually
+- **Labels:** New `awaiting-release` label (blue, `#0075CA`) for base=main PRs awaiting manual `/merge` — separates "blocked and needs human intervention" (`needs-human`) from "queued for release" (`awaiting-release`)
+- **Hooks:** `auto-commit-hook.sh` now removes stale lock files (>10 min) instead of skipping forever after crash
+
 ## 0.26.0 - 11.06.2026
 
 ### Added
