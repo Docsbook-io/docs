@@ -5,6 +5,30 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## 0.26.0 - 11.06.2026
+
+### Added
+- New `/chat` page with full AI agent for docs: search, edit settings, publish changes, and get answers — all in one conversation interface.
+- `DocsAskInput` floating panel on every docs page — readers can ask questions without leaving the page.
+- `AuthModal` with Google, Apple, and email-OTP sign-in alongside existing GitHub OAuth.
+- `LimitsCard` in admin dashboard — unified token budget view with per-workspace usage breakdown.
+- `AdminCard` manifest system — all FloatWidget settings tabs now driven by a single `ADMIN_CARDS` registry, making tabs easier to add and test.
+- `applyWorkspacePatch` shared layer — workspace PATCH API consolidated from 400 lines of inline conditionals into one validated, plan-gated function.
+- Workspace list sorted by most-recently-used first (`last_used_at DESC NULLS LAST`).
+- New-chat `+` button in `/chat` header to reset conversation without page reload.
+- Interactive upsell card when Pro/Pro+ features are mentioned in chat.
+- Demo login button for Vercel preview deployments.
+- `watch-issues.sh` script and local agent daemon for automated pipeline tasks.
+
+### Fixed
+- Auth `CSRF` error on Vercel preview deploys — `AUTH_URL` now overridden to preview origin.
+- Redirect loop on preview deploys — `vercel.app` added to `isDev` proxy check.
+- Cold-start Neon timeout on preview auth — DB lookup skipped in `preview-bypass` authorize.
+- `ask_user` deduplication in LLM transcript — prevents 400 errors on Idea path.
+- `MenuGroupRootContext` crash in ProjectSelector dropdown — owner groups wrapped in `DropdownMenuGroup`.
+- Chat close button used hardcoded `docsbook.io` URL — switched to relative path.
+- `/api/auth/signin` now redirects to `AuthModal` via `pages.signIn` instead of blank form.
+
 ## 0.25.1 - 08.06.2026
 
 ### Fixed
