@@ -7,6 +7,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ## 0.26.4 - 12.06.2026
 
+### Added
+
+- Separate credit cards for AI Chat, AI Translations, and Visitor AI Chat usage in admin dashboard — granular view of token spend by feature.
+
 ### Improved
 
 - **Buddy mode:** Converted `/buddy` from command to dedicated skill with isolated context — improves modularity and reduces main session token usage.
