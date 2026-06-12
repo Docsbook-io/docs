@@ -11,6 +11,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 - Separate credit cards for AI Chat, AI Translations, and Visitor AI Chat usage in admin dashboard — granular view of token spend by feature.
 
+### Fixed
+
+- Zero credits shown for newly created workspaces in `Token Budget` — `ensureWorkspace` now seeds the initial monthly token balance on creation.
+
 ### Improved
 
 - **Buddy mode:** Converted `/buddy` from command to dedicated skill with isolated context — improves modularity and reduces main session token usage.
