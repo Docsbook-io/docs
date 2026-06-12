@@ -5,6 +5,13 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## 0.26.4 - 12.06.2026
+
+### Improved
+
+- **Buddy mode:** Converted `/buddy` from command to dedicated skill with isolated context — improves modularity and reduces main session token usage.
+- **Agent daemon:** Enhanced reliability with revised `auto-commit.sh` lock handling and improved logging for task transitions.
+
 ## 0.26.3 - 11.06.2026
 
 ### Fixed
