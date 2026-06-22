@@ -23,7 +23,7 @@ Every AI surface in Docsbook is documented on its own page. Use this index to ju
 
 ## How the pieces fit together
 
-The chat, translations, and hooks sit on top of your indexed content. The hosted MCP server and `llms.txt` expose that same content to external AI agents — so a Claude Code session can read your docs, write a translation, or update branding without leaving the editor. The Source of Truth doc graph runs locally instead: install the `docs-sync` Claude Code plugin (`/plugin install docs-sync@docs-claude-plugins`), which bundles `markdown-lsp` and indexes your repo on your own machine — no hosted endpoint, no PRO+ plan required.
+The chat, translations, and hooks sit on top of your indexed content. The hosted MCP server and `llms.txt` expose that same content to external AI agents — so a Claude Code session can read your docs, write a translation, or update branding without leaving the editor. The Source of Truth doc graph runs locally instead: use [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) (`npx markdown-lsp <subcommand> ./docs`) to index your repo on your own machine — no hosted endpoint, no PRO+ plan required.
 
 If you are setting up AI for the first time, start with [AI Chat](./chat.md), then enable [Translations](./translations.md) when you have a multi-language audience. Teams running AI agents against their docs should read [llms.txt](./llms-txt.md) and [Source of Truth](./source-of-truth.md) next.
 

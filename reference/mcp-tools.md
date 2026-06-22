@@ -31,7 +31,7 @@ mcp add --transport http https://docsbook.io/api/mcp/server
 
 ## Content and documentation
 
-Documentation graph search lives in the local [`docs-sync` Claude Code plugin](https://github.com/Docsbook-io/docs-claude-plugins) — install it with `/plugin install docs-sync@docs-claude-plugins` and the agent gets LSP-style `doc_*` tools running on the working tree.
+Documentation graph search runs locally via [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) — run `npx markdown-lsp <subcommand> ./docs` and the agent gets LSP-style `doc_*` tools running on the working tree. See the [markdown-lsp README](https://github.com/Docsbook-io/markdown-lsp) for setup.
 
 ## AI chat
 

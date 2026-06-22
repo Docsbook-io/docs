@@ -1,23 +1,23 @@
 ---
 title: "Source of Truth — Local Doc Graph for AI Agents"
-description: "A structured graph of every page, section, and link in your docs, indexed locally by Claude Code via the docs-sync plugin. No server-side index, no PRO+ gating."
+description: "A structured graph of every page, section, and link in your docs, indexed locally by Claude Code via markdown-lsp. No server-side index, no PRO+ gating."
 ---
 
 # Source of Truth
 
-Source of Truth is a structured graph of your entire documentation — pages, headings, sections, and cross-links — built locally by AI agents like Claude Code via the [`docs-claude-plugins`](https://github.com/Docsbook-io/docs-claude-plugins) package. The agent runs the parser on your repository, holds the graph in memory, and queries it through LSP-style tools while it works on your docs.
+Source of Truth is a structured graph of your entire documentation — pages, headings, sections, and cross-links — built locally by AI agents like Claude Code via [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp). The agent runs the parser on your repository, holds the graph in memory, and queries it through LSP-style tools while it works on your docs.
 
 > **Note.** Server-side Source of Truth indexing and the MCP graph tools (`get_doc_graph`, `read_doc_sections`, `reindex_doc_graph`, and the 17 `doc_*` tools) were removed in **v0.22.0**. The graph now lives entirely on the agent's machine — there is no hosted index, no reindex quota, and no PRO+ gating for it.
 
 ## Install
 
-The graph search is shipped as a Claude Code plugin. Install it once in any repo whose docs you want to query:
+The graph search is powered by [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) — our open-source LSP implementation for Markdown, published on npm as `markdown-lsp`. Run it in any repo whose docs you want to query:
 
 ```bash
-/plugin install docs-sync@docs-claude-plugins
+npx markdown-lsp <subcommand> ./docs
 ```
 
-This registers the bundled `markdown-lsp` MCP server with your Claude Code session and makes the LSP-style tools available to the agent.
+This makes the LSP-style tools available to the agent against your local working tree. See the [markdown-lsp README](https://github.com/Docsbook-io/markdown-lsp) for the full subcommand list and setup options.
 
 ## What the graph contains
 
@@ -33,7 +33,7 @@ The graph is rebuilt incrementally from disk on every relevant edit, so it alway
 
 ## How the graph is built
 
-The graph is parsed by [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) — our open-source Language Server Protocol implementation for Markdown, published on npm as `markdown-lsp` and bundled in the `docs-sync` plugin. It uses unified + remark AST instead of regex, so:
+The graph is parsed by [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) — our open-source Language Server Protocol implementation for Markdown, published on npm as `markdown-lsp`. It uses unified + remark AST instead of regex, so:
 
 - Relative paths like `../guide.md#section` resolve correctly
 - Wiki-style links `[[note]]` are supported

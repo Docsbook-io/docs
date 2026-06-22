@@ -136,7 +136,7 @@ ChatGPT supports remote MCP through **Connectors** (Pro / Business / Enterprise 
 
 ## Doc graph search runs locally
 
-Graph search over your docs (outline, fuzzy headings, full-text, link references, resolve links) is **not** a hosted MCP tool. It runs on the agent's machine via the [`docs-claude-plugins`](https://github.com/Docsbook-io/docs-claude-plugins) package — install once with `/plugin install docs-sync@docs-claude-plugins` and the bundled `markdown-lsp` MCP server exposes the LSP-style `doc_*` tools to Claude Code. See [Source of Truth](./source-of-truth.md) for the tool list and rationale.
+Graph search over your docs (outline, fuzzy headings, full-text, link references, resolve links) is **not** a hosted MCP tool. It runs on the agent's machine via [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) — run `npx markdown-lsp <subcommand> ./docs` to expose the LSP-style `doc_*` tools to Claude Code. See [Source of Truth](./source-of-truth.md) for the tool list and rationale.
 
 ## Plan gating
 

@@ -75,4 +75,4 @@ The catalog and `find_skill` MCP tool are available on **all plans**, including 
 - [MCP Server](./mcp.md) — How `find_skill` is exposed to agents.
 - [llms.txt](./llms-txt.md) — The other discovery surface for AI clients.
 - [docs-subagents](https://github.com/Docsbook-io/docs-subagents) — subagents for autonomous doc automation.
-- [docs-claude-plugins](https://github.com/Docsbook-io/docs-claude-plugins) — bundled plugins (skills + subagents + MCP + hooks).
+- [markdown-lsp](https://github.com/Docsbook-io/markdown-lsp) — open-source LSP parser for Markdown that powers local doc-graph search.

@@ -29,7 +29,7 @@ Three workflows:
 
 ### 1. Reading docs as structured data
 
-Without MCP, an agent fetches an HTML page, parses it, and hopes the structure is intact. With the local `docs-sync` plugin from [`docs-claude-plugins`](https://github.com/Docsbook-io/docs-claude-plugins) (`/plugin install docs-sync@docs-claude-plugins`), the agent parses the doc graph on disk via the bundled `markdown-lsp` and receives clean Markdown or JSON without a network round-trip.
+Without MCP, an agent fetches an HTML page, parses it, and hopes the structure is intact. With [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) running locally (`npx markdown-lsp <subcommand> ./docs`), the agent parses the doc graph on disk and receives clean Markdown or JSON without a network round-trip.
 
 This means agents:
 
@@ -75,7 +75,7 @@ Cursor uses the same MCP server with similar UX. ChatGPT and Gemini are adding H
 
 Most docs MCP marketing focuses on read/write. The bigger value for agents is the LSP-style search and navigation surface — but for a working repo, that surface is better delivered as a **local Claude Code plugin** than as a hosted MCP tool. Disk-local parsing is faster, cheaper, and doesn't require the docs to be published yet.
 
-Docsbook ships this as the [`docs-sync`](https://github.com/Docsbook-io/docs-claude-plugins) plugin (`/plugin install docs-sync@docs-claude-plugins`), which bundles [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp). Install once and the agent gains:
+Docsbook ships this via [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) — run it locally and the agent gains:
 
 - `doc_outline` — heading hierarchy for a page (no bodies)
 - `doc_search_symbols` — fuzzy subsequence over all headings ("oaf" → "OAuth flow")
@@ -103,11 +103,11 @@ A reasonable docs MCP server requires:
 - HTTP transport + JSON-RPC framing
 - OAuth 2.0 Authorization Code + PKCE flow
 - Tool definitions with typed schemas
-- Doc graph parsing for read tools — usually delivered as a local plugin like [`docs-sync`](https://github.com/Docsbook-io/docs-claude-plugins) rather than a hosted endpoint, because disk-local parsing is faster and cheaper
+- Doc graph parsing for read tools — usually delivered as a local CLI tool like [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) rather than a hosted endpoint, because disk-local parsing is faster and cheaper
 - Write access if you want config edits
 - Rate limiting and audit logging
 
-About 4–6 engineering weeks if you have not done it before. Docsbook PRO+ includes the managed version at $59/month, and the local `docs-sync` plugin is free for the doc-graph read tools.
+About 4–6 engineering weeks if you have not done it before. Docsbook PRO+ includes the managed version at $59/month, and `markdown-lsp` is free and open source for the doc-graph read tools.
 
 ## Related reading
 
