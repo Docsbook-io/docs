@@ -11,6 +11,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 - Free-text questions in the onboarding AI chat now render a text field so you can type your answer — previously a question with no preset options left nowhere to respond. `AI Chat`
 - Single-option prompts like "Type your website URL here" now open a real input instead of submitting a placeholder value, so sources (website or repo URL) are captured correctly. `AI Chat`
+- Creating docs from just an idea no longer stalls with a "process did not complete" error — the underlying request was being rejected; the onboarding chat now runs through to a published site. `AI Chat`
+- New documentation projects are named from your product or brand instead of your full request sentence (e.g. "Coffee Shop" rather than "Create New Docs For A Coffee Shop"). `Workspace`
 
 ### Added
 
