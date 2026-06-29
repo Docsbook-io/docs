@@ -12,10 +12,15 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Free-text questions in the onboarding AI chat now render a text field so you can type your answer — previously a question with no preset options left nowhere to respond. `AI Chat`
 - Single-option prompts like "Type your website URL here" now open a real input instead of submitting a placeholder value, so sources (website or repo URL) are captured correctly. `AI Chat`
 
+### Added
+
+- Released `@docsbook/specify` — open-source CLI for spec-driven development. Validate markdown spec trees, verify spec↔code conformance bidirectionally, and generate specs from existing code. Available via `npx @docsbook/specify`. `OSS`
+
 ### Improved
 
 - The "Go to website" link after publishing now waits until your site is actually live, showing a brief "deploying" state instead of opening a page that 404s for the first few minutes. `Publishing`
 - The chat now shows honest progress while creating your docs (reading your site, writing docs, publishing) instead of sitting silent during generation. `AI Chat`
+- Updated landing page feature names for clarity: "AI Agents", "Live Sync", "Auto Translations", "Auto Distribution". `Landing`
 
 ## 0.26.4 - 12.06.2026
 
