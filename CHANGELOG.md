@@ -5,6 +5,18 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## 0.26.5 - 29.06.2026
+
+### Fixed
+
+- Free-text questions in the onboarding AI chat now render a text field so you can type your answer — previously a question with no preset options left nowhere to respond. `AI Chat`
+- Single-option prompts like "Type your website URL here" now open a real input instead of submitting a placeholder value, so sources (website or repo URL) are captured correctly. `AI Chat`
+
+### Improved
+
+- The "Go to website" link after publishing now waits until your site is actually live, showing a brief "deploying" state instead of opening a page that 404s for the first few minutes. `Publishing`
+- The chat now shows honest progress while creating your docs (reading your site, writing docs, publishing) instead of sitting silent during generation. `AI Chat`
+
 ## 0.26.4 - 12.06.2026
 
 ### Added
