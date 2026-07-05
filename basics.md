@@ -105,7 +105,7 @@ When you are **logged in** and viewing **your own documentation**, a widget appe
 ### What can you do with the widget?
 
 1. **See avatar** — click for the menu
-2. **See status** — Free, PRO, or PRO+
+2. **See status** — Free, Pro, or Business
 3. **Open settings** — to change domain, enable translation
 4. **Sign out** — log out
 
@@ -148,7 +148,7 @@ Docsbook **does not use webhooks**. Instead:
 - ❌ Branch information
 - ❌ Other formats (`.txt`, `.rst`, etc.)
 
-## Free, PRO, and PRO+
+## Free, Pro, and Business
 
 ### Free ($0 forever)
 
@@ -162,24 +162,26 @@ Docsbook **does not use webhooks**. Instead:
 - ❌ AI translations
 - ❌ Full SEO
 
-### PRO ($150 one-time, lifetime)
+### Pro (monthly, 7-day free trial)
 
 Everything in Free, plus:
 
 - ✅ Custom domain (docs.example.com) with free SSL
-- ✅ AI chat (200 requests/month)
-- ✅ AI translations (50/month, 15 languages)
+- ✅ AI chat
+- ✅ AI translations (15 languages)
 - ✅ Full SEO (sitemap, OpenGraph, JSON-LD)
 - ✅ Analytics for 7 / 14 / 30 days
+- ✅ White-label (hide "Powered by Docsbook")
+- ✅ Webhooks (up to 5 per workspace)
 - ✅ Priority support
 
-### PRO+ ($59/month)
+### Business (monthly, 14-day free trial)
 
-Everything in PRO, plus:
+Everything in Pro, with higher usage limits:
 
-- ✅ White-label (hide "Powered by Docsbook")
-- ✅ Higher AI limits (2000 requests/month)
-- ✅ Higher translation limits (500/month)
+- ✅ Higher AI chat limit
+- ✅ Higher translation limit
+- ✅ Webhooks (up to 25 per workspace)
 
 ## How to Get Started?
 

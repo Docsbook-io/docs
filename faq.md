@@ -15,7 +15,7 @@ A: Docsbook transforms your GitHub documentation into a published site in 5 seco
 
 **Q: Do I need to pay to get started?**
 
-A: No. The Free plan ($0) includes unlimited public repositories, GitHub sync, and full design customization. PRO ($19/month or $190/year) adds a custom domain, AI chat, translations, SEO, and more. PRO+ ($59/month or $590/year) adds white-label, higher AI/translation limits, and chat hooks.
+A: No. The Free plan ($0) includes unlimited public repositories, GitHub sync, and full design customization. Pro (monthly, 7-day free trial) adds a custom domain, AI chat, translations, SEO, white-label, and more. Business (monthly, 14-day free trial) includes everything in Pro with higher usage limits.
 
 ---
 

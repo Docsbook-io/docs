@@ -5,6 +5,18 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 05.07.2026
+
+### Added
+
+- New `Business` plan — everything included in `Pro`, with higher AI chat, translation, and webhook limits. `Billing`
+- Webhook count limits per plan, shown in workspace `Limits` settings. `Webhooks`
+
+### Changed
+
+- `Pro+` renamed to `Pro`; the one-time `Lifetime` plan is no longer sold (existing lifetime customers are unaffected). `Billing`
+- Upgrade page no longer shows specific AI-queries-per-month numbers that had drifted out of sync with actual limits. `Billing`
+
 ## 0.26.5 - 29.06.2026
 
 ### Fixed

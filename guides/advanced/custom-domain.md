@@ -7,7 +7,7 @@ description: "Point docs.yourcompany.com at Docsbook with automatic SSL — bran
 
 Use your own domain instead of `docsbook.io` for your documentation.
 
-**Required:** PRO ($150 lifetime) or PRO+ ($59/month)
+**Required:** Pro (monthly, 7-day free trial) or Business (monthly, 14-day free trial)
 
 ## Why Use a Custom Domain?
 
@@ -33,7 +33,7 @@ docs.mycompany.com
 1. **Your own domain** — registered by you
    - If you don't have one — buy on [GoDaddy](https://www.godaddy.com), [Namecheap](https://www.namecheap.com), or another registrar
 
-2. **PRO or PRO+ plan** — PRO is $150 lifetime, PRO+ is $59/month
+2. **Pro or Business plan
    - If you haven't upgraded yet — [do it now](./premium.md)
 
 3. **Access to DNS settings** — at your domain registrar
@@ -300,5 +300,5 @@ Now that the site is under your domain:
 ## What's Next?
 
 - [Translating Documentation](./translation.md)
-- [PRO and PRO+ plans](./premium.md)
+- [Pro and Business plans](./premium.md)
 - [Managing Documentation](../getting-started/managing-docs.md)

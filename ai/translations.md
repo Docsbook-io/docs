@@ -21,7 +21,7 @@ EN, ES, FR, DE, PT, IT, RU, ZH, JA, KO, AR, HI, TR, PL, NL
 
 ## Translation modes
 
-Set the mode with the `set_translation_mode` MCP tool (requires PRO+).
+Set the mode with the `set_translation_mode` MCP tool (requires Pro or Business).
 
 ```typescript
 // auto: Docsbook translates with its built-in AI provider
@@ -39,17 +39,17 @@ Translations run through OpenRouter by default. You can plug in your own provide
 
 ## Limits
 
-| Plan | Translations / month |
+| Plan | AI translations |
 |---|---|
 | Free | Not available |
-| PRO | 50 |
-| PRO+ | 500 |
+| Pro | Included |
+| Business | Included, higher monthly limit than Pro |
 
 A translation is counted per source page version. If the English page changes, the translated copy is marked stale and needs to be regenerated.
 
 ## Pricing
 
-AI Translations require **PRO** ($150 lifetime) for 50/month or **PRO+** ($59/month) for 500/month.
+AI Translations require **Pro** (monthly, 7-day free trial) or **Business** (monthly, 14-day free trial, higher limit).
 
 ## Related
 

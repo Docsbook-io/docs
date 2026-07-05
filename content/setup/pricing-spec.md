@@ -1,6 +1,6 @@
 ---
 title: "Pricing & Plans"
-description: "Docsbook pricing — Free forever, Pro at $150 lifetime, and Pro+ at $59/month — with AI query and translation limits broken down per plan."
+description: "Docsbook pricing — Free forever, Pro, and Business — with AI chat, translations, and webhook limits broken down per plan. Pro and Business include the same features; Business has higher usage limits."
 ---
 
 # Pricing & Plans
@@ -13,46 +13,47 @@ Docsbook has three plans. All plans cover unlimited public GitHub repositories.
 - All basic features: branding, UI settings, navigation, basic analytics
 - No AI chatbot, no translations, no custom domain
 
-## Pro — $150 lifetime
+## Pro
 
-One-time payment, lifetime access. Best for solo founders, indie devs, and projects with predictable usage.
+Monthly subscription, 7-day free trial. Best for solo founders, indie devs, and small teams.
 
 Everything in Free, plus:
 
-- AI chatbot — 200 questions/month
-- Auto-translation — 50 translations/month
+- AI chatbot
+- Auto-translation
 - Custom domain (`docs.yourcompany.com`) with free SSL
 - SEO tools — meta tags, sitemap, OpenGraph, JSON-LD
-
-## Pro+ — $59/month
-
-Monthly subscription. Best for teams, agencies, and brand-conscious customers with heavy usage.
-
-Everything in Pro, plus:
-
-- AI chatbot — 2000 questions/month
-- Auto-translation — 500 translations/month
 - White-label — hide "Powered by Docsbook"
-- Advanced MCP tools — chat hooks, custom system prompt, translation management
+- Advanced MCP tools — chat hooks, custom system prompt, translation management, Source of Truth
+- Webhooks — up to 5 per workspace
+
+## Business
+
+Monthly subscription, 14-day free trial. Everything in Pro, with higher usage limits — for teams and heavier usage.
+
+- Everything in Pro (same features, no gated capabilities behind Pro)
+- Higher AI chat and translation limits
+- Webhooks — up to 25 per workspace
 
 ## Limits Summary
 
-| Feature                | Free | Pro            | Pro+         |
-| ---------------------- | ---- | -------------- | ------------ |
-| GitHub repositories    | ∞    | ∞              | ∞            |
-| AI queries/month       | 0    | 200            | 2000         |
-| Translations/month     | 0    | 50             | 500          |
-| Custom domain          | ❌    | ✅              | ✅            |
-| SEO                    | ❌    | ✅              | ✅            |
-| White-label            | ❌    | ❌              | ✅            |
-| Payment                | —    | $150 one-time  | $59/month    |
+| Feature                | Free | Pro          | Business     |
+| ---------------------- | ---- | ------------ | ------------ |
+| GitHub repositories    | ∞    | ∞            | ∞            |
+| Custom domain          | ❌    | ✅            | ✅            |
+| SEO                    | ❌    | ✅            | ✅            |
+| White-label            | ❌    | ✅            | ✅            |
+| Webhooks               | 0    | 5            | 25           |
+| Payment                | —    | monthly      | monthly      |
+
+Pro and Business unlock the same set of features — Business simply raises the numeric usage limits (AI chat, translations, webhooks). See [AI Chat](../../ai/chat.md) and [Translations](../../ai/translations.md) for current limit numbers.
 
 ## Upgrade Paths
 
-- **Free → Pro** — one-time payment, instant activation
-- **Free → Pro+** — monthly subscription, instant activation
-- **Pro → Pro+** — keep your lifetime Pro and add Pro+ on top
-- **Pro+ → Free** — cancel anytime via the Customer Portal
+- **Free → Pro** — monthly subscription, 7-day free trial, instant activation
+- **Free → Business** — monthly subscription, 14-day free trial, instant activation
+- **Pro → Business** — upgrade anytime for higher limits
+- **Pro/Business → Free** — cancel anytime via the Customer Portal
 
 ## Refund Policy
 

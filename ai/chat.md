@@ -41,13 +41,11 @@ Bring your own API key from the workspace settings. Costs charged by the upstrea
 
 ## Limits
 
-| Plan | AI requests / month |
+| Plan | AI chat |
 |---|---|
-| Free | Chat disabled |
-| PRO | 200 |
-| PRO+ | 2000 |
-
-Workspaces on PRO that exceed the monthly cap can continue at $0.01 per request.
+| Free | Disabled |
+| Pro | Included |
+| Business | Included, higher monthly limit than Pro |
 
 ## Why it matters
 
@@ -55,7 +53,7 @@ Teams using Docsbook AI Chat deflect **847 support tickets per month on average*
 
 ## Pricing
 
-AI Chat requires the **PRO** plan ($150 lifetime) for 200 requests/month, or **PRO+** ($59/month) for 2000 requests/month.
+AI Chat requires the **Pro** plan (monthly, 7-day free trial) or **Business** (monthly, 14-day free trial, higher limit).
 
 ## Related
 

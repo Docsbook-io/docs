@@ -52,23 +52,33 @@ A 2xx response = delivered. Anything else triggers retry until the attempt budge
 
 | Event | Min plan | Payload fields |
 |---|---|---|
-| `content.indexed` | PRO | `pages_count`, `relations_count`, `indexed_at` |
-| `content.outdated` _(deprecated — no longer fired automatically)_ | PRO | `last_indexed_at`, `repo_head_sha` |
-| `translation.needed` | PRO | `source_path`, `language` |
-| `translation.completed` | PRO | `source_path`, `language`, `origin` |
-| `translation.outdated` | PRO | `source_path`, `language`, `source_hash_changed` |
-| `chat.question_asked` | PRO | `question`, `answered`, `chat_id` |
-| `chat.no_answer` | PRO | `question`, `chat_id` |
-| `chat.negative_feedback` | PRO | `chat_id`, `question`, `answer` |
-| `search.no_results` | PRO | `query` |
-| `search.popular` | PRO | `query`, `count_24h` |
-| `traffic.spike` | PRO+ | `path`, `views`, `baseline` |
-| `traffic.drop` | PRO+ | `path`, `views`, `baseline` |
-| `feedback.received` | PRO | `path`, `rating`, `comment` |
+| `content.indexed` | Pro | `pages_count`, `relations_count`, `indexed_at` |
+| `content.outdated` _(deprecated — no longer fired automatically)_ | Pro | `last_indexed_at`, `repo_head_sha` |
+| `translation.needed` | Pro | `source_path`, `language` |
+| `translation.completed` | Pro | `source_path`, `language`, `origin` |
+| `translation.outdated` | Pro | `source_path`, `language`, `source_hash_changed` |
+| `chat.question_asked` | Pro | `question`, `answered`, `chat_id` |
+| `chat.no_answer` | Pro | `question`, `chat_id` |
+| `chat.negative_feedback` | Pro | `chat_id`, `question`, `answer` |
+| `search.no_results` | Pro | `query` |
+| `search.popular` | Pro | `query`, `count_24h` |
+| `traffic.spike` | Pro | `path`, `views`, `baseline` |
+| `traffic.drop` | Pro | `path`, `views`, `baseline` |
+| `feedback.received` | Pro | `path`, `rating`, `comment` |
 | `plan.upgraded` | Free | `from`, `to` |
 | `plan.downgraded` | Free | `from`, `to` |
-| `usage.limit_approaching` | PRO | `metric` (`ai`\|`translation`), `used`, `limit` |
-| `mcp.tool_called` | PRO+ | `tool_name`, `args` |
+| `usage.limit_approaching` | Pro | `metric` (`ai`\|`translation`), `used`, `limit` |
+| `mcp.tool_called` | Pro | `tool_name`, `args` |
+
+## Webhook count limits
+
+Each workspace has a maximum number of active webhooks, based on plan:
+
+| Plan | Max webhooks |
+|---|---|
+| Free | 0 |
+| Pro | 5 |
+| Business | 25 |
 
 ## Registering a webhook
 
@@ -98,8 +108,8 @@ Other MCP tools:
 - `list_webhooks(workspace_id)` — Free
 - `unregister_webhook(webhook_id)` — Free
 - `test_webhook(webhook_id)` — Free (enqueues a synthetic ping)
-- `list_webhook_deliveries(webhook_id)` — PRO
-- `replay_webhook_delivery(delivery_id)` — PRO
+- `list_webhook_deliveries(webhook_id)` — Pro
+- `replay_webhook_delivery(delivery_id)` — Pro
 
 ### REST endpoints
 

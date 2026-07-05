@@ -50,7 +50,7 @@ In one sentence: **GitHub repo → Beautiful docs + AI chat + SEO + analytics in
                    │ Static HTML + CDN
                    ▼
 ┌─────────────────────────────────────────────────────────────┐
-│  AI-Powered Features (PRO+)                                   │
+│  AI-Powered Features (Pro / Business)                          │
 │  ├─ AI chatbot trained on your docs                          │
 │  ├─ 15-language automatic translations                       │
 │  ├─ Source of Truth graph for agents                         │
@@ -71,8 +71,8 @@ A **workspace** = one documentation site. You can create unlimited workspaces fr
 | Plan | Cost | What You Get |
 |---|---|---|
 | **Free** | $0 | Unlimited docs, branding, basic UI controls, analytics (24h) |
-| **PRO** | $150 lifetime | AI chat (200 req/mo), translations (50/mo), custom domain, SEO, AEO, GEO |
-| **PRO+** | $59/month | Everything + 2K AI req/mo, 500 translations/mo, Source of Truth graph, advanced analytics |
+| **Pro** | monthly, 7-day free trial | AI chat, translations, custom domain, SEO, AEO, GEO, Source of Truth graph, white-label, webhooks (5) |
+| **Business** | monthly, 14-day free trial | Everything in Pro, with higher AI chat / translation / webhook (25) limits |
 
 All plans: **unlimited repositories, forever.**
 
@@ -90,12 +90,12 @@ All plans: **unlimited repositories, forever.**
 - Mobile-responsive design
 - Show/hide UI elements (search, breadcrumbs, feedback, prev/next buttons)
 
-### 🤖 AI Features (PRO+)
+### 🤖 AI Features (Pro / Business)
 - **AI Chatbot** — answers questions based on your documentation
 - **Source of Truth graph** — structured data about your docs (for AI agents)
 - **LSP-style tools** — semantic search, link resolution, outline navigation
 
-### 🌍 Translation & Localization (PRO)
+### 🌍 Translation & Localization (Pro / Business)
 - **15 languages** — English, Spanish, French, German, Portuguese, Italian, Russian, Chinese, Japanese, Korean, Arabic, Hindi, Turkish, Polish, Dutch
 - **SEO per language** — each translation is indexed separately by Google
 - **Auto-detect** — shows readers content in their browser language
@@ -105,7 +105,7 @@ All plans: **unlimited repositories, forever.**
 - Page views, unique visitors, top pages, referrers
 - AI usage tracking (queries, remaining quota)
 - Countries & languages of readers
-- **PRO+:** Advanced journey mapping, visitor drill-down, failed searches, negative feedback
+- **Pro / Business:** Advanced journey mapping, visitor drill-down, failed searches, negative feedback
 
 ### 🔗 Integrations
 - **Custom domain** — `docs.yourcompany.com` with free SSL
@@ -157,7 +157,7 @@ All plans: **unlimited repositories, forever.**
 ## Why Docsbook?
 
 ### vs. GitBook / Notion
-- **Cheaper** — $150 lifetime vs. $8-10/month/user
+- **Cheaper** — Docsbook Pro vs. $8-10/month/user on GitBook/Notion
 - **Faster** — 5 seconds to deploy vs. 2-3 days to set up
 - **No vendor lock-in** — your docs stay in GitHub
 - **Built-in AI** — chat + translations included

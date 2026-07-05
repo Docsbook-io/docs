@@ -7,7 +7,7 @@ description: "Step-by-step guide to enable AI-powered translations in Docsbook �
 
 Automatically translate your documentation to any language.
 
-**Required:** PRO ($150 lifetime) or PRO+ ($59/month)
+**Required:** Pro (monthly, 7-day free trial) or Business (monthly, 14-day free trial)
 
 ## What Is Automatic Translation?
 
@@ -51,10 +51,10 @@ Docsbook supports **15 languages** for automatic AI translation:
 
 ### Step 1: Check Your Plan
 
-Translation is available on PRO and PRO+.
+Translation is available on Pro and Business.
 
 1. Open settings (Float Widget)
-2. Check status — should show "PRO" or "PRO+"
+2. Check status — should show "Pro" or "Business"
 3. If Free — [upgrade](./premium.md)
 
 ### Step 2: Open Translation Settings
@@ -344,7 +344,7 @@ A: Docsbook supports 15 languages today. If you need another one, contact suppor
 
 **Q: Is translation free?**
 
-A: Translations are included in PRO (50/month) and PRO+ (500/month). No extra per-translation charges below those limits.
+A: Translations are included in Pro and Business, with a higher monthly limit on Business. No extra per-translation charges below those limits.
 
 **Q: Will translation update when I update docs?**
 
@@ -353,5 +353,5 @@ A: Yes, automatically on the next update.
 ## What's Next?
 
 - [Custom Domain](./custom-domain.md)
-- [PRO and PRO+ plans](./premium.md)
+- [Pro and Business plans](./premium.md)
 - [Managing Documentation](../getting-started/managing-docs.md)
