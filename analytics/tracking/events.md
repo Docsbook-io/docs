@@ -17,6 +17,7 @@ Track what visitors *do* on your docs — not just what they view.
 | Outbound link clicks | Visitor clicked an external link |
 | Sidebar navigation | Visitor navigated via the left sidebar |
 | Language switches | Visitor changed the display language |
+| Heading views | Visitor scrolled a heading into view while reading the page |
 
 ## How to Open
 
@@ -29,6 +30,8 @@ Events are shown as a breakdown with counts and percentages for the selected tim
 **High AI opens, low queries** → Visitors are curious about AI but find the suggested questions unclear. Try updating your [custom questions](https://docsbook.io/Docsbook-io/docs/analytics/tracking/events).
 
 **High code copies** → Your code examples are useful. Consider adding more.
+
+**Heading views concentrated near the top of a long page** → Readers aren't scrolling past the intro. Consider moving key content up or shortening the page.
 
 **High language switches** → Visitors want content in their language. [Enable more translations →](https://docsbook.io/Docsbook-io/docs/translation/settings)
 

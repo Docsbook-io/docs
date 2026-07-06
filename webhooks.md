@@ -92,6 +92,22 @@ curl -X POST https://docsbook.io/api/webhooks \
 
 The response includes the `secret` exactly once — store it.
 
+### Optional Authorization header
+
+Some receivers (for example a Claude Code routine trigger URL) require their own
+bearer token on every request, separate from HMAC signature verification. Pass
+`auth_header` when creating the webhook and Docsbook sends it verbatim as the
+`Authorization` header on every delivery:
+
+```bash
+curl -X POST https://docsbook.io/api/webhooks \
+  -H "Content-Type: application/json" \
+  -d '{"workspace_id": 42, "event_type": "content.indexed", "url": "https://you.example.com/hook", "auth_header": "Bearer sk-..."}'
+```
+
+If the value has no space, it's sent as `Bearer <value>`; if it already contains
+a scheme (e.g. `Bearer sk-...`), it's sent unchanged.
+
 ### Via MCP
 
 Each event has a dedicated MCP tool, so an AI agent can subscribe to a specific

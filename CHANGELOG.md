@@ -5,6 +5,15 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 06.07.2026
+
+### Added
+
+- Public REST API — call your workspace's AI docs-chat from your own backend with a Bearer API key, exported as `POST /api/v1/chat`. `API`
+- `Integrations` panel — view, copy, and reset your workspace's API key from the `/chat` avatar menu or admin profile menu. `Integrations`
+- Optional `auth_header` field when registering a webhook, sent verbatim as the `Authorization` header on every delivery — for receivers that require their own bearer token. `Webhooks`
+- "Heading views" tracked event, showing which sections of a page readers actually scroll to. `Analytics`
+
 ## NEW - 05.07.2026
 
 ### Added
