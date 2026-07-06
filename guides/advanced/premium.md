@@ -1,11 +1,11 @@
 ---
 title: "Pro and Business Plans Overview"
-description: "What Docsbook Pro and Business unlock — custom domain, AI chat, automatic translations, white-label, and SEO. Pro and Business share the same features; Business has higher usage limits."
+description: "What Docsbook Pro and Business unlock — Pro adds AI chat, translations, and SEO; Business adds custom domain, white-label, webhooks, and bring-your-own API keys on top, plus higher usage limits."
 ---
 
 # Pro and Business Plans
 
-Docsbook has three plans. Free is free forever. Pro and Business are monthly subscriptions with the same feature set — Business simply raises the usage limits (AI chat, translations, webhooks).
+Docsbook has three plans. Free is free forever. Pro is a monthly subscription that adds AI chat, translations, and SEO. Business is a separate, higher tier: it includes everything in Pro plus a set of Business-exclusive capabilities — custom domain, white-label, webhooks, and bring-your-own API keys (for both AI chat and translations) — on top of higher usage limits.
 
 ## Plan Comparison
 
@@ -14,32 +14,23 @@ Docsbook has three plans. Free is free forever. Pro and Business are monthly sub
 | Public repositories | Unlimited | Unlimited | Unlimited |
 | GitHub sync | ✅ | ✅ | ✅ |
 | Branding & themes | ✅ | ✅ | ✅ |
-| Custom domain | ❌ | ✅ | ✅ |
+| Custom domain | ❌ | ❌ | ✅ |
 | AI chat | ❌ | ✅ | ✅ higher limit |
 | AI translations (15 languages) | ❌ | ✅ | ✅ higher limit |
 | Full SEO (sitemap, OG, JSON-LD) | ❌ | ✅ | ✅ |
 | Analytics period | 24h | 30 days | 30 days |
-| Hide "Powered by Docsbook" | ❌ | ✅ | ✅ |
-| Webhooks | 0 | 5 | 25 |
+| Hide "Powered by Docsbook" | ❌ | ❌ | ✅ |
+| Bring your own AI/translation API key | ❌ | ❌ | ✅ |
+| Webhooks | 0 | 0 | 25 |
 | Free trial | — | 7 days | 14 days |
 
 ## What PRO Includes
 
-### 1. Custom Domain
+### 1. AI Chat
 
-Instead of `docsbook.io/yourname/repo`, use `docs.yourcompany.com`.
+A chatbot trained on your documentation. Business includes a higher monthly request limit than Pro. Bringing your own provider and API key (OpenRouter, OpenAI, Gemini, Anthropic) — with a custom model of your choice — is a **Business-only** capability; see [Business-Only Features](#business-only-features) below.
 
-- Branded URL
-- Better for SEO
-- Free SSL via Vercel
-
-**How to set up:** [Domain Guide](./custom-domain.md)
-
-### 2. AI Chat
-
-A chatbot trained on your documentation. Business includes a higher monthly request limit than Pro. Configure your own provider and API key (OpenRouter, OpenAI, Gemini, Anthropic) if you want unlimited use.
-
-### 3. Automatic Translation
+### 2. Automatic Translation
 
 Translate to **15 languages**: English, Spanish, French, German, Portuguese, Italian, Russian, Chinese, Japanese, Korean, Arabic, Hindi, Turkish, Polish, Dutch.
 
@@ -47,25 +38,29 @@ Business includes a higher monthly translation limit than Pro.
 
 **How to set up:** [Translation Guide](./translation.md)
 
-### 4. SEO
+### 3. SEO
 
 Meta tags, sitemap.xml, OpenGraph, Twitter cards, JSON-LD (WebSite, Organization, FAQ), canonical URLs. Each language version is indexed separately.
 
-### 5. Extended Analytics
+### 4. Extended Analytics
 
 Free shows the last 24 hours. Pro and Business show 7 / 14 / 30 days of views, visitors, top pages, referrers, and search queries.
 
-## White-Label and Webhooks
+## Business-Only Features
 
-Both Pro and Business hide the "Powered by Docsbook" badge across all pages and support webhooks — Pro up to 5 per workspace, Business up to 25.
+These capabilities are exclusive to the **Business** plan — Pro/Pro+ does not include them:
+
+- **Custom domain** — use `docs.yourcompany.com` instead of `docsbook.io/yourname/repo`. Branded URL, better for SEO, free SSL via Vercel. **How to set up:** [Domain Guide](./custom-domain.md)
+- **White-label** — hide the "Powered by Docsbook" badge across all pages.
+- **Webhooks** — subscribe to workspace events (content indexed, translations, chat activity, and more). Free and Pro have no webhook slots; Business gets up to 25 per workspace.
+- **Bring your own AI/translation API key** — configure your own provider, API key, and model for AI chat and/or translations (separate keys for each), instead of using Docsbook's shared quota.
 
 ## Higher Usage Limits on Business
 
-Business includes everything in Pro, with higher limits:
+On top of the Business-only features above, Business also raises the numeric limits shared with Pro:
 
 - AI chat — higher monthly request limit than Pro
 - Translations — higher monthly limit than Pro
-- Webhooks — 25 vs 5 on Pro
 
 ## How to Pay
 
@@ -93,7 +88,7 @@ Full refund within the first 30 days. Email support@docsbook.io.
 2. **Workspace plan upgrades** ✅ (Free → PRO or PRO+)
 3. **All features available immediately** ✅
 
-You'll see a **Pro** or **Business** label in the Float Widget. New options open in Settings (custom domain, AI chat, languages, etc.).
+You'll see a **Pro** or **Business** label in the Float Widget. New options open in Settings — AI chat and languages on Pro; custom domain, white-label, webhooks, and bring-your-own API keys additionally on Business.
 
 ## FAQ
 

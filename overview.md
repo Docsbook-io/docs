@@ -71,8 +71,8 @@ A **workspace** = one documentation site. You can create unlimited workspaces fr
 | Plan | Cost | What You Get |
 |---|---|---|
 | **Free** | $0 | Unlimited docs, branding, basic UI controls, analytics (24h) |
-| **Pro** | monthly, 7-day free trial | AI chat, translations, custom domain, SEO, AEO, GEO, Source of Truth graph, white-label, webhooks (5) |
-| **Business** | monthly, 14-day free trial | Everything in Pro, with higher AI chat / translation / webhook (25) limits |
+| **Pro** | monthly, 7-day free trial | AI chat, translations, SEO, AEO, GEO, Source of Truth graph |
+| **Business** | monthly, 14-day free trial | Everything in Pro, plus custom domain, white-label, webhooks (25), bring-your-own API key, and higher AI chat / translation limits |
 
 All plans: **unlimited repositories, forever.**
 
@@ -108,8 +108,8 @@ All plans: **unlimited repositories, forever.**
 - **Pro / Business:** Advanced journey mapping, visitor drill-down, failed searches, negative feedback
 
 ### 🔗 Integrations
-- **Custom domain** — `docs.yourcompany.com` with free SSL
-- **Webhooks** — 15 event types (chat questions, translations, traffic spikes)
+- **Custom domain (Business)** — `docs.yourcompany.com` with free SSL
+- **Webhooks (Business)** — 15 event types (chat questions, translations, traffic spikes)
 - **MCP server** — control Docsbook from Claude Code, Cursor, ChatGPT
 - **GitHub integration** — "Edit on GitHub" links on every page
 

@@ -166,22 +166,23 @@ Docsbook **does not use webhooks**. Instead:
 
 Everything in Free, plus:
 
-- ✅ Custom domain (docs.example.com) with free SSL
 - ✅ AI chat
 - ✅ AI translations (15 languages)
 - ✅ Full SEO (sitemap, OpenGraph, JSON-LD)
 - ✅ Analytics for 7 / 14 / 30 days
-- ✅ White-label (hide "Powered by Docsbook")
-- ✅ Webhooks (up to 5 per workspace)
 - ✅ Priority support
+- ❌ Custom domain, white-label, webhooks, bring-your-own API key (Business only — see below)
 
 ### Business (monthly, 14-day free trial)
 
-Everything in Pro, with higher usage limits:
+Everything in Pro, plus Business-exclusive capabilities, plus higher usage limits:
 
-- ✅ Higher AI chat limit
-- ✅ Higher translation limit
+- ✅ Custom domain (docs.example.com) with free SSL
+- ✅ White-label (hide "Powered by Docsbook")
 - ✅ Webhooks (up to 25 per workspace)
+- ✅ Bring your own AI chat / translation API key (with custom model)
+- ✅ Higher AI chat limit than Pro
+- ✅ Higher translation limit than Pro
 
 ## How to Get Started?
 

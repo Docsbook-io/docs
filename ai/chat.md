@@ -37,7 +37,7 @@ providers:
   - anthropic
 ```
 
-Bring your own API key from the workspace settings. Costs charged by the upstream provider are billed to your key, not to Docsbook.
+Bring your own API key from the workspace settings **(Business plan)** — this also lets you pick a custom model for the provider, not just supply a key. Costs charged by the upstream provider are billed to your key, not to Docsbook.
 
 ## Limits
 

@@ -35,7 +35,7 @@ In `external` mode you receive a `translation.needed` webhook, run your own pipe
 
 ## Providers
 
-Translations run through OpenRouter by default. You can plug in your own provider and API key — the same configuration as for AI Chat applies.
+Translations run through OpenRouter by default. On the **Business** plan you can bring your own provider, API key, and model for Translations — this is a separate configuration from AI Chat's bring-your-own-key setting, with its own key and model choice, so you can use different providers (or models) for each.
 
 ## Limits
 

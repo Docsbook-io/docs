@@ -1,6 +1,6 @@
 ---
 title: "Pricing & Plans"
-description: "Docsbook pricing — Free forever, Pro, and Business — with AI chat, translations, and webhook limits broken down per plan. Pro and Business include the same features; Business has higher usage limits."
+description: "Docsbook pricing — Free forever, Pro, and Business — with AI chat, translations, and webhook limits broken down per plan. Business adds exclusive capabilities (custom domain, white-label, webhooks, bring-your-own API keys) on top of Pro, plus higher usage limits."
 ---
 
 # Pricing & Plans
@@ -21,32 +21,34 @@ Everything in Free, plus:
 
 - AI chatbot
 - Auto-translation
-- Custom domain (`docs.yourcompany.com`) with free SSL
 - SEO tools — meta tags, sitemap, OpenGraph, JSON-LD
-- White-label — hide "Powered by Docsbook"
 - Advanced MCP tools — chat hooks, custom system prompt, translation management, Source of Truth
-- Webhooks — up to 5 per workspace
+- Webhooks — none (see Business)
 
 ## Business
 
-Monthly subscription, 14-day free trial. Everything in Pro, with higher usage limits — for teams and heavier usage.
+Monthly subscription, 14-day free trial. Everything in Pro, plus a set of Business-exclusive capabilities, and higher usage limits — for teams and heavier usage.
 
-- Everything in Pro (same features, no gated capabilities behind Pro)
-- Higher AI chat and translation limits
-- Webhooks — up to 25 per workspace
+- Everything in Pro
+- Custom domain (`docs.yourcompany.com`) with free SSL — Business only
+- White-label — hide "Powered by Docsbook" — Business only
+- Bring your own AI chat and/or translation API key (with custom model) — Business only
+- Webhooks — up to 25 per workspace — Business only
+- Higher AI chat and translation limits than Pro
 
 ## Limits Summary
 
 | Feature                | Free | Pro          | Business     |
 | ---------------------- | ---- | ------------ | ------------ |
 | GitHub repositories    | ∞    | ∞            | ∞            |
-| Custom domain          | ❌    | ✅            | ✅            |
+| Custom domain          | ❌    | ❌            | ✅            |
 | SEO                    | ❌    | ✅            | ✅            |
-| White-label            | ❌    | ✅            | ✅            |
-| Webhooks               | 0    | 5            | 25           |
+| White-label            | ❌    | ❌            | ✅            |
+| Bring your own API key | ❌    | ❌            | ✅            |
+| Webhooks               | 0    | 0            | 25           |
 | Payment                | —    | monthly      | monthly      |
 
-Pro and Business unlock the same set of features — Business simply raises the numeric usage limits (AI chat, translations, webhooks). See [AI Chat](../../ai/chat.md) and [Translations](../../ai/translations.md) for current limit numbers.
+Pro and Business do **not** unlock the same set of features: custom domain, white-label, webhooks, and bring-your-own API keys are Business-exclusive. Business also raises the numeric usage limits shared with Pro (AI chat, translations). See [AI Chat](../../ai/chat.md) and [Translations](../../ai/translations.md) for current limit numbers.
 
 ## Upgrade Paths
 

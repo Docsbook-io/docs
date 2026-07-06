@@ -24,14 +24,19 @@ mcp add --transport http https://docsbook.io/api/mcp/server
 | `update_branding`     | Free     | Colors, fonts, logo, icon, default theme                     |
 | `update_ui_settings`  | Free     | Toggle header, search, feedback, copy button, breadcrumbs    |
 | `update_navigation`   | Free     | Header links, social links, folder tabs                      |
-| `update_ai_settings`  | PRO      | Enable AI chat, set provider and API key, model selection    |
+| `update_ai_settings`  | PRO      | Enable AI chat, set provider and API key, model selection (bring-your-own key is Business only) |
 | `update_seo`          | PRO      | SEO meta tags, sitemap, OpenGraph                            |
-| `update_domain`       | PRO      | Attach or remove a custom domain                             |
+| `update_domain`       | Business | Attach or remove a custom domain                             |
 | `update_languages`    | PRO      | Enable target languages for AI translation                   |
 
 ## Content and documentation
 
-Documentation graph search runs locally via [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) — run `npx markdown-lsp <subcommand> ./docs` and the agent gets LSP-style `doc_*` tools running on the working tree. See the [markdown-lsp README](https://github.com/Docsbook-io/markdown-lsp) for setup.
+| Tool           | Min plan | Description                                                                                          |
+| -------------- | -------- | ----------------------------------------------------------------------------------------------------- |
+| `search_docs`  | Free     | Full-text/regex/heading/path search over the workspace's documentation content. Read-only — works with any token regardless of read/write scope. |
+| `write_docs`   | Free     | Commit one or more markdown files to the workspace's docs repo in a single atomic git commit. Requires a token authorized with **read-write** scope — a read-only token is refused. |
+
+For deeper local graph navigation (outline, fuzzy headings, link references, resolve links) while an agent has your docs checked out on disk, use [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) instead — run `npx markdown-lsp <subcommand> ./docs` to expose LSP-style `doc_*` tools on the working tree. See the [markdown-lsp README](https://github.com/Docsbook-io/markdown-lsp) for setup. `search_docs`/`write_docs` and `markdown-lsp` are complementary: the former work over the hosted MCP connection with no local checkout, the latter needs the repo on disk.
 
 ## AI chat
 
@@ -69,14 +74,16 @@ Documentation graph search runs locally via [`markdown-lsp`](https://github.com/
 
 ## Webhooks
 
+Registering a webhook is a **Business-exclusive** capability — Free and Pro/Pro+ workspaces cannot register any webhook regardless of event type.
+
 | Tool                         | Description                                                   |
 | ---------------------------- | ------------------------------------------------------------- |
-| `register_webhook_<event>`   | Register a webhook for one of ~15 events (HMAC secret + URL)  |
+| `register_webhook_<event>`   | Register a webhook for one of ~15 events (HMAC secret + URL). Business only. |
 | `list_webhooks`              | List registered webhooks for the workspace                    |
-| `unregister_webhook`         | Remove a webhook subscription                                 |
-| `list_webhook_deliveries`    | Delivery history with status, retry count, payload            |
-| `replay_webhook_delivery`    | Re-deliver a specific past delivery                           |
-| `test_webhook`               | Send a synthetic payload to a URL                             |
+| `unregister_webhook`         | Remove a webhook subscription                                  |
+| `list_webhook_deliveries`    | Delivery history with status, retry count, payload             |
+| `replay_webhook_delivery`    | Re-deliver a specific past delivery                            |
+| `test_webhook`               | Send a synthetic payload to a URL                              |
 
 Event types include `content.indexed`, `translation.completed`, `chat.no_answer`, `chat.negative_feedback`, `plan.upgraded`, `usage.limit_approaching`, and others — see [Webhooks](../webhooks.md) for the full list and payload schemas.
 

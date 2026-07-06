@@ -50,25 +50,27 @@ A 2xx response = delivered. Anything else triggers retry until the attempt budge
 
 ## Event catalog
 
+Registering **any** webhook requires the **Business** plan (see [Webhook count limits](#webhook-count-limits) below) — the "Min plan" column below is the additional capability an event itself needs on top of that; for the three "advanced" events, Business already satisfies it.
+
 | Event | Min plan | Payload fields |
 |---|---|---|
-| `content.indexed` | Pro | `pages_count`, `relations_count`, `indexed_at` |
-| `content.outdated` _(deprecated — no longer fired automatically)_ | Pro | `last_indexed_at`, `repo_head_sha` |
-| `translation.needed` | Pro | `source_path`, `language` |
-| `translation.completed` | Pro | `source_path`, `language`, `origin` |
-| `translation.outdated` | Pro | `source_path`, `language`, `source_hash_changed` |
-| `chat.question_asked` | Pro | `question`, `answered`, `chat_id` |
-| `chat.no_answer` | Pro | `question`, `chat_id` |
-| `chat.negative_feedback` | Pro | `chat_id`, `question`, `answer` |
-| `search.no_results` | Pro | `query` |
-| `search.popular` | Pro | `query`, `count_24h` |
-| `traffic.spike` | Pro | `path`, `views`, `baseline` |
-| `traffic.drop` | Pro | `path`, `views`, `baseline` |
-| `feedback.received` | Pro | `path`, `rating`, `comment` |
-| `plan.upgraded` | Free | `from`, `to` |
-| `plan.downgraded` | Free | `from`, `to` |
-| `usage.limit_approaching` | Pro | `metric` (`ai`\|`translation`), `used`, `limit` |
-| `mcp.tool_called` | Pro | `tool_name`, `args` |
+| `content.indexed` | Business | `pages_count`, `relations_count`, `indexed_at` |
+| `content.outdated` _(deprecated — no longer fired automatically)_ | Business | `last_indexed_at`, `repo_head_sha` |
+| `translation.needed` | Business | `source_path`, `language` |
+| `translation.completed` | Business | `source_path`, `language`, `origin` |
+| `translation.outdated` | Business | `source_path`, `language`, `source_hash_changed` |
+| `chat.question_asked` | Business | `question`, `answered`, `chat_id` |
+| `chat.no_answer` | Business | `question`, `chat_id` |
+| `chat.negative_feedback` | Business | `chat_id`, `question`, `answer` |
+| `search.no_results` | Business | `query` |
+| `search.popular` | Business | `query`, `count_24h` |
+| `traffic.spike` _(advanced event)_ | Business | `path`, `views`, `baseline` |
+| `traffic.drop` _(advanced event)_ | Business | `path`, `views`, `baseline` |
+| `feedback.received` | Business | `path`, `rating`, `comment` |
+| `plan.upgraded` | Business | `from`, `to` |
+| `plan.downgraded` | Business | `from`, `to` |
+| `usage.limit_approaching` | Business | `metric` (`ai`\|`translation`), `used`, `limit` |
+| `mcp.tool_called` _(advanced event)_ | Business | `tool_name`, `args` |
 
 ## Webhook count limits
 
@@ -77,8 +79,10 @@ Each workspace has a maximum number of active webhooks, based on plan:
 | Plan | Max webhooks |
 |---|---|
 | Free | 0 |
-| Pro | 5 |
+| Pro | 0 |
 | Business | 25 |
+
+Webhooks are a **Business-exclusive** capability — Free and Pro/Pro+ workspaces cannot register any webhooks; only Business unlocks them (up to 25 per workspace).
 
 ## Registering a webhook
 
