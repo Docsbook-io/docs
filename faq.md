@@ -15,7 +15,7 @@ A: Docsbook transforms your GitHub documentation into a published site in 5 seco
 
 **Q: Do I need to pay to get started?**
 
-A: No. The Free plan ($0) includes unlimited public repositories, GitHub sync, and full design customization. Pro (monthly, 7-day free trial) adds a custom domain, AI chat, translations, SEO, white-label, and more. Business (monthly, 14-day free trial) includes everything in Pro with higher usage limits.
+A: No. The Free plan ($0) includes unlimited public repositories, GitHub sync, and full design customization. Pro (monthly, 7-day free trial) adds AI chat, translations, and SEO. Business (monthly, 14-day free trial) includes everything in Pro plus custom domain, white-label, webhooks, bring-your-own API keys, and higher usage limits.
 
 ---
 
@@ -171,49 +171,43 @@ A: Only you, when logged in. Other people see only the documentation.
 
 ---
 
-## Paid plans (PRO & PRO+)
+## Paid plans (Pro & Business)
 
 **Q: Is Docsbook a subscription?**
 
-A: Yes. PRO and PRO+ are monthly or annual subscriptions, billed per workspace via Paddle. Free stays free forever — no card required. You can cancel or downgrade at any time from the Float Widget.
+A: Yes. Pro and Business are monthly subscriptions, billed per workspace via Paddle. Free stays free forever — no card required. You can cancel or downgrade at any time from the Float Widget.
 
 We moved off the old one-time lifetime model because docs are a living product: AI chat, translations, and the MCP server all require ongoing infrastructure (LLM tokens, indexing, hosting). A subscription lets us keep shipping and keep limits high.
 
 ---
 
-**Q: What is PRO?**
+**Q: What is Pro?**
 
-A: A subscription per workspace — **$19/month or $190/year** (annual = 2 months free). Includes:
-- Custom domain (`docs.yourcompany.com`) with free SSL
-- AI chat trained on your docs (200 requests/month)
-- AI translations to 15 languages (50/month)
+A: A subscription per workspace — **$59/month**, 7-day free trial. Includes:
+- AI chat trained on your docs
+- AI translations to 15 languages
 - Full SEO (meta tags, sitemap, OpenGraph, JSON-LD)
 - Extended analytics (7 / 14 / 30 days instead of 24h)
+- Advanced MCP tools — chat hooks, custom system prompt, translation management, Source of Truth
+
+Custom domain, white-label, webhooks, and bring-your-own API keys are **not** included in Pro — see Business below.
 
 ---
 
-**Q: What is PRO+?**
+**Q: What is Business?**
 
-A: A subscription per workspace — **$59/month or $590/year** (annual = 2 months free). Everything in PRO, plus:
+A: A subscription per workspace — **$149/month**, 14-day free trial. Everything in Pro, plus a set of Business-exclusive capabilities:
+- Custom domain (`docs.yourcompany.com`) with free SSL
 - White-label (hide "Powered by Docsbook")
-- Higher AI limits (2,000 requests/month)
-- Higher translation limits (500/month)
-- Chat hooks (pre/post LLM webhooks)
-- Custom translation pipeline (manual / external mode)
+- Webhooks — up to 25 per workspace
+- Bring your own AI chat and/or translation API key (with custom model)
+- Higher AI chat and translation limits than Pro
 
 ---
 
 **Q: How much does it cost?**
 
-A: Free $0 forever. PRO $19/month ($190/year). PRO+ $59/month ($590/year). Billed per workspace.
-
----
-
-**Q: Annual or monthly — which should I pick?**
-
-A: Annual saves you 2 months (~17%). Pick **monthly** if you're testing the tool, the project is short-lived, or budget needs to be flexible. Pick **annual** if the docs are core to your product or you're using PRO+ for production: you save real money and the price is locked for 12 months.
-
-You can switch from monthly to annual any time — we credit the unused portion.
+A: Free $0 forever. Pro $59/month. Business $149/month. Billed per workspace.
 
 ---
 
@@ -223,8 +217,8 @@ A: Your subscription stays active until the end of the current billing period �
 
 After it ends, the workspace drops to **Free**:
 - The site stays online at `docsbook.io/owner/repo` (forever)
-- Your custom domain stops resolving (revert DNS or re-upgrade)
-- AI chat, translations, SEO, and white-label turn off
+- Your custom domain stops resolving (revert DNS or re-upgrade — Business only)
+- AI chat, translations, SEO, white-label, and webhooks turn off
 - All your content stays in GitHub — nothing is deleted
 - Settings (branding, navigation, UI) are preserved — re-upgrading restores everything
 
@@ -234,17 +228,15 @@ There is no lock-in: your docs live in your GitHub repo.
 
 **Q: Is there a refund?**
 
-A: Yes. **30-day money-back guarantee** on the first payment — monthly or annual, no questions asked. Email [support@docsbook.io](mailto:support@docsbook.io) and we refund within 1–2 business days.
-
-For annual plans cancelled mid-term after the 30-day window, we issue a prorated refund for unused months on a case-by-case basis. Just write to us.
+A: Yes. **30-day money-back guarantee** on the first payment, no questions asked. Email [support@docsbook.io](mailto:support@docsbook.io) and we refund within 1–2 business days.
 
 ---
 
 **Q: I bought the old PRO lifetime plan. What happens to me?**
 
-A: Grandfathered. If you bought PRO as a one-time $150 lifetime purchase before we moved to subscriptions, your workspace keeps all PRO features forever at no extra cost — exactly as promised. No downgrade, no surprise bill.
+A: Grandfathered. If you bought PRO as a one-time $150 lifetime purchase before we moved to subscriptions, your workspace keeps its original features forever at no extra cost — exactly as promised. No downgrade, no surprise bill.
 
-You can still upgrade your lifetime PRO workspace to PRO+ for $59/month if you want white-label or higher AI limits.
+You can still upgrade your lifetime workspace to Pro ($59/month) or Business ($149/month) if you want the newer capabilities like custom domain, white-label, or webhooks.
 
 ---
 
@@ -254,13 +246,13 @@ A: Three steps. Most teams finish in under 30 minutes.
 
 1. **Export from GitBook** — GitBook lets you sync to a Git repo, or export as Markdown / `.zip`. Push the resulting `.md` files to a GitHub repository (any structure works — flat, `docs/` folder, nested, whatever).
 2. **Connect to Docsbook** — paste `github.com/your-org/your-repo` on [docsbook.io](https://docsbook.io). Your site goes live in seconds.
-3. **Re-point your domain** — in GitBook, remove the custom domain. In Docsbook PRO, add `docs.yourcompany.com` and update DNS (one CNAME). SSL is provisioned automatically.
+3. **Re-point your domain** — in GitBook, remove the custom domain. In Docsbook Business, add `docs.yourcompany.com` and update DNS (one CNAME). SSL is provisioned automatically.
 
 What carries over automatically: page structure, internal links (relative `.md` paths are resolved), images, code blocks (GFM), headings, frontmatter.
 
 What you'll redo: branding (colors, logo, fonts — 5 minutes in the Float Widget), navigation (header links, social links), AI chat suggested questions.
 
-Pricing: GitBook starts at ~$8/user/month and scales fast with team size. Docsbook is **flat $19/month per workspace** regardless of team size — most teams save $200+/month switching. See the full comparison: [GitBook vs Docsbook](./blog/docusaurus-vs-docsbook.md).
+Pricing: GitBook starts at ~$8/user/month and scales fast with team size. Docsbook is **flat $59/month per workspace** for Pro (AI chat, translations, SEO), or $149/month for Business (adds custom domain, white-label, webhooks) — regardless of team size. Most teams save $200+/month switching. See the full comparison: [GitBook vs Docsbook](./blog/docusaurus-vs-docsbook.md).
 
 Stuck? Email [support@docsbook.io](mailto:support@docsbook.io) — we help with migrations for free.
 
@@ -282,11 +274,11 @@ A: Yes. Payments are processed by Paddle (the Merchant of Record). Docsbook neve
 
 **Q: Will the price increase?**
 
-A: If prices change, **your existing subscription is locked in**: monthly stays at your current rate for as long as you keep the subscription active; annual is locked for the full 12-month term. You'll only see a new price if you cancel and re-subscribe later.
+A: If prices change, **your existing subscription is locked in**: you keep your current rate for as long as you keep the subscription active. You'll only see a new price if you cancel and re-subscribe later.
 
 ---
 
-**Q: Can I buy PRO for multiple workspaces?**
+**Q: Can I buy Pro or Business for multiple workspaces?**
 
 A: Yes — billing is per workspace. Each workspace is upgraded separately.
 
@@ -302,7 +294,7 @@ A: Contact support@docsbook.io for special arrangements.
 
 **Q: How do I use my own domain?**
 
-A: PRO feature. Guide: [Custom Domain Setup](./guides/advanced/custom-domain.md)
+A: Business feature. Guide: [Custom Domain Setup](./guides/advanced/custom-domain.md)
 
 TL;DR:
 1. Enter domain in Settings
@@ -379,7 +371,7 @@ A: Yes, you can download and edit manually. Contact support@docsbook.io.
 
 A: Email: [support@docsbook.io](mailto:support@docsbook.io)
 
-PRO and PRO+ customers get priority.
+Pro and Business customers get priority.
 
 ---
 

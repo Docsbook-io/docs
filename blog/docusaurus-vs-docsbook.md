@@ -17,7 +17,7 @@ This guide is the honest one. We make Docsbook, so it shows up first — but eve
 
 | Platform | Best for | Setup | Pricing (2026) | AI chat | Multi-language | Hosting |
 |---|---|---|---|---|---|---|
-| **Docsbook** | Indie hackers, startups, OSS that wants a site today | 5 seconds | $0 / $150 lifetime / $59 mo | Built-in | 15 languages | Managed |
+| **Docsbook** | Indie hackers, startups, OSS that wants a site today | 5 seconds | $0 / $59 mo (Pro) / $149 mo (Business) | Built-in | 15 languages | Managed |
 | **Mintlify** | YC-stage API products | 30 min + `mint.json` | From $150/mo | Built-in | Limited | Managed |
 | **GitBook** | Mid-market and enterprise teams | Hours | ~$200/mo per editor | Built-in | Add-on | Managed |
 | **ReadMe.io** | API-reference-heavy products | Hours | From ~$99/mo | Built-in | Add-on | Managed |
@@ -71,7 +71,7 @@ If any of those sentences made you sigh, you are the audience for this guide.
 - AI translation to 15 languages, each indexed separately in Google
 - MCP server with ~40 tools — Claude Code and Cursor can configure your docs directly
 - `llms.txt` and `llms-full.txt` generated automatically
-- Lifetime PRO at $150 (one-time), PRO+ at $59/mo for higher AI limits and white-label
+- Pro at $59/mo for AI chat and translations, Business at $149/mo for custom domain, white-label, webhooks, and higher limits
 - Source data stays in your GitHub repo — no vendor lock-in
 
 **Cons**
@@ -83,8 +83,8 @@ If any of those sentences made you sigh, you are the audience for this guide.
 **Pricing**
 
 - Free forever for unlimited public repos with branding, UI, navigation
-- PRO $150 lifetime — AI chat (200/mo), translations (50/mo), custom domain, SEO, longer analytics
-- PRO+ $59/mo — 2000 AI/mo, 500 translations/mo, white-label, Source-of-Truth graph, MCP write tools
+- Pro $59/mo — AI chat, translations, SEO, longer analytics, Source-of-Truth graph, MCP write tools
+- Business $149/mo — everything in Pro, plus custom domain, white-label, webhooks, bring-your-own API keys, and higher AI/translation limits
 
 **Migrating from Docusaurus**
 
@@ -281,7 +281,7 @@ If no → Docsbook, Mintlify, GitBook, ReadMe, Archbee. You're buying time.
 
 - $0 and you have engineering time → VitePress / Starlight / MkDocs Material
 - $0 and you don't have engineering time → Docsbook Free
-- Up to ~$60/mo → Docsbook PRO+, Archbee
+- Up to ~$60/mo → Docsbook Pro, Archbee
 - $150+/mo → Mintlify, GitBook, ReadMe — pick on shape, not price
 
 A useful test: imagine the docs site exists and is fine. How much of your week do you want to spend on it? Self-host platforms give you control proportional to the time you invest. Managed platforms give you 90% of the result for 10% of the time.

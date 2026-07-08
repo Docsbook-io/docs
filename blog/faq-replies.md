@@ -21,7 +21,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 **TL;DR:** Docsbook turns a public GitHub repo into a documentation site in a few seconds. Paste `github.com/user/repo`, the site appears at `docsbook.io/user/repo`, and every push to main updates it automatically.
 
-**Long:** It's a hosted docs platform aimed at people who want their docs to live as Markdown in GitHub — not in a proprietary CMS. There's no CI/CD to set up and no `docusaurus.config.js` to babysit. You get the docs site, a built-in AI chatbot trained on your content, AI translations to 15 languages with separate SEO indexing, full analytics, custom domain with free SSL, and an MCP server so AI agents can manage the workspace. Free plan is real — not a trial.
+**Long:** It's a hosted docs platform aimed at people who want their docs to live as Markdown in GitHub — not in a proprietary CMS. There's no CI/CD to set up and no `docusaurus.config.js` to babysit. You get the docs site, a built-in AI chatbot trained on your content, AI translations to 15 languages with separate SEO indexing, full analytics, and an MCP server so AI agents can manage the workspace. Custom domain with free SSL is a Business-tier add-on. Free plan is real — not a trial.
 
 ---
 
@@ -29,7 +29,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 **TL;DR:** SaaS founders, dev-tool teams, and OSS maintainers who want serious docs without spending two weeks on Docusaurus setup or $200+/month on GitBook.
 
-**Long:** The sweet spot is a small team that already writes Markdown in GitHub and wants the published site, search, AI chat, translations, analytics, and a custom domain — without owning the infra. If you have a tech writer and a custom design system, Docusaurus is probably still better. If you have a 20-person docs team and enterprise SSO requirements, GitBook fits. Everyone in between is who Docsbook is built for.
+**Long:** The sweet spot is a small team that already writes Markdown in GitHub and wants the published site, search, AI chat, translations, and analytics — without owning the infra. Teams that also want a custom domain, white-label, or webhooks step up to Business. If you have a tech writer and a custom design system, Docusaurus is probably still better. If you have a 20-person docs team and enterprise SSO requirements, GitBook fits. Everyone in between is who Docsbook is built for.
 
 ---
 
@@ -53,9 +53,9 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 ### How much does it cost?
 
-**TL;DR:** Free forever for the basics. PRO is **$150 one-time (lifetime)**. PRO+ is **$59/month** and unlocks white-label, source-of-truth graph, and higher AI/translation limits.
+**TL;DR:** Free forever for the basics. Pro is **$59/month** (AI chat, translations, SEO). Business is **$149/month** and adds custom domain, white-label, webhooks, bring-your-own API keys, and higher AI/translation limits.
 
-**Long:** Free covers any public GitHub repo, branding, UI controls, navigation, 24h analytics, and base MCP tools. PRO ($150 lifetime) adds AI chat (200 requests/month), AI translations (50/month, 15 languages), custom domain with free SSL, SEO, and longer analytics windows (up to 30 days). PRO+ ($59/month) is for people who want unlimited polish: white-label, 2000 AI requests, and 500 translations. Per-workspace billing, not per-seat.
+**Long:** Free covers any public GitHub repo, branding, UI controls, navigation, 24h analytics, and base MCP tools. Pro ($59/month) adds AI chat, AI translations (15 languages), full SEO, and longer analytics windows (up to 30 days). Business ($149/month) includes everything in Pro plus a set of Business-exclusive capabilities: custom domain with free SSL, white-label, webhooks, bring-your-own AI/translation API key, and higher usage limits. Per-workspace billing, not per-seat.
 
 ---
 
@@ -67,19 +67,19 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 ---
 
-### Why $150 lifetime for PRO and not a subscription?
+### Why is Pro a subscription and not a lifetime deal?
 
-**TL;DR:** Because docs are infrastructure — you don't want to worry every month whether your docs site is going to bill you. Pay once, keep it.
+**TL;DR:** We used to sell a one-time lifetime PRO plan; existing lifetime customers are grandfathered. New plans are subscriptions because AI chat, translations, and the MCP server carry ongoing inference and infrastructure cost.
 
-**Long:** I priced it as lifetime intentionally to break the SaaS-fatigue pattern. Docs aren't a tool you "use" actively — they're a thing that has to keep working forever. $150 once is the cost of two months of GitBook. PRO+ stays monthly because the AI-heavy features (translations, source-of-truth re-indexing, advanced MCP) have a real ongoing inference cost.
+**Long:** Docs are a living product now — the old flat lifetime price didn't scale with how much LLM inference a workspace actually uses. Pro ($59/month) and Business ($149/month) are subscriptions so we can keep AI/translation limits generous and keep shipping. If you bought the original $150 lifetime PRO before the move to subscriptions, you keep your original features forever at no extra cost.
 
 ---
 
 ### What happens if I exceed AI request limits?
 
-**TL;DR:** Pay-per-request overage: $0.01 per AI request past your monthly cap. Or bring your own OpenAI / Anthropic / Gemini / OpenRouter key — then it's free on our side.
+**TL;DR:** Pay-per-request overage past your monthly cap, or bring your own OpenAI / Anthropic / Gemini / OpenRouter key on Business — then it's free on our side.
 
-**Long:** PRO is 200 AI requests/month, PRO+ is 2000. If you blow through them, we charge $0.01/request rather than hard-blocking. Or you can plug in your own API key in the AI settings and route requests through your provider — then we don't meter at all. Same applies to translations.
+**Long:** Pro and Business each have a monthly AI request and translation cap, with Business set higher. If you blow through them, overage is billed per request rather than hard-blocking. Business also lets you plug in your own API key in the AI settings and route requests through your provider — then we don't meter at all. Same applies to translations.
 
 ---
 
@@ -97,7 +97,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 **TL;DR:** Same outcome (hosted docs site), ~$200/month cheaper, includes AI chat + AI translations in the price, content stays in *your* GitHub repo.
 
-**Long:** GitBook starts at ~$8/user/month and serious teams end up paying $200+/month. AI features, translations, and analytics are paid add-ons. Content lives in GitBook's CMS — to leave, you export. Docsbook is $0 / $150 lifetime / $59 month with AI and translations bundled, and your Markdown stays in your GitHub repo. The trade-off: GitBook has a richer WYSIWYG editor; we don't have one — you write Markdown.
+**Long:** GitBook starts at ~$8/user/month and serious teams end up paying $200+/month. AI features, translations, and analytics are paid add-ons. Content lives in GitBook's CMS — to leave, you export. Docsbook is $0 / $59 (Pro, AI + translations) / $149 (Business, adds custom domain, white-label, webhooks) per month, and your Markdown stays in your GitHub repo. The trade-off: GitBook has a richer WYSIWYG editor; we don't have one — you write Markdown.
 
 ---
 
@@ -113,7 +113,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 **TL;DR:** Comparable feature set (hosted docs, AI), but Mintlify pushes you toward MDX in their structure. Docsbook reads plain Markdown from any GitHub repo and is generally cheaper.
 
-**Long:** Mintlify is good — well-designed, well-marketed. Where we differ: (1) we work with any public GitHub repo that has Markdown in `README.md` or `docs/`, no project-specific config required; (2) per-workspace pricing, not per-seat; (3) we expose a full MCP server with ~40 tools, so AI agents can manage your workspace programmatically (read the doc graph, search by symbol, change branding, etc.). Their core docs experience is more polished out-of-the-box; ours catches up faster the more you customize.
+**Long:** Mintlify is good — well-designed, well-marketed. Where we differ: (1) we work with any public GitHub repo that has Markdown in `README.md` or `docs/`, no project-specific config required; (2) per-workspace pricing, not per-seat, starting at $59/month vs. Mintlify's $150/month entry; (3) we expose a full MCP server with ~40 tools, so AI agents can manage your workspace programmatically (read the doc graph, search by symbol, change branding, etc.). Their core docs experience is more polished out-of-the-box; ours catches up faster the more you customize.
 
 ---
 
@@ -155,13 +155,13 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 **TL;DR:** 15 languages (EN, ES, FR, DE, PT, IT, RU, ZH, JA, KO, AR, HI, TR, PL, NL). Each translated version gets indexed in Google as a separate page, with proper hreflang.
 
-**Long:** You enable a language in the workspace, Docsbook generates the translation, and the translated version becomes a real page at `docsbook.io/[owner]/[repo]/[lang]/...`. Google treats each language as a distinct indexable URL — so you get separate SEO for each market. There's a language switcher in the sidebar or header (configurable), and we auto-detect the visitor's language with `franc`. PRO is 50 translations/month, PRO+ is 500/month. If you have your own translator workflow, set translation mode to `external` and push translations via the MCP tool or webhook.
+**Long:** You enable a language in the workspace, Docsbook generates the translation, and the translated version becomes a real page at `docsbook.io/[owner]/[repo]/[lang]/...`. Google treats each language as a distinct indexable URL — so you get separate SEO for each market. There's a language switcher in the sidebar or header (configurable), and we auto-detect the visitor's language with `franc`. Business gets a higher monthly translation cap than Pro. If you have your own translator workflow, set translation mode to `external` and push translations via the MCP tool or webhook.
 
 ---
 
 ### Can I review translations before they go live?
 
-**TL;DR:** Yes — PRO+ supports a pending-approval queue. Translation lands as a draft, you approve via MCP (`approve_translation`) or the dashboard, then it publishes.
+**TL;DR:** Yes — Pro and Business support a pending-approval queue. Translation lands as a draft, you approve via MCP (`approve_translation`) or the dashboard, then it publishes.
 
 **Long:** This matters for languages where you have a native speaker on the team and want a sanity check before shipping. There's also `list_pending_translations` and `get_translation` MCP tools so an agent can pre-screen drafts and only surface the ones that look questionable.
 
@@ -179,9 +179,9 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 ### What about regular SEO?
 
-**TL;DR:** Built-in. Meta tags, OpenGraph, sitemap.xml, JSON-LD (WebSite, Organization, SoftwareApplication, FAQPage), canonical URLs, separate indexing per language. PRO and PRO+.
+**TL;DR:** Built-in. Meta tags, OpenGraph, sitemap.xml, JSON-LD (WebSite, Organization, SoftwareApplication, FAQPage), canonical URLs, separate indexing per language. Pro and Business.
 
-**Long:** Each page gets a proper `<title>`, `<meta description>`, OpenGraph image, and JSON-LD blocks for structured data. Sitemap is auto-generated and pings Google on update. Translations are exposed with hreflang. Custom domain (PRO+) plus the SEO setup means a Docsbook site behaves like a real docs site to Google, not a SPA. This is the main reason teams pick us over Notion for public docs.
+**Long:** Each page gets a proper `<title>`, `<meta description>`, OpenGraph image, and JSON-LD blocks for structured data. Sitemap is auto-generated and pings Google on update. Translations are exposed with hreflang. Custom domain (Business) plus the SEO setup means a Docsbook site behaves like a real docs site to Google, not a SPA. This is the main reason teams pick us over Notion for public docs.
 
 ---
 
@@ -213,7 +213,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 ### Can I use a custom domain?
 
-**TL;DR:** Yes, on PRO and PRO+. Point a CNAME to Docsbook, we provision the SSL certificate, done. `docs.yourcompany.com` works in a few minutes.
+**TL;DR:** Yes, on Business. Point a CNAME to Docsbook, we provision the SSL certificate, done. `docs.yourcompany.com` works in a few minutes.
 
 **Long:** Custom domains run through Vercel's domain API. You add `docs.yourcompany.com` in the workspace dashboard or via the `update_domain` MCP tool, set a CNAME at your DNS provider, and Vercel issues the SSL cert automatically. We also proxy through `/docs-proxy/[[...path]]/` so the URL stays clean and analytics keep working.
 
@@ -257,17 +257,17 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 ### "Why not just use Docusaurus, it's free?"
 
-**TL;DR:** Docusaurus is free in dollars, not in time. Two days of setup + ongoing maintenance of a Node.js app costs more than $150 lifetime if you bill your own time.
+**TL;DR:** Docusaurus is free in dollars, not in time. Two days of setup + ongoing maintenance of a Node.js app costs more than a year of Docsbook Pro if you bill your own time.
 
 **Long:** Docusaurus is great and I recommend it for teams that want full control. But "free" is the framework — you still need to host it, maintain the build, manage dependencies, add a search service (Algolia $$$), add analytics, add AI chat (custom), add i18n (custom), etc. The total cost of ownership over a year is meaningful. Docsbook trades the customization ceiling for setup time and bundled features. Both are valid choices.
 
 ---
 
-### "$150 for a docs site, that seems steep."
+### "$59/month for a docs site, that seems steep."
 
-**TL;DR:** $150 *lifetime*, not monthly. That's two months of GitBook. For something you'll use for years, it's the cheapest serious option in this category.
+**TL;DR:** Compare it to what else is out there — GitBook, Mintlify, and Readme.io all start well above that for a comparable feature set. Free covers a real public docs site with no AI needed.
 
-**Long:** I get the reaction at first glance. Compare it to GitBook ($200/mo for a real team), Mintlify ($120/mo+), Readme.io ($99/mo+) — all of which are subscriptions. PRO+ at $59/mo is for people who want unlimited polish and ongoing AI. Most people are fine with PRO lifetime. If you only need a public docs site with branding and no AI, Free is genuinely free forever.
+**Long:** I get the reaction at first glance. Compare it to GitBook ($200/mo for a real team), Mintlify ($150/mo+), Readme.io ($99/mo+) — all of which are subscriptions, same as us. Pro at $59/mo covers AI chat, translations, and SEO. Business at $149/mo is for teams that also want a custom domain, white-label, webhooks, or bring-your-own API keys. If you only need a public docs site with branding and no AI, Free is genuinely free forever.
 
 ---
 

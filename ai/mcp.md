@@ -128,7 +128,7 @@ ChatGPT supports remote MCP through **Connectors** (Pro / Business / Enterprise 
 |---|---|
 | Workspace | `list_workspaces`, `create_workspace`, `get_workspace` |
 | Branding & UI | `update_branding`, `update_ui_settings`, `update_navigation` |
-| Content & search | `search_docs`, `write_docs` |
+| Content & search | `search_docs`, `get_doc_outline`, `write_docs` |
 | AI chat | `get_chat_system_prompt`, `set_chat_system_prompt`, `set_chat_hooks` |
 | Translations | `set_translation_mode`, `list_pending_translations`, `approve_translation` |
 | Analytics | `get_analytics`, `get_ai_usage`, `get_failed_searches`, `get_page_journeys`, `get_top_visitors`, `get_visitor_activity`, `query_events` |
@@ -139,7 +139,7 @@ ChatGPT supports remote MCP through **Connectors** (Pro / Business / Enterprise 
 
 There are two ways to work with your docs content from an agent:
 
-- **Hosted, via MCP tokens** — `search_docs` (Free plan and up, read-only, works with any connected token regardless of its scope) and `write_docs` (Free+, requires a token authorized with **read-write** scope; commits one or more files as a single atomic git commit). These run against the Docsbook-hosted repository directly, no local checkout needed.
+- **Hosted, via MCP tokens** — `search_docs` (Free plan and up, read-only, works with any connected token regardless of its scope), `get_doc_outline` (Free+, read-only; lists every markdown page's title, heading count, and size before searching or writing), and `write_docs` (Free+, requires a token authorized with **read-write** scope; commits one or more files as a single atomic git commit). These run against the Docsbook-hosted repository directly, no local checkout needed.
 - **Local, via `markdown-lsp`** — for an agent working directly on your checked-out files, [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) exposes richer LSP-style `doc_*` tools (outline, fuzzy headings, full-text, link references, resolve links) by running `npx markdown-lsp <subcommand> ./docs` on the agent's machine. See [Source of Truth](./source-of-truth.md) for the tool list and rationale.
 
 Use `search_docs`/`write_docs` when the agent only has an MCP connection (no local checkout); use `markdown-lsp` when the agent already has the repo on disk and wants deeper graph navigation.
@@ -150,7 +150,7 @@ Each tool declares a minimum plan. The server returns a structured error when a 
 
 | Plan | Available tool groups |
 |---|---|
-| Free | Workspace, branding, UI, navigation, analytics (24h), `find_skill`, `search_docs`, `write_docs` (with a read-write token) |
+| Free | Workspace, branding, UI, navigation, analytics (24h), `find_skill`, `search_docs`, `get_doc_outline`, `write_docs` (with a read-write token) |
 | PRO | + AI settings, SEO, languages, chat hooks, translations, deeper analytics |
 | PRO+ | + page journeys, top visitors + visitor activity drill-down, `query_events` |
 | Business | + custom domain, webhooks, bring-your-own AI/translation API key |

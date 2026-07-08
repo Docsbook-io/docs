@@ -19,10 +19,10 @@ In this post, we break down the key differences between Mintlify and Docsbook to
 | Setup time | 30 min | 5 min |
 | GitHub sync | ✓ | ✓ |
 | AI search | ✓ | ✓ |
-| Custom domain | Paid plan | All plans |
+| Custom domain | Paid plan | Business |
 | MDX support | ✓ | ✓ |
 | Multi-language | Limited | ✓ |
-| White-label | Enterprise | Pro |
+| White-label | Enterprise | Business |
 | SEO optimization | Basic | Advanced |
 
 ## Pricing: The Elephant in the Room
@@ -80,4 +80,4 @@ Mintlify is a strong product. If you can afford it and are deep in their ecosyst
 
 **Docsbook Free is free forever. No credit card required. [Start now →](https://docsbook.io/start?utm_source=blog&utm_medium=cta&utm_campaign=mintlify_vs_docsbook)**
 
-> The 14-day free trial applies only to PRO+ ($59/month). Free and PRO ($150 lifetime) don't need a trial.
+> The 14-day free trial applies only to Business ($149/month). Free and Pro (7-day trial, $59/month) have their own terms.

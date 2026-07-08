@@ -68,7 +68,7 @@ If you decide to move:
 
 1. Your `docs/` folder is the source. Point Docsbook at `github.com/yourorg/yourrepo`.
 2. Site lives at `docsbook.io/yourorg/yourrepo` in 5 seconds.
-3. Wire your custom domain `docs.yourcompany.com` (PRO+ feature) and redirect old Docusaurus URLs to the same path.
+3. Wire your custom domain `docs.yourcompany.com` (Business feature) and redirect old Docusaurus URLs to the same path.
 4. Keep the Docusaurus repo as a fallback. Delete it when traffic confirms parity.
 
 See [Migrating from Docusaurus to Docsbook](./migrating-from-docusaurus-to-docsbook.md) for the full checklist.

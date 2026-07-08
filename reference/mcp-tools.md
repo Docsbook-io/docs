@@ -34,6 +34,7 @@ mcp add --transport http https://docsbook.io/api/mcp/server
 | Tool           | Min plan | Description                                                                                          |
 | -------------- | -------- | ----------------------------------------------------------------------------------------------------- |
 | `search_docs`  | Free     | Full-text/regex/heading/path search over the workspace's documentation content. Read-only — works with any token regardless of read/write scope. |
+| `get_doc_outline` | Free  | List every markdown page's title, heading count, and size before searching or writing. Read-only — works with any token regardless of read/write scope. |
 | `write_docs`   | Free     | Commit one or more markdown files to the workspace's docs repo in a single atomic git commit. Requires a token authorized with **read-write** scope — a read-only token is refused. |
 
 For deeper local graph navigation (outline, fuzzy headings, link references, resolve links) while an agent has your docs checked out on disk, use [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) instead — run `npx markdown-lsp <subcommand> ./docs` to expose LSP-style `doc_*` tools on the working tree. See the [markdown-lsp README](https://github.com/Docsbook-io/markdown-lsp) for setup. `search_docs`/`write_docs` and `markdown-lsp` are complementary: the former work over the hosted MCP connection with no local checkout, the latter needs the repo on disk.

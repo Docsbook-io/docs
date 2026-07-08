@@ -53,6 +53,7 @@ Docsbook's MCP server exposes ~40 tools across these categories:
 | Category | Examples |
 |---|---|
 | Workspace | `list_workspaces`, `get_workspace`, `create_workspace` |
+| Content and documentation | `search_docs`, `get_doc_outline`, `write_docs` |
 | Branding | `update_branding`, `update_ui_settings`, `update_navigation` |
 | AI settings | `update_ai_settings`, `set_chat_system_prompt`, `set_chat_hooks` |
 | SEO and domain | `update_seo`, `update_domain` |
@@ -73,7 +74,7 @@ Cursor uses the same MCP server with similar UX. ChatGPT and Gemini are adding H
 
 ## LSP-style tools are the underrated half (local plugin, not hosted MCP)
 
-Most docs MCP marketing focuses on read/write. The bigger value for agents is the LSP-style search and navigation surface — but for a working repo, that surface is better delivered as a **local Claude Code plugin** than as a hosted MCP tool. Disk-local parsing is faster, cheaper, and doesn't require the docs to be published yet.
+Most docs MCP marketing focuses on read/write — in Docsbook's case, `search_docs` to find citable sections, `get_doc_outline` to see every page's title, heading count, and size before searching or writing, and `write_docs` to commit changes (gated by OAuth consent: the customer picks read-only or read-write scope when authorizing the connection). The bigger value for agents is the LSP-style search and navigation surface — but for a working repo, that surface is better delivered as a **local Claude Code plugin** than as a hosted MCP tool. Disk-local parsing is faster, cheaper, and doesn't require the docs to be published yet.
 
 Docsbook ships this via [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) — run it locally and the agent gains:
 
