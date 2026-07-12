@@ -5,6 +5,12 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 12.07.2026
+
+### Fixed
+
+- Navigation link button color picker restored in workspace settings — links with a saved color could no longer be recolored or reset to a plain text link. `Navigation`
+
 ## NEW - 06.07.2026
 
 ### Added
