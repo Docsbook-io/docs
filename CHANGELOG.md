@@ -5,6 +5,25 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 14.07.2026
+
+### Added
+
+- Hosted demo sites now reachable directly on `docsbook.io/<name>` (e.g. `docsbook.io/host4-ai-demo`), no subdomain needed. `Routing`
+- Partner demo workspaces — a temporary Pro trial can be granted and handed off to the client via a one-click claim link that transfers ownership. `Workspace`
+- `MCP Server` card in the `Integrations` tab — copy your workspace's MCP endpoint alongside the API key. `Integrations`
+
+### Improved
+
+- Redesigned social-media preview cards for doc pages — cleaner editorial layout with your logo, accent color, and page title. `Social Preview`
+
+### Fixed
+
+- Per-page social preview images on client doc sites, previously broken (404) on every page except the repo root. `Social Preview`
+- Workspace subdomain `sitemap.xml` crashing instead of listing pages. `SEO`
+- Favicon not loading on some subdomains (`docs.*`, alias subdomains). `Branding`
+- Account switcher dropdown in settings sidebar was too narrow, squeezing org names and links. `Navigation`
+
 ## NEW - 12.07.2026
 
 ### Fixed

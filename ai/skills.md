@@ -64,7 +64,7 @@ The tool returns matching SKILL.md entries with a `raw_url` field. The agent fet
 
 ## Catalog page
 
-Browse and filter the full catalog at [docsbook.io/skills](https://docsbook.io/skills). Each skill has a detail page with installation snippets and the rendered SKILL.md body.
+Browse the full catalog at [docsbook.io/skills](https://docsbook.io/skills), with install snippets and prompts for each skill.
 
 ## Pricing
 

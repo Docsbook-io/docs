@@ -155,10 +155,6 @@ Each tool declares a minimum plan. The server returns a structured error when a 
 | PRO+ | + page journeys, top visitors + visitor activity drill-down, `query_events` |
 | Business | + custom domain, webhooks, bring-your-own AI/translation API key |
 
-## Learn more
-
-The full product page lives at [docsbook.io/mcp](https://docsbook.io/mcp), with an interactive install selector for Claude Code, Cursor, Codex, Windsurf, Cline, Gemini CLI, GitHub Copilot, and ChatGPT.
-
 ## Related
 
 - [Chat Hooks](./chat-hooks.md) — Configure pre/post-LLM hooks via MCP.
