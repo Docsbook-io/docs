@@ -13,7 +13,7 @@ Give readers easy ways to copy your documentation content.
 |---|---|
 | Copy page button | Adds a "Copy page" button — copies the full page as markdown |
 | Copy markdown | Shows a markdown copy option on code blocks |
-| AI client shortcuts | Shows/hides the ChatGPT, Claude, Cursor, Windsurf and VS Code MCP links in the Copy page dropdown |
+| Copy page menu items | Seven independent toggles — Copy Skills.md URL, View as Markdown, and one per AI client (ChatGPT, Claude, Cursor, Windsurf, VS Code MCP) — for what appears in the Copy page dropdown |
 
 ## How to Enable
 
@@ -35,13 +35,13 @@ Adds a button (usually near the top of the page) that copies the entire page con
 
 ---
 
-## AI Client Shortcuts
+## Copy Page Menu
 
-The "Copy page" button expands into a dropdown with more options: Copy page, Copy skills URL, View as Markdown, and — by default — a set of one-click links that open the page directly in an AI client: **ChatGPT**, **Claude**, **Cursor**, **Windsurf**, and **Connect via VS Code MCP**.
+The "Copy page" button expands into a dropdown with more options: Copy page, Copy Skills.md URL, View as Markdown, and — by default — a set of one-click links that open the page directly in an AI client: **ChatGPT**, **Claude**, **Cursor**, **Windsurf**, and **Connect via VS Code MCP**.
 
-If you'd rather keep the dropdown focused on plain copy actions, turn off **AI client shortcuts** — this hides the ChatGPT/Claude/Cursor/Windsurf/VS Code MCP links and leaves Copy page, Copy skills URL, and View as Markdown in place.
+Each of those seven items has its own toggle, so you can keep exactly the ones you want and hide the rest — e.g. keep the plain copy actions but drop just Windsurf, or keep only the base "Copy page" button and turn everything else off. The dropdown's chevron hides itself automatically once every item is off, since there'd be nothing left to open.
 
-**Enabled by default.** Toggle it in Float Widget → **Design** → **Content** tab, under "Reading aids."
+**All enabled by default.** Toggle them individually in Float Widget → **Design** → **Content** tab, on the "Copy page menu" card.
 
 ---
 

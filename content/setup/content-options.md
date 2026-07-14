@@ -16,7 +16,7 @@ Control the UI elements that appear around your page content.
 | Breadcrumbs | Breadcrumb trail above the page title |
 | Ask AI button | "Ask AI" button shown on the page |
 | Ask AI in outline | AI button shown in the right-side table of contents panel |
-| AI client shortcuts | Shows/hides ChatGPT, Claude, Cursor, Windsurf and VS Code MCP links in the Copy page dropdown |
+| Copy page menu items | Seven independent toggles for the Copy page dropdown — Skills.md URL, view as Markdown, and one per AI client (ChatGPT, Claude, Cursor, Windsurf, VS Code MCP) |
 
 ## How to Configure
 
@@ -55,11 +55,11 @@ Home > Guides > Custom Domain
 
 ---
 
-## AI Client Shortcuts
+## Copy Page Menu
 
-The Copy page dropdown includes one-click links that open the current page directly in ChatGPT, Claude, Cursor, Windsurf, or via VS Code MCP. Turn off **AI client shortcuts** to hide these links and keep the dropdown to plain copy/markdown actions only.
+The Copy page dropdown includes Copy Skills.md URL, View as Markdown, and one-click links that open the current page directly in ChatGPT, Claude, Cursor, Windsurf, or via VS Code MCP — seven items in total, each with its own toggle. Turn off any subset to keep the dropdown focused on just the items you want; once every item is off, the dropdown's chevron disappears entirely.
 
-[More about the Copy page dropdown →](../features/copy#ai-client-shortcuts)
+[More about the Copy page dropdown →](../features/copy#copy-page-menu)
 
 ---
 

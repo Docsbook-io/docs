@@ -13,7 +13,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Partner demo workspaces — a temporary Pro trial can be granted and handed off to the client via a one-click claim link that transfers ownership. `Workspace`
 - `MCP Server` card in the `Integrations` tab — copy your workspace's MCP endpoint alongside the API key. `Integrations`
 - `Header Layout` card — pick a preset arrangement (Classic, Search-centric, Split, Centered, Minimal) for the header's theme toggle, search, Ask AI, and nav links; independent of which blocks are shown. `Header`
-- Toggle to show or hide the AI client shortcuts (ChatGPT, Claude, Cursor, Windsurf, VS Code MCP) in the `Copy page` dropdown. `Content`
+- `Copy page menu` card — independent toggles for each item in the `Copy page` dropdown (Skills.md URL, view as Markdown, and shortcuts for ChatGPT, Claude, Cursor, Windsurf, VS Code MCP). `Content`
 
 ### Improved
 
