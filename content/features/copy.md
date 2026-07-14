@@ -13,6 +13,7 @@ Give readers easy ways to copy your documentation content.
 |---|---|
 | Copy page button | Adds a "Copy page" button — copies the full page as markdown |
 | Copy markdown | Shows a markdown copy option on code blocks |
+| AI client shortcuts | Shows/hides the ChatGPT, Claude, Cursor, Windsurf and VS Code MCP links in the Copy page dropdown |
 
 ## How to Enable
 
@@ -31,6 +32,16 @@ Adds a button (usually near the top of the page) that copies the entire page con
 - Readers who want to paste page content into an AI prompt (e.g., ChatGPT, Claude) for further analysis.
 - Teams that want to quickly copy documentation into internal tools.
 - Technical writers who reference your docs while writing their own.
+
+---
+
+## AI Client Shortcuts
+
+The "Copy page" button expands into a dropdown with more options: Copy page, Copy skills URL, View as Markdown, and — by default — a set of one-click links that open the page directly in an AI client: **ChatGPT**, **Claude**, **Cursor**, **Windsurf**, and **Connect via VS Code MCP**.
+
+If you'd rather keep the dropdown focused on plain copy actions, turn off **AI client shortcuts** — this hides the ChatGPT/Claude/Cursor/Windsurf/VS Code MCP links and leaves Copy page, Copy skills URL, and View as Markdown in place.
+
+**Enabled by default.** Toggle it in Float Widget → **Design** → **Content** tab, under "Reading aids."
 
 ---
 

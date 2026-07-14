@@ -12,6 +12,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Hosted demo sites now reachable directly on `docsbook.io/<name>` (e.g. `docsbook.io/host4-ai-demo`), no subdomain needed. `Routing`
 - Partner demo workspaces — a temporary Pro trial can be granted and handed off to the client via a one-click claim link that transfers ownership. `Workspace`
 - `MCP Server` card in the `Integrations` tab — copy your workspace's MCP endpoint alongside the API key. `Integrations`
+- `Header Layout` card — pick a preset arrangement (Classic, Search-centric, Split, Centered, Minimal) for the header's theme toggle, search, Ask AI, and nav links; independent of which blocks are shown. `Header`
+- Toggle to show or hide the AI client shortcuts (ChatGPT, Claude, Cursor, Windsurf, VS Code MCP) in the `Copy page` dropdown. `Content`
 
 ### Improved
 
@@ -23,6 +25,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Workspace subdomain `sitemap.xml` crashing instead of listing pages. `SEO`
 - Favicon not loading on some subdomains (`docs.*`, alias subdomains). `Branding`
 - Account switcher dropdown in settings sidebar was too narrow, squeezing org names and links. `Navigation`
+- "Ask AI" bubble on text selection now flips below the selection instead of overlapping it when there's no room above. `AI Chat`
 
 ## NEW - 12.07.2026
 

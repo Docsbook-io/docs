@@ -11,6 +11,7 @@ Control what appears in the top navigation bar of your documentation site.
 
 | Setting | What it does |
 |---|---|
+| Header layout preset | Arranges header blocks (theme, search, Ask AI, nav links) into one of 5 presets |
 | Show header | Show or hide the entire top navigation bar |
 | Header links | Custom text links in the header nav |
 | Social links | Icon links for GitHub, Twitter, Discord |
@@ -24,6 +25,24 @@ Control what appears in the top navigation bar of your documentation site.
 2. Float Widget → **Design** → **Header** tab.
 3. Fill in fields and toggle options.
 4. Save.
+
+---
+
+## Header Layout Presets
+
+The **Header Layout** card is the first card in the Header tab. It picks a preset arrangement for the blocks in your top navigation — theme toggle, search, Ask AI, and nav links — without changing which blocks are shown.
+
+| Preset | Arrangement | Best for |
+|---|---|---|
+| **Classic** (default) | Theme, Ask AI and search grouped on the right | Universal default — works for most docs sites |
+| **Search-centric** | Wide search bar centered in the header | Content-heavy docs where search leads |
+| **Split** | Nav links right after the logo, utilities pinned right | Stripe/Tailwind-docs style |
+| **Centered** | Logo left, nav links centered, utilities right | Landing-page style with 3–5 links |
+| **Minimal** | Ask AI and search shown as bare icons | Maximum room for nav links and social icons |
+
+Click a preset to apply it — one click sets all five underlying placement fields at once (theme side, search width, icon-only Ask AI, icon-only search, nav link position).
+
+**Layout ≠ visibility.** A preset only controls *where* a block sits, never *whether* it's shown. If you turn off a block using its own toggle (for example, **Theme toggle in header**), that block disappears and the rest of the header keeps following the same preset — the remaining blocks don't shift into its place or change arrangement.
 
 ---
 
@@ -58,6 +77,8 @@ Social links appear as small icons in the header. They help readers find your co
 ## Theme & Language in Header
 
 You can place the theme toggle and language switcher in the header instead of (or in addition to) the sidebar.
+
+For finer control over *where in the header* the theme toggle and search sit relative to nav links, see [Header Layout Presets](#header-layout-presets) above.
 
 **Recommendation:** Pick one location for each control to avoid duplication.
 

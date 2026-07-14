@@ -16,6 +16,7 @@ Control the UI elements that appear around your page content.
 | Breadcrumbs | Breadcrumb trail above the page title |
 | Ask AI button | "Ask AI" button shown on the page |
 | Ask AI in outline | AI button shown in the right-side table of contents panel |
+| AI client shortcuts | Shows/hides ChatGPT, Claude, Cursor, Windsurf and VS Code MCP links in the Copy page dropdown |
 
 ## How to Configure
 
@@ -51,6 +52,14 @@ Home > Guides > Custom Domain
 ```
 
 [More about breadcrumbs in sidebar settings →](../../design/layout/sidebar)
+
+---
+
+## AI Client Shortcuts
+
+The Copy page dropdown includes one-click links that open the current page directly in ChatGPT, Claude, Cursor, Windsurf, or via VS Code MCP. Turn off **AI client shortcuts** to hide these links and keep the dropdown to plain copy/markdown actions only.
+
+[More about the Copy page dropdown →](../features/copy#ai-client-shortcuts)
 
 ---
 
