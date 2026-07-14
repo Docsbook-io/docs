@@ -18,6 +18,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Improved
 
 - Redesigned social-media preview cards for doc pages — cleaner editorial layout with your logo, accent color, and page title. `Social Preview`
+- "Create docs from a website" now generates a foldered 8-page site (features, guides, use-cases, FAQ) instead of 5 flat pages — a stronger starting point and a real FAQ page for AI-answer citability. `AI Chat`
 
 ### Fixed
 
