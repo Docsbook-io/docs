@@ -5,6 +5,27 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 17.07.2026
+
+### Added
+
+- `GitBook` and `Mintlify` comparison pages with a feature-by-feature table and FAQ. `Marketing`
+- `/pricing.md` — a plain-markdown pricing page for AI agents to read directly. `Pricing`
+- Plan badge in the chat input footer shows your current plan and remaining free credits. `AI Chat`
+
+### Improved
+
+- Doc page titles are now derived from the page's own H1 heading instead of its filename. `SEO`
+- Sitemap no longer collapses nested `README` pages onto the repo-root URL. `SEO`
+
+### Fixed
+
+- Internal links that pointed at a blocked documentation path now resolve to the canonical `/docs/*` URL. `SEO`
+- A doc URL with different letter casing than the source file now redirects to the canonical URL instead of 404ing. `SEO`
+- Section breadcrumbs now link to that section's own landing page instead of an arbitrary first page. `Navigation`
+- Decorative background animation on the homepage no longer leaves placeholder text in the page source. `SEO`
+- Sign-in link now shows the correct "Welcome back" or "Sign up" heading based on intent. `Auth`
+
 ## NEW - 14.07.2026
 
 ### Added

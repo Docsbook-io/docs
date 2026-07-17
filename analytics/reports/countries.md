@@ -49,7 +49,7 @@ For example: if you have Russian enabled, this section shows that Russian-langua
 - Discover unexpected markets (e.g., French speakers outside France).
 
 > Requires at least one translation language to be enabled.
-> [Set up translations →](https://docsbook.io/Docsbook-io/docs/translation/settings)
+> [Set up translations →](https://docsbook.io/docs/translation/settings)
 
 ---
 
