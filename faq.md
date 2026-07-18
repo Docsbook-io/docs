@@ -15,7 +15,7 @@ A: Docsbook transforms your GitHub documentation into a published site in 5 seco
 
 **Q: Do I need to pay to get started?**
 
-A: No. The Free plan ($0) includes unlimited public repositories, GitHub sync, and full design customization. Pro (monthly, 7-day free trial) adds AI chat, translations, and SEO. Business (monthly, 14-day free trial) includes everything in Pro plus custom domain, white-label, webhooks, bring-your-own API keys, and higher usage limits.
+A: No. The Free plan ($0) includes unlimited public repositories, GitHub sync, full design customization, reader-facing AI chat (on a smaller monthly token budget), and full SEO / GEO / AEO. Pro (monthly, 7-day free trial) adds translations, advanced AI chat configuration (custom prompt, hooks, Source of Truth), search analytics, and a larger AI token budget. Business (monthly, 14-day free trial) includes everything in Pro plus custom domain, white-label, webhooks, bring-your-own API keys, and higher usage limits.
 
 ---
 
@@ -252,7 +252,7 @@ What carries over automatically: page structure, internal links (relative `.md` 
 
 What you'll redo: branding (colors, logo, fonts — 5 minutes in the Float Widget), navigation (header links, social links), AI chat suggested questions.
 
-Pricing: GitBook starts at ~$8/user/month and scales fast with team size. Docsbook is **flat $59/month per workspace** for Pro (AI chat, translations, SEO), or $149/month for Business (adds custom domain, white-label, webhooks) — regardless of team size. Most teams save $200+/month switching. See the full comparison: [GitBook vs Docsbook](./blog/docusaurus-vs-docsbook.md).
+Pricing: GitBook starts at ~$8/user/month and scales fast with team size. Docsbook is **flat $59/month per workspace** for Pro (translations, larger AI budget, advanced AI chat config — AI chat and SEO are already free), or $149/month for Business (adds custom domain, white-label, webhooks) — regardless of team size. Most teams save $200+/month switching. See the full comparison: [GitBook vs Docsbook](./blog/docusaurus-vs-docsbook.md).
 
 Stuck? Email [support@docsbook.io](mailto:support@docsbook.io) — we help with migrations for free.
 

@@ -157,18 +157,19 @@ Docsbook **does not use webhooks**. Instead:
 - ✅ Customizable design (brand, themes, fonts)
 - ✅ Mobile-friendly
 - ✅ Basic analytics (last 24h)
+- ✅ AI chat (smaller monthly token budget)
+- ✅ Full SEO / GEO / AEO (sitemap, OpenGraph, JSON-LD)
 - ❌ Custom domain
-- ❌ AI chat
 - ❌ AI translations
-- ❌ Full SEO
 
 ### Pro (monthly, 7-day free trial)
 
 Everything in Free, plus:
 
-- ✅ AI chat
 - ✅ AI translations (15 languages)
-- ✅ Full SEO (sitemap, OpenGraph, JSON-LD)
+- ✅ Advanced AI chat config (custom system prompt, chat hooks, MCP Source of Truth)
+- ✅ Larger AI token budget than Free
+- ✅ Search & feedback analytics
 - ✅ Analytics for 7 / 14 / 30 days
 - ✅ Priority support
 - ❌ Custom domain, white-label, webhooks, bring-your-own API key (Business only — see below)

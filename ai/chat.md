@@ -41,11 +41,13 @@ Bring your own API key from the workspace settings **(Business plan)** — this 
 
 ## Limits
 
+AI chat runs on **every plan**. Plans differ by the monthly AI **token budget**, not by a feature switch.
+
 | Plan | AI chat |
 |---|---|
-| Free | Disabled |
-| Pro | Included |
-| Business | Included, higher monthly limit than Pro |
+| Free | Included — smaller monthly token budget |
+| Pro | Included — larger monthly token budget |
+| Business | Included — largest budget; can bring your own API key & model |
 
 ## Why it matters
 
@@ -53,7 +55,7 @@ Teams using Docsbook AI Chat deflect **847 support tickets per month on average*
 
 ## Pricing
 
-AI Chat requires the **Pro** plan (monthly, 7-day free trial) or **Business** (monthly, 14-day free trial, higher limit).
+AI Chat is available on **all plans**, including Free — it's limited by the monthly AI token budget, which grows on **Pro** (monthly, 7-day free trial) and **Business** (monthly, 14-day free trial, largest budget). Business can additionally bring its own provider API key and model.
 
 ## Related
 

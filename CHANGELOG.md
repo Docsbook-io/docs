@@ -5,6 +5,23 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 18.07.2026
+
+### Added
+
+- Guided setup after sign-up: a short questionnaire asks whether you have a site, a GitHub repo, or just an idea, then takes you straight to your docs or starts generating them. `Onboarding`
+- A live demo gallery on the homepage lets you page through real generated docs before signing up. `Marketing`
+
+### Changed
+
+- AI chat is now available on every plan, including Free — plans differ by the monthly AI token budget, not by a feature switch. `AI Chat`
+- SEO, GEO, and AEO optimization now apply to docs on every plan, no longer Pro-only. `SEO`
+- The chat now shows an upgrade prompt in place of the plan badge when you approach your limit. `AI Chat`
+
+### Fixed
+
+- Monthly AI token budgets now reset correctly at the start of each billing period. `Billing`
+
 ## NEW - 17.07.2026
 
 ### Added

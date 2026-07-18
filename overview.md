@@ -50,9 +50,9 @@ In one sentence: **GitHub repo → Beautiful docs + AI chat + SEO + analytics in
                    │ Static HTML + CDN
                    ▼
 ┌─────────────────────────────────────────────────────────────┐
-│  AI-Powered Features (Pro / Business)                          │
-│  ├─ AI chatbot trained on your docs                          │
-│  ├─ 15-language automatic translations                       │
+│  AI-Powered Features                                           │
+│  ├─ AI chatbot trained on your docs (all plans)              │
+│  ├─ 15-language automatic translations (Pro / Business)      │
 │  ├─ Source of Truth graph for agents                         │
 │  └─ Analytics + webhooks for integrations                    │
 └─────────────────────────────────────────────────────────────┘
@@ -70,8 +70,8 @@ A **workspace** = one documentation site. You can create unlimited workspaces fr
 ### Plans
 | Plan | Cost | What You Get |
 |---|---|---|
-| **Free** | $0 | Unlimited docs, branding, basic UI controls, analytics (24h) |
-| **Pro** | monthly, 7-day free trial | AI chat, translations, SEO, AEO, GEO, Source of Truth graph |
+| **Free** | $0 | Unlimited docs, branding, basic UI controls, analytics (24h), AI chat (smaller token budget), SEO / AEO / GEO |
+| **Pro** | monthly, 7-day free trial | Translations, advanced AI chat config (custom prompt, hooks, Source of Truth graph), search & feedback analytics, larger AI token budget |
 | **Business** | monthly, 14-day free trial | Everything in Pro, plus custom domain, white-label, webhooks (25), bring-your-own API key, and higher AI chat / translation limits |
 
 All plans: **unlimited repositories, forever.**
@@ -90,9 +90,10 @@ All plans: **unlimited repositories, forever.**
 - Mobile-responsive design
 - Show/hide UI elements (search, breadcrumbs, feedback, prev/next buttons)
 
-### 🤖 AI Features (Pro / Business)
-- **AI Chatbot** — answers questions based on your documentation
-- **Source of Truth graph** — structured data about your docs (for AI agents)
+### 🤖 AI Features
+- **AI Chatbot** — answers questions based on your documentation (every plan, token-budget limited; Pro/Business get larger budgets)
+- **Source of Truth graph** — structured data about your docs, for AI agents (Pro / Business)
+- **Custom AI chat config** — system prompt, chat hooks (Pro / Business)
 - **LSP-style tools** — semantic search, link resolution, outline navigation
 
 ### 🌍 Translation & Localization (Pro / Business)
@@ -113,7 +114,7 @@ All plans: **unlimited repositories, forever.**
 - **MCP server** — control Docsbook from Claude Code, Cursor, ChatGPT
 - **GitHub integration** — "Edit on GitHub" links on every page
 
-### 🔍 Search Engine Optimization (PRO)
+### 🔍 Search Engine Optimization (all plans)
 - **SEO** — meta tags, sitemap.xml, JSON-LD schema, OpenGraph
 - **GEO** — TL;DR blocks, publication date, author attribution for AI search engines (Perplexity, ChatGPT Search, Google AI Overviews)
 - **AEO** — FAQ markup, HowTo schema, voice assistant optimization

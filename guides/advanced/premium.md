@@ -1,11 +1,11 @@
 ---
 title: "Pro and Business Plans Overview"
-description: "What Docsbook Pro and Business unlock — Pro adds AI chat, translations, and SEO; Business adds custom domain, white-label, webhooks, and bring-your-own API keys on top, plus higher usage limits."
+description: "What Docsbook Pro and Business unlock — AI chat and SEO run on every plan; Pro adds translations, advanced AI chat config, and a larger token budget; Business adds custom domain, white-label, webhooks, and bring-your-own API keys on top, plus higher usage limits."
 ---
 
 # Pro and Business Plans
 
-Docsbook has three plans. Free is free forever. Pro is a monthly subscription that adds AI chat, translations, and SEO. Business is a separate, higher tier: it includes everything in Pro plus a set of Business-exclusive capabilities — custom domain, white-label, webhooks, and bring-your-own API keys (for both AI chat and translations) — on top of higher usage limits.
+Docsbook has three plans. Free is free forever — and it already includes reader-facing AI chat (on a smaller monthly token budget) and full SEO / GEO / AEO. Pro is a monthly subscription that adds translations, advanced AI chat configuration (custom system prompt, chat hooks, MCP Source of Truth), search & feedback analytics, and a much larger AI token budget. Business is a separate, higher tier: it includes everything in Pro plus a set of Business-exclusive capabilities — custom domain, white-label, webhooks, and bring-your-own API keys (for both AI chat and translations) — on top of higher usage limits.
 
 ## Plan Comparison
 
@@ -15,22 +15,28 @@ Docsbook has three plans. Free is free forever. Pro is a monthly subscription th
 | GitHub sync | ✅ | ✅ | ✅ |
 | Branding & themes | ✅ | ✅ | ✅ |
 | Custom domain | ❌ | ❌ | ✅ |
-| AI chat | ❌ | ✅ | ✅ higher limit |
+| AI chat | ✅ smaller token budget | ✅ | ✅ higher limit |
 | AI translations (15 languages) | ❌ | ✅ | ✅ higher limit |
-| Full SEO (sitemap, OG, JSON-LD) | ❌ | ✅ | ✅ |
+| Full SEO / GEO / AEO (sitemap, OG, JSON-LD) | ✅ | ✅ | ✅ |
 | Analytics period | 24h | 30 days | 30 days |
 | Hide "Powered by Docsbook" | ❌ | ❌ | ✅ |
 | Bring your own AI/translation API key | ❌ | ❌ | ✅ |
 | Webhooks | 0 | 0 | 25 |
 | Free trial | — | 7 days | 14 days |
 
-## What PRO Includes
+## On Every Plan (including Free)
 
-### 1. AI Chat
+### AI Chat
 
-A chatbot trained on your documentation. Business includes a higher monthly request limit than Pro. Bringing your own provider and API key (OpenRouter, OpenAI, Gemini, Anthropic) — with a custom model of your choice — is a **Business-only** capability; see [Business-Only Features](#business-only-features) below.
+A chatbot trained on your documentation runs on **every plan**, Free included. Plans differ by the monthly **AI token budget**, not by a feature switch — Free gets a smaller budget, Pro and Business progressively larger ones. Business includes a higher budget than Pro. Bringing your own provider and API key (OpenRouter, OpenAI, Gemini, Anthropic) — with a custom model of your choice — is a **Business-only** capability; see [Business-Only Features](#business-only-features) below.
 
-### 2. Automatic Translation
+### SEO / GEO / AEO
+
+Meta tags, sitemap.xml, OpenGraph, Twitter cards, JSON-LD (WebSite, Organization, FAQ), canonical URLs — available on **every plan**, Free included. Each language version is indexed separately.
+
+## What PRO Adds
+
+### 1. Automatic Translation
 
 Translate to **15 languages**: English, Spanish, French, German, Portuguese, Italian, Russian, Chinese, Japanese, Korean, Arabic, Hindi, Turkish, Polish, Dutch.
 
@@ -38,13 +44,17 @@ Business includes a higher monthly translation limit than Pro.
 
 **How to set up:** [Translation Guide](./translation.md)
 
-### 3. SEO
+### 2. Advanced AI Chat Configuration
 
-Meta tags, sitemap.xml, OpenGraph, Twitter cards, JSON-LD (WebSite, Organization, FAQ), canonical URLs. Each language version is indexed separately.
+Custom AI chat system prompt, chat hooks (pre / post / streaming), the MCP Source of Truth indexing graph, and the AI chat analysis dashboard.
+
+### 3. Larger AI Token Budget
+
+Pro raises the monthly AI token budget well above the Free allowance; Business raises it further.
 
 ### 4. Extended Analytics
 
-Free shows the last 24 hours. Pro and Business show 7 / 14 / 30 days of views, visitors, top pages, referrers, and search queries.
+Free shows the last 24 hours. Pro and Business show 7 / 14 / 30 days of views, visitors, top pages, referrers, and search queries — plus search & feedback analytics.
 
 ## Business-Only Features
 
@@ -88,7 +98,7 @@ Full refund within the first 30 days. Email support@docsbook.io.
 2. **Workspace plan upgrades** ✅ (Free → PRO or PRO+)
 3. **All features available immediately** ✅
 
-You'll see a **Pro** or **Business** label in the Float Widget. New options open in Settings — AI chat and languages on Pro; custom domain, white-label, webhooks, and bring-your-own API keys additionally on Business.
+You'll see a **Pro** or **Business** label in the Float Widget. New options open in Settings — translations, advanced AI chat config (custom prompt, hooks, Source of Truth), and a larger token budget on Pro; custom domain, white-label, webhooks, and bring-your-own API keys additionally on Business.
 
 ## FAQ
 

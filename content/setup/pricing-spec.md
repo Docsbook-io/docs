@@ -11,7 +11,9 @@ Docsbook has three plans. All plans cover unlimited public GitHub repositories.
 
 - $0 forever
 - All basic features: branding, UI settings, navigation, basic analytics
-- No AI chatbot, no translations, no custom domain
+- Reader-facing AI chat (smaller monthly token budget)
+- SEO / GEO / AEO tools — meta tags, sitemap, OpenGraph, JSON-LD
+- No translations, no custom domain
 
 ## Pro
 
@@ -19,10 +21,10 @@ Monthly subscription, 7-day free trial. Best for solo founders, indie devs, and 
 
 Everything in Free, plus:
 
-- AI chatbot
 - Auto-translation
-- SEO tools — meta tags, sitemap, OpenGraph, JSON-LD
-- Advanced MCP tools — chat hooks, custom system prompt, translation management, Source of Truth
+- Advanced AI chat config — chat hooks, custom system prompt, MCP Source of Truth, chat analysis dashboard
+- Search & feedback analytics
+- Larger AI token budget than Free
 - Webhooks — none (see Business)
 
 ## Business
@@ -41,8 +43,9 @@ Monthly subscription, 14-day free trial. Everything in Pro, plus a set of Busine
 | Feature                | Free | Pro          | Business     |
 | ---------------------- | ---- | ------------ | ------------ |
 | GitHub repositories    | ∞    | ∞            | ∞            |
+| AI chat (reader-facing)| ✅    | ✅            | ✅            |
 | Custom domain          | ❌    | ❌            | ✅            |
-| SEO                    | ❌    | ✅            | ✅            |
+| SEO / GEO / AEO        | ✅    | ✅            | ✅            |
 | White-label            | ❌    | ❌            | ✅            |
 | Bring your own API key | ❌    | ❌            | ✅            |
 | Webhooks               | 0    | 0            | 25           |
