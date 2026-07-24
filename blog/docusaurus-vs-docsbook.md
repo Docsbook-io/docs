@@ -17,7 +17,7 @@ This guide is the honest one. We make Docsbook, so it shows up first — but eve
 
 | Platform | Best for | Setup | Pricing (2026) | AI chat | Multi-language | Hosting |
 |---|---|---|---|---|---|---|
-| **Docsbook** | Indie hackers, startups, OSS that wants a site today | 5 seconds | $0 / $59 mo (Pro) / $149 mo (Business) | Built-in | 15 languages | Managed |
+| **Docsbook** | Indie hackers, startups, OSS that wants a site today | 5 seconds | $0 / $59 mo (Pro) / $159 mo (Business) | Built-in | 15 languages | Managed |
 | **Mintlify** | YC-stage API products | 30 min + `mint.json` | From $150/mo | Built-in | Limited | Managed |
 | **GitBook** | Mid-market and enterprise teams | Hours | ~$200/mo per editor | Built-in | Add-on | Managed |
 | **ReadMe.io** | API-reference-heavy products | Hours | From ~$99/mo | Built-in | Add-on | Managed |
@@ -69,9 +69,9 @@ If any of those sentences made you sigh, you are the audience for this guide.
 - 5-second setup, zero config
 - AI chat trained on your docs, included in PRO
 - AI translation to 15 languages, each indexed separately in Google
-- MCP server with ~40 tools — Claude Code and Cursor can configure your docs directly
+- MCP server with 61 tools — Claude Code and Cursor can configure your docs directly
 - `llms.txt` and `llms-full.txt` generated automatically
-- Pro at $59/mo for AI chat and translations, Business at $149/mo for custom domain, white-label, webhooks, and higher limits
+- Pro at $59/mo for AI chat and translations, Business at $159/mo for custom domain, white-label, webhooks, and higher limits
 - Source data stays in your GitHub repo — no vendor lock-in
 
 **Cons**
@@ -84,7 +84,7 @@ If any of those sentences made you sigh, you are the audience for this guide.
 
 - Free forever for unlimited public repos with branding, UI, navigation
 - Pro $59/mo — AI chat, translations, SEO, longer analytics, Source-of-Truth graph, MCP write tools
-- Business $149/mo — everything in Pro, plus custom domain, white-label, webhooks, bring-your-own API keys, and higher AI/translation limits
+- Business $159/mo — everything in Pro, plus custom domain, white-label, webhooks, bring-your-own API keys, and higher AI/translation limits
 
 **Migrating from Docusaurus**
 

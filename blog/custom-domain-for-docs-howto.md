@@ -136,14 +136,14 @@ The user-visible experience should not change beyond the URL.
 
 | Platform | Custom domain on free | Custom domain on paid |
 |---|---|---|
-| **Docsbook** | No | Business ($149/mo) |
+| **Docsbook** | No | Business ($159/mo) |
 | **Mintlify** | No | Yes ($150+/mo) |
 | **GitBook** | No | Yes (paid plan, per editor) |
 | **ReadMe** | No | Yes ($99+/mo) |
 | **GitHub Pages** | Yes | Yes |
 | **Vercel/Netlify** | Yes (50/account on Vercel free) | Yes |
 
-For managed docs platforms, custom domain is a paid feature. Docsbook Business at $149/mo is the cheapest option in the comparable set.
+For managed docs platforms, custom domain is a paid feature. Docsbook Business at $159/mo is the cheapest option in the comparable set.
 
 ## Common mistakes
 
@@ -160,4 +160,4 @@ For managed docs platforms, custom domain is a paid feature. Docsbook Business a
 
 ---
 
-Docsbook supports `docs.yourcompany.com` with free SSL on Business ($149/mo). [See pricing →](https://docsbook.io)
+Docsbook supports `docs.yourcompany.com` with free SSL on Business ($159/mo). [See pricing →](https://docsbook.io)

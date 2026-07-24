@@ -51,7 +51,7 @@ AI models prefer declarative sentences over hedged marketing language. Compare:
 
 versus
 
-> "Docsbook publishes a documentation site from a GitHub repository in five seconds. PRO is $150 one-time. Translations support 15 languages."
+> "Docsbook publishes a documentation site from a GitHub repository in five seconds. PRO is $59/month. Translations support 15 languages."
 
 The second sentence is quotable. The first is filler. Quotable sentences end up in answers; filler does not.
 

@@ -53,9 +53,9 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 ### How much does it cost?
 
-**TL;DR:** Free forever for the basics. Pro is **$59/month** (AI chat, translations, SEO). Business is **$149/month** and adds custom domain, white-label, webhooks, bring-your-own API keys, and higher AI/translation limits.
+**TL;DR:** Free forever for the basics. Pro is **$59/month** (AI chat, translations, SEO). Business is **$159/month** and adds custom domain, white-label, webhooks, bring-your-own API keys, and higher AI/translation limits.
 
-**Long:** Free covers any public GitHub repo, branding, UI controls, navigation, 24h analytics, and base MCP tools. Pro ($59/month) adds AI chat, AI translations (15 languages), full SEO, and longer analytics windows (up to 30 days). Business ($149/month) includes everything in Pro plus a set of Business-exclusive capabilities: custom domain with free SSL, white-label, webhooks, bring-your-own AI/translation API key, and higher usage limits. Per-workspace billing, not per-seat.
+**Long:** Free covers any public GitHub repo, branding, UI controls, navigation, 24h analytics, and base MCP tools. Pro ($59/month) adds AI chat, AI translations (15 languages), full SEO, and longer analytics windows (up to 30 days). Business ($159/month) includes everything in Pro plus a set of Business-exclusive capabilities: custom domain with free SSL, white-label, webhooks, bring-your-own AI/translation API key, and higher usage limits. Per-workspace billing, not per-seat.
 
 ---
 
@@ -69,9 +69,9 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 ### Why is Pro a subscription and not a lifetime deal?
 
-**TL;DR:** We used to sell a one-time lifetime PRO plan; existing lifetime customers are grandfathered. New plans are subscriptions because AI chat, translations, and the MCP server carry ongoing inference and infrastructure cost.
+**TL;DR:** We used to sell a one-time lifetime PRO plan; it's no longer offered to new customers, and existing lifetime customers are grandfathered. Current plans are subscriptions because AI chat, translations, and the MCP server carry ongoing inference and infrastructure cost.
 
-**Long:** Docs are a living product now — the old flat lifetime price didn't scale with how much LLM inference a workspace actually uses. Pro ($59/month) and Business ($149/month) are subscriptions so we can keep AI/translation limits generous and keep shipping. If you bought the original $150 lifetime PRO before the move to subscriptions, you keep your original features forever at no extra cost.
+**Long:** Docs are a living product now — the old flat lifetime price didn't scale with how much LLM inference a workspace actually uses. Pro ($59/month) and Business ($159/month) are subscriptions so we can keep AI/translation limits generous and keep shipping. If you bought the original one-time lifetime PRO before the move to subscriptions, you keep your original features forever at no extra cost — but that plan is retired and isn't sold anymore.
 
 ---
 
@@ -87,7 +87,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 **TL;DR:** Yes — email me (dan@docsbook.io) within 30 days, no questions, full refund through Paddle.
 
-**Long:** Lifetime pricing only works if buyers trust it. If Docsbook turns out not to fit your workflow, I'd rather refund than have an unhappy customer telling people not to use it. Paddle handles the refund mechanics, usually in a couple of business days.
+**Long:** Trust matters more than any single sale. If Docsbook turns out not to fit your workflow, I'd rather refund than have an unhappy customer telling people not to use it. Paddle handles the refund mechanics, usually in a couple of business days.
 
 ---
 
@@ -97,7 +97,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 **TL;DR:** Same outcome (hosted docs site), ~$200/month cheaper, includes AI chat + AI translations in the price, content stays in *your* GitHub repo.
 
-**Long:** GitBook starts at ~$8/user/month and serious teams end up paying $200+/month. AI features, translations, and analytics are paid add-ons. Content lives in GitBook's CMS — to leave, you export. Docsbook is $0 / $59 (Pro, AI + translations) / $149 (Business, adds custom domain, white-label, webhooks) per month, and your Markdown stays in your GitHub repo. The trade-off: GitBook has a richer WYSIWYG editor; we don't have one — you write Markdown.
+**Long:** GitBook starts at ~$8/user/month and serious teams end up paying $200+/month. AI features, translations, and analytics are paid add-ons. Content lives in GitBook's CMS — to leave, you export. Docsbook is $0 / $59 (Pro, AI + translations) / $159 (Business, adds custom domain, white-label, webhooks) per month, and your Markdown stays in your GitHub repo. The trade-off: GitBook has a richer WYSIWYG editor; we don't have one — you write Markdown.
 
 ---
 
@@ -113,7 +113,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 **TL;DR:** Comparable feature set (hosted docs, AI), but Mintlify pushes you toward MDX in their structure. Docsbook reads plain Markdown from any GitHub repo and is generally cheaper.
 
-**Long:** Mintlify is good — well-designed, well-marketed. Where we differ: (1) we work with any public GitHub repo that has Markdown in `README.md` or `docs/`, no project-specific config required; (2) per-workspace pricing, not per-seat, starting at $59/month vs. Mintlify's $150/month entry; (3) we expose a full MCP server with ~40 tools, so AI agents can manage your workspace programmatically (read the doc graph, search by symbol, change branding, etc.). Their core docs experience is more polished out-of-the-box; ours catches up faster the more you customize.
+**Long:** Mintlify is good — well-designed, well-marketed. Where we differ: (1) we work with any public GitHub repo that has Markdown in `README.md` or `docs/`, no project-specific config required; (2) per-workspace pricing, not per-seat, starting at $59/month vs. Mintlify's $150/month entry; (3) we expose a full MCP server with 61 tools, so AI agents can manage your workspace programmatically (read the doc graph, search by symbol, change branding, etc.). Their core docs experience is more polished out-of-the-box; ours catches up faster the more you customize.
 
 ---
 
@@ -221,7 +221,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 ### Is there an MCP server?
 
-**TL;DR:** Yes — full OAuth 2.0 MCP server at `https://docsbook.io/api/mcp/server` with ~40 tools for workspace management, branding, analytics, webhooks, and translations. For doc-graph search use [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) locally, not the hosted MCP.
+**TL;DR:** Yes — full OAuth 2.0 MCP server at `https://docsbook.io/api/mcp/server` with 61 tools for workspace management, branding, analytics, webhooks, and translations. For doc-graph search use [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) locally, not the hosted MCP.
 
 **Long:** Connect the hosted MCP with `claude mcp add --transport http https://docsbook.io/api/mcp/server`. After OAuth, the agent gets tools across workspace management (create, branding, UI), AI chat (system prompt, hooks), translations (approve, upload, delete), analytics (questions, unanswered, failed searches), and webhooks (register, list, replay). For LSP-style doc-graph operations — outline, symbol search, link resolution, references — use [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) locally instead (`npx markdown-lsp <subcommand> ./docs`). It parses the repo on disk, which is faster and cheaper than going over the network.
 
@@ -267,7 +267,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 **TL;DR:** Compare it to what else is out there — GitBook, Mintlify, and Readme.io all start well above that for a comparable feature set. Free covers a real public docs site with no AI needed.
 
-**Long:** I get the reaction at first glance. Compare it to GitBook ($200/mo for a real team), Mintlify ($150/mo+), Readme.io ($99/mo+) — all of which are subscriptions, same as us. Pro at $59/mo covers AI chat, translations, and SEO. Business at $149/mo is for teams that also want a custom domain, white-label, webhooks, or bring-your-own API keys. If you only need a public docs site with branding and no AI, Free is genuinely free forever.
+**Long:** I get the reaction at first glance. Compare it to GitBook ($200/mo for a real team), Mintlify ($150/mo+), Readme.io ($99/mo+) — all of which are subscriptions, same as us. Pro at $59/mo covers AI chat, translations, and SEO. Business at $159/mo is for teams that also want a custom domain, white-label, webhooks, or bring-your-own API keys. If you only need a public docs site with branding and no AI, Free is genuinely free forever.
 
 ---
 

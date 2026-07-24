@@ -42,7 +42,7 @@ Optimize for those later. Pick a platform you can leave when you need to.
 
 ### 1. Docsbook — our pick
 
-[Docsbook](https://docsbook.io) is the platform we built because we wanted this for our other products. 5-second setup from a GitHub repo, AI chat included, translations to 15 languages, $150 lifetime for PRO. Source files stay in GitHub — no vendor lock-in.
+[Docsbook](https://docsbook.io) is the platform we built because we wanted this for our other products. 5-second setup from a GitHub repo, AI chat included, translations to 15 languages, $59/month for PRO. Source files stay in GitHub — no vendor lock-in.
 
 - Best when: you want docs live today, your content lives in markdown
 - Worst when: you need MDX components or deep React-level theme overrides
@@ -52,7 +52,7 @@ Optimize for those later. Pick a platform you can leave when you need to.
 Polished docs platform with strong API reference rendering. $150/month entry.
 
 - Best when: pure API product, comfortable with MDX, can invest in `mint.json` config
-- Worst when: cost-sensitive, multi-language audience, want a lifetime option
+- Worst when: cost-sensitive, multi-language audience
 
 ### 3. GitBook
 
@@ -101,7 +101,7 @@ Astro-based, content-first, fast.
 ```
 Do you have a docs engineer?
 ├── No
-│   ├── Cost-sensitive? ────────────────→ Docsbook (Free or $150 PRO)
+│   ├── Cost-sensitive? ────────────────→ Docsbook (Free or $59/mo PRO)
 │   ├── Pure API product, $150/mo OK? ──→ Mintlify
 │   └── 30+ editors? ───────────────────→ GitBook
 └── Yes

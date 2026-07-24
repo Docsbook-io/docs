@@ -14,7 +14,7 @@ This post explains what MCP is, what tools a docs MCP server exposes, and how Do
 - MCP = standard way for AI agents to call external tools
 - A docs MCP server exposes tools like `get_analytics`, `update_branding`, `set_chat_hooks`
 - Agents discover capabilities, request OAuth, then call tools as part of their work
-- Docsbook ships a managed MCP server at `docsbook.io/api/mcp/server` with ~40 tools
+- Docsbook ships a managed MCP server at `docsbook.io/api/mcp/server` with 61 tools
 - This is now a primary AI distribution channel — Mintlify reports 45% of their docs traffic comes from AI agents, with Claude Code at 25% and Cursor at 18%
 
 ## What MCP actually is
@@ -48,7 +48,7 @@ A user in Claude Code can say "set my docs accent color to brand purple and add 
 
 ## What tools a good docs MCP server exposes
 
-Docsbook's MCP server exposes ~40 tools across these categories:
+Docsbook's MCP server exposes 61 tools across these categories:
 
 | Category | Examples |
 |---|---|
@@ -118,4 +118,4 @@ About 4–6 engineering weeks if you have not done it before. Docsbook PRO+ incl
 
 ---
 
-Docsbook ships a managed MCP server with OAuth and ~40 tools. [Connect from Claude Code →](https://docsbook.io/mcp)
+Docsbook ships a managed MCP server with OAuth and 61 tools. [Connect from Claude Code →](https://docsbook.io/mcp)

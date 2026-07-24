@@ -5,6 +5,22 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 24.07.2026
+
+### Changed
+
+- Business plan price corrected to $159/month everywhere — pricing page, FAQ, and machine-readable `/pricing.md` and `/llms.txt` now agree with the actual checkout price. `Pricing`
+- Webhook registration now requires the Business plan consistently, whether registered via the dashboard or an MCP agent. `Webhooks`
+- MCP tool count claims corrected to the real number across the site and `/llms.txt`. `MCP`
+
+### Removed
+
+- The discontinued one-time lifetime plan is no longer offered anywhere, including in AI chat upgrade prompts. `Billing`
+
+### Fixed
+
+- Failed documentation searches (zero results) are now tracked and queryable via the MCP analytics tools, closing a gap where this data silently went missing. `Analytics`
+
 ## NEW - 18.07.2026
 
 ### Added

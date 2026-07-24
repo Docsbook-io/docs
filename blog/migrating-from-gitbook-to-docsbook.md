@@ -85,7 +85,7 @@ If your repo has `docs/` folder, Docsbook uses it. If your docs live at the root
 
 ## Step 4: Custom domain
 
-PRO+ ($59/month) includes custom domain. PRO ($150 lifetime) also includes custom domain. Free does not.
+Business ($159/month) includes custom domain. Free and Pro do not.
 
 In Docsbook dashboard:
 
@@ -159,7 +159,7 @@ See [llms.txt: the complete guide](./llms-txt-guide.md) for what to expect.
 
 | | GitBook | Docsbook |
 |---|---|---|
-| Cost | ~$200/mo per editor | $0 / $150 lifetime / $59 mo |
+| Cost | ~$200/mo per editor | $0 / $59 mo / $159 mo |
 | AI chat | Add-on | Built-in |
 | AI translation | Not available | 15 languages |
 | MCP server | Not available | Built-in |

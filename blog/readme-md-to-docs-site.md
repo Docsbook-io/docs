@@ -101,7 +101,7 @@ For most OSS projects, Free is fine. Upgrade when you outgrow it.
 
 If you want `docs.yourproject.com` instead of `docsbook.io/yourorg/yourrepo`:
 
-- PRO ($150 lifetime) or PRO+ ($59/month)
+- Business ($159/month)
 - Dashboard → Settings → Domain
 - DNS: CNAME `docs` → `cname.vercel-dns.com`
 - SSL is automatic and free

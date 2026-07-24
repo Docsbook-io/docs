@@ -97,15 +97,15 @@ Let us compare 24-month total cost of ownership for a typical 5-engineer startup
 
 The cost gap is large. The engineering hours are the dominant line item.
 
-### Docsbook PRO (lifetime)
+### Docsbook PRO (subscription)
 
 | Line item | 24-month cost |
 |---|---|
-| PRO lifetime | $150 once |
+| PRO subscription | $59/mo × 24 = $1,416 |
 | Initial setup | 0.5 hours × $100/hr = $50 |
-| **Total** | **$200** + AI chat (200 q/mo), translations (50/mo), custom domain |
+| **Total** | **$1,466** + AI chat (200 q/mo), translations (50/mo) |
 
-This is the indie-hacker math.
+This is the indie-hacker math. (Docsbook previously sold a one-time lifetime PRO plan; it is no longer offered to new customers — existing lifetime purchasers keep their original terms.)
 
 ## When the cost math reverses
 
@@ -144,4 +144,4 @@ GitBook scores poorly on the first (content in their DB), well on the others. Mi
 
 ---
 
-Docsbook is the hybrid: Git source, managed AI/SEO/translations/MCP. PRO at $150 lifetime. [See it on your repo →](https://docsbook.io/start)
+Docsbook is the hybrid: Git source, managed AI/SEO/translations/MCP. PRO at $59/month. [See it on your repo →](https://docsbook.io/start)

@@ -196,7 +196,7 @@ Custom domain, white-label, webhooks, and bring-your-own API keys are **not** in
 
 **Q: What is Business?**
 
-A: A subscription per workspace — **$149/month**, 14-day free trial. Everything in Pro, plus a set of Business-exclusive capabilities:
+A: A subscription per workspace — **$159/month**, 14-day free trial. Everything in Pro, plus a set of Business-exclusive capabilities:
 - Custom domain (`docs.yourcompany.com`) with free SSL
 - White-label (hide "Powered by Docsbook")
 - Webhooks — up to 25 per workspace
@@ -207,7 +207,7 @@ A: A subscription per workspace — **$149/month**, 14-day free trial. Everythin
 
 **Q: How much does it cost?**
 
-A: Free $0 forever. Pro $59/month. Business $149/month. Billed per workspace.
+A: Free $0 forever. Pro $59/month. Business $159/month. Billed per workspace.
 
 ---
 
@@ -234,9 +234,9 @@ A: Yes. **30-day money-back guarantee** on the first payment, no questions asked
 
 **Q: I bought the old PRO lifetime plan. What happens to me?**
 
-A: Grandfathered. If you bought PRO as a one-time $150 lifetime purchase before we moved to subscriptions, your workspace keeps its original features forever at no extra cost — exactly as promised. No downgrade, no surprise bill.
+A: Grandfathered. The one-time lifetime PRO plan is no longer sold to new customers — Pro and Business are subscription-only today. If you bought PRO as a one-time purchase before we moved to subscriptions, your workspace keeps its original features forever at no extra cost — exactly as promised. No downgrade, no surprise bill.
 
-You can still upgrade your lifetime workspace to Pro ($59/month) or Business ($149/month) if you want the newer capabilities like custom domain, white-label, or webhooks.
+You can still upgrade your lifetime workspace to Pro ($59/month) or Business ($159/month) if you want the newer capabilities like custom domain, white-label, or webhooks.
 
 ---
 
@@ -252,7 +252,7 @@ What carries over automatically: page structure, internal links (relative `.md` 
 
 What you'll redo: branding (colors, logo, fonts — 5 minutes in the Float Widget), navigation (header links, social links), AI chat suggested questions.
 
-Pricing: GitBook starts at ~$8/user/month and scales fast with team size. Docsbook is **flat $59/month per workspace** for Pro (translations, larger AI budget, advanced AI chat config — AI chat and SEO are already free), or $149/month for Business (adds custom domain, white-label, webhooks) — regardless of team size. Most teams save $200+/month switching. See the full comparison: [GitBook vs Docsbook](./blog/docusaurus-vs-docsbook.md).
+Pricing: GitBook starts at ~$8/user/month and scales fast with team size. Docsbook is **flat $59/month per workspace** for Pro (translations, larger AI budget, advanced AI chat config — AI chat and SEO are already free), or $159/month for Business (adds custom domain, white-label, webhooks) — regardless of team size. Most teams save $200+/month switching. See the full comparison: [GitBook vs Docsbook](./blog/docusaurus-vs-docsbook.md).
 
 Stuck? Email [support@docsbook.io](mailto:support@docsbook.io) — we help with migrations for free.
 

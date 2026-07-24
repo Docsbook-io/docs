@@ -156,7 +156,7 @@ If you outgrow these knobs, the "build it" math changes — but most teams do no
 Three questions, in order:
 
 1. **Are docs the only AI surface you need?** Yes → buy. No → consider build.
-2. **Is $59–250/month material to you?** Yes → buy the lifetime PRO at $150. No → buy PRO+ monthly.
+2. **Is $59–159/month material to you?** Yes → buy PRO monthly at $59. No → buy Business monthly at $159.
 3. **Will you maintain the pipeline yourself for 18+ months?** No → buy. Yes and the answers to 1–2 are also yes → build is viable.
 
 For Docsbook customers we have onboarded, the buy decision is correct ~95% of the time. The 5% who should build are usually building broader AI products and docs is just one surface.
@@ -169,4 +169,4 @@ For Docsbook customers we have onboarded, the buy decision is correct ~95% of th
 
 ---
 
-Docsbook AI chat: bring your own provider, custom system prompt on PRO+, hooks on PRO+. $150 lifetime for PRO. [See it on your docs →](https://docsbook.io/start)
+Docsbook AI chat: bring your own provider, custom system prompt on PRO+, hooks on PRO+. $59/month for PRO. [See it on your docs →](https://docsbook.io/start)

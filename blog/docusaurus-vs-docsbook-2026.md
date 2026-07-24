@@ -1,11 +1,11 @@
 ---
 title: "Docusaurus vs Docsbook in 2026: The Honest Comparison"
-description: "Docusaurus is free, Docsbook is $150 lifetime. We map 2026 setup time, hosting, AI features, SEO, and total cost so you can pick the right one — written by the Docsbook team."
+description: "Docusaurus is free, Docsbook Pro is $59/month. We map 2026 setup time, hosting, AI features, SEO, and total cost so you can pick the right one — written by the Docsbook team."
 ---
 
 # Docusaurus vs Docsbook in 2026
 
-Docusaurus is the open-source default. Docsbook is the managed alternative. The honest answer in 2026: it depends on whether your time is more expensive than $150.
+Docusaurus is the open-source default. Docsbook is the managed alternative. The honest answer in 2026: it depends on whether your time is more expensive than $59/month.
 
 This is a 2026 refresh of [Docusaurus vs Docsbook](./docusaurus-vs-docsbook.md) with updated pricing, new AI features, and current migration paths.
 
@@ -17,9 +17,9 @@ This is a 2026 refresh of [Docusaurus vs Docsbook](./docusaurus-vs-docsbook.md) 
 | Hosting | You manage (Vercel/Netlify/Pages) | Included |
 | AI chat | None (plugin work) | Built-in, 200 q/mo on PRO |
 | AI translation | None | 15 languages, 50/mo on PRO |
-| MCP server | None | ~40 tools, OAuth 2.0 |
+| MCP server | None | 61 tools, OAuth 2.0 |
 | llms.txt | Manual | Auto for site + each workspace |
-| Cost | Free + your hours | $0 / $150 lifetime / $59 mo |
+| Cost | Free + your hours | $0 / $59 mo / $159 mo |
 | Source of truth | Git | Your GitHub repo (unchanged) |
 | Vendor lock-in | None | None — files stay in GitHub |
 | Best for | OSS with engineering capacity | Indie, startups, "ship today" |
@@ -42,7 +42,7 @@ Pick Docsbook when:
 - Your docs already live in `README.md` and a `docs/` folder — and they should stay there
 - You want AI chat trained on your content without building a RAG pipeline
 - You want translations to 15 languages with separate SEO indexing per locale, on day one
-- The cost of an engineer-day exceeds $150
+- The cost of an engineer-day exceeds a month of Docsbook Pro ($59)
 - You want to manage docs from Claude Code or Cursor through MCP
 
 ## The 2026 cost reality
@@ -60,7 +60,7 @@ A typical Docusaurus stack in 2026:
 | AI chat plugin (if you add one) | $30–100/mo |
 | Translation pipeline (if you build one) | weeks of engineering |
 
-Docsbook PRO is $150 one-time, includes hosting, AI chat, translations, MCP, analytics. The break-even is usually month one.
+Docsbook PRO is $59/month, includes hosting, AI chat, translations, MCP, analytics. The break-even is usually month one.
 
 ## Migration path
 
@@ -87,7 +87,7 @@ See [Migrating from Docusaurus to Docsbook](./migrating-from-docusaurus-to-docsb
 - MCP server: Claude Code can read and edit your docs config
 - `llms.txt` and `llms-full.txt` auto-generated for the platform and each workspace
 - Analytics: pageviews, AI questions, failed searches, top countries
-- $150 lifetime instead of $200+/mo in hosting + engineering
+- $59/mo instead of $200+/mo in hosting + engineering
 
 ## Related reading
 

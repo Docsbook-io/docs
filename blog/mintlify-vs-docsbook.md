@@ -80,4 +80,4 @@ Mintlify is a strong product. If you can afford it and are deep in their ecosyst
 
 **Docsbook Free is free forever. No credit card required. [Start now →](https://docsbook.io/start?utm_source=blog&utm_medium=cta&utm_campaign=mintlify_vs_docsbook)**
 
-> The 14-day free trial applies only to Business ($149/month). Free and Pro (7-day trial, $59/month) have their own terms.
+> The 14-day free trial applies only to Business ($159/month). Free and Pro (7-day trial, $59/month) have their own terms.

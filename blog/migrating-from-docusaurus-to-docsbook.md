@@ -112,7 +112,7 @@ Your docs are already in `docs/`. Just connect:
 
 ## Step 4: Custom domain
 
-PRO ($150 lifetime) or PRO+ ($59/mo) includes custom domain.
+Business ($159/mo) includes custom domain.
 
 - Docsbook dashboard → Settings → Domain
 - Enter `docs.yourcompany.com`

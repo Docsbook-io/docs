@@ -20,15 +20,15 @@ This post is the honest comparison. We make Docsbook, so we'll tell you when it 
 | **Best for** | Mid-market and enterprise teams with budget and dedicated docs owners | Indie hackers, startups, OSS, and teams whose source of truth is GitHub |
 | **Setup** | Hours to a day | 5 seconds |
 | **Pricing model** | Per editor per month | Flat monthly per workspace |
-| **Entry price (2026)** | Free / Plus from $8 per editor / Pro from $15 per editor / Business from $25 per editor + Enterprise custom | Free / $59 per month (Pro) / $149 per month (Business) |
+| **Entry price (2026)** | Free / Plus from $8 per editor / Pro from $15 per editor / Business from $25 per editor + Enterprise custom | Free / $59 per month (Pro) / $159 per month (Business) |
 | **Source of truth** | GitBook's database (Git Sync is an add-on) | Your GitHub repo, period |
 | **AI chat** | Built-in (AI Search) | Built-in on Pro, higher cap on Business |
 | **Multi-language** | Add-on, limited | 15 languages, each indexed separately for SEO |
-| **MCP server** | None | ~40 tools, OAuth 2.0, used by Claude Code and Cursor |
+| **MCP server** | None | 61 tools, OAuth 2.0, used by Claude Code and Cursor |
 | **llms.txt** | Not built-in | Auto-generated platform-wide and per workspace |
 | **Vendor lock-in** | High — content in their DB | None — your repo stays canonical |
 | **Custom domain** | Paid | Business |
-| **White-label** | Enterprise only | Business ($149 per month) |
+| **White-label** | Enterprise only | Business ($159 per month) |
 
 If you only read one row: GitBook is priced and built for a team that has a docs owner and a budget line. Docsbook is priced and built for a team where the docs live in `docs/` next to the code and nobody wants to own a separate docs system.
 
@@ -40,11 +40,11 @@ Four reasons show up in every churn conversation we have with new Docsbook custo
 
 GitBook charges per editor. In 2026 that is roughly $8 per editor on Plus, $15 on Pro, and $25 on Business — and the AI features, advanced permissions, and the analytics most teams actually want live above Pro.
 
-A six-engineer team on Business is paying $150 per month for what is, fundamentally, a Markdown editor with hosting attached. For larger teams it gets worse: a 30-person engineering org with five real docs editors and twenty-five "occasionally fixes a typo" contributors is staring at a four-figure annual bill before they've shipped a single page.
+A six-engineer team on Business is paying $159 per month for what is, fundamentally, a Markdown editor with hosting attached. For larger teams it gets worse: a 30-person engineering org with five real docs editors and twenty-five "occasionally fixes a typo" contributors is staring at a four-figure annual bill before they've shipped a single page.
 
 This is the model GitBook needs to fund the WYSIWYG editor, the change-request flow, and the enterprise sales team. It is not a bad model. It is just a model that punishes you for involving more engineers in writing docs — which is the opposite of what most product teams want.
 
-Docsbook charges per workspace, not per editor. Pro is $59 per month with AI chat, translations, and SEO. Business is $149 per month and adds white-label, custom domain, webhooks, and higher AI limits on top. Anyone on your GitHub team can edit the underlying Markdown — there's no editor seat to buy, because the editor is the editor they already use.
+Docsbook charges per workspace, not per editor. Pro is $59 per month with AI chat, translations, and SEO. Business is $159 per month and adds white-label, custom domain, webhooks, and higher AI limits on top. Anyone on your GitHub team can edit the underlying Markdown — there's no editor seat to buy, because the editor is the editor they already use.
 
 ### 2. Vendor lock-in is real
 
@@ -66,7 +66,7 @@ Docsbook reads your Markdown as-is. If `README.md` and a `docs/` folder work on 
 
 In 2024, AI Search was the reason to pay GitBook. In 2026 every serious documentation platform has it. The question is no longer "do you have AI" — it is "how much does AI cost on top of the editor seat I'm already paying for, and where does my AI traffic come from."
 
-Docsbook ships AI chat starting on Pro ($59 per month), with Business ($149 per month) getting a higher monthly question cap. The MCP server is included on both, which means Claude Code and Cursor users can read and edit your docs directly. We also publish `llms.txt` and `llms-full.txt` automatically, both at the platform level and per workspace.
+Docsbook ships AI chat starting on Pro ($59 per month), with Business ($159 per month) getting a higher monthly question cap. The MCP server is included on both, which means Claude Code and Cursor users can read and edit your docs directly. We also publish `llms.txt` and `llms-full.txt` automatically, both at the platform level and per workspace.
 
 That last part matters more than it looks. Mintlify recently reported that 45.3% of all traffic to their hosted docs comes from AI agents, with Claude Code at 25% and Cursor at 18%. If your docs are not optimized for AI agents in 2026, you are leaving close to half your discovery channel on the table.
 
@@ -80,12 +80,12 @@ That last part matters more than it looks. Mintlify recently reported that 45.3%
 | Editor | WYSIWYG block editor | Markdown in your repo |
 | AI chat | AI Search, varies by plan | Included on Pro, higher cap on Business |
 | AI translations | No | 15 languages, separate SEO indexing |
-| MCP server | No | ~40 tools (workspace, branding, analytics, search, content graph) |
+| MCP server | No | 61 tools (workspace, branding, analytics, search, content graph) |
 | llms.txt | No | Yes, platform and workspace |
 | Source-of-truth content graph for AI agents | No | Yes (Pro) |
 | Custom domain | Paid | Business |
 | Custom branding | Paid | All plans (colors, fonts, logo, dark/light) |
-| White-label / remove "Powered by" | Enterprise | Business ($149 per month) |
+| White-label / remove "Powered by" | Enterprise | Business ($159 per month) |
 | Multi-language | Add-on, limited | 15 languages built in (Pro) |
 | Analytics | Built-in, basic | Built-in, Axiom-backed, full event stream on Business |
 | Webhooks | Limited | 15+ event types, HMAC-signed — Business only |
@@ -106,14 +106,14 @@ Docsbook costs more per year here, but it's the flat rate for AI chat, translati
 **Five-person startup.** Five engineers, all of whom occasionally edit docs.
 
 - GitBook Pro at $15 per editor: $75 per month → $900 per year
-- Docsbook Business: $149 per month → $1,788 per year, no per-seat math, custom domain and white-label included
+- Docsbook Business: $159 per month → $1,908 per year, no per-seat math, custom domain and white-label included
 
 You stop paying every time you hire someone who might fix a typo, and the price is the same whether it's 5 or 50 engineers touching docs.
 
 **Mid-market team, twenty editors.** Real docs owner, multilingual product, some compliance needs.
 
 - GitBook Business at $25 per editor: $500 per month → $6,000 per year, multi-language as add-on
-- Docsbook Business: $149 per month → $1,788 per year, 15 languages with separate SEO indexing included
+- Docsbook Business: $159 per month → $1,908 per year, 15 languages with separate SEO indexing included
 
 The difference here is large enough that most teams just hadn't done the math. If you have, it's why you're reading this post.
 
@@ -167,7 +167,7 @@ Yes. Logo, favicon, accent colors for light and dark, Google Fonts, and per-comp
 
 GitBook is a great product for a specific audience: mid-market and enterprise teams who want WYSIWYG editing, live collaboration, and don't mind paying per editor.
 
-Docsbook is a great product for a different audience: teams whose docs live in GitHub today, who don't want to migrate their content into a vendor database, and who'd rather pay a flat $59–149 per month than $25 per editor forever.
+Docsbook is a great product for a different audience: teams whose docs live in GitHub today, who don't want to migrate their content into a vendor database, and who'd rather pay a flat $59–159 per month than $25 per editor forever.
 
 If you're the first audience, GitBook is the right call. If you're the second — and most engineering teams are — Docsbook is the better fit, and the math gets better every year you stay.
 
@@ -175,4 +175,4 @@ If you're the first audience, GitBook is the right call. If you're the second �
 
 **Try Docsbook on your repo in 5 seconds. Free plan is free forever. [Start now →](https://docsbook.io/start?utm_source=blog&utm_medium=cta&utm_campaign=gitbook_vs_docsbook)**
 
-> Pro is $59/month with a 7-day trial. Business is $149/month with a 14-day trial.
+> Pro is $59/month with a 7-day trial. Business is $159/month with a 14-day trial.

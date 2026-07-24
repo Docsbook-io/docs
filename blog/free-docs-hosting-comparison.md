@@ -160,14 +160,14 @@ Most teams that pick a self-hosted free option eventually add:
 - Analytics ($0–50/month)
 - Translation pipeline (weeks of engineering)
 
-By the time the "free" stack is complete, it costs more than Docsbook PRO ($150 lifetime) or PRO+ ($59/month).
+By the time the "free" stack is complete, it costs more than Docsbook PRO ($59/month) or Business ($159/month).
 
 ## How to pick
 
 - **Will you spend more than 2 hours setting up docs hosting?** → Docsbook Free
 - **Are you a Python OSS team with Sphinx already?** → ReadTheDocs
 - **Do you want to own every layer and enjoy it?** → GitHub Pages or Cloudflare Pages
-- **Do you need custom domain on day one?** → Docsbook PRO ($150 lifetime)
+- **Do you need custom domain on day one?** → Docsbook Business ($159/month)
 - **Will you translate to multiple languages?** → Docsbook PRO
 
 ## Related reading
