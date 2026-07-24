@@ -36,6 +36,12 @@ A: Currently only public ones. Private repos are planned for the future.
 
 ---
 
+**Q: Do I need a GitHub repo to try Docsbook?**
+
+A: No. At [docsbook.io/create](https://docsbook.io/create) you can generate a draft site from a website URL or just a text idea, and preview/chat-edit it before creating an account. GitHub is only needed if you want to link an existing repo, or once you're ready to publish (any sign-in method works — GitHub, Google, Apple, or email).
+
+---
+
 **Q: Do I need to configure anything in GitHub?**
 
 A: No. Connect your account via OAuth — Docsbook gets access to your public repos.

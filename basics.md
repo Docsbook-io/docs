@@ -1,23 +1,26 @@
 ---
 title: "Core Concepts: Workspaces in Docsbook"
-description: "Learn the core concepts behind Docsbook — what a workspace is, how it connects to your GitHub repo, and how markdown becomes a documentation site."
+description: "Learn the core concepts behind Docsbook — what a workspace is, how it's created from a GitHub repo, a website, or an idea, and how markdown becomes a documentation site."
 ---
 
 # Core Concepts
 
 ## What is a Workspace?
 
-**Workspace** — your documentation linked to a single GitHub repository.
+**Workspace** — your documentation site and its settings, backed by a GitHub repository (either your own, or one Docsbook hosts for you).
 
 A workspace includes:
-- Your repository with markdown files
+- A repository with markdown files (yours, or Docsbook-hosted if you started from a website/idea)
 - Documentation site (address and appearance)
 - Settings (domain, translation, styling)
 
 ## How Does It Work?
 
+There are two ways to create a workspace:
+
+**From your own GitHub repo:**
 ```
-1. You create a Workspace from your GitHub repo
+1. You link a Workspace to your GitHub repo
                     ↓
 2. Docsbook reads markdown files from GitHub
                     ↓
@@ -28,6 +31,17 @@ A workspace includes:
 5. You update files in GitHub
                     ↓
 6. Site updates automatically
+```
+
+**From a website scan or an idea (no repo needed):**
+```
+1. You describe a website URL or an idea at docsbook.io/create
+                    ↓
+2. Docsbook generates draft pages — preview and chat-edit before signing in
+                    ↓
+3. You sign in, and the draft becomes a live Workspace automatically
+                    ↓
+4. Site is available at: docsbook.io/{owner}/{repo} (Docsbook-hosted repo)
 ```
 
 ## Site Structure

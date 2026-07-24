@@ -76,4 +76,4 @@ Both can be on at the same time if you want maximum discoverability.
 ---
 
 > **Give readers the navigation experience they deserve.**
-> [Connect your GitHub repo →](https://docsbook.io/connect)
+> [Connect your GitHub repo →](https://docsbook.io/create)

@@ -52,4 +52,4 @@ For **team documentation**, it allows any team member to propose improvements wi
 ---
 
 > **Turn your readers into contributors.**
-> [Connect your GitHub repo →](https://docsbook.io/connect)
+> [Connect your GitHub repo →](https://docsbook.io/create)

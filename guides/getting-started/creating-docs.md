@@ -5,7 +5,9 @@ description: "Beginner-friendly walkthrough to create your first Docsbook site f
 
 # Creating a Documentation Site
 
-This guide walks you through setting up your first documentation site on Docsbook — no coding experience required. Each step includes screenshots so you always know exactly where to click.
+This guide walks you through setting up your first documentation site on Docsbook from a GitHub repository — no coding experience required. Each step includes screenshots so you always know exactly where to click.
+
+> **Don't have a GitHub repo, or want to try Docsbook first?** Go to [docsbook.io/create](https://docsbook.io/create) instead — you can generate a draft site from a website URL or just a text idea, and preview it before creating any account. Come back to this guide when you want to connect an existing GitHub repo.
 
 ## What You'll Need
 

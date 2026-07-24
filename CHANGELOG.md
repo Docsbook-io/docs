@@ -9,6 +9,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Added
 
+- You can now generate a documentation site without an account — pick a website URL to scan, a GitHub repo to link, or just describe an idea in text at `docsbook.io/create`, then preview and AI-chat-edit the draft before signing in. `Onboarding`
+- Anonymous drafts get a live split-screen chat + preview (or a full-screen preview at `/draft`), with a short trial of AI edits before you're asked to sign in. `Onboarding`
+- Signing in after building an anonymous draft automatically publishes it as a live workspace — no re-work needed. `Onboarding`
 - Workspaces can now be made private, requiring a password and/or your own SSO/OIDC identity provider (Google Workspace, Microsoft Entra ID, or Okta) before anonymous readers can view them. `Privacy & Access`
 - Two new plans: Growth ($349/month) and Scale ($899/month), for teams that want deeper analytics, conversion tracking, and workflow features on top of the existing plans; annual billing on any paid plan now gets a 20% discount. `Pricing`
 - A public Security & Privacy page explains how visitor analytics avoid PII, don't use tracking cookies, and can never link the same visitor across two different workspaces. `Security`

@@ -178,25 +178,28 @@ All monthly plans (Pro, Growth, Business, Scale) can also be billed annually at 
 
 ## Getting Started
 
-1. **Create your account**  
-   Sign in with GitHub, Google, Apple, or email at [docsbook.io](https://docsbook.io), then authorize GitHub access to connect your repository
+1. **Generate a draft — no account needed**  
+   Click "Create website" at [docsbook.io](https://docsbook.io), then pick a source: a website URL to scan, a GitHub repo to link, or just an idea in text
 
-2. **Create a workspace**  
-   Pick a public repo — Docsbook indexes it in seconds
+2. **Preview and refine**  
+   For website/idea sources, chat with the AI to tweak the generated draft and preview it live, all before signing in
 
-3. **Share your docs**  
+3. **Sign in to publish**  
+   Choose GitHub, Google, Apple, or email — your draft becomes a live workspace automatically, no re-work needed. GitHub-sourced sites authorize repo access at this step.
+
+4. **Share your docs**  
    Your documentation is live at `docsbook.io/owner/repo`
 
-4. **Customize** (optional)  
+5. **Customize** (optional)  
    Add branding, enable AI chat, set up a custom domain, or make it private with a password/SSO gate
 
-5. **Keep it updated**  
-   Push to GitHub, docs update automatically
+6. **Keep it updated**  
+   Push to GitHub, docs update automatically (GitHub-sourced sites)
 
 That's it! No build step, no deployment, no CI/CD.
 
 ---
 
-**Ready to publish?** [Create your first workspace →](https://docsbook.io/connect)
+**Ready to start?** [Create your first site →](https://docsbook.io/create)
 
 **Questions?** [See our FAQ](./faq.md) or [contact us](mailto:support@docsbook.io).
