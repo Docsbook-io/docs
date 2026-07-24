@@ -12,6 +12,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Business plan price corrected to $159/month everywhere — pricing page, FAQ, and machine-readable `/pricing.md` and `/llms.txt` now agree with the actual checkout price. `Pricing`
 - Webhook registration now requires the Business plan consistently, whether registered via the dashboard or an MCP agent. `Webhooks`
 - MCP tool count claims corrected to the real number across the site and `/llms.txt`. `MCP`
+- Landing page copy reworded to lead with outcomes (traffic loss, AI vs Google attribution) instead of pricing gimmicks or raw tech specs. `Landing`
+- `/llms.txt` and the shared preview image now describe Docsbook's current positioning instead of an outdated tagline. `SEO`
 
 ### Removed
 
@@ -20,6 +22,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Fixed
 
 - Failed documentation searches (zero results) are now tracked and queryable via the MCP analytics tools, closing a gap where this data silently went missing. `Analytics`
+- `/llms-full.txt` no longer silently serves a "Failed to generate" stub when the docs source is unavailable — it now falls back to the same content as `/llms.txt`. `SEO`
 
 ## NEW - 18.07.2026
 
