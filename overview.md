@@ -52,7 +52,7 @@ In one sentence: **GitHub repo → Beautiful docs + AI chat + SEO + analytics in
 ┌─────────────────────────────────────────────────────────────┐
 │  AI-Powered Features                                           │
 │  ├─ AI chatbot trained on your docs (all plans)              │
-│  ├─ 15-language automatic translations (Pro / Business)      │
+│  ├─ 15-language automatic translations (Pro/Growth/Business) │
 │  ├─ Source of Truth graph for agents                         │
 │  └─ Analytics + webhooks for integrations                    │
 └─────────────────────────────────────────────────────────────┘
@@ -71,10 +71,12 @@ A **workspace** = one documentation site. You can create unlimited workspaces fr
 | Plan | Cost | What You Get |
 |---|---|---|
 | **Free** | $0 | Unlimited docs, branding, basic UI controls, analytics (24h), AI chat (smaller token budget), SEO / AEO / GEO |
-| **Pro** | monthly, 7-day free trial | Translations, advanced AI chat config (custom prompt, hooks, Source of Truth graph), search & feedback analytics, larger AI token budget |
-| **Business** | monthly, 14-day free trial | Everything in Pro, plus custom domain, white-label, webhooks (25), bring-your-own API key, and higher AI chat / translation limits |
+| **Pro** | $59/mo, 7-day free trial | Translations, advanced AI chat config (custom prompt, hooks, Source of Truth graph), search & feedback analytics, larger AI token budget |
+| **Growth** | $349/mo | Same feature set as Pro, with a larger AI token budget — for teams that have outgrown Pro's usage limits |
+| **Business** | $159/mo, 14-day free trial | Everything in Pro, plus custom domain, white-label, webhooks (25), bring-your-own API key, and higher AI chat / translation limits |
+| **Scale** | $899/mo | Same feature set as Business, with the largest AI token budget of any plan — for teams that have outgrown Business's usage limits |
 
-All plans: **unlimited repositories, forever.**
+All monthly plans (Pro, Growth, Business, Scale) can also be billed annually at a 20% discount. All plans: **unlimited repositories, forever.**
 
 ## Key Features by Category
 
@@ -91,12 +93,12 @@ All plans: **unlimited repositories, forever.**
 - Show/hide UI elements (search, breadcrumbs, feedback, prev/next buttons)
 
 ### 🤖 AI Features
-- **AI Chatbot** — answers questions based on your documentation (every plan, token-budget limited; Pro/Business get larger budgets)
-- **Source of Truth graph** — structured data about your docs, for AI agents (Pro / Business)
-- **Custom AI chat config** — system prompt, chat hooks (Pro / Business)
+- **AI Chatbot** — answers questions based on your documentation (every plan, token-budget limited; Pro/Growth/Business/Scale get progressively larger budgets)
+- **Source of Truth graph** — structured data about your docs, for AI agents (Pro / Growth / Business / Scale)
+- **Custom AI chat config** — system prompt, chat hooks (Pro / Growth / Business / Scale)
 - **LSP-style tools** — semantic search, link resolution, outline navigation
 
-### 🌍 Translation & Localization (Pro / Business)
+### 🌍 Translation & Localization (Pro / Growth / Business / Scale)
 - **15 languages** — English, Spanish, French, German, Portuguese, Italian, Russian, Chinese, Japanese, Korean, Arabic, Hindi, Turkish, Polish, Dutch
 - **SEO per language** — each translation is indexed separately by Google
 - **Auto-detect** — shows readers content in their browser language
@@ -106,11 +108,11 @@ All plans: **unlimited repositories, forever.**
 - Page views, unique visitors, top pages, referrers
 - AI usage tracking (queries, remaining quota)
 - Countries & languages of readers
-- **Pro / Business:** Advanced journey mapping, visitor drill-down, failed searches, negative feedback
+- **Pro / Growth / Business / Scale:** Advanced journey mapping, visitor drill-down, failed searches, negative feedback
 
 ### 🔗 Integrations
-- **Custom domain (Business)** — `docs.yourcompany.com` with free SSL
-- **Webhooks (Business)** — 15 event types (chat questions, translations, traffic spikes)
+- **Custom domain (Business / Scale)** — `docs.yourcompany.com` with free SSL
+- **Webhooks (Business / Scale)** — 15 event types (chat questions, translations, traffic spikes)
 - **MCP server** — control Docsbook from Claude Code, Cursor, ChatGPT
 - **GitHub integration** — "Edit on GitHub" links on every page
 

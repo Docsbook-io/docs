@@ -10,6 +10,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Added
 
 - Workspaces can now be made private, requiring a password and/or your own SSO/OIDC identity provider (Google Workspace, Microsoft Entra ID, or Okta) before anonymous readers can view them. `Privacy & Access`
+- Two new plans: Growth ($349/month) and Scale ($899/month), for teams that want deeper analytics, conversion tracking, and workflow features on top of the existing plans; annual billing on any paid plan now gets a 20% discount. `Pricing`
+- A public Security & Privacy page explains how visitor analytics avoid PII, don't use tracking cookies, and can never link the same visitor across two different workspaces. `Security`
+- Two new pages for API-first SaaS teams and AI/LLM companies show how Docsbook fits their specific documentation needs. `Marketing`
+- A case studies page, including a real look at how Docsbook documents itself, plus an ROI calculator that estimates support-ticket savings from self-serve docs and AI chat. `Marketing`
 
 ### Changed
 
@@ -18,6 +22,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - MCP tool count claims corrected to the real number across the site and `/llms.txt`. `MCP`
 - Landing page copy reworded to lead with outcomes (traffic loss, AI vs Google attribution) instead of pricing gimmicks or raw tech specs. `Landing`
 - `/llms.txt` and the shared preview image now describe Docsbook's current positioning instead of an outdated tagline. `SEO`
+- Homepage copy and structured data now frame Docsbook around growth and conversion outcomes, not just docs hosting. `Landing`
 
 ### Removed
 

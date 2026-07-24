@@ -1,11 +1,11 @@
 ---
 title: "Pricing & Plans"
-description: "Docsbook pricing — Free forever, Pro, and Business — with AI chat, translations, and webhook limits broken down per plan. Business adds exclusive capabilities (custom domain, white-label, webhooks, bring-your-own API keys) on top of Pro, plus higher usage limits."
+description: "Docsbook pricing — Free forever, Pro, Business, Growth, and Scale — with AI chat, translations, and webhook limits broken down per plan. Growth mirrors Pro's capabilities and Scale mirrors Business's, each with a bigger AI token budget; Business/Scale add exclusive capabilities (custom domain, white-label, webhooks, bring-your-own API keys) on top of Pro/Growth."
 ---
 
 # Pricing & Plans
 
-Docsbook has three plans. All plans cover unlimited public GitHub repositories.
+Docsbook has five plans. All plans cover unlimited public GitHub repositories.
 
 ## Free
 
@@ -17,7 +17,7 @@ Docsbook has three plans. All plans cover unlimited public GitHub repositories.
 
 ## Pro
 
-Monthly subscription, 7-day free trial. Best for solo founders, indie devs, and small teams.
+$59/month, 7-day free trial. Best for solo founders, indie devs, and small teams.
 
 Everything in Free, plus:
 
@@ -30,7 +30,7 @@ Everything in Free, plus:
 
 ## Business
 
-Monthly subscription, 14-day free trial. Everything in Pro, plus a set of Business-exclusive capabilities, and higher usage limits — for teams and heavier usage.
+$159/month, 14-day free trial. Everything in Pro, plus a set of Business-exclusive capabilities, and higher usage limits — for teams and heavier usage.
 
 - Everything in Pro
 - Custom domain (`docs.yourcompany.com`) with free SSL — Business only
@@ -39,28 +39,41 @@ Monthly subscription, 14-day free trial. Everything in Pro, plus a set of Busine
 - Webhooks — up to 25 per workspace — Business only
 - Higher AI chat and translation limits than Pro
 
+## Growth
+
+$349/month. Same feature set as Pro — auto-translation, advanced AI chat config (chat hooks, custom system prompt, MCP Source of Truth, chat analysis dashboard), search & feedback analytics, private docs (password/SSO) — plus a larger monthly AI token budget than Pro. Growth does not add custom domain, white-label, bring-your-own API key, or webhooks — those stay Business/Scale features. For teams on Pro who mainly need more AI usage headroom rather than the Business-only capabilities.
+
+## Scale
+
+$899/month. Same feature set as Business — custom domain, white-label, bring-your-own AI/translation API key, webhooks (up to 25) — plus the largest monthly AI token budget of any plan. For teams on Business who need substantially more AI usage headroom.
+
 ## Limits Summary
 
-| Feature                | Free | Pro          | Business     |
-| ---------------------- | ---- | ------------ | ------------ |
-| GitHub repositories    | ∞    | ∞            | ∞            |
-| AI chat (reader-facing)| ✅    | ✅            | ✅            |
-| Custom domain          | ❌    | ❌            | ✅            |
-| Private docs (password/SSO) | ❌ | ✅         | ✅            |
-| SEO / GEO / AEO        | ✅    | ✅            | ✅            |
-| White-label            | ❌    | ❌            | ✅            |
-| Bring your own API key | ❌    | ❌            | ✅            |
-| Webhooks               | 0    | 0            | 25           |
-| Payment                | —    | monthly      | monthly      |
+| Feature                      | Free     | Pro     | Growth           | Business        | Scale          |
+| ---------------------------- | -------- | ------- | ---------------- | ---------------- | -------------- |
+| GitHub repositories          | ∞        | ∞       | ∞                | ∞                | ∞              |
+| AI chat (reader-facing)      | ✅       | ✅      | ✅                | ✅                | ✅             |
+| Custom domain                | ❌       | ❌      | ❌                | ✅                | ✅             |
+| Private docs (password/SSO)  | ❌       | ✅      | ✅                | ✅                | ✅             |
+| SEO / GEO / AEO               | ✅       | ✅      | ✅                | ✅                | ✅             |
+| White-label                  | ❌       | ❌      | ❌                | ✅                | ✅             |
+| Bring your own API key       | ❌       | ❌      | ❌                | ✅                | ✅             |
+| Webhooks                     | 0        | 0       | 0                | 25                | 25             |
+| AI token budget               | smallest | base    | larger than Pro   | higher than Pro   | largest of all |
+| Payment                       | —        | monthly | monthly          | monthly          | monthly        |
 
-Pro and Business do **not** unlock the same set of features: custom domain, white-label, webhooks, and bring-your-own API keys are Business-exclusive. Business also raises the numeric usage limits shared with Pro (AI chat, translations). See [AI Chat](../../ai/chat.md) and [Translations](../../ai/translations.md) for current limit numbers.
+Pro/Growth and Business/Scale do **not** unlock the same set of features: custom domain, white-label, webhooks, and bring-your-own API keys are Business/Scale-exclusive. Growth mirrors Pro's feature set with a bigger AI token budget; Scale mirrors Business's feature set with the largest AI token budget. See [AI Chat](../../ai/chat.md) and [Translations](../../ai/translations.md) for current limit numbers.
+
+All monthly plans (Pro, Business, Growth, Scale) can also be billed annually at a 20% discount off the monthly price.
 
 ## Upgrade Paths
 
 - **Free → Pro** — monthly subscription, 7-day free trial, instant activation
 - **Free → Business** — monthly subscription, 14-day free trial, instant activation
 - **Pro → Business** — upgrade anytime for higher limits
-- **Pro/Business → Free** — cancel anytime via the Customer Portal
+- **Pro ↔ Growth** — same feature set, Growth carries a larger AI token budget
+- **Business ↔ Scale** — same feature set, Scale carries the largest AI token budget
+- **Pro/Business/Growth/Scale → Free** — cancel anytime via the Customer Portal
 
 ## Refund Policy
 
