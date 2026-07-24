@@ -26,6 +26,7 @@ mcp add --transport http https://docsbook.io/api/mcp/server
 | `update_navigation`   | Free     | Header links, social links, folder tabs                      |
 | `update_ai_settings`  | PRO      | Enable AI chat, set provider and API key, model selection (bring-your-own key is Business only) |
 | `update_seo`          | PRO      | SEO meta tags, sitemap, OpenGraph                            |
+| `update_access`       | PRO      | Make a workspace private; set a password and/or bring-your-own SSO/OIDC identity provider |
 | `update_domain`       | Business | Attach or remove a custom domain                             |
 | `update_languages`    | PRO      | Enable target languages for AI translation                   |
 

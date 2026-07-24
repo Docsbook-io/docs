@@ -7,6 +7,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ## NEW - 24.07.2026
 
+### Added
+
+- Workspaces can now be made private, requiring a password and/or your own SSO/OIDC identity provider (Google Workspace, Microsoft Entra ID, or Okta) before anonymous readers can view them. `Privacy & Access`
+
 ### Changed
 
 - Business plan price corrected to $159/month everywhere — pricing page, FAQ, and machine-readable `/pricing.md` and `/llms.txt` now agree with the actual checkout price. `Pricing`

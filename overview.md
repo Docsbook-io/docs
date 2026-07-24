@@ -186,7 +186,7 @@ All plans: **unlimited repositories, forever.**
    Your documentation is live at `docsbook.io/owner/repo`
 
 4. **Customize** (optional)  
-   Add branding, enable AI chat, set up a custom domain
+   Add branding, enable AI chat, set up a custom domain, or make it private with a password/SSO gate
 
 5. **Keep it updated**  
    Push to GitHub, docs update automatically

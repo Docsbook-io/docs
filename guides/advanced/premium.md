@@ -19,6 +19,7 @@ Docsbook has three plans. Free is free forever — and it already includes reade
 | AI translations (15 languages) | ❌ | ✅ | ✅ higher limit |
 | Full SEO / GEO / AEO (sitemap, OG, JSON-LD) | ✅ | ✅ | ✅ |
 | Analytics period | 24h | 30 days | 30 days |
+| Private docs (password / SSO) | ❌ | ✅ | ✅ |
 | Hide "Powered by Docsbook" | ❌ | ❌ | ✅ |
 | Bring your own AI/translation API key | ❌ | ❌ | ✅ |
 | Webhooks | 0 | 0 | 25 |
@@ -55,6 +56,12 @@ Pro raises the monthly AI token budget well above the Free allowance; Business r
 ### 4. Extended Analytics
 
 Free shows the last 24 hours. Pro and Business show 7 / 14 / 30 days of views, visitors, top pages, referrers, and search queries — plus search & feedback analytics.
+
+### 5. Private Docs
+
+Switch a workspace from public to **private**, then require a password and/or your own SSO/OIDC
+identity provider (Google Workspace, Microsoft Entra ID, or Okta) before anyone but the owner can
+read it. Optionally restrict SSO sign-in to a single email domain. **How to set up:** [SSO Setup](./sso.md)
 
 ## Business-Only Features
 

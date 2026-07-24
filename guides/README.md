@@ -13,6 +13,7 @@ Task-oriented walkthroughs. Start with **Getting started** if you're publishing 
 - [Managing docs](./getting-started/managing-docs.md) — update settings, reindex, and invite collaborators
 - [Custom domain](./advanced/custom-domain.md) — point `docs.yourcompany.com` to Docsbook with free SSL
 - [Translation](./advanced/translation.md) — turn on AI translation for up to 15 languages
+- [Private docs: password & SSO](./advanced/sso.md) — restrict access with a password or your own SSO identity provider
 - [PRO and PRO+ plans](./advanced/premium.md) — what the paid plans unlock
 
 ## Related

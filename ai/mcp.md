@@ -128,6 +128,7 @@ ChatGPT supports remote MCP through **Connectors** (Pro / Business / Enterprise 
 |---|---|
 | Workspace | `list_workspaces`, `create_workspace`, `get_workspace` |
 | Branding & UI | `update_branding`, `update_ui_settings`, `update_navigation` |
+| Access & security | `update_access` — visibility, password, bring-your-own SSO/OIDC |
 | Content & search | `search_docs`, `get_doc_outline`, `write_docs` |
 | AI chat | `get_chat_system_prompt`, `set_chat_system_prompt`, `set_chat_hooks` |
 | Translations | `set_translation_mode`, `list_pending_translations`, `approve_translation` |
@@ -151,7 +152,7 @@ Each tool declares a minimum plan. The server returns a structured error when a 
 | Plan | Available tool groups |
 |---|---|
 | Free | Workspace, branding, UI, navigation, analytics (24h), `find_skill`, `search_docs`, `get_doc_outline`, `write_docs` (with a read-write token) |
-| PRO | + AI settings, SEO, languages, chat hooks, translations, deeper analytics |
+| PRO | + AI settings, SEO, languages, chat hooks, translations, deeper analytics, private docs (`update_access`) |
 | PRO+ | + page journeys, top visitors + visitor activity drill-down, `query_events` |
 | Business | + custom domain, webhooks, bring-your-own AI/translation API key |
 

@@ -111,7 +111,7 @@ When you are **logged in** and viewing **your own documentation**, a widget appe
 
 ## Public Access
 
-Your documentation is **open to everyone**. Even if the repository is private, the documentation is visible to all.
+By default, your documentation is **open to everyone**. Even if the repository is private, the documentation is visible to all.
 
 Benefits:
 - SEO optimization (indexed by Google)
@@ -119,6 +119,9 @@ Benefits:
 - Fast loading
 - Mobile-friendly
 - Full-text search
+
+On Pro and Business, you can flip this: switch a workspace to **private** and require a password
+or SSO sign-in before anyone but the owner can view it. See [Managing Your Docs](/guides/getting-started/managing-docs) for how to set it up.
 
 ## GitHub Synchronization
 

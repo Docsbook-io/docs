@@ -65,7 +65,20 @@ Display options:
 
 See in detail: [Document Translation](../advanced/translation.md)
 
-### 5. Dangerous Actions
+### 5. Privacy & Access
+
+(PRO and PRO+)
+
+- Switch the workspace between **public** (anyone with the link) and **private** (readers must
+  unlock it first)
+- **Password** — set a shared password; readers who enter it correctly stay unlocked for a while
+- **SSO** — bring your own identity provider (your own Google Workspace, Microsoft Entra ID, or
+  Okta app registration) so readers sign in through it; optionally restrict sign-in to a single
+  email domain
+- Both methods can be configured at once — a reader can use whichever is available
+- The workspace owner always has access, regardless of visibility
+
+### 6. Dangerous Actions
 
 ⚠️ **Delete Workspace**
 
@@ -266,9 +279,9 @@ Supported:
 
 ## Who Can See My Documentation?
 
-### Open Access
+### Open Access (default)
 
-Your documentation site is **open to everyone** — even if the repo is private.
+By default, your documentation site is **open to everyone** — even if the repo is private.
 
 **Who sees it:**
 - ✅ Everyone on the internet
@@ -276,6 +289,13 @@ Your documentation site is **open to everyone** — even if the repo is private.
 - ✅ People without a GitHub account
 
 Your documentation is accessible everywhere.
+
+### Restricting access (PRO and PRO+)
+
+If you'd rather not have it fully public, switch the workspace to **private** in
+[Privacy & Access settings](#5-privacy--access) above. Once private, a reader must unlock it with
+a password or SSO sign-in before seeing any content — search engine bots included. You (the owner)
+always have access.
 
 ### Only You See Settings
 

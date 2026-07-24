@@ -25,6 +25,7 @@ Everything in Free, plus:
 - Advanced AI chat config — chat hooks, custom system prompt, MCP Source of Truth, chat analysis dashboard
 - Search & feedback analytics
 - Larger AI token budget than Free
+- Private docs — password-protect a workspace, or gate it behind your own SSO/OIDC identity provider
 - Webhooks — none (see Business)
 
 ## Business
@@ -45,6 +46,7 @@ Monthly subscription, 14-day free trial. Everything in Pro, plus a set of Busine
 | GitHub repositories    | ∞    | ∞            | ∞            |
 | AI chat (reader-facing)| ✅    | ✅            | ✅            |
 | Custom domain          | ❌    | ❌            | ✅            |
+| Private docs (password/SSO) | ❌ | ✅         | ✅            |
 | SEO / GEO / AEO        | ✅    | ✅            | ✅            |
 | White-label            | ❌    | ❌            | ✅            |
 | Bring your own API key | ❌    | ❌            | ✅            |

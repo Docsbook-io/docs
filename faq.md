@@ -136,20 +136,25 @@ But we recommend plain markdown.
 
 **Q: Who can see my documentation?**
 
-A: Everyone on the internet. Your site is fully public.
+A: By default, everyone on the internet — your site is fully public.
 - People without a GitHub account
 - Search engine bots (Google, Bing)
 - Anyone
 
-This is expected — you want everyone to see your documentation.
+This is expected for most docs — you want everyone to find and read them.
+
+On Pro and Business, you can switch a workspace to **private** and require a password or SSO
+sign-in before anyone but the owner can view it. See [Managing Your Docs](/guides/getting-started/managing-docs) for setup.
 
 ---
 
 **Q: How does this relate to a private GitHub repo?**
 
-A: Even if a GitHub repo is private, documentation on Docsbook is open.
+A: Even if a GitHub repo is private, documentation on Docsbook is open by default.
 
-(Private repos are not yet supported.)
+(Docsbook still reads from the GitHub repo either way — private repos are supported for the
+source. If you also want the *published docs site* to require sign-in, use the private-workspace
+setting above; that's independent of the GitHub repo's own visibility.)
 
 ---
 
