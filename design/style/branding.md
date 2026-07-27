@@ -13,6 +13,8 @@ Make your documentation feel like your product — not a generic template.
 |---|---|
 | Custom name | Display name shown in the browser tab and header |
 | Accent color | Primary brand color applied to buttons, links, and highlights |
+| Heading font | Google Font used for headings (h1–h6) |
+| Content font | Google Font used for body text — falls back to the heading font |
 | Hide "Powered by Docsbook" | Remove the footer badge *(Pro)* |
 
 ## How to Apply
@@ -33,6 +35,29 @@ The accent color is a hex code (e.g., `#5B47E0`). It affects:
 - Links
 
 Pick a color that matches your product's primary brand color. Avoid very light colors — they won't meet contrast requirements on white backgrounds.
+
+---
+
+## Fonts
+
+Pick your typography from 1500+ Google Fonts. Headings and body text are set
+separately, so you can pair a distinctive display face with a highly readable
+body face.
+
+**Fields:** `Headings`, `Content`
+
+**How to set:**
+
+1. Float Widget → **Design** → **Font** card.
+2. Pick a font under **Headings** — this styles h1–h6.
+3. Optionally pick a different font under **Content** — this styles body text.
+4. Save.
+
+Leaving **Content** empty means body text uses the heading font, so a single
+pick still styles the whole page. Each picker has a search box and previews
+every family in the font itself. **Reset** clears a field.
+
+The fonts load from Google Fonts automatically — nothing to install or host.
 
 ---
 
