@@ -80,6 +80,7 @@ The **Translation Activity** panel, on the same Translation tab, is where you ch
 
 It shows:
 
+- **Coverage for each language** — of every page in your docs, how many are translated and current, how many are behind your source, and how many have no translation at all. Untranslated pages are the ones your readers see in the original language, so they are counted first.
 - **How many pages are behind your source.** Compared against the current content in your repository, not against a label — so it reflects what your readers are actually being served.
 - **Orphaned translations** whose source file was renamed or deleted.
 - **A live progress bar** while a translation run is going, and, if a run stopped early, why it stopped (budget spent or provider quota reached).
@@ -87,7 +88,8 @@ It shows:
 
 From the same panel you can:
 
-- **Re-translate a language** — every page in it, from the row's `Re-translate` button.
+- **Fill in what's missing** — the button on each language row translates only the pages that are missing or behind. Pages already up to date are skipped and cost you nothing.
+- **Re-translate a language from scratch** — offered once a language is fully covered, for when the translations themselves need redoing.
 - **Re-translate a single page** — from `Redo` in the recent-changes list.
 
 Re-translating is how a page that has fallen behind gets caught up. Editing a page in GitHub does not re-translate it by itself.

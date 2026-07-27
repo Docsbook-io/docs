@@ -15,6 +15,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Translation activity and spend breakdown. `Translations`
 - Re-translate a single page or a whole language on demand, straight from the Translation Activity panel. `Translations`
 - Translation Activity now reports how many pages have fallen behind your source content, and how many point at files that were renamed or deleted. `Translations`
+- Per-language coverage shows, for every page in your docs, how many are translated and current, how many are behind, and how many have no translation at all — so you can tell at a glance whether a language is genuinely complete. `Translations`
+- Filling in a language translates only the missing and outdated pages; pages already up to date are skipped and cost nothing. `Translations`
 - Live progress while a translation run is going, including why a run stopped early when it hits your budget or the provider's quota. `Translations`
 - Translation spend is now shown next to how many page sections were reused from cache instead of re-translated. `Translations`
 - Correct a machine translation by editing its text directly, instead of re-uploading the whole page. `Translations`
