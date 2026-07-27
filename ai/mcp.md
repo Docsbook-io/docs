@@ -33,7 +33,13 @@ The first call opens a browser tab for OAuth. After consent, the tools become av
 
 ### Cursor
 
-Add the server to `~/.cursor/mcp.json` (or use **Settings → MCP & Integrations → New MCP server**):
+Cursor has no `mcp add` command, but it accepts a one-click install link:
+
+```text
+cursor://anysphere.cursor-deeplink/mcp/install?name=docsbook&config=eyJ1cmwiOiJodHRwczovL2RvY3Nib29rLmlvL2FwaS9tY3Avc2VydmVyIiwidHlwZSI6Imh0dHAifQ==
+```
+
+Or add the server to `~/.cursor/mcp.json` (or use **Settings → MCP & Integrations → New MCP server**):
 
 ```json
 {
@@ -49,7 +55,11 @@ Reload Cursor — OAuth opens in the browser on first use.
 
 ### Codex CLI
 
-Codex stores MCP servers in `~/.codex/config.toml`:
+```bash
+codex mcp add docsbook --url https://docsbook.io/api/mcp/server
+```
+
+Or edit the config directly — Codex stores MCP servers in `~/.codex/config.toml`:
 
 ```toml
 [mcp_servers.docsbook]
@@ -87,7 +97,11 @@ Open **Cline → MCP Servers → Configure MCP Servers** and paste:
 
 ### Gemini CLI
 
-Add to `~/.gemini/settings.json`:
+```bash
+gemini mcp add --transport http docsbook https://docsbook.io/api/mcp/server
+```
+
+The default scope is the current project — add `--scope user` to install it globally. Or add it by hand to `~/.gemini/settings.json` (note the key is `httpUrl`; `url` there means SSE):
 
 ```json
 {
@@ -101,7 +115,11 @@ Add to `~/.gemini/settings.json`:
 
 ### GitHub Copilot (VS Code)
 
-Create `.vscode/mcp.json` inside your workspace, then enable the server from the Copilot Chat MCP picker:
+```bash
+code --add-mcp '{"name":"docsbook","type":"http","url":"https://docsbook.io/api/mcp/server"}'
+```
+
+Or create `.vscode/mcp.json` inside your workspace, then enable the server from the Copilot Chat MCP picker (note the key is `servers`, not `mcpServers`):
 
 ```json
 {
