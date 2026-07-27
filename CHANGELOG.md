@@ -21,12 +21,16 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Content health merges the relationship graph, semantic index and findings into one card that names orphan pages, meaning-duplicates, broken links, unread pages and key hubs, each with a concrete next step. `Analytics`
 - Your custom questions now appear as clickable suggestion chips when a reader focuses the chat input, and adding a skill swaps them for that skill's own example questions. `AI Chat`
 - A new `/showcase` page browses live Docsbook sites by category, including five real customer sites. `Landing`
+- A new **Search + Ask AI** header preset puts a wide search bar in the middle of the header with the Ask AI button right beside it, so both primary actions sit together instead of being split across the right edge. `Design`
+- Headings and body text can now use different fonts, so you can pair a display face with a readable content face. `Design`
+- The language of your docs is now detected automatically, so there is no Auto-detect button to press. `Translation`
 
 ### Changed
 
 - Growth and Scale now include every Business capability — custom domain, white-label, webhooks, your own AI and translation keys, UTM analytics and API reference — which the higher-priced tiers were previously denied. `Pricing`
 - Source of Truth and white-label are now Business features, and the pricing page, plan modals and AI upgrade prompts no longer advertise them at the Pro price. `Pricing`
 - The homepage now leads with what your docs do for your revenue rather than the underlying tech, and the FAQ accordion is replaced by a gallery of live customer docs. `Landing`
+- The **Split** header preset is replaced by **Search + Ask AI**; if you were using Split, your header keeps its current arrangement and you can rebuild it from the nav-link position field. `Design`
 
 ### Fixed
 

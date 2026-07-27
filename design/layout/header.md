@@ -35,12 +35,14 @@ The **Header Layout** card is the first card in the Header tab. It picks a prese
 | Preset | Arrangement | Best for |
 |---|---|---|
 | **Classic** (default) | Theme, Ask AI and search grouped on the right | Universal default — works for most docs sites |
-| **Search-centric** | Wide search bar centered in the header | Content-heavy docs where search leads |
-| **Split** | Nav links right after the logo, utilities pinned right | Stripe/Tailwind-docs style |
+| **Search-centric** | Wide search bar centered in the header, Ask AI on the right | Content-heavy docs where search leads |
+| **Search + Ask AI** | Wide search centered with the Ask AI button right beside it | Docs where asking the AI matters as much as searching |
 | **Centered** | Logo left, nav links centered, utilities right | Landing-page style with 3–5 links |
 | **Minimal** | Ask AI and search shown as bare icons | Maximum room for nav links and social icons |
 
-Click a preset to apply it — one click sets all five underlying placement fields at once (theme side, search width, icon-only Ask AI, icon-only search, nav link position).
+Click a preset to apply it — one click sets all six underlying placement fields at once (theme side, search width, Ask AI placement, icon-only Ask AI, icon-only search, nav link position).
+
+**Ask AI beside the search** only takes effect when the search bar is wide. With a compact search there is no centre cluster for the button to join, so it stays in the right-hand group.
 
 **Layout ≠ visibility.** A preset only controls *where* a block sits, never *whether* it's shown. If you turn off a block using its own toggle (for example, **Theme toggle in header**), that block disappears and the rest of the header keeps following the same preset — the remaining blocks don't shift into its place or change arrangement.
 
