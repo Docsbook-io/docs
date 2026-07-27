@@ -47,17 +47,17 @@ Supported pricing models:
 
 ## Monthly Limits
 
-AI usage is metered in money, not in requests. Each plan includes a monthly AI budget:
+AI usage is metered in money, not in requests. Each paid plan includes a monthly AI budget equal to its price:
 
 | Plan | Monthly AI budget |
 |---|---|
 | **Free** | $0.15 |
-| **Pro** | $15.00 |
-| **Business** | $45.00 |
-| **Growth** | $84.00 |
-| **Scale** | $225.00 |
+| **Pro** | $59.00 |
+| **Business** | $159.00 |
+| **Growth** | $349.00 |
+| **Scale** | $899.00 |
 
-Every call is charged at the model provider's real price plus a 20% markup, so a cheaper model stretches the same budget further.
+Every call is charged at the model provider's real price plus a 150% markup, so a cheaper model stretches the same budget further.
 
 When a paid plan exceeds its monthly budget, additional usage is billed as overage up to a monthly cap you set in the Limits tab of workspace settings (default $20/month) — see [Pricing & Plans](../../content/setup/pricing-spec.md#overage-billing) for how the cap works. The Free plan has no overage and stops at its budget.
 

@@ -48,12 +48,14 @@ AI chat runs on **every plan**. Plans differ by the monthly **AI budget**, not b
 | Plan | AI chat |
 |---|---|
 | Free | Included — $0.15/month AI budget |
-| Pro | Included — $15/month AI budget; pick which model runs your chat |
-| Business | Included — $45/month AI budget; can bring your own API key & model |
-| Growth | Included — $84/month AI budget |
-| Scale | Included — $225/month AI budget, the largest of any plan |
+| Pro | Included — $59/month AI budget; pick which model runs your chat |
+| Business | Included — $159/month AI budget; can bring your own API key & model |
+| Growth | Included — $349/month AI budget |
+| Scale | Included — $899/month AI budget, the largest of any plan |
 
-Usage is deducted in money, not tokens: each answer is charged at the real price the provider charges for the model that served it, plus a 20% markup. When the budget runs out, paid plans keep working and bill the rest as metered overage up to a cap you control (default $20/month); Free stops at its budget.
+Every paid plan's AI budget is the same amount you pay for the plan: Pro costs $59/month and includes $59 of AI usage.
+
+Usage is deducted in money, not tokens: each answer is charged at the real price the provider charges for the model that served it, plus a 150% markup. That budget covers roughly 15,000 answers a month on Pro with the default model, and switching to a cheaper model makes it go further. When the budget runs out, paid plans keep working and bill the rest as metered overage up to a cap you control (default $20/month); Free stops at its budget.
 
 ## Why it matters
 
@@ -61,7 +63,7 @@ Teams using Docsbook AI Chat deflect **847 support tickets per month on average*
 
 ## Pricing
 
-AI Chat is available on **all plans**, including Free — it's limited by the monthly AI budget, which grows from $0.15 on Free to $15 on **Pro** (monthly, 7-day free trial) and $45 on **Business** (monthly, 14-day free trial), with Growth at $84 and Scale at $225. Business can additionally bring its own provider API key and model.
+AI Chat is available on **all plans**, including Free — it's limited by the monthly AI budget, which grows from $0.15 on Free to $59 on **Pro** (monthly, 7-day free trial) and $159 on **Business** (monthly, 14-day free trial), with Growth at $349 and Scale at $899. Each paid budget matches that plan's price. Business can additionally bring its own provider API key and model.
 
 ## Related
 

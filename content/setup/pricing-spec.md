@@ -25,7 +25,7 @@ Everything in Free, plus:
 - Auto-translation
 - Advanced AI chat config — chat hooks, custom system prompt, MCP Source of Truth, chat analysis dashboard
 - Search & feedback analytics
-- $15/month AI budget
+- $59/month AI budget
 - Private docs — password-protect a workspace, or gate it behind your own SSO/OIDC identity provider
 - Webhooks — none (see Business)
 
@@ -39,15 +39,15 @@ $159/month, 14-day free trial. Everything in Pro, plus a set of Business-exclusi
 - White-label — hide "Powered by Docsbook" — Business only
 - Bring your own AI chat and/or translation API key (with custom model) — Business only
 - Webhooks — up to 25 per workspace — Business only
-- $45/month AI budget, and higher translation limits than Pro
+- $159/month AI budget, and higher translation limits than Pro
 
 ## Growth
 
-$349/month. Same feature set as Pro — auto-translation, advanced AI chat config (chat hooks, custom system prompt, MCP Source of Truth, chat analysis dashboard), search & feedback analytics, private docs (password/SSO) — plus 5 project seats and an $84/month AI budget. Growth does not add custom domain, white-label, bring-your-own API key, or webhooks — those stay Business/Scale features. For teams on Pro who mainly need more AI usage headroom rather than the Business-only capabilities.
+$349/month. Same feature set as Pro — auto-translation, advanced AI chat config (chat hooks, custom system prompt, MCP Source of Truth, chat analysis dashboard), search & feedback analytics, private docs (password/SSO) — plus 5 project seats and a $349/month AI budget. Growth does not add custom domain, white-label, bring-your-own API key, or webhooks — those stay Business/Scale features. For teams on Pro who mainly need more AI usage headroom rather than the Business-only capabilities.
 
 ## Scale
 
-$899/month. Same feature set as Business — custom domain, white-label, bring-your-own AI/translation API key, webhooks (up to 25) — plus 15 project seats and a $225/month AI budget, the largest of any plan. For teams on Business who need substantially more AI usage headroom.
+$899/month. Same feature set as Business — custom domain, white-label, bring-your-own AI/translation API key, webhooks (up to 25) — plus 15 project seats and a $899/month AI budget, the largest of any plan. For teams on Business who need substantially more AI usage headroom.
 
 ## Limits Summary
 
@@ -63,7 +63,7 @@ $899/month. Same feature set as Business — custom domain, white-label, bring-y
 | Choose your AI model         | ❌       | ✅      | ✅                | ✅                | ✅             |
 | Bring your own API key       | ❌       | ❌      | ❌                | ✅                | ✅             |
 | Webhooks                     | 0        | 0       | 0                | 25                | 25             |
-| Monthly AI budget             | $0.15    | $15     | $84               | $45               | $225           |
+| Monthly AI budget             | $0.15    | $59     | $349              | $159              | $899           |
 | Payment                       | —        | monthly/annual | monthly/annual | monthly/annual | monthly/annual |
 | Overage billing               | ❌       | ✅      | ✅                | ✅                | ✅             |
 
@@ -77,7 +77,7 @@ All monthly plans (Pro, Business, Growth, Scale) can also be billed annually at 
 
 Paid plans (Pro, Business, Growth, Scale) don't hard-stop the moment your monthly AI budget runs out. Once the budget is exhausted, further usage is billed as overage — charged on top of your subscription — up to a monthly overage cap you control from the Limits tab in workspace settings (default $20/month). Overage charges are billed once your billing cycle closes; if you hit the cap, usage is blocked again until the next cycle (or you raise the cap). Free plan has no overage — usage stops at the free budget.
 
-Usage is priced in money, not tokens: every AI call is charged at the real price the provider charges for the model that answered, plus a 20% markup. The model, its per-1M-token rate and the markup are all shown in your dashboard, so the amount deducted is one you can check. From Pro you can switch models — a cheaper model makes the same budget go further. On Business and Scale you can bring your own API key instead, pay the provider directly, and we bill you nothing for usage.
+Usage is priced in money, not tokens: every AI call is charged at the real price the provider charges for the model that answered, plus a 150% markup. The model, its per-1M-token rate and the markup are all shown in your dashboard, so the amount deducted is one you can check. From Pro you can switch models — a cheaper model makes the same budget go further. On Business and Scale you can bring your own API key instead, pay the provider directly, and we bill you nothing for usage.
 
 ## Upgrade Paths
 

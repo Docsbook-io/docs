@@ -15,7 +15,7 @@ A: Docsbook transforms your GitHub documentation into a published site in 5 seco
 
 **Q: Do I need to pay to get started?**
 
-A: No. The Free plan ($0) includes unlimited public repositories, GitHub sync, full design customization, reader-facing AI chat (on a $0.15 monthly AI budget), and full SEO / GEO / AEO. Pro (monthly, 7-day free trial) adds translations, advanced AI chat configuration (custom prompt, hooks, Source of Truth), search analytics, and a $15/month AI budget. Business (monthly, 14-day free trial) includes everything in Pro plus custom domain, white-label, webhooks, bring-your-own API keys, and higher usage limits.
+A: No. The Free plan ($0) includes unlimited public repositories, GitHub sync, full design customization, reader-facing AI chat (on a $0.15 monthly AI budget), and full SEO / GEO / AEO. Pro (monthly, 7-day free trial) adds translations, advanced AI chat configuration (custom prompt, hooks, Source of Truth), search analytics, and a $59/month AI budget. Business (monthly, 14-day free trial) includes everything in Pro plus custom domain, white-label, webhooks, bring-your-own API keys, and higher usage limits.
 
 ---
 
@@ -195,7 +195,7 @@ We moved off the old one-time lifetime model because docs are a living product: 
 **Q: What is Pro?**
 
 A: An account subscription — **$59/month**, 7-day free trial, with 1 project seat. Includes:
-- AI chat trained on your docs, on a $15/month AI budget
+- AI chat trained on your docs, on a $59/month AI budget
 - AI translations to 15 languages
 - Full SEO (meta tags, sitemap, OpenGraph, JSON-LD)
 - Extended analytics (7 days instead of 24h)
@@ -212,7 +212,7 @@ A: An account subscription — **$159/month**, 14-day free trial, with 3 project
 - White-label (hide "Powered by Docsbook")
 - Webhooks — up to 25 per workspace
 - Bring your own AI chat and/or translation API key (with custom model)
-- A $45/month AI budget, and higher translation limits than Pro
+- A $159/month AI budget, and higher translation limits than Pro
 
 ---
 

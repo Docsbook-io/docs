@@ -24,10 +24,13 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 - One subscription now covers several projects through project seats instead of being bought per workspace. `Billing`
 - AI usage is measured in money rather than tokens, so your plan's monthly allowance and every charge are shown in dollars. `Billing`
+- Every paid plan now includes an AI budget equal to its price: Pro gives $59 of AI usage a month, Business $159, Growth $349, and Scale $899. `Billing`
+- AI usage is now charged at the provider's real model price plus 150%, replacing the previous 20% markup. A Pro budget covers roughly 15,000 answers a month on the default model, and switching to a cheaper model makes it go further. `Billing`
 - Analytics history now follows your plan: 24 hours on Free, 7 days on Pro, and 30 days on Business, Growth, and Scale. `Analytics`
 
 ### Fixed
 
+- Subscribing now funds the AI budget on your account. Activation credited an unused balance, so a new subscriber could pay and still see an empty budget. `Billing`
 - The `MCP Server` card in the `Integrations` tab now renders with its plan badge and upgrade footer instead of a bare blurred panel. `Integrations`
 - Documentation corrected across pricing, plans, AI chat, API, and analytics pages, which still described token budgets, per-workspace billing, and analytics windows that no longer match the product. `Docs`
 - Translation freshness is now measured against your actual source content. The previous check never flagged anything, so sites could serve translations of long-changed pages while reporting everything as current. `Translations`

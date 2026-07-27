@@ -18,7 +18,7 @@ A subscription is bought once per **account**, not per project. It grants a numb
 | GitHub sync | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Branding & themes | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Custom domain | ❌ | ❌ | ❌ | ✅ | ✅ |
-| AI chat | ✅ $0.15/mo budget | ✅ $15/mo budget | ✅ $84/mo budget | ✅ $45/mo budget | ✅ $225/mo budget |
+| AI chat | ✅ $0.15/mo budget | ✅ $59/mo budget | ✅ $349/mo budget | ✅ $159/mo budget | ✅ $899/mo budget |
 | AI translations (15 languages) | ❌ | ✅ | ✅ higher limit | ✅ higher limit | ✅ highest limit |
 | Full SEO / GEO / AEO (sitemap, OG, JSON-LD) | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Analytics period | 24h | 7 days | 30 days | 30 days | 30 days |
@@ -32,7 +32,7 @@ A subscription is bought once per **account**, not per project. It grants a numb
 
 ### AI Chat
 
-A chatbot trained on your documentation runs on **every plan**, Free included. Plans differ by the monthly **AI budget**, not by a feature switch — Free gets $0.15/month, Pro $15, Business $45, Growth $84, and Scale $225 (the largest of all). Choosing which model runs your chat on Docsbook's key is available from **Pro** — the model's price comes out of your AI budget. Bringing your own provider and API key (OpenRouter, OpenAI, Gemini, Anthropic), so the provider bills you directly, is a **Business/Scale-only** capability; see [Business/Scale-Only Features](#businessscale-only-features) below.
+A chatbot trained on your documentation runs on **every plan**, Free included. Plans differ by the monthly **AI budget**, not by a feature switch — Free gets $0.15/month, and every paid plan includes an AI budget equal to its price: Pro $59, Business $159, Growth $349, and Scale $899 (the largest of all). Choosing which model runs your chat on Docsbook's key is available from **Pro** — the model's price comes out of your AI budget. Bringing your own provider and API key (OpenRouter, OpenAI, Gemini, Anthropic), so the provider bills you directly, is a **Business/Scale-only** capability; see [Business/Scale-Only Features](#businessscale-only-features) below.
 
 ### SEO / GEO / AEO
 
@@ -56,7 +56,7 @@ Custom AI chat system prompt, chat hooks (pre / post / streaming), the MCP Sourc
 
 ### 3. Larger AI Budget
 
-Pro raises the monthly AI budget from Free's $0.15 to $15; Business goes to $45, Growth to $84, and Scale to $225 — the largest budget of any plan. The budget belongs to the account and is shared across every paid project on it.
+Pro raises the monthly AI budget from Free's $0.15 to $59; Business goes to $159, Growth to $349, and Scale to $899 — the largest budget of any plan. Each of those matches what the plan costs. The budget belongs to the account and is shared across every paid project on it.
 
 ### 4. Extended Analytics
 
@@ -88,8 +88,8 @@ On top of the Business/Scale-only features above, Business and Scale also raise 
 
 Growth and Scale sit alongside Pro and Business as separate plans with larger AI budgets and more project seats:
 
-- **Growth** ($349/month) — the same feature set as Pro, with 5 project seats and an $84/month AI budget. For teams that have outgrown Pro's usage limits but don't need the Business-only capabilities.
-- **Scale** ($899/month) — the same feature set as Business, with 15 project seats and a $225/month AI budget, the largest of any plan. For teams that have outgrown Business's usage limits.
+- **Growth** ($349/month) — the same feature set as Pro, with 5 project seats and a $349/month AI budget. For teams that have outgrown Pro's usage limits but don't need the Business-only capabilities.
+- **Scale** ($899/month) — the same feature set as Business, with 15 project seats and a $899/month AI budget, the largest of any plan. For teams that have outgrown Business's usage limits.
 
 ## Project Seats
 
@@ -105,7 +105,7 @@ Your subscription is bought once per **account** and grants project seats — 1 
 
 Paid plans don't hard-stop when the monthly AI budget runs out — further usage is billed as metered overage on top of your subscription, up to a monthly cap you control from the Limits tab (default $20/month). Once you hit the cap, usage is blocked until the next cycle or you raise the cap. Free has no overage; usage simply stops at the free budget.
 
-Usage is priced in money, not tokens: each call is charged at the real price the provider charges for the model that answered, plus a 20% markup. The model, its per-1M-token rate and the markup are all visible in your dashboard, so the amount deducted is one you can check yourself. From Pro you can switch models — a cheaper model makes the same budget go further — and on Business/Scale you can bring your own key and pay the provider directly, in which case we bill you nothing for usage.
+Usage is priced in money, not tokens: each call is charged at the real price the provider charges for the model that answered, plus a 150% markup. The model, its per-1M-token rate and the markup are all visible in your dashboard, so the amount deducted is one you can check yourself. From Pro you can switch models — a cheaper model makes the same budget go further — and on Business/Scale you can bring your own key and pay the provider directly, in which case we bill you nothing for usage.
 
 ## How to Pay
 

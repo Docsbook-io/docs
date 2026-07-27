@@ -187,7 +187,7 @@ Everything in Free, plus:
 
 - ✅ AI translations (15 languages)
 - ✅ Advanced AI chat config (custom system prompt, chat hooks, MCP Source of Truth)
-- ✅ $15/month AI budget
+- ✅ $59/month AI budget
 - ✅ 1 paid project seat (buy extra seats if you need more)
 - ✅ Search & feedback analytics
 - ✅ Analytics for 7 days
@@ -202,7 +202,7 @@ Everything in Pro, plus Business-exclusive capabilities, plus higher usage limit
 - ✅ White-label (hide "Powered by Docsbook")
 - ✅ Webhooks (up to 25 per workspace)
 - ✅ Bring your own AI chat / translation API key (with custom model)
-- ✅ $45/month AI budget
+- ✅ $159/month AI budget
 - ✅ 3 paid project seats
 - ✅ Higher translation limit than Pro
 

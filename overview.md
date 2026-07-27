@@ -71,14 +71,16 @@ A **workspace** = one documentation site. You can create unlimited workspaces fr
 | Plan | Cost | What You Get |
 |---|---|---|
 | **Free** | $0 | Unlimited docs, branding, basic UI controls, analytics (24h), AI chat ($0.15/mo AI budget), SEO / AEO / GEO |
-| **Pro** | $59/mo, 7-day free trial | 1 project seat, translations, advanced AI chat config (custom prompt, hooks, Source of Truth graph), search & feedback analytics, $15/mo AI budget |
-| **Growth** | $349/mo | Same feature set as Pro, with 5 project seats and an $84/mo AI budget — for teams that have outgrown Pro's usage limits |
-| **Business** | $159/mo, 14-day free trial | Everything in Pro, plus 3 project seats, custom domain, white-label, webhooks (25), bring-your-own API key, a $45/mo AI budget, and higher translation limits |
-| **Scale** | $899/mo | Same feature set as Business, with 15 project seats and a $225/mo AI budget, the largest of any plan — for teams that have outgrown Business's usage limits |
+| **Pro** | $59/mo, 7-day free trial | 1 project seat, translations, advanced AI chat config (custom prompt, hooks, Source of Truth graph), search & feedback analytics, $59/mo AI budget |
+| **Growth** | $349/mo | Same feature set as Pro, with 5 project seats and a $349/mo AI budget — for teams that have outgrown Pro's usage limits |
+| **Business** | $159/mo, 14-day free trial | Everything in Pro, plus 3 project seats, custom domain, white-label, webhooks (25), bring-your-own API key, a $159/mo AI budget, and higher translation limits |
+| **Scale** | $899/mo | Same feature set as Business, with 15 project seats and a $899/mo AI budget, the largest of any plan — for teams that have outgrown Business's usage limits |
 
 All monthly plans (Pro, Growth, Business, Scale) can also be billed annually at a 20% discount. All plans: **unlimited repositories, forever.**
 
 A subscription is bought once per account and grants project seats — a project is paid while it holds one, and you can move a seat between projects. The AI budget is shared across every paid project on the account, and free projects are unlimited.
+
+Every paid plan includes an AI budget equal to its price: Pro costs $59/month and includes $59 of AI usage, Business $159, Growth $349, Scale $899.
 
 ## Key Features by Category
 
