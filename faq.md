@@ -15,7 +15,7 @@ A: Docsbook transforms your GitHub documentation into a published site in 5 seco
 
 **Q: Do I need to pay to get started?**
 
-A: No. The Free plan ($0) includes unlimited public repositories, GitHub sync, full design customization, reader-facing AI chat (on a $0.15 monthly AI budget), and full SEO / GEO / AEO. Pro (monthly, 7-day free trial) adds translations, advanced AI chat configuration (custom prompt, hooks, Source of Truth), search analytics, and a $59/month AI budget. Business (monthly, 14-day free trial) includes everything in Pro plus custom domain, white-label, webhooks, bring-your-own API keys, and higher usage limits.
+A: No. The Free plan ($0) includes unlimited public repositories, GitHub sync, full design customization, reader-facing AI chat (on a $0.15 monthly AI budget), and full SEO / GEO / AEO. Pro (monthly, 7-day free trial) adds translations, advanced AI chat configuration (custom prompt, hooks), your choice of AI model, search analytics, and a $59/month AI budget. Business (monthly, 14-day free trial) includes everything in Pro plus custom domain, white-label, webhooks, bring-your-own API keys, the semantic doc index & relationship graph, and higher usage limits.
 
 ---
 
@@ -45,6 +45,28 @@ A: No. At [docsbook.io/create](https://docsbook.io/create) you can generate a dr
 **Q: Do I need to configure anything in GitHub?**
 
 A: No. Connect your account via OAuth — Docsbook gets access to your public repos.
+
+---
+
+**Q: What is SEO / GEO / AEO, and why does it matter for docs?**
+
+A: Classic SEO puts your docs in Google. GEO (Generative Engine Optimization) puts them in AI answers — Perplexity citations, ChatGPT Search, Google AI Overviews. AEO (Answer Engine Optimization) adds structured markup so voice assistants and featured snippets can pull directly from your content.
+
+Docsbook generates all three automatically: TL;DR blocks, FAQPage and HowTo JSON-LD, `dateModified`, author markup, and speakable selectors. One toggle in the dashboard — no manual work.
+
+---
+
+**Q: What are Docsbook skills?**
+
+A: Skills are AI-agent instructions (`SKILL.md` files) for documentation tasks: audit structure, write missing sections, check SEO, enable translations, track analytics gaps.
+
+Install them locally with `npx docs-skills install`, or let any MCP-connected agent discover and use them at runtime via `find_skill()`. There are 25 skills across five categories: analysis, creation, publishing, automation, and observability.
+
+---
+
+**Q: What happens to my docs if Docsbook shuts down?**
+
+A: Nothing is lost. Your Markdown files always live in your own GitHub repository — Docsbook renders them, it never stores your content in a proprietary format. Point another tool at the same repo and you keep everything.
 
 ---
 
@@ -199,9 +221,10 @@ A: An account subscription — **$59/month**, 7-day free trial, with 1 project s
 - AI translations to 15 languages
 - Full SEO (meta tags, sitemap, OpenGraph, JSON-LD)
 - Extended analytics (7 days instead of 24h)
-- Advanced MCP tools — chat hooks, custom system prompt, translation management, Source of Truth
+- Advanced MCP tools — chat hooks, custom system prompt, translation management
+- Your choice of AI model for reader-facing chat
 
-Custom domain, white-label, webhooks, and bring-your-own API keys are **not** included in Pro — see Business below.
+Custom domain, white-label, webhooks, bring-your-own API keys, and the semantic doc index & relationship graph are **not** included in Pro — see Business below.
 
 ---
 
@@ -212,6 +235,7 @@ A: An account subscription — **$159/month**, 14-day free trial, with 3 project
 - White-label (hide "Powered by Docsbook")
 - Webhooks — up to 25 per workspace
 - Bring your own AI chat and/or translation API key (with custom model)
+- Semantic doc index & relationship graph — meaning-based chat search plus content health findings
 - A $159/month AI budget, and higher translation limits than Pro
 
 ---

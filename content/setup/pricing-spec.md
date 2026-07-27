@@ -23,7 +23,7 @@ Everything in Free, plus:
 
 - 1 project seat
 - Auto-translation
-- Advanced AI chat config — chat hooks, custom system prompt, MCP Source of Truth, chat analysis dashboard
+- Advanced AI chat config — chat hooks, custom system prompt, your choice of AI model, chat analysis dashboard
 - Search & feedback analytics
 - $59/month AI budget
 - Private docs — password-protect a workspace, or gate it behind your own SSO/OIDC identity provider
@@ -43,7 +43,7 @@ $159/month, 14-day free trial. Everything in Pro, plus a set of Business-exclusi
 
 ## Growth
 
-$349/month. Same feature set as Pro — auto-translation, advanced AI chat config (chat hooks, custom system prompt, MCP Source of Truth, chat analysis dashboard), search & feedback analytics, private docs (password/SSO) — plus 5 project seats and a $349/month AI budget. Growth does not add custom domain, white-label, bring-your-own API key, or webhooks — those stay Business/Scale features. For teams on Pro who mainly need more AI usage headroom rather than the Business-only capabilities.
+$349/month. Includes every Business capability — auto-translation, advanced AI chat config (chat hooks, custom system prompt, your choice of AI model, chat analysis dashboard), search & feedback analytics, private docs (password/SSO), custom domain, white-label, webhooks, bring-your-own API keys, UTM analytics, hosted API reference, and the semantic doc index & relationship graph — plus 5 project seats and a $349/month AI budget. For teams on Pro who mainly need more AI usage headroom rather than the Business-only capabilities.
 
 ## Scale
 

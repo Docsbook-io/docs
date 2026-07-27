@@ -186,13 +186,13 @@ A paid plan is bought once per account and grants project seats — a project is
 Everything in Free, plus:
 
 - ✅ AI translations (15 languages)
-- ✅ Advanced AI chat config (custom system prompt, chat hooks, MCP Source of Truth)
+- ✅ Advanced AI chat config (custom system prompt, chat hooks, your choice of AI model)
 - ✅ $59/month AI budget
 - ✅ 1 paid project seat (buy extra seats if you need more)
 - ✅ Search & feedback analytics
 - ✅ Analytics for 7 days
 - ✅ Priority support
-- ❌ Custom domain, white-label, webhooks, bring-your-own API key (Business only — see below)
+- ❌ Custom domain, white-label, webhooks, bring-your-own API key, semantic doc index & relationship graph (Business only — see below)
 
 ### Business (monthly, 14-day free trial)
 
@@ -202,6 +202,7 @@ Everything in Pro, plus Business-exclusive capabilities, plus higher usage limit
 - ✅ White-label (hide "Powered by Docsbook")
 - ✅ Webhooks (up to 25 per workspace)
 - ✅ Bring your own AI chat / translation API key (with custom model)
+- ✅ Semantic doc index & relationship graph (meaning-based chat search, content health)
 - ✅ $159/month AI budget
 - ✅ 3 paid project seats
 - ✅ Higher translation limit than Pro

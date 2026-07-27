@@ -71,9 +71,9 @@ A **workspace** = one documentation site. You can create unlimited workspaces fr
 | Plan | Cost | What You Get |
 |---|---|---|
 | **Free** | $0 | Unlimited docs, branding, basic UI controls, analytics (24h), AI chat ($0.15/mo AI budget), SEO / AEO / GEO |
-| **Pro** | $59/mo, 7-day free trial | 1 project seat, translations, advanced AI chat config (custom prompt, hooks, Source of Truth graph), search & feedback analytics, $59/mo AI budget |
-| **Growth** | $349/mo | Same feature set as Pro, with 5 project seats and a $349/mo AI budget — for teams that have outgrown Pro's usage limits |
-| **Business** | $159/mo, 14-day free trial | Everything in Pro, plus 3 project seats, custom domain, white-label, webhooks (25), bring-your-own API key, a $159/mo AI budget, and higher translation limits |
+| **Pro** | $59/mo, 7-day free trial | 1 project seat, translations, advanced AI chat config (custom prompt, hooks), your choice of AI model, search & feedback analytics, $59/mo AI budget |
+| **Growth** | $349/mo | Every Business capability, with 5 project seats and a $349/mo AI budget — for teams that have outgrown Business's usage limits |
+| **Business** | $159/mo, 14-day free trial | Everything in Pro, plus 3 project seats, custom domain, white-label, webhooks (25), bring-your-own API key, semantic doc index & relationship graph, hosted API reference, UTM analytics, a $159/mo AI budget, and higher translation limits |
 | **Scale** | $899/mo | Same feature set as Business, with 15 project seats and a $899/mo AI budget, the largest of any plan — for teams that have outgrown Business's usage limits |
 
 All monthly plans (Pro, Growth, Business, Scale) can also be billed annually at a 20% discount. All plans: **unlimited repositories, forever.**
@@ -98,7 +98,7 @@ Every paid plan includes an AI budget equal to its price: Pro costs $59/month an
 
 ### 🤖 AI Features
 - **AI Chatbot** — answers questions based on your documentation (every plan, limited by a monthly AI budget in dollars; Pro/Growth/Business/Scale get progressively larger budgets)
-- **Source of Truth graph** — structured data about your docs, for AI agents (Pro / Growth / Business / Scale)
+- **Semantic doc index & relationship graph** — meaning-based search and structured data about your docs, for AI agents (Business / Scale)
 - **Custom AI chat config** — system prompt, chat hooks (Pro / Growth / Business / Scale)
 - **LSP-style tools** — semantic search, link resolution, outline navigation
 
