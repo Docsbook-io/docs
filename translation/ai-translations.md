@@ -13,9 +13,11 @@ How Docsbook automatically translates your documentation using Claude AI.
 2. Docsbook fetches your markdown files from GitHub.
 3. Each file is sent to **Claude** (by Anthropic) for translation.
 4. Translated pages are cached for fast delivery.
-5. When you push updates to GitHub, only changed pages are re-translated.
+5. When you edit a page and re-translate it, only the sections you changed are sent to Claude — the rest are reused from cache.
 
 No manual work. No translation files to maintain. No YAML keys.
+
+Enabling a language translates your whole site once. After that, pushing to GitHub does **not** re-translate anything on its own: readers keep seeing the last translation until you re-translate. The Translation Activity panel shows how many pages have fallen behind your source and lets you re-translate a single page or a whole language.
 
 ## What Gets Translated
 
@@ -34,11 +36,13 @@ Code is intentionally left in the original language — it should stay consisten
 
 Translations are cached per page per language, keyed to the file's content hash on GitHub.
 
-- First visit after a content change triggers re-translation (a few seconds).
-- All subsequent visits serve the cached version instantly.
+- Every visit serves the cached translation instantly.
+- After you change a page, readers keep getting the previous translation until you re-translate it — they are never dropped back to the original language.
 - Cached translations persist even if you temporarily disable a language.
 
 This means re-enabling a language that was previously active is instant — no re-translation needed.
+
+Because the cache is keyed by content, re-translating is cheap: a page is split into sections, and only the sections whose text actually changed are sent to Claude. Fixing a typo costs one section, not a whole page.
 
 ## Translation Quality
 
@@ -65,7 +69,7 @@ Claude understands context. It knows that "run the command" means `ejecuta el co
 
 Human translators cost $0.10–$0.30 per word. A 50-page documentation site is typically 25,000–40,000 words. That's $2,500–$12,000 per language — before you account for updates.
 
-With Docsbook, translation is included in your plan. Every update to your docs is re-translated automatically for only the changed pages. No invoices. No turnaround time. No coordination overhead.
+With Docsbook, translation is included in your plan. Re-translating an updated page is a click, and you are only charged for the sections that actually changed. No invoices. No turnaround time. No coordination overhead.
 
 ## SEO Impact of Translations
 

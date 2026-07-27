@@ -74,6 +74,24 @@ docsbook.io/{username}/fr/{repo}        → French
 
 Each language version is indexed separately by search engines, which means passive SEO traffic in every language you publish.
 
+## Keeping Translations Current
+
+The **Translation Activity** panel, on the same Translation tab, is where you check and fix the state of your translations.
+
+It shows:
+
+- **How many pages are behind your source.** Compared against the current content in your repository, not against a label — so it reflects what your readers are actually being served.
+- **Orphaned translations** whose source file was renamed or deleted.
+- **A live progress bar** while a translation run is going, and, if a run stopped early, why it stopped (budget spent or provider quota reached).
+- **What translation cost**, next to how many sections were reused from cache instead of re-translated.
+
+From the same panel you can:
+
+- **Re-translate a language** — every page in it, from the row's `Re-translate` button.
+- **Re-translate a single page** — from `Redo` in the recent-changes list.
+
+Re-translating is how a page that has fallen behind gets caught up. Editing a page in GitHub does not re-translate it by itself.
+
 ## Disabling a Language
 
 Uncheck the language in the Translation tab → Save.

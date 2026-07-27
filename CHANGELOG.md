@@ -13,6 +13,11 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Annual billing (20% off) is now wired end-to-end through checkout for Pro, Business, Growth, and Scale — the toggle appears in the pricing tab once Paddle annual prices are configured. `Billing`
 - Per-model AI spend view showing what each call cost at the provider's real price. `AI Chat`
 - Translation activity and spend breakdown. `Translations`
+- Re-translate a single page or a whole language on demand, straight from the Translation Activity panel. `Translations`
+- Translation Activity now reports how many pages have fallen behind your source content, and how many point at files that were renamed or deleted. `Translations`
+- Live progress while a translation run is going, including why a run stopped early when it hits your budget or the provider's quota. `Translations`
+- Translation spend is now shown next to how many page sections were reused from cache instead of re-translated. `Translations`
+- Correct a machine translation by editing its text directly, instead of re-uploading the whole page. `Translations`
 - Choose which AI model answers your readers, from Pro upwards. `AI Chat`
 
 ### Changed
@@ -25,6 +30,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 - The `MCP Server` card in the `Integrations` tab now renders with its plan badge and upgrade footer instead of a bare blurred panel. `Integrations`
 - Documentation corrected across pricing, plans, AI chat, API, and analytics pages, which still described token budgets, per-workspace billing, and analytics windows that no longer match the product. `Docs`
+- Translation freshness is now measured against your actual source content. The previous check never flagged anything, so sites could serve translations of long-changed pages while reporting everything as current. `Translations`
+- The per-language "Last update" time was off by your timezone offset, making fresh translations look hours old. `Translations`
+- Translation docs no longer claim that pushing to GitHub re-translates changed pages on its own — it does not, and the new Translation Activity panel is how you catch pages up. `Docs`
 
 ## NEW - 24.07.2026
 
