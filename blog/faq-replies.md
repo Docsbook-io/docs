@@ -77,9 +77,9 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 ### What happens if I exceed AI request limits?
 
-**TL;DR:** Pay-per-request overage past your monthly cap, or bring your own OpenAI / Anthropic / Gemini / OpenRouter key on Business — then it's free on our side.
+**TL;DR:** Metered overage past your monthly token budget, up to a monthly cap you control (default $20), or bring your own OpenAI / Anthropic / Gemini / OpenRouter key on Business — then it's free on our side.
 
-**Long:** Pro and Business each have a monthly AI request and translation cap, with Business set higher. If you blow through them, overage is billed per request rather than hard-blocking. Business also lets you plug in your own API key in the AI settings and route requests through your provider — then we don't meter at all. Same applies to translations.
+**Long:** Every paid plan (Pro, Business, Growth, Scale) has a monthly AI token budget, with higher-tier plans set higher. If you blow through it, further usage is billed as overage — metered per token, on top of your subscription — instead of hard-blocking, until you hit your overage cap for that billing cycle (set from the Limits tab in workspace settings, $20/month by default). Once the cap is reached, usage blocks again until the next cycle. Business also lets you plug in your own API key in the AI settings and route requests through your provider — then we don't meter at all. Same applies to translations, which stay on the older request-count model for now.
 
 ---
 

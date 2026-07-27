@@ -60,11 +60,16 @@ $899/month. Same feature set as Business — custom domain, white-label, bring-y
 | Bring your own API key       | ❌       | ❌      | ❌                | ✅                | ✅             |
 | Webhooks                     | 0        | 0       | 0                | 25                | 25             |
 | AI token budget               | smallest | base    | larger than Pro   | higher than Pro   | largest of all |
-| Payment                       | —        | monthly | monthly          | monthly          | monthly        |
+| Payment                       | —        | monthly/annual | monthly/annual | monthly/annual | monthly/annual |
+| Overage billing               | ❌       | ✅      | ✅                | ✅                | ✅             |
 
 Pro/Growth and Business/Scale do **not** unlock the same set of features: custom domain, white-label, webhooks, and bring-your-own API keys are Business/Scale-exclusive. Growth mirrors Pro's feature set with a bigger AI token budget; Scale mirrors Business's feature set with the largest AI token budget. See [AI Chat](../../ai/chat.md) and [Translations](../../ai/translations.md) for current limit numbers.
 
 All monthly plans (Pro, Business, Growth, Scale) can also be billed annually at a 20% discount off the monthly price.
+
+## Overage Billing
+
+Paid plans (Pro, Business, Growth, Scale) don't hard-stop the moment your monthly AI token budget runs out. Once the budget is exhausted, further usage is billed as overage — metered per token, charged on top of your subscription — up to a monthly overage cap you control from the Limits tab in workspace settings (default $20/month). Overage charges are billed once your billing cycle closes; if you hit the cap, usage is blocked again until the next cycle (or you raise the cap). Free plan has no overage — usage stops at the free budget.
 
 ## Upgrade Paths
 

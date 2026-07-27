@@ -55,7 +55,9 @@ Your AI request limit depends on your plan:
 | **PRO** | 200 requests | $0.01 per request |
 | **PRO+** | 2000 requests | $0.01 per request |
 
-When you exceed your monthly limit, additional requests are charged at the overage rate (if enabled).
+When you exceed your monthly limit, additional usage is billed as overage (per-token, metered) up to a monthly cap you set in the Limits tab of workspace settings (default $20/month) — see [Pricing & Plans](../../setup/pricing-spec.md#overage-billing) for how the cap works. Free plan has no overage.
+
+> **Note**: the request-count table above is being migrated to a token-budget model — see [Pricing & Plans](../../setup/pricing-spec.md) for current plan token budgets.
 
 ## Translation Usage
 
