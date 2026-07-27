@@ -9,8 +9,22 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Added
 
-- Paid plans no longer hard-stop when the monthly AI token budget runs out — usage continues as metered overage billed on top of the subscription, up to a monthly cap you set yourself (default $20/month) from the Limits tab in workspace settings. `Billing`
+- Paid plans no longer hard-stop when the monthly AI budget runs out — usage continues as metered overage billed on top of the subscription, up to a monthly cap you set yourself (default $20/month) from the Limits tab in workspace settings. `Billing`
 - Annual billing (20% off) is now wired end-to-end through checkout for Pro, Business, Growth, and Scale — the toggle appears in the pricing tab once Paddle annual prices are configured. `Billing`
+- Per-model AI spend view showing what each call cost at the provider's real price. `AI Chat`
+- Translation activity and spend breakdown. `Translations`
+- Choose which AI model answers your readers, from Pro upwards. `AI Chat`
+
+### Changed
+
+- One subscription now covers several projects through project seats instead of being bought per workspace. `Billing`
+- AI usage is measured in money rather than tokens, so your plan's monthly allowance and every charge are shown in dollars. `Billing`
+- Analytics history now follows your plan: 24 hours on Free, 7 days on Pro, and 30 days on Business, Growth, and Scale. `Analytics`
+
+### Fixed
+
+- The `MCP Server` card in the `Integrations` tab now renders with its plan badge and upgrade footer instead of a bare blurred panel. `Integrations`
+- Documentation corrected across pricing, plans, AI chat, API, and analytics pages, which still described token budgets, per-workspace billing, and analytics windows that no longer match the product. `Docs`
 
 ## NEW - 24.07.2026
 

@@ -31,8 +31,7 @@ Use the interval selector (top-right of the analytics panel) to switch views:
 |---|---|
 | 24H | Free |
 | 7D | Pro |
-| 14D | Pro |
-| 30D | Pro |
+| 30D | Growth / Business / Scale |
 
 ## Reading Referrers
 

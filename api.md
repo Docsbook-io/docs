@@ -29,8 +29,8 @@ Authorization: Bearer dbk_<your_api_key>
 ```
 
 Keep your key secret — it grants full access to your workspace's AI chat, billed
-against your workspace's AI token budget (the same budget the docs-chat widget
-uses; there is no separate API-only quota).
+against your account's AI budget (the same budget the docs-chat widget uses;
+there is no separate API-only quota).
 
 ## POST /api/v1/chat
 
@@ -72,4 +72,4 @@ curl -X POST https://docsbook.io/api/v1/chat \
 |---|---|
 | `401` | Missing or invalid API key |
 | `403` | AI chat is not enabled for this workspace |
-| `429` | Workspace's AI token budget is exhausted |
+| `429` | The account's AI budget (and any overage allowance) is exhausted |

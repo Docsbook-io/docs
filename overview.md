@@ -70,13 +70,15 @@ A **workspace** = one documentation site. You can create unlimited workspaces fr
 ### Plans
 | Plan | Cost | What You Get |
 |---|---|---|
-| **Free** | $0 | Unlimited docs, branding, basic UI controls, analytics (24h), AI chat (smaller token budget), SEO / AEO / GEO |
-| **Pro** | $59/mo, 7-day free trial | Translations, advanced AI chat config (custom prompt, hooks, Source of Truth graph), search & feedback analytics, larger AI token budget |
-| **Growth** | $349/mo | Same feature set as Pro, with a larger AI token budget — for teams that have outgrown Pro's usage limits |
-| **Business** | $159/mo, 14-day free trial | Everything in Pro, plus custom domain, white-label, webhooks (25), bring-your-own API key, and higher AI chat / translation limits |
-| **Scale** | $899/mo | Same feature set as Business, with the largest AI token budget of any plan — for teams that have outgrown Business's usage limits |
+| **Free** | $0 | Unlimited docs, branding, basic UI controls, analytics (24h), AI chat ($0.15/mo AI budget), SEO / AEO / GEO |
+| **Pro** | $59/mo, 7-day free trial | 1 project seat, translations, advanced AI chat config (custom prompt, hooks, Source of Truth graph), search & feedback analytics, $15/mo AI budget |
+| **Growth** | $349/mo | Same feature set as Pro, with 5 project seats and an $84/mo AI budget — for teams that have outgrown Pro's usage limits |
+| **Business** | $159/mo, 14-day free trial | Everything in Pro, plus 3 project seats, custom domain, white-label, webhooks (25), bring-your-own API key, a $45/mo AI budget, and higher translation limits |
+| **Scale** | $899/mo | Same feature set as Business, with 15 project seats and a $225/mo AI budget, the largest of any plan — for teams that have outgrown Business's usage limits |
 
 All monthly plans (Pro, Growth, Business, Scale) can also be billed annually at a 20% discount. All plans: **unlimited repositories, forever.**
+
+A subscription is bought once per account and grants project seats — a project is paid while it holds one, and you can move a seat between projects. The AI budget is shared across every paid project on the account, and free projects are unlimited.
 
 ## Key Features by Category
 
@@ -93,7 +95,7 @@ All monthly plans (Pro, Growth, Business, Scale) can also be billed annually at 
 - Show/hide UI elements (search, breadcrumbs, feedback, prev/next buttons)
 
 ### 🤖 AI Features
-- **AI Chatbot** — answers questions based on your documentation (every plan, token-budget limited; Pro/Growth/Business/Scale get progressively larger budgets)
+- **AI Chatbot** — answers questions based on your documentation (every plan, limited by a monthly AI budget in dollars; Pro/Growth/Business/Scale get progressively larger budgets)
 - **Source of Truth graph** — structured data about your docs, for AI agents (Pro / Growth / Business / Scale)
 - **Custom AI chat config** — system prompt, chat hooks (Pro / Growth / Business / Scale)
 - **LSP-style tools** — semantic search, link resolution, outline navigation

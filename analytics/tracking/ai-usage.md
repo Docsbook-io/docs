@@ -47,17 +47,19 @@ Supported pricing models:
 
 ## Monthly Limits
 
-Your AI request limit depends on your plan:
+AI usage is metered in money, not in requests. Each plan includes a monthly AI budget:
 
-| Plan | AI Requests/Month | Cost per Extra |
-|---|---|---|
-| **Free** | 0 requests | N/A (upgrade required) |
-| **PRO** | 200 requests | $0.01 per request |
-| **PRO+** | 2000 requests | $0.01 per request |
+| Plan | Monthly AI budget |
+|---|---|
+| **Free** | $0.15 |
+| **Pro** | $15.00 |
+| **Business** | $45.00 |
+| **Growth** | $84.00 |
+| **Scale** | $225.00 |
 
-When you exceed your monthly limit, additional usage is billed as overage (per-token, metered) up to a monthly cap you set in the Limits tab of workspace settings (default $20/month) — see [Pricing & Plans](../../setup/pricing-spec.md#overage-billing) for how the cap works. Free plan has no overage.
+Every call is charged at the model provider's real price plus a 20% markup, so a cheaper model stretches the same budget further.
 
-> **Note**: the request-count table above is being migrated to a token-budget model — see [Pricing & Plans](../../setup/pricing-spec.md) for current plan token budgets.
+When a paid plan exceeds its monthly budget, additional usage is billed as overage up to a monthly cap you set in the Limits tab of workspace settings (default $20/month) — see [Pricing & Plans](../../content/setup/pricing-spec.md#overage-billing) for how the cap works. The Free plan has no overage and stops at its budget.
 
 ## Translation Usage
 
@@ -98,8 +100,9 @@ AI usage metrics are available for:
 
 | Range | Plan required |
 |---|---|
-| Last 30 days | Free |
-| Historical data | PRO / PRO+ |
+| Last 24 hours | Free |
+| Last 7 days | Pro |
+| Last 30 days | Growth / Business / Scale |
 
 > **Start using AI chat today.**
 > [Create a documentation site →](https://docsbook.io/connect)

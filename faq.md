@@ -15,7 +15,7 @@ A: Docsbook transforms your GitHub documentation into a published site in 5 seco
 
 **Q: Do I need to pay to get started?**
 
-A: No. The Free plan ($0) includes unlimited public repositories, GitHub sync, full design customization, reader-facing AI chat (on a smaller monthly token budget), and full SEO / GEO / AEO. Pro (monthly, 7-day free trial) adds translations, advanced AI chat configuration (custom prompt, hooks, Source of Truth), search analytics, and a larger AI token budget. Business (monthly, 14-day free trial) includes everything in Pro plus custom domain, white-label, webhooks, bring-your-own API keys, and higher usage limits.
+A: No. The Free plan ($0) includes unlimited public repositories, GitHub sync, full design customization, reader-facing AI chat (on a $0.15 monthly AI budget), and full SEO / GEO / AEO. Pro (monthly, 7-day free trial) adds translations, advanced AI chat configuration (custom prompt, hooks, Source of Truth), search analytics, and a $15/month AI budget. Business (monthly, 14-day free trial) includes everything in Pro plus custom domain, white-label, webhooks, bring-your-own API keys, and higher usage limits.
 
 ---
 
@@ -186,7 +186,7 @@ A: Only you, when logged in. Other people see only the documentation.
 
 **Q: Is Docsbook a subscription?**
 
-A: Yes. Pro and Business are monthly subscriptions, billed per workspace via Paddle. Free stays free forever — no card required. You can cancel or downgrade at any time from the Float Widget.
+A: Yes. Pro and Business are monthly subscriptions, billed per account via Paddle — one subscription grants project seats, and each project you want paid takes one. Free stays free forever — no card required. You can cancel or downgrade at any time from the Float Widget.
 
 We moved off the old one-time lifetime model because docs are a living product: AI chat, translations, and the MCP server all require ongoing infrastructure (LLM tokens, indexing, hosting). A subscription lets us keep shipping and keep limits high.
 
@@ -194,11 +194,11 @@ We moved off the old one-time lifetime model because docs are a living product: 
 
 **Q: What is Pro?**
 
-A: A subscription per workspace — **$59/month**, 7-day free trial. Includes:
-- AI chat trained on your docs
+A: An account subscription — **$59/month**, 7-day free trial, with 1 project seat. Includes:
+- AI chat trained on your docs, on a $15/month AI budget
 - AI translations to 15 languages
 - Full SEO (meta tags, sitemap, OpenGraph, JSON-LD)
-- Extended analytics (7 / 14 / 30 days instead of 24h)
+- Extended analytics (7 days instead of 24h)
 - Advanced MCP tools — chat hooks, custom system prompt, translation management, Source of Truth
 
 Custom domain, white-label, webhooks, and bring-your-own API keys are **not** included in Pro — see Business below.
@@ -207,18 +207,18 @@ Custom domain, white-label, webhooks, and bring-your-own API keys are **not** in
 
 **Q: What is Business?**
 
-A: A subscription per workspace — **$159/month**, 14-day free trial. Everything in Pro, plus a set of Business-exclusive capabilities:
+A: An account subscription — **$159/month**, 14-day free trial, with 3 project seats. Everything in Pro, plus a set of Business-exclusive capabilities:
 - Custom domain (`docs.yourcompany.com`) with free SSL
 - White-label (hide "Powered by Docsbook")
 - Webhooks — up to 25 per workspace
 - Bring your own AI chat and/or translation API key (with custom model)
-- Higher AI chat and translation limits than Pro
+- A $45/month AI budget, and higher translation limits than Pro
 
 ---
 
 **Q: How much does it cost?**
 
-A: Free $0 forever. Pro $59/month. Business $159/month. Billed per workspace.
+A: Free $0 forever. Pro $59/month (1 project seat). Business $159/month (3 seats). Growth $349/month (5 seats). Scale $899/month (15 seats). Billed per account, not per project.
 
 ---
 
@@ -226,10 +226,10 @@ A: Free $0 forever. Pro $59/month. Business $159/month. Billed per workspace.
 
 A: Your subscription stays active until the end of the current billing period — no immediate cutoff.
 
-After it ends, the workspace drops to **Free**:
+After it ends, every project that held a seat drops to **Free**:
 - The site stays online at `docsbook.io/owner/repo` (forever)
 - Your custom domain stops resolving (revert DNS or re-upgrade — Business only)
-- AI chat, translations, SEO, white-label, and webhooks turn off
+- Translations, white-label, and webhooks turn off; AI chat and SEO keep running on the Free AI budget
 - All your content stays in GitHub — nothing is deleted
 - Settings (branding, navigation, UI) are preserved — re-upgrading restores everything
 
@@ -263,7 +263,7 @@ What carries over automatically: page structure, internal links (relative `.md` 
 
 What you'll redo: branding (colors, logo, fonts — 5 minutes in the Float Widget), navigation (header links, social links), AI chat suggested questions.
 
-Pricing: GitBook starts at ~$8/user/month and scales fast with team size. Docsbook is **flat $59/month per workspace** for Pro (translations, larger AI budget, advanced AI chat config — AI chat and SEO are already free), or $159/month for Business (adds custom domain, white-label, webhooks) — regardless of team size. Most teams save $200+/month switching. See the full comparison: [GitBook vs Docsbook](./blog/docusaurus-vs-docsbook.md).
+Pricing: GitBook starts at ~$8/user/month and scales fast with team size. Docsbook is **flat $59/month per account** for Pro (translations, larger AI budget, advanced AI chat config — AI chat and SEO are already free), or $159/month for Business (adds custom domain, white-label, webhooks, and 3 project seats instead of 1) — regardless of team size. Most teams save $200+/month switching. See the full comparison: [GitBook vs Docsbook](./blog/docusaurus-vs-docsbook.md).
 
 Stuck? Email [support@docsbook.io](mailto:support@docsbook.io) — we help with migrations for free.
 
@@ -291,7 +291,7 @@ A: If prices change, **your existing subscription is locked in**: you keep your 
 
 **Q: Can I buy Pro or Business for multiple workspaces?**
 
-A: Yes — billing is per workspace. Each workspace is upgraded separately.
+A: Yes, and you don't need a second subscription. One subscription covers your whole account and grants project seats — 1 on Pro, 3 on Business, 5 on Growth, 15 on Scale. Each project you want paid takes a seat, and you can move a seat between projects at any time. If you need more, you can buy extra seats up to twice your plan's allowance.
 
 ---
 

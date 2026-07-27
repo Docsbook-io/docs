@@ -167,6 +167,8 @@ Docsbook **does not use webhooks**. Instead:
 
 ## Free, Pro, and Business
 
+A paid plan is bought once per account and grants project seats — a project is paid while it holds one, and seats can be moved between projects. Free projects are unlimited.
+
 ### Free ($0 forever)
 
 - ✅ Unlimited public repositories
@@ -174,7 +176,7 @@ Docsbook **does not use webhooks**. Instead:
 - ✅ Customizable design (brand, themes, fonts)
 - ✅ Mobile-friendly
 - ✅ Basic analytics (last 24h)
-- ✅ AI chat (smaller monthly token budget)
+- ✅ AI chat ($0.15/month AI budget)
 - ✅ Full SEO / GEO / AEO (sitemap, OpenGraph, JSON-LD)
 - ❌ Custom domain
 - ❌ AI translations
@@ -185,9 +187,10 @@ Everything in Free, plus:
 
 - ✅ AI translations (15 languages)
 - ✅ Advanced AI chat config (custom system prompt, chat hooks, MCP Source of Truth)
-- ✅ Larger AI token budget than Free
+- ✅ $15/month AI budget
+- ✅ 1 paid project seat (buy extra seats if you need more)
 - ✅ Search & feedback analytics
-- ✅ Analytics for 7 / 14 / 30 days
+- ✅ Analytics for 7 days
 - ✅ Priority support
 - ❌ Custom domain, white-label, webhooks, bring-your-own API key (Business only — see below)
 
@@ -199,7 +202,8 @@ Everything in Pro, plus Business-exclusive capabilities, plus higher usage limit
 - ✅ White-label (hide "Powered by Docsbook")
 - ✅ Webhooks (up to 25 per workspace)
 - ✅ Bring your own AI chat / translation API key (with custom model)
-- ✅ Higher AI chat limit than Pro
+- ✅ $45/month AI budget
+- ✅ 3 paid project seats
 - ✅ Higher translation limit than Pro
 
 ## How to Get Started?

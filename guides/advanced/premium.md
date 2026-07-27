@@ -1,24 +1,27 @@
 ---
 title: "Pro, Business, Growth, and Scale Plans Overview"
-description: "What Docsbook's paid plans unlock — AI chat and SEO run on every plan; Pro adds translations, advanced AI chat config, and a larger token budget; Business adds custom domain, white-label, webhooks, and bring-your-own API keys on top, plus higher usage limits. Growth mirrors Pro and Scale mirrors Business, each with a bigger AI token budget."
+description: "What Docsbook's paid plans unlock — AI chat and SEO run on every plan; Pro adds translations, advanced AI chat config, and a larger AI budget; Business adds custom domain, white-label, webhooks, and bring-your-own API keys on top, plus higher usage limits. Growth mirrors Pro and Scale mirrors Business, each with a bigger monthly AI budget and more project seats."
 ---
 
 # Pro, Business, Growth, and Scale Plans
 
-Docsbook has five plans. Free is free forever — and it already includes reader-facing AI chat (on a smaller monthly token budget) and full SEO / GEO / AEO. Pro is a monthly subscription that adds translations, advanced AI chat configuration (custom system prompt, chat hooks, MCP Source of Truth), search & feedback analytics, and a much larger AI token budget. Business is a separate, higher tier: it includes everything in Pro plus a set of Business-exclusive capabilities — custom domain, white-label, webhooks, and bring-your-own API keys (for both AI chat and translations) — on top of higher usage limits. Growth and Scale sit alongside Pro and Business: Growth carries the same feature set as Pro, and Scale carries the same feature set as Business — each with a larger monthly AI token budget than its counterpart, for teams whose usage has outgrown Pro or Business.
+Docsbook has five plans. Free is free forever — and it already includes reader-facing AI chat (on a $0.15 monthly AI budget) and full SEO / GEO / AEO. Pro is a monthly subscription that adds translations, advanced AI chat configuration (custom system prompt, chat hooks, MCP Source of Truth), search & feedback analytics, and a much larger AI budget. Business is a separate, higher tier: it includes everything in Pro plus a set of Business-exclusive capabilities — custom domain, white-label, webhooks, and bring-your-own API keys (for both AI chat and translations) — on top of higher usage limits. Growth and Scale sit alongside Pro and Business: Growth carries the same feature set as Pro, and Scale carries the same feature set as Business — each with a larger monthly AI budget and more project seats than its counterpart, for teams whose usage has outgrown Pro or Business.
+
+A subscription is bought once per **account**, not per project. It grants a number of project **seats**: a project is paid while it holds one, and you can move a seat to a different project at any time. Free projects are unlimited on every plan.
 
 ## Plan Comparison
 
 | Feature | Free ($0) | Pro | Growth | Business | Scale |
 |---------|------|------|------|------|------|
 | Public repositories | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited |
+| Paid project seats | 0 | 1 | 5 | 3 | 15 |
 | GitHub sync | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Branding & themes | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Custom domain | ❌ | ❌ | ❌ | ✅ | ✅ |
-| AI chat | ✅ smaller token budget | ✅ | ✅ larger token budget | ✅ higher limit | ✅ largest token budget |
+| AI chat | ✅ $0.15/mo budget | ✅ $15/mo budget | ✅ $84/mo budget | ✅ $45/mo budget | ✅ $225/mo budget |
 | AI translations (15 languages) | ❌ | ✅ | ✅ higher limit | ✅ higher limit | ✅ highest limit |
 | Full SEO / GEO / AEO (sitemap, OG, JSON-LD) | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Analytics period | 24h | 30 days | 30 days | 30 days | 30 days |
+| Analytics period | 24h | 7 days | 30 days | 30 days | 30 days |
 | Private docs (password / SSO) | ❌ | ✅ | ✅ | ✅ | ✅ |
 | Hide "Powered by Docsbook" | ❌ | ❌ | ❌ | ✅ | ✅ |
 | Bring your own AI/translation API key | ❌ | ❌ | ❌ | ✅ | ✅ |
@@ -29,7 +32,7 @@ Docsbook has five plans. Free is free forever — and it already includes reader
 
 ### AI Chat
 
-A chatbot trained on your documentation runs on **every plan**, Free included. Plans differ by the monthly **AI token budget**, not by a feature switch — Free gets a smaller budget, and Pro, Growth, Business, and Scale progressively larger ones (Growth's budget is larger than Pro's; Scale's is the largest of all). Bringing your own provider and API key (OpenRouter, OpenAI, Gemini, Anthropic) — with a custom model of your choice — is a **Business/Scale-only** capability; see [Business/Scale-Only Features](#businessscale-only-features) below.
+A chatbot trained on your documentation runs on **every plan**, Free included. Plans differ by the monthly **AI budget**, not by a feature switch — Free gets $0.15/month, Pro $15, Business $45, Growth $84, and Scale $225 (the largest of all). Choosing which model runs your chat on Docsbook's key is available from **Pro** — the model's price comes out of your AI budget. Bringing your own provider and API key (OpenRouter, OpenAI, Gemini, Anthropic), so the provider bills you directly, is a **Business/Scale-only** capability; see [Business/Scale-Only Features](#businessscale-only-features) below.
 
 ### SEO / GEO / AEO
 
@@ -37,7 +40,7 @@ Meta tags, sitemap.xml, OpenGraph, Twitter cards, JSON-LD (WebSite, Organization
 
 ## What PRO (and Growth) Add
 
-Growth includes everything below that Pro does — same features, larger AI token budget.
+Growth includes everything below that Pro does — same features, larger AI budget, more project seats.
 
 ### 1. Automatic Translation
 
@@ -51,13 +54,13 @@ Business and Scale include a higher monthly translation limit than Pro/Growth.
 
 Custom AI chat system prompt, chat hooks (pre / post / streaming), the MCP Source of Truth indexing graph, and the AI chat analysis dashboard.
 
-### 3. Larger AI Token Budget
+### 3. Larger AI Budget
 
-Pro raises the monthly AI token budget well above the Free allowance; Growth raises it further still. Business raises it above Pro, and Scale raises it further still — the largest budget of any plan.
+Pro raises the monthly AI budget from Free's $0.15 to $15; Business goes to $45, Growth to $84, and Scale to $225 — the largest budget of any plan. The budget belongs to the account and is shared across every paid project on it.
 
 ### 4. Extended Analytics
 
-Free shows the last 24 hours. Pro, Growth, Business, and Scale show 7 / 14 / 30 days of views, visitors, top pages, referrers, and search queries — plus search & feedback analytics.
+Free shows the last 24 hours. Pro shows 7 days; Growth, Business, and Scale show 30 days of views, visitors, top pages, referrers, and search queries — plus search & feedback analytics.
 
 ### 5. Private Docs
 
@@ -83,10 +86,26 @@ On top of the Business/Scale-only features above, Business and Scale also raise 
 
 ## Growth and Scale
 
-Growth and Scale sit alongside Pro and Business as separate plans with larger AI token budgets:
+Growth and Scale sit alongside Pro and Business as separate plans with larger AI budgets and more project seats:
 
-- **Growth** ($349/month) — the same feature set as Pro, with a larger monthly AI token budget. For teams that have outgrown Pro's usage limits but don't need the Business-only capabilities.
-- **Scale** ($899/month) — the same feature set as Business, with the largest monthly AI token budget of any plan. For teams that have outgrown Business's usage limits.
+- **Growth** ($349/month) — the same feature set as Pro, with 5 project seats and an $84/month AI budget. For teams that have outgrown Pro's usage limits but don't need the Business-only capabilities.
+- **Scale** ($899/month) — the same feature set as Business, with 15 project seats and a $225/month AI budget, the largest of any plan. For teams that have outgrown Business's usage limits.
+
+## Project Seats
+
+Your subscription is bought once per **account** and grants project seats — 1 on Pro, 3 on Business, 5 on Growth, 15 on Scale. A project is paid only while it holds a seat, and you assign or release seats yourself from the Limits tab in workspace settings.
+
+- Free projects are unlimited on every plan — they simply keep the "Powered by Docsbook" badge.
+- Moving a seat to a different project is the normal case, not an exception. A project that just gave up a seat has to wait an hour before taking one again, and seat changes are capped at 10 per month per account.
+- Releasing a seat drops that project to Free immediately — its custom domain, private-docs gate and white-label stop applying.
+- Need more projects than your plan includes? You can buy extra seats, up to twice your plan's allowance.
+- If you downgrade or cancel, the oldest seats are kept and the newest are released, so your long-lived production docs stay paid.
+
+## Overage
+
+Paid plans don't hard-stop when the monthly AI budget runs out — further usage is billed as metered overage on top of your subscription, up to a monthly cap you control from the Limits tab (default $20/month). Once you hit the cap, usage is blocked until the next cycle or you raise the cap. Free has no overage; usage simply stops at the free budget.
+
+Usage is priced in money, not tokens: each call is charged at the real price the provider charges for the model that answered, plus a 20% markup. The model, its per-1M-token rate and the markup are all visible in your dashboard, so the amount deducted is one you can check yourself. From Pro you can switch models — a cheaper model makes the same budget go further — and on Business/Scale you can bring your own key and pay the provider directly, in which case we bill you nothing for usage.
 
 ## How to Pay
 
@@ -111,10 +130,10 @@ Full refund within the first 30 days. Email support@docsbook.io.
 ## After Payment
 
 1. **Payment processed** ✅
-2. **Workspace plan upgrades** ✅ (Free → PRO or PRO+)
+2. **Account gets its seats, and the project you checked out with takes one** ✅
 3. **All features available immediately** ✅
 
-You'll see a **Pro** or **Business** label in the Float Widget. New options open in Settings — translations, advanced AI chat config (custom prompt, hooks, Source of Truth), and a larger token budget on Pro; custom domain, white-label, webhooks, and bring-your-own API keys additionally on Business.
+You'll see a **Pro** or **Business** label in the Float Widget. New options open in Settings — translations, advanced AI chat config (custom prompt, hooks, Source of Truth), and a larger AI budget on Pro; custom domain, white-label, webhooks, and bring-your-own API keys additionally on Business.
 
 ## FAQ
 
@@ -128,7 +147,7 @@ A: Yes, cancel anytime in your billing portal. The workspace downgrades to Free 
 
 **Q: Is the paid plan per workspace?**
 
-A: Yes. Billing is per workspace, so each workspace is upgraded separately.
+A: No. The subscription is bought once per account and grants project seats — 1 on Pro, 3 on Business, 5 on Growth, 15 on Scale. Each project you want paid takes one seat, and you can move a seat between projects. Buy extra seats (up to twice your plan's allowance) if you need more.
 
 **Q: What happened to the old lifetime Pro plan?**
 

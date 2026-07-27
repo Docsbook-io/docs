@@ -34,6 +34,6 @@ Use this data to prioritize which pages to rewrite first.
 
 ## Upgrade to Pro
 
-Unlock read time data, extended date ranges (7D / 14D / 30D), and all other advanced analytics.
+Unlock read time data, extended date ranges (7D / 30D), and all other advanced analytics.
 
 > [Upgrade to Pro →](https://docsbook.io/connect)
