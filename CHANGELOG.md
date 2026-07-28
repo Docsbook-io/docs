@@ -9,6 +9,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Added
 
+- Growth and Scale can now work in the AI chat together: see who from your team is in the chat, invite a teammate by email, and watch the same answer stream in for both of you instead of relaying it through Slack. `AI Chat`
 - You can now see whether each visit actually succeeded — visits, outcomes, dead-end pages and exit pages are reconstructed from your existing events, with crawler traffic and inflated read time filtered out. `Analytics`
 - The new Explorer replaces the raw event feed with charts, click-to-filter facets that show counts, drill-down from chart to table to individual visits, and CSV export. `Analytics`
 - Seven new analyses answer real business questions: the routes readers walk, where they leak out of a funnel you declare, reverse funnels from successful visits, W1/W4 retention, searches that got results but no clicks, rage signals, and any headline metric plotted over time. `Analytics`
@@ -42,6 +43,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Fixed
 
+- Answers in the docs chat now cite the pages they came from. Citations were previously empty on every answer, so readers had no way to jump to the source. `AI Chat`
 - Free workspaces no longer see a "credit almost gone" warning on their very first visit, before spending anything. `AI Chat`
 - Visitors, page views, top pages, referrers and events now exclude crawler traffic, which was up to 93% of pageviews on some sites. AI Visits remains the one card that reports bot volume. `Analytics`
 - Search rankings now report your full search volume instead of only the fraction Google exposes per query, and time windows are anchored to the date Google's data actually covers. `SEO`
