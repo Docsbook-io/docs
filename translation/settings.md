@@ -78,19 +78,28 @@ Each language version is indexed separately by search engines, which means passi
 
 The **Translation Activity** panel, on the same Translation tab, is where you check and fix the state of your translations.
 
-It shows:
+At the top are three numbers:
 
-- **Coverage for each language** — of every page in your docs, how many are translated and current, how many are behind your source, and how many have no translation at all. Untranslated pages are the ones your readers see in the original language, so they are counted first.
-- **How many pages are behind your source.** Compared against the current content in your repository, not against a label — so it reflects what your readers are actually being served.
-- **Orphaned translations** whose source file was renamed or deleted.
-- **A live progress bar** while a translation run is going, and, if a run stopped early, why it stopped (budget spent or provider quota reached).
-- **What translation cost**, next to how many sections were reused from cache instead of re-translated.
+- **Coverage** — of every page in your docs across every language you enabled, how much is translated and still matches your source.
+- **Needs attention** — pages that have no translation at all, plus pages whose translation has fallen behind the source. Untranslated pages are the ones your readers see in the original language, so they are counted first.
+- **Spend** — what translation cost over the period your plan retains.
 
-From the same panel you can:
+Below them is a table with one row per page in your documentation. Each row shows a language chip per language, coloured by what your reader actually gets:
 
-- **Fill in what's missing** — the button on each language row translates only the pages that are missing or behind. Pages already up to date are skipped and cost you nothing.
-- **Re-translate a language from scratch** — offered once a language is fully covered, for when the translations themselves need redoing.
-- **Re-translate a single page** — from `Redo` in the recent-changes list.
+- **Up to date** — the translation matches the page's current content in your repository.
+- **Outdated** — the page changed in git and its translation has not caught up yet.
+- **Not translated** — no translation exists, so readers see the original language.
+- **Edited** — a hand-written or uploaded translation. Automatic runs leave these alone.
+
+Pages whose source file was renamed or deleted upstream are marked **No longer in the repository**.
+
+You can **search** for a page by path, and filter the table **by language** or **by state** — for example, to list only what is outdated. A live progress bar appears while a translation run is going, and if a run stopped early, why it stopped (budget spent or provider quota reached).
+
+### Fixing a page
+
+- **Retranslate from the row** — the button on each row translates that page into the language that needs it. Pages already up to date are skipped and cost you nothing.
+- **Open a page** — clicking a row replaces the panel with that page's detail view: every language with its state, and the option to view your source text side by side with the translation. Use the back arrow to return to the table.
+- **Edit a translation by hand** — in the detail view, `Edit` lets you correct the translated text directly. A translation you edit is marked as hand-written, so later automatic runs will not overwrite it.
 
 Re-translating is how a page that has fallen behind gets caught up. Editing a page in GitHub does not re-translate it by itself.
 
