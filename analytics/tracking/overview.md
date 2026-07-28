@@ -16,6 +16,11 @@ Know exactly how many people read your docs and where they come from — without
 | Top pages | Most-visited pages ranked by view count |
 | Referrers | Where visitors came from (Google, GitHub, direct, etc.) |
 | Online now | Live count of active readers in the last 5 minutes |
+| AI Visits | Requests from AI crawlers (ChatGPT, Claude, Perplexity, Google-Extended and others) |
+
+### AI Visits
+
+Switch the chart to **AI Visits** to see one line per AI crawler instead of a single total, so you can tell which assistants are reading your docs and how that changes over time. The twelve busiest bots are charted; each is labelled with the provider behind it.
 
 ## How to Open
 

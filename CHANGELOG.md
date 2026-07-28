@@ -24,6 +24,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - A new **Search + Ask AI** header preset puts a wide search bar in the middle of the header with the Ask AI button right beside it, so both primary actions sit together instead of being split across the right edge. `Design`
 - Headings and body text can now use different fonts, so you can pair a display face with a readable content face. `Design`
 - The language of your docs is now detected automatically, so there is no Auto-detect button to press. `Translation`
+- Translation Activity is now a searchable table of your pages: each row shows whether a page changed in git and whether its translations followed, per language, with a retranslate button on the row. `Translation`
+- Opening a page from that table shows every language's state side by side, your source text next to the translation, and lets you correct a translation by hand without it being overwritten by later automatic runs. `Translation`
+- Analytics can now chart AI Visits as one line per crawler, so you can see which AI assistants read your docs and how that changes over time. `Analytics`
 
 ### Changed
 
@@ -31,6 +34,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Source of Truth and white-label are now Business features, and the pricing page, plan modals and AI upgrade prompts no longer advertise them at the Pro price. `Pricing`
 - The homepage now leads with what your docs do for your revenue rather than the underlying tech, and the FAQ accordion is replaced by a gallery of live customer docs. `Landing`
 - The **Split** header preset is replaced by **Search + Ask AI**; if you were using Split, your header keeps its current arrangement and you can rebuild it from the nav-link position field. `Design`
+- A draft generated before signing in now opens as a real documentation site — header, sidebar tree, outline, breadcrumbs and prev/next — so you can browse every generated page and tune branding, layout and SEO before deciding to publish. `Design`
 
 ### Fixed
 

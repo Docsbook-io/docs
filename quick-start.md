@@ -15,11 +15,11 @@ No account required to start. Create a documentation site in 3 simple steps.
 3. For website or idea sources, Docsbook generates a full draft site in under a minute — no account needed yet
 4. If you picked GitHub, you'll be taken straight to a live preview of your repo's docs
 
-> **Note:** For website/idea sources, your draft lives in your browser only until you publish. You can chat with the AI (a short trial of edits) and preview the result before deciding to sign in.
+> **Note:** For website/idea sources, your draft lives in your browser only until you publish. It opens as a real documentation site — header, sidebar tree, outline, breadcrumbs and prev/next — so you can browse every generated page and adjust branding, layout and SEO in the settings panel before deciding to sign in.
 
 ## Step 2: Sign in to publish
 
-Once you're happy with the draft, click **Publish online**.
+Once you're happy with the draft, click **Publish changes** in the settings panel.
 
 1. Choose a sign-in method — GitHub, Google, Apple, or email (one-time code)
 2. Complete the sign-in flow for your chosen method
