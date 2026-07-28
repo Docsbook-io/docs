@@ -36,6 +36,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The **Split** header preset is replaced by **Search + Ask AI**; if you were using Split, your header keeps its current arrangement and you can rebuild it from the nav-link position field. `Design`
 - A draft generated before signing in now opens as a real documentation site — header, sidebar tree, outline, breadcrumbs and prev/next — so you can browse every generated page and tune branding, layout and SEO before deciding to publish. `Design`
 
+### Removed
+
+- The separate AI Spend card is gone from the AI Chat tab. What the assistant cost you now sits as an expandable line at the bottom of `Conversations`, so the tab leads with what the chat did for your business rather than what it billed. `AI Chat`
+
 ### Fixed
 
 - Free workspaces no longer see a "credit almost gone" warning on their very first visit, before spending anything. `AI Chat`
