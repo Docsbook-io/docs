@@ -41,6 +41,18 @@ Pick which model runs your chat from the workspace settings **(Pro plan and abov
 
 Bring your own API key from the workspace settings **(Business and Scale plans)** — costs charged by the upstream provider are billed to your key, and nothing is deducted from your Docsbook AI budget.
 
+## Multiplayer chat (Growth and Scale)
+
+Documentation questions are rarely a solo activity — someone asks, someone else knows half the answer, and the result ends up pasted into Slack where nobody finds it again.
+
+On **Growth** and **Scale**, open the people icon in the top right of the chat to bring a teammate into the same session:
+
+- **See who's here.** The button shows who from your team is currently in this chat.
+- **Invite by email.** Send an invite to anyone, whether or not they already have a Docsbook account — the link takes them through sign-in and straight into the project.
+- **One shared answer.** You both ask, and you both watch the same answer stream in, so the answer lands with everyone at once instead of being relayed second-hand.
+
+Sessions are live only: nothing about a shared chat is stored after everyone leaves.
+
 ## Limits
 
 AI chat runs on **every plan**. Plans differ by the monthly **AI budget**, not by a feature switch. The budget is per account and shared across every paid project on it.
@@ -50,8 +62,8 @@ AI chat runs on **every plan**. Plans differ by the monthly **AI budget**, not b
 | Free | Included — $0.15/month AI budget |
 | Pro | Included — $59/month AI budget; pick which model runs your chat |
 | Business | Included — $159/month AI budget; can bring your own API key & model |
-| Growth | Included — $349/month AI budget |
-| Scale | Included — $899/month AI budget, the largest of any plan |
+| Growth | Included — $349/month AI budget; multiplayer chat (invite your team into one live session) |
+| Scale | Included — $899/month AI budget, the largest of any plan; multiplayer chat |
 
 Every paid plan's AI budget is the same amount you pay for the plan: Pro costs $59/month and includes $59 of AI usage.
 

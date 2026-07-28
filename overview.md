@@ -72,7 +72,7 @@ A **workspace** = one documentation site. You can create unlimited workspaces fr
 |---|---|---|
 | **Free** | $0 | Unlimited docs, branding, basic UI controls, analytics (24h), AI chat ($0.15/mo AI budget), SEO / AEO / GEO |
 | **Pro** | $59/mo, 7-day free trial | 1 project seat, translations, advanced AI chat config (custom prompt, hooks), your choice of AI model, search & feedback analytics, $59/mo AI budget |
-| **Growth** | $349/mo | Every Business capability, with 5 project seats and a $349/mo AI budget — for teams that have outgrown Business's usage limits |
+| **Growth** | $349/mo | Every Business capability plus multiplayer AI chat (invite your team into one live session), with 5 project seats and a $349/mo AI budget — for teams that have outgrown Business's usage limits |
 | **Business** | $159/mo, 14-day free trial | Everything in Pro, plus 3 project seats, custom domain, white-label, webhooks (25), bring-your-own API key, semantic doc index & relationship graph, hosted API reference, UTM analytics, a $159/mo AI budget, and higher translation limits |
 | **Scale** | $899/mo | Same feature set as Business, with 15 project seats and a $899/mo AI budget, the largest of any plan — for teams that have outgrown Business's usage limits |
 
@@ -100,6 +100,7 @@ Every paid plan includes an AI budget equal to its price: Pro costs $59/month an
 - **AI Chatbot** — answers questions based on your documentation (every plan, limited by a monthly AI budget in dollars; Pro/Growth/Business/Scale get progressively larger budgets)
 - **Semantic doc index & relationship graph** — meaning-based search and structured data about your docs, for AI agents (Business / Scale)
 - **Custom AI chat config** — system prompt, chat hooks (Pro / Growth / Business / Scale)
+- **Multiplayer AI chat** — see who from your team is in the chat, invite a teammate by email, and share one live session where you both watch the answer stream in (Growth / Scale)
 - **LSP-style tools** — semantic search, link resolution, outline navigation
 
 ### 🌍 Translation & Localization (Pro / Growth / Business / Scale)
