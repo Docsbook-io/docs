@@ -31,6 +31,11 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The Semantic Graph card on a plan below Business now opens a page explaining the feature before sending you to the price table. `AI Chat`
 - Long feature explanations in the plan comparison no longer get cut off at the edge of the Business column. `Billing`
 - Clicking a page link inside an anonymous draft at `docsbook.io/draft` no longer redirects to a broken `draft.docsbook.io` subdomain. `Preview`
+- The feature unlock cards no longer advertise plans and features that do not exist: there is no "Starter" tier, DeepSearch was removed long ago, and Custom Questions is free on every plan rather than Pro. `Billing`
+- Unlock cards now quote the real numbers instead of stale ones: your monthly AI budget in dollars rather than a query count, 15 supported languages rather than "50+", and the actual chat model and MCP tool counts. `Billing`
+- Extra usage is now described the way it is actually billed, in dollars against your monthly spend limit, instead of a per-query price that was never charged. `Billing`
+- Paywall messages now name the tier you can actually buy, "Pro", instead of a "Pro+" plan that is not on the price list. `Billing`
+- The chat feature is now called `AI Chat` everywhere in the admin panel, instead of switching between "AI Agent" and "AI Chat" between screens. `AI Chat`
 
 ## NEW - 28.07.2026
 
