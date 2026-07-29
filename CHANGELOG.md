@@ -30,6 +30,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The project picker no longer offers a visitor without an account a "Connect GitHub" action that could not apply to them. `AI Chat`
 - The Semantic Graph card on a plan below Business now opens a page explaining the feature before sending you to the price table. `AI Chat`
 - Long feature explanations in the plan comparison no longer get cut off at the edge of the Business column. `Billing`
+- Clicking a page link inside an anonymous draft at `docsbook.io/draft` no longer redirects to a broken `draft.docsbook.io` subdomain. `Preview`
 
 ## NEW - 28.07.2026
 
