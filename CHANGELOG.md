@@ -12,8 +12,18 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Every paid feature in the plan comparison now carries a question-mark tooltip explaining what it buys your business, in plain language rather than capability names. `Billing`
 - The semantic doc index is now described by what it actually does for you: it is the biggest single improvement to AI chat answer quality, the chat answers from the exact section with the page cited instead of inventing one, and replies come back faster. `AI Chat`
 
+### Changed
+
+- The guided tour of a preview now walks you through the real settings panel filled with sample numbers, instead of standing in for it with a picture. `Preview`
+- Prices are no longer hidden from visitors who have not signed up: the full plan comparison is visible in a preview, and picking a plan opens the signup form. `Billing`
+- Every sign-up prompt in a preview now opens the signup form where you are, rather than sending you to a page that asks you to sign in again and loses the preview you were exploring. `Preview`
+- Generating your first draft no longer pops the settings panel open over your new site — it stays open, with a "Customize your site here" hint pointing at the gear instead. `Preview`
+
 ### Fixed
 
+- The guided tour no longer crashes on the Translations step. `Preview`
+- The Search rankings card in a preview no longer claims Search Console is not connected. `SEO`
+- The project picker no longer offers a visitor without an account a "Connect GitHub" action that could not apply to them. `AI Chat`
 - The Semantic Graph card on a plan below Business now opens a page explaining the feature before sending you to the price table. `AI Chat`
 - Long feature explanations in the plan comparison no longer get cut off at the edge of the Business column. `Billing`
 
