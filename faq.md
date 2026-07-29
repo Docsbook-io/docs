@@ -235,7 +235,7 @@ A: An account subscription — **$159/month**, 14-day free trial, with 3 project
 - White-label (hide "Powered by Docsbook")
 - Webhooks — up to 25 per workspace
 - Bring your own AI chat and/or translation API key (with custom model)
-- Semantic doc index & relationship graph — meaning-based chat search plus content health findings
+- Semantic doc index & relationship graph — the biggest single improvement to AI chat answer quality (finds the right section by meaning, answers from it with the page cited rather than inventing one, and replies faster), plus content health findings
 - A $159/month AI budget, and higher translation limits than Pro
 
 ---

@@ -98,7 +98,7 @@ Every paid plan includes an AI budget equal to its price: Pro costs $59/month an
 
 ### 🤖 AI Features
 - **AI Chatbot** — answers questions based on your documentation (every plan, limited by a monthly AI budget in dollars; Pro/Growth/Business/Scale get progressively larger budgets)
-- **Semantic doc index & relationship graph** — meaning-based search and structured data about your docs, for AI agents (Business / Scale)
+- **Semantic doc index & relationship graph** — the biggest single improvement to AI chat answer quality: the chat finds the right section by meaning, answers from it with the page cited instead of inventing one, and replies faster because it retrieves less. Also exposes structured data about your docs to AI agents (Business / Scale)
 - **Custom AI chat config** — system prompt, chat hooks (Pro / Growth / Business / Scale)
 - **Multiplayer AI chat** — see who from your team is in the chat, invite a teammate by email, and share one live session where you both watch the answer stream in (Growth / Scale)
 - **LSP-style tools** — semantic search, link resolution, outline navigation

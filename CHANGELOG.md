@@ -5,6 +5,18 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 29.07.2026
+
+### Improved
+
+- Every paid feature in the plan comparison now carries a question-mark tooltip explaining what it buys your business, in plain language rather than capability names. `Billing`
+- The semantic doc index is now described by what it actually does for you: it is the biggest single improvement to AI chat answer quality, the chat answers from the exact section with the page cited instead of inventing one, and replies come back faster. `AI Chat`
+
+### Fixed
+
+- The Semantic Graph card on a plan below Business now opens a page explaining the feature before sending you to the price table. `AI Chat`
+- Long feature explanations in the plan comparison no longer get cut off at the edge of the Business column. `Billing`
+
 ## NEW - 28.07.2026
 
 ### Added
