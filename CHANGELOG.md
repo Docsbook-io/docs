@@ -7,6 +7,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ## NEW - 29.07.2026
 
+### Added
+
+- Ask AI now works on a draft before you sign in — 3 free messages, then a sign-in prompt to keep chatting and save your site. `AI Chat`
+
 ### Improved
 
 - Every paid feature in the plan comparison now carries a question-mark tooltip explaining what it buys your business, in plain language rather than capability names. `Billing`
