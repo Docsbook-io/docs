@@ -192,6 +192,8 @@ nslookup docs.example.com
 
 ## Troubleshooting
 
+<!-- widget:accordion -->
+
 ### DNS Not Updating
 
 **Problem:** 2+ hours have passed, but domain doesn't work
@@ -237,6 +239,8 @@ nslookup docs.example.com
 **Problem:** Domain configured but not verifying, or showing SSL errors
 
 **Solution:** If you use CloudFlare, set the DNS record to **DNS only** (grey cloud icon, not orange). The orange cloud (proxy mode) intercepts traffic before Vercel can verify the domain. Switch to grey cloud, then click **"Check domain status"** again.
+
+<!-- /widget -->
 
 ## Changing Your Domain
 

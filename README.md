@@ -9,6 +9,8 @@ Welcome to Docsbook!
 
 Here you'll find answers to all questions about how to use our service.
 
+<!-- widget:cards -->
+
 ## Start Here
 
 - [Overview](./overview.md) — What is Docsbook, how it works, and why it matters
@@ -49,6 +51,8 @@ Here you'll find answers to all questions about how to use our service.
 
 - [Translation Settings](./translation/settings.md) — Enable languages, switcher placement
 - [AI Translations](./translation/ai-translations.md) — How automatic translation works
+
+<!-- /widget -->
 
 ## Frequently Asked Questions
 
