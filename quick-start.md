@@ -7,7 +7,9 @@ description: "Generate a documentation site from a website, an idea, or a GitHub
 
 No account required to start. Create a documentation site in 3 simple steps.
 
-## Step 1: Start generating — no sign-in required
+<!-- widget:stepper -->
+
+## Start generating — no sign-in required
 <!-- anchor: step-1-create-website -->
 
 1. Open [docsbook.io](https://docsbook.io) and click **"Create website"**
@@ -17,7 +19,7 @@ No account required to start. Create a documentation site in 3 simple steps.
 
 > **Note:** For website/idea sources, your draft lives in your browser only until you publish. It opens as a real documentation site — header, sidebar tree, outline, breadcrumbs and prev/next — so you can browse every generated page and adjust branding, layout and SEO in the settings panel before deciding to sign in. **Ask AI** is also available on the draft — ask it up to 3 free messages to tweak content or ask questions about your site before you're asked to sign in to keep chatting.
 
-## Step 2: Sign in to publish
+## Sign in to publish
 
 Once you're happy with the draft, click **Publish changes** in the settings panel.
 
@@ -27,7 +29,7 @@ Once you're happy with the draft, click **Publish changes** in the settings pane
 
 > **Note:** Docsbook uses GitHub to read repository files. If your site came from a GitHub repo and you sign in with Google, Apple, or email, you'll be prompted to authorize GitHub access.
 
-## Step 3: View Your Site
+## View Your Site
 
 Your documentation is already available at:
 
@@ -40,6 +42,8 @@ docsbook.io/{your-name}/{repo}
 - Docsbook: `docsbook.io/alice/my-project`
 
 If you started from a website or an idea, Docsbook hosts the generated site for you under its own repository — the URL follows the same `docsbook.io/{owner}/{repo}` pattern.
+
+<!-- /widget -->
 
 ## Done! 🎉
 

@@ -5,6 +5,16 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 31.07.2026
+
+### Added
+
+- A new `Stepper` content widget renders headed sections as a numbered, connected sequence — for installation guides and multi-stage tutorials where order matters. `Content Widgets`
+
+### Fixed
+
+- Cards, tables, and the accordion/stepper surface now match a custom-branded workspace's background instead of staying stark white. `Branding`
+
 ## NEW - 30.07.2026
 
 ### Added
