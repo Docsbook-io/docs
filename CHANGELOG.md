@@ -5,6 +5,12 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 30.07.2026
+
+### Added
+
+- Add a [lucide](https://lucide.dev/icons) icon next to any page or folder in the left sidebar, and to any tab in the subheader folder navigation. `Sidebar`
+
 ## NEW - 29.07.2026
 
 ### Added
