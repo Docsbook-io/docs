@@ -15,7 +15,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Changed
 
-- The docs toolbar's `Ask AI` button is now a three-way `Preview / Chat / Editor` switcher — Chat opens the full AI chat directly with the composer focused, Editor arms block-level editing with no chat needed. `AI Chat`
+- The docs toolbar's `Ask AI` button is now two icon buttons next to your avatar: `Chat` opens the full AI chat directly with the composer focused, `Editor` arms block-level editing with no chat needed. Pressing the active one returns the page to its normal state. `AI Chat`
+- The conversation switcher left the docs toolbar — past chats are switched from the chat's own header, where a conversation is on screen to switch away from. `AI Chat`
 - The `Invite` button in the chat header is now a plus-icon next to your account avatar, matching the header's other icon-only controls. `AI Chat`
 - The account menu (theme, Integrations, sign out) and the `Workspace settings` gear moved from the chat input's footer to the header, next to your avatar. `AI Chat`
 - The admin/reader mode toggle inside an open chat is gone — the mode now follows how you opened the chat (the admin toolbar starts the builder, a site chat widget starts reader mode). `AI Chat`
