@@ -16,7 +16,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Changed
 
 - The chat header now shows the Invite panel on every plan, with sending gated to Growth, so you can see collaboration before buying it. Inviting by email and creating an invite link sit in one place. `AI Chat`
-- The chat's close icon is now a labelled `Open` button that leads to your documentation site. `AI Chat`
+- The chat's close icon is now a labelled `Preview` button that leads to your documentation site. `AI Chat`
 
 ### Fixed
 
