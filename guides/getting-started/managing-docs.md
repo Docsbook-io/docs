@@ -158,6 +158,8 @@ You do not need GitHub or a local checkout for small changes — you can edit th
 
 The panel that opens can rewrite the block with AI, edit its text, shorten or expand it, turn it into a widget ([Content Widgets](../../content/features/widgets.md)), or remove it. Drag a block by its handle to move it — the new order is previewed until you **Save** or **Revert**.
 
+To add something rather than change it, move the pointer to the seam between two blocks: a plus button appears on the line between them and offers a paragraph, a heading, a list, a code block, a quote, a callout, a table or a widget. Text blocks ask you what they should say before anything is sent. **Add a page** at the bottom of the sidebar creates a whole new page from a title, a folder and — if you want to give one — a note on what it should cover.
+
 Changes still go through the assistant and are committed to your repository, so your source stays the single point of truth.
 
 ## Checking Synchronization

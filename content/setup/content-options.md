@@ -16,7 +16,7 @@ Control the UI elements that appear around your page content.
 | Scroll to top button | Floating button that returns the reader to the top of the page |
 | Prev / Next buttons | Navigation arrows at the bottom of each page |
 | Breadcrumbs | Breadcrumb trail above the page title |
-| Ask AI button | "Ask AI" button shown on the page |
+| Ask AI button | Preview / Chat switcher shown on the page (owners also get Editor) |
 | Ask AI in outline | AI button shown in the right-side table of contents panel |
 | Copy page menu items | Seven independent toggles for the Copy page dropdown — Skills.md URL, view as Markdown, and one per AI client (ChatGPT, Claude, Cursor, Windsurf, VS Code MCP) |
 
@@ -67,10 +67,14 @@ The Copy page dropdown includes Copy Skills.md URL, View as Markdown, and one-cl
 
 ## Ask AI Button
 
-Shows a "Ask AI" prompt button that opens the AI chat assistant. Requires the AI Agent to be enabled.
+Shows the AI controls on the page. Requires the AI Agent to be enabled.
+
+On the page itself this renders as a small segmented switcher. Readers see
+**Preview** and **Chat** — Chat opens the AI assistant. Signed-in owners get a
+third position, **Editor**, which arms block-level editing of the live page.
 
 You can show it:
-- On the page (as a floating or inline button)
+- On the page (the switcher, above the content)
 - In the right outline panel (table of contents area)
 
 Both can be on at the same time if you want maximum discoverability.
