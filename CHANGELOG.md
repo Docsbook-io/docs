@@ -28,6 +28,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Documentation edits made through a connected AI tool no longer report success while writing to an abandoned repository, on projects that were moved to their own GitHub. `MCP`
 - Editing on the live page is now documented as its own method alongside GitHub and Claude Code — the guide promised three ways to edit and listed two. `Documentation`
 - The FAQ links in the documentation-management guide pointed one folder too high and led nowhere. `Documentation`
+- The sidebar now opens with your introduction and quick start instead of whatever page happens to come first alphabetically, and leaves reference pages, changelogs and FAQs at the end. Previous/next links follow the same order. `Navigation`
+- The drag handle no longer disappears as you move the pointer toward it, so blocks can actually be dragged. On a narrow preview it sits over the block's first line rather than being pushed onto the text. `Live Editing`
+- Dragging a heading now moves its whole section on the page, matching what the edit is described as doing — previously the heading moved alone and left its content behind. `Live Editing`
 
 ## NEW - 30.07.2026
 

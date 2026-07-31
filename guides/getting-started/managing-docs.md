@@ -229,6 +229,14 @@ docs/
 
 **We recommend Option 1** — clearer structure.
 
+### What decides the order of pages?
+
+Docsbook reads the names. Pages that clearly start a reader off — `README`, `introduction`, `getting-started`, `quick-start`, `installation`, `setup` — are listed first, and pages that are clearly for looking things up — `reference`, `api`, `changelog`, `faq`, `troubleshooting` — are listed last. Everything else stays in alphabetical order between them, and so do folders, which are ranked by their own names.
+
+This is why Option 2's numeric prefixes still work: `1-basics.md` sorts before `2-intermediate.md` alphabetically, and the number is ignored when Docsbook checks the name against the lists above.
+
+If your pages match neither list, the sidebar is plain alphabetical order — rename a file to move it.
+
 ## Links Between Pages
 
 ### How to create links within documentation?
