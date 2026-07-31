@@ -5,6 +5,24 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 01.08.2026
+
+### Added
+
+- A blue `Upgrade` badge appears next to the account controls in the docs toolbar for free-plan workspaces. `AI Chat`
+
+### Changed
+
+- The docs toolbar's `Ask AI` button is now a three-way `Preview / Chat / Editor` switcher — Chat opens the full AI chat directly with the composer focused, Editor arms block-level editing with no chat needed. `AI Chat`
+- The `Invite` button in the chat header is now a plus-icon next to your account avatar, matching the header's other icon-only controls. `AI Chat`
+- The account menu (theme, Integrations, sign out) and the `Workspace settings` gear moved from the chat input's footer to the header, next to your avatar. `AI Chat`
+- The admin/reader mode toggle inside an open chat is gone — the mode now follows how you opened the chat (the admin toolbar starts the builder, a site chat widget starts reader mode). `AI Chat`
+
+### Fixed
+
+- A workspace's forced light or dark theme no longer loses to the system theme in the AI chat and other admin surfaces. `Branding`
+- The sitemap now lists each marketing page's real publication date instead of the time it was last crawled, so Google can trust which pages actually changed. `SEO`
+
 ## NEW - 31.07.2026
 
 ### Added
