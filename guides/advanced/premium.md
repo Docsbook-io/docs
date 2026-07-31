@@ -153,6 +153,16 @@ A: No. The subscription is bought once per account and grants project seats — 
 
 A: The one-time lifetime plan is no longer sold. Existing lifetime customers keep their plan and are not affected by this change.
 
+<!-- widget:cta -->
+
+## Pick a plan when you're ready
+
+Pro starts with a 7-day free trial, Business with 14 days — no card charged until the trial ends.
+
+[View pricing](https://docsbook.io/upgrade) · [Set up a custom domain](./custom-domain.md)
+
+<!-- /widget -->
+
 ## What's Next
 
 - [How to Set Up a Custom Domain](./custom-domain.md)

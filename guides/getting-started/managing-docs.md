@@ -148,6 +148,18 @@ git push origin main
 2. Commit the deletion
 3. The page disappears from the site
 
+### Method 5: Edit on the Live Page
+
+You do not need GitHub or a local checkout for small changes — you can edit the page you are reading.
+
+1. Open the project in the Docsbook AI chat with the preview beside it (split view)
+2. Switch the bar above the preview from **Preview** to **Edit**
+3. Click the block you want to change
+
+The panel that opens can rewrite the block with AI, edit its text, shorten or expand it, turn it into a widget ([Content Widgets](../../content/features/widgets.md)), or remove it. Drag a block by its handle to move it — the new order is previewed until you **Save** or **Revert**.
+
+Changes still go through the assistant and are committed to your repository, so your source stays the single point of truth.
+
 ## Checking Synchronization
 
 ### Why hasn't my site updated?
@@ -359,4 +371,4 @@ Contact [support@docsbook.io](mailto:support@docsbook.io) for setup help.
 
 - [Setting Up a Custom Domain](../advanced/custom-domain.md)
 - [PRO and PRO+ plans](../advanced/premium.md)
-- [Frequently Asked Questions](../faq.md)
+- [Frequently Asked Questions](../../faq.md)

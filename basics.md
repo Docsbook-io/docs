@@ -210,8 +210,12 @@ Everything in Pro, plus Business-exclusive capabilities, plus higher usage limit
 - ✅ 3 paid project seats
 - ✅ Higher translation limit than Pro
 
-## How to Get Started?
+<!-- widget:cta -->
 
-Ready? [Create your first workspace](./quick-start.md) in 3 minutes.
+## How to get started?
 
-Have questions? See the [FAQ](./faq.md).
+Creating your first workspace takes about three minutes.
+
+[Create your first workspace](./quick-start.md) · [Read the FAQ](./faq.md)
+
+<!-- /widget -->

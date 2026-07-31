@@ -7,6 +7,8 @@ description: "Show or hide UI elements around your documentation content — scr
 
 Control the UI elements that appear around your page content.
 
+> Looking to change how the content itself renders — cards, accordions, steps, call-to-action blocks? That is [Content Widgets](../features/widgets.md), written in the markdown rather than toggled here.
+
 ## Settings
 
 | Setting | What it does |

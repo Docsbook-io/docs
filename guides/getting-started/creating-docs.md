@@ -230,6 +230,22 @@ Claude runs the necessary commands for you. Your Docsbook site updates within se
 
 ---
 
+### Option C — Edit on the page itself (no GitHub, no install)
+
+Once your site is connected, you can edit it from the page you are looking at, inside the Docsbook AI chat.
+
+1. Open your project in the chat and put the preview beside it (split view).
+2. Switch the bar above the preview from **Preview** to **Edit**.
+3. Click any block on the page — a panel opens with what you can do to it.
+
+From that panel you can rewrite the block with AI, edit its text directly, make it more concise, expand it, turn it into a widget, or remove it. Dragging a block by its handle moves it to another position; the page shows the pending order until you **Save** or **Revert**.
+
+Every action goes to the assistant as an ordinary instruction and is committed to your source repository like any other change — nothing is applied silently behind your back.
+
+**When to use it:** small corrections and reordering while you are reading the page. For writing several pages at once, Option B is faster.
+
+---
+
 ## Connect your docs
 
 After, you should connect your repository. Go to [docsbook.io/connect](https://docsbook.io/connect) — this page lets you sign in and select a repository at any time.

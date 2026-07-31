@@ -43,6 +43,7 @@ Here you'll find answers to all questions about how to use our service.
 
 - [GitHub Integration](./content/setup/github-integration.md) — "Edit on GitHub" link for every page {git-branch}
 - [Content Options](./content/setup/content-options.md) — Scroll to top, prev/next, AI button {settings-2}
+- [Content Widgets](./content/features/widgets.md) — Cards, accordions, steps, call-to-action blocks {layout-grid}
 - [Search Options](./content/features/search.md) — Header and sidebar search {search}
 - [Copy Options](./content/features/copy.md) — Copy page and copy code buttons {copy}
 - [Page Feedback](./content/features/feedback.md) — Thumbs up/down ratings per page {thumbs-up}
@@ -64,5 +65,15 @@ Have questions? [Contact us](mailto:support@docsbook.io) or join our [Discord](h
 
 ---
 
-**Docsbook** — transform your GitHub documentation into a beautiful site in 5 seconds.
-[Get started free →](https://docsbook.io/connect)
+<!-- widget:cta -->
+
+**Docsbook**
+
+## Turn your GitHub docs into a site in 5 seconds
+
+No build step, no deployment, no CI/CD — connect a repository and your markdown is live.
+
+[Get started free](https://docsbook.io/connect) · [See how it works](./overview.md)
+
+<!-- /widget -->
+

@@ -10,6 +10,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Added
 
 - A new `Stepper` content widget renders headed sections as a numbered, connected sequence — for installation guides and multi-stage tutorials where order matters. `Content Widgets`
+- Two new call-to-action content widgets close a page with the next step the reader should take: `cta` renders a heading and one or two buttons, and `cta-form` turns the primary action into a single field whose value is carried into the target URL. Both stay compact so a documentation page still reads as documentation. `Content Widgets`
+- A [Content Widgets](./content/features/widgets.md) page documents all six widgets, their markdown contract, and how to insert one from the block editor. `Documentation`
+- Generated draft sites now close their selling pages with a call-to-action block, chosen from the widget catalog rather than a fixed list, so a newly shipped widget reaches generated sites automatically. `Site Generation`
 - A Docsbook-hosted project can now be moved into a GitHub repository you own, straight from the chat header: Docsbook creates the repository and copies every page across in one commit. Note that the public URL changes and the move is one-way. `AI Chat`
 - A GitHub button in the chat header shows where a project's source lives, and connects an account when there is none. `AI Chat`
 
@@ -23,6 +26,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The auto-generated TL;DR block now replaces the opening paragraph it was taken from, instead of repeating the same sentence directly below itself. `GEO`
 - Cards, tables, and the accordion/stepper surface now match a custom-branded workspace's background instead of staying stark white. `Branding`
 - Documentation edits made through a connected AI tool no longer report success while writing to an abandoned repository, on projects that were moved to their own GitHub. `MCP`
+- Editing on the live page is now documented as its own method alongside GitHub and Claude Code — the guide promised three ways to edit and listed two. `Documentation`
+- The FAQ links in the documentation-management guide pointed one folder too high and led nowhere. `Documentation`
 
 ## NEW - 30.07.2026
 

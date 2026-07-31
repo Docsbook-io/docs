@@ -189,6 +189,8 @@ Every paid plan includes an AI budget equal to its price: Pro costs $59/month an
 2. **Preview and refine**  
    Your draft opens as a real documentation site — sidebar, outline, breadcrumbs and all. Browse the generated pages and tune branding, layout and SEO in the settings panel, all before signing in
 
+   The draft is written to convert, not just to inform: a landing page, getting started, concepts, feature overview, a how-to guide, use cases, an FAQ, a reference, and — when your source publishes prices — a pricing page. Pages that sell close with a call-to-action block, and every price, plan and limit is copied from your own site. Nothing commercial is invented: a plan whose price wasn't found reads "Contact sales".
+
 3. **Sign in to publish**  
    Choose GitHub, Google, Apple, or email — your draft becomes a live workspace automatically, no re-work needed. GitHub-sourced sites authorize repo access at this step.
 
@@ -205,6 +207,14 @@ That's it! No build step, no deployment, no CI/CD.
 
 ---
 
-**Ready to start?** [Create your first site →](https://docsbook.io/create)
+<!-- widget:cta -->
 
-**Questions?** [See our FAQ](./faq.md) or [contact us](mailto:support@docsbook.io).
+## Ready to start?
+
+Your first site takes about three minutes, and you can see the draft before signing in.
+
+[Create your first site](https://docsbook.io/create) · [Read the FAQ](./faq.md)
+
+<!-- /widget -->
+
+**Questions?** [Contact us](mailto:support@docsbook.io).
