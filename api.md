@@ -32,12 +32,12 @@ Keep your key secret — it grants full access to your workspace's AI chat, bill
 against your account's AI budget (the same budget the docs-chat widget uses;
 there is no separate API-only quota).
 
+<!-- widget:api -->
+
 ## POST /api/v1/chat
 
 Ask a question against your workspace's documentation and get back an answer
 grounded in your own pages.
-
-### Request body
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -73,3 +73,5 @@ curl -X POST https://docsbook.io/api/v1/chat \
 | `401` | Missing or invalid API key |
 | `403` | AI chat is not enabled for this workspace |
 | `429` | The account's AI budget (and any overage allowance) is exhausted |
+
+<!-- /widget -->
