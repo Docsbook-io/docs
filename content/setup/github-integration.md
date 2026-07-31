@@ -7,6 +7,8 @@ description: "Enable an Edit on GitHub link on every Docsbook page so readers ca
 
 Let readers jump directly to edit any page on GitHub — making community contributions effortless.
 
+> Looking for something else? This page is about the reader-facing edit link. To connect a GitHub account, or to move a Docsbook-hosted project into a repository you own, use the GitHub button in the AI chat header — see [Quick Start](../../quick-start.md).
+
 ## Settings
 
 | Setting | What it does |

@@ -42,6 +42,9 @@ There are two ways to create a workspace:
 3. You sign in, and the draft becomes a live Workspace automatically
                     ↓
 4. Site is available at: docsbook.io/{owner}/{repo} (Docsbook-hosted repo)
+                    ↓
+5. Optional: move the project to your own GitHub from the chat header
+   (creates the repo, copies every page — the public URL changes)
 ```
 
 ## Site Structure

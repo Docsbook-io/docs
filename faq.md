@@ -251,7 +251,7 @@ A: Free $0 forever. Pro $59/month (1 project seat). Business $159/month (3 seats
 A: Your subscription stays active until the end of the current billing period — no immediate cutoff.
 
 After it ends, every project that held a seat drops to **Free**:
-- The site stays online at `docsbook.io/owner/repo` (forever)
+- The site stays online at `docsbook.io/owner/repo` (forever, unless you move the project to your own GitHub — that changes the address)
 - Your custom domain stops resolving (revert DNS or re-upgrade — Business only)
 - Translations, white-label, and webhooks turn off; AI chat and SEO keep running on the Free AI budget
 - All your content stays in GitHub — nothing is deleted

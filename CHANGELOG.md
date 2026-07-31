@@ -10,10 +10,18 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Added
 
 - A new `Stepper` content widget renders headed sections as a numbered, connected sequence — for installation guides and multi-stage tutorials where order matters. `Content Widgets`
+- A Docsbook-hosted project can now be moved into a GitHub repository you own, straight from the chat header: Docsbook creates the repository and copies every page across in one commit. Note that the public URL changes and the move is one-way. `AI Chat`
+- A GitHub button in the chat header shows where a project's source lives, and connects an account when there is none. `AI Chat`
+
+### Changed
+
+- The chat header now shows the Invite panel on every plan, with sending gated to Growth, so you can see collaboration before buying it. Inviting by email and creating an invite link sit in one place. `AI Chat`
+- The chat's close icon is now a labelled `Open` button that leads to your documentation site. `AI Chat`
 
 ### Fixed
 
 - Cards, tables, and the accordion/stepper surface now match a custom-branded workspace's background instead of staying stark white. `Branding`
+- Documentation edits made through a connected AI tool no longer report success while writing to an abandoned repository, on projects that were moved to their own GitHub. `MCP`
 
 ## NEW - 30.07.2026
 

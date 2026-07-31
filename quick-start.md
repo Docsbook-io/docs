@@ -43,6 +43,15 @@ docsbook.io/{your-name}/{repo}
 
 If you started from a website or an idea, Docsbook hosts the generated site for you under its own repository — the URL follows the same `docsbook.io/{owner}/{repo}` pattern.
 
+### Moving a hosted project to your own GitHub
+
+A hosted project does not have to stay hosted. In the AI chat, the **GitHub button** in the top-right corner moves it into a repository on your own account: Docsbook creates the repository, copies every page into it in one commit, and points the project at it. From then on your edits commit straight to your repo.
+
+Two things to know before you move:
+
+- **The public URL changes.** The site is served from your own path afterwards, and the previous hosted address stops working — there is no redirect from the old link. Update anywhere you have shared it.
+- **The move is one-way.** There is no button to move a project back onto Docsbook hosting.
+
 <!-- /widget -->
 
 ## Done! 🎉
