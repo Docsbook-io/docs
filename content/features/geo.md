@@ -19,7 +19,7 @@ Toggle **GEO** on in the admin **SEO / GEO** tab. Once enabled, every documentat
 A short summary is injected right after the H1 as a styled `<aside class="tldr">` block. Source order:
 
 1. If your markdown frontmatter contains an explicit `tldr:` field — that string is used verbatim (up to 280 characters).
-2. Otherwise — Docsbook extracts the first paragraph after the H1 and truncates it cleanly to fit.
+2. Otherwise — Docsbook extracts the first paragraph after the H1 and truncates it cleanly to fit. In this case the TL;DR block *replaces* that paragraph rather than repeating it, so the same sentence never appears twice in a row.
 
 This is the snippet that most AI engines pick when summarizing your page.
 
