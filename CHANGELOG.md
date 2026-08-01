@@ -15,9 +15,14 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - An `Add a page` button in the sidebar creates a new documentation page from a title, a folder and an optional brief. `Block Editor`
 - Your AI agent can now read a public web page and get it back as clean Markdown, so it can check your docs against a competitor's pricing, your own marketing site, or a link that may have gone dead. `MCP`
 - Signing up now starts by asking what you do — founder, developer, technical writer, marketing, support — so the product can speak to your job rather than treat everyone the same. `Onboarding`
+- A `Call To Action URL` field sets the one page your docs should drive readers to. Your AI chat points evaluating readers there, content generation writes pages towards it and can add it to your header as a button, and analytics counts conversations ending on that domain as reaching the goal. `Branding`
+- The welcome questions now end by asking where your docs should send readers, so your first pages are written towards a real destination. The step is optional and can be skipped. `Onboarding`
+- Your AI agent can read and set the call-to-action page through `update_branding`, and sees it on every workspace it reads. `MCP`
 
 ### Changed
 
+- The chat's target page setting moved from `AI Chat` to `Branding` and is now called `Call To Action URL`, since it is your project's goal rather than a chat option. Anything you already set is unchanged. `Branding`
+- A site built before signing up now keeps the call to action found on your own website, so the published project starts with a goal instead of a blank field. `Onboarding`
 - If you built a site before signing up, the welcome questions no longer ask what you are documenting: your site publishes while you answer, and finishing takes you straight to it instead of an empty chat. `Onboarding`
 - A conversation you started before signing up carries over to your new project and reopens beside your documentation, so you can pick it up where you left off. `Onboarding`
 - The docs toolbar's `Ask AI` button is now two icon buttons next to your avatar: `Chat` opens the full AI chat directly with the composer focused, `Editor` arms block-level editing with no chat needed. Pressing the active one returns the page to its normal state. `AI Chat`

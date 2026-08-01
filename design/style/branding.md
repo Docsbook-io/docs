@@ -12,6 +12,7 @@ Make your documentation feel like your product — not a generic template.
 | Field | What it does |
 |---|---|
 | Custom name | Display name shown in the browser tab and header |
+| Call To Action URL | The page your docs should drive readers to — see below |
 | Accent color | Primary brand color applied to buttons, links, and highlights |
 | Heading font | Google Font used for headings (h1–h6) |
 | Content font | Google Font used for body text — falls back to the heading font |
@@ -25,6 +26,18 @@ Make your documentation feel like your product — not a generic template.
 4. Click **Save**.
 
 Changes apply instantly — no rebuild needed.
+
+## Call To Action URL
+
+The one page your documentation exists to send people to: your pricing page, a demo booking, signup. Set it once and three things start using it:
+
+- **Your AI chat** points readers there when they are evaluating, comparing, or asking about plans — and stays out of the way when the question is plain troubleshooting.
+- **Content generation** treats it as the goal of the site, so pages end on a next step instead of a dead end, and the AI can add it to your header as a button.
+- **Analytics** counts conversations that end on this domain as reaching the goal, which is what turns the Conversations card from "readers left the docs" into "readers reached the page that sells".
+
+Enter a full `https://` address. Matching is by domain, so every path on it counts and query strings or UTM tags are fine. Leave it empty if you have nothing to sell yet — nothing breaks, you just lose the goal column in analytics.
+
+If you set it while creating your first documentation, it is already filled in here.
 
 ## Accent Color
 
