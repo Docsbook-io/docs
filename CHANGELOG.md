@@ -20,10 +20,17 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The `Invite` button in the chat header is now a plus-icon next to your account avatar, matching the header's other icon-only controls. `AI Chat`
 - The account menu (theme, Integrations, sign out) and the `Workspace settings` gear moved from the chat input's footer to the header, next to your avatar. `AI Chat`
 - The admin/reader mode toggle inside an open chat is gone — the mode now follows how you opened the chat (the admin toolbar starts the builder, a site chat widget starts reader mode). `AI Chat`
+- The Docsbook mark in the docs toolbar is now the project switcher, so you can move between projects from any documentation page. `AI Chat`
+- `Preview` in a chat opened from your documentation now puts the chat away and hands the page back to the doc underneath, instead of navigating and losing the conversation. `AI Chat`
+- The full-screen/side-dock toggle appears once a conversation has something in it, since an empty thread has nothing to watch beside the page. `AI Chat`
+- Bringing a hidden conversation back restores the shape you hid it from, full screen or side dock, rather than always reopening as a side dock. `AI Chat`
 
 ### Fixed
 
 - A workspace's forced light or dark theme no longer loses to the system theme in the AI chat and other admin surfaces. `Branding`
+- Reopening a past conversation no longer restores it as a chat you cannot see, and the docs toolbar no longer shows `Chat` as active while a plain documentation page is on screen. `AI Chat`
+- Dropdowns inside a full-screen chat stay clickable after arming the block editor — the editing affordances now stand down while the page they edit is covered. `Block Editor`
+- The side-by-side view no longer opens with a strip of empty space above the page header and subheader. `AI Chat`
 - The sitemap now lists each marketing page's real publication date instead of the time it was last crawled, so Google can trust which pages actually changed. `SEO`
 
 ## NEW - 31.07.2026
