@@ -43,9 +43,13 @@ docsbook.io/{your-name}/{repo}
 
 If you started from a website or an idea, Docsbook hosts the generated site for you under its own repository — the URL follows the same `docsbook.io/{owner}/{repo}` pattern.
 
+### Switching accounts and organizations
+
+The **GitHub button** in the AI chat's top-right corner is more than a connect link — click it to open a switcher listing your signed-in account and every GitHub organization you belong to. A green dot on the button means GitHub is linked. Hover (or tap, on touch) any account or organization to see its repositories on the right, and connect one as a new project straight from there.
+
 ### Moving a hosted project to your own GitHub
 
-A hosted project does not have to stay hosted. In the AI chat, the **GitHub button** in the top-right corner moves it into a repository on your own account: Docsbook creates the repository, copies every page into it in one commit, and points the project at it. From then on your edits commit straight to your repo.
+A hosted project does not have to stay hosted. From the same GitHub button, moving it copies the project into a repository on your own account: Docsbook creates the repository, copies every page into it in one commit, and points the project at it. From then on your edits commit straight to your repo.
 
 Two things to know before you move:
 
