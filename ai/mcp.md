@@ -9,7 +9,7 @@ Docsbook ships a Model Context Protocol (MCP) server. Connect Claude Code or any
 
 ## What MCP is
 
-The Model Context Protocol is an open standard for exposing tools, resources, and prompts to AI agents over a typed RPC interface. The Docsbook MCP server exposes 80 tools — 62 named tools plus one registration tool per webhook event — covering the full product surface.
+The Model Context Protocol is an open standard for exposing tools, resources, and prompts to AI agents over a typed RPC interface. The Docsbook MCP server exposes 83 tools — 65 named tools plus one registration tool per webhook event — covering the full product surface.
 
 ## Endpoint
 
@@ -219,6 +219,7 @@ Diagnosis without a fix is a report. These close the loop inside one connection.
 | `search_docs` | Verbatim, citable sections — text, regex, heading or path modes. What an agent reads *before* editing so it changes the right lines. | Free |
 | `get_doc_outline` | Every page with title, heading count, size. Cheap orientation before a search or a write. | Free |
 | `write_docs` | Commits one or many markdown files in **one atomic git commit**. Turns analysis into a shipped change. | Free |
+| `fetch_url` | Reads one public web page as clean Markdown. The tool that lets an agent check a page against the world outside your workspace — a competitor's pricing, your own marketing site, or whether a link a doc depends on is still alive. | Free |
 | `get_change_history` | **Call before editing.** What was changed before and how the affected pages' traffic moved after — with raw before/after visit counts, `low_sample` and `pending` flags, and **no verdict on purpose** (a commit and a traffic move in the same week are not cause and effect). Without it, the same recommendation gets made forever with the same confidence. | PRO |
 | `update_navigation` | The fix for a defect `get_route_patterns` or `get_reverse_funnel` found — often cheaper and more effective than rewriting a page. | Free |
 | `find_skill` / `find_widget` | Discover a packaged capability — a workflow skill, an interactive widget — instead of writing one. | Free |
