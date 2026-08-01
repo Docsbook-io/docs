@@ -26,6 +26,23 @@ Control what appears in the top navigation bar of your documentation site.
 3. Fill in fields and toggle options.
 4. Save.
 
+## Editing the header from the page
+
+You can also change the header where you can see it. On your docs site, press
+**Editor** in the toolbar, then click the part you want to change:
+
+| Click on | You can |
+|---|---|
+| The project name or logo | Change the name, logo, or icon |
+| A header link | Change its text or URL, or turn it into a filled button |
+| Search / Ask AI / language / theme | Hide it |
+| A social icon | Point it somewhere else, or remove it |
+| Empty space in the bar | Switch the layout preset |
+
+Each action is sent to the AI chat as a request, which then applies it — so you
+see what was asked and what changed, and you can undo it in the same
+conversation.
+
 ---
 
 ## Header Layout Presets

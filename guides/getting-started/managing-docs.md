@@ -162,6 +162,17 @@ To add something rather than change it, move the pointer to the seam between two
 
 Changes still go through the assistant and are committed to your repository, so your source stays the single point of truth.
 
+### Method 6: Undo a Change
+
+Every change the assistant publishes can be taken back from the chat, without opening GitHub.
+
+- **On the card** the assistant shows after publishing ("Updated 2 files"), press the undo arrow.
+- **From the history**, if you noticed later: the clock icon in the chat header lists the project's recent changes with the files each one touched, and an undo beside every entry.
+
+The history is your repository's real publishing history, so it also lists changes made in an earlier session, by a teammate, or straight from GitHub — all of them can be undone the same way.
+
+An undo is a new commit that puts the files back, not a rewrite of your history. It appears in the list as its own entry marked **Undo** and can itself be undone, and nobody else's commits are lost when you use it. If a file's earlier version cannot be read back, it is reported as skipped instead of being guessed at.
+
 ## Checking Synchronization
 
 ### Why hasn't my site updated?

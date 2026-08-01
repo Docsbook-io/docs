@@ -24,6 +24,25 @@ Configure what appears in the left navigation panel of your documentation.
 3. Toggle the desired options.
 4. Save.
 
+## Editing the sidebar from the page
+
+Most of what follows can also be changed without opening the settings panel at
+all. On your docs site, press **Editor** in the toolbar, then click the sidebar
+entry you want to change. A small action bar appears above it offering:
+
+- **Rename** — change the label shown in the sidebar.
+- **Icon** — pick an icon, describe the one you want, or remove it.
+- **Analytics** — ask what readers actually do with that page.
+
+Renaming here changes **only the label**. The page keeps its address, so every
+link pointing at it — from your own docs, from Google, from someone else's blog —
+keeps working. If you want the URL itself to change, rename the file in your
+repository instead.
+
+Each action is sent to the AI chat as a request, which then applies it. You see
+what was asked and what changed, and you can say "undo that" in the same
+conversation.
+
 ---
 
 ## Language Switcher

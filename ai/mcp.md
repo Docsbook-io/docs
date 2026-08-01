@@ -9,7 +9,7 @@ Docsbook ships a Model Context Protocol (MCP) server. Connect Claude Code or any
 
 ## What MCP is
 
-The Model Context Protocol is an open standard for exposing tools, resources, and prompts to AI agents over a typed RPC interface. The Docsbook MCP server exposes 83 tools — 65 named tools plus one registration tool per webhook event — covering the full product surface.
+The Model Context Protocol is an open standard for exposing tools, resources, and prompts to AI agents over a typed RPC interface. The Docsbook MCP server exposes 84 tools — 66 named tools plus one registration tool per webhook event — covering the full product surface.
 
 ## Endpoint
 
@@ -221,6 +221,7 @@ Diagnosis without a fix is a report. These close the loop inside one connection.
 | `write_docs` | Commits one or many markdown files in **one atomic git commit**. Turns analysis into a shipped change. | Free |
 | `fetch_url` | Reads one public web page as clean Markdown. The tool that lets an agent check a page against the world outside your workspace — a competitor's pricing, your own marketing site, or whether a link a doc depends on is still alive. | Free |
 | `get_change_history` | **Call before editing.** What was changed before and how the affected pages' traffic moved after — with raw before/after visit counts, `low_sample` and `pending` flags, and **no verdict on purpose** (a commit and a traffic move in the same week are not cause and effect). Without it, the same recommendation gets made forever with the same confidence. | PRO |
+| `get_page_diff_impact` | **Call after shipping.** Did that edit actually help? Compares the pages a commit touched against the pages it did not, before and after — outcome mix, self-serve resolution, time to first value. The untouched pages are the control, and they are the point: docs traffic moves for reasons unrelated to your edit, so an improvement only counts if it beat the site trend. A change that merely matched it is reported as no effect, not as a win. | PRO |
 | `update_navigation` | The fix for a defect `get_route_patterns` or `get_reverse_funnel` found — often cheaper and more effective than rewriting a page. | Free |
 | `find_skill` / `find_widget` | Discover a packaged capability — a workflow skill, an interactive widget — instead of writing one. | Free |
 
@@ -260,10 +261,10 @@ get_dead_end_pages      → which pages those visits died on
 get_rage_signals        → what the reader was trying to do there
 get_change_history      → has this page been "fixed" before, and did it work?
 search_docs → write_docs → ship the fix
-get_metric_timeseries   → did the rate move after the commit?
+get_page_diff_impact    → did the edited pages beat the pages you did not touch?
 ```
 
-The rate alone is unactionable, the page list alone lacks a cause, and a fix without `get_change_history` repeats a failed edit with full confidence. Only the sequence produces a change you can defend.
+The rate alone is unactionable, the page list alone lacks a cause, and a fix without `get_change_history` repeats a failed edit with full confidence. The last step is what closes the loop: a site-wide trend line moves for a dozen reasons, so "the rate improved after my commit" is only evidence when the pages you edited improved *more than the ones you left alone*. Only the sequence produces a change you can defend.
 
 ### Loop 2 — "Is my navigation lying to readers?"
 
@@ -308,7 +309,8 @@ Run Loop 1 on a schedule from CI:
 weekly:  get_content_health  → take the worst 3
          get_change_history  → skip anything already tried and failed
          search_docs → write_docs → open a PR
-         get_metric_timeseries → report the movement on the PR
+         get_page_diff_impact → report on the PR whether the edited pages
+                                beat the untouched ones, or say they did not
 ```
 
 Documentation that repairs itself and shows its work — "saw the problem" and "fixed the problem" without leaving the connection.
