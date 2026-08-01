@@ -60,7 +60,7 @@ Docsbook generates all three automatically: TL;DR blocks, FAQPage and HowTo JSON
 
 A: Skills are AI-agent instructions (`SKILL.md` files) for documentation tasks: audit structure, write missing sections, check SEO, enable translations, track analytics gaps.
 
-Install them locally with `npx docs-skills install`, or let any MCP-connected agent discover and use them at runtime via `find_skill()`. There are 25 skills across five categories: analysis, creation, publishing, automation, and observability.
+Install them locally with `npx docs-skills install`, or let any MCP-connected agent discover and use them at runtime via `find_skill()`. There are 52 skills across seven categories: analysis, creation, observability, automation, publishing, planning, and growth.
 
 ---
 

@@ -7,13 +7,13 @@ description: "What docs-skills are, why Claude Code and Cursor use them, and how
 
 In 2026, AI agents do not just read documentation — they take actions on it. They publish a docs site, fix broken links, generate `llms.txt`, write missing pages, audit accessibility. The way they know how to do these actions is through "skills" — packaged, discoverable, declarative capability descriptions.
 
-This post explains what skills are, why Docsbook ships an open-source catalog of 25 of them, and how this fits between MCP and your content.
+This post explains what skills are, why Docsbook ships an open-source catalog of 52 of them, and how this fits between MCP and your content.
 
 ## TL;DR
 
 - A "skill" is a `SKILL.md` file with frontmatter that describes a capability — what it does, when to trigger it, what tools it needs
 - AI agents (Claude Code, Cursor) read skills and execute them autonomously
-- [docs-skills](https://github.com/Docsbook-io/docs-skills) is an open-source catalog of 25 skills for documentation
+- [docs-skills](https://github.com/Docsbook-io/docs-skills) is an open-source catalog of 52 skills for documentation
 - Docsbook MCP exposes `find_skill` so agents discover skills by query at runtime
 - You can install skills locally (`npx docs-skills install`) or use them through MCP
 
@@ -63,15 +63,17 @@ Skills can chain. The `docs-analyze` skill orchestrates 10 sub-skills (`docs-seo
 
 ## The docs-skills catalog
 
-[docs-skills](https://github.com/Docsbook-io/docs-skills) is an open-source catalog of 25 skills across five categories:
+[docs-skills](https://github.com/Docsbook-io/docs-skills) is an open-source catalog of 52 skills across seven categories:
 
 | Category | Skills |
 |---|---|
-| **analysis** (11) | docs-analyze, docs-seo, docs-accessibility, docs-i18n, docs-style-tone, docs-structure-templates, docs-content-types, docs-audience, docs-navigation-linking, docs-media, docs-maintenance |
-| **creation** (4) | docs-create, docs-create-interactive, docs-detect-source, docs-from-site |
+| **analysis** (15) | docs-analyze, docs-seo, docs-accessibility, docs-i18n, docs-style-tone, docs-structure-templates, docs-content-types, docs-audience, docs-navigation-linking, docs-media, docs-maintenance, docs-competitor-gap, docs-pricing-consistency, docs-trust-audit, docs-title-rewriter |
+| **creation** (13) | docs-create, docs-create-interactive, docs-detect-source, docs-from-site, docs-ai-retrieval, docs-authoring-rules, docs-branding, docs-content-widgets, docs-sales-conversion, docs-first-run-enrichment |
+| **observability** (10) | docs-gap-finder, docs-change-impact, docs-dead-end-hunter, docs-buying-blockers, docs-funnel-mapper, docs-engagement-analyzer, docs-question-clusterer, docs-utm-analyzer, docs-visitor-cohort, docs-link-click-analyzer |
+| **automation** (7) | docs-enable-translation, docs-pr-check, docs-tune-ai-chat, docs-stale-watcher, docs-release-announce, docs-translate-webhook, docs-sync |
 | **publishing** (3) | docs-publish, docs-setup-workspace, docs-generate-agents-md |
-| **automation** (6) | docs-enable-translation, docs-pr-check, docs-tune-ai-chat, docs-stale-watcher, docs-release-announce, docs-translate-webhook |
-| **observability** (1) | docs-gap-finder |
+| **planning** (2) | docs-health-triage, docs-strategy-plan |
+| **growth** (2) | docs-rank-recovery, docs-audience-enricher |
 
 Each skill is a standalone `SKILL.md` in the GitHub repo. Some chain to others.
 

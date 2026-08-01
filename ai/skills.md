@@ -1,6 +1,6 @@
 ---
 title: "Docs Skills — AI Agent Skills for Documentation"
-description: "An open catalog of 27 SKILL.md files that extend Claude, Cursor, Copilot, and Codex with Docsbook-aware capabilities for analysis, creation, and publishing. Understand the Skill vs Subagent architecture for autonomous doc automation."
+description: "An open catalog of 52 SKILL.md files that extend Claude, Cursor, Copilot, and Codex with Docsbook-aware capabilities for analysis, creation, and publishing. Understand the Skill vs Subagent architecture for autonomous doc automation."
 ---
 
 # Docs Skills
@@ -19,16 +19,17 @@ A **Subagent** is an executor: it has a pinned model, specific tools, priorities
 
 ## Categories
 
-27 skills are organized into 6 categories:
+52 skills are organized into 7 categories:
 
 | Category | Count | Examples |
 |---|---|---|
-| analysis | 11 | `docs-analyze`, `docs-seo`, `docs-accessibility`, `docs-i18n`, `docs-style-tone` |
-| creation | 4 | `docs-create`, `docs-create-interactive`, `docs-detect-source`, `docs-from-site` |
-| publishing | 3 | `docs-publish`, `docs-setup-workspace`, `docs-generate-agents-md` |
+| analysis | 15 | `docs-analyze`, `docs-seo`, `docs-accessibility`, `docs-competitor-gap`, `docs-pricing-consistency` |
+| creation | 13 | `docs-create`, `docs-ai-retrieval`, `docs-authoring-rules`, `docs-branding`, `docs-sales-conversion` |
+| observability | 10 | `docs-gap-finder`, `docs-change-impact`, `docs-dead-end-hunter`, `docs-buying-blockers`, `docs-funnel-mapper` |
 | automation | 7 | `docs-pr-check`, `docs-tune-ai-chat`, `docs-stale-watcher`, `docs-release-announce`, `docs-sync` |
-| observability | 1 | `docs-gap-finder` |
-| planning | 1 | `docs-strategy-plan` |
+| publishing | 3 | `docs-publish`, `docs-setup-workspace`, `docs-generate-agents-md` |
+| planning | 2 | `docs-health-triage`, `docs-strategy-plan` |
+| growth | 2 | `docs-rank-recovery`, `docs-audience-enricher` |
 
 ## Two consumption modes
 
