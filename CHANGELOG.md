@@ -37,6 +37,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Dropdowns inside a full-screen chat stay clickable after arming the block editor — the editing affordances now stand down while the page they edit is covered. `Block Editor`
 - The side-by-side view no longer opens with a strip of empty space above the page header and subheader. `AI Chat`
 - The sitemap now lists each marketing page's real publication date instead of the time it was last crawled, so Google can trust which pages actually changed. `SEO`
+- A step the assistant never finished no longer spins forever when you reopen the conversation: it is marked as interrupted and tells you to send the message again. `AI Chat`
+- A conversation cut short by a dropped connection stays usable, where before every following message failed. `AI Chat`
+- Expanding a step in the assistant's trail now always shows what it ran on and what came back, instead of opening onto an empty panel. `AI Chat`
+- Steps in the assistant's trail now name what they did and what they found, such as the traffic numbers they read, rather than repeating the name of the operation. `AI Chat`
 
 ## NEW - 31.07.2026
 
