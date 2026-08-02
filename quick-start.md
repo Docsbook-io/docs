@@ -17,7 +17,7 @@ No account required to start. Create a documentation site in 3 simple steps.
 3. For website or idea sources, Docsbook generates a full draft site in under a minute — no account needed yet. You get nine pages, from the landing page to an FAQ and a reference, each closing with a call to action, plus a pricing page when your source publishes prices
 4. If you picked GitHub, you'll be taken straight to a live preview of your repo's docs
 
-> **Note:** For website/idea sources, your draft lives in your browser only until you publish. It opens as a real documentation site — header, sidebar tree, outline, breadcrumbs and prev/next — so you can browse every generated page and adjust branding, layout and SEO in the settings panel before deciding to sign in. **Ask AI** is also available on the draft — ask it up to 3 free messages to tweak content or ask questions about your site before you're asked to sign in to keep chatting.
+> **Note:** For website/idea sources, your draft lives in your browser only until you publish. It opens as a real documentation site — header, sidebar tree, outline, breadcrumbs and prev/next — so you can browse every generated page and adjust branding, layout and SEO in the settings panel before deciding to sign in. **Ask AI** is also available on the draft — use it to tweak content or ask questions about your site. It comes with a free daily AI credit; short questions barely touch it, while rewriting a long page uses more of it. Once the credit runs out you're asked to sign in to keep chatting.
 
 ## Sign in to publish
 
