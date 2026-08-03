@@ -71,7 +71,7 @@ Voice assistants (Google Assistant, Alexa) use this hint to know which parts of 
 - **Phrase H2/H3 as questions** — "How do I cancel a subscription?" outperforms "Subscription cancellation".
 - **Keep answers 40–60 words** — that's the sweet spot for featured snippet length.
 - **Use tables and ordered lists** — Google extracts these almost verbatim into rich results.
-- **Open every FAQ answer with a direct yes/no/number** — *"Yes, Docsbook supports custom domains on PRO and PRO+ plans."*
+- **Open every FAQ answer with a direct yes/no/number** — *"Yes, Docsbook supports custom domains on the Business plan."*
 
 ## How to enable
 

@@ -22,7 +22,7 @@ This post is the honest comparison. We make Docsbook, so we'll tell you when it 
 | **Pricing model** | Per editor per month | Flat monthly per workspace |
 | **Entry price (2026)** | Free / Plus from $8 per editor / Pro from $15 per editor / Business from $25 per editor + Enterprise custom | Free / $59 per month (Pro) / $159 per month (Business) |
 | **Source of truth** | GitBook's database (Git Sync is an add-on) | Your GitHub repo, period |
-| **AI chat** | Built-in (AI Search) | Built-in on Pro, higher cap on Business |
+| **AI chat** | Built-in (AI Search) | Built-in on every plan, capped by spend budget |
 | **Multi-language** | Add-on, limited | 15 languages, each indexed separately for SEO |
 | **MCP server** | None | 61 tools, OAuth 2.0, used by Claude Code and Cursor |
 | **llms.txt** | Not built-in | Auto-generated platform-wide and per workspace |
@@ -44,7 +44,7 @@ A six-engineer team on Business is paying $159 per month for what is, fundamenta
 
 This is the model GitBook needs to fund the WYSIWYG editor, the change-request flow, and the enterprise sales team. It is not a bad model. It is just a model that punishes you for involving more engineers in writing docs — which is the opposite of what most product teams want.
 
-Docsbook charges per workspace, not per editor. Pro is $59 per month with AI chat, translations, and SEO. Business is $159 per month and adds white-label, custom domain, webhooks, and higher AI limits on top. Anyone on your GitHub team can edit the underlying Markdown — there's no editor seat to buy, because the editor is the editor they already use.
+Docsbook charges per workspace, not per editor. AI chat and SEO are free on every plan. Pro is $59 per month and adds translations, raw analytics, and a custom AI chat system prompt. Business is $159 per month and adds white-label, custom domain, webhooks, and a larger AI spend budget on top. Anyone on your GitHub team can edit the underlying Markdown — there's no editor seat to buy, because the editor is the editor they already use.
 
 ### 2. Vendor lock-in is real
 
@@ -66,7 +66,7 @@ Docsbook reads your Markdown as-is. If `README.md` and a `docs/` folder work on 
 
 In 2024, AI Search was the reason to pay GitBook. In 2026 every serious documentation platform has it. The question is no longer "do you have AI" — it is "how much does AI cost on top of the editor seat I'm already paying for, and where does my AI traffic come from."
 
-Docsbook ships AI chat starting on Pro ($59 per month), with Business ($159 per month) getting a higher monthly question cap. The MCP server is included on both, which means Claude Code and Cursor users can read and edit your docs directly. We also publish `llms.txt` and `llms-full.txt` automatically, both at the platform level and per workspace.
+Docsbook ships AI chat free on every plan, including Free — it's capped by a monthly spend budget in dollars, not gated behind a paid tier. Business ($159 per month) gets a larger spend budget. The MCP server is included on both, which means Claude Code and Cursor users can read and edit your docs directly. We also publish `llms.txt` and `llms-full.txt` automatically, both at the platform level and per workspace.
 
 That last part matters more than it looks. Mintlify recently reported that 45.3% of all traffic to their hosted docs comes from AI agents, with Claude Code at 25% and Cursor at 18%. If your docs are not optimized for AI agents in 2026, you are leaving close to half your discovery channel on the table.
 
@@ -78,11 +78,11 @@ That last part matters more than it looks. Mintlify recently reported that 45.3%
 | Free plan | Yes, limited | Yes, full feature set with "Powered by" footer |
 | Source of truth | GitBook DB (Git Sync optional) | GitHub repo |
 | Editor | WYSIWYG block editor | Markdown in your repo |
-| AI chat | AI Search, varies by plan | Included on Pro, higher cap on Business |
-| AI translations | No | 15 languages, separate SEO indexing |
+| AI chat | AI Search, varies by plan | Free on every plan, capped by spend budget |
+| AI translations | No | 15 languages, separate SEO indexing (Pro) |
 | MCP server | No | 61 tools (workspace, branding, analytics, search, content graph) |
 | llms.txt | No | Yes, platform and workspace |
-| Source-of-truth content graph for AI agents | No | Yes (Pro) |
+| Source-of-truth content graph for AI agents | No | Yes (Business) |
 | Custom domain | Paid | Business |
 | Custom branding | Paid | All plans (colors, fonts, logo, dark/light) |
 | White-label / remove "Powered by" | Enterprise | Business ($159 per month) |

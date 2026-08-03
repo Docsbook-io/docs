@@ -60,18 +60,18 @@ If any of those sentences made you sigh, you are the audience for this guide.
 **Who it is for**
 
 - Indie hackers and solo founders who want their README to look like a real product site
-- Startups that want SEO, AI chat, and analytics without hiring a docs engineer
+- Startups that want SEO, AI chat, and analytics without hiring a docs engineer (both SEO and AI chat are free on every plan, including Free)
 - OSS authors whose docs live in `README.md` and a `docs/` folder and should stay there
 - Teams shipping to international markets — translations to 15 languages with separate SEO indexing
 
 **Pros**
 
 - 5-second setup, zero config
-- AI chat trained on your docs, included in PRO
+- AI chat trained on your docs, free on every plan including Free
 - AI translation to 15 languages, each indexed separately in Google
 - MCP server with 61 tools — Claude Code and Cursor can configure your docs directly
 - `llms.txt` and `llms-full.txt` generated automatically
-- Pro at $59/mo for AI chat and translations, Business at $159/mo for custom domain, white-label, webhooks, and higher limits
+- Pro at $59/mo for translations and raw analytics, Business at $159/mo for custom domain, white-label, webhooks, and a larger AI spend budget
 - Source data stays in your GitHub repo — no vendor lock-in
 
 **Cons**
@@ -82,9 +82,9 @@ If any of those sentences made you sigh, you are the audience for this guide.
 
 **Pricing**
 
-- Free forever for unlimited public repos with branding, UI, navigation
-- Pro $59/mo — AI chat, translations, SEO, longer analytics, Source-of-Truth graph, MCP write tools
-- Business $159/mo — everything in Pro, plus custom domain, white-label, webhooks, bring-your-own API keys, and higher AI/translation limits
+- Free forever for unlimited public repos with branding, UI, navigation, AI chat, and SEO
+- Pro $59/mo — translations, longer analytics, custom AI chat system prompt, MCP write tools
+- Business $159/mo — everything in Pro, plus custom domain, white-label, webhooks, bring-your-own API keys, the Source-of-Truth graph, and a larger AI spend budget
 
 **Migrating from Docusaurus**
 
@@ -339,7 +339,7 @@ Yes. VitePress, Nextra, Starlight, and MkDocs Material are all free and OSS. Doc
 
 ### Which Docusaurus alternative has built-in AI search?
 
-Managed platforms include AI by default: Docsbook, Mintlify, GitBook, ReadMe, Archbee. Self-host alternatives (VitePress, Starlight, etc.) can bolt on AI via separate services but it's not native.
+Managed platforms include AI by default: Docsbook, Mintlify, GitBook, ReadMe, Archbee. Docsbook's AI chat is free on every plan, including Free. Self-host alternatives (VitePress, Starlight, etc.) can bolt on AI via separate services but it's not native.
 
 ### Can I migrate from Docusaurus without rewriting my docs?
 

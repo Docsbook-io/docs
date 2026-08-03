@@ -89,7 +89,7 @@ Free includes:
 
 What you do not get on Free:
 
-- Custom domain (PRO+ feature)
+- Custom domain (Business feature)
 - AI translations to 15 languages
 - White-label ("Powered by Docsbook" stays in the footer)
 - Analytics beyond 24h
@@ -122,7 +122,7 @@ Docsbook is markdown-first. For interactive demos, link out to a hosted demo. If
 
 ### Will it look like every other Docsbook site?
 
-You control brand colors, fonts, layout, header, footer, sidebar. With custom domain on PRO+, no Docsbook branding shows.
+You control brand colors, fonts, layout, header, footer, sidebar. With custom domain and white-label on Business, no Docsbook branding shows.
 
 ### Can I move away later?
 

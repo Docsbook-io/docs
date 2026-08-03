@@ -15,8 +15,8 @@ This is a 2026 refresh of [Docusaurus vs Docsbook](./docusaurus-vs-docsbook.md) 
 |---|---|---|
 | Setup | 2–3 days | 5 seconds |
 | Hosting | You manage (Vercel/Netlify/Pages) | Included |
-| AI chat | None (plugin work) | Built-in, 200 q/mo on PRO |
-| AI translation | None | 15 languages, 50/mo on PRO |
+| AI chat | None (plugin work) | Built-in on every plan, capped by spend budget |
+| AI translation | None | 15 languages, capped by spend budget |
 | MCP server | None | 61 tools, OAuth 2.0 |
 | llms.txt | Manual | Auto for site + each workspace |
 | Cost | Free + your hours | $0 / $59 mo / $159 mo |

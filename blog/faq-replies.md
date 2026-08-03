@@ -179,7 +179,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 ### What about regular SEO?
 
-**TL;DR:** Built-in. Meta tags, OpenGraph, sitemap.xml, JSON-LD (WebSite, Organization, SoftwareApplication, FAQPage), canonical URLs, separate indexing per language. Pro and Business.
+**TL;DR:** Built-in. Meta tags, OpenGraph, sitemap.xml, JSON-LD (WebSite, Organization, SoftwareApplication, FAQPage), canonical URLs, separate indexing per language. Free on every plan.
 
 **Long:** Each page gets a proper `<title>`, `<meta description>`, OpenGraph image, and JSON-LD blocks for structured data. Sitemap is auto-generated and pings Google on update. Translations are exposed with hreflang. Custom domain (Business) plus the SEO setup means a Docsbook site behaves like a real docs site to Google, not a SPA. This is the main reason teams pick us over Notion for public docs.
 

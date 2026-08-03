@@ -159,9 +159,9 @@ A tool that serves none of these returns **context**, not a decision. `Pageviews
 
 | Tool | What it is worth | Min plan |
 |---|---|---|
-| `update_seo` | Meta tags, sitemap, OpenGraph. Table stakes: without it, pages that deserve to rank cannot. | PRO |
-| `update_geo` | Generative Engine Optimization — structures the page so an LLM can quote it *and attribute it to you*. The difference between being the source of an AI answer and being invisible inside one. | PRO |
-| `update_aeo` | Answer Engine Optimization — shapes content into the direct-answer form AI assistants lift verbatim. | PRO |
+| `update_seo` | Meta tags, sitemap, OpenGraph. Table stakes: without it, pages that deserve to rank cannot. | Free |
+| `update_geo` | Generative Engine Optimization — structures the page so an LLM can quote it *and attribute it to you*. The difference between being the source of an AI answer and being invisible inside one. | Free |
+| `update_aeo` | Answer Engine Optimization — shapes content into the direct-answer form AI assistants lift verbatim. | Free |
 | `get_search_rankings` | Real Google Search Console positions, plus the **"worth improving" set at position 5–20** — pages Google already shows that are not yet winning the click. Turns "we should do SEO" into a named page and a named query. Lags Google by ~2 days. | PRO |
 | `get_analytics` (AI-bot breakdown) | Whether ChatGPT, Perplexity and Claude crawlers read you at all. A zero here means the GEO work is not landing — no crawl, no citation, no referral. | Free |
 
@@ -338,8 +338,8 @@ Each tool declares a minimum plan. The server returns a structured error when a 
 
 | Plan | Available tool groups | What you can decide with it |
 |---|---|---|
-| Free | Workspace, branding, UI, navigation, traffic analytics (24h), `find_skill`, `find_widget`, `search_docs`, `get_doc_outline`, `write_docs` (with a read-write token) | Whether readers arrive at all |
-| PRO | + SEO/GEO/AEO, `get_search_rankings`, AI settings, languages, translations, private docs (`update_access`), demand gaps, **visit outcomes, dead-end pages, content health, route patterns, funnels, change history** | Which page is costing you customers, and whether the fix worked |
+| Free | Workspace, branding, UI, navigation, traffic analytics (24h), `find_skill`, `find_widget`, `search_docs`, `get_doc_outline`, `write_docs` (with a read-write token), SEO/GEO/AEO | Whether readers arrive at all |
+| PRO | + `get_search_rankings`, AI settings, languages, translations, private docs (`update_access`), demand gaps, **visit outcomes, dead-end pages, content health, route patterns, funnels, change history** | Which page is costing you customers, and whether the fix worked |
 | PRO+ | + `get_insights`, `get_chat_intent`, `get_visits`, page journeys, top visitors, visitor drill-down, chat hooks, `query_events` | Who is deciding whether to buy, and what blocks the purchase |
 | Business | + custom domain, webhooks, `get_retention`, bring-your-own AI/translation API key | Long-run retention, and reacting without opening a dashboard |
 

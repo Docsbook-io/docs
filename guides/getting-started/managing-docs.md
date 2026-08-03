@@ -36,7 +36,7 @@ A menu with management options will open.
 
 ### 2. Domain
 
-(PRO and PRO+)
+(Business)
 
 - If you have a custom domain — specify it here
 - Instead of `docsbook.io/user/repo` you'll have `docs.example.com`

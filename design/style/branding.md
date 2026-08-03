@@ -97,14 +97,14 @@ Set a custom favicon and header icon for your documentation site.
 
 ---
 
-## Hide "Powered by Docsbook" *(Pro)*
+## Hide "Powered by Docsbook" *(Business)*
 
 By default, a small "Powered by Docsbook" badge appears at the bottom of the sidebar.
 
 Turning this off gives your documentation a fully white-label appearance.
 
-> **Pro feature.** Requires a Pro plan.
-> [Upgrade to Pro →](https://docsbook.io/connect)
+> **Business feature.** Requires a Business plan.
+> [Upgrade to Business →](https://docsbook.io/connect)
 
 ---
 

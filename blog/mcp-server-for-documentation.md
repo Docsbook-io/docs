@@ -108,7 +108,7 @@ A reasonable docs MCP server requires:
 - Write access if you want config edits
 - Rate limiting and audit logging
 
-About 4–6 engineering weeks if you have not done it before. Docsbook PRO+ includes the managed version at $59/month, and `markdown-lsp` is free and open source for the doc-graph read tools.
+About 4–6 engineering weeks if you have not done it before. The Docsbook MCP server is free on every plan — Pro at $59/month adds AI settings, SEO write access, and translations on top — and `markdown-lsp` is free and open source for the doc-graph read tools.
 
 ## Related reading
 

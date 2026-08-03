@@ -13,7 +13,7 @@ Every AI surface in Docsbook is documented on its own page. Use this index to ju
 
 | Feature | Plan | Page |
 |---|---|---|
-| AI Chat trained on your docs | PRO | [AI Chat](./chat.md) |
+| AI Chat trained on your docs | Free | [AI Chat](./chat.md) |
 | Translations into 15 languages | PRO | [Translations](./translations.md) |
 | `llms.txt` for AI agent discovery | Free | [llms.txt](./llms-txt.md) |
 | Source of Truth doc graph | Free (local) | [Source of Truth](./source-of-truth.md) |

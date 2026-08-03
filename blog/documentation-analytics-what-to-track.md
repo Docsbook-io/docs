@@ -146,4 +146,4 @@ This is the highest ROI loop in documentation. Each iteration turns a known cont
 
 ---
 
-Docsbook ships failed-searches, AI-questions, negative-feedback, and journey analytics on PRO. [See it on your docs →](https://docsbook.io/start)
+Docsbook ships failed-searches, AI-questions, and negative-feedback analytics on PRO, with page journeys on PRO+. [See it on your docs →](https://docsbook.io/start)
