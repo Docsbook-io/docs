@@ -14,6 +14,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - `Semantic Search` turns meaning-based answers on or off for your readers, shows when the index last updated, and keeps the rebuild controls in one place. `AI Chat`
 - Ask the chat what to fix in your docs and the answer arrives as ranked recommendation cards, each opening a fresh chat that already knows the page and the problem. `AI Chat`
 - A `recommendations` widget renders a marked list of findings as cards, ranked by how much each one is costing you. `Docs`
+- A `Feedback` tab next to `CTA Clicks` ranks your pages by the thumbs readers gave them, most-disliked first, counting both the page rating and the votes on AI answers given there. `Analytics`
+- A `Feedback` tab in the chat card shows which topics readers approve of and which they vote down. `AI Chat`
+- `Search rankings` leads with four figures — impressions, clicks, average position and the queries you rank for — each with its own trend, and every query row carries the action to take on it. `SEO`
 
 ### Changed
 
@@ -28,6 +31,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Fixed
 
 - Switching the doc language from inside a subfolder no longer leads to a 404 page. `Docs`
+- The semantic index now builds when you ask for it and keeps itself up to date as your docs change, instead of staying empty and leaving meaning-based answers falling back to keyword search. `AI Chat`
+- Long URLs in `Search rankings` are shortened to fit the card instead of pushing the table sideways. `SEO`
 
 ## NEW - 03.08.2026
 

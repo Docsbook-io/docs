@@ -18,6 +18,7 @@ Know exactly how many people read your docs and where they come from — without
 | Online now | Live count of active readers in the last 5 minutes |
 | AI Views | Requests from AI crawlers (ChatGPT, Claude, Perplexity, Google-Extended and others) |
 | CTA Clicks | Outbound links readers clicked to leave your docs (signup, pricing, repo, …) |
+| Feedback | Thumbs up and down each page collected, most-disliked first |
 
 ### AI Views
 
@@ -26,6 +27,12 @@ Switch the chart to **AI Views** to see one line per AI crawler instead of a sin
 ### CTA Clicks
 
 **CTA Clicks** counts every click on a link that leads off your documentation — your signup page, pricing, the repo, anything external. The chart shows the trend; the CTA Clicks card ranks the destinations, so you can see which call to action readers actually follow and from which page they follow it.
+
+### Feedback
+
+The **Feedback** tab of the same card ranks your pages by the thumbs readers gave them. Both vote widgets are counted together — the "was this helpful" rating at the foot of a page, and the thumbs on an AI answer given on that page — because the question it answers is which page readers approve of, not which button they pressed.
+
+Rows are sorted by dislikes first: the page people voted down is the one to rewrite, while an upvoted page only confirms what already works. Both counts are always shown, zeros included.
 
 ## How to Open
 
