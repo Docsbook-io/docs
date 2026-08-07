@@ -33,6 +33,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Switching the doc language from inside a subfolder no longer leads to a 404 page. `Docs`
 - The semantic index now builds when you ask for it and keeps itself up to date as your docs change, instead of staying empty and leaving meaning-based answers falling back to keyword search. `AI Chat`
 - Long URLs in `Search rankings` are shortened to fit the card instead of pushing the table sideways. `SEO`
+- Clicking a search result now jumps straight to the matching section instead of the top of the page. `Search`
 
 ## NEW - 03.08.2026
 
