@@ -43,7 +43,7 @@ $159/month, 14-day free trial. Everything in Pro, plus a set of Business-exclusi
 
 ## Growth
 
-$349/month. Includes every Business capability — auto-translation, advanced AI chat config (chat hooks, custom system prompt, your choice of AI model, chat analysis dashboard), search & feedback analytics, private docs (password/SSO), custom domain, white-label, webhooks, bring-your-own API keys, UTM analytics, hosted API reference, and the semantic doc index & relationship graph — plus 5 project seats and a $349/month AI budget. For teams on Pro who mainly need more AI usage headroom rather than the Business-only capabilities.
+$349/month. Includes every Business capability — auto-translation, advanced AI chat config (chat hooks, custom system prompt, your choice of AI model, chat analysis dashboard), search & feedback analytics, private docs (password/SSO), custom domain, white-label, webhooks, bring-your-own API keys, UTM analytics, hosted API reference, and semantic search — plus 5 project seats and a $349/month AI budget. For teams on Pro who mainly need more AI usage headroom rather than the Business-only capabilities.
 
 ## Scale
 

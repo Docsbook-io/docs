@@ -11,11 +11,24 @@ Docsbook ships an AI chatbot trained on the content of your specific documentati
 
 The chat uses a RAG flow built on tool calls. The model decides when to invoke each tool, and the UI shows the live trace of every step.
 
-1. **Search** — the model queries the indexed graph of your docs for relevant sections.
+1. **Search** — the model searches your docs for relevant sections.
 2. **Reading** — it opens specific pages and quotes the text it needs.
 3. **Answer** — it composes the response and streams it to the reader via `streamdown`.
 
 Each call is logged so you can later inspect what was asked, what was retrieved, and whether the answer was useful.
+
+## Semantic search (Business and Scale)
+
+By default step 1 matches on keywords, so a reader who phrases a question differently from the page can miss it. **Semantic Search** replaces that with meaning-based retrieval: every section of your docs is embedded once, and the chat then finds the right passage even when the wording does not overlap. In practice it is the single biggest improvement to answer quality — the chat cites a real page instead of inventing one, and replies faster because it retrieves less.
+
+Turn it on in Float Widget → **AI Chat** tab → **Semantic Search**. The card is where you operate the feature:
+
+- **The toggle** — enable or disable meaning-based retrieval for the chat.
+- **Live Sync** — once the index exists it re-syncs on every commit to your docs, so you do not have to remember to rebuild it.
+- **Last updated** — whether the index reflects your current content.
+- **Build / Rebuild** — shows a cost estimate before it runs, live progress you can cancel, and the tokens and cost after a run, along with how many rebuilds are left in the current cycle.
+
+Building the index costs money from your AI budget, which is why the estimate is shown first. You can also cap it separately — see the per-source **Semantic Index** limit in [Premium plans](../guides/advanced/premium.md).
 
 ## Customization
 

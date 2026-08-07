@@ -11,10 +11,17 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 - `CTA Clicks` shows how many readers left your docs through a link you placed there, with a trend chart and a ranked list of the destinations they clicked. `Analytics`
 - Per-source spend limits let you cap what one source may spend each cycle, so AI translations or the semantic index can never eat the whole budget. Each bar under `Spend by source` now shows your limit next to the plan's own. `Limits`
+- `Semantic Search` turns meaning-based answers on or off for your readers, shows when the index last updated, and keeps the rebuild controls in one place. `AI Chat`
+- Ask the chat what to fix in your docs and the answer arrives as ranked recommendation cards, each opening a fresh chat that already knows the page and the problem. `AI Chat`
+- A `recommendations` widget renders a marked list of findings as cards, ranked by how much each one is costing you. `Docs`
 
 ### Changed
 
 - `AI Views` moved in as a tab of the Referrers card, and the `UTM Parameters` tab is now simply `UTM`. `Analytics`
+
+### Removed
+
+- The `Pages` tab is gone. Its semantic graph now lives on as `Semantic Search` in `AI Chat`, its recommendations moved into the chat itself, and change history stays available where you already track it. `Dashboard`
 
 ### Fixed
 

@@ -111,6 +111,26 @@ The same block, with the primary action rendered as a one-field form. What the r
 
 Point it only at a URL that actually reads the parameter. A page that ignores it silently drops what the reader typed, which is worse than a plain button.
 
+### recommendations — a ranked list of things to fix
+
+Turns a list of findings into a grid of cards, each carrying a severity badge and a link to act on. Use it for concrete, prioritized findings about your own documentation — audit results, content-health issues, any "here is what to fix, ranked" list. For a plain list of destinations use `cards` instead.
+
+- Each heading becomes a small uppercase group label above its list. Headings are optional — omit them for a single ungrouped list.
+- Each list item becomes one recommendation. `- [Title](/href) — Explanation. {severity}`: the link text is the headline, the text after the dash is why it matters and what to do.
+- End every item with a severity marker — `{urgent}`, `{worth-doing}` or `{later}`. An item with no recognised marker renders as `{worth-doing}` rather than losing its severity.
+- An item without a link renders as a non-clickable recommendation. Write one only when there is genuinely nowhere to send the reader.
+- Paragraphs between a heading and its list pass through as ordinary intro prose.
+
+```markdown
+<!-- widget:recommendations -->
+
+- [You are paying to keep the same page twice](/docs/quickstart) — "Quickstart" and "Getting started" are 96% the same and neither links to the other. Keep one, merge the other into it. {urgent}
+- [214 people found "Webhooks" the hard way](/docs/webhooks) — No page links to it, yet it still gets visits. Add a link from "Integrations". {worth-doing}
+- [Nobody reads "Migration notes"](/docs/migration-notes) — Zero visits although 2 pages link to it. Reword the link text. {later}
+
+<!-- /widget -->
+```
+
 <!-- /widget -->
 
 ## Adding a widget without editing markdown

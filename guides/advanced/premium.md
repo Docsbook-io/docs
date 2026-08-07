@@ -5,7 +5,7 @@ description: "What Docsbook's paid plans unlock — AI chat and SEO run on every
 
 # Pro, Business, Growth, and Scale Plans
 
-Docsbook has five plans. Free is free forever — and it already includes reader-facing AI chat (on a $0.15 monthly AI budget) and full SEO / GEO / AEO. Pro is a monthly subscription that adds translations, advanced AI chat configuration (custom system prompt, chat hooks), your choice of AI model, search & feedback analytics, and a much larger AI budget. Business is a separate, higher tier: it includes everything in Pro plus a set of Business-exclusive capabilities — custom domain, white-label, webhooks, bring-your-own API keys (for both AI chat and translations), and the semantic doc index & relationship graph — on top of higher usage limits. Growth and Scale sit above Business: each carries every Business capability, with a larger monthly AI budget and more project seats, for teams whose usage has outgrown Business.
+Docsbook has five plans. Free is free forever — and it already includes reader-facing AI chat (on a $0.15 monthly AI budget) and full SEO / GEO / AEO. Pro is a monthly subscription that adds translations, advanced AI chat configuration (custom system prompt, chat hooks), your choice of AI model, search & feedback analytics, and a much larger AI budget. Business is a separate, higher tier: it includes everything in Pro plus a set of Business-exclusive capabilities — custom domain, white-label, webhooks, bring-your-own API keys (for both AI chat and translations), and semantic search — on top of higher usage limits. Growth and Scale sit above Business: each carries every Business capability, with a larger monthly AI budget and more project seats, for teams whose usage has outgrown Business.
 
 A subscription is bought once per **account**, not per project. It grants a number of project **seats**: a project is paid while it holds one, and you can move a seat to a different project at any time. Free projects are unlimited on every plan.
 
@@ -135,7 +135,7 @@ Full refund within the first 30 days. Email support@docsbook.io.
 2. **Account gets its seats, and the project you checked out with takes one** ✅
 3. **All features available immediately** ✅
 
-You'll see a **Pro** or **Business** label in the Float Widget. New options open in Settings — translations, advanced AI chat config (custom prompt, hooks), your choice of AI model, and a larger AI budget on Pro; custom domain, white-label, webhooks, bring-your-own API keys, and the semantic doc index & relationship graph additionally on Business.
+You'll see a **Pro** or **Business** label in the Float Widget. New options open in Settings — translations, advanced AI chat config (custom prompt, hooks), your choice of AI model, and a larger AI budget on Pro; custom domain, white-label, webhooks, bring-your-own API keys, and semantic search additionally on Business.
 
 ## FAQ
 

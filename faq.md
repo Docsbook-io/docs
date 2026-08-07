@@ -15,7 +15,7 @@ A: Docsbook transforms your GitHub documentation into a published site in 5 seco
 
 **Q: Do I need to pay to get started?**
 
-A: No. The Free plan ($0) includes unlimited public repositories, GitHub sync, full design customization, reader-facing AI chat (on a $0.15 monthly AI budget), and full SEO / GEO / AEO. Pro (monthly, 7-day free trial) adds translations, advanced AI chat configuration (custom prompt, hooks), your choice of AI model, search analytics, and a $59/month AI budget. Business (monthly, 14-day free trial) includes everything in Pro plus custom domain, white-label, webhooks, bring-your-own API keys, the semantic doc index & relationship graph, and higher usage limits.
+A: No. The Free plan ($0) includes unlimited public repositories, GitHub sync, full design customization, reader-facing AI chat (on a $0.15 monthly AI budget), and full SEO / GEO / AEO. Pro (monthly, 7-day free trial) adds translations, advanced AI chat configuration (custom prompt, hooks), your choice of AI model, search analytics, and a $59/month AI budget. Business (monthly, 14-day free trial) includes everything in Pro plus custom domain, white-label, webhooks, bring-your-own API keys, semantic search, and higher usage limits.
 
 ---
 
@@ -224,7 +224,7 @@ A: An account subscription — **$59/month**, 7-day free trial, with 1 project s
 - Advanced MCP tools — chat hooks, custom system prompt, translation management
 - Your choice of AI model for reader-facing chat
 
-Custom domain, white-label, webhooks, bring-your-own API keys, and the semantic doc index & relationship graph are **not** included in Pro — see Business below.
+Custom domain, white-label, webhooks, bring-your-own API keys, and semantic search are **not** included in Pro — see Business below.
 
 ---
 
@@ -235,7 +235,7 @@ A: An account subscription — **$159/month**, 14-day free trial, with 3 project
 - White-label (hide "Powered by Docsbook")
 - Webhooks — up to 25 per workspace
 - Bring your own AI chat and/or translation API key (with custom model)
-- Semantic doc index & relationship graph — the biggest single improvement to AI chat answer quality (finds the right section by meaning, answers from it with the page cited rather than inventing one, and replies faster), plus content health findings
+- Semantic search — the biggest single improvement to AI chat answer quality (finds the right section by meaning, answers from it with the page cited rather than inventing one, and replies faster). Turn it on in **AI Chat → Semantic Search**; the index re-syncs on every doc commit
 - A $159/month AI budget, and higher translation limits than Pro
 
 ---

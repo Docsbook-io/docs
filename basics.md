@@ -195,7 +195,7 @@ Everything in Free, plus:
 - ✅ Search & feedback analytics
 - ✅ Analytics for 7 days
 - ✅ Priority support
-- ❌ Custom domain, white-label, webhooks, bring-your-own API key, semantic doc index & relationship graph (Business only — see below)
+- ❌ Custom domain, white-label, webhooks, bring-your-own API key, semantic search (Business only — see below)
 
 ### Business (monthly, 14-day free trial)
 
@@ -205,7 +205,7 @@ Everything in Pro, plus Business-exclusive capabilities, plus higher usage limit
 - ✅ White-label (hide "Powered by Docsbook")
 - ✅ Webhooks (up to 25 per workspace)
 - ✅ Bring your own AI chat / translation API key (with custom model)
-- ✅ Semantic doc index & relationship graph (meaning-based chat search, content health)
+- ✅ Semantic search (meaning-based chat search over an embedding index of your docs)
 - ✅ $159/month AI budget
 - ✅ 3 paid project seats
 - ✅ Higher translation limit than Pro
