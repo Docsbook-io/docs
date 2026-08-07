@@ -7,6 +7,14 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ## NEW - 07.08.2026
 
+### Added
+
+- `CTA Clicks` shows how many readers left your docs through a link you placed there, with a trend chart and a ranked list of the destinations they clicked. `Analytics`
+
+### Changed
+
+- `AI Views` moved in as a tab of the Referrers card, and the `UTM Parameters` tab is now simply `UTM`. `Analytics`
+
 ### Fixed
 
 - Switching the doc language from inside a subfolder no longer leads to a 404 page. `Docs`

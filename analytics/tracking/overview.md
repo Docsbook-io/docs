@@ -16,11 +16,16 @@ Know exactly how many people read your docs and where they come from — without
 | Top pages | Most-visited pages ranked by view count |
 | Referrers | Where visitors came from (Google, GitHub, direct, etc.) |
 | Online now | Live count of active readers in the last 5 minutes |
-| AI Visits | Requests from AI crawlers (ChatGPT, Claude, Perplexity, Google-Extended and others) |
+| AI Views | Requests from AI crawlers (ChatGPT, Claude, Perplexity, Google-Extended and others) |
+| CTA Clicks | Outbound links readers clicked to leave your docs (signup, pricing, repo, …) |
 
-### AI Visits
+### AI Views
 
-Switch the chart to **AI Visits** to see one line per AI crawler instead of a single total, so you can tell which assistants are reading your docs and how that changes over time. The twelve busiest bots are charted; each is labelled with the provider behind it.
+Switch the chart to **AI Views** to see one line per AI crawler instead of a single total, so you can tell which assistants are reading your docs and how that changes over time. The twelve busiest bots are charted; each is labelled with the provider behind it. The same breakdown is available as the **AI Views** tab of the Referrers card.
+
+### CTA Clicks
+
+**CTA Clicks** counts every click on a link that leads off your documentation — your signup page, pricing, the repo, anything external. The chart shows the trend; the CTA Clicks card ranks the destinations, so you can see which call to action readers actually follow and from which page they follow it.
 
 ## How to Open
 
