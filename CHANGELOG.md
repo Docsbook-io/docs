@@ -5,6 +5,12 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 07.08.2026
+
+### Fixed
+
+- Switching the doc language from inside a subfolder no longer leads to a 404 page. `Docs`
+
 ## NEW - 03.08.2026
 
 ### Fixed
