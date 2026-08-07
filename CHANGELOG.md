@@ -10,6 +10,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Added
 
 - `CTA Clicks` shows how many readers left your docs through a link you placed there, with a trend chart and a ranked list of the destinations they clicked. `Analytics`
+- Per-source spend limits let you cap what one source may spend each cycle, so AI translations or the semantic index can never eat the whole budget. Each bar under `Spend by source` now shows your limit next to the plan's own. `Limits`
 
 ### Changed
 

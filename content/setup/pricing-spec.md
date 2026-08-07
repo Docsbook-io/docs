@@ -66,6 +66,7 @@ $899/month. Same feature set as Business — custom domain, white-label, bring-y
 | Monthly AI budget             | $0.15    | $59     | $349              | $159              | $899           |
 | Payment                       | —        | monthly/annual | monthly/annual | monthly/annual | monthly/annual |
 | Overage billing               | ❌       | ✅      | ✅                | ✅                | ✅             |
+| Per-source spend limits       | ❌       | ✅      | ✅                | ✅                | ✅             |
 
 Pro/Growth and Business/Scale do **not** unlock the same set of features: custom domain, white-label, webhooks, and bring-your-own API keys are Business/Scale-exclusive. Growth mirrors Pro's feature set with a bigger AI budget and more seats; Scale mirrors Business's feature set with the largest AI budget and the most seats. See [AI Chat](../../ai/chat.md) and [Translations](../../ai/translations.md) for current limit numbers.
 
@@ -76,6 +77,10 @@ All monthly plans (Pro, Business, Growth, Scale) can also be billed annually at 
 ## Overage Billing
 
 Paid plans (Pro, Business, Growth, Scale) don't hard-stop the moment your monthly AI budget runs out. Once the budget is exhausted, further usage is billed as overage — charged on top of your subscription — up to a monthly overage cap you control from the Limits tab in workspace settings (default $20/month). Overage charges are billed once your billing cycle closes; if you hit the cap, usage is blocked again until the next cycle (or you raise the cap). Free plan has no overage — usage stops at the free budget.
+
+### Per-Source Limits
+
+The same tab also accepts an optional per-cycle ceiling for each individual spend source — Readers (AI Chat), Admin & AI Agent, AI Translations, Semantic Index. A per-source limit is counted against the plan budget and overage together, so it answers "AI Translations must not cost me more than $3 this month" rather than capping only the overage portion. When a source reaches its limit it stops until the next cycle while the others keep running; a blank field means no limit, and $0 switches that source off entirely. Limits are shown as a marker on the matching bar under **Spend by source**, so the plan's budget and your own ceiling are both visible.
 
 Usage is priced in money, not tokens: every AI call is charged at the real price the provider charges for the model that answered, plus a 150% markup. The model, its per-1M-token rate and the markup are all shown in your dashboard, so the amount deducted is one you can check. From Pro you can switch models — a cheaper model makes the same budget go further. On Business and Scale you can bring your own API key instead, pay the provider directly, and we bill you nothing for usage.
 
