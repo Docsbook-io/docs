@@ -17,6 +17,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Changed
 
+- `Analytics Explorer` opens on an overview instead of a report picker: headline figures across the top, then every report as a row showing what it found, its key number and its trend. Click a row to expand the full report, filters and export in place. `Analytics`
+- Each report in `Analytics Explorer` now renders in the shape its data means, so there is no chart-type menu to get wrong, and every row carries an icon you can scan for. `Analytics`
 - `AI Views` moved in as a tab of the Referrers card, and the `UTM Parameters` tab is now simply `UTM`. `Analytics`
 
 ### Removed
