@@ -21,7 +21,7 @@ No account required to start. Create a documentation site in 3 simple steps.
 
 ## Sign in to publish
 
-Once you're happy with the draft, click **Publish changes** in the settings panel.
+Once you're happy with the draft, click the blue button in the draft's toolbar — **Claim website** if you haven't changed anything yet, **Save changes** if you have. Both do the same thing: turn the draft into a site of your own.
 
 1. Choose a sign-in method — GitHub, Google, Apple, or email (one-time code)
 2. Complete the sign-in flow for your chosen method

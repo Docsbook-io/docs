@@ -12,6 +12,13 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Enabling a language now asks you to confirm, showing how many pages will be translated, the estimated cost and your remaining budget. When the run does not fit, it says what share of your docs the budget covers and offers the upgrade. `Translations`
 - Each enabled language shows what its translation run is doing: a progress counter while it works, and a `Stopped` marker you can hover for the reason when a run ended early. `Translations`
 - Long translation runs resume on their own until every page is done, and the pages a commit changed are translated first. `Translations`
+- A draft's toolbar now offers `Share`, which copies a link to the page you are on so you can send the site to whoever decides. `Draft`
+
+### Changed
+
+- The draft's blue button now says what a click does: `Claim website` while the generated site stands as built, `Save changes` once you have customised it. It was called `Publish`, which named an outcome a visitor without an account could not reach. `Draft`
+- In the full-screen chat, `Preview` is now `Open website` — it leaves the chat for the site, rather than naming a state you were already in. `AI Chat`
+- The project switcher offers visitors without an account `Claim website` instead of `Sign up to connect a repo`. `AI Chat`
 
 ### Fixed
 
