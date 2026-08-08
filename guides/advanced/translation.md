@@ -164,15 +164,11 @@ Translated Spanish:
 
 ### When Does Translation Update?
 
-When you update documentation:
+Enabling a language translates your whole site once. After that, pushing to GitHub does **not** re-translate anything on its own — readers keep seeing the last translation until it is re-run.
 
-1. Edit file in English
-2. Commit to GitHub
-3. Docsbook notices changes
-4. Translates updates to other languages
-5. Translated versions are updated
+To update translations after an edit, ask your AI agent to re-translate the page, or re-run translation from the Translation tab. When a re-run is scoped to the pages a commit changed, those pages are translated first.
 
-This happens automatically — you don't need to do anything.
+A large re-run is processed in chunks and resumes on its own until it finishes, so you do not need to keep an eye on it. The language row shows a progress counter while it runs, and marks the language **Stopped** with a reason if a run ended early.
 
 ### How to Update Manually?
 
@@ -278,7 +274,7 @@ Docsbook translates current pages to the new language.
 2. Click ✕ next to the language
 3. Save
 
-Pages in that language disappear from the site. History is saved and can be restored.
+Pages in that language stop being served — visitors on those URLs are redirected to the default language. Nothing is deleted: the translations are kept, so turning the language back on is instant and does not pay again for pages that have not changed.
 
 ### Change Default Language
 
@@ -348,7 +344,7 @@ A: Translations are included in Pro and Business, with a higher monthly limit on
 
 **Q: Will translation update when I update docs?**
 
-A: Yes, automatically on the next update.
+A: Not on its own. A push to GitHub does not re-translate anything — readers keep seeing the last translation until you re-run it. Ask your AI agent to re-translate a page, or re-run translation from the Translation tab.
 
 ## What's Next?
 

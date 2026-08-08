@@ -96,6 +96,8 @@ curl -X POST https://docsbook.io/api/webhooks \
 
 The response includes the `secret` exactly once — store it.
 
+`event_type` accepts either spelling of an event name: the dotted form used throughout this page (`content.indexed`) or the underscored form (`content_indexed`). Both register the same subscription.
+
 ### Optional Authorization header
 
 Some receivers (for example a Claude Code routine trigger URL) require their own

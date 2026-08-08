@@ -1,6 +1,6 @@
 ---
 title: "AI-Powered Translations"
-description: "How Docsbook auto-translates documentation with Claude AI — incremental re-translation on GitHub push, cached delivery, and zero translation files to maintain."
+description: "How Docsbook auto-translates documentation with Claude AI — incremental re-translation, resumable runs with progress, cached delivery, and zero translation files to maintain."
 ---
 
 # AI Translations
@@ -18,6 +18,25 @@ How Docsbook automatically translates your documentation using Claude AI.
 No manual work. No translation files to maintain. No YAML keys.
 
 Enabling a language translates your whole site once. After that, pushing to GitHub does **not** re-translate anything on its own: readers keep seeing the last translation until it is re-run. Ask your AI agent to re-translate a page, or replace a specific translation yourself with the MCP translation tools — see [Translation Settings](./settings).
+
+## Long Runs Resume Where They Stopped
+
+A large site takes more than one pass to translate. Docsbook runs the job in chunks and keeps a cursor, so a run that hits a time limit picks up from the next untranslated page instead of starting over or stalling.
+
+- **Changed pages go first.** When a re-translation is scoped to the pages a commit touched, those are translated ahead of the rest of the site — the pages you just edited come back first.
+- **A run continues on its own.** Every couple of minutes a background runner resumes any job that still has pages left.
+- **Interrupted runs are recovered.** If a run dies mid-way, it is picked up automatically rather than sitting unfinished.
+
+You do not need to re-click anything to keep a long translation moving.
+
+## Watching Progress
+
+The **Languages** card in the Translation tab shows what a running job is doing:
+
+- A progress bar and a **35/80** counter — pages handled out of pages in the run.
+- **Stopped** on a language whose last run did not finish. Hover it to see why: the AI budget ran out, a provider quota was hit, or the run failed.
+
+When a run stops on budget, the remaining pages are translated on a later run once the budget refreshes — nothing you already paid for is lost.
 
 ## What Gets Translated
 

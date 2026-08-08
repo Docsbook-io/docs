@@ -20,10 +20,24 @@ Publish your documentation in multiple languages — automatically, with no manu
 1. Requires a **Pro plan**.
 2. Open your docs site.
 3. Float Widget → **Translation** tab.
-4. Check the languages you want to enable.
-5. Save — translation starts automatically in the background.
+4. Check the language you want to enable.
+5. Confirm in the dialog that appears — translation then starts in the background.
 
 Translation typically takes **1–5 minutes** for small repositories, up to 30 minutes for large ones.
+
+### Before You Confirm
+
+Turning a language on opens a confirmation dialog so you know the cost before you commit to it. It shows:
+
+- **Pages to translate** — how many pages are not yet translated, out of the total. If everything is already translated, it says so and enabling costs nothing.
+- **Estimated cost** — what the run is expected to cost, or *Billed to your own API key* if you brought your own provider.
+- **Budget left** — how much of your AI budget (or translation limit) remains.
+
+If the run does not fit in what is left, the dialog says what percentage of the docs your budget covers and offers an upgrade. You can still press **Translate what fits** — the pages that fit are translated now, and the rest are picked up automatically once your budget refreshes.
+
+### Following a Running Translation
+
+While a run is in progress, the language row shows a progress bar and a **35/80** counter (pages handled out of pages in the run). A language whose last run did not finish is marked **Stopped**; hover it to see the reason — budget exhausted, provider quota, or a failure. Long runs resume on their own, in chunks, until every page is done.
 
 ## Supported Languages
 
@@ -90,9 +104,11 @@ Enabling a language translates your whole site once. After that, editing a page 
 
 ## Disabling a Language
 
-Uncheck the language in the Translation tab → Save.
+Uncheck the language in the Translation tab → Save. No confirmation is asked, because nothing is destroyed.
 
-Visitors on that language's URL are automatically redirected to the English version. Cached translations are kept — re-enabling is instant.
+Visitors on that language's URL are automatically redirected to the English version.
+
+**Turning a language off never deletes what is already translated**, and turning it back on does not pay again for pages that have not changed — only new or edited pages are translated. Re-enabling a language you previously used is effectively instant and free. You can experiment with languages without risking a second bill.
 
 ---
 

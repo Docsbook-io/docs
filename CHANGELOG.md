@@ -5,6 +5,28 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 08.08.2026
+
+### Added
+
+- Enabling a language now asks you to confirm, showing how many pages will be translated, the estimated cost and your remaining budget. When the run does not fit, it says what share of your docs the budget covers and offers the upgrade. `Translations`
+- Each enabled language shows what its translation run is doing: a progress counter while it works, and a `Stopped` marker you can hover for the reason when a run ended early. `Translations`
+- Long translation runs resume on their own until every page is done, and the pages a commit changed are translated first. `Translations`
+
+### Fixed
+
+- Webhooks now actually fire. Registered subscriptions never matched the events the product dispatched, so no real event had ever reached a subscriber's endpoint. `Webhooks`
+- Registering a webhook accepts the event names exactly as this documentation writes them, with a dot. `Webhooks`
+- A translation run that is interrupted no longer blocks that language for hours. Stalled runs are detected and picked up automatically. `Translations`
+- Re-translating a page you barely touched no longer pays to translate the parts that did not change. `Translations`
+- Readers no longer see a banner claiming they are looking at the original when a translation is on screen. `Docs`
+- The sidebar no longer shows translated labels on a page whose body is still in the original language. `Docs`
+- Turning a language off explains that nothing is deleted and that turning it back on does not pay again for unchanged pages. `Translations`
+- Answers about paid features keep the plan requirement instead of describing the steps as if the feature were available on any plan. `AI Chat`
+- The docs chat no longer invents integrations that do not exist, and admits when a topic is not covered. `AI Chat`
+- Search finds the right page for questions asked in ordinary language, instead of failing on filler words and word endings. `Search`
+- AI spend is billed at the rate your plan states. A rounding floor inflated the cost of small requests. `Billing`
+
 ## NEW - 07.08.2026
 
 ### Added
