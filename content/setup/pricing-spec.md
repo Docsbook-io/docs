@@ -1,6 +1,6 @@
 ---
 title: "Pricing & Plans"
-description: "Docsbook pricing — Free forever, Pro, Business, Growth, and Scale — with AI budgets, project seats, translations, and webhook limits broken down per plan. Growth mirrors Pro's capabilities and Scale mirrors Business's, each with a bigger monthly AI budget and more seats; Business/Scale add exclusive capabilities (custom domain, white-label, webhooks, bring-your-own API keys) on top of Pro/Growth."
+description: "Docsbook pricing — Free forever, Pro, Business, Growth, and Scale — with AI budgets, project seats, translations, and webhook limits broken down per plan. Growth mirrors Pro's capabilities and Scale mirrors Business's, each with a bigger monthly AI budget and more seats; Business/Scale add exclusive capabilities (webhooks, bring-your-own API keys, semantic search, UTM analytics) on top of Pro/Growth, while custom domain and white-label start at Pro."
 ---
 
 # Pricing & Plans
@@ -22,6 +22,8 @@ $59/month, 7-day free trial. Best for solo founders, indie devs, and small teams
 Everything in Free, plus:
 
 - 1 project seat
+- Custom domain (`docs.yourcompany.com`) with free SSL
+- White-label — hide "Powered by Docsbook"
 - Auto-translation
 - Advanced AI chat config — chat hooks, custom system prompt, your choice of AI model, chat analysis dashboard
 - Search & feedback analytics
@@ -35,8 +37,6 @@ $159/month, 14-day free trial. Everything in Pro, plus a set of Business-exclusi
 
 - Everything in Pro
 - 3 project seats
-- Custom domain (`docs.yourcompany.com`) with free SSL — Business only
-- White-label — hide "Powered by Docsbook" — Business only
 - Bring your own AI chat and/or translation API key (with custom model) — Business only
 - Webhooks — up to 25 per workspace — Business only
 - $159/month AI budget, and higher translation limits than Pro
@@ -56,10 +56,10 @@ $899/month. Same feature set as Business — custom domain, white-label, bring-y
 | GitHub repositories          | ∞        | ∞       | ∞                | ∞                | ∞              |
 | Paid project seats           | 0        | 1       | 5                 | 3                 | 15             |
 | AI chat (reader-facing)      | ✅       | ✅      | ✅                | ✅                | ✅             |
-| Custom domain                | ❌       | ❌      | ❌                | ✅                | ✅             |
+| Custom domain                | ❌       | ✅      | ✅                | ✅                | ✅             |
 | Private docs (password/SSO)  | ❌       | ✅      | ✅                | ✅                | ✅             |
 | SEO / GEO / AEO               | ✅       | ✅      | ✅                | ✅                | ✅             |
-| White-label                  | ❌       | ❌      | ❌                | ✅                | ✅             |
+| White-label                  | ❌       | ✅      | ✅                | ✅                | ✅             |
 | Choose your AI model         | ❌       | ✅      | ✅                | ✅                | ✅             |
 | Bring your own API key       | ❌       | ❌      | ❌                | ✅                | ✅             |
 | Webhooks                     | 0        | 0       | 0                | 25                | 25             |

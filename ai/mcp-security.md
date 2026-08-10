@@ -27,7 +27,7 @@ Every tool in the server declares a minimum plan. The plan is checked server-sid
 | Free | Workspace read/write, branding, UI settings, navigation, 24 h analytics, `find_skill`, SEO/GEO/AEO |
 | PRO | + AI settings, language settings, full analytics (up to 30 d), pending translations |
 | PRO+ | + page journeys, visitor drill-down, `query_events` |
-| Business | + custom domain |
+| Business | + webhooks, bring-your-own API keys |
 
 When a token does not have the required plan, the server returns a structured error — not a generic 403 — so the agent can surface a clear message rather than silently failing.
 

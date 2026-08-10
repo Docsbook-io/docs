@@ -195,7 +195,7 @@ Everything in Free, plus:
 - ✅ Search & feedback analytics
 - ✅ Analytics for 7 days
 - ✅ Priority support
-- ❌ Custom domain, white-label, webhooks, bring-your-own API key, semantic search (Business only — see below)
+- ❌ Webhooks, bring-your-own API key, semantic search (Business only — see below); custom domain and white-label need Pro
 
 ### Business (monthly, 14-day free trial)
 

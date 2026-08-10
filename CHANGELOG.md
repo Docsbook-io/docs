@@ -5,6 +5,31 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 10.08.2026
+
+### Added
+
+- The empty chat now offers four ways to start — from a GitHub repo, from your website, from an idea, or from files and screenshots — and each one opens the create flow with that source already chosen, so you go straight to the one question it needs. `AI Chat`
+- `Start a new project` is now always in the project menu, not only when a project is already open. `AI Chat`
+- Opening a preview or a draft now puts the site and the chat side by side, so you can see a change as you ask for it. `Draft`
+
+### Changed
+
+- Custom domain and white-label now start on `Pro` instead of `Business`. Your own domain and your own brand are the first two things a site owner wants, so they no longer wait for the $159 tier. `Pricing`
+- The preview tour introduces branding second-to-last, closer to the point where you would use it. `Onboarding`
+
+### Fixed
+
+- `Start from an idea` and the other build shortcuts used to start generating without ever asking what to build from, and named the result on their own. They now ask first. `AI Chat`
+- `Upgrade plan` did nothing when clicked on a chat with no project selected. `Billing`
+- Plans on `/pricing` could not be bought: the upgrade CTAs dropped the plan you picked, and the two top tiers were sold with the wrong AI budget. `Pricing`
+- The wizard's `See the magic` step failed with an error instead of building your site. `Onboarding`
+- A repository preview opened on a workspace subdomain returned a 404 when you sent a message. `Draft`
+- Signed-out visitors editing a preview saw a raw `HTTP 401` instead of an invitation to sign in — and the sign-in button that replaced it was invisible against its own background. `Draft`
+- Switching tabs in the settings widget kept the previous tab's scroll position. `Settings`
+- `Claim website` no longer overflows its row on a phone. `Draft`
+- Showcase sites had a canonical URL that pointed in a loop and no sitemap of their own. `SEO`
+
 ## NEW - 08.08.2026
 
 ### Added

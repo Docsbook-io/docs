@@ -1,11 +1,11 @@
 ---
 title: "Pro, Business, Growth, and Scale Plans Overview"
-description: "What Docsbook's paid plans unlock — AI chat and SEO run on every plan; Pro adds translations, advanced AI chat config, and a larger AI budget; Business adds custom domain, white-label, webhooks, and bring-your-own API keys on top, plus higher usage limits. Growth mirrors Pro and Scale mirrors Business, each with a bigger monthly AI budget and more project seats."
+description: "What Docsbook's paid plans unlock — AI chat and SEO run on every plan; Pro adds your own custom domain, white-label, translations, advanced AI chat config, and a larger AI budget; Business adds webhooks, bring-your-own API keys, and semantic search on top, plus higher usage limits. Growth mirrors Pro and Scale mirrors Business, each with a bigger monthly AI budget and more project seats."
 ---
 
 # Pro, Business, Growth, and Scale Plans
 
-Docsbook has five plans. Free is free forever — and it already includes reader-facing AI chat (on a $0.15 monthly AI budget) and full SEO / GEO / AEO. Pro is a monthly subscription that adds translations, advanced AI chat configuration (custom system prompt, chat hooks), your choice of AI model, search & feedback analytics, and a much larger AI budget. Business is a separate, higher tier: it includes everything in Pro plus a set of Business-exclusive capabilities — custom domain, white-label, webhooks, bring-your-own API keys (for both AI chat and translations), and semantic search — on top of higher usage limits. Growth and Scale sit above Business: each carries every Business capability, with a larger monthly AI budget and more project seats, for teams whose usage has outgrown Business.
+Docsbook has five plans. Free is free forever — and it already includes reader-facing AI chat (on a $0.15 monthly AI budget) and full SEO / GEO / AEO. Pro is a monthly subscription that adds your own custom domain, white-label, translations, advanced AI chat configuration (custom system prompt, chat hooks), your choice of AI model, search & feedback analytics, and a much larger AI budget. Business is a separate, higher tier: it includes everything in Pro plus a set of Business-exclusive capabilities — webhooks, bring-your-own API keys (for both AI chat and translations), semantic search, hosted API reference, and UTM analytics — on top of higher usage limits. Growth and Scale sit above Business: each carries every Business capability, with a larger monthly AI budget and more project seats, for teams whose usage has outgrown Business.
 
 A subscription is bought once per **account**, not per project. It grants a number of project **seats**: a project is paid while it holds one, and you can move a seat to a different project at any time. Free projects are unlimited on every plan.
 
@@ -17,13 +17,13 @@ A subscription is bought once per **account**, not per project. It grants a numb
 | Paid project seats | 0 | 1 | 5 | 3 | 15 |
 | GitHub sync | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Branding & themes | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Custom domain | ❌ | ❌ | ❌ | ✅ | ✅ |
+| Custom domain | ❌ | ✅ | ✅ | ✅ | ✅ |
 | AI chat | ✅ $0.15/mo budget | ✅ $59/mo budget | ✅ $349/mo budget | ✅ $159/mo budget | ✅ $899/mo budget |
 | AI translations (15 languages) | ❌ | ✅ | ✅ higher limit | ✅ higher limit | ✅ highest limit |
 | Full SEO / GEO / AEO (sitemap, OG, JSON-LD) | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Analytics period | 24h | 7 days | 30 days | 30 days | 30 days |
 | Private docs (password / SSO) | ❌ | ✅ | ✅ | ✅ | ✅ |
-| Hide "Powered by Docsbook" | ❌ | ❌ | ❌ | ✅ | ✅ |
+| Hide "Powered by Docsbook" | ❌ | ✅ | ✅ | ✅ | ✅ |
 | Bring your own AI/translation API key | ❌ | ❌ | ❌ | ✅ | ✅ |
 | Webhooks | 0 | 0 | 0 | 25 | 25 |
 | Free trial | — | 7 days | — | 14 days | — |
@@ -68,12 +68,19 @@ Switch a workspace from public to **private**, then require a password and/or yo
 identity provider (Google Workspace, Microsoft Entra ID, or Okta) before anyone but the owner can
 read it. Optionally restrict SSO sign-in to a single email domain. **How to set up:** [SSO Setup](./sso.md)
 
+### 6. Your Own Domain and Brand
+
+Use `docs.yourcompany.com` instead of `docsbook.io/yourname/repo` — a branded URL, better for SEO
+(the authority accrues to your domain, not ours), with free SSL. White-label comes with it: the
+"Powered by Docsbook" badge is hidden across all pages. **How to set up:** [Domain Guide](./custom-domain.md)
+
+Both were Business-only until 10.08.2026. They are the first two things a site owner wants, so they
+now start at Pro.
+
 ## Business/Scale-Only Features
 
 These capabilities are exclusive to the **Business** and **Scale** plans — Pro and Growth do not include them:
 
-- **Custom domain** — use `docs.yourcompany.com` instead of `docsbook.io/yourname/repo`. Branded URL, better for SEO, free SSL via Vercel. **How to set up:** [Domain Guide](./custom-domain.md)
-- **White-label** — hide the "Powered by Docsbook" badge across all pages.
 - **Webhooks** — subscribe to workspace events (content indexed, translations, chat activity, and more). Free, Pro, and Growth have no webhook slots; Business and Scale get up to 25 per workspace.
 - **Bring your own AI/translation API key** — configure your own provider, API key, and model for AI chat and/or translations (separate keys for each), instead of using Docsbook's shared quota.
 
@@ -135,7 +142,7 @@ Full refund within the first 30 days. Email support@docsbook.io.
 2. **Account gets its seats, and the project you checked out with takes one** ✅
 3. **All features available immediately** ✅
 
-You'll see a **Pro** or **Business** label in the Float Widget. New options open in Settings — translations, advanced AI chat config (custom prompt, hooks), your choice of AI model, and a larger AI budget on Pro; custom domain, white-label, webhooks, bring-your-own API keys, and semantic search additionally on Business.
+You'll see a **Pro** or **Business** label in the Float Widget. New options open in Settings — translations, advanced AI chat config (custom prompt, hooks), your choice of AI model, your own custom domain, white-label, and a larger AI budget on Pro; webhooks, bring-your-own API keys, and semantic search additionally on Business.
 
 ## FAQ
 

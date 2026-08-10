@@ -246,7 +246,7 @@ A dashboard only works if someone opens it. A webhook works always. Registering 
 | `update_languages` | Enable a target language. Read alongside the country/language breakdown in `get_analytics`: **translate where the readers already are**, not where you hope they will be. | PRO |
 | `set_translation_mode`, `upload_translation`, `approve_translation`, `list_pending_translations`, `get_translation`, `delete_translation` | The translation pipeline — automatic, or externally supplied with human approval. | PRO / PRO+ |
 | `update_access` | Private workspace, password, or your own SSO/OIDC. Unblocks selling to companies whose procurement requires it. | PRO |
-| `update_domain` | Docs on your own domain — the SEO authority accrues to **you**, not to a vendor subdomain. | Business |
+| `update_domain` | Docs on your own domain — the SEO authority accrues to **you**, not to a vendor subdomain. | Pro |
 | `update_branding`, `update_ui_settings` | Your product, not a platform's. | Free |
 
 ## The combinations that pay
@@ -341,7 +341,7 @@ Each tool declares a minimum plan. The server returns a structured error when a 
 | Free | Workspace, branding, UI, navigation, traffic analytics (24h), `find_skill`, `find_widget`, `search_docs`, `get_doc_outline`, `write_docs` (with a read-write token), SEO/GEO/AEO | Whether readers arrive at all |
 | PRO | + `get_search_rankings`, AI settings, languages, translations, private docs (`update_access`), demand gaps, **visit outcomes, dead-end pages, content health, route patterns, funnels, change history** | Which page is costing you customers, and whether the fix worked |
 | PRO+ | + `get_insights`, `get_chat_intent`, `get_visits`, page journeys, top visitors, visitor drill-down, chat hooks, `query_events` | Who is deciding whether to buy, and what blocks the purchase |
-| Business | + custom domain, webhooks, `get_retention`, bring-your-own AI/translation API key | Long-run retention, and reacting without opening a dashboard |
+| Business | + webhooks, `get_retention`, bring-your-own AI/translation API key | Long-run retention, and reacting without opening a dashboard |
 
 ## Related
 

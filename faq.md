@@ -15,7 +15,7 @@ A: Docsbook transforms your GitHub documentation into a published site in 5 seco
 
 **Q: Do I need to pay to get started?**
 
-A: No. The Free plan ($0) includes unlimited public repositories, GitHub sync, full design customization, reader-facing AI chat (on a $0.15 monthly AI budget), and full SEO / GEO / AEO. Pro (monthly, 7-day free trial) adds translations, advanced AI chat configuration (custom prompt, hooks), your choice of AI model, search analytics, and a $59/month AI budget. Business (monthly, 14-day free trial) includes everything in Pro plus custom domain, white-label, webhooks, bring-your-own API keys, semantic search, and higher usage limits.
+A: No. The Free plan ($0) includes unlimited public repositories, GitHub sync, full design customization, reader-facing AI chat (on a $0.15 monthly AI budget), and full SEO / GEO / AEO. Pro (monthly, 7-day free trial) adds your own custom domain, white-label, translations, advanced AI chat configuration (custom prompt, hooks), your choice of AI model, search analytics, and a $59/month AI budget. Business (monthly, 14-day free trial) includes everything in Pro plus webhooks, bring-your-own API keys, semantic search, hosted API reference, UTM analytics, and higher usage limits.
 
 ---
 
@@ -252,7 +252,7 @@ A: Your subscription stays active until the end of the current billing period �
 
 After it ends, every project that held a seat drops to **Free**:
 - The site stays online at `docsbook.io/owner/repo` (forever, unless you move the project to your own GitHub — that changes the address)
-- Your custom domain stops resolving (revert DNS or re-upgrade — Business only)
+- Your custom domain stops resolving (revert DNS or re-upgrade — Pro and above)
 - Translations, white-label, and webhooks turn off; AI chat and SEO keep running on the Free AI budget
 - All your content stays in GitHub — nothing is deleted
 - Settings (branding, navigation, UI) are preserved — re-upgrading restores everything

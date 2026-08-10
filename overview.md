@@ -71,9 +71,9 @@ A **workspace** = one documentation site. You can create unlimited workspaces fr
 | Plan | Cost | What You Get |
 |---|---|---|
 | **Free** | $0 | Unlimited docs, branding, basic UI controls, analytics (24h), AI chat ($0.15/mo AI budget), SEO / AEO / GEO |
-| **Pro** | $59/mo, 7-day free trial | 1 project seat, translations, advanced AI chat config (custom prompt, hooks), your choice of AI model, search & feedback analytics, $59/mo AI budget |
+| **Pro** | $59/mo, 7-day free trial | 1 project seat, your own custom domain, white-label, translations, advanced AI chat config (custom prompt, hooks), your choice of AI model, search & feedback analytics, $59/mo AI budget |
 | **Growth** | $349/mo | Every Business capability plus multiplayer AI chat (invite your team into one live session), with 5 project seats and a $349/mo AI budget — for teams that have outgrown Business's usage limits |
-| **Business** | $159/mo, 14-day free trial | Everything in Pro, plus 3 project seats, custom domain, white-label, webhooks (25), bring-your-own API key, semantic search, hosted API reference, UTM analytics, a $159/mo AI budget, and higher translation limits |
+| **Business** | $159/mo, 14-day free trial | Everything in Pro, plus 3 project seats, webhooks (25), bring-your-own API key, semantic search, hosted API reference, UTM analytics, 30-day analytics history, a $159/mo AI budget, and higher translation limits |
 | **Scale** | $899/mo | Same feature set as Business, with 15 project seats and a $899/mo AI budget, the largest of any plan — for teams that have outgrown Business's usage limits |
 
 All monthly plans (Pro, Growth, Business, Scale) can also be billed annually at a 20% discount. All plans: **unlimited repositories, forever.**
@@ -116,7 +116,7 @@ Every paid plan includes an AI budget equal to its price: Pro costs $59/month an
 - **Pro / Growth / Business / Scale:** Advanced journey mapping, visitor drill-down, failed searches, negative feedback
 
 ### 🔗 Integrations
-- **Custom domain (Business / Scale)** — `docs.yourcompany.com` with free SSL
+- **Custom domain (Pro and above)** — `docs.yourcompany.com` with free SSL
 - **Webhooks (Business / Scale)** — 15 event types (chat questions, translations, traffic spikes)
 - **MCP server** — control Docsbook from Claude Code, Cursor, ChatGPT
 - **GitHub integration** — "Edit on GitHub" links on every page
