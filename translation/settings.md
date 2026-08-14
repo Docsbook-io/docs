@@ -23,6 +23,8 @@ Publish your documentation in multiple languages — automatically, with no manu
 4. Check the language you want to enable.
 5. Confirm in the dialog that appears — translation then starts in the background.
 
+If the language switcher is already showing on your site, you can also open it and press **Activate languages** — it opens the same **Translation** tab. That entry point appears only for you as the owner (or in admin preview), never for your readers.
+
 Translation typically takes **1–5 minutes** for small repositories, up to 30 minutes for large ones.
 
 ### Before You Confirm

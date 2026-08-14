@@ -24,6 +24,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The landing page now opens on what you get, a branded site from your GitHub docs in 15 seconds, and its main button reads `Get started`. `Landing`
 - Disabled `SEO`, `GEO` and `AEO` toggles now sort to the top of the SEO panel so you see what to turn on first; a toggle you just enabled stays put until you reopen the panel. `Settings`
 - The button that hands a draft or preview site to you is labelled `Publish Free`, or `Claim ownership` when you arrived through a mailed claim link. `Draft`
+- Opening the language switcher on your own site before any language is enabled now offers to activate them and takes you to the translation settings, instead of reporting that none are added. Readers of your published docs still see the plain notice. `Translations`
 
 ### Fixed
 
@@ -36,6 +37,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Asking for a change on the project you already have open no longer tries to create it again. `AI Chat`
 - `Start new project` from a workspace subdomain no longer 404s, and the project switcher no longer doubles the organisation in its path. `AI Chat`
 - Country flags in the translation language picker now render the same on every platform instead of depending on the operating system's emoji font. `Translations`
+- A new workspace can use its free AI budget straight away instead of hitting an empty-balance notice before its first question. `Billing`
+- Opening the settings panel no longer blanks the documentation page for a signed-in owner. `Settings`
 - Documentation pages with non-Latin paths load instead of failing with a server error. `Docs`
 - A site whose homepage the repository listing missed now falls back to reading `README.md` directly. `Docs`
 - Switching or resetting the sidebar language now lands on the right URL. `Docs`

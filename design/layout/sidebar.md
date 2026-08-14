@@ -53,7 +53,7 @@ Shows a language selector inside the sidebar so readers can switch translation l
 
 > Note: Enable *either* the sidebar switcher *or* the [header language selector](./header#header-options) — not both. Showing it in two places creates redundancy.
 
-Requires at least one translation language to be enabled.
+Requires at least one translation language to be enabled. Until then, opening the switcher on your own site shows **Activate languages**, which takes you straight to the translation settings. Your readers see a plain *No languages added* notice instead.
 [Set up translations →](../../translation/settings)
 
 ---
