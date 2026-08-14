@@ -5,6 +5,17 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 15.08.2026
+
+### Changed
+
+- The landing page's feature section now answers the four questions buyers actually ask, in the order they ask them: what the bill can do, what the docs return, whether you can act on that, and what it costs to leave. `Landing`
+- Each of those cards leads with the numbers that decide the answer instead of a replica of the full dashboard behind it. `Landing`
+
+### Fixed
+
+- Widgets on a generated draft site no longer link to pages that were never created. `Draft`
+
 ## NEW - 14.08.2026
 
 ### Added
