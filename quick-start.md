@@ -12,7 +12,7 @@ No account required to start. Create a documentation site in 3 simple steps.
 ## Start generating — no sign-in required
 <!-- anchor: step-1-create-website -->
 
-1. Open [docsbook.io](https://docsbook.io) and click **"Create website"**
+1. Open [docsbook.io](https://docsbook.io) and click **"Get started"**
 2. Pick a source: a **website URL** to scan, a **GitHub repo** to link, or just describe your **idea** in text
 3. For website or idea sources, Docsbook generates a full draft site in under a minute — no account needed yet. You get nine pages, from the landing page to an FAQ and a reference, each closing with a call to action, plus a pricing page when your source publishes prices
 4. If you picked GitHub, you'll be taken straight to a live preview of your repo's docs

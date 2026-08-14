@@ -184,7 +184,7 @@ Every paid plan includes an AI budget equal to its price: Pro costs $59/month an
 ## Getting Started
 
 1. **Generate a draft — no account needed**  
-   Click "Create website" at [docsbook.io](https://docsbook.io), then pick a source: a website URL to scan, a GitHub repo to link, or just an idea in text
+   Click "Get started" at [docsbook.io](https://docsbook.io), then pick a source: a website URL to scan, a GitHub repo to link, or just an idea in text
 
 2. **Preview and refine**  
    Your draft opens as a real documentation site — sidebar, outline, breadcrumbs and all. Browse the generated pages and tune branding, layout and SEO in the settings panel, all before signing in

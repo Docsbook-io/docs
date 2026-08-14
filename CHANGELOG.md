@@ -21,6 +21,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The settings panel no longer opens itself over a preview or a freshly generated draft — it interrupted the first look at the site. `Draft`
 - AI chat answers are set in a tighter line-height. `AI Chat`
 - The landing page's first screen states what Docsbook is and what it costs. `Landing`
+- The landing page now opens on what you get, a branded site from your GitHub docs in 15 seconds, and its main button reads `Get started`. `Landing`
 - Disabled `SEO`, `GEO` and `AEO` toggles now sort to the top of the SEO panel so you see what to turn on first; a toggle you just enabled stays put until you reopen the panel. `Settings`
 - The button that hands a draft or preview site to you is labelled `Publish Free`, or `Claim ownership` when you arrived through a mailed claim link. `Draft`
 
@@ -34,6 +35,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Typing on `/chat` with projects but none selected no longer sends you into the create flow. `AI Chat`
 - Asking for a change on the project you already have open no longer tries to create it again. `AI Chat`
 - `Start new project` from a workspace subdomain no longer 404s, and the project switcher no longer doubles the organisation in its path. `AI Chat`
+- Country flags in the translation language picker now render the same on every platform instead of depending on the operating system's emoji font. `Translations`
 - Documentation pages with non-Latin paths load instead of failing with a server error. `Docs`
 - A site whose homepage the repository listing missed now falls back to reading `README.md` directly. `Docs`
 - Switching or resetting the sidebar language now lands on the right URL. `Docs`
