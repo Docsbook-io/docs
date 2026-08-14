@@ -246,6 +246,19 @@ Every action goes to the assistant as an ordinary instruction and is committed t
 
 ---
 
+### Ask what to improve, then pick what happens
+
+Any time you ask the assistant what to improve — "what should I fix first", "make this findable in search", "these pages feel thin" — the answer comes back as a list you tick, not as prose you would have to re-type.
+
+Each row is one concrete change to one of your real pages: what it changes, why it helps, and which page it touches. Tick the ones you want and press **Apply** once — every ticked row is done together, in a single pass, and the ones you leave unticked are never written at all.
+
+What happens on Apply depends on auto-mode:
+
+- **auto-mode off** (the default) — the picked changes come back as before/after diffs you approve or reject page by page before anything is published.
+- **auto-mode on** — they are written and published straight away, with a summary of what changed.
+
+---
+
 ## Connect your docs
 
 After, you should connect your repository. Go to [docsbook.io/connect](https://docsbook.io/connect) — this page lets you sign in and select a repository at any time.

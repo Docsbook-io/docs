@@ -5,6 +5,47 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 14.08.2026
+
+### Added
+
+- Ask the assistant what to improve and the answer is now a list you tick, not prose you re-type. Each row is one concrete change to one of your real pages; tick several and press `Apply` once, and they are all done in a single pass. Nothing you leave unticked is ever written. `AI Chat`
+- The same picker works on a draft before you have an account, and applying picks that span several pages updates all of them in one go. `Draft`
+- A correction that redefines what your business is now offers to regenerate the whole site instead of quietly fixing only the page you had open, and says up front that regenerating discards edits you have already made. `Draft`
+- A freshly generated draft opens with a summary of what was read and written, plus one-click follow-ups. `Draft`
+- The first-day `Try Docsbook` cards now lead with filling in your docs and saving them to GitHub. `AI Chat`
+
+### Changed
+
+- The onboarding wizard builds the docs inside itself and lands you on the finished site, without asking the same question twice. `Onboarding`
+- The settings panel no longer opens itself over a preview or a freshly generated draft — it interrupted the first look at the site. `Draft`
+- AI chat answers are set in a tighter line-height. `AI Chat`
+- The landing page's first screen states what Docsbook is and what it costs. `Landing`
+
+### Fixed
+
+- A question asked on a draft is answered as a question instead of quietly rewriting the page you had open. `Draft`
+- A visitor reading a preview of a repository that has no workspace yet gets their question answered instead of `Sign in to make changes`. `Draft`
+- The draft chat showed the platform's own spending cap as if it were the visitor's. `Draft`
+- A draft edit that mixed in another page's content is rejected rather than written over the page you were on. `Draft`
+- The AI no longer offers a preview visitor the full 36-card owner library, or a working Account/Invite pair next to the locked one. `Draft`
+- Typing on `/chat` with projects but none selected no longer sends you into the create flow. `AI Chat`
+- Asking for a change on the project you already have open no longer tries to create it again. `AI Chat`
+- `Start new project` from a workspace subdomain no longer 404s, and the project switcher no longer doubles the organisation in its path. `AI Chat`
+- Documentation pages with non-Latin paths load instead of failing with a server error. `Docs`
+- A site whose homepage the repository listing missed now falls back to reading `README.md` directly. `Docs`
+- Switching or resetting the sidebar language now lands on the right URL. `Docs`
+- Images that ship several sizes (`srcset`) resolve their relative paths like ordinary images. `Docs`
+- The default side chat no longer opens an empty rail. `Docs`
+- The change history panel asks you to sign in instead of showing a raw `Unauthorized`. `Docs`
+- The toolbar's `Claim` button no longer reopens the sign-up modal for someone already signed in. `Draft`
+- Analytics tab strips on a phone use the full width and scroll instead of clipping. `Analytics`
+- The Limits panel no longer reports a brand-new wallet as out of budget. `Billing`
+- The `Compare all plans` table no longer overflows the Upgrade Plan modal, and that panel no longer mentions per-seat pricing. `Pricing`
+- On a phone, the preview's Design settings had no route to pricing. `Settings`
+- Numbers next to icons stay blurred in an anonymous preview. `Analytics`
+- A `GET` to the MCP server routes is rejected outright instead of hanging until the request is killed. `MCP`
+
 ## NEW - 10.08.2026
 
 ### Added
