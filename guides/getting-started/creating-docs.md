@@ -250,12 +250,15 @@ Every action goes to the assistant as an ordinary instruction and is committed t
 
 Any time you ask the assistant what to improve — "what should I fix first", "make this findable in search", "these pages feel thin" — the answer comes back as a list you tick, not as prose you would have to re-type.
 
-Each row is one concrete change to one of your real pages: what it changes, why it helps, and which page it touches. Tick the ones you want and press **Apply** once — every ticked row is done together, in a single pass, and the ones you leave unticked are never written at all.
+Each row is one concrete change to one of your real pages: what it changes, why it helps, and which page it touches. Some rows are a setting rather than a rewrite — "turn on search optimization" opens the card that does it. Nothing is ticked to start with: tick the ones you want and press **Apply** once, and every ticked row is done together in a single pass. What you leave unticked is never written at all.
+
+The list itself is not guesswork. The assistant reads the documentation skill that covers what you asked — search and indexing, tone, accessibility, translation — checks what it can measure about your site, and checks which settings cards exist, then recommends from what those turned up. It says which skill it applied.
 
 What happens on Apply depends on auto-mode:
 
 - **auto-mode off** (the default) — the picked changes come back as before/after diffs you approve or reject page by page before anything is published.
 - **auto-mode on** — they are written and published straight away, with a summary of what changed.
+- **a picked setting** — its card opens in the chat so you flip the switch yourself.
 
 ---
 

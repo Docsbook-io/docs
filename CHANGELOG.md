@@ -9,7 +9,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Added
 
-- Ask the assistant what to improve and the answer is now a list you tick, not prose you re-type. Each row is one concrete change to one of your real pages; tick several and press `Apply` once, and they are all done in a single pass. Nothing you leave unticked is ever written. `AI Chat`
+- Ask the assistant what to improve and the answer is now a list you tick, not prose you re-type. Each row is one concrete change to one of your real pages, or the settings card that applies it; tick several and press `Apply` once, and they are all done in a single pass. Nothing is ticked for you, and what you leave unticked is never written. The list is drawn from the documentation skill that covers what you asked, what can be measured about your site, and the cards that exist — not from what the model already believed about the topic. `AI Chat`
 - The same picker works on a draft before you have an account, and applying picks that span several pages updates all of them in one go. `Draft`
 - A correction that redefines what your business is now offers to regenerate the whole site instead of quietly fixing only the page you had open, and says up front that regenerating discards edits you have already made. `Draft`
 - A freshly generated draft opens with a summary of what was read and written, plus one-click follow-ups. `Draft`
