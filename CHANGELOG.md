@@ -21,6 +21,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The settings panel no longer opens itself over a preview or a freshly generated draft — it interrupted the first look at the site. `Draft`
 - AI chat answers are set in a tighter line-height. `AI Chat`
 - The landing page's first screen states what Docsbook is and what it costs. `Landing`
+- Disabled `SEO`, `GEO` and `AEO` toggles now sort to the top of the SEO panel so you see what to turn on first; a toggle you just enabled stays put until you reopen the panel. `Settings`
+- The button that hands a draft or preview site to you is labelled `Publish Free`, or `Claim ownership` when you arrived through a mailed claim link. `Draft`
 
 ### Fixed
 
