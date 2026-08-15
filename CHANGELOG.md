@@ -11,10 +11,13 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 - The landing page's feature section now answers the four questions buyers actually ask, in the order they ask them: what the bill can do, what the docs return, whether you can act on that, and what it costs to leave. `Landing`
 - Each of those cards leads with the numbers that decide the answer instead of a replica of the full dashboard behind it. `Landing`
+- The landing page's call-to-action band is now a single input instead of three separate `Create from …` buttons. `Landing`
+- AI chat answers now reveal word by word as they stream in, instead of a blinking caret. `AI Chat`
 
 ### Fixed
 
 - Widgets on a generated draft site no longer link to pages that were never created. `Draft`
+- Admin card deltas no longer blur when the card's icon node is mistaken for a leaf. `Settings`
 
 ## NEW - 14.08.2026
 
