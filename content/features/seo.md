@@ -33,9 +33,28 @@ This structured markup is what earns rich results — the enhanced search listin
 
 ### Sitemap and Canonical URLs
 
-Docsbook generates and submits a sitemap automatically. Every page has a canonical URL set correctly, which prevents duplicate-content penalties when the same page is accessible via multiple paths.
+Docsbook generates a sitemap automatically at `your-site/sitemap.xml`, and links it from `robots.txt` so crawlers find it without you submitting anything. Every page declares a canonical URL, which is what stops the same content from competing with itself when it is reachable by more than one path.
 
-When you rename a page, Docsbook handles the redirect so you don't lose the ranking the old URL had accumulated.
+If you have translations turned on, the sitemap lists a language's URL only for pages that language has actually been translated into. An enabled language does not by itself translate anything, and advertising a URL that would just serve your original text spends crawl budget on a page that points search engines straight back to the original.
+
+Renaming a page changes its URL, and the old one stops resolving. Docsbook does not create a redirect for you, so treat a rename of a page that already ranks as a deliberate act: keep the old path, or accept that the ranking restarts at the new one.
+
+### Keeping a Page Out of Search
+
+Some pages are not meant to rank. A changelog thousands of lines long, internal notes you publish for your team, a placeholder you have not finished — each of these spends crawl budget that your reference pages need.
+
+Add `noindex` to a page's frontmatter and search engines are told to leave it out:
+
+```markdown
+---
+title: "Internal Notes"
+noindex: true
+---
+```
+
+The page stays published and readable by anyone with the link; it simply asks not to be indexed. The `robots: noindex` spelling works too, if that is what you are used to from another tool.
+
+This is per page. The `SEO` toggle in the admin panel is the whole-site switch — turning that off hides everything, which is not what you want when the problem is a single page.
 
 ### Internal Linking via Sidebar
 
