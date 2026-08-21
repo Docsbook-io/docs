@@ -26,7 +26,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Changed
 
 - An empty chat with no project selected now opens with your projects to pick from, and the connectable repositories under them. It used to open with the setup checklist, whose every step configures one specific site, so it asked you to brand, translate and publish a project you had not chosen yet. `AI Chat`
-- The lists under the chat composer are set at a readable size and scroll with the page instead of inside their own box, so a long list is no longer cropped at an edge that looks like its end. `AI Chat`
+- The lists under the chat composer are set at a readable size and scroll with the page instead of inside their own box, so a long list is no longer cropped at an edge that looks like its end. The composer itself stays in the middle of the screen however long that list is. `AI Chat`
 - The documented behaviour on renaming a page has been corrected: Docsbook does not create a redirect from the old URL. `SEO`
 
 ## NEW - 15.08.2026
