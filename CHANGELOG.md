@@ -43,7 +43,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The feed reads in day sections (`Today`, `Yesterday`, dates), and `Show more` grows the page in place instead of paginating. `Feeds`
 - Every event type in `Feeds` carries its own coloured tile and glyph, and destination labels show the real Slack and Discord marks, so a mixed stream is scannable without reading it. `Feeds`
 - Opening a feed card shows the full event: every delivery attempt with its response, replay, and the raw payload — the card itself stays a three-line summary. `Feeds`
-- Export the feed you are looking at — filters and range applied — as CSV or JSON from the button beside the view's title. `Feeds`
+- Export the feed you are looking at — filters and range applied — as CSV, JSON or NDJSON from the button beside the view's title. `Feeds`
+- The notifiers firing on the list you are looking at now show as chips beside the filters — each with its channel's real mark, its name, and `paused` when it is off — and clicking one opens it. `Feeds`
 - The `Agents` tab has a `Skills` page: every docs skill from the published catalog with its plan gate, install line, the sentences that trigger it, the MCP tools it calls, and its full instructions. `Agents`
 
 ### Changed

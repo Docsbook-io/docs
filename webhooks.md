@@ -78,7 +78,7 @@ and bound it with a time range. Saving a filter turns it into an **event list** 
 feed and defining what to be notified about are the same gesture. Test pings appear in the feed like
 any other event; a replay shows up as another attempt under the event it belongs to. **Export**
 beside the view's title downloads exactly what you are looking at — filters and range applied — as
-CSV or JSON.
+CSV, JSON or NDJSON.
 
 ## Notifiers: where events go
 
@@ -87,6 +87,11 @@ the events it carries. You create it once (in the sidebar's **Notifiers** group,
 notifier** next to the filters) and then tick it onto as many event lists as it should serve. One
 Slack channel fed by three lists is one notifier, with one signing secret, paused or deleted in one
 place.
+
+The notifiers already firing on the list you are looking at sit beside the filter chips as labelled
+chips of their own — each with its channel's real mark, its name, and `paused` when it is switched
+off. Clicking one opens that notifier, so you can see what a list delivers to, and change it,
+without leaving the feed.
 
 Untick a list and the notifier stops firing on it; untick the last one and the destination stays,
 attached to nothing, delivering nothing until you point it somewhere again. Deleting an event list
