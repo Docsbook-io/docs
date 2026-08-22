@@ -9,22 +9,27 @@ Monitor how your AI features are being used and estimate the costs associated wi
 
 ## What You'll See
 
-The AI Usage panel displays:
+Usage and cost live inside the **Conversations** and **Dialogs** cards now, not a
+separate "AI Usage" section — the numbers are more useful next to the
+conversations that produced them:
 
-| Metric | Description |
-|---|---|
-| **AI Requests** | Total number of AI chat questions asked by readers |
-| **Monthly Limit** | Maximum requests allowed on your current plan |
-| **Daily Trend** | Graph showing request volume over time |
-| **Cost Breakdown** | Estimated costs per AI provider and model used |
-| **Total Cost** | Cumulative estimated cost for all AI requests |
-| **Translation Usage** | Number of document translations completed |
+| Card | Metric | Description |
+|---|---|---|
+| **Conversations** | Questions | Chat threads readers started in the selected window |
+| **Conversations** | Answered | Share of conversations that showed a sign of value (a citation click, a like, an outbound click) |
+| **Conversations** | Savings | Estimated support cost avoided, based on answered conversations |
+| **Conversations** | Cost | Total billed AI spend for the window, shown as one line against Savings |
+| **Dialogs** | Per-dialog cost | Open any individual conversation to see exactly what it cost to run, next to its own savings estimate |
+
+Cost breakdown by provider/model, monthly limits, translation usage, and time
+ranges are unchanged — see the sections below.
 
 ## How to Open
 
-1. Open any page of your documentation site
-2. Click the **Analytics** tab in the floating toolbar at the bottom
-3. Select the **AI Usage** section to view your AI metrics
+1. Open your documentation site's admin
+2. Click the **Chat** tab in the floating toolbar
+3. The **Conversations** card shows the totals; scroll to **Dialogs** to browse
+   individual conversations and their cost
 
 ## Cost Estimation
 
