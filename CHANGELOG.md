@@ -5,6 +5,12 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 22.08.2026
+
+### Changed
+
+- The admin panel's sidebar now opens `Get Support` directly, replacing the old `Book a demo` link — booking a demo lives inside that tab now, alongside `Contact Us`. `Settings`
+
 ## NEW - 21.08.2026
 
 ### Added
