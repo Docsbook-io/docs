@@ -19,7 +19,8 @@ conversations that produced them:
 | **Conversations** | Answered | Share of conversations that showed a sign of value (a citation click, a like, an outbound click) |
 | **Conversations** | Savings | Estimated support cost avoided, based on answered conversations |
 | **Conversations** | Cost | Total billed AI spend for the window, shown as one line against Savings |
-| **Dialogs** | Per-dialog cost | Open any individual conversation to see exactly what it cost to run, next to its own savings estimate |
+| **Conversations** | Outcome | Breakdown of answered, dead-end, and unrated conversations — open any group straight into **Dialogs** |
+| **Dialogs** | Per-dialog cost | Shown next to each conversation's estimated savings right in the list; open one for the full cost/savings breakdown |
 
 Cost breakdown by provider/model, monthly limits, translation usage, and time
 ranges are unchanged — see the sections below.
@@ -27,9 +28,11 @@ ranges are unchanged — see the sections below.
 ## How to Open
 
 1. Open your documentation site's admin
-2. Click the **Chat** tab in the floating toolbar
-3. The **Conversations** card shows the totals; scroll to **Dialogs** to browse
-   individual conversations and their cost
+2. Click the **Chat** row in the sidebar — it opens into its own page, the same way **Settings** does
+3. The **Conversations** card shows the totals; scroll down to **Dialogs** to browse
+   individual conversations and their cost. **Dialogs** loads older conversations
+   automatically as you scroll — there's no separate time range or filters to set
+   there, since **Conversations** already covers both for the whole page
 
 ## Cost Estimation
 
