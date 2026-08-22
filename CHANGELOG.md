@@ -37,6 +37,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - A notifier is now its own thing in `Feeds`: create the Slack channel, Discord channel or endpoint once, then tick it onto as many saved event lists as it should serve. Pausing, testing or deleting it applies everywhere it fires at once. `Feeds`
 - `Add notifier` sits beside the filter chips — attach a destination you already have to the list on screen, or create one, without retyping its URL and secret. `Feeds`
 - The `Feeds` sidebar splits into `Events` and `Notifiers`, each with its own create action, so a destination can be added before there is a list for it and a list before there is anywhere to send it. `Feeds`
+- `Get Support` now has a message form built in — the reply address is prefilled from your account and stays editable, and the message goes straight to us without opening a mail client. `Settings`
 
 ### Changed
 
@@ -65,6 +66,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The `Powered by Docsbook` badge now shows in a footer strip under your docs on every plan, replacing the old sidebar toggle. `Branding`
 - The `Feeds` filter menu is a quarter of its old width and picks one facet at a time — events, delivery status, destination or a payload search — with the event list flat and searchable instead of split across nine headings. Each active filter now reads as its facet and count, and clicking it reopens that facet. `Feeds`
 - `Set up alert` is gone from the `Feeds` toolbar: an alert is a notifier attached to an event list, so it is made where both of those live. `Feeds`
+- Every tag on a `Dialogs` row and on an open conversation's header — buying stage, outcome, docs gap — now carries its own colour instead of some falling back to plain grey. `AI Chat`
 
 ### Fixed
 
@@ -76,6 +78,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - An `api` widget endpoint with no example no longer renders its form at half width, and a `### Response` block now sits beside the example it should be compared with instead of under the form. `Widgets`
 - Documenting `Authorization` in an `api` widget's parameter table no longer renders it a second time as a required query field, which would have put the reader's key in the URL. `Widgets`
 - Deleting an event list, or detaching a notifier from one, can no longer leave an alert firing on every event in the workspace. `Feeds`
+- `www.docsbook.io` now redirects to the apex domain instead of showing a 404. `Marketing`
 
 ### Removed
 

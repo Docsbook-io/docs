@@ -20,7 +20,7 @@ conversations that produced them:
 | **Conversations** | Savings | Estimated support cost avoided, based on answered conversations |
 | **Conversations** | Cost | Total billed AI spend for the window, shown as one line against Savings |
 | **Conversations** | Outcome | Breakdown of answered, dead-end, and unrated conversations — open any group straight into **Dialogs** |
-| **Dialogs** | Per-dialog cost | Shown next to each conversation's estimated savings right in the list; open one for the full cost/savings breakdown |
+| **Dialogs** | Per-dialog cost | Shown next to each conversation's estimated savings right in the list; open one for the full cost/savings breakdown and its complete question-and-answer transcript |
 
 Cost breakdown by provider/model, monthly limits, translation usage, and time
 ranges are unchanged — see the sections below.
