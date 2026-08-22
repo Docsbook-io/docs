@@ -9,11 +9,11 @@ See where your readers are in the world and which language they read your docs i
 
 ---
 
-## Visitor Countries
+## Countries
 
 Shows the top 30 countries by visit count, with each country's share of total traffic.
 
-**How to open:** Float Widget → **Translations**.
+**How to open:** Float Widget → **Translations** → the **Countries** tab of the breakdown card.
 
 **Use this to:**
 - Decide which languages are worth translating into.
@@ -36,25 +36,45 @@ The breakdown covers up to 30 countries. Countries below the threshold are group
 
 ---
 
-## Language Countries
+## Reader Map
 
-Shows which countries are reading your translated documentation versions.
+Country counts and language counts each answer half a question. The map is the half that only
+exists in both together: for every country your readers came from, how many of them actually
+landed on a page in a translated language.
 
-For example: if you have Russian enabled, this section shows that Russian-language visits come mostly from Russia, Germany, and Israel.
+**How to open:** Float Widget → **Translations**, beside the breakdown card.
 
-**How to open:** Float Widget → **Translations**.
+Each country of origin is one marker: that country's flag inside a ring, with the ring's colour
+carrying the comparison. Marker size follows how many visitors the country sent.
+
+| Ring | What it means |
+|---|---|
+| Green | They get the docs in their language, either reading the translation or because your docs are already written in it. |
+| Amber | The translation exists and most of them still read the original. Discoverability, not a missing translation. |
+| Red | Readers arrive from that region and effectively none of them read a translated page. |
+| Grey | Docsbook has no translation language for that region yet, so there is nothing here for you to enable. |
+
+Hover a marker for that country's visitor count, the share of them on a translation, and the top
+language they read in.
 
 **Use this to:**
-- Confirm that enabled translations are reaching their intended audience.
+- Find the regions worth translating for next — the red ones, ranked by how many readers they send.
+- Confirm that enabled translations are actually reaching their intended audience.
 - Discover unexpected markets (e.g., French speakers outside France).
 
-> Requires at least one translation language to be enabled.
+Two things the map will not say. Your own language is never reported as a missing translation: if
+your docs are in English then American readers count as served, and a workspace whose docs are
+written in German gets the mirror image. And where the per-country language breakdown is not
+available to your plan, markers read as unmeasured grey rather than red, so a missing measurement
+can never look like a missing translation.
+
+> Colour needs at least one translation language enabled to say anything useful.
 > [Set up translations →](https://docsbook.io/docs/translation/settings)
 
 
 ---
 
-## Language Analytics
+## Languages
 
 Traffic split by translation language — how many visitors read each language version of your docs.
 
@@ -64,7 +84,7 @@ Traffic split by translation language — how many visitors read each language v
 | Visits | Page views in that language |
 | % share | Portion of total translated traffic |
 
-**How to open:** Float Widget → Analytics → **Languages** section.
+**How to open:** Float Widget → **Translations** → the **Languages** tab of the breakdown card.
 
 This shows only non-English traffic (the default language is not tracked as a separate language switch).
 

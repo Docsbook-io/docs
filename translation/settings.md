@@ -98,7 +98,30 @@ Open **Translations** in the settings panel. One interval dropdown at the top go
 - **Visitors** — unique readers who landed on a translated page, with crawlers excluded.
 - **Conversion** — how much better or worse readers of translated pages convert compared with readers of your original-language pages. A negative number is a real answer, not an error: it means the translated pages are reaching people who bounce, and it is worth knowing.
 
-Below those three, a world map plots your readers — switchable between the country they came from and the language they read in — and **Visitor Countries** and **Language Countries** break the same window down as lists.
+Below those three sit two cards side by side. The left one is a single breakdown list with two
+tabs: **Countries** (unique visitors by country of origin) and **Languages** (pages viewed in each
+translated language).
+
+The right one is the **reader map**, and it answers a question neither list can on its own: *which
+regions are arriving that you are not translating for?* Each country of origin is one marker,
+drawn as that country's flag inside a coloured ring. The flag says which country; the ring says how
+many of that region's readers actually landed on a translated page:
+
+| Ring | What it means |
+|---|---|
+| Green | They get the docs in their language, either because they read the translation or because your docs are already written in it. |
+| Amber | The translation exists and most of them still read the original. That is a discoverability problem, not a missing translation. |
+| Red | Readers arrive from that region and effectively none of them read a translated page. This is the one to act on. |
+| Grey | Docsbook has no translation language for that region yet, so there is nothing here for you to enable. |
+
+Hover a marker for that country's visitor count, the share of them on a translation, and the top
+language they read in.
+
+Two things the map deliberately will not say. It never reports your own language as a missing
+translation: if your docs are in English then American readers count as served, and a workspace
+whose docs are written in German gets the mirror image. And where the per-country language
+breakdown is not available to your plan, markers read as unmeasured grey rather than red, so a
+missing measurement can never look like a missing translation.
 
 ## One Language at a Time
 
