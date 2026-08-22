@@ -48,6 +48,30 @@ if (expected !== req.headers["x-docsbook-signature-256"]) reject()
 
 A 2xx response = delivered. Anything else triggers retry until the attempt budget is exhausted.
 
+## Seeing what your workspace emits
+
+The **Feeds** panel in your admin shows every event the workspace produced, newest first —
+**including events no alert was watching**. You do not need a webhook registered to see the feed
+fill up, which is the point: it is how you find out which events your docs actually emit before you
+decide what to be notified about.
+
+Each item is one event. Underneath it are the destinations it was handed to and what each one
+answered. An event carries a single status, folded from its deliveries with the worst outcome
+winning:
+
+| Status | Meaning |
+|---|---|
+| `delivered` | Every destination accepted it. |
+| `pending` | Queued; the worker has not attempted it yet. |
+| `retrying` | A destination refused it and it is inside the attempt budget. |
+| `failed` | A destination refused it and the budget is exhausted. |
+| `not sent` | It happened, and no alert was subscribed to it. |
+
+Filter the feed by event type, status, destination, or free text matched anywhere in the payload,
+and bound it with a time range. Saving a filter turns it into a **list**, and an alert fires on a
+list — so narrowing the feed and defining a subscription are the same gesture. Test pings appear in
+the feed like any other event; a replay shows up as another attempt under the event it belongs to.
+
 ## Event catalog
 
 Registering **any** webhook requires the **Business** plan (see [Webhook count limits](#webhook-count-limits) below) — the "Min plan" column below is the additional capability an event itself needs on top of that; for the three "advanced" events, Business already satisfies it.

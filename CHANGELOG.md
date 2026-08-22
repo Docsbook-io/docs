@@ -24,6 +24,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The `MCP` page marks the four tools a client can reach with no token at all, so you can see what a reader of your docs could call, not just what you can. `Agents`
 - `Select Mode` in the account menu picks how the chat and your documentation share the screen: `Fullscreen`, `Sidescreen`, or `Preview` for the docs on their own. It sits on the doc toolbar's avatar too, so a chat you put away is always one click from coming back. `AI Chat`
 - A `New chat` button now sits beside the account avatar at the top of the chat. `AI Chat`
+- The `Feeds` page now shows every event your workspace produces, including the ones no alert was watching, marked `not sent`. You no longer need a subscription set up to find out what your docs actually emit. `Feeds`
+- Each event in `Feeds` lists the destinations it was handed to and what each one answered, under one status folded from them, so a fan-out that half succeeded reads as a failure worth opening. `Feeds`
+- `not sent` is a filter of its own in `Feeds`, next to delivered, pending, retrying and failed. `Feeds`
+- Test pings and replays appear in `Feeds` like any other event, so the panel can answer whether a test worked. `Feeds`
 
 ### Changed
 
@@ -39,6 +43,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The account avatar moved to the top-left of the chat, into the corner the conversation switcher, layout toggle and change-history buttons used to occupy: all three are named rows of its menu now, so nothing in the chat's chrome has to be recognised by its icon. `AI Chat`
 - The commit list is reachable as `Changes` in the account menu, beside `Analytics`. `Changes`
 - The `api` widget's playground now takes your workspace's colours instead of a fixed blue: the accent, buttons, focus rings and path parameters follow your brand, and the method chips stay readable on a dark or tinted page. `Widgets`
+- Saved lists in `Feeds` are now created and deleted from the sidebar, and the list dropdown is gone from the panel, so one control owns which list you are looking at. `Feeds`
+- `Set up alert` shares a row with the filters in `Feeds`, giving the event feed itself the space back. `Feeds`
 
 ### Fixed
 
