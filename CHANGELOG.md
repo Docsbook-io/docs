@@ -53,6 +53,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The `api` widget's playground now takes your workspace's colours instead of a fixed blue: the accent, buttons, focus rings and path parameters follow your brand, and the method chips stay readable on a dark or tinted page. `Widgets`
 - Saved lists in `Feeds` are now created and deleted from the sidebar, and the list dropdown is gone from the panel, so one control owns which list you are looking at. `Feeds`
 - `Set up alert` shares a row with the filters in `Feeds`, giving the event feed itself the space back. `Feeds`
+- The sidebar's plan usage meter is now clickable anywhere on the card, not just the `Manage` link, and highlights on hover to show it. `Billing`
 
 ### Fixed
 
