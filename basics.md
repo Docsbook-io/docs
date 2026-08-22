@@ -114,6 +114,9 @@ When you are **logged in** and viewing **your own documentation**, a widget appe
 ┌─────────────────────────┐
 │ 👤 alice               │
 │ ✨ PRO                 │
+│ 💬 Select Chat       ▸ │
+│ 📁 Select Repository ▸ │
+│ 🖥️ Select Mode       ▸ │
 │ ⚙️ Settings            │
 │ 🚪 Sign out            │
 └─────────────────────────┘
@@ -123,8 +126,9 @@ When you are **logged in** and viewing **your own documentation**, a widget appe
 
 1. **See avatar** — click for the menu
 2. **See status** — Free, Pro, or Business
-3. **Open settings** — to change domain, enable translation
-4. **Sign out** — log out
+3. **Switch chat, repository or mode** — the three pickers at the top of the menu
+4. **Open settings** — to change domain, enable translation
+5. **Sign out** — log out
 
 ## Public Access
 

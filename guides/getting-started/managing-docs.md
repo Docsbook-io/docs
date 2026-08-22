@@ -17,6 +17,10 @@ When you're logged in and viewing your own site, a management widget appears in 
 │                      │
 │ ✨ PRO / PRO+ / Free │
 │                      │
+│ 💬 Select Chat     ▸ │
+│ 📁 Select Repo     ▸ │
+│ 🖥️ Select Mode     ▸ │
+│                      │
 │ ⚙️ Settings          │
 │ 🚪 Sign Out          │
 └──────────────────────┘
@@ -352,7 +356,7 @@ If multiple people work on documentation:
 
 ### Inviting someone into the AI chat
 
-You can also bring a teammate straight into the AI chat, without a GitHub account: click the **+** icon next to your account avatar in the chat header and send them an email invite or a link. Collaborators work in the same live session and draw on this workspace's AI credit.
+You can also bring a teammate straight into the AI chat, without a GitHub account: open your account avatar's menu and pick **Invite people**, then send them an email invite or a link. Collaborators work in the same live session and draw on this workspace's AI credit.
 
 The Invite panel is visible on every plan so you can see what it offers, but sending invites requires **Growth** or **Scale**.
 

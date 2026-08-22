@@ -15,6 +15,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Each conversation in `Dialogs` now shows what it actually cost to run, right next to its estimated savings. `AI Chat`
 - Every language you translate into now has a page of its own under `Translations` — pick it from the sidebar to see how many readers arrive from that language's countries in the first place, how many of them actually read in it, where it landed and where it missed, what they read, and what the language has cost against a human translator. `Translation`
 - A language you switch off keeps its page, so its stored pages and past readers stay readable next to the audience that is still arriving — which is what tells you whether to turn it back on. `Translation`
+- `Select Chat` in the account menu lists every conversation in this project behind a search field, so a thread from last week is one query away instead of a scroll. `AI Chat`
+- `Select Mode` in the account menu picks how the chat and your documentation share the screen: `Fullscreen`, `Sidescreen`, or `Preview` for the docs on their own. It sits on the doc toolbar's avatar too, so a chat you put away is always one click from coming back. `AI Chat`
+- A `New chat` button now sits beside the account avatar at the top of the chat. `AI Chat`
 
 ### Changed
 
@@ -26,6 +29,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The `Changes` tab drops its date-range picker, commit count and card frame — pick a commit from the scrolling list and its impact opens right beside it, as colored charts instead of a paragraph. `Changes`
 - The `Agents` tab now drills into a catalogue of every docs-subagents agent grouped by pipeline; picking one lists its ready-to-run prompts instead of a single shared MCP-connection card. `Agents`
 - The `Translations` tab is one page instead of three stacked cards: a single interval control now governs the impact figures, the reader map and both country breakdowns, which could previously each report a different period. `Translation`
+- The account avatar moved to the top-left of the chat, into the corner the conversation switcher, layout toggle and change-history buttons used to occupy: all three are named rows of its menu now, so nothing in the chat's chrome has to be recognised by its icon. `AI Chat`
+- The commit list is reachable as `Changes` in the account menu, beside `Analytics`. `Changes`
 
 ### Fixed
 
@@ -34,6 +39,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Removed
 
 - The `AI Usage` and `Chats Analysis` cards — the numbers now live inside `Conversations` and the new `Dialogs` card. `AI Chat`
+- The separate button for hiding the chat: `Visit` already hands the page back to your documentation with the conversation still running, and `Select Mode` names that same state as `Preview`. `AI Chat`
 
 ## NEW - 21.08.2026
 
