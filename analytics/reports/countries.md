@@ -11,7 +11,9 @@ See where your readers are in the world and which language they read your docs i
 
 ## Countries
 
-Shows the top 30 countries by visit count, with each country's share of total traffic.
+Shows the top 30 countries by visit count, with each country's share of total traffic — and, beside
+each, the share of that country's readers who landed on a page in a translated language, coloured
+green, amber or red by the same rule the map uses.
 
 **How to open:** Float Widget → **Translations** → the **Countries** tab of the breakdown card.
 
@@ -54,8 +56,11 @@ carrying the comparison. Marker size follows how many visitors the country sent.
 | Red | Readers arrive from that region and effectively none of them read a translated page. |
 | Grey | Docsbook has no translation language for that region yet, so there is nothing here for you to enable. |
 
-Hover a marker for that country's visitor count, the share of them on a translation, and the top
-language they read in.
+Drag the map to pan it; the controls in its corner zoom in and out, and return it to the view it
+opened on (framed on the countries you have readers in). Hover a marker for that country's visitor
+count, the share of them on a translation, and the top language they read in — or point at a row
+in the **Countries** list, which shows the same share in the same colour and lights that country
+on the map.
 
 **Use this to:**
 - Find the regions worth translating for next — the red ones, ranked by how many readers they send.

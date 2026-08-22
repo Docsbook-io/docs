@@ -114,8 +114,16 @@ many of that region's readers actually landed on a translated page:
 | Red | Readers arrive from that region and effectively none of them read a translated page. This is the one to act on. |
 | Grey | Docsbook has no translation language for that region yet, so there is nothing here for you to enable. |
 
+The map opens framed on the countries you actually have readers in. Drag it to pan, and use the
+controls in its corner to zoom in or to go back to that opening view — zooming spreads crowded
+regions apart without growing the flags, which is what makes western Europe readable.
+
 Hover a marker for that country's visitor count, the share of them on a translation, and the top
-language they read in.
+language they read in. The breakdown list to the left carries the same verdict as a figure on each
+row — the share of that country's readers who landed on a translated page, in the same colour —
+and pointing at a row names the verdict and lights that country on the map. Rows showing `—`
+instead of a share are the three cases where no share exists: the docs are already in that
+region's language, Docsbook has no language for it, or the window has nothing measured.
 
 Two things the map deliberately will not say. It never reports your own language as a missing
 translation: if your docs are in English then American readers count as served, and a workspace

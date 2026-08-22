@@ -30,6 +30,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Test pings and replays appear in `Feeds` like any other event, so the panel can answer whether a test worked. `Feeds`
 - The `Translations` tab has a reader map that plots every country your readers come from as its own flag, ringed in a colour saying whether a translation is actually reaching it — green where they read the docs in their language, amber where the translation exists and most still read the original, red where readers arrive and none of them do. It never counts your own language as a missing translation. `Translation`
 - `Interactive mode` sits next to `+` in the composer: turn it on and the docs open beside the chat with click-to-edit armed, turn it off and you get back the layout you came from. `AI Chat`
+- The reader map opens framed on the countries you have readers in, and you can drag it to pan and zoom in on a crowded region — the flags keep their size as you zoom, so neighbours spread apart instead of overlapping harder. `Translation`
+- Every country in the `Countries` breakdown now carries the share of its readers who landed on a translated page, coloured by the same verdict as its marker; point at a row to read what the colour means and light that country on the map. `Translation`
 
 ### Changed
 
@@ -44,6 +46,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The `Translations` tab is one page instead of three stacked cards: a single interval control now governs the impact figures, the reader map and both country breakdowns, which could previously each report a different period. `Translation`
 - `Visitor Countries` and `Language Countries` are one card with `Countries` and `Languages` tabs, sitting beside the reader map instead of under it — the same Countries/Languages split used to appear twice on the tab, once as map tabs and once as two separate tables. `Translation`
 - The preview pane's address strip is now a compact pill: a page picker that names the page instead of showing the URL, with open-in-new-tab, mobile width and reload beside it, and `Copy link` moved into the picker's menu. `AI Chat`
+- The reader map dropped its colour legend: the breakdown rows beside it carry the colours now, on figures that say what they measure. `Translation`
 - Mobile width in the preview now clamps the page to a real 430px card rather than emulating a phone, so what you check is the live page at that width. `AI Chat`
 - The account avatar moved to the top-left of the chat, into the corner the conversation switcher, layout toggle and change-history buttons used to occupy: all three are named rows of its menu now, so nothing in the chat's chrome has to be recognised by its icon. `AI Chat`
 - The commit list is reachable as `Changes` in the account menu, beside `Analytics`. `Changes`
@@ -57,6 +60,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Alerts that stopped being delivered are firing again — every event was being dropped before it reached its destinations. `Feeds`
 - Reader-language traffic is now measured against the language your docs are actually written in, so a workspace whose original is not English no longer counts its own pages as translated ones. `Translation`
 - Hovering the reader map now opens the country you are pointing at. `Translation`
+- Reader-map markers are now sized against the map's real width instead of always falling back to their smallest size. `Translation`
 - An `api` widget endpoint with no example no longer renders its form at half width, and a `### Response` block now sits beside the example it should be compared with instead of under the form. `Widgets`
 - Documenting `Authorization` in an `api` widget's parameter table no longer renders it a second time as a required query field, which would have put the reader's key in the URL. `Widgets`
 
