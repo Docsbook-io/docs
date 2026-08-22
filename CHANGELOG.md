@@ -32,6 +32,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - `Interactive mode` sits next to `+` in the composer: turn it on and the docs open beside the chat with click-to-edit armed, turn it off and you get back the layout you came from. `AI Chat`
 - The reader map opens framed on the countries you have readers in, and you can drag it to pan and zoom in on a crowded region — the flags keep their size as you zoom, so neighbours spread apart instead of overlapping harder. `Translation`
 - Every country in the `Countries` breakdown now carries the share of its readers who landed on a translated page, coloured by the same verdict as its marker; point at a row to read what the colour means and light that country on the map. `Translation`
+- `Search rankings` now opens with a one-click activation prompt when SEO, GEO and AEO are all off — showing what your rankings will look like and turning any of them on, free on every plan, instead of an empty tab. `SEO`
+- `Invite` and `Changes` buttons now sit next to `Visit` in the chat toolbar, and split view gets a fullscreen toggle beside them. `AI Chat`
 
 ### Changed
 
@@ -54,6 +56,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Saved lists in `Feeds` are now created and deleted from the sidebar, and the list dropdown is gone from the panel, so one control owns which list you are looking at. `Feeds`
 - `Set up alert` shares a row with the filters in `Feeds`, giving the event feed itself the space back. `Feeds`
 - The sidebar's plan usage meter is now clickable anywhere on the card, not just the `Manage` link, and highlights on hover to show it. `Billing`
+- Standalone chat pages show the Docsbook mark and your project's name in the top-left corner instead of your avatar — the same account menu opens either way. `AI Chat`
+- The `Powered by Docsbook` badge now shows in a footer strip under your docs on every plan, replacing the old sidebar toggle. `Branding`
 
 ### Fixed
 
@@ -69,6 +73,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 - The `AI Usage` and `Chats Analysis` cards — the numbers now live inside `Conversations` and the new `Dialogs` card. `AI Chat`
 - The separate button for hiding the chat: `Visit` already hands the page back to your documentation with the conversation still running, and `Select Mode` names that same state as `Preview`. `AI Chat`
+- `Remove Branding` — hiding the `Powered by Docsbook` badge is no longer possible on any plan. `Branding`
+- The project-switcher pill in the chat composer — pick a project from the new top-left menu instead. `AI Chat`
 
 ## NEW - 21.08.2026
 
