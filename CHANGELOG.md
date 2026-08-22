@@ -10,6 +10,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Changed
 
 - The admin panel's sidebar now opens `Get Support` directly, replacing the old `Book a demo` link — booking a demo lives inside that tab now, alongside `Contact Us`. `Settings`
+- The chat toolbar's site-link button now reads `Visit` with a leading external-link icon, instead of `Open website` as plain text. `AI Chat`
 
 ## NEW - 21.08.2026
 
