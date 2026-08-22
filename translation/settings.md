@@ -92,13 +92,28 @@ Each language version is indexed separately by search engines, which means passi
 
 ## Was Translating Worth It?
 
-The **Translation impact** panel sits at the top of the same Translation tab and answers the question you actually pay for. Pick a period from the tab's interval dropdown and it reports three numbers over that window:
+Open **Translations** in the settings panel. One interval dropdown at the top governs the whole page, and everything under it reports the window you picked:
 
 - **Savings** — what a human translator would have charged for the same word count, minus what the AI translation actually cost you. The translator rate is an industry estimate, not a quote you received, so read this as an order of magnitude rather than an invoice.
 - **Visitors** — unique readers who landed on a translated page, with crawlers excluded.
 - **Conversion** — how much better or worse readers of translated pages convert compared with readers of your original-language pages. A negative number is a real answer, not an error: it means the translated pages are reaching people who bounce, and it is worth knowing.
 
-Below it, **Visitor Countries** and the language breakdown show where that traffic came from.
+Below those three, a world map plots your readers — switchable between the country they came from and the language they read in — and **Visitor Countries** and **Language Countries** break the same window down as lists.
+
+## One Language at a Time
+
+The page above covers every language at once, which is not the question you act on. That one is always about a single language: keep paying for German, or not. So each language has a page of its own — click **Translations** in the sidebar and pick it from the list.
+
+The number that page is built around is one the overview cannot show you: **how many people from that language's countries visit your docs at all**, in whatever language they end up reading. On its own, "180 readers in German" tells you nothing — it could be your entire German-speaking audience or a rounding error. Against 1,240 visitors from German-speaking countries it is a decision, and the 1,060 who never landed on the translation are either the reason to keep it running or something to go look at.
+
+Around that comparison the page shows which of the language's countries the translation reached and which it missed, both counts day by day, the pages those readers actually opened, how they converted against your original pages, and what the language has cost you against a human translator.
+
+Two things worth knowing about how it counts:
+
+- A language is measured against **all** its countries, not one. Portuguese is Brazil and Portugal, Spanish is sixteen countries, German is five.
+- Readers of a language who are **not** in its countries — diaspora, travellers, anyone who simply prefers it — are reported separately rather than folded into the share. A language read entirely outside its own countries still has a real audience, and you can see it.
+
+A language you switch off keeps its page. Turning one off deletes nothing, so its pages, its cost and its past readers are all still there — shown as history, next to the country audience that keeps arriving whether or not there is a translation waiting for them. That pairing is what answers "should I turn this back on?".
 
 ## Keeping Translations Current
 

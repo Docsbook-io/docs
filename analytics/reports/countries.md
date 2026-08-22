@@ -13,7 +13,7 @@ See where your readers are in the world and which language they read your docs i
 
 Shows the top 30 countries by visit count, with each country's share of total traffic.
 
-**How to open:** Float Widget → Analytics → scroll to the **Countries** section.
+**How to open:** Float Widget → **Translations**.
 
 **Use this to:**
 - Decide which languages are worth translating into.
@@ -42,7 +42,7 @@ Shows which countries are reading your translated documentation versions.
 
 For example: if you have Russian enabled, this section shows that Russian-language visits come mostly from Russia, Germany, and Israel.
 
-**How to open:** Float Widget → Analytics → **Language Countries** section.
+**How to open:** Float Widget → **Translations**.
 
 **Use this to:**
 - Confirm that enabled translations are reaching their intended audience.
@@ -50,6 +50,7 @@ For example: if you have Russian enabled, this section shows that Russian-langua
 
 > Requires at least one translation language to be enabled.
 > [Set up translations →](https://docsbook.io/docs/translation/settings)
+
 
 ---
 
@@ -66,6 +67,14 @@ Traffic split by translation language — how many visitors read each language v
 **How to open:** Float Widget → Analytics → **Languages** section.
 
 This shows only non-English traffic (the default language is not tracked as a separate language switch).
+
+---
+
+## One Language at a Time
+
+Every section above covers all countries and all languages at once. To judge a single language — how much of its own audience it actually reaches, and what it has cost — open **Translations** and pick that language from the sidebar.
+
+[What a language's page shows →](https://docsbook.io/docs/translation/settings)
 
 ---
 
