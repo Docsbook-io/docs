@@ -75,6 +75,7 @@ Turns REST endpoint sections into a form the reader can send a real request from
 - The first table under it with a `Field` (or `Name` / `Parameter`) column becomes the request form, one input per row. `Type`, `Required` and `Description` columns are used when present.
 - Templated path segments like `/project/update/{projectId}` always get their own input.
 - An Authorization input is always added. The reader's key is sent from their own browser and never reaches Docsbook.
+- Documenting `Authorization` as a row in the table is fine: that row is claimed by the header input above, keeping your description, instead of rendering a second time as a field that would put the key in the URL.
 - A `###` subsection containing a code block — `### Example`, `### Response` — moves into a samples pane beside the form, keeping its title. Any other subsection, such as an `### Errors` table, stays in the document flow below.
 
 ### cta — a compact call to action

@@ -17,7 +17,7 @@ Every AI surface in Docsbook is documented on its own page. Use this index to ju
 | Translations into 15 languages | PRO | [Translations](./translations.md) |
 | `llms.txt` for AI agent discovery | Free | [llms.txt](./llms-txt.md) |
 | Source of Truth doc graph | Free (local) | [Source of Truth](./source-of-truth.md) |
-| MCP server with 61 tools | Free | [MCP Server](./mcp.md) |
+| MCP server with 84 tools | Free | [MCP Server](./mcp.md) |
 | Pre/post LLM chat hooks | PRO | [Chat Hooks](./chat-hooks.md) |
 | Docs Skills catalog | Free | [Skills](./skills.md) |
 

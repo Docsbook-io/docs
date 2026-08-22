@@ -23,6 +23,8 @@ Authentication is OAuth 2.0 Authorization Code with PKCE. Bearer tokens are retu
 
 The Docsbook MCP server is a remote HTTP server with OAuth — every modern MCP client can connect to it using the same endpoint.
 
+You can also browse the catalog inside your own project: open the admin panel, pick `Agents` in the sidebar, then `MCP`. It lists every tool the server serves right now — read live from the server rather than from a written-down copy — with each tool's description, its arguments, and example sentences to say to a connected agent.
+
 ### Claude Code
 
 ```bash
