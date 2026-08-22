@@ -68,9 +68,24 @@ winning:
 | `not sent` | It happened, and no alert was subscribed to it. |
 
 Filter the feed by event type, status, destination, or free text matched anywhere in the payload,
-and bound it with a time range. Saving a filter turns it into a **list**, and an alert fires on a
-list — so narrowing the feed and defining a subscription are the same gesture. Test pings appear in
-the feed like any other event; a replay shows up as another attempt under the event it belongs to.
+and bound it with a time range. Saving a filter turns it into an **event list** — so narrowing the
+feed and defining what to be notified about are the same gesture. Test pings appear in the feed like
+any other event; a replay shows up as another attempt under the event it belongs to.
+
+## Notifiers: where events go
+
+A **notifier** is a destination — a channel, its URL and its credentials — and it lives apart from
+the events it carries. You create it once (in the sidebar's **Notifiers** group, or from **Add
+notifier** next to the filters) and then tick it onto as many event lists as it should serve. One
+Slack channel fed by three lists is one notifier, with one signing secret, paused or deleted in one
+place.
+
+Untick a list and the notifier stops firing on it; untick the last one and the destination stays,
+attached to nothing, delivering nothing until you point it somewhere again. Deleting an event list
+does the same to whatever fired on it — a subscription is never widened by losing its list.
+
+Only saved lists can be served: the unfiltered **All events** view is the feed's default, not a
+list, so save the filter you want first.
 
 ## Event catalog
 
@@ -161,6 +176,9 @@ Other MCP tools:
 
 - `GET  /api/webhooks?workspace_id=X` — list
 - `POST /api/webhooks` — create
+- `PATCH /api/webhooks/:id` — rename, pause/resume, or re-point at another event list
+- `POST /api/webhooks/:id/attach` — `{ "list_id": N }`, serve one more list from the same
+  destination (same URL, same secret)
 - `DELETE /api/webhooks/:id` — delete
 - `POST /api/webhooks/:id/test` — test ping
 - `GET  /api/webhooks/:id/deliveries` — recent deliveries
