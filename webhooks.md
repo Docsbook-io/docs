@@ -55,9 +55,15 @@ The **Feeds** panel in your admin shows every event the workspace produced, newe
 fill up, which is the point: it is how you find out which events your docs actually emit before you
 decide what to be notified about.
 
-Each item is one event. Underneath it are the destinations it was handed to and what each one
-answered. An event carries a single status, folded from its deliveries with the worst outcome
-winning:
+The panel opens on a digest of the selected range: how much happened, how much of it **needs
+attention** (unanswered chat questions, dead-end searches, stale content and translations, usage
+limits), and how many deliveries failed — plus a chip per event group with its count. Every number
+in the digest is a one-click filter on the feed below it; clicking it again clears it.
+
+The feed itself reads in day sections, and each item is one event: a coloured tile for its type,
+the one-line summary, and where it went. Opening a card shows the full event — every delivery
+attempt with its response, replay, and the raw payload. An event carries a single status, folded
+from its deliveries with the worst outcome winning:
 
 | Status | Meaning |
 |---|---|
@@ -70,7 +76,9 @@ winning:
 Filter the feed by event type, status, destination, or free text matched anywhere in the payload,
 and bound it with a time range. Saving a filter turns it into an **event list** — so narrowing the
 feed and defining what to be notified about are the same gesture. Test pings appear in the feed like
-any other event; a replay shows up as another attempt under the event it belongs to.
+any other event; a replay shows up as another attempt under the event it belongs to. **Export**
+beside the view's title downloads exactly what you are looking at — filters and range applied — as
+CSV or JSON.
 
 ## Notifiers: where events go
 
