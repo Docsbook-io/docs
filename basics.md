@@ -199,14 +199,13 @@ Everything in Free, plus:
 - ✅ Search & feedback analytics
 - ✅ Analytics for 7 days
 - ✅ Priority support
-- ❌ Webhooks, bring-your-own API key, semantic search (Business only — see below); custom domain and white-label need Pro
+- ❌ Webhooks, bring-your-own API key, semantic search (Business only — see below); custom domain needs Pro
 
 ### Business (monthly, 14-day free trial)
 
 Everything in Pro, plus Business-exclusive capabilities, plus higher usage limits:
 
 - ✅ Custom domain (docs.example.com) with free SSL
-- ✅ White-label (hide "Powered by Docsbook")
 - ✅ Webhooks (up to 25 per workspace)
 - ✅ Bring your own AI chat / translation API key (with custom model)
 - ✅ Semantic search (meaning-based chat search over an embedding index of your docs)

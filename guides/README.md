@@ -1,6 +1,6 @@
 ---
 title: "Guides"
-description: "Step-by-step tutorials — from creating your first workspace to advanced PRO features like custom domains, AI translation, and white-label setup."
+description: "Step-by-step tutorials — from creating your first workspace to advanced PRO features like custom domains and AI translation."
 ---
 
 # Guides

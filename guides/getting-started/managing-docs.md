@@ -51,10 +51,6 @@ See in detail: [Custom Domain Setup](../advanced/custom-domain.md)
 
 Display options:
 
-- **Hide "Powered by Docsbook"** (PRO+)
-  - Removes the badge at the bottom of the page
-  - Removes Docsbook branding from your site
-
 - **Theme**
   - Switch between light, dark or follow-system
   - Set the default in workspace branding settings

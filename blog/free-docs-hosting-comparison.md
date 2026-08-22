@@ -38,7 +38,7 @@ What you do not get:
 
 - Custom domain (`docs.yourcompany.com`) — PRO+ feature
 - AI translation to 15 languages — PRO feature
-- "Powered by Docsbook" stays in the footer (PRO+ removes)
+- "Powered by Docsbook" stays in the footer on every plan — there's no paid tier that removes it
 - Analytics beyond 24h
 
 Best for: OSS projects, indie products, MVPs, anyone who wants a real docs site without managing hosting.
@@ -147,7 +147,7 @@ Best for: teams already on Cloudflare with strong DevOps capacity.
 
 The cheapest dollar-cost option is rarely the cheapest total-cost option.
 
-A reasonable model: your time is worth $50–200/hour depending on your role. A docs setup that takes 4 hours costs $200–800 in opportunity cost. Docsbook Free saves all of that time at the cost of "Powered by Docsbook" in the footer (which you can remove on PRO+).
+A reasonable model: your time is worth $50–200/hour depending on your role. A docs setup that takes 4 hours costs $200–800 in opportunity cost. Docsbook Free saves all of that time at the cost of a small "Powered by Docsbook" credit in the footer, which stays on every plan.
 
 For a solo founder or a 3-person startup, this math almost always favors Docsbook Free or PRO.
 

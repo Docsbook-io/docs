@@ -67,7 +67,6 @@ Your documentation site is live. GitHub-sourced sites automatically sync with th
 - Update documentation in GitHub → it appears on the site automatically
 - Set up your custom domain (PRO)
 - Enable translation to other languages (PRO)
-- Hide the "Powered by Docsbook" badge (PRO)
 
 ---
 

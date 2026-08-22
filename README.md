@@ -34,7 +34,7 @@ Here you'll find answers to all questions about how to use our service.
 
 ## Design
 
-- [Branding & Custom Icons](./design/style/branding.md) — Name, icon, accent color, white-label {palette}
+- [Branding & Custom Icons](./design/style/branding.md) — Name, icon, accent color {palette}
 - [Theming](./design/style/theming.md) — Light/dark mode and defaults {sun-moon}
 - [Sidebar Control](./design/layout/sidebar.md) — Language switcher, search, breadcrumbs {panel-left}
 - [Header Options](./design/layout/header.md) — Links, social icons, search, language toggle {panel-top}

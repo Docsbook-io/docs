@@ -22,7 +22,7 @@ In this post, we break down the key differences between Mintlify and Docsbook to
 | Custom domain | Paid plan | Business |
 | MDX support | ✓ | ✓ |
 | Multi-language | Limited | ✓ |
-| White-label | Enterprise | Business |
+| White-label | Enterprise | Free, every plan |
 | SEO optimization | Basic | Advanced |
 
 ## Pricing: The Elephant in the Room
@@ -70,7 +70,7 @@ Docsbook is built SEO-first:
 - You want docs live in 5 minutes, not an afternoon
 - SEO and AI discoverability are part of your growth strategy
 - You need multi-language documentation
-- You want white-label docs without enterprise pricing
+- You don't want an enterprise tier just to lose Mintlify's badge — Docsbook's isn't for sale at any price
 
 ## Conclusion
 

@@ -15,7 +15,7 @@ This is the platform-picking guide we wish existed when we were running founders
 |---|---|---|
 | Pre-launch (0 users) | **Docsbook Free** | $0, 5-second setup, SEO from day one |
 | Just shipped (1–100 users) | **Docsbook Pro ($59/mo)** | AI chat, full SEO, translations |
-| Growing (100–10k users) | **Docsbook Business** or **Mintlify** | White-label, webhooks, higher limits |
+| Growing (100–10k users) | **Docsbook Business** or **Mintlify** | Webhooks, higher limits |
 | Mid-market (10k+) | **Mintlify** or **GitBook** | Editor seats, deeper collaboration |
 | OSS with engineering capacity | **Docusaurus** or **Starlight** | Free, customizable, you own the stack |
 

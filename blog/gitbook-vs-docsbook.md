@@ -28,7 +28,7 @@ This post is the honest comparison. We make Docsbook, so we'll tell you when it 
 | **llms.txt** | Not built-in | Auto-generated platform-wide and per workspace |
 | **Vendor lock-in** | High — content in their DB | None — your repo stays canonical |
 | **Custom domain** | Paid | Business |
-| **White-label** | Enterprise only | Business ($159 per month) |
+| **White-label** | Enterprise only | Free, every plan — never paywalled |
 
 If you only read one row: GitBook is priced and built for a team that has a docs owner and a budget line. Docsbook is priced and built for a team where the docs live in `docs/` next to the code and nobody wants to own a separate docs system.
 
@@ -44,7 +44,7 @@ A six-engineer team on Business is paying $159 per month for what is, fundamenta
 
 This is the model GitBook needs to fund the WYSIWYG editor, the change-request flow, and the enterprise sales team. It is not a bad model. It is just a model that punishes you for involving more engineers in writing docs — which is the opposite of what most product teams want.
 
-Docsbook charges per workspace, not per editor. AI chat and SEO are free on every plan. Pro is $59 per month and adds translations, raw analytics, and a custom AI chat system prompt. Business is $159 per month and adds white-label, custom domain, webhooks, and a larger AI spend budget on top. Anyone on your GitHub team can edit the underlying Markdown — there's no editor seat to buy, because the editor is the editor they already use.
+Docsbook charges per workspace, not per editor. AI chat and SEO are free on every plan. Pro is $59 per month and adds translations, raw analytics, and a custom AI chat system prompt. Business is $159 per month and adds custom domain, webhooks, and a larger AI spend budget on top. Anyone on your GitHub team can edit the underlying Markdown — there's no editor seat to buy, because the editor is the editor they already use.
 
 ### 2. Vendor lock-in is real
 
@@ -85,7 +85,7 @@ That last part matters more than it looks. Mintlify recently reported that 45.3%
 | Source-of-truth content graph for AI agents | No | Yes (Business) |
 | Custom domain | Paid | Business |
 | Custom branding | Paid | All plans (colors, fonts, logo, dark/light) |
-| White-label / remove "Powered by" | Enterprise | Business ($159 per month) |
+| White-label / remove "Powered by" | Enterprise | Free, every plan — never paywalled |
 | Multi-language | Add-on, limited | 15 languages built in (Pro) |
 | Analytics | Built-in, basic | Built-in, Axiom-backed, full event stream on Business |
 | Webhooks | Limited | 15+ event types, HMAC-signed — Business only |
@@ -106,7 +106,7 @@ Docsbook costs more per year here, but it's the flat rate for AI chat, translati
 **Five-person startup.** Five engineers, all of whom occasionally edit docs.
 
 - GitBook Pro at $15 per editor: $75 per month → $900 per year
-- Docsbook Business: $159 per month → $1,908 per year, no per-seat math, custom domain and white-label included
+- Docsbook Business: $159 per month → $1,908 per year, no per-seat math, custom domain included
 
 You stop paying every time you hire someone who might fix a typo, and the price is the same whether it's 5 or 50 engineers touching docs.
 
@@ -161,7 +161,7 @@ Set up 301 redirects from old GitBook URLs to the new Docsbook paths and you kee
 Yes. AI chat trained on your docs, included in Pro. You can also bring your own API key (OpenRouter, OpenAI, Anthropic, Gemini) on Business.
 
 **Can I customize the look and feel?**
-Yes. Logo, favicon, accent colors for light and dark, Google Fonts, and per-component visibility toggles (search bar, copy button, edit-on-GitHub link, AI chat button, etc.) — all on the free plan. Business removes the "Powered by Docsbook" footer.
+Yes. Logo, favicon, accent colors for light and dark, Google Fonts, and per-component visibility toggles (search bar, copy button, edit-on-GitHub link, AI chat button, etc.) — all on the free plan. The one thing no plan removes is the small "Powered by Docsbook" credit in the footer.
 
 ## The honest bottom line
 

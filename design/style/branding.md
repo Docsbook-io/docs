@@ -1,6 +1,6 @@
 ---
 title: "Branding — Colors, Fonts, Logos"
-description: "Match your documentation to your product — custom name, accent color, logo, fonts, and remove the Powered by Docsbook badge on Pro plans."
+description: "Match your documentation to your product — custom name, accent color, logo, and fonts."
 ---
 
 # Branding
@@ -16,7 +16,6 @@ Make your documentation feel like your product — not a generic template.
 | Accent color | Primary brand color applied to buttons, links, and highlights |
 | Heading font | Google Font used for headings (h1–h6) |
 | Content font | Google Font used for body text — falls back to the heading font |
-| Hide "Powered by Docsbook" | Remove the footer badge *(Pro)* |
 
 ## How to Apply
 
@@ -94,17 +93,6 @@ Set a custom favicon and header icon for your documentation site.
 **Where it appears:**
 - Browser favicon (tab icon)
 - Header logo area in your docs sidebar
-
----
-
-## Hide "Powered by Docsbook" *(Business)*
-
-By default, a small "Powered by Docsbook" badge appears at the bottom of the sidebar.
-
-Turning this off gives your documentation a fully white-label appearance.
-
-> **Business feature.** Requires a Business plan.
-> [Upgrade to Business →](https://docsbook.io/connect)
 
 ---
 

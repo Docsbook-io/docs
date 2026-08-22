@@ -1,6 +1,6 @@
 ---
 title: "Pricing & Plans"
-description: "Docsbook pricing — Free forever, Pro, Business, Growth, and Scale — with AI budgets, project seats, translations, and webhook limits broken down per plan. Growth mirrors Pro's capabilities and Scale mirrors Business's, each with a bigger monthly AI budget and more seats; Business/Scale add exclusive capabilities (webhooks, bring-your-own API keys, semantic search, UTM analytics) on top of Pro/Growth, while custom domain and white-label start at Pro."
+description: "Docsbook pricing — Free forever, Pro, Business, Growth, and Scale — with AI budgets, project seats, translations, and webhook limits broken down per plan. Growth mirrors Pro's capabilities and Scale mirrors Business's, each with a bigger monthly AI budget and more seats; Business/Scale add exclusive capabilities (webhooks, bring-your-own API keys, semantic search, UTM analytics) on top of Pro/Growth, while custom domain starts at Pro."
 ---
 
 # Pricing & Plans
@@ -23,7 +23,6 @@ Everything in Free, plus:
 
 - 1 project seat
 - Custom domain (`docs.yourcompany.com`) with free SSL
-- White-label — hide "Powered by Docsbook"
 - Auto-translation
 - Advanced AI chat config — chat hooks, custom system prompt, your choice of AI model, chat analysis dashboard
 - Search & feedback analytics
@@ -43,11 +42,11 @@ $159/month, 14-day free trial. Everything in Pro, plus a set of Business-exclusi
 
 ## Growth
 
-$349/month. Includes every Business capability — auto-translation, advanced AI chat config (chat hooks, custom system prompt, your choice of AI model, chat analysis dashboard), search & feedback analytics, private docs (password/SSO), custom domain, white-label, webhooks, bring-your-own API keys, UTM analytics, hosted API reference, and semantic search — plus 5 project seats and a $349/month AI budget. For teams on Pro who mainly need more AI usage headroom rather than the Business-only capabilities.
+$349/month. Includes every Business capability — auto-translation, advanced AI chat config (chat hooks, custom system prompt, your choice of AI model, chat analysis dashboard), search & feedback analytics, private docs (password/SSO), custom domain, webhooks, bring-your-own API keys, UTM analytics, hosted API reference, and semantic search — plus 5 project seats and a $349/month AI budget. For teams on Pro who mainly need more AI usage headroom rather than the Business-only capabilities.
 
 ## Scale
 
-$899/month. Same feature set as Business — custom domain, white-label, bring-your-own AI/translation API key, webhooks (up to 25) — plus 15 project seats and a $899/month AI budget, the largest of any plan. For teams on Business who need substantially more AI usage headroom.
+$899/month. Same feature set as Business — custom domain, bring-your-own AI/translation API key, webhooks (up to 25) — plus 15 project seats and a $899/month AI budget, the largest of any plan. For teams on Business who need substantially more AI usage headroom.
 
 ## Limits Summary
 
@@ -59,7 +58,6 @@ $899/month. Same feature set as Business — custom domain, white-label, bring-y
 | Custom domain                | ❌       | ✅      | ✅                | ✅                | ✅             |
 | Private docs (password/SSO)  | ❌       | ✅      | ✅                | ✅                | ✅             |
 | SEO / GEO / AEO               | ✅       | ✅      | ✅                | ✅                | ✅             |
-| White-label                  | ❌       | ✅      | ✅                | ✅                | ✅             |
 | Choose your AI model         | ❌       | ✅      | ✅                | ✅                | ✅             |
 | Bring your own API key       | ❌       | ❌      | ❌                | ✅                | ✅             |
 | Webhooks                     | 0        | 0       | 0                | 25                | 25             |
@@ -68,7 +66,7 @@ $899/month. Same feature set as Business — custom domain, white-label, bring-y
 | Overage billing               | ❌       | ✅      | ✅                | ✅                | ✅             |
 | Per-source spend limits       | ❌       | ✅      | ✅                | ✅                | ✅             |
 
-Pro/Growth and Business/Scale do **not** unlock the same set of features: custom domain, white-label, webhooks, and bring-your-own API keys are Business/Scale-exclusive. Growth mirrors Pro's feature set with a bigger AI budget and more seats; Scale mirrors Business's feature set with the largest AI budget and the most seats. See [AI Chat](../../ai/chat.md) and [Translations](../../ai/translations.md) for current limit numbers.
+Pro/Growth and Business/Scale do **not** unlock the same set of features: custom domain, webhooks, and bring-your-own API keys are Business/Scale-exclusive. Growth mirrors Pro's feature set with a bigger AI budget and more seats; Scale mirrors Business's feature set with the largest AI budget and the most seats. See [AI Chat](../../ai/chat.md) and [Translations](../../ai/translations.md) for current limit numbers.
 
 The AI budget is per **account** and shared across every paid project on it. If you need more projects than your plan includes, you can buy extra seats — up to twice your plan's seat allowance.
 

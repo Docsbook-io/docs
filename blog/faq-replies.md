@@ -29,7 +29,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 **TL;DR:** SaaS founders, dev-tool teams, and OSS maintainers who want serious docs without spending two weeks on Docusaurus setup or $200+/month on GitBook.
 
-**Long:** The sweet spot is a small team that already writes Markdown in GitHub and wants the published site, search, AI chat, translations, and analytics — without owning the infra. Teams that also want a custom domain, white-label, or webhooks step up to Business. If you have a tech writer and a custom design system, Docusaurus is probably still better. If you have a 20-person docs team and enterprise SSO requirements, GitBook fits. Everyone in between is who Docsbook is built for.
+**Long:** The sweet spot is a small team that already writes Markdown in GitHub and wants the published site, search, AI chat, translations, and analytics — without owning the infra. Teams that also want a custom domain or webhooks step up to Business. If you have a tech writer and a custom design system, Docusaurus is probably still better. If you have a 20-person docs team and enterprise SSO requirements, GitBook fits. Everyone in between is who Docsbook is built for.
 
 ---
 
@@ -53,9 +53,9 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 ### How much does it cost?
 
-**TL;DR:** Free forever for the basics. Pro is **$59/month** (AI chat, translations, SEO). Business is **$159/month** and adds custom domain, white-label, webhooks, bring-your-own API keys, and higher AI/translation limits.
+**TL;DR:** Free forever for the basics. Pro is **$59/month** (AI chat, translations, SEO). Business is **$159/month** and adds custom domain, webhooks, bring-your-own API keys, and higher AI/translation limits.
 
-**Long:** Free covers any public GitHub repo, branding, UI controls, navigation, 24h analytics, and base MCP tools. Pro ($59/month) adds AI chat, AI translations (15 languages), full SEO, and longer analytics windows (up to 30 days). Business ($159/month) includes everything in Pro plus a set of Business-exclusive capabilities: custom domain with free SSL, white-label, webhooks, bring-your-own AI/translation API key, and higher usage limits. Per-workspace billing, not per-seat.
+**Long:** Free covers any public GitHub repo, branding, UI controls, navigation, 24h analytics, and base MCP tools. Pro ($59/month) adds AI chat, AI translations (15 languages), full SEO, and longer analytics windows (up to 30 days). Business ($159/month) includes everything in Pro plus a set of Business-exclusive capabilities: custom domain with free SSL, webhooks, bring-your-own AI/translation API key, and higher usage limits. Per-workspace billing, not per-seat.
 
 ---
 
@@ -63,7 +63,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 **TL;DR:** No. Free is forever. You can run a real public docs site on it with custom branding, navigation, theme, fonts — just no AI chat, no translations, no custom domain.
 
-**Long:** I (Dan) made Free generous because I want OSS maintainers and indie hackers to actually use the thing without thinking about pricing. The paid plans exist for people who need AI features, custom domain, or want to remove the "Powered by Docsbook" badge. If your repo is public and you just want a nice docs site, Free is everything you need.
+**Long:** I (Dan) made Free generous because I want OSS maintainers and indie hackers to actually use the thing without thinking about pricing. The paid plans exist for people who need AI features or a custom domain. If your repo is public and you just want a nice docs site, Free is everything you need.
 
 ---
 
@@ -97,7 +97,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 **TL;DR:** Same outcome (hosted docs site), ~$200/month cheaper, includes AI chat + AI translations in the price, content stays in *your* GitHub repo.
 
-**Long:** GitBook starts at ~$8/user/month and serious teams end up paying $200+/month. AI features, translations, and analytics are paid add-ons. Content lives in GitBook's CMS — to leave, you export. Docsbook is $0 / $59 (Pro, AI + translations) / $159 (Business, adds custom domain, white-label, webhooks) per month, and your Markdown stays in your GitHub repo. The trade-off: GitBook has a richer WYSIWYG editor; we don't have one — you write Markdown.
+**Long:** GitBook starts at ~$8/user/month and serious teams end up paying $200+/month. AI features, translations, and analytics are paid add-ons. Content lives in GitBook's CMS — to leave, you export. Docsbook is $0 / $59 (Pro, AI + translations) / $159 (Business, adds custom domain, webhooks) per month, and your Markdown stays in your GitHub repo. The trade-off: GitBook has a richer WYSIWYG editor; we don't have one — you write Markdown.
 
 ---
 
@@ -267,7 +267,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 **TL;DR:** Compare it to what else is out there — GitBook, Mintlify, and Readme.io all start well above that for a comparable feature set. Free covers a real public docs site with no AI needed.
 
-**Long:** I get the reaction at first glance. Compare it to GitBook ($200/mo for a real team), Mintlify ($150/mo+), Readme.io ($99/mo+) — all of which are subscriptions, same as us. Pro at $59/mo covers AI chat, translations, and SEO. Business at $159/mo is for teams that also want a custom domain, white-label, webhooks, or bring-your-own API keys. If you only need a public docs site with branding and no AI, Free is genuinely free forever.
+**Long:** I get the reaction at first glance. Compare it to GitBook ($200/mo for a real team), Mintlify ($150/mo+), Readme.io ($99/mo+) — all of which are subscriptions, same as us. Pro at $59/mo covers AI chat, translations, and SEO. Business at $159/mo is for teams that also want a custom domain, webhooks, or bring-your-own API keys. If you only need a public docs site with branding and no AI, Free is genuinely free forever.
 
 ---
 

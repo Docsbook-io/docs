@@ -71,7 +71,7 @@ If any of those sentences made you sigh, you are the audience for this guide.
 - AI translation to 15 languages, each indexed separately in Google
 - MCP server with 61 tools — Claude Code and Cursor can configure your docs directly
 - `llms.txt` and `llms-full.txt` generated automatically
-- Pro at $59/mo for translations and raw analytics, Business at $159/mo for custom domain, white-label, webhooks, and a larger AI spend budget
+- Pro at $59/mo for translations and raw analytics, Business at $159/mo for custom domain, webhooks, and a larger AI spend budget
 - Source data stays in your GitHub repo — no vendor lock-in
 
 **Cons**
@@ -84,7 +84,7 @@ If any of those sentences made you sigh, you are the audience for this guide.
 
 - Free forever for unlimited public repos with branding, UI, navigation, AI chat, and SEO
 - Pro $59/mo — translations, longer analytics, custom AI chat system prompt, MCP write tools
-- Business $159/mo — everything in Pro, plus custom domain, white-label, webhooks, bring-your-own API keys, the Source-of-Truth graph, and a larger AI spend budget
+- Business $159/mo — everything in Pro, plus custom domain, webhooks, bring-your-own API keys, the Source-of-Truth graph, and a larger AI spend budget
 
 **Migrating from Docusaurus**
 

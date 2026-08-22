@@ -15,7 +15,7 @@ A: Docsbook transforms your GitHub documentation into a published site in 5 seco
 
 **Q: Do I need to pay to get started?**
 
-A: No. The Free plan ($0) includes unlimited public repositories, GitHub sync, full design customization, reader-facing AI chat (on a $0.15 monthly AI budget), and full SEO / GEO / AEO. Pro (monthly, 7-day free trial) adds your own custom domain, white-label, translations, advanced AI chat configuration (custom prompt, hooks), your choice of AI model, search analytics, and a $59/month AI budget. Business (monthly, 14-day free trial) includes everything in Pro plus webhooks, bring-your-own API keys, semantic search, hosted API reference, UTM analytics, and higher usage limits.
+A: No. The Free plan ($0) includes unlimited public repositories, GitHub sync, full design customization, reader-facing AI chat (on a $0.15 monthly AI budget), and full SEO / GEO / AEO. Pro (monthly, 7-day free trial) adds your own custom domain, translations, advanced AI chat configuration (custom prompt, hooks), your choice of AI model, search analytics, and a $59/month AI budget. Business (monthly, 14-day free trial) includes everything in Pro plus webhooks, bring-your-own API keys, semantic search, hosted API reference, UTM analytics, and higher usage limits.
 
 ---
 
@@ -224,7 +224,7 @@ A: An account subscription — **$59/month**, 7-day free trial, with 1 project s
 - Advanced MCP tools — chat hooks, custom system prompt, translation management
 - Your choice of AI model for reader-facing chat
 
-Custom domain, white-label, webhooks, bring-your-own API keys, and semantic search are **not** included in Pro — see Business below.
+Custom domain, webhooks, bring-your-own API keys, and semantic search are **not** included in Pro — see Business below.
 
 ---
 
@@ -232,7 +232,6 @@ Custom domain, white-label, webhooks, bring-your-own API keys, and semantic sear
 
 A: An account subscription — **$159/month**, 14-day free trial, with 3 project seats. Everything in Pro, plus a set of Business-exclusive capabilities:
 - Custom domain (`docs.yourcompany.com`) with free SSL
-- White-label (hide "Powered by Docsbook")
 - Webhooks — up to 25 per workspace
 - Bring your own AI chat and/or translation API key (with custom model)
 - Semantic search — the biggest single improvement to AI chat answer quality (finds the right section by meaning, answers from it with the page cited rather than inventing one, and replies faster). Turn it on in **AI Chat → Semantic Search**; the index re-syncs on every doc commit
@@ -253,7 +252,7 @@ A: Your subscription stays active until the end of the current billing period �
 After it ends, every project that held a seat drops to **Free**:
 - The site stays online at `docsbook.io/owner/repo` (forever, unless you move the project to your own GitHub — that changes the address)
 - Your custom domain stops resolving (revert DNS or re-upgrade — Pro and above)
-- Translations, white-label, and webhooks turn off; AI chat and SEO keep running on the Free AI budget
+- Translations and webhooks turn off; AI chat and SEO keep running on the Free AI budget
 - All your content stays in GitHub — nothing is deleted
 - Settings (branding, navigation, UI) are preserved — re-upgrading restores everything
 
@@ -271,7 +270,7 @@ A: Yes. **30-day money-back guarantee** on the first payment, no questions asked
 
 A: Grandfathered. The one-time lifetime PRO plan is no longer sold to new customers — Pro and Business are subscription-only today. If you bought PRO as a one-time purchase before we moved to subscriptions, your workspace keeps its original features forever at no extra cost — exactly as promised. No downgrade, no surprise bill.
 
-You can still upgrade your lifetime workspace to Pro ($59/month) or Business ($159/month) if you want the newer capabilities like custom domain, white-label, or webhooks.
+You can still upgrade your lifetime workspace to Pro ($59/month) or Business ($159/month) if you want the newer capabilities like custom domain or webhooks.
 
 ---
 
@@ -287,7 +286,7 @@ What carries over automatically: page structure, internal links (relative `.md` 
 
 What you'll redo: branding (colors, logo, fonts — 5 minutes in the Float Widget), navigation (header links, social links), AI chat suggested questions.
 
-Pricing: GitBook starts at ~$8/user/month and scales fast with team size. Docsbook is **flat $59/month per account** for Pro (translations, larger AI budget, advanced AI chat config — AI chat and SEO are already free), or $159/month for Business (adds custom domain, white-label, webhooks, and 3 project seats instead of 1) — regardless of team size. Most teams save $200+/month switching. See the full comparison: [GitBook vs Docsbook](./blog/docusaurus-vs-docsbook.md).
+Pricing: GitBook starts at ~$8/user/month and scales fast with team size. Docsbook is **flat $59/month per account** for Pro (translations, larger AI budget, advanced AI chat config — AI chat and SEO are already free), or $159/month for Business (adds custom domain, webhooks, and 3 project seats instead of 1) — regardless of team size. Most teams save $200+/month switching. See the full comparison: [GitBook vs Docsbook](./blog/docusaurus-vs-docsbook.md).
 
 Stuck? Email [support@docsbook.io](mailto:support@docsbook.io) — we help with migrations for free.
 

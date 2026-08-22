@@ -91,7 +91,7 @@ What you do not get on Free:
 
 - Custom domain (Business feature)
 - AI translations to 15 languages
-- White-label ("Powered by Docsbook" stays in the footer)
+- The "Powered by Docsbook" credit stays in the footer — it isn't a paid removal, it's just how the product works
 - Analytics beyond 24h
 - MCP server for advanced workflows
 
@@ -122,7 +122,7 @@ Docsbook is markdown-first. For interactive demos, link out to a hosted demo. If
 
 ### Will it look like every other Docsbook site?
 
-You control brand colors, fonts, layout, header, footer, sidebar. With custom domain and white-label on Business, no Docsbook branding shows.
+You control brand colors, fonts, layout, header, footer, sidebar, and can add a custom domain on Business — the one thing you can't remove is the small "Powered by Docsbook" credit in the footer, on any plan.
 
 ### Can I move away later?
 
