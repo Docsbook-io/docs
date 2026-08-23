@@ -55,10 +55,9 @@ The **Feeds** panel in your admin shows every event the workspace produced, newe
 fill up, which is the point: it is how you find out which events your docs actually emit before you
 decide what to be notified about.
 
-The panel opens on a digest of the selected range: how much happened, how much of it **needs
-attention** (unanswered chat questions, dead-end searches, stale content and translations, usage
-limits), and how many deliveries failed — plus a chip per event group with its count. Every number
-in the digest is a one-click filter on the feed below it; clicking it again clears it.
+Under the title sits a chip per event group with its count for the selected range — `Chat 42`,
+`Search 8`. Each chip is a one-click filter on the feed below it; clicking it again clears it. The
+counts are of the whole range, not of what the filter leaves, so they hold still as you narrow.
 
 The feed itself reads in day sections, and each item is one event: a coloured tile for its type,
 the one-line summary, and where it went. Opening a card shows the full event — every delivery
@@ -78,20 +77,23 @@ and bound it with a time range. Saving a filter turns it into an **event list** 
 feed and defining what to be notified about are the same gesture. Test pings appear in the feed like
 any other event; a replay shows up as another attempt under the event it belongs to. **Export**
 beside the view's title downloads exactly what you are looking at — filters and range applied — as
-CSV, JSON or NDJSON.
+CSV, JSON or NDJSON. It sits in the title row beside the time range and **Set up alert** — the three
+controls that act on the whole view rather than on one event.
 
 ## Notifiers: where events go
 
 A **notifier** is a destination — a channel, its URL and its credentials — and it lives apart from
-the events it carries. You create it once (in the sidebar's **Notifiers** group, or from **Add
-notifier** next to the filters) and then tick it onto as many event lists as it should serve. One
+the events it carries. You create it once — **Set up alert** in the title row, or **New notifier**
+at the bottom of **Add notifier** — and then tick it onto as many event lists as it should serve. One
 Slack channel fed by three lists is one notifier, with one signing secret, paused or deleted in one
 place.
 
 The notifiers already firing on the list you are looking at sit beside the filter chips as labelled
 chips of their own — each with its channel's real mark, its name, and `paused` when it is switched
 off. Clicking one opens that notifier, so you can see what a list delivers to, and change it,
-without leaving the feed.
+without leaving the feed. A notifier that fires on some *other* list — or on none yet, which is
+where every new one starts — is reached from the **Add notifier** menu, where each row has an edit
+control beside its checkbox.
 
 Untick a list and the notifier stops firing on it; untick the last one and the destination stays,
 attached to nothing, delivering nothing until you point it somewhere again. Deleting an event list

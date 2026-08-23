@@ -5,6 +5,19 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 23.08.2026
+
+### Changed
+
+- `Feeds` puts everything that acts on the whole view in one row beside the list's name: `Export`, the time range and `Set up alert`, as three identical buttons. The range used to be a bare dropdown that read as a caption rather than a control. `Feeds`
+- Each row of the `Add notifier` menu now has an edit control, so a destination attached to another list — or to none yet — can be opened without hunting for it. `Feeds`
+- `New list from current filter` in the `Feeds` sidebar is now just `New List`. `Feeds`
+
+### Removed
+
+- The three summary tiles above the `Feeds` feed (all activity, needs attention, failed deliveries). The chips per event group stay and still filter in one click; `failed` moved into `Add filter` under `Delivery status`. `Feeds`
+- The `Notifiers` group in the `Feeds` sidebar, and with one group left, the `Events` heading above the lists. Destinations are reached from the chips beside the filters, from `Set up alert`, and from the `Add notifier` menu. `Feeds`
+
 ## NEW - 22.08.2026
 
 ### Added
