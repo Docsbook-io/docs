@@ -58,7 +58,7 @@ Bring your own API key from the workspace settings **(Business and Scale plans)*
 
 Documentation questions are rarely a solo activity — someone asks, someone else knows half the answer, and the result ends up pasted into Slack where nobody finds it again.
 
-On **Growth** and **Scale**, press **Invite** in the chat's toolbar — or open the account menu behind the Docsbook mark in the chat's top-left corner and pick **Invite people** — to bring a teammate into the same session:
+On **Growth** and **Scale**, press **Invite** in the chat's toolbar to bring a teammate into the same session:
 
 - **See who's here.** The button shows who from your team is currently in this chat.
 - **Invite by email.** Send an invite to anyone, whether or not they already have a Docsbook account — the link takes them through sign-in and straight into the project.

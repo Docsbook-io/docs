@@ -38,6 +38,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - A language's last dozen runs are shown as a strip coloured by how each one ended, so a single failed run reads differently from a language that has not finished cleanly in weeks. `Translations`
 - Each language can be switched on and off from its own page, with the same cost confirmation you get in settings. `Translations`
 - A live `Now` mode for `Analytics` shows the last hour updating every 5 seconds, with a per-minute chart. `Analytics`
+- A button back to `Fullscreen` from the side-by-side chat, next to the project picker — shown only while the chat sits beside your docs. `AI Chat`
 
 ### Changed
 
@@ -62,6 +63,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Project cards in the project picker show the connected repository's real GitHub avatar instead of a generic folder icon, and list your most recently used projects first. `AI Chat`
 - `More` in the project picker now reveals two more rows at a time instead of the whole list at once, and relabels to `Load more` after the first press. `AI Chat`
 - The project and conversation pickers in the chat header lost their border and background, with a bolder project name and tighter spacing. `AI Chat`
+- The project picker in the chat header now leads with your repository's own GitHub avatar next to its name, and the name reads larger. `AI Chat`
+- Settings now opens in one click from a gear icon in the chat header, instead of behind a menu. `AI Chat`
+- The chat and change-history icons in the chat header now read in full color instead of muted. `AI Chat`
 - The analytics time range picker now offers `Now`, `Today`, `Yesterday`, `Last 24 hours`, `Last 7 days` and `Last 30 days`, and defaults to `Today`. `Analytics`
 
 ### Fixed
@@ -80,6 +84,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The repository browsing list under `Connect a repository` in the project picker. `Start a new project` connects a new repo instead. `AI Chat`
 - The `Try Docsbook` prompt grid that used to follow a finished setup checklist. `AI Chat`
 - The centered "Docsbook" logo and wordmark shown above the composer on an empty conversation. The input stays exactly where it was. `AI Chat`
+- The Docsbook logo and its menu from the chat header. Settings now opens in one click (see above); the connected repository, theme and sign out moved into the settings panel and the project picker. `AI Chat`
+- The address bar above the side-by-side preview (page list, open in new tab, mobile width, reload). `Plan`, `Invite` and `Visit` sit there now instead, the same row the full-screen chat already showed. `AI Chat`
 
 ## NEW - 22.08.2026
 

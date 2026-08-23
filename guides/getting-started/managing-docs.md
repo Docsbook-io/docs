@@ -352,7 +352,7 @@ If multiple people work on documentation:
 
 ### Inviting someone into the AI chat
 
-You can also bring a teammate straight into the AI chat, without a GitHub account: press **Invite** in the chat's toolbar, or open the account menu behind the Docsbook mark in the chat's top-left corner and pick **Invite people**. Then send them an email invite or a link. Collaborators work in the same live session and draw on this workspace's AI credit.
+You can also bring a teammate straight into the AI chat, without a GitHub account: press **Invite** in the chat's toolbar. Then send them an email invite or a link. Collaborators work in the same live session and draw on this workspace's AI credit.
 
 The Invite panel is visible on every plan so you can see what it offers, but sending invites requires **Growth** or **Scale**.
 
