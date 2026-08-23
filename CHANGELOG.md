@@ -77,6 +77,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Overage billing. AI usage now simply pauses once the plan's monthly budget is used up — never billed above your plan price. `Usage`
 - The repository browsing list under `Connect a repository` in the project picker. `Start a new project` connects a new repo instead. `AI Chat`
 - The `Try Docsbook` prompt grid that used to follow a finished setup checklist. `AI Chat`
+- The centered "Docsbook" logo and wordmark shown above the composer on an empty conversation. The input stays exactly where it was. `AI Chat`
 
 ## NEW - 22.08.2026
 
