@@ -31,6 +31,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - A `Keyword` tab in `Sources` shows the Google queries you rank for, with position, impressions, clicks and click-through rate, from your connected Search Console. `Analytics`
 - Hovering a `Channels` row names the three sites the channel actually consists of, with their shares. `Analytics`
 - `Languages` rows carry a flag, and `Referrers` rows show the subdomain in grey so the list reads by domain. `Analytics`
+- Your workspace's background glow and accent color now carry into the AI chat panel too — full-screen and side-by-side — instead of stopping at the docs page's edge. `Theme Settings`
 
 ### Changed
 
