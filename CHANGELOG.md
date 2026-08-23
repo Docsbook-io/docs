@@ -37,6 +37,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - A translation in progress now says what started it: you, someone else on the dashboard, switching the language on, or a commit Docsbook followed. `Translations`
 - A language's last dozen runs are shown as a strip coloured by how each one ended, so a single failed run reads differently from a language that has not finished cleanly in weeks. `Translations`
 - Each language can be switched on and off from its own page, with the same cost confirmation you get in settings. `Translations`
+- A live `Now` mode for `Analytics` shows the last hour updating every 5 seconds, with a per-minute chart. `Analytics`
 
 ### Changed
 
@@ -61,6 +62,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Project cards in the project picker show the connected repository's real GitHub avatar instead of a generic folder icon, and list your most recently used projects first. `AI Chat`
 - `More` in the project picker now reveals two more rows at a time instead of the whole list at once, and relabels to `Load more` after the first press. `AI Chat`
 - The project and conversation pickers in the chat header lost their border and background, with a bolder project name and tighter spacing. `AI Chat`
+- The analytics time range picker now offers `Now`, `Today`, `Yesterday`, `Last 24 hours`, `Last 7 days` and `Last 30 days`, and defaults to `Today`. `Analytics`
 
 ### Fixed
 

@@ -142,17 +142,24 @@ Rows are sorted by dislikes first: the page people voted down is the one to rewr
 
 1. Open any page of your documentation site.
 2. Click the **Analytics** tab in the floating toolbar at the bottom.
-3. The overview loads automatically with the last 24 hours selected.
+3. The overview loads automatically with **Today** selected.
 
 ## Time Ranges
 
-Use the interval selector (top-right of the analytics panel) to switch views:
+Use the interval switcher (next to the Online badge) to change the window:
 
 | Range | Plan required |
 |---|---|
-| 24H | Free |
-| 7D | Pro |
-| 30D | Growth / Business / Scale |
+| Now (live) | Free |
+| Today | Free |
+| Yesterday | Free |
+| Last 24 hours | Free |
+| Last 7 days | Pro |
+| Last 30 days | Growth / Business / Scale |
+
+Today and Yesterday are calendar days, not a rolling 24 hours — Today starts at midnight, so early in the day it covers less than Last 24 hours does.
+
+**Now** puts the chart in live mode: the switcher shows a pulsing dot, and the chart and top figures refresh every 5 seconds with a per-minute view of the last hour. The rest of the page (the four cards below, and every other range) still refreshes every 30 seconds.
 
 ## Reading Referrers
 
