@@ -58,10 +58,14 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - `AI Views` moved to its own full-width card under the others, so the crawl chart is wide enough to show the shape of a crawl rather than just its total. `Analytics`
 - `Read Time` is no longer a separate tab — it is a `Reading time` ranking on `Pages` and `Headings`, still on `Pro`. `Analytics`
 - A period with very few visits now says so under the figures, instead of presenting percentages that move by whole points per visit as measurements. `Analytics`
+- Project cards in the project picker show the connected repository's real GitHub avatar instead of a generic folder icon, and list your most recently used projects first. `AI Chat`
+- `More` in the project picker now reveals two more rows at a time instead of the whole list at once, and relabels to `Load more` after the first press. `AI Chat`
+- The project and conversation pickers in the chat header lost their border and background, with a bolder project name and tighter spacing. `AI Chat`
 
 ### Fixed
 
 - The analytics `Details` view opened behind the settings panel that launched it. `Analytics`
+- Long project names and site paths no longer overflow their card in the project picker. `AI Chat`
 
 - Commits stopped showing up in `Changes`. The nightly collector walked only part of the projects it should have, so an active repository could go days without a single new entry while the run reported success. Every project is now collected on every run. `Changes`
 - Commits stuck on `Maturing` long after their two weeks were up: the measurement queue drained newest-first, so once a backlog formed the oldest commits were never reached. `Changes`
@@ -71,6 +75,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The three summary tiles above the `Feeds` feed (all activity, needs attention, failed deliveries). The chips per event group stay and still filter in one click; `failed` moved into `Add filter` under `Delivery status`. `Feeds`
 - The `Notifiers` group in the `Feeds` sidebar, and with one group left, the `Events` heading above the lists. Destinations are reached from the chips beside the filters, from `Set up alert`, and from the `Add notifier` menu. `Feeds`
 - Overage billing. AI usage now simply pauses once the plan's monthly budget is used up — never billed above your plan price. `Usage`
+- The repository browsing list under `Connect a repository` in the project picker. `Start a new project` connects a new repo instead. `AI Chat`
+- The `Try Docsbook` prompt grid that used to follow a finished setup checklist. `AI Chat`
 
 ## NEW - 22.08.2026
 
