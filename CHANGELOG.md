@@ -21,6 +21,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Changed
 
 - The `Top searches` tab on the `Conversations` card is now called `Searches`. `AI Chat`
+- The `Limits` tab is now called `Usage`. `Usage`
 - `Changes` opens on the answer instead of on the charts. The score, what moved and what it cost come first; every measurement behind them is one `The measurements behind this score` toggle away, with nothing removed. `Changes`
 - A thin sample no longer refuses to judge. A handful of visits still moves the score, just far less, and the page states how confident it is. A score with little behind it is never coloured and never called a success. `Changes`
 - `Feeds` puts everything that acts on the whole view in one row beside the list's name: `Export`, the time range and `Set up alert`, as three identical buttons. The range used to be a bare dropdown that read as a caption rather than a control. `Feeds`
@@ -39,6 +40,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 - The three summary tiles above the `Feeds` feed (all activity, needs attention, failed deliveries). The chips per event group stay and still filter in one click; `failed` moved into `Add filter` under `Delivery status`. `Feeds`
 - The `Notifiers` group in the `Feeds` sidebar, and with one group left, the `Events` heading above the lists. Destinations are reached from the chips beside the filters, from `Set up alert`, and from the `Add notifier` menu. `Feeds`
+- Overage billing. AI usage now simply pauses once the plan's monthly budget is used up — never billed above your plan price. `Usage`
 
 ## NEW - 22.08.2026
 

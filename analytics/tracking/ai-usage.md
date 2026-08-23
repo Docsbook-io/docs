@@ -67,7 +67,7 @@ AI usage is metered in money, not in requests. Each paid plan includes a monthly
 
 Every call is charged at the model provider's real price plus a 150% markup, so a cheaper model stretches the same budget further.
 
-When a paid plan exceeds its monthly budget, additional usage is billed as overage up to a monthly cap you set in the Limits tab of workspace settings (default $20/month) — see [Pricing & Plans](../../content/setup/pricing-spec.md#overage-billing) for how the cap works. The Free plan has no overage and stops at its budget.
+When a plan exceeds its monthly budget, AI usage simply pauses until the next billing cycle — see [Pricing & Plans](../../content/setup/pricing-spec.md#usage-budget) for details. You're never billed above your plan's price.
 
 ## Translation Usage
 

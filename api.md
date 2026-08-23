@@ -72,6 +72,6 @@ curl -X POST https://docsbook.io/api/v1/chat \
 |---|---|
 | `401` | Missing or invalid API key |
 | `403` | AI chat is not enabled for this workspace |
-| `429` | The account's AI budget (and any overage allowance) is exhausted |
+| `429` | The account's AI budget is exhausted |
 
 <!-- /widget -->

@@ -80,7 +80,7 @@ AI chat runs on **every plan**. Plans differ by the monthly **AI budget**, not b
 
 Every paid plan's AI budget is the same amount you pay for the plan: Pro costs $59/month and includes $59 of AI usage.
 
-Usage is deducted in money, not tokens: each answer is charged at the real price the provider charges for the model that served it, plus a 150% markup. That budget covers roughly 15,000 answers a month on Pro with the default model, and switching to a cheaper model makes it go further. When the budget runs out, paid plans keep working and bill the rest as metered overage up to a cap you control (default $20/month); Free stops at its budget.
+Usage is deducted in money, not tokens: each answer is charged at the real price the provider charges for the model that served it, plus a 150% markup. That budget covers roughly 15,000 answers a month on Pro with the default model, and switching to a cheaper model makes it go further. When the budget runs out, AI chat simply pauses until the next billing cycle — you're never billed above your plan price.
 
 If a reader opens the chat widget on a documentation site that has no AI Chat connected at all, they see a plain explanation instead of an error — asking them to reach out to the site's owner to set it up.
 

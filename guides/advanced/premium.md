@@ -98,7 +98,7 @@ Growth and Scale sit alongside Pro and Business as separate plans with larger AI
 
 ## Project Seats
 
-Your subscription is bought once per **account** and grants project seats — 1 on Pro, 3 on Business, 5 on Growth, 15 on Scale. A project is paid only while it holds a seat, and you assign or release seats yourself from the Limits tab in workspace settings.
+Your subscription is bought once per **account** and grants project seats — 1 on Pro, 3 on Business, 5 on Growth, 15 on Scale. A project is paid only while it holds a seat, and you assign or release seats yourself from the Usage tab in workspace settings.
 
 - Free projects are unlimited on every plan — every project carries the "Powered by Docsbook" badge, on every tier.
 - Moving a seat to a different project is the normal case, not an exception. A project that just gave up a seat has to wait an hour before taking one again, and seat changes are capped at 10 per month per account.
@@ -106,11 +106,11 @@ Your subscription is bought once per **account** and grants project seats — 1 
 - Need more projects than your plan includes? You can buy extra seats, up to twice your plan's allowance.
 - If you downgrade or cancel, the oldest seats are kept and the newest are released, so your long-lived production docs stay paid.
 
-## Overage
+## Usage Budget
 
-Paid plans don't hard-stop when the monthly AI budget runs out — further usage is billed as metered overage on top of your subscription, up to a monthly cap you control from the Limits tab (default $20/month). Once you hit the cap, usage is blocked until the next cycle or you raise the cap. Free has no overage; usage simply stops at the free budget.
+Every plan's monthly AI budget is a hard ceiling — once it runs out, usage simply pauses until the next cycle. You're never billed above your plan's price.
 
-You can also cap a single spend source. Alongside the overall cap, the Limits tab lets you set an optional per-cycle ceiling on each of Readers (AI Chat), Admin & AI Agent, AI Translations and Semantic Index — useful when one of them, typically translations or a re-index, could otherwise absorb the whole budget. The limit counts your plan budget and overage together, and the source stops until the next cycle once it is reached; the other sources keep running. Leave a field blank for no limit, or set $0 to switch that source off. Every bar under **Spend by source** shows your limit next to the plan's own budget, so both numbers stay visible.
+You can also cap a single spend source. From the Usage tab, set an optional per-cycle ceiling on each of Readers (AI Chat), Admin & AI Agent, AI Translations and Semantic Index — useful when one of them, typically translations or a re-index, could otherwise absorb the whole budget. The limit counts against your plan budget, and the source stops until the next cycle once it is reached; the other sources keep running. Leave a field blank for no limit, or set $0 to switch that source off. Every bar under **Spend by source** shows your limit next to the plan's own budget, so both numbers stay visible.
 
 Usage is priced in money, not tokens: each call is charged at the real price the provider charges for the model that answered, plus a 150% markup. The model, its per-1M-token rate and the markup are all visible in your dashboard, so the amount deducted is one you can check yourself. From Pro you can switch models — a cheaper model makes the same budget go further — and on Business/Scale you can bring your own key and pay the provider directly, in which case we bill you nothing for usage.
 

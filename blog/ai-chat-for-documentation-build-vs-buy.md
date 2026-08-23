@@ -147,7 +147,7 @@ Docsbook gives you more control than most managed options:
 - **Provider** — OpenAI, Anthropic, Gemini, OpenRouter. Bring your own API key, pick your model.
 - **System prompt** — full text replacement (PRO+ feature)
 - **Pre/post hooks** — intercept queries before LLM call, post-process answers (PRO+ feature)
-- **Limits** — monthly AI token budget per plan, then metered overage up to a monthly cap you control (default $20) instead of a hard stop
+- **Usage** — monthly AI budget per plan; usage pauses until the next cycle if you use it up, never billed above your plan price
 
 If you outgrow these knobs, the "build it" math changes — but most teams do not.
 
