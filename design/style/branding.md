@@ -13,6 +13,7 @@ Make your documentation feel like your product — not a generic template.
 |---|---|
 | Custom name | Display name shown in the browser tab and header |
 | Call To Action URL | The page your docs should drive readers to — see below |
+| Average Product Price | What one conversion is worth, so analytics can report revenue — see below |
 | Accent color | Primary brand color applied to buttons, links, and highlights |
 | Heading font | Google Font used for headings (h1–h6) |
 | Content font | Google Font used for body text — falls back to the heading font |
@@ -32,11 +33,21 @@ The one page your documentation exists to send people to: your pricing page, a d
 
 - **Your AI chat** points readers there when they are evaluating, comparing, or asking about plans — and stays out of the way when the question is plain troubleshooting.
 - **Content generation** treats it as the goal of the site, so pages end on a next step instead of a dead end, and the AI can add it to your header as a button.
-- **Analytics** counts conversations that end on this domain as reaching the goal, which is what turns the Conversations card from "readers left the docs" into "readers reached the page that sells".
+- **Analytics** counts a reader who leaves for this domain as a conversion. That is what turns the Conversations card from "readers left the docs" into "readers reached the page that sells", and it is what the Conversion rate figure at the top of the analytics panel measures.
 
 Enter a full `https://` address. Matching is by domain, so every path on it counts and query strings or UTM tags are fine. Leave it empty if you have nothing to sell yet — nothing breaks, you just lose the goal column in analytics.
 
 If you set it while creating your first documentation, it is already filled in here.
+
+## Average Product Price
+
+What one conversion is worth to you on average — a plan price, a typical order value, whatever a reader who reaches your call-to-action page is worth once they buy.
+
+Set it and the analytics panel starts reporting **Revenue** and **Revenue per visitor**: the readers who clicked through to your Call To Action URL, multiplied by this number.
+
+Enter it in dollars — `299` or `29.90`, with or without the `$`. It pairs with the Call To Action URL above, and both are needed: one says which click counts, the other says what it is worth. Set only one and the revenue figures stay switched off, saying which half is still missing.
+
+Leave it empty to turn revenue reporting off again. There is no way to enter `0` — a zero average price would leave the figures looking switched on while reporting `$0` forever, which is worse than an honest blank.
 
 ## Accent Color
 

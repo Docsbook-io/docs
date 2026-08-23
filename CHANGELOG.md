@@ -17,6 +17,11 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - A `Widgets` gallery in settings shows every content widget your pages can render, each with a preview of the block it produces and a page describing the markdown it expects. `Settings`
 - Any content widget can now be switched off for a project. Its comments stay in your files and every word between them still publishes; only the rich block is withheld. Switch it back on and every page that used it returns, with nothing to re-write. `Content Widgets`
 - `Apply to a page` on a widget closes settings and turns on editing over your docs, offering that widget first on whichever block you pick. `Settings`
+- `Analytics` now leads with six figures instead of four counts: visitors, revenue, conversion rate, revenue per visitor, bounce rate and session time, each showing how it moved against the period before it. `Analytics`
+- An `Average Product Price` setting under `Branding`. Together with your `Call To Action URL` it turns readers who click through to your sales page into a revenue figure. Set only one of the two and the revenue tiles stay switched off saying which half is missing, rather than reporting a confident `$0`. `Settings`
+- The visitors chart now splits new readers from returning ones, and its tooltip carries pageviews, pages per visitor and the returning rate for the hour or day under the cursor. `Analytics`
+- `Bounce rate` and `Session time` are now reported per visit, so you can see how many readers arrive and leave without reading, and how long the rest stay. `Analytics`
+- The average product price can also be set from the assistant and over MCP, through `update_branding`. `MCP`
 
 ### Changed
 
@@ -30,6 +35,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The live editor and the assistant now offer only the widgets a project has switched on, so neither can write markers that would not render. `Content Widgets`
 - The settings gear on your docs site opens the panel on its main page instead of jumping into `Branding`. `Docs`
 - The standalone `Support` button beside the gear is gone. Support is reachable from the settings panel's own sidebar. `Docs`
+- `Online` is no longer one of the metrics above the analytics chart. It counts readers right now rather than over the period you picked, so it sits as its own live chip beside the panel title. `Analytics`
+- The AI crawler chart moved from the metrics row into the `AI` tab of the `Referrers` card, above the per-bot totals it explains. `Analytics`
+- A period with very few visits now says so under the figures, instead of presenting percentages that move by whole points per visit as measurements. `Analytics`
 
 ### Fixed
 
