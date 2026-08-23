@@ -26,6 +26,11 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Hovering a row shows its visitors, revenue, revenue per visitor and conversion rate, with buttons to filter by it or open it. `Details` on each card opens the same numbers as a full table. `Analytics`
 - Filtering by a row narrows the whole dashboard — the other cards and the six figures above the chart — so a country, device or referrer can be read end to end. Filters stack, and each is a chip you can remove. `Analytics`
 - New breakdowns: `Entry` and `Exit` pages, traffic `Channels` (organic search, social, referral, AI assistant, direct), `Countries` and `Languages`. `Analytics`
+- `Pages` and `Headings` can now be ranked by `Views` and `Reading time` as well as visitors and revenue, and each figure counts only what happened on that page — a busy visit no longer makes every page it touched look busy. `Analytics`
+- `Headings` is now a full breakdown: which section readers reached, how long they stayed on its page, and what those readers were worth. `Analytics`
+- A `Keyword` tab in `Sources` shows the Google queries you rank for, with position, impressions, clicks and click-through rate, from your connected Search Console. `Analytics`
+- Hovering a `Channels` row names the three sites the channel actually consists of, with their shares. `Analytics`
+- `Languages` rows carry a flag, and `Referrers` rows show the subdomain in grey so the list reads by domain. `Analytics`
 
 ### Changed
 
@@ -43,9 +48,14 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The AI crawler chart moved from the metrics row into the `AI` tab of the `Referrers` card, above the per-bot totals it explains. `Analytics`
 - The analytics cards are now grouped as `Pages`, `Sources`, `Audience` and `Conversions`. Nothing was dropped — every existing tab moved into one of the four. `Analytics`
 - Visitors with no referrer are now a row of their own, `Direct / None`, instead of being left out of the referrer list. On most documentation sites they are the largest single source. `Analytics`
+- Each analytics card picks its tab from a dropdown instead of a row of tabs that scrolled sideways inside the card. Every tab is one click away at any window width. `Analytics`
+- `AI Views` moved to its own full-width card under the others, so the crawl chart is wide enough to show the shape of a crawl rather than just its total. `Analytics`
+- `Read Time` is no longer a separate tab — it is a `Reading time` ranking on `Pages` and `Headings`, still on `Pro`. `Analytics`
 - A period with very few visits now says so under the figures, instead of presenting percentages that move by whole points per visit as measurements. `Analytics`
 
 ### Fixed
+
+- The analytics `Details` view opened behind the settings panel that launched it. `Analytics`
 
 - Commits stopped showing up in `Changes`. The nightly collector walked only part of the projects it should have, so an active repository could go days without a single new entry while the run reported success. Every project is now collected on every run. `Changes`
 - Commits stuck on `Maturing` long after their two weeks were up: the measurement queue drained newest-first, so once a backlog formed the oldest commits were never reached. `Changes`

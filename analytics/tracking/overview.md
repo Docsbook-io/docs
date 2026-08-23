@@ -26,17 +26,29 @@ Below the chart, four cards break the same period down. Each card holds several 
 
 | Card | Tabs |
 |---|---|
-| Pages | Pages, Entry, Exit, Headings, Read Time |
-| Sources | Referrers, Channels, UTM, AI Views |
+| Pages | Pages, Headings, Entry, Exit |
+| Sources | Referrers, Channels, UTM, Keyword |
 | Audience | Devices, Browsers, Countries, Languages |
 | Conversions | CTA Clicks, Feedback |
+| AI Views (full width) | AI crawler requests over time, and per bot |
+
+Each card picks its tab from a dropdown rather than a row of tabs: four or five
+tabs never fit a half-width card, and the row they used to sit in scrolled
+sideways inside a card that also scrolls down.
 
 Every row on the first three cards carries **both** figures: how many visitors it
 brought and how much revenue they were worth. The control on the right of the
-card says which of the two the list is ranked by — click it to switch between
-`Visitors` and `Revenue`, and every card switches with it. Both figures are
-always drawn as the two bars behind each row, so switching re-orders the list
-you are already reading instead of replacing it.
+card says which figure the list is ranked by — click it to switch, and every
+card switches with it. Two bars are always drawn behind each row: blue is
+whatever the list is ranked by, rose is always the money.
+
+**Pages and Headings rank by two more figures**: `Views` and `Reading time`.
+Those only mean something for a row that names a place in your docs, which is
+why they are offered there and nowhere else — and they count only what happened
+on that page. A reader who opened three pages gives each of them its own views
+and its own seconds, rather than making all three look as busy as the busiest.
+Reading time is averaged over the readers it was actually measured for; a page
+with no measurements shows a dash, never `0`. It stays a **Pro** feature.
 
 Hover a row for its visitors, revenue, revenue per visitor and conversion rate,
 and for two buttons: one filters the whole dashboard by that value, the other
@@ -90,9 +102,31 @@ A **bounce** is a visit of one page, under three seconds, with nothing else — 
 
 If a period holds very few visits, the panel says so under the figures: percentages over a handful of visits swing by whole points per visit, and are a direction rather than a measurement.
 
+### Keyword
+
+The **Keyword** tab of the Sources card is the one list that does not come from
+your visitors: it comes from Google Search Console. An impression that never
+became a click cannot be seen by anything running on your docs site, so this tab
+shows what Google saw — the queries you rank for, with position, impressions,
+clicks and click-through rate.
+
+Connect Search Console in the SEO tab first. The numbers lag about two days
+(Google's own schedule) and the tab states the day they run through. Revenue
+here is an **estimate** — clicks multiplied by your site-wide revenue per
+visitor — and is labelled and drawn as one, because a modelled figure should
+never look like a measured one.
+
 ### AI Views
 
-The **AI Views** tab of the Sources card charts one line per AI crawler instead of a single total, so you can tell which assistants are reading your docs and how that changes over time. The twelve busiest bots are charted, each labelled with the provider behind it, above the per-bot totals.
+The **AI Views** card charts one line per AI crawler instead of a single total, so you can tell which assistants are reading your docs and how that changes over time. The twelve busiest bots are charted, each labelled with the provider behind it, above the per-bot totals.
+
+### Channels
+
+The **Channels** tab groups visits by the *kind* of source — organic search,
+social, referral, AI assistant, direct — when the question is which channel
+works rather than which site. Hovering a channel names the three sites it
+actually consists of, with their shares: "organic search" that is 96% Google and
+one spread across five engines are different situations.
 
 ### CTA Clicks
 
@@ -127,9 +161,8 @@ URL, came from a bookmark, or arrived from a link that stripped its referrer —
 most documentation sites it is the largest single row, which is why it is listed
 rather than dropped.
 
-The **Channels** tab groups the same visits by *kind* of source — organic search,
-social, referral, AI assistant, direct — when the question is which channel works
-rather than which site.
+Rows show the subdomain in grey and the domain in black, so a column of hosts
+reads by the site behind them.
 
 A spike in a specific referrer usually means someone shared your docs — great signal for which content resonates.
 
