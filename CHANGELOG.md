@@ -9,12 +9,15 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Added
 
+- A `Lang` tab on the `Conversations` card in `Chat` shows which languages readers write in, each row with its flag, so a workspace serving several languages can see the split at a glance. `AI Chat`
+- Every conversation in `Chat` — the dialog list, the sidebar, and the open conversation — now shows the flag of the language it was written in. `AI Chat`
 - Every commit in `Changes` now carries one 0-100 score, with the four areas behind it: readers served, reach, cost to run and edit quality. Each area shows its own number, how much of the total it counts for, and how much data stands behind it. `Changes`
 - A commit is scored the day it lands, from the diff alone, instead of showing nothing until its window closes two weeks later. `Changes`
 - `Changes` now puts the cash figures up front: what re-translating the edited pages cost, what readers asking the chat cost either side of the commit, and total AI spend. `Changes`
 
 ### Changed
 
+- The `Top searches` tab on the `Conversations` card is now called `Searches`. `AI Chat`
 - `Changes` opens on the answer instead of on the charts. The score, what moved and what it cost come first; every measurement behind them is one `The measurements behind this score` toggle away, with nothing removed. `Changes`
 - A thin sample no longer refuses to judge. A handful of visits still moves the score, just far less, and the page states how confident it is. A score with little behind it is never coloured and never called a success. `Changes`
 - `Feeds` puts everything that acts on the whole view in one row beside the list's name: `Export`, the time range and `Set up alert`, as three identical buttons. The range used to be a bare dropdown that read as a caption rather than a control. `Feeds`
