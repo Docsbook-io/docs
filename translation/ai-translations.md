@@ -17,7 +17,7 @@ How Docsbook automatically translates your documentation using Claude AI.
 
 No manual work. No translation files to maintain. No YAML keys.
 
-Enabling a language translates your whole site once. After that, pushing to GitHub does **not** re-translate anything on its own: readers keep seeing the last translation until it is re-run. Ask your AI agent to re-translate a page, or replace a specific translation yourself with the MCP translation tools — see [Translation Settings](./settings).
+Enabling a language translates your whole site once. After that, on the **Auto** mode Docsbook follows your repository: a push that changes a documented page puts that page back in the queue for every enabled language, checked for roughly every 15 minutes. On **Manual** and **External webhook** nothing starts by itself. To correct a specific translation by hand, ask your AI agent to re-translate a page or use the MCP translation tools — see [Translation Settings](./settings).
 
 ## Long Runs Resume Where They Stopped
 

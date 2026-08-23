@@ -135,6 +135,18 @@ missing measurement can never look like a missing translation.
 
 The page above covers every language at once, which is not the question you act on. That one is always about a single language: keep paying for German, or not. So each language has a page of its own — click **Translations** in the sidebar and pick it from the list.
 
+### Is this language keeping up?
+
+The page opens on that question, because it is the one you act on daily — a conversion lift measured over a week is worth nothing if it was measured on pages that went stale a fortnight ago. At the top of every language page:
+
+- **Coverage** — one percentage, over a bar split by the *kind* of gap. Pages that are translated and current, pages whose source has since changed, and pages never translated at all are three different colours, because they call for different responses. A page that fell behind is telling your reader something your docs no longer say; a page never translated simply falls back to your original.
+- **Last update** — when this language was last written to, and which commit your docs are currently at.
+- **What is running now** — a live progress bar while a run is in flight, naming who started it: **you**, someone else on the dashboard, switching the language on, or a commit Docsbook followed.
+- **Recent runs** — the last dozen runs as a strip, coloured by how each one ended. One failed run is a blip; a strip that has not finished cleanly in a month is a problem, and a single "last run failed" cannot tell you which you have.
+- **Why it stopped** — when a run ended short, the reason in plain words: budget exhausted, provider quota, an unreadable repository.
+
+The language's on/off **switch** lives here too, so you can act on what the panel just told you without going back to settings. Turning one **on** still quotes the bill first, exactly as it does in settings — it is the same confirmation dialog, not a cheaper-looking second way to start spending. Turning one **off** asks nothing, because it costs nothing and deletes nothing.
+
 The number that page is built around is one the overview cannot show you: **how many people from that language's countries visit your docs at all**, in whatever language they end up reading. On its own, "180 readers in German" tells you nothing — it could be your entire German-speaking audience or a rounding error. Against 1,240 visitors from German-speaking countries it is a decision, and the 1,060 who never landed on the translation are either the reason to keep it running or something to go look at.
 
 Around that comparison the page shows which of the language's countries the translation reached and which it missed, both counts day by day, the pages those readers actually opened, how they converted against your original pages, and what the language has cost you against a human translator.
@@ -148,11 +160,25 @@ A language you switch off keeps its page. Turning one off deletes nothing, so it
 
 ## Keeping Translations Current
 
-Enabling a language translates your whole site once. After that, editing a page in GitHub does **not** re-translate it on its own — readers keep seeing the last translation until it is re-run. Ask your AI agent to re-translate a page, or use the MCP translation tools (`upload_translation`, `approve_translation`, `delete_translation`) to correct or replace a specific translation by hand. A translation you upload or approve is marked as hand-written, so later automatic runs leave it alone.
+On the **Auto** translation mode, Docsbook follows your repository: when you push a commit that changes a documented page, the pages that fell behind are re-translated for every enabled language without you asking. Pages the commit did not touch cost nothing, and stale pages are re-done before never-translated ones — a translation that now says something your docs no longer say is worse for a reader than a page that falls back to the original.
+
+It is a check, not an instant reaction. Docsbook looks for new commits about every 15 minutes, so expect a catch-up to begin within roughly that window rather than the second you push.
+
+Following commits stays inside the fences you already set:
+
+| Fence | Effect |
+|---|---|
+| Translation mode | Only **Auto** follows commits. On **Manual** and **External webhook** nothing starts by itself. |
+| Enabled languages | Only languages you switched on. A language that is off is never translated. |
+| Plan | Requires a plan that includes translation. |
+| Budget and quota | The same AI spend budget and provider limits as any other run. When the budget runs out the run stops and says so, and resumes when it refreshes. |
+| Runs in flight | Never starts a second run for a language that is already translating. |
+
+To correct or replace a specific translation by hand, ask your AI agent to re-translate a page, or use the MCP translation tools (`upload_translation`, `approve_translation`, `delete_translation`). A translation you upload or approve is marked as hand-written, so later automatic runs leave it alone.
 
 ## Disabling a Language
 
-Uncheck the language in the Translation tab → Save. No confirmation is asked, because nothing is destroyed.
+Uncheck the language in the Translation tab → Save, or use the switch on that language's own page. No confirmation is asked, because nothing is destroyed.
 
 Visitors on that language's URL are automatically redirected to the English version.
 

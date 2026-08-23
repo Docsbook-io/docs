@@ -24,7 +24,8 @@ EN, ES, FR, DE, PT, IT, RU, ZH, JA, KO, AR, HI, TR, PL, NL
 Set the mode with the `set_translation_mode` MCP tool (requires Pro or Business).
 
 ```typescript
-// auto: Docsbook translates with its built-in AI provider
+// auto: Docsbook translates with its built-in AI provider, and follows new
+// commits — pages changed by a push are re-translated without being asked
 set_translation_mode({ workspace_id: 42, mode: "auto" })
 
 // external: drafts are posted to your webhook for human or pipeline review
@@ -45,7 +46,7 @@ Translations run through OpenRouter by default. On the **Business** plan you can
 | Pro | Included |
 | Business | Included, higher monthly limit than Pro |
 
-A translation is counted per source page version. If the English page changes, the translated copy is marked stale and needs to be regenerated.
+A translation is counted per source page version. If the English page changes, the translated copy is stale until it is redone — automatically on the `auto` mode, on request in `manual` and `external`.
 
 ## Pricing
 

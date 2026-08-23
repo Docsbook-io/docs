@@ -32,6 +32,11 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Hovering a `Channels` row names the three sites the channel actually consists of, with their shares. `Analytics`
 - `Languages` rows carry a flag, and `Referrers` rows show the subdomain in grey so the list reads by domain. `Analytics`
 - Your workspace's background glow and accent color now carry into the AI chat panel too — full-screen and side-by-side — instead of stopping at the docs page's edge. `Theme Settings`
+- Your docs now follow your commits: on the `Auto` translation mode, a push that changes a page re-translates it in every enabled language without being asked, within your existing budget and provider limits. `Translations`
+- Every language page opens on whether that language is keeping up — coverage split into current, fallen behind and never translated, when it was last written to, and which commit your docs stand at. `Translations`
+- A translation in progress now says what started it: you, someone else on the dashboard, switching the language on, or a commit Docsbook followed. `Translations`
+- A language's last dozen runs are shown as a strip coloured by how each one ended, so a single failed run reads differently from a language that has not finished cleanly in weeks. `Translations`
+- Each language can be switched on and off from its own page, with the same cost confirmation you get in settings. `Translations`
 
 ### Changed
 

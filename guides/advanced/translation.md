@@ -164,9 +164,9 @@ Translated Spanish:
 
 ### When Does Translation Update?
 
-Enabling a language translates your whole site once. After that, pushing to GitHub does **not** re-translate anything on its own — readers keep seeing the last translation until it is re-run.
+Enabling a language translates your whole site once. After that, on the **Auto** translation mode Docsbook follows your repository: a push that changes a documented page puts that page back in the queue for every enabled language, with the pages that fell behind translated before the ones never translated at all. Docsbook checks for new commits about every 15 minutes, so a catch-up starts within roughly that window rather than the instant you push.
 
-To update translations after an edit, ask your AI agent to re-translate the page, or re-run translation from the Translation tab. When a re-run is scoped to the pages a commit changed, those pages are translated first.
+On **Manual** and **External webhook** nothing starts by itself. There, and any time you want a page redone sooner, ask your AI agent to re-translate the page or re-run translation from the Translation tab.
 
 A large re-run is processed in chunks and resumes on its own until it finishes, so you do not need to keep an eye on it. The language row shows a progress counter while it runs, and marks the language **Stopped** with a reason if a run ended early.
 
@@ -344,7 +344,7 @@ A: Translations are included in Pro and Business, with a higher monthly limit on
 
 **Q: Will translation update when I update docs?**
 
-A: Not on its own. A push to GitHub does not re-translate anything — readers keep seeing the last translation until you re-run it. Ask your AI agent to re-translate a page, or re-run translation from the Translation tab.
+A: On the **Auto** mode, yes. Docsbook checks your repository roughly every 15 minutes and re-translates the pages a commit changed, for every language you have enabled, within your usual budget and provider limits. On **Manual** and **External webhook** it does not — there, ask your AI agent to re-translate a page, or re-run translation from the Translation tab. Each language's page shows what is running, who or what started it, and how much of that language is currently in step with your docs.
 
 ## What's Next?
 
