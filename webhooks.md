@@ -53,11 +53,8 @@ A 2xx response = delivered. Anything else triggers retry until the attempt budge
 The **Feeds** panel in your admin shows every event the workspace produced, newest first —
 **including events no alert was watching**. You do not need a webhook registered to see the feed
 fill up, which is the point: it is how you find out which events your docs actually emit before you
-decide what to be notified about.
-
-Under the title sits a chip per event group with its count for the selected range — `Chat 42`,
-`Search 8`. Each chip is a one-click filter on the feed below it; clicking it again clears it. The
-counts are of the whole range, not of what the filter leaves, so they hold still as you narrow.
+decide what to be notified about. The feed is live — it refreshes itself every few seconds while
+you're looking at it, so there is no time range to pick and nothing to remember to reload.
 
 The feed itself reads in day sections, and each item is one event: a coloured tile for its type,
 the one-line summary, and where it went. Opening a card shows the full event — every delivery
@@ -72,13 +69,14 @@ from its deliveries with the worst outcome winning:
 | `failed` | A destination refused it and the budget is exhausted. |
 | `not sent` | It happened, and no alert was subscribed to it. |
 
-Filter the feed by event type, status, destination, or free text matched anywhere in the payload,
-and bound it with a time range. Saving a filter turns it into an **event list** — so narrowing the
-feed and defining what to be notified about are the same gesture. Test pings appear in the feed like
-any other event; a replay shows up as another attempt under the event it belongs to. **Export**
-beside the view's title downloads exactly what you are looking at — filters and range applied — as
-CSV, JSON or NDJSON. It sits in the title row beside the time range and **Set up alert** — the three
-controls that act on the whole view rather than on one event.
+Filter the feed by event type, status, destination, visitor, a completed goal, or free text matched
+anywhere in the payload. A visitor filter is one click away from **Analytics** — open a reader there
+and jump straight to everything they did — or paste in an id by hand. Saving a filter turns it into
+an **event list** — so narrowing the feed and defining what to be notified about are the same
+gesture. Test pings appear in the feed like any other event; a replay shows up as another attempt
+under the event it belongs to. **Export** beside the view's title downloads exactly what you are
+looking at, filters applied and unbounded by time, as CSV, JSON or NDJSON. It sits in the title row
+beside **Set up alert** — the two controls that act on the whole view rather than on one event.
 
 ## Notifiers: where events go
 

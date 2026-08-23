@@ -39,6 +39,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Each language can be switched on and off from its own page, with the same cost confirmation you get in settings. `Translations`
 - A live `Now` mode for `Analytics` shows the last hour updating every 5 seconds, with a per-minute chart. `Analytics`
 - A button back to `Fullscreen` from the side-by-side chat, next to the project picker — shown only while the chat sits beside your docs. `AI Chat`
+- `Feeds` can now filter by a single visitor or by whoever completed a goal — open a reader in `Analytics` and jump straight to everything they did in `Feeds`, or paste in an id by hand. `Feeds`
 
 ### Changed
 
@@ -46,7 +47,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The `Limits` tab is now called `Usage`. `Usage`
 - `Changes` opens on the answer instead of on the charts. The score, what moved and what it cost come first; every measurement behind them is one `The measurements behind this score` toggle away, with nothing removed. `Changes`
 - A thin sample no longer refuses to judge. A handful of visits still moves the score, just far less, and the page states how confident it is. A score with little behind it is never coloured and never called a success. `Changes`
-- `Feeds` puts everything that acts on the whole view in one row beside the list's name: `Export`, the time range and `Set up alert`, as three identical buttons. The range used to be a bare dropdown that read as a caption rather than a control. `Feeds`
+- `Feeds` puts `Export` and `Set up alert` in one row beside the list's name, as identical buttons. `Feeds`
 - Each row of the `Add notifier` menu now has an edit control, so a destination attached to another list — or to none yet — can be opened without hunting for it. `Feeds`
 - `New list from current filter` in the `Feeds` sidebar is now just `New List`. `Feeds`
 - The live editor and the assistant now offer only the widgets a project has switched on, so neither can write markers that would not render. `Content Widgets`
@@ -67,6 +68,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Settings now opens in one click from a gear icon in the chat header, instead of behind a menu. `AI Chat`
 - The chat and change-history icons in the chat header now read in full color instead of muted. `AI Chat`
 - The analytics time range picker now offers `Now`, `Today`, `Yesterday`, `Last 24 hours`, `Last 7 days` and `Last 30 days`, and defaults to `Today`. `Analytics`
+- `Feeds` is live now: the panel refreshes itself every few seconds while it's open, instead of showing a fixed window you had to pick. `Feeds`
 
 ### Fixed
 
@@ -78,7 +80,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Removed
 
-- The three summary tiles above the `Feeds` feed (all activity, needs attention, failed deliveries). The chips per event group stay and still filter in one click; `failed` moved into `Add filter` under `Delivery status`. `Feeds`
+- The three summary tiles above the `Feeds` feed (all activity, needs attention, failed deliveries) — `failed` moved into `Add filter` under `Delivery status`. `Feeds`
 - The `Notifiers` group in the `Feeds` sidebar, and with one group left, the `Events` heading above the lists. Destinations are reached from the chips beside the filters, from `Set up alert`, and from the `Add notifier` menu. `Feeds`
 - Overage billing. AI usage now simply pauses once the plan's monthly budget is used up — never billed above your plan price. `Usage`
 - The repository browsing list under `Connect a repository` in the project picker. `Start a new project` connects a new repo instead. `AI Chat`
@@ -86,6 +88,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The centered "Docsbook" logo and wordmark shown above the composer on an empty conversation. The input stays exactly where it was. `AI Chat`
 - The Docsbook logo and its menu from the chat header. Settings now opens in one click (see above); the connected repository, theme and sign out moved into the settings panel and the project picker. `AI Chat`
 - The address bar above the side-by-side preview (page list, open in new tab, mobile width, reload). `Plan`, `Invite` and `Visit` sit there now instead, the same row the full-screen chat already showed. `AI Chat`
+- The time range picker in `Feeds` — `Export` and `Set up alert` are the two buttons left; exports now cover every event ever logged, filtered but never time-bound. `Feeds`
+- The chip row above the `Feeds` list — filter by event type from `Add filter` like every other facet. `Feeds`
 
 ## NEW - 22.08.2026
 
