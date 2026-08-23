@@ -14,6 +14,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Every commit in `Changes` now carries one 0-100 score, with the four areas behind it: readers served, reach, cost to run and edit quality. Each area shows its own number, how much of the total it counts for, and how much data stands behind it. `Changes`
 - A commit is scored the day it lands, from the diff alone, instead of showing nothing until its window closes two weeks later. `Changes`
 - `Changes` now puts the cash figures up front: what re-translating the edited pages cost, what readers asking the chat cost either side of the commit, and total AI spend. `Changes`
+- A `Widgets` gallery in settings shows every content widget your pages can render, each with a preview of the block it produces and a page describing the markdown it expects. `Settings`
+- Any content widget can now be switched off for a project. Its comments stay in your files and every word between them still publishes; only the rich block is withheld. Switch it back on and every page that used it returns, with nothing to re-write. `Content Widgets`
+- `Apply to a page` on a widget closes settings and turns on editing over your docs, offering that widget first on whichever block you pick. `Settings`
 
 ### Changed
 
@@ -23,6 +26,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - `Feeds` puts everything that acts on the whole view in one row beside the list's name: `Export`, the time range and `Set up alert`, as three identical buttons. The range used to be a bare dropdown that read as a caption rather than a control. `Feeds`
 - Each row of the `Add notifier` menu now has an edit control, so a destination attached to another list — or to none yet — can be opened without hunting for it. `Feeds`
 - `New list from current filter` in the `Feeds` sidebar is now just `New List`. `Feeds`
+- The live editor and the assistant now offer only the widgets a project has switched on, so neither can write markers that would not render. `Content Widgets`
+- The settings gear on your docs site opens the panel on its main page instead of jumping into `Branding`. `Docs`
+- The standalone `Support` button beside the gear is gone. Support is reachable from the settings panel's own sidebar. `Docs`
 
 ### Fixed
 

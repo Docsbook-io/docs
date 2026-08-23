@@ -25,6 +25,7 @@ Widgets render on the server, so the output is plain HTML: indexable by search e
 - Each marker sits on its own line, with a blank line between it and the content.
 - Widgets do not nest. An inner marker leaves the outer region as plain markdown.
 - Nothing is ever hidden. An unknown widget name or a missing closing marker degrades to ordinary markdown — your content still appears.
+- A widget you have switched off in your project settings behaves the same way: the markers stay in your file, and the region publishes as ordinary markdown. See [Turning a widget off](#turning-a-widget-off).
 - Write the region so it reads correctly as plain markdown first. The widget is a presentation upgrade, not a data format.
 
 ## Available widgets
@@ -137,6 +138,19 @@ Turns a list of findings into a grid of cards, each carrying a severity badge an
 ## Adding a widget without editing markdown
 
 You do not have to type the markers by hand. In the live editor, select a block and pick **turn into a widget** from the action panel — the menu lists the widgets that fit that block, and the markers are written into your source for you. See [Editing on the page](../../guides/getting-started/managing-docs.md).
+
+The **Widgets** section of your project settings shows the same set as a gallery, each one with a picture of what it renders and a page describing the markdown it expects. **Apply to a page** on any of them closes the settings and turns on editing over your docs, with that widget offered first on whichever block you pick.
+
+## Turning a widget off
+
+Every widget is on for every project. If one does not suit your documentation, switch it off in **Settings → Widgets** and Docsbook stops rendering it across the whole site.
+
+Switching a widget off never edits your files. The `<!-- widget:… -->` comments stay exactly where an author put them, every word between them still publishes, and the region simply appears as ordinary markdown — the same thing that happens to a misspelled widget name. Switch it back on and every page that used it returns to the rich block, with nothing to re-write.
+
+Two consequences worth knowing:
+
+- The live editor stops offering a switched-off widget, and so does the assistant when it writes a page for you. Neither can hand you markers that would not render.
+- Pages already translated into another language keep the widget until their next translation pass. Only the original picks the change up immediately.
 
 ---
 
