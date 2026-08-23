@@ -22,15 +22,39 @@ Six figures sit across the top of the panel. Click any of them to redraw the cha
 
 Each one also shows how it moved against the period immediately before it. Green means the change is good news — which for bounce rate means going **down**.
 
-Below the chart the cards break the same period down by page, referrer, device, AI crawler, outbound link and feedback.
+Below the chart, four cards break the same period down. Each card holds several tabs:
 
-| Card | Description |
+| Card | Tabs |
 |---|---|
-| Top pages | Most-visited pages ranked by view count |
-| Referrers | Where visitors came from (Google, GitHub, direct, etc.) |
-| AI Views | Requests from AI crawlers (ChatGPT, Claude, Perplexity, Google-Extended and others) |
-| CTA Clicks | Outbound links readers clicked to leave your docs (signup, pricing, repo, …) |
-| Feedback | Thumbs up and down each page collected, most-disliked first |
+| Pages | Pages, Entry, Exit, Headings, Read Time |
+| Sources | Referrers, Channels, UTM, AI Views |
+| Audience | Devices, Browsers, Countries, Languages |
+| Conversions | CTA Clicks, Feedback |
+
+Every row on the first three cards carries **both** figures: how many visitors it
+brought and how much revenue they were worth. The control on the right of the
+card says which of the two the list is ranked by — click it to switch between
+`Visitors` and `Revenue`, and every card switches with it. Both figures are
+always drawn as the two bars behind each row, so switching re-orders the list
+you are already reading instead of replacing it.
+
+Hover a row for its visitors, revenue, revenue per visitor and conversion rate,
+and for two buttons: one filters the whole dashboard by that value, the other
+opens the page or site the row points at. **Details** at the foot of the card
+opens the same numbers as a full table, where the filter is a tap away on a
+phone.
+
+### Filtering
+
+Filtering by a row narrows **everything** — the other cards and the six figures
+above the chart — so a country, a device or a referrer can be read end to end:
+how many came, how well they converted, and which pages they read. Filters
+stack, and each one is a chip above the cards that removes itself when clicked.
+
+The tabs counted per event rather than per visit — Headings, Read Time, UTM,
+AI Views, CTA Clicks and Feedback — cannot be filtered this way. They say so
+above their rows while a filter is on, rather than showing unfiltered numbers
+under a filtered heading.
 
 **Online now** — a live count of readers active in the last five minutes — is not one of the six. It is a right-now number rather than a total over the period you picked, so it sits as its own chip beside the panel's title.
 
@@ -44,6 +68,11 @@ Revenue needs two settings, and reports nothing until it has both:
 Both live in **Design → Branding**. Until both are filled in, the Revenue and Revenue/visitor tiles are switched off and say which one is missing. They deliberately never show `$0`: a missing price is not a price of zero, and a confident `$0` would read as "nothing sold" when nothing is actually being measured.
 
 Once both are set, Revenue is simply the number of readers who reached your call-to-action page multiplied by your average price. A reader who clicks through five times counts once.
+
+The same rule produces the revenue on every card row, so the cards and the
+figures above them can never disagree about what a sale is. Until both settings
+exist, the cards rank by visitors only and the metric control says which setting
+is missing.
 
 Matching is by domain, with `www.` treated as the same site. Other subdomains are not folded in — your docs usually live on one, and counting a click back into the docs as a sale would flatter the number.
 
@@ -63,7 +92,7 @@ If a period holds very few visits, the panel says so under the figures: percenta
 
 ### AI Views
 
-The **AI Views** tab of the Referrers card charts one line per AI crawler instead of a single total, so you can tell which assistants are reading your docs and how that changes over time. The twelve busiest bots are charted, each labelled with the provider behind it, above the per-bot totals.
+The **AI Views** tab of the Sources card charts one line per AI crawler instead of a single total, so you can tell which assistants are reading your docs and how that changes over time. The twelve busiest bots are charted, each labelled with the provider behind it, above the per-bot totals.
 
 ### CTA Clicks
 
@@ -93,7 +122,14 @@ Use the interval selector (top-right of the analytics panel) to switch views:
 
 ## Reading Referrers
 
-Referrers are grouped by hostname. `(direct)` means the visitor typed your URL or came from a bookmark.
+Referrers are grouped by hostname. **Direct / None** means the visitor typed your
+URL, came from a bookmark, or arrived from a link that stripped its referrer — on
+most documentation sites it is the largest single row, which is why it is listed
+rather than dropped.
+
+The **Channels** tab groups the same visits by *kind* of source — organic search,
+social, referral, AI assistant, direct — when the question is which channel works
+rather than which site.
 
 A spike in a specific referrer usually means someone shared your docs — great signal for which content resonates.
 
