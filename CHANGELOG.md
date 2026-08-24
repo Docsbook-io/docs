@@ -7,6 +7,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ## NEW - 24.08.2026
 
+### Added
+
+- A live chat bubble now appears for signed-in users everywhere — the `/chat` dashboard and any doc page you administer — to reach support directly. `Support`
+
 ### Changed
 
 - Choosing which AI model answers your docs chat is now available on every plan, including Free — pick a cheaper or stronger model without upgrading, billed at that model's real price. `AI Chat`
