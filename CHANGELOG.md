@@ -15,9 +15,11 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 - Choosing which AI model answers your docs chat is now available on every plan, including Free — pick a cheaper or stronger model without upgrading, billed at that model's real price. `AI Chat`
 - The plan table now opens on annual billing and quotes every column per month, so the cheaper option is the one that reads cheaper. `Pricing`
+- The draft toolbar's accent button now reads "Publish" instead of "Publish Free", and the button that hands the page back reads "Preview" instead of "Visit" while the site is still a draft or an unclaimed preview. `Preview`
 
 ### Fixed
 
+- The anonymous preview panel's Settings, chat history and change history are now reachable — previously a single sign-up icon stood in for all three, and the site switcher offered nothing at all. `Preview`
 - Previewing a site without an account is now a panel you can actually use: every tab, sub-tab, list row and drill-down opens, and only a blurred figure asks you to sign up. Previously any click anywhere opened the sign-up prompt, so nothing could be explored. `Preview`
 - Cards that had nothing to show a signed-out visitor are now filled with sample data instead of an error or an empty state — goals and funnels, the commit list, chat conversations and their transcripts, repository folders, navigation and social links, and every language page. `Preview`
 - Sample figures shown to a signed-out visitor are blurred everywhere they appear, including the commit list and chat sidebar, so invented numbers can never be read as a site's real ones. `Preview`
