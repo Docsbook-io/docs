@@ -183,7 +183,7 @@ A paid plan is bought once per account and grants project seats — a project is
 - ✅ Customizable design (brand, themes, fonts)
 - ✅ Mobile-friendly
 - ✅ Basic analytics (last 24h)
-- ✅ AI chat ($0.15/month AI budget)
+- ✅ AI chat ($0.15/month AI budget), with your choice of AI model
 - ✅ Full SEO / GEO / AEO (sitemap, OpenGraph, JSON-LD)
 - ❌ Custom domain
 - ❌ AI translations
@@ -193,7 +193,7 @@ A paid plan is bought once per account and grants project seats — a project is
 Everything in Free, plus:
 
 - ✅ AI translations (15 languages)
-- ✅ Advanced AI chat config (custom system prompt, chat hooks, your choice of AI model)
+- ✅ Advanced AI chat config (custom system prompt, chat hooks)
 - ✅ $59/month AI budget
 - ✅ 1 paid project seat (buy extra seats if you need more)
 - ✅ Search & feedback analytics

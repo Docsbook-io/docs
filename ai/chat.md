@@ -50,7 +50,7 @@ providers:
   - anthropic
 ```
 
-Pick which model runs your chat from the workspace settings **(Pro plan and above)** — it runs on Docsbook's key and comes out of your AI budget at that model's price.
+Pick which model runs your chat from the workspace settings **(every plan, including Free)** — it runs on Docsbook's key and comes out of your AI budget at that model's price.
 
 Bring your own API key from the workspace settings **(Business and Scale plans)** — costs charged by the upstream provider are billed to your key, and nothing is deducted from your Docsbook AI budget.
 
@@ -72,8 +72,8 @@ AI chat runs on **every plan**. Plans differ by the monthly **AI budget**, not b
 
 | Plan | AI chat |
 |---|---|
-| Free | Included — $0.15/month AI budget |
-| Pro | Included — $59/month AI budget; pick which model runs your chat |
+| Free | Included — $0.15/month AI budget; pick which model runs your chat |
+| Pro | Included — $59/month AI budget |
 | Business | Included — $159/month AI budget; can bring your own API key & model |
 | Growth | Included — $349/month AI budget; multiplayer chat (invite your team into one live session) |
 | Scale | Included — $899/month AI budget, the largest of any plan; multiplayer chat |

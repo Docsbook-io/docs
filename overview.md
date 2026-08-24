@@ -70,8 +70,8 @@ A **workspace** = one documentation site. You can create unlimited workspaces fr
 ### Plans
 | Plan | Cost | What You Get |
 |---|---|---|
-| **Free** | $0 | Unlimited docs, branding, basic UI controls, analytics (24h), AI chat ($0.15/mo AI budget), SEO / AEO / GEO |
-| **Pro** | $59/mo, 7-day free trial | 1 project seat, your own custom domain, translations, advanced AI chat config (custom prompt, hooks), your choice of AI model, search & feedback analytics, $59/mo AI budget |
+| **Free** | $0 | Unlimited docs, branding, basic UI controls, analytics (24h), AI chat ($0.15/mo AI budget, your choice of model), SEO / AEO / GEO |
+| **Pro** | $59/mo, 7-day free trial | 1 project seat, your own custom domain, translations, advanced AI chat config (custom prompt, hooks), search & feedback analytics, $59/mo AI budget |
 | **Growth** | $349/mo | Every Business capability plus multiplayer AI chat (invite your team into one live session), with 5 project seats and a $349/mo AI budget — for teams that have outgrown Business's usage limits |
 | **Business** | $159/mo, 14-day free trial | Everything in Pro, plus 3 project seats, webhooks (25), bring-your-own API key, semantic search, hosted API reference, UTM analytics, 30-day analytics history, a $159/mo AI budget, and higher translation limits |
 | **Scale** | $899/mo | Same feature set as Business, with 15 project seats and a $899/mo AI budget, the largest of any plan — for teams that have outgrown Business's usage limits |

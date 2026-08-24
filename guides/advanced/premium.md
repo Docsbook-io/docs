@@ -5,7 +5,7 @@ description: "What Docsbook's paid plans unlock — AI chat and SEO run on every
 
 # Pro, Business, Growth, and Scale Plans
 
-Docsbook has five plans. Free is free forever — and it already includes reader-facing AI chat (on a $0.15 monthly AI budget) and full SEO / GEO / AEO. Pro is a monthly subscription that adds your own custom domain, translations, advanced AI chat configuration (custom system prompt, chat hooks), your choice of AI model, search & feedback analytics, and a much larger AI budget. Business is a separate, higher tier: it includes everything in Pro plus a set of Business-exclusive capabilities — webhooks, bring-your-own API keys (for both AI chat and translations), semantic search, hosted API reference, and UTM analytics — on top of higher usage limits. Growth and Scale sit above Business: each carries every Business capability, with a larger monthly AI budget and more project seats, for teams whose usage has outgrown Business.
+Docsbook has five plans. Free is free forever — and it already includes reader-facing AI chat (on a $0.15 monthly AI budget, with your choice of AI model) and full SEO / GEO / AEO. Pro is a monthly subscription that adds your own custom domain, translations, advanced AI chat configuration (custom system prompt, chat hooks), search & feedback analytics, and a much larger AI budget. Business is a separate, higher tier: it includes everything in Pro plus a set of Business-exclusive capabilities — webhooks, bring-your-own API keys (for both AI chat and translations), semantic search, hosted API reference, and UTM analytics — on top of higher usage limits. Growth and Scale sit above Business: each carries every Business capability, with a larger monthly AI budget and more project seats, for teams whose usage has outgrown Business.
 
 A subscription is bought once per **account**, not per project. It grants a number of project **seats**: a project is paid while it holds one, and you can move a seat to a different project at any time. Free projects are unlimited on every plan.
 
@@ -31,7 +31,7 @@ A subscription is bought once per **account**, not per project. It grants a numb
 
 ### AI Chat
 
-A chatbot trained on your documentation runs on **every plan**, Free included. Plans differ by the monthly **AI budget**, not by a feature switch — Free gets $0.15/month, and every paid plan includes an AI budget equal to its price: Pro $59, Business $159, Growth $349, and Scale $899 (the largest of all). Choosing which model runs your chat on Docsbook's key is available from **Pro** — the model's price comes out of your AI budget. Bringing your own provider and API key (OpenRouter, OpenAI, Gemini, Anthropic), so the provider bills you directly, is a **Business/Scale-only** capability; see [Business/Scale-Only Features](#businessscale-only-features) below.
+A chatbot trained on your documentation runs on **every plan**, Free included. Plans differ by the monthly **AI budget**, not by a feature switch — Free gets $0.15/month, and every paid plan includes an AI budget equal to its price: Pro $59, Business $159, Growth $349, and Scale $899 (the largest of all). Choosing which model runs your chat on Docsbook's key is available on **every plan, including Free** — the model's price comes out of your AI budget. Bringing your own provider and API key (OpenRouter, OpenAI, Gemini, Anthropic), so the provider bills you directly, is a **Business/Scale-only** capability; see [Business/Scale-Only Features](#businessscale-only-features) below.
 
 ### SEO / GEO / AEO
 
@@ -51,7 +51,7 @@ Business and Scale include a higher monthly translation limit than Pro/Growth.
 
 ### 2. Advanced AI Chat Configuration
 
-Custom AI chat system prompt, chat hooks (pre / post / streaming), your choice of AI model, and the AI chat analysis dashboard.
+Custom AI chat system prompt, chat hooks (pre / post / streaming), and the AI chat analysis dashboard.
 
 ### 3. Larger AI Budget
 
@@ -140,7 +140,7 @@ Full refund within the first 30 days. Email support@docsbook.io.
 2. **Account gets its seats, and the project you checked out with takes one** ✅
 3. **All features available immediately** ✅
 
-You'll see a **Pro** or **Business** label in the Float Widget. New options open in Settings — translations, advanced AI chat config (custom prompt, hooks), your choice of AI model, your own custom domain, and a larger AI budget on Pro; webhooks, bring-your-own API keys, and semantic search additionally on Business.
+You'll see a **Pro** or **Business** label in the Float Widget. New options open in Settings — translations, advanced AI chat config (custom prompt, hooks), your own custom domain, and a larger AI budget on Pro; webhooks, bring-your-own API keys, and semantic search additionally on Business.
 
 ## FAQ
 
