@@ -32,9 +32,14 @@ Below the chart, four cards break the same period down. Each card holds several 
 | Conversions | CTA Clicks, Feedback |
 | AI Views (full width) | AI crawler requests over time, and per bot |
 
-Each card picks its tab from a dropdown rather than a row of tabs: four or five
-tabs never fit a half-width card, and the row they used to sit in scrolled
-sideways inside a card that also scrolls down.
+The tabs sit in a horizontal row along the top of each card, and the card is
+read left to right: tabs first, then the metric control the rows are ranked by.
+Four or five of them rarely fit a half-width card, so the row keeps to the space
+that ends where the **Visitors** label begins — it scrolls sideways within that
+space instead of pushing the control off the card or wrapping onto a second
+line. A soft shadow fades in at the edge the row can still be scrolled towards,
+and clears once you reach the end, so a card with hidden tabs never looks like a
+card with none.
 
 Every row on the first three cards carries **both** figures: how many visitors it
 brought and how much revenue they were worth. The control on the right of the

@@ -14,6 +14,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Changed
 
 - Choosing which AI model answers your docs chat is now available on every plan, including Free — pick a cheaper or stronger model without upgrading, billed at that model's real price. `AI Chat`
+- Each analytics card shows its tabs as a horizontal row again instead of a dropdown. The row keeps to the space before the `Visitors` label — it scrolls sideways there rather than pushing the metric control aside — and a soft shadow at its edge marks that there are more tabs to reach, clearing once you scroll to the end. `Analytics`
 
 ## NEW - 23.08.2026
 
