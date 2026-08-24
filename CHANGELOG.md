@@ -14,6 +14,18 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Changed
 
 - Choosing which AI model answers your docs chat is now available on every plan, including Free — pick a cheaper or stronger model without upgrading, billed at that model's real price. `AI Chat`
+- The plan table now opens on annual billing and quotes every column per month, so the cheaper option is the one that reads cheaper. `Pricing`
+
+### Fixed
+
+- Previewing a site without an account is now a panel you can actually use: every tab, sub-tab, list row and drill-down opens, and only a blurred figure asks you to sign up. Previously any click anywhere opened the sign-up prompt, so nothing could be explored. `Preview`
+- Cards that had nothing to show a signed-out visitor are now filled with sample data instead of an error or an empty state — goals and funnels, the commit list, chat conversations and their transcripts, repository folders, navigation and social links, and every language page. `Preview`
+- Sample figures shown to a signed-out visitor are blurred everywhere they appear, including the commit list and chat sidebar, so invented numbers can never be read as a site's real ones. `Preview`
+- The MCP install commands, raw config and example questions are usable without an account, matching the public MCP page they mirror. `Agents`
+- Opening an MCP tool or a skill no longer hides its catalog for the rest of the session — the breadcrumb goes back, and a failed catalog load retries when you reopen the page. `Agents`
+- Plan names no longer appear to visitors who have no account, on tool descriptions, skill badges or example prompts. `Preview`
+- A language page can now be opened on mobile, where the Translations tab previously offered no way to reach one. `Translations`
+- A social link to LinkedIn, YouTube or Slack now shows the site header, which previously appeared only for GitHub, Discord or X. `Branding`
 
 ## NEW - 23.08.2026
 
