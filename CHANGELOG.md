@@ -10,14 +10,18 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Added
 
 - Goals & Funnels' "Generate with AI" now creates the goals and funnels it proposes, instead of listing them for you to enter by hand. `Analytics`
+- Business plan adds Premium Support — a person on our team works directly with you to integrate Docsbook into your business. `Pricing`
 
 ### Changed
 
+- Live auto translations are now included on the Pro plan, not just Business. `Pricing`
 - Feeds cards now lead with the reader's avatar when one caused the event — click it to filter by them — collapse status/type/destination into tappable glyphs, and expand in place instead of opening a separate view. `Feeds`
 - The admin Changes tab now leads with revenue, readers and every analytics list for the pages a commit touched, with a before/after compare toggle, instead of a bare score split across four tabs. `Changes`
 - The Goals & Funnels card now shares Analytics' own card frame, and its empty tabs show a real, blurred preview of what you're setting up instead of a bare "no goals yet". `Analytics`
 - The Translations tab's text now reads at the app's normal size, with explanations that duplicated an existing tooltip removed. `Translations`
 - Upgrading now opens checkout inline on our own domain instead of a new tab. `Billing`
+- Revenue tiles that need setup are now clickable straight into that setup, instead of just greyed out. `Analytics`
+- The setup checklist's first step now opens Settings directly, instead of a sign-up wall. `Onboarding`
 
 ### Fixed
 
