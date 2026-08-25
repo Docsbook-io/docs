@@ -5,6 +5,29 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 25.08.2026
+
+### Added
+
+- Goals & Funnels' "Generate with AI" now creates the goals and funnels it proposes, instead of listing them for you to enter by hand. `Analytics`
+
+### Changed
+
+- Feeds cards now lead with the reader's avatar when one caused the event — click it to filter by them — collapse status/type/destination into tappable glyphs, and expand in place instead of opening a separate view. `Feeds`
+- The admin Changes tab now leads with revenue, readers and every analytics list for the pages a commit touched, with a before/after compare toggle, instead of a bare score split across four tabs. `Changes`
+- The Goals & Funnels card now shares Analytics' own card frame, and its empty tabs show a real, blurred preview of what you're setting up instead of a bare "no goals yet". `Analytics`
+- The Translations tab's text now reads at the app's normal size, with explanations that duplicated an existing tooltip removed. `Translations`
+- Upgrading now opens checkout inline on our own domain instead of a new tab. `Billing`
+
+### Fixed
+
+- The Changes tab no longer stalls on busy repos — a stale per-run cap could stop it recording new commits once a repo shipped docs faster than it drained them. `Changes`
+- Expanding a commit's diff in the Changes tab no longer fails for signed-in readers without write access. `Changes`
+
+### Removed
+
+- The "$X of AI usage / month" line is gone from every plan's feature list on the pricing page — the AI budget itself is unchanged, only the copy. `Pricing`
+
 ## NEW - 24.08.2026
 
 ### Added

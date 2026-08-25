@@ -55,15 +55,13 @@ Supported pricing models:
 
 ## Monthly Limits
 
-AI usage is metered in money, not in requests. Each paid plan includes a monthly AI budget equal to its price:
+AI usage is metered in money, not in requests. Each paid plan includes a monthly AI budget:
 
 | Plan | Monthly AI budget |
 |---|---|
 | **Free** | $0.15 |
-| **Pro** | $59.00 |
-| **Business** | $159.00 |
-| **Growth** | $349.00 |
-| **Scale** | $899.00 |
+| **Pro** | $85.00 |
+| **Business** | $200.00 |
 
 Every call is charged at the model provider's real price plus a 150% markup, so a cheaper model stretches the same budget further.
 
@@ -110,7 +108,7 @@ AI usage metrics are available for:
 |---|---|
 | Last 24 hours | Free |
 | Last 7 days | Pro |
-| Last 30 days | Growth / Business / Scale |
+| Last 30 days | Business |
 
 > **Start using AI chat today.**
 > [Create a documentation site →](https://docsbook.io/connect)

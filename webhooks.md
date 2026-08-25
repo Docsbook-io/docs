@@ -57,9 +57,12 @@ decide what to be notified about. The feed is live — it refreshes itself every
 you're looking at it, so there is no time range to pick and nothing to remember to reload.
 
 The feed itself reads in day sections, and each item is one event: a coloured tile for its type,
-the one-line summary, and where it went. Opening a card shows the full event — every delivery
-attempt with its response, replay, and the raw payload. An event carries a single status, folded
-from its deliveries with the worst outcome winning:
+the one-line summary, and where it went — plus the reader's avatar, when the event was caused by
+one (a plan or usage event has nobody to attribute it to). Status, event type and destination show
+as small glyphs with the word a click away in a popover, so a dense row still fits an avatar.
+Clicking a card expands it in place to show the full event — every delivery attempt with its
+response, replay, and the raw payload. An event carries a single status, folded from its
+deliveries with the worst outcome winning:
 
 | Status | Meaning |
 |---|---|
@@ -71,7 +74,8 @@ from its deliveries with the worst outcome winning:
 
 Filter the feed by event type, status, destination, visitor, a completed goal, or free text matched
 anywhere in the payload. A visitor filter is one click away from **Analytics** — open a reader there
-and jump straight to everything they did — or paste in an id by hand. Saving a filter turns it into
+and jump straight to everything they did — one click away from a card's own avatar in the feed
+itself, or a pasted-in id by hand. Saving a filter turns it into
 an **event list** — so narrowing the feed and defining what to be notified about are the same
 gesture. Test pings appear in the feed like any other event; a replay shows up as another attempt
 under the event it belongs to. **Export** beside the view's title downloads exactly what you are

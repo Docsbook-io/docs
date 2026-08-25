@@ -5,6 +5,23 @@ description: "What Docsbook's paid plans unlock — AI chat and SEO run on every
 
 # Pro, Business, Growth, and Scale Plans
 
+<!-- TODO(docs-sync): src/lib/plan-marketing.ts (the app's single source of truth for
+     plan feature lists) now defines only Free/Pro/Business, and the new
+     src/utils/paddle/resolvePriceId.ts notes explicitly that "pro_plus/growth/scale
+     are not real plans." plan-marketing.ts also dropped the per-plan
+     "AI budget equal to plan price" marketing line entirely. This page's title, intro,
+     Plan Comparison table, and the "What PRO (and Growth) Add", "Business/Scale-Only
+     Features", "Higher Usage Limits on Business and Scale", "Growth and Scale", and
+     "Project Seats" sections all still describe a five-plan Growth/Scale ladder and need
+     a structural rewrite (headings and a table column removed), not a line edit — left
+     for manual review. The "How to Pay" section and closing CTA further down already
+     correctly describe only Pro/Business and do not need this rewrite. Separately, every
+     $59/$159 figure on this page is also stale: src/utils/constants.ts PRICING now has
+     proMonthly=$85 (proYearlyMonthly=$59), businessMonthly=$200 (businessYearlyMonthly=
+     $140), and ANNUAL_DISCOUNT_PERCENT is 30, not 20 — verified via git log, PRICING
+     landed in 678adea (2026-08-24), predates even the prior docs reconciliation. Fold
+     that correction into the same rewrite. -->
+
 Docsbook has five plans. Free is free forever — and it already includes reader-facing AI chat (on a $0.15 monthly AI budget, with your choice of AI model) and full SEO / GEO / AEO. Pro is a monthly subscription that adds your own custom domain, translations, advanced AI chat configuration (custom system prompt, chat hooks), search & feedback analytics, and a much larger AI budget. Business is a separate, higher tier: it includes everything in Pro plus a set of Business-exclusive capabilities — webhooks, bring-your-own API keys (for both AI chat and translations), semantic search, hosted API reference, and UTM analytics — on top of higher usage limits. Growth and Scale sit above Business: each carries every Business capability, with a larger monthly AI budget and more project seats, for teams whose usage has outgrown Business.
 
 A subscription is bought once per **account**, not per project. It grants a number of project **seats**: a project is paid while it holds one, and you can move a seat to a different project at any time. Free projects are unlimited on every plan.

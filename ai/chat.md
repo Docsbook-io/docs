@@ -17,7 +17,7 @@ The chat uses a RAG flow built on tool calls. The model decides when to invoke e
 
 Each call is logged so you can later inspect what was asked, what was retrieved, and whether the answer was useful.
 
-## Semantic search (Business and Scale)
+## Semantic search (Business)
 
 By default step 1 matches on keywords, so a reader who phrases a question differently from the page can miss it. **Semantic Search** replaces that with meaning-based retrieval: every section of your docs is embedded once, and the chat then finds the right passage even when the wording does not overlap. In practice it is the single biggest improvement to answer quality — the chat cites a real page instead of inventing one, and replies faster because it retrieves less.
 
@@ -52,13 +52,13 @@ providers:
 
 Pick which model runs your chat from the workspace settings **(every plan, including Free)** — it runs on Docsbook's key and comes out of your AI budget at that model's price.
 
-Bring your own API key from the workspace settings **(Business and Scale plans)** — costs charged by the upstream provider are billed to your key, and nothing is deducted from your Docsbook AI budget.
+Bring your own API key from the workspace settings **(Business plan)** — costs charged by the upstream provider are billed to your key, and nothing is deducted from your Docsbook AI budget.
 
-## Multiplayer chat (Growth and Scale)
+## Multiplayer chat (Business)
 
 Documentation questions are rarely a solo activity — someone asks, someone else knows half the answer, and the result ends up pasted into Slack where nobody finds it again.
 
-On **Growth** and **Scale**, press **Invite** in the chat's toolbar to bring a teammate into the same session:
+On **Business**, press **Invite** in the chat's toolbar to bring a teammate into the same session:
 
 - **See who's here.** The button shows who from your team is currently in this chat.
 - **Invite by email.** Send an invite to anyone, whether or not they already have a Docsbook account — the link takes them through sign-in and straight into the project.
@@ -73,12 +73,10 @@ AI chat runs on **every plan**. Plans differ by the monthly **AI budget**, not b
 | Plan | AI chat |
 |---|---|
 | Free | Included — $0.15/month AI budget; pick which model runs your chat |
-| Pro | Included — $59/month AI budget |
-| Business | Included — $159/month AI budget; can bring your own API key & model |
-| Growth | Included — $349/month AI budget; multiplayer chat (invite your team into one live session) |
-| Scale | Included — $899/month AI budget, the largest of any plan; multiplayer chat |
+| Pro | Included — $85/month AI budget |
+| Business | Included — $200/month AI budget; can bring your own API key & model; multiplayer chat (invite your team into one live session) |
 
-Every paid plan's AI budget is the same amount you pay for the plan: Pro costs $59/month and includes $59 of AI usage.
+Every paid plan's AI budget is the same amount you pay for the plan: Pro costs $85/month and includes $85 of AI usage.
 
 Usage is deducted in money, not tokens: each answer is charged at the real price the provider charges for the model that served it, plus a 150% markup. That budget covers roughly 15,000 answers a month on Pro with the default model, and switching to a cheaper model makes it go further. When the budget runs out, AI chat simply pauses until the next billing cycle — you're never billed above your plan price.
 
@@ -90,7 +88,7 @@ Teams using Docsbook AI Chat deflect **847 support tickets per month on average*
 
 ## Pricing
 
-AI Chat is available on **all plans**, including Free — it's limited by the monthly AI budget, which grows from $0.15 on Free to $59 on **Pro** (monthly, 7-day free trial) and $159 on **Business** (monthly, 14-day free trial), with Growth at $349 and Scale at $899. Each paid budget matches that plan's price. Business can additionally bring its own provider API key and model.
+AI Chat is available on **all plans**, including Free — it's limited by the monthly AI budget, which grows from $0.15 on Free to $85 on **Pro** (monthly, 7-day free trial) and $200 on **Business** (monthly, 14-day free trial). Business can additionally bring its own provider API key and model.
 
 ## Related
 

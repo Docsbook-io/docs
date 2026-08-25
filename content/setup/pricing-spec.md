@@ -5,6 +5,21 @@ description: "Docsbook pricing — Free forever, Pro, Business, Growth, and Scal
 
 # Pricing & Plans
 
+<!-- TODO(docs-sync): src/lib/plan-marketing.ts (the app's single source of truth for
+     plan feature lists) now defines only Free/Pro/Business, and the new
+     src/utils/paddle/resolvePriceId.ts notes explicitly that "pro_plus/growth/scale
+     are not real plans." plan-marketing.ts also dropped the per-plan
+     "AI budget equal to plan price" marketing line entirely (no more "$X of AI usage /
+     month" feature bullet on any plan). This page's frontmatter description, the
+     "Growth" and "Scale" sections, the Limits Summary table, and the Upgrade Paths list
+     all still describe a five-plan Growth/Scale ladder and need a structural rewrite
+     (two whole sections and a table column removed), not a line edit — left for manual
+     review rather than edited here. Separately, every $59/$159 figure on this page is
+     also stale: src/utils/constants.ts PRICING now has proMonthly=$85 (proYearlyMonthly=
+     $59), businessMonthly=$200 (businessYearlyMonthly=$140), and ANNUAL_DISCOUNT_PERCENT
+     is 30, not 20 — verified via git log, PRICING landed in 678adea (2026-08-24), predates
+     even the prior docs reconciliation. Fold that correction into the same rewrite. -->
+
 Docsbook has five plans. A subscription is bought once per **account** and grants a number of project **seats** — a project becomes paid while it holds a seat, and you can move a seat between projects. Free projects are unlimited on every plan.
 
 ## Free

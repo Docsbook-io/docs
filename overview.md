@@ -52,7 +52,7 @@ In one sentence: **GitHub repo → Beautiful docs + AI chat + SEO + analytics in
 ┌─────────────────────────────────────────────────────────────┐
 │  AI-Powered Features                                           │
 │  ├─ AI chatbot trained on your docs (all plans)              │
-│  ├─ 15-language automatic translations (Pro/Growth/Business) │
+│  ├─ 15-language automatic translations (Pro/Business)        │
 │  ├─ Source of Truth graph for agents                         │
 │  └─ Analytics + webhooks for integrations                    │
 └─────────────────────────────────────────────────────────────┘
@@ -71,16 +71,14 @@ A **workspace** = one documentation site. You can create unlimited workspaces fr
 | Plan | Cost | What You Get |
 |---|---|---|
 | **Free** | $0 | Unlimited docs, branding, basic UI controls, analytics (24h), AI chat ($0.15/mo AI budget, your choice of model), SEO / AEO / GEO |
-| **Pro** | $59/mo, 7-day free trial | 1 project seat, your own custom domain, translations, advanced AI chat config (custom prompt, hooks), search & feedback analytics, $59/mo AI budget |
-| **Growth** | $349/mo | Every Business capability plus multiplayer AI chat (invite your team into one live session), with 5 project seats and a $349/mo AI budget — for teams that have outgrown Business's usage limits |
-| **Business** | $159/mo, 14-day free trial | Everything in Pro, plus 3 project seats, webhooks (25), bring-your-own API key, semantic search, hosted API reference, UTM analytics, 30-day analytics history, a $159/mo AI budget, and higher translation limits |
-| **Scale** | $899/mo | Same feature set as Business, with 15 project seats and a $899/mo AI budget, the largest of any plan — for teams that have outgrown Business's usage limits |
+| **Pro** | $85/mo, 7-day free trial | 1 project seat, your own custom domain, translations, advanced AI chat config (custom prompt, hooks), search & feedback analytics, $85/mo AI budget |
+| **Business** | $200/mo, 14-day free trial | Everything in Pro, plus 3 project seats, webhooks (25), bring-your-own API key, semantic search, hosted API reference, UTM analytics, 30-day analytics history, a $200/mo AI budget, and higher translation limits |
 
-All monthly plans (Pro, Growth, Business, Scale) can also be billed annually at a 20% discount. All plans: **unlimited repositories, forever.**
+All monthly plans (Pro, Business) can also be billed annually at a ~30% discount. All plans: **unlimited repositories, forever.**
 
 A subscription is bought once per account and grants project seats — a project is paid while it holds one, and you can move a seat between projects. The AI budget is shared across every paid project on the account, and free projects are unlimited.
 
-Every paid plan includes an AI budget equal to its price: Pro costs $59/month and includes $59 of AI usage, Business $159, Growth $349, Scale $899.
+Every paid plan includes a monthly AI budget, shown in real dollars: Pro's is $85/month, Business's is $200/month.
 
 ## Key Features by Category
 
@@ -97,13 +95,13 @@ Every paid plan includes an AI budget equal to its price: Pro costs $59/month an
 - Show/hide UI elements (search, breadcrumbs, feedback, prev/next buttons)
 
 ### 🤖 AI Features
-- **AI Chatbot** — answers questions based on your documentation (every plan, limited by a monthly AI budget in dollars; Pro/Growth/Business/Scale get progressively larger budgets)
-- **Semantic search** — the biggest single improvement to AI chat answer quality: the chat finds the right section by meaning, answers from it with the page cited instead of inventing one, and replies faster because it retrieves less. Toggle it on in **AI Chat → Semantic Search**, where you also see whether the index is current and can rebuild it (Business / Scale)
-- **Custom AI chat config** — system prompt, chat hooks (Pro / Growth / Business / Scale)
-- **Multiplayer AI chat** — see who from your team is in the chat, invite a teammate by email, and share one live session where you both watch the answer stream in (Growth / Scale)
+- **AI Chatbot** — answers questions based on your documentation (every plan, limited by a monthly AI budget in dollars; Pro/Business get progressively larger budgets)
+- **Semantic search** — the biggest single improvement to AI chat answer quality: the chat finds the right section by meaning, answers from it with the page cited instead of inventing one, and replies faster because it retrieves less. Toggle it on in **AI Chat → Semantic Search**, where you also see whether the index is current and can rebuild it (Business)
+- **Custom AI chat config** — system prompt, chat hooks (Pro / Business)
+- **Multiplayer AI chat** — see who from your team is in the chat, invite a teammate by email, and share one live session where you both watch the answer stream in (Business)
 - **LSP-style tools** — semantic search, link resolution, outline navigation
 
-### 🌍 Translation & Localization (Pro / Growth / Business / Scale)
+### 🌍 Translation & Localization (Pro / Business)
 - **15 languages** — English, Spanish, French, German, Portuguese, Italian, Russian, Chinese, Japanese, Korean, Arabic, Hindi, Turkish, Polish, Dutch
 - **SEO per language** — each translation is indexed separately by Google
 - **Auto-detect** — shows readers content in their browser language
@@ -113,11 +111,11 @@ Every paid plan includes an AI budget equal to its price: Pro costs $59/month an
 - Page views, unique visitors, top pages, referrers
 - AI usage tracking (queries, remaining quota)
 - Countries & languages of readers
-- **Pro / Growth / Business / Scale:** Advanced journey mapping, visitor drill-down, failed searches, negative feedback
+- **Pro / Business:** Advanced journey mapping, visitor drill-down, failed searches, negative feedback
 
 ### 🔗 Integrations
 - **Custom domain (Pro and above)** — `docs.yourcompany.com` with free SSL
-- **Webhooks (Business / Scale)** — 15 event types (chat questions, translations, traffic spikes)
+- **Webhooks (Business)** — 15 event types (chat questions, translations, traffic spikes)
 - **MCP server** — control Docsbook from Claude Code, Cursor, ChatGPT
 - **GitHub integration** — "Edit on GitHub" links on every page
 
