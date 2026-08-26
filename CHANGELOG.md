@@ -5,6 +5,23 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 26.08.2026
+
+### Added
+
+- `Feeds` can now filter the docs site's own analytics stream — page views, searches, chat questions and more — as an opt-in category alongside webhook events. `Feeds`
+
+### Changed
+
+- The doc toolbar's trigger is now an inverted pill, and its brand mark opens chat directly. `AI Chat`
+- `More` in the project picker now opens the full project menu instead of revealing more rows in place. `AI Chat`
+- Setting a goal's match value is now a searchable picker of values the docs site has actually seen, with how often each occurred, instead of free text a typo can silently break. `Analytics`
+
+### Fixed
+
+- The settings panel and chat no longer open automatically over a fresh `/draft` or a `?preview=true` visitor's own site — they're one click away on the gear icon, and the guided tour still starts the first time you open it. `Preview`
+- The project picker in the chat header no longer grows past the screen with a long project list — it now caps its height with a pinned footer. `AI Chat`
+
 ## NEW - 25.08.2026
 
 ### Added
