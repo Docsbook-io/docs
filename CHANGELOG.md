@@ -10,6 +10,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Added
 
 - `Feeds` can now filter the docs site's own analytics stream — page views, searches, chat questions and more — as an opt-in category alongside webhook events. `Feeds`
+- Cards can now carry a body, their own call-to-action link, and a chosen number of columns or a compact horizontal layout, set on the widget marker. `Content Widgets`
 
 ### Changed
 
@@ -19,6 +20,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Fixed
 
+- Russian-language pages now emit the FAQ and how-to markup that makes them eligible for rich results and AI answers, and a procedure written as a `stepper` widget is picked up as steps. Widget markers no longer leak into that markup. `SEO`
+- A card whose text contains a link no longer breaks its own layout. `Content Widgets`
 - The settings panel and chat no longer open automatically over a fresh `/draft` or a `?preview=true` visitor's own site — they're one click away on the gear icon, and the guided tour still starts the first time you open it. `Preview`
 - The project picker in the chat header no longer grows past the screen with a long project list — it now caps its height with a pinned footer. `AI Chat`
 

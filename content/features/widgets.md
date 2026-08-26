@@ -27,6 +27,7 @@ Widgets render on the server, so the output is plain HTML: indexable by search e
 - Nothing is ever hidden. An unknown widget name or a missing closing marker degrades to ordinary markdown — your content still appears.
 - A widget you have switched off in your project settings behaves the same way: the markers stay in your file, and the region publishes as ordinary markdown. See [Turning a widget off](#turning-a-widget-off).
 - Write the region so it reads correctly as plain markdown first. The widget is a presentation upgrade, not a data format.
+- Some widgets take layout switches on the opening marker: `<!-- widget:cards cols=2 horizontal -->`. Switches go **on** the marker, never inside the region — the marker is already invisible, so your content stays plain markdown. A switch a widget does not recognise is ignored; the block still renders.
 
 ## Available widgets
 
@@ -39,6 +40,7 @@ Turns link lists into a responsive grid. Best on index and hub pages that send r
 - Each heading becomes a small uppercase label above its grid. Headings are optional.
 - `- [Title](/href) — Description.` gives a card with a title and a description.
 - End an item with `{icon-name}` to add an icon, e.g. `{rocket}`, `{book-open}`. Names come from the Lucide set. An unknown name is dropped silently — the braces never reach the page.
+- Put an `![alt](url)` image in the item to use a real picture instead of an icon — it fills the same area the icon would. Better than an icon when the card is about a specific thing you have a picture of.
 - An item without a link renders as a non-clickable card.
 
 ```markdown
@@ -48,6 +50,32 @@ Turns link lists into a responsive grid. Best on index and hub pages that send r
 
 - [Overview](./overview.md) — What this product is {compass}
 - [Getting Started](./quick-start.md) — Begin in 3 minutes {rocket}
+
+<!-- /widget -->
+```
+
+**Give a card a body.** Leave a blank line after the item and indent more markdown under it — paragraphs, a short list, a snippet. It renders under the description. Worth it when the card has something to explain; a card that only labels a destination reads better as one line.
+
+**Give a card its own action.** If the last indented line contains nothing but links, it becomes the card's call-to-action row. A sentence that merely *contains* a link stays ordinary text.
+
+**Choose the layout.** `cols=1`, `cols=2`, `cols=3` or `cols=4` fixes the number of columns; `horizontal` puts the icon beside the text instead of above it, for a compact row. Both go on the opening marker and can be combined. Without `cols` the grid fits as many cards per row as the page width allows, which is usually what you want. Narrow screens always get fewer columns.
+
+```markdown
+<!-- widget:cards cols=2 -->
+
+- [Self-hosting](./guides/self-hosting.md) — Run it on your own infrastructure {server}
+
+  Ships as a single container with Postgres. Expect an afternoon for the first
+  deploy, and no ongoing maintenance beyond upgrades.
+
+  [Read the guide](./guides/self-hosting.md)
+
+- [Cloud](./guides/cloud.md) — Let us run it for you {cloud}
+
+  Backups, upgrades and monitoring are ours. You keep a data-export endpoint,
+  so moving to self-hosting later is a copy, not a migration.
+
+  [Compare the two](./guides/hosting-options.md)
 
 <!-- /widget -->
 ```
