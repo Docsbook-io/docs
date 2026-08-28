@@ -94,7 +94,7 @@ Each language version is indexed separately by search engines, which means passi
 
 Open **Translations** in the settings panel. One interval dropdown at the top governs the whole page, and everything under it reports the window you picked:
 
-- **Savings** — what a human translator would have charged for the same word count, minus what the AI translation actually cost you. The translator rate is an industry estimate, not a quote you received, so read this as an order of magnitude rather than an invoice.
+- **Savings** — what a human translator would have charged for the same content at $5 per 1,000 characters, minus what the AI translation actually cost you. The translator rate is an industry estimate, not a quote you received, so read this as an order of magnitude rather than an invoice.
 - **Visitors** — unique readers who landed on a translated page, with crawlers excluded.
 - **Conversion** — how much better or worse readers of translated pages convert compared with readers of your original-language pages. A negative number is a real answer, not an error: it means the translated pages are reaching people who bounce, and it is worth knowing.
 
@@ -157,7 +157,7 @@ Two rows of figures, and neither reads correctly without the other — 180 reade
 
 The first row is **who it reached**. The number it is built around is one the overview cannot show you: **how many people from that language's countries visit your docs at all**, in whatever language they end up reading. On its own, "180 readers in German" tells you nothing — it could be your entire German-speaking audience or a rounding error. Against 1,240 visitors from German-speaking countries it is a decision, and the 1,060 who never landed on the translation are either the reason to keep it running or something to go look at. Beside it: how those readers convert against readers of your original pages, and how much of your documentation carries this language at all.
 
-The second row is **what it cost to reach them** — what you have spent, what that saved against a human translator's rate, how much of the work was served from cache rather than sent to the model again, and how many of those readers completed a goal you defined.
+The second row is **what it cost to reach them, and what it brought in** — what you have spent, what that saved against a human translator's rate, what those readers were worth in revenue (based on your Call To Action and Average Product Price — set both to see a figure here, and Docsbook names whichever one is missing rather than showing a blank as if it earned nothing), and how much of the work was served from cache rather than sent to the model again.
 
 Every figure in both rows explains itself: press the **?** beside its name for what it counts and what it does not.
 
@@ -172,7 +172,9 @@ Below the figures is the one part of the page that names something to go fix: yo
 
 It is asked per commit rather than per page because a commit is what you remember. "The pricing rewrite went out on Tuesday" is a thing you know; "one file under `pricing/` is behind" is a thing you would have to work out. A commit with nothing amber has been followed in full, and you can skip the row without opening it.
 
-Open a commit to see every documentation page it touched, each marked **translated**, **behind**, **not translated**, **manual** (written or uploaded by a person, so its freshness is that person's call) or **removed** (a path your source has since renamed or deleted). Open a page to read the change itself — the patch, fetched from your repository at that moment.
+Each commit also shows what translating it into this language cost and which AI model did the work, next to the author's avatar and how long ago it landed. The cost is worked out from when the translation call happened relative to the commit — Docsbook does not record a commit hash against every AI call, so a call that lands before any commit you can see stays uncosted rather than being guessed onto the nearest row.
+
+Open a commit to see every documentation page it touched, each marked **translated**, **behind**, **not translated**, **manual** (written or uploaded by a person, so its freshness is that person's call) or **removed** (a path your source has since renamed or deleted). Open a page to read the change itself — the patch, fetched from your repository at that moment and labelled as the source-language revision your translation is judged against, not the translated text itself.
 
 The state is always how the page stands **now**, not how it stood on the day of that commit. What you can act on is whether your readers are being served the right thing today, and a commit since superseded by a newer one is exactly how a page ends up behind.
 

@@ -28,6 +28,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Each language's Translations page now carries a **commit ledger**: the commits that changed your source docs, a verdict on how many of that commit's pages are behind in this language, the state of each page, and the patch for one page read live from GitHub when you open it. It is the one block on the page that names something to go fix. `Translations`
 - That page now also shows what a language cost beside who it reached: spent, saved, reused from cache and converted readers, on the same tile row as the audience figures. Reader counts alone cannot say whether a language paid off. Every tile in both rows explains itself on a `?`. `Translations`
 - Narrowing a feed to one reader now puts a card above it saying who that reader is: their country, device, system and browser, the language they actually read in, the page they keep coming back to, the goals they have reached, and what they are worth today as well as what they might still be. A stream of pageviews under a pseudonym could not answer "who is this". `Feeds`
+- A language's Translations page now shows what its readers were worth as an **Earned** tile, priced from your Call To Action and Average Product Price, next to spend, savings and cache reuse. `Translations`
+- The Translations overview now has a zoomable map of every reader below its figures — countries at first, then regions and cities, then the readers themselves as avatars. `Translations`
 
 ### Changed
 
@@ -64,6 +66,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Your languages are now a tab strip at the top of the Translations page instead of a second sidebar column, on every screen size. They are views of one subject, not separate sections. `Translations`
 - A language's sync state, coverage, source commit and any halt reason now live in a popover on the state chip, next to the switch and **Translate now** on one line. The 200px card that held them pushed "did this language pay off" below the fold. `Translations`
 - The readers table on a language's page now opens on its widest column set — source, potential, visits, pages, read time, first seen — since by the time you reach it the aggregate questions are already answered. `Translations`
+- "Saved" on the Translations pages is now priced at $5 per 1,000 characters instead of per word, so the figure reads correctly for languages like Chinese and Japanese that have no whitespace-delimited words to count. `Translations`
+- Each commit in a language's commit ledger now also shows what translating it into that language cost and which AI model did the work, next to the author's GitHub avatar. Opening a page's patch now says whether you are looking at the source revision or the translation. `Translations`
+- The Translations overview is now the same tile grid as a language's own page, aggregated across every language, in place of three figures and a country table. `Translations`
 - The admin panel's sidebar now names the plan of the project you have open, at the top beside its name. On seats a project can be free while the account is paying, and it is the project's plan that decides what the panel lets you use. `Dashboard`
 - The project's name at the top of that sidebar is now one line and reads as the heading of the column. The owner that used to sit under it is still on the row as the avatar, and still names the first group of the project menu. `Dashboard`
 
@@ -74,6 +79,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The **Webhooks** card is gone from Usage. It counted your webhooks against a limit that no longer exists. `Limits`
 - The low-credit pop-up no longer floats over the bottom-right of the assistant. It is the sidebar card above, which does not cover what you are reading and does not repeat what the sidebar already says. `AI Chat`
 - A language's page no longer shows the capture bar, the trend chart, the per-country split or the most-read list. Each restated the first two tiles or asked a follow-up the Analytics pages answer with filters this page cannot offer, and together they buried the commit ledger. `Translations`
+- A language's cost row no longer ends on a bare count of converted readers — see the **Earned** tile above. `Translations`
 
 ### Improved
 
