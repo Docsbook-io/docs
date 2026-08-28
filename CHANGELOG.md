@@ -27,6 +27,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The admin panel's sidebar now warns you before your AI allowance runs out: a small card above **Getting started** showing the share left, when the cycle resets, and a way through to your usage or a plan. It appears at a quarter left, again at a tenth, and once more when nothing is left, and closing it keeps it quiet until one of those actually happens. `Limits`
 - Each language's Translations page now carries a **commit ledger**: the commits that changed your source docs, a verdict on how many of that commit's pages are behind in this language, the state of each page, and the patch for one page read live from GitHub when you open it. It is the one block on the page that names something to go fix. `Translations`
 - That page now also shows what a language cost beside who it reached: spent, saved, reused from cache and converted readers, on the same tile row as the audience figures. Reader counts alone cannot say whether a language paid off. Every tile in both rows explains itself on a `?`. `Translations`
+- Narrowing a feed to one reader now puts a card above it saying who that reader is: their country, device and browser, the language they actually read in, what they have been worth so far, and the goals they have reached. A stream of pageviews under a pseudonym could not answer "who is this". `Feeds`
 
 ### Changed
 
