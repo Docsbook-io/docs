@@ -10,11 +10,15 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Added
 
 - Signing in now opens a **Dashboard** of every project you own, with its traffic for the last 7 days, a search box, and one click into the site, its admin panel or its assistant. `Dashboard`
-- Each project now has a full-page admin panel at `/dashboard/<owner>/<repo>`, opening on an Overview of what the project is, how it did this week, and a live preview of the published site. `Dashboard`
+- Each project now has a full-page admin panel at `/dashboard/<owner>/<repo>`, opening on an Overview of what the project is, how it did this week, and a picture of the published site. `Dashboard`
 - The AI assistant is now a section of that panel, with the project already selected, instead of only an overlay on a docs page. `AI Chat`
 - The admin panel's sidebar now has an account menu at the bottom: your account and theme, your other projects, this project's home page, the changelog, the documentation, help and the way out, all from one place. `Dashboard`
 - A **Getting started** checklist now sits at the bottom of the admin panel's sidebar, showing what your site still needs — its content, your branding, the AI chat, languages, your agent, your domain, and being findable. It ticks steps off as they are configured, collapses to a single row, and disappears once you are done. `Dashboard`
 - Each step of that checklist now walks you to the setting that does it: clicking a step opens the right page of the panel and points at the control, one short tour per step. `Dashboard`
+- The Overview now shows a **Reader map** of where this week's readers are, coloured by whether a translation reaches them, without leaving the front page. `Dashboard`
+- The Overview now summarises your docs' **Chat**: questions asked over the week, how many answers readers acted on, and the share rated helpful. `Dashboard`
+- The Overview's **Analytics** card now shows visitors with their curve for the week, how many readers are on the site right now, pageviews and AI questions. `Dashboard`
+- The setup checklist now also appears on the Overview as **Recommendations**, where each open step carries the reason to do it and the button that walks you through it. Once everything is done it stays as **Guides**, so any walkthrough can be replayed. `Dashboard`
 
 ### Changed
 
@@ -32,6 +36,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Every tool and skill in the picker now carries an icon, so a list of eighty can be scanned rather than read. `MCP`
 - Text, commands and example prompts on the `MCP` and `Skills` pages now scale up on a wide screen instead of staying at phone size. `MCP`
 - Each skill's page still carries the example questions for that skill, next to one command to install it and one line to run it. `Skills`
+- The Overview is now one card for the site itself — its picture, address, plan and source repository, with **Visit** and a menu carrying the address and `llms.txt` — above a row of three readouts. `Dashboard`
+- The Overview shows a picture of your site instead of embedding the live site. Embedding it counted a visit in your own analytics every time you opened the panel, and showed an empty box for sites on a custom domain that blocks embedding. `Dashboard`
 
 ### Removed
 
@@ -42,6 +48,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 - Opening a project's admin panel now always loads your own copy of that project, not another account's settings for the same repository. `Dashboard`
 - Your plan now shows in the admin panel's sidebar even when there are no usage figures to draw a bar from. `Dashboard`
+- Opening a project's admin panel no longer adds a visit to that project's own traffic figures. `Analytics`
 - Automatic translations run again. The scheduled job had been failing on every tick since 23.08 and translating nothing. `Translations`
 - Each documentation page in your sitemap is now dated by its own last change instead of the moment the sitemap was requested, so search engines can tell what actually moved. `SEO`
 
