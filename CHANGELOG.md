@@ -30,6 +30,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Narrowing a feed to one reader now puts a card above it saying who that reader is: their country, device, system and browser, the language they actually read in, the page they keep coming back to, the goals they have reached, and what they are worth today as well as what they might still be. A stream of pageviews under a pseudonym could not answer "who is this". `Feeds`
 - A language's Translations page now shows what its readers were worth as an **Earned** tile, priced from your Call To Action and Average Product Price, next to spend, savings and cache reuse. `Translations`
 - The Translations overview now has a zoomable map of every reader below its figures — countries at first, then regions and cities, then the readers themselves as avatars. `Translations`
+- Goals now show what the readers standing on them might still be worth. Each goal in `Analytics` ▸ Goals, and each step of a funnel, carries the potential revenue of the readers who got that far and have not converted yet, next to the completion counts; hovering a day on the chart shows the same figure per goal. It is your average product price scaled by how much of a converting reader's path each of them already matches, so a leak can be ranked by the money parked behind it rather than by its percentage alone. `Analytics`
+- A commit in `Changes` now reads as a commit and is then measured: its labels, title, description and byline above ten indicators — readers, time reading, dead rate, CTA rate and AI citations measured, then score, earned, revenue, spent and steps to the CTA estimated — over a gallery of the files it touched. Picking a file re-points every number at that file alone. `Changes`
 
 ### Changed
 
@@ -71,6 +73,11 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The Translations overview is now the same tile grid as a language's own page, aggregated across every language, in place of three figures and a country table. `Translations`
 - The admin panel's sidebar now names the plan of the project you have open, at the top beside its name. On seats a project can be free while the account is paying, and it is the project's plan that decides what the panel lets you use. `Dashboard`
 - The project's name at the top of that sidebar is now one line and reads as the heading of the column. The owner that used to sit under it is still on the row as the avatar, and still names the first group of the project menu. `Dashboard`
+- Every goal in `Analytics` ▸ Goals now says what kind of thing it counts — a page view, a section, an event, or a click that leaves for another site — as an icon in the list and in the chart's tooltip, so a goal sitting at zero tells you where to look. `Analytics`
+- A funnel step's tooltip now draws each top source with that site's own favicon and each top country with its flag, and groups referrers by site: one site linking in from four pages used to fill the list with four truncated copies of the same name and push a real source out of it. `Analytics`
+- Goals and funnels can now be edited and removed from the card itself — hover a goal for its controls, with the funnel's beside its chips. Removing asks first and archives rather than erases, so what you have already measured is not rewritten and a funnel step built on that goal keeps working. `Analytics`
+- The live reader map now opens on the whole world instead of framing itself around whoever is online, so a single reader no longer opens the page as a close-up of one country and the scale no longer changes between visits. `Analytics`
+- The project's name in the admin panel's sidebar is now the same size as the navigation under it, and a paid plan shows as a crown beside the name instead of a text label competing with it for the row. `Dashboard`
 
 ### Removed
 
@@ -100,6 +107,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The **Getting Started** folder can no longer be hidden from the sidebar. Hiding it stranded any reader who closed the introduction early with no way back to it. `Dashboard`
 - A reader's value in the goals table was counted once per goal rather than once per visit, so it read lower than the same money elsewhere in `Analytics`. Where no goal declares a value it now estimates from your average product price instead of showing a dash. `Analytics`
 - The admin panel's sidebar now shows the plan your account is actually paying for, not this one project's: a Pro or Business account with an unseated project no longer reads as Free there. `Dashboard`
+- Goal events in `Feeds` now carry their goal's colour. The tint only appeared for goals with a colour set by hand, which almost none have, so for most projects it silently never showed at all. `Feeds`
+- **Earned** on a commit in `Changes` now sums exactly the figures the Users table prints for the same readers — a goal's declared value first, then your average product price — instead of a second, shorter calculation that ignored declared values and disagreed with the table its own explanation points at. `Changes`
 
 ## NEW - 26.08.2026
 
