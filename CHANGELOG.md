@@ -21,6 +21,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The setup checklist now also appears on the Overview as **Recommendations**, where each open step carries the reason to do it and the button that walks you through it. Once everything is done it stays as **Guides**, so any walkthrough can be replayed. `Dashboard`
 - A **Users** page in the admin panel lists every reader of your docs in one table: where they came from, what they read, which goals they reached and how long each one took them, and what that reader is worth. The same table now backs the User and Journey tabs of Goals, and each language's Translations page. `Analytics`
 - The AI budget now names the one way to remove its ceiling: on Business you run the AI on your own OpenRouter, OpenAI, Gemini or Anthropic key, and pay us nothing for tokens. `Limits`
+- The Users table now also prices the readers who have **not** reached your call to action, so a page of blanks becomes a ranked list of who to talk to next. A **Potential** figure is your average product price scaled by how much of a converting reader's path someone already matches: how long they have read, how many pages they opened, and how many of the pages that separate buyers from browsers they have been on. Hover a figure to see the comparison it was made against. `Analytics`
 
 ### Changed
 
@@ -52,6 +53,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - A reader's country and the language your pages were served in are now two columns instead of one, so a German reader who landed on the English original is visible rather than merged away. `Analytics`
 - **Plan & seats** now lists the projects on your plan as plain rows with the owner's avatar, and adding one is a searchable picker over your free projects grouped by their organization, instead of two lists of checkboxes over every project you own. `Limits`
 - Webhooks are no longer counted against a per-plan cap: a paid plan registers as many feed notifiers as it needs, and Free has none. `Feeds`
+- The Users table's **Spent** column is now called **Revenue**: in a panel of cost readouts the old name read as what a reader had cost you rather than earned you. An estimated figure is now labelled `est.` instead of carrying a leading `~`, which in a column of dollar amounts looked like a minus. `Analytics`
 
 ### Removed
 
