@@ -24,6 +24,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The admin panel and its Assistant section now fill the whole screen instead of sitting in a bordered card, giving the assistant its full height to work with. `Dashboard`
 - The admin panel's sidebar now shows which plan the project is on next to a bar for how much of this cycle's AI allowance is gone. The exact spend, in dollars, and the days left before it resets are on hover. `Dashboard`
 - The docs toolbar for project owners now offers direct buttons for Assistant, Analytics, Customize and Settings in place of the separate Editor toggle. `Dashboard`
+- Those four buttons now open the admin panel's own pages instead of a panel laid over the documentation you were reading, so every section has an address you can bookmark, share or keep open in a second tab. `Dashboard`
+- The gear in that toolbar now opens **Settings** itself rather than the panel's Analytics page, which has its own button beside it. `Dashboard`
 - `MCP` and `Skills` are now rows of their own in the admin panel's sidebar, one click each, instead of pages nested inside an `Agents` section. `Dashboard`
 - `MCP` and `Skills` now open on the first tool and the first skill instead of a page about the section, so what your agent can do here is on screen the moment you land. `MCP`
 - Connecting your project is now the first step on every tool and skill page, with the one sentence to paste into your agent and the exact command for your client under it. It used to come after the step it makes possible, and on a skill it could be missing entirely. `MCP`
@@ -34,6 +36,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Removed
 
 - The docs-subagents catalog is no longer browsable in the admin panel. Those agents are still installable from the `docs-subagents` package itself. `Dashboard`
+- The Docsbook mark no longer sits in the docs toolbar on your own site. The AI assistant is reached from **Ask AI** in the page's action row and from the panel's Assistant page. `Dashboard`
 
 ### Fixed
 
