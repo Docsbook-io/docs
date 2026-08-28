@@ -20,6 +20,13 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Project cards on the Dashboard now draw a curve of the last 7 days' visitors above the visitor count, so one glance shows which sites are alive. Views, AI questions and when you last opened a project appear on hover. `Dashboard`
 - The admin panel and its Assistant section now fill the whole screen instead of sitting in a bordered card, giving the assistant its full height to work with. `Dashboard`
 - The docs toolbar for project owners now offers direct buttons for Assistant, Analytics, Customize and Settings in place of the separate Editor toggle. `Dashboard`
+- `MCP` and `Skills` are now rows of their own in the admin panel's sidebar, one click each, instead of pages nested inside an `Agents` section. `Dashboard`
+- The `MCP` page now opens with the one sentence to paste into your agent and the exact command for your client, with the example questions under it, instead of four stacked cards repeating the same install line. `MCP`
+- Each skill's page now carries the example questions for that skill, next to one command to install it and one line to run it. `Skills`
+
+### Removed
+
+- The docs-subagents catalog is no longer browsable in the admin panel. Those agents are still installable from the `docs-subagents` package itself. `Dashboard`
 
 ### Fixed
 
