@@ -96,7 +96,12 @@ from **Analytics** — open a reader there and jump straight to everything they 
 from a row's own avatar in the feed itself, or a pasted-in id by hand. Pinning a reader widens what
 the feed searches: alongside the events your docs dispatched, it pulls that reader's own activity on
 the site — the pages they read, what they searched, what they asked — so a pinned feed is everything
-that reader did, not only the parts an alert could have fired on. Saving a filter turns it into
+that reader did, not only the parts an alert could have fired on. It also puts a card above the
+feed saying who that reader is: where they read from, on what device, system and browser, the
+language they read in, the page they keep coming back to, the goals they have reached, and what
+they are worth today as well as what they might still be. The card is for a single pinned reader
+only, since a goal filter is a crowd and one country and one browser averaged over a crowd
+describe nobody. Saving a filter turns it into
 an **event list** — so narrowing the feed and defining what to be notified about are the same
 gesture. Test pings appear in the feed like any other event; a replay shows up as another attempt
 under the event it belongs to. **Export** beside the view's title downloads exactly what you are
