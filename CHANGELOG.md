@@ -19,6 +19,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The Overview now summarises your docs' **Chat**: questions asked over the week, how many answers readers acted on, and the share rated helpful. `Dashboard`
 - The Overview's **Analytics** card now shows visitors with their curve for the week, how many readers are on the site right now, pageviews and AI questions. `Dashboard`
 - The setup checklist now also appears on the Overview as **Recommendations**, where each open step carries the reason to do it and the button that walks you through it. Once everything is done it stays as **Guides**, so any walkthrough can be replayed. `Dashboard`
+- A **Users** page in the admin panel lists every reader of your docs in one table: where they came from, what they read, which goals they reached and how long each one took them, and what that reader is worth. The same table now backs the User and Journey tabs of Goals, and each language's Translations page. `Analytics`
+- The AI budget now names the one way to remove its ceiling: on Business you run the AI on your own OpenRouter, OpenAI, Gemini or Anthropic key, and pay us nothing for tokens. `Limits`
 
 ### Changed
 
@@ -46,6 +48,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The event feed is now one line per event instead of a card, so a day of events fits on a screen and can be scanned rather than scrolled. Clicking a line still expands the full payload and every delivery attempt underneath it. `Feeds`
 - Event times in the feed are now clock times, since the day is already named by the section above them. `Feeds`
 - Filtering the feed now offers each facet by name — **Add event**, **Add visitor**, **Add goal**, **Add status**, **Add destination**, **Search payload** — instead of one **Add filter** button that kept the choices a click out of sight. `Feeds`
+- **Spend by source** is now one row per source — its name, what it has spent, one bar and one percentage — instead of four coloured tiles, and every source is listed whether or not it has spent anything, so you can see where money can go before it goes there. Colour now means only one thing: amber as a source nears its own limit, red once it reaches it. `Limits`
+- A reader's country and the language your pages were served in are now two columns instead of one, so a German reader who landed on the English original is visible rather than merged away. `Analytics`
 
 ### Removed
 
@@ -65,7 +69,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Automatic translations run again. The scheduled job had been failing on every tick since 23.08 and translating nothing. `Translations`
 - Each documentation page in your sitemap is now dated by its own last change instead of the moment the sitemap was requested, so search engines can tell what actually moved. `SEO`
 - The estimated **Savings** figure in `AI Chat` now subtracts what those conversations actually cost to run, instead of ignoring your real spend — a workspace with real chat activity no longer sees it read as $0. `AI Chat`
-
+- Filtering `Feeds` by a visitor now finds that reader's events. It searched only the events your docs dispatched — nearly all of which belong to the project rather than to any one reader — and answered "Nothing matches this filter" about readers who had been active all along. It now searches what that reader did on the site as well, across the whole window rather than the most recent few hundred events. `Feeds`
+- The **Getting Started** folder can no longer be hidden from the sidebar. Hiding it stranded any reader who closed the introduction early with no way back to it. `Dashboard`
+- A reader's value in the goals table was counted once per goal rather than once per visit, so it read lower than the same money elsewhere in `Analytics`. Where no goal declares a value it now estimates from your average product price instead of showing a dash. `Analytics`
 ## NEW - 26.08.2026
 
 ### Added
