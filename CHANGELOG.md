@@ -80,6 +80,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Reader avatars are now far less likely to give two different readers the same colour. The palette was built for eight chart series and collided constantly across a 25-row table; the colour is now generated per reader, and hard-to-tell-apart pairs drop from roughly 4% to under 2%. Affects `AI Chat`, `Analytics` and the Journey tab. `Analytics`
 - A reader's browser now shows as its own mark beside their device, instead of being a word buried in a tooltip. `AI Chat`
 - Every row and switcher in the admin panel's sidebar is now one text size and one icon size, a step smaller than before, so the navigation reads as navigation rather than competing with the page beside it. `Dashboard`
+- The Analytics page now reads at one size throughout, matching the rest of the panel: figures, tabs and table rows all came down a step, and the chart's own axis labels no longer grow with the width of your window. `Analytics`
 
 ### Fixed
 
