@@ -12,6 +12,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Signing in now opens a **Dashboard** of every project you own, with its traffic for the last 7 days, a search box, and one click into the site, its admin panel or its assistant. `Dashboard`
 - Each project now has a full-page admin panel at `/dashboard/<owner>/<repo>`, opening on an Overview of what the project is, how it did this week, and a live preview of the published site. `Dashboard`
 - The AI assistant is now a section of that panel, with the project already selected, instead of only an overlay on a docs page. `AI Chat`
+- The admin panel's sidebar now has an account menu at the bottom: your account and theme, your other projects, this project's home page, the changelog, the documentation, help and the way out, all from one place. `Dashboard`
 
 ### Changed
 
@@ -19,6 +20,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - `/chat` now takes you to the Dashboard. Links, bookmarks and a prompt typed before signing up all still work. `AI Chat`
 - Project cards on the Dashboard now draw a curve of the last 7 days' visitors above the visitor count, so one glance shows which sites are alive. Views, AI questions and when you last opened a project appear on hover. `Dashboard`
 - The admin panel and its Assistant section now fill the whole screen instead of sitting in a bordered card, giving the assistant its full height to work with. `Dashboard`
+- The admin panel's sidebar now shows which plan the project is on next to a bar for how much of this cycle's AI allowance is gone. The exact spend, in dollars, and the days left before it resets are on hover. `Dashboard`
 - The docs toolbar for project owners now offers direct buttons for Assistant, Analytics, Customize and Settings in place of the separate Editor toggle. `Dashboard`
 - `MCP` and `Skills` are now rows of their own in the admin panel's sidebar, one click each, instead of pages nested inside an `Agents` section. `Dashboard`
 - `MCP` and `Skills` now open on the first tool and the first skill instead of a page about the section, so what your agent can do here is on screen the moment you land. `MCP`
@@ -34,6 +36,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Fixed
 
 - Opening a project's admin panel now always loads your own copy of that project, not another account's settings for the same repository. `Dashboard`
+- Your plan now shows in the admin panel's sidebar even when there are no usage figures to draw a bar from. `Dashboard`
 - Automatic translations run again. The scheduled job had been failing on every tick since 23.08 and translating nothing. `Translations`
 - Each documentation page in your sitemap is now dated by its own last change instead of the moment the sitemap was requested, so search engines can tell what actually moved. `SEO`
 
