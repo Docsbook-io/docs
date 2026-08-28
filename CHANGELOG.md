@@ -5,6 +5,19 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 28.08.2026
+
+### Added
+
+- Chat conversations are now individually judged by AI on whether they actually answered the question, shown as its own column and rolled up into a more accurate Answered rate. `Analytics`
+- The conversations table and the Journey view now show when a reader completed a goal and what they're worth. `Analytics`
+
+### Changed
+
+- The Journey view now leads with when each goal was reached — with a quick timeline of what led up to it — instead of listing every goal reached. `Analytics`
+- Chat's "Followed a link" figure is now labelled Earned. `Analytics`
+- The Signals and Turns columns in Chat's conversations table are hidden by default; they're still available from the column picker. `Analytics`
+
 ## NEW - 26.08.2026
 
 ### Added
