@@ -94,6 +94,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - A reader's browser now shows as its own mark beside their device, instead of being a word buried in a tooltip. `AI Chat`
 - Every row and switcher in the admin panel's sidebar is now one text size and one icon size, a step smaller than before, so the navigation reads as navigation rather than competing with the page beside it. `Dashboard`
 - The Analytics page now reads at one size throughout, matching the rest of the panel: figures, tabs and table rows all came down a step, and the chart's own axis labels no longer grow with the width of your window. `Analytics`
+- Event rows in the feed now carry their own icon instead of sharing one per category — reading time, a page view and a heading view no longer draw the identical glyph, and neither do leaving the site and clicking an outbound link. `Feeds`
 
 ### Fixed
 
