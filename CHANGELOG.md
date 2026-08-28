@@ -41,11 +41,21 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The Overview shows a picture of your site instead of embedding the live site. Embedding it counted a visit in your own analytics every time you opened the panel, and showed an empty box for sites on a custom domain that blocks embedding. `Dashboard`
 - The Conversations table now shows one line per row, with a reader's country and device as icons beside their name and the site that referred them shown with its own favicon. Cost and estimated savings merged into one Money column, and a new Time column shows how long the conversation ran and how long that reader has spent on your docs. `AI Chat`
 - Opening a conversation now shows the transcript as a chat, with the reader's question and the assistant's answer as separate message bubbles, next to a panel with what's known about that reader — click it to see everything else they did, in `Feeds`. `AI Chat`
+- `Feeds` now opens on **Select a feed**: a card for each feed with a line saying what it holds. Four are built in — All events, Unanswered questions, Reader feedback and Delivery trouble — so there is something to open before you have saved anything of your own. `Feeds`
+- Saved feeds now live on that page instead of the sidebar, where each one had room for its name and nothing else. Every card says what its feed narrows to, shows a dot when a destination already fires on it, and carries its own delete. `Feeds`
+- The event feed is now one line per event instead of a card, so a day of events fits on a screen and can be scanned rather than scrolled. Clicking a line still expands the full payload and every delivery attempt underneath it. `Feeds`
+- Event times in the feed are now clock times, since the day is already named by the section above them. `Feeds`
+- Filtering the feed now offers each facet by name — **Add event**, **Add visitor**, **Add goal**, **Add status**, **Add destination**, **Search payload** — instead of one **Add filter** button that kept the choices a click out of sight. `Feeds`
 
 ### Removed
 
 - The docs-subagents catalog is no longer browsable in the admin panel. Those agents are still installable from the `docs-subagents` package itself. `Dashboard`
 - The Docsbook mark no longer sits in the docs toolbar on your own site. The AI assistant is reached from **Ask AI** in the page's action row and from the panel's Assistant page. `Dashboard`
+
+### Improved
+
+- Reader avatars are now far less likely to give two different readers the same colour. The palette was built for eight chart series and collided constantly across a 25-row table; the colour is now generated per reader, and hard-to-tell-apart pairs drop from roughly 4% to under 2%. Affects `AI Chat`, `Analytics` and the Journey tab. `Analytics`
+- A reader's browser now shows as its own mark beside their device, instead of being a word buried in a tooltip. `AI Chat`
 
 ### Fixed
 
