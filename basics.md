@@ -206,11 +206,11 @@ Everything in Free, plus:
 Everything in Pro, plus Business-exclusive capabilities, plus higher usage limits:
 
 - ✅ Custom domain (docs.example.com) with free SSL
-- ✅ Webhooks (up to 25 per workspace)
+- ✅ Webhooks (unlimited)
 - ✅ Bring your own AI chat / translation API key (with custom model)
 - ✅ Semantic search (meaning-based chat search over an embedding index of your docs)
-- ✅ $159/month AI budget
-- ✅ 3 paid project seats
+- ✅ $200/month AI budget
+- ✅ Unlimited paid project seats
 - ✅ Higher translation limit than Pro
 
 <!-- widget:cta -->

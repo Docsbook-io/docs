@@ -50,11 +50,14 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Filtering the feed now offers each facet by name — **Add event**, **Add visitor**, **Add goal**, **Add status**, **Add destination**, **Search payload** — instead of one **Add filter** button that kept the choices a click out of sight. `Feeds`
 - **Spend by source** is now one row per source — its name, what it has spent, one bar and one percentage — instead of four coloured tiles, and every source is listed whether or not it has spent anything, so you can see where money can go before it goes there. Colour now means only one thing: amber as a source nears its own limit, red once it reaches it. `Limits`
 - A reader's country and the language your pages were served in are now two columns instead of one, so a German reader who landed on the English original is visible rather than merged away. `Analytics`
+- **Plan & seats** now lists the projects on your plan as plain rows with the owner's avatar, and adding one is a searchable picker over your free projects grouped by their organization, instead of two lists of checkboxes over every project you own. `Limits`
+- Webhooks are no longer counted against a per-plan cap: a paid plan registers as many feed notifiers as it needs, and Free has none. `Feeds`
 
 ### Removed
 
 - The docs-subagents catalog is no longer browsable in the admin panel. Those agents are still installable from the `docs-subagents` package itself. `Dashboard`
 - The Docsbook mark no longer sits in the docs toolbar on your own site. The AI assistant is reached from **Ask AI** in the page's action row and from the panel's Assistant page. `Dashboard`
+- The **Webhooks** card is gone from Usage. It counted your webhooks against a limit that no longer exists. `Limits`
 
 ### Improved
 

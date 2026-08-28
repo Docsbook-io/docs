@@ -72,7 +72,7 @@ A **workspace** = one documentation site. You can create unlimited workspaces fr
 |---|---|---|
 | **Free** | $0 | Unlimited docs, branding, basic UI controls, analytics (24h), AI chat ($0.15/mo AI budget, your choice of model), SEO / AEO / GEO |
 | **Pro** | $85/mo, 7-day free trial | 1 project seat, your own custom domain, translations, advanced AI chat config (custom prompt, hooks), search & feedback analytics, $85/mo AI budget |
-| **Business** | $200/mo, 14-day free trial | Everything in Pro, plus 3 project seats, webhooks (25), bring-your-own API key, semantic search, hosted API reference, UTM analytics, 30-day analytics history, a $200/mo AI budget, and higher translation limits |
+| **Business** | $200/mo, 14-day free trial | Everything in Pro, plus unlimited project seats, unlimited webhooks, bring-your-own API key, semantic search, hosted API reference, UTM analytics, 30-day analytics history, a $200/mo AI budget, and higher translation limits |
 
 All monthly plans (Pro, Business) can also be billed annually at a ~30% discount. All plans: **unlimited repositories, forever.**
 

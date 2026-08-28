@@ -1,6 +1,6 @@
 ---
 title: "Pricing & Plans"
-description: "Docsbook pricing — Free forever, Pro, and Business — with AI budgets, project seats, translations, and webhook limits broken down per plan. Pro adds live auto translations and a custom domain; Business adds premium support, unlimited seats, privacy & access control, bring-your-own API keys, and semantic search on top."
+description: "Docsbook pricing — Free forever, Pro, and Business — with AI budgets, project seats, translations, and feature access broken down per plan. Pro adds live auto translations and a custom domain; Business adds premium support, unlimited seats, privacy & access control, bring-your-own API keys, and semantic search on top."
 ---
 
 # Pricing & Plans
@@ -27,7 +27,7 @@ Everything in Free, plus:
 - Advanced AI chat config — chat hooks, custom system prompt, chat analysis dashboard
 - Full analytics and chat history (30 days), Google Search rankings, conversions & funnels
 - $85/month AI budget
-- Webhooks — up to 25 per workspace
+- Webhooks — unlimited
 - Privacy & access control — see Business
 
 ## Business
@@ -40,7 +40,7 @@ $200/month ($140/month billed yearly), 14-day free trial. Everything in Pro, plu
 - Privacy & access control — password-protect a workspace, or gate it behind your own SSO/OIDC identity provider
 - Bring your own AI chat and/or translation API key (with custom model)
 - Semantic search over your docs, hosted interactive API reference, changes impacts, collaborators
-- Webhooks — up to 100 per workspace
+- Webhooks — unlimited
 - $200/month AI budget
 
 ## Limits Summary
@@ -56,7 +56,7 @@ $200/month ($140/month billed yearly), 14-day free trial. Everything in Pro, plu
 | SEO / GEO / AEO               | ✅       | ✅      | ✅       |
 | Choose your AI model          | ✅       | ✅      | ✅       |
 | Bring your own API key        | ❌       | ❌      | ✅       |
-| Webhooks                      | 0        | 25      | 100      |
+| Webhooks                      | ❌       | ∞       | ∞        |
 | Monthly AI budget             | $0.15    | $85     | $200     |
 | Payment                       | —        | monthly/annual | monthly/annual |
 | Per-source spend limits       | ❌       | ✅      | ✅       |
