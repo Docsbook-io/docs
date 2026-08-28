@@ -9,7 +9,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Added
 
-- Signing in now opens a **Dashboard** of every project you own, with its traffic for the last 7 days, a search box, and one click into the site, its admin panel or its assistant. `Dashboard`
+- Signing in now opens a **Dashboard** of every project you own, with its traffic for the last 7 days, a search box, and one click into its admin panel, its assistant, or the published site. `Dashboard`
 - Each project now has a full-page admin panel at `/dashboard/<owner>/<repo>`, opening on an Overview of what the project is, how it did this week, and a picture of the published site. `Dashboard`
 - The AI assistant is now a section of that panel, with the project already selected, instead of only an overlay on a docs page. `AI Chat`
 - The admin panel's sidebar now has an account menu at the bottom: your account and theme, your other projects, this project's home page, the changelog, the documentation, help and the way out, all from one place. `Dashboard`
@@ -22,12 +22,14 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - A **Users** page in the admin panel lists every reader of your docs in one table: where they came from, what they read, which goals they reached and how long each one took them, and what that reader is worth. The same table now backs the User and Journey tabs of Goals, and each language's Translations page. `Analytics`
 - The AI budget now names the one way to remove its ceiling: on Business you run the AI on your own OpenRouter, OpenAI, Gemini or Anthropic key, and pay us nothing for tokens. `Limits`
 - The Users table now also prices the readers who have **not** reached your call to action, so a page of blanks becomes a ranked list of who to talk to next. A **Potential** figure is your average product price scaled by how much of a converting reader's path someone already matches: how long they have read, how many pages they opened, and how many of the pages that separate buyers from browsers they have been on. Hover a figure to see the comparison it was made against. `Analytics`
+- Project cards on the Dashboard now show revenue beside visitors once a project has an average product price and a Call To Action URL set. `Dashboard`
 
 ### Changed
 
 - Projects on the Dashboard are ordered by when you last opened them, counting the docs you read yourself and not only the changes you saved. `Dashboard`
 - `/chat` now takes you to the Dashboard. Links, bookmarks and a prompt typed before signing up all still work. `AI Chat`
 - Project cards on the Dashboard now draw a curve of the last 7 days' visitors above the visitor count, so one glance shows which sites are alive. Views, AI questions and when you last opened a project appear on hover. `Dashboard`
+- Clicking a project card on the Dashboard now opens that project's admin panel; the Assistant and site icons on the card still open those directly. `Dashboard`
 - The admin panel and its Assistant section now fill the whole screen instead of sitting in a bordered card, giving the assistant its full height to work with. `Dashboard`
 - The admin panel's sidebar now shows which plan the project is on next to a bar for how much of this cycle's AI allowance is gone. The exact spend, in dollars, and the days left before it resets are on hover. `Dashboard`
 - The docs toolbar for project owners now offers direct buttons for Assistant, Analytics, Customize and Settings in place of the separate Editor toggle. `Dashboard`
