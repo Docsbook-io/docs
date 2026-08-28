@@ -13,6 +13,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Each project now has a full-page admin panel at `/dashboard/<owner>/<repo>`, opening on an Overview of what the project is, how it did this week, and a live preview of the published site. `Dashboard`
 - The AI assistant is now a section of that panel, with the project already selected, instead of only an overlay on a docs page. `AI Chat`
 - The admin panel's sidebar now has an account menu at the bottom: your account and theme, your other projects, this project's home page, the changelog, the documentation, help and the way out, all from one place. `Dashboard`
+- A **Getting started** checklist now sits at the bottom of the admin panel's sidebar, showing what your site still needs — its content, your branding, the AI chat, languages, your agent, your domain, and being findable. It ticks steps off as they are configured, collapses to a single row, and disappears once you are done. `Dashboard`
+- Each step of that checklist now walks you to the setting that does it: clicking a step opens the right page of the panel and points at the control, one short tour per step. `Dashboard`
 
 ### Changed
 

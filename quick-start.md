@@ -64,6 +64,7 @@ Your documentation site is live. GitHub-sourced sites automatically sync with th
 
 ## What's Next?
 
+- Open your project's admin panel and work through the **Getting started** checklist at the bottom of its sidebar — each step walks you to the setting that does it
 - Update documentation in GitHub → it appears on the site automatically
 - Set up your custom domain (PRO)
 - Enable translation to other languages (PRO)
