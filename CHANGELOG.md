@@ -5,6 +5,25 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 28.08.2026
+
+### Added
+
+- Signing in now opens a **Dashboard** of every project you own, with its traffic for the last 7 days, a search box, and one click into the site, its admin panel or its assistant. `Dashboard`
+- Each project now has a full-page admin panel at `/dashboard/<owner>/<repo>`, opening on an Overview of what the project is, how it did this week, and a live preview of the published site. `Dashboard`
+- The AI assistant is now a section of that panel, with the project already selected, instead of only an overlay on a docs page. `AI Chat`
+
+### Changed
+
+- Projects on the Dashboard are ordered by when you last opened them, counting the docs you read yourself and not only the changes you saved. `Dashboard`
+- `/chat` now takes you to the Dashboard. Links, bookmarks and a prompt typed before signing up all still work. `AI Chat`
+
+### Fixed
+
+- Opening a project's admin panel now always loads your own copy of that project, not another account's settings for the same repository. `Dashboard`
+- Automatic translations run again. The scheduled job had been failing on every tick since 23.08 and translating nothing. `Translations`
+- Each documentation page in your sitemap is now dated by its own last change instead of the moment the sitemap was requested, so search engines can tell what actually moved. `SEO`
+
 ## NEW - 26.08.2026
 
 ### Added
