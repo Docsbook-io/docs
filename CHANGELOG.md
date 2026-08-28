@@ -55,7 +55,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Each skill's page still carries the example questions for that skill, next to one command to install it and one line to run it. `Skills`
 - The Overview is now one card for the site itself — its picture, address, plan and source repository, with **Visit** and a menu carrying the address and `llms.txt` — above a row of three readouts. `Dashboard`
 - The Overview shows a picture of your site instead of embedding the live site. Embedding it counted a visit in your own analytics every time you opened the panel, and showed an empty box for sites on a custom domain that blocks embedding. `Dashboard`
-- The Conversations table now shows one line per row, with a reader's country and device as icons beside their name and the site that referred them shown with its own favicon. Cost and estimated savings merged into one Money column, and a new Time column shows how long the conversation ran and how long that reader has spent on your docs. `AI Chat`
+- The Conversations table now shows one line per row, with a reader's country and device as icons beside their name and the site that referred them shown with its own favicon. Cost and Savings are their own columns, the topic column is labelled Topic, and a Time column shows how long the conversation ran and how long that reader has spent on your docs. `AI Chat`
 - Opening a conversation now shows the transcript as a chat, with the reader's question and the assistant's answer as separate message bubbles, next to a panel with what's known about that reader — click it to see everything else they did, in `Feeds`. `AI Chat`
 - `Feeds` now opens on **Select a feed**: a card for each feed with a line saying what it holds. Four are built in — All events, Unanswered questions, Reader feedback and Delivery trouble — so there is something to open before you have saved anything of your own. `Feeds`
 - Saved feeds now live on that page instead of the sidebar, where each one had room for its name and nothing else. Every card says what its feed narrows to, shows a dot when a destination already fires on it, and carries its own delete. `Feeds`
@@ -83,6 +83,11 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The Journey view now leads with when each goal was reached — with a quick timeline of what led up to it — instead of listing every goal reached. `Analytics`
 - Chat's "Followed a link" figure is now labelled Earned. `Analytics`
 - The Signals and Turns columns in Chat's conversations table are hidden by default; they're still available from the column picker. `Analytics`
+- The admin panel's sidebar header now shows the project's own icon or logo, instead of always your GitHub avatar. `Dashboard`
+- The Analytics Visitors tile, its chart and every breakdown ranked by visitors now follow your workspace's own accent colour instead of a fixed blue. `Analytics`
+- A finished recommendation, and the Chat and Analytics curves on the Overview, now show in your workspace's own accent colour instead of grey or a fixed blue. `Dashboard`
+- Every locked feature across the admin panel now shows as a soft, see-through preview of the real thing with one button that unlocks it, in place of blurred figures and padlock overlays. `Billing`
+- The pricing tab now opens directly on the plan comparison, with your seat status and trial countdown shown there instead of in a separate card, and Usage and Contact Support one click away. `Pricing`
 
 ### Removed
 
@@ -115,6 +120,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The admin panel's sidebar now shows the plan your account is actually paying for, not this one project's: a Pro or Business account with an unseated project no longer reads as Free there. `Dashboard`
 - Goal events in `Feeds` now carry their goal's colour. The tint only appeared for goals with a colour set by hand, which almost none have, so for most projects it silently never showed at all. `Feeds`
 - **Earned** on a commit in `Changes` now sums exactly the figures the Users table prints for the same readers — a goal's declared value first, then your average product price — instead of a second, shorter calculation that ignored declared values and disagreed with the table its own explanation points at. `Changes`
+- Savings in `AI Chat` no longer reads $0 for a real answer the reader didn't click through or rate — it now credits the AI's own verdict on whether the conversation was answered. `AI Chat`
+- The Overview's site picture no longer fails to load for a workspace with no screenshot provider configured. `Dashboard`
 
 ## NEW - 26.08.2026
 
