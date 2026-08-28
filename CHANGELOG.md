@@ -39,6 +39,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Each skill's page still carries the example questions for that skill, next to one command to install it and one line to run it. `Skills`
 - The Overview is now one card for the site itself — its picture, address, plan and source repository, with **Visit** and a menu carrying the address and `llms.txt` — above a row of three readouts. `Dashboard`
 - The Overview shows a picture of your site instead of embedding the live site. Embedding it counted a visit in your own analytics every time you opened the panel, and showed an empty box for sites on a custom domain that blocks embedding. `Dashboard`
+- The Conversations table now shows one line per row, with a reader's country and device as icons beside their name and the site that referred them shown with its own favicon. Cost and estimated savings merged into one Money column, and a new Time column shows how long the conversation ran and how long that reader has spent on your docs. `AI Chat`
+- Opening a conversation now shows the transcript as a chat, with the reader's question and the assistant's answer as separate message bubbles, next to a panel with what's known about that reader — click it to see everything else they did, in `Feeds`. `AI Chat`
 
 ### Removed
 
@@ -52,6 +54,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Opening a project's admin panel no longer adds a visit to that project's own traffic figures. `Analytics`
 - Automatic translations run again. The scheduled job had been failing on every tick since 23.08 and translating nothing. `Translations`
 - Each documentation page in your sitemap is now dated by its own last change instead of the moment the sitemap was requested, so search engines can tell what actually moved. `SEO`
+- The estimated **Savings** figure in `AI Chat` now subtracts what those conversations actually cost to run, instead of ignoring your real spend — a workspace with real chat activity no longer sees it read as $0. `AI Chat`
 
 ## NEW - 26.08.2026
 
