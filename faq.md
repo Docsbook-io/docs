@@ -229,12 +229,12 @@ Custom domain, webhooks, bring-your-own API keys, and semantic search are **not*
 
 **Q: What is Business?**
 
-A: An account subscription — **$159/month**, 14-day free trial, with 3 project seats. Everything in Pro, plus a set of Business-exclusive capabilities:
+A: An account subscription — **$200/month**, 14-day free trial, with unlimited project seats. Everything in Pro, plus a set of Business-exclusive capabilities:
 - Custom domain (`docs.yourcompany.com`) with free SSL
-- Webhooks — up to 25 per workspace
+- Webhooks — unlimited
 - Bring your own AI chat and/or translation API key (with custom model)
 - Semantic search — the biggest single improvement to AI chat answer quality (finds the right section by meaning, answers from it with the page cited rather than inventing one, and replies faster). Turn it on in **AI Chat → Semantic Search**; the index re-syncs on every doc commit
-- A $159/month AI budget, and higher translation limits than Pro
+- A $200/month AI budget, and higher translation limits than Pro
 
 ---
 

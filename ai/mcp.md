@@ -9,7 +9,7 @@ Docsbook ships a Model Context Protocol (MCP) server. Connect Claude Code or any
 
 ## What MCP is
 
-The Model Context Protocol is an open standard for exposing tools, resources, and prompts to AI agents over a typed RPC interface. The Docsbook MCP server exposes 84 tools — 66 named tools plus one registration tool per webhook event — covering the full product surface.
+The Model Context Protocol is an open standard for exposing tools, resources, and prompts to AI agents over a typed RPC interface. The Docsbook MCP server exposes 94 tools — 76 named tools plus one registration tool per webhook event (18 typed events) — covering the full product surface.
 
 ## Endpoint
 
@@ -23,7 +23,7 @@ Authentication is OAuth 2.0 Authorization Code with PKCE. Bearer tokens are retu
 
 The Docsbook MCP server is a remote HTTP server with OAuth — every modern MCP client can connect to it using the same endpoint.
 
-You can also browse the catalog inside your own project: open the admin panel, pick `Agents` in the sidebar, then `MCP`. It lists every tool the server serves right now — read live from the server rather than from a written-down copy — with each tool's description, its arguments, and example sentences to say to a connected agent.
+You can also browse the catalog inside your own project: open the admin panel and pick `MCP` in the sidebar. It lists every tool the server serves right now — read live from the server rather than from a written-down copy — with each tool's description, its arguments, and example sentences to say to a connected agent.
 
 ### Claude Code
 
@@ -219,6 +219,7 @@ Diagnosis without a fix is a report. These close the loop inside one connection.
 | Tool | What it is worth | Min plan |
 |---|---|---|
 | `search_docs` | Verbatim, citable sections — text, regex, heading or path modes. What an agent reads *before* editing so it changes the right lines. | Free |
+| `search` | Semantic (embeddings-based) search — finds a page by what it *means*, not what it literally says, using a pre-built vector index. Catches the natural-language question that phrases nothing like the page title. Falls back cleanly to `search_docs` when no index is built yet. | Business |
 | `get_doc_outline` | Every page with title, heading count, size. Cheap orientation before a search or a write. | Free |
 | `write_docs` | Commits one or many markdown files in **one atomic git commit**. Turns analysis into a shipped change. | Free |
 | `fetch_url` | Reads one public web page as clean Markdown. The tool that lets an agent check a page against the world outside your workspace — a competitor's pricing, your own marketing site, or whether a link a doc depends on is still alive. | Free |
