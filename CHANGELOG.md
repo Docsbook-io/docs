@@ -122,6 +122,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - **Earned** on a commit in `Changes` now sums exactly the figures the Users table prints for the same readers — a goal's declared value first, then your average product price — instead of a second, shorter calculation that ignored declared values and disagreed with the table its own explanation points at. `Changes`
 - Savings in `AI Chat` no longer reads $0 for a real answer the reader didn't click through or rate — it now credits the AI's own verdict on whether the conversation was answered. `AI Chat`
 - The Overview's site picture no longer fails to load for a workspace with no screenshot provider configured. `Dashboard`
+- The tabs of a card you cannot use yet now switch. On a plan you have not bought, and in the signed-out preview, a card is shown over sample figures with the offer laid over it — but its own tabs were dead, so `Analytics` ▸ Goals showed one of its four views and hid Funnel, User and Journey behind a control that did nothing. Each view has its own sample data and can now be looked through before you decide. `Analytics`
 
 ## NEW - 26.08.2026
 
