@@ -31,6 +31,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Those four buttons now open the admin panel's own pages instead of a panel laid over the documentation you were reading, so every section has an address you can bookmark, share or keep open in a second tab. `Dashboard`
 - The gear in that toolbar now opens **Settings** itself rather than the panel's Analytics page, which has its own button beside it. `Dashboard`
 - `MCP` and `Skills` are now rows of their own in the admin panel's sidebar, one click each, instead of pages nested inside an `Agents` section. `Dashboard`
+- The admin panel's sidebar now opens with **Panel**, **Customize**, **Settings** and **Assistant** switchers: you pick which set of pages the column lists, then the page. The one you are in shows its name, the rest collapse to their icon, and Assistant leaves the list you were using alone. `Dashboard`
 - `MCP` and `Skills` now open on the first tool and the first skill instead of a page about the section, so what your agent can do here is on screen the moment you land. `MCP`
 - Connecting your project is now the first step on every tool and skill page, with the one sentence to paste into your agent and the exact command for your client under it. It used to come after the step it makes possible, and on a skill it could be missing entirely. `MCP`
 - Every tool and skill in the picker now carries an icon, so a list of eighty can be scanned rather than read. `MCP`
