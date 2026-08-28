@@ -21,8 +21,11 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The admin panel and its Assistant section now fill the whole screen instead of sitting in a bordered card, giving the assistant its full height to work with. `Dashboard`
 - The docs toolbar for project owners now offers direct buttons for Assistant, Analytics, Customize and Settings in place of the separate Editor toggle. `Dashboard`
 - `MCP` and `Skills` are now rows of their own in the admin panel's sidebar, one click each, instead of pages nested inside an `Agents` section. `Dashboard`
-- The `MCP` page now opens with the one sentence to paste into your agent and the exact command for your client, with the example questions under it, instead of four stacked cards repeating the same install line. `MCP`
-- Each skill's page now carries the example questions for that skill, next to one command to install it and one line to run it. `Skills`
+- `MCP` and `Skills` now open on the first tool and the first skill instead of a page about the section, so what your agent can do here is on screen the moment you land. `MCP`
+- Connecting your project is now the first step on every tool and skill page, with the one sentence to paste into your agent and the exact command for your client under it. It used to come after the step it makes possible, and on a skill it could be missing entirely. `MCP`
+- Every tool and skill in the picker now carries an icon, so a list of eighty can be scanned rather than read. `MCP`
+- Text, commands and example prompts on the `MCP` and `Skills` pages now scale up on a wide screen instead of staying at phone size. `MCP`
+- Each skill's page still carries the example questions for that skill, next to one command to install it and one line to run it. `Skills`
 
 ### Removed
 
