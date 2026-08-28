@@ -32,6 +32,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The Translations overview now has a zoomable map of every reader below its figures — countries at first, then regions and cities, then the readers themselves as avatars. `Translations`
 - Goals now show what the readers standing on them might still be worth. Each goal in `Analytics` ▸ Goals, and each step of a funnel, carries the potential revenue of the readers who got that far and have not converted yet, next to the completion counts; hovering a day on the chart shows the same figure per goal. It is your average product price scaled by how much of a converting reader's path each of them already matches, so a leak can be ranked by the money parked behind it rather than by its percentage alone. `Analytics`
 - A commit in `Changes` now reads as a commit and is then measured: its labels, title, description and byline above ten indicators — readers, time reading, dead rate, CTA rate and AI citations measured, then score, earned, revenue, spent and steps to the CTA estimated — over a gallery of the files it touched. Picking a file re-points every number at that file alone. `Changes`
+- Chat conversations are now individually judged by AI on whether they actually answered the question, shown as its own column and rolled up into a more accurate Answered rate. `Analytics`
+- The conversations table and the Journey view now show when a reader completed a goal and what they're worth. `Analytics`
 
 ### Changed
 
@@ -78,6 +80,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Goals and funnels can now be edited and removed from the card itself — hover a goal for its controls, with the funnel's beside its chips. Removing asks first and archives rather than erases, so what you have already measured is not rewritten and a funnel step built on that goal keeps working. `Analytics`
 - The live reader map now opens on the whole world instead of framing itself around whoever is online, so a single reader no longer opens the page as a close-up of one country and the scale no longer changes between visits. `Analytics`
 - The project's name in the admin panel's sidebar is now the same size as the navigation under it, and a paid plan shows as a crown beside the name instead of a text label competing with it for the row. `Dashboard`
+- The Journey view now leads with when each goal was reached — with a quick timeline of what led up to it — instead of listing every goal reached. `Analytics`
+- Chat's "Followed a link" figure is now labelled Earned. `Analytics`
+- The Signals and Turns columns in Chat's conversations table are hidden by default; they're still available from the column picker. `Analytics`
 
 ### Removed
 
