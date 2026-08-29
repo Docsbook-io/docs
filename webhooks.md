@@ -51,7 +51,7 @@ A 2xx response = delivered. Anything else triggers retry until the attempt budge
 ## Seeing what your workspace emits
 
 The **Feeds** panel in your admin shows every event the workspace produced, newest first —
-**including events no alert was watching**. You do not need a webhook registered to see the feed
+**including events no alert was watching**, and every MCP tool call made against it. You do not need a webhook registered to see the feed
 fill up, which is the point: it is how you find out which events your docs actually emit before you
 decide what to be notified about. The feed is live — it refreshes itself every few seconds while
 you're looking at it, so there is no time range to pick and nothing to remember to reload.
@@ -72,7 +72,7 @@ your own — which is the form an alert can be attached to.
 ### Reading the feed
 
 The feed reads in day sections, and each item is **one line**: the reader's avatar when a reader
-caused the event (a plan or usage event has nobody to attribute it to), a coloured tile for its
+caused the event (a plan, usage or MCP event has nobody to attribute it to), a coloured tile for its
 type, the event name, the one-line summary, and where it went. Status, event type and destination
 show as small glyphs with the word a click away in a popover, so the whole thing stays one line.
 Times are clock times, since the day is already named by the section above. Clicking a row expands
@@ -87,6 +87,29 @@ winning:
 | `retrying` | A destination refused it and it is inside the attempt budget. |
 | `failed` | A destination refused it and the budget is exhausted. |
 | `not sent` | It happened, and no alert was subscribed to it. |
+
+### MCP tool calls in the feed
+
+The feed also shows **every MCP tool call an agent made against this workspace**, alongside the
+events your docs dispatched. One line per call: the tool it called, whether it worked, how long it
+took and what it cost at the list price on the [MCP rate card](/ai/mcp). Failed calls say so.
+Calls that were not about any one project — describing the server, listing your projects, creating
+one — belong to your account rather than to a project, so they appear in no project's feed.
+
+They are shown **by default**; there is nothing to switch on. In the **Add event** picker they sit
+in their own **MCP calls** section, filtered by the call's *billing class* — `mcp.read`,
+`mcp.write`, `mcp.query`, `mcp.egress`, `mcp.generate`, `mcp.agent` — rather than by tool name,
+which is the axis that costs you money and the one that keeps working as new tools ship. The tool's
+own name is on every row and in every payload, so filtering to one tool is a payload search away.
+Free calls (`get_info`, `find_skill`, `find_widget` and the rest of discovery) are never metered
+and so leave no row.
+
+A tool call was never forwarded anywhere, so it reads as **not sent** and, like reader activity, it
+drops out the moment you filter by destination or by a delivery status. Pinning a *visitor* also
+drops it: an agent holding a token is not one of your readers, and counting its calls as somebody's
+browsing would be wrong.
+
+### Narrowing the feed
 
 Filter the feed by event type, status, destination, visitor, a completed goal, or free text matched
 anywhere in the payload. Each one is a chip above the feed — **Add event**, **Add visitor**,

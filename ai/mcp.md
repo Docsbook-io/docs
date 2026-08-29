@@ -390,6 +390,8 @@ The exact class and price of every tool is on its row in the **MCP** section of 
 
 **A call that fails is still charged** — the work happened, and the answer says so. A call we never managed to run is not charged.
 
+**You can read the calls line by line.** Every metered call appears in the project's [Feeds](/webhooks#mcp-tool-calls-in-the-feed) panel — which tool, whether it worked, how long it took and what it cost — filterable by billing class. Calls that were about no single project (describing the server, listing your projects, creating one) belong to your account and appear in no project's feed; free discovery calls leave no row at all.
+
 Unauthenticated, repo-scoped access to a public documentation site is never metered.
 
 ## Related
