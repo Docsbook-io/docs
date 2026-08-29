@@ -356,12 +356,41 @@ Use `search_docs`/`write_docs` when the agent only has an MCP connection (no loc
 
 Each tool declares a minimum plan. The server returns a structured error when a tool is called below the required tier.
 
+This table is about **availability, not price** — "Free" here means the Free plan can call the tool, not that the call is free. What a call costs is [below](#what-a-call-costs).
+
 | Plan | Available tool groups | What you can decide with it |
 |---|---|---|
 | Free | Workspace, branding, UI, navigation, traffic analytics (24h), `find_skill`, `find_widget`, `search_docs`, `get_doc_outline`, `write_docs` (with a read-write token), SEO/GEO/AEO | Whether readers arrive at all |
 | PRO | + `get_search_rankings`, AI settings, languages, translations, private docs (`update_access`), demand gaps, **visit outcomes, dead-end pages, content health, route patterns, funnels, change history**, background agent runs (`run_docs_analyze` / `_create` / `_manage` / `_automate`, `get_agent_run`, `list_agent_runs`, `cancel_agent_run`) | Which page is costing you customers, and whether the fix worked |
 | PRO+ | + `get_insights`, `get_chat_intent`, `get_visits`, page journeys, top visitors, visitor drill-down, chat hooks, `query_events` | Who is deciding whether to buy, and what blocks the purchase |
 | Business | + webhooks, `get_retention`, bring-your-own AI/translation API key | Long-run retention, and reacting without opening a dashboard |
+
+## What a call costs
+
+Plan gating decides **whether** a tool answers you. This decides **what the answer costs**, and the two are separate: a tool listed as available on Free is available on Free, and calling it still draws on your balance.
+
+Every call is charged a **flat price, fixed before the call runs and independent of the size of the answer**. The same reporting call costs the same on a site with ten pages and one with ten thousand. The price is decided by what serving the call makes us do:
+
+| Class | Per call | Per 1 000 calls | Tools |
+|---|---|---|---|
+| Included | Free | Free | `get_info`, `find_skill`, `find_widget`, `list_workspaces`, `get_workspace`, `create_workspace` |
+| Read | $0.0002 | $0.20 | A page, a setting or a registry row we already store |
+| Write | $0.0005 | $0.50 | `update_*`, `create_*`, `set_*`, `register_*` |
+| Analytics | $0.0010 | $1.00 | Scans over the event store: funnels, journeys, retention, feeds |
+| Egress | $0.0020 | $2.00 | `fetch_url`, `test_*`, `replay_*` — anything leaving our network |
+| AI | $0.0120 | $12.00 | `write_docs`, `search_docs`, `search`, `get_insights` |
+
+The exact class and price of every tool is on its row in the **MCP** section of your admin panel, next to how many calls your monthly allowance buys.
+
+**Discovery is free.** Describing the server, finding a skill or a widget, listing your workspaces and creating one are never metered — you should not be charged for the handshake, or for the call that creates the thing being billed.
+
+**It comes off your account balance**, the same monthly allowance the rest of Docsbook's AI work draws on, and it appears as its own line in your usage breakdown. A tool that goes on to do AI work is metered for that work as well; the two add rather than replace each other.
+
+**When the balance runs out**, a metered call is refused before it runs, and the refusal names the price and what you have left. Free discovery keeps working, so your agent can still find out what happened.
+
+**A call that fails is still charged** — the work happened, and the answer says so. A call we never managed to run is not charged.
+
+Unauthenticated, repo-scoped access to a public documentation site is never metered.
 
 ## Related
 

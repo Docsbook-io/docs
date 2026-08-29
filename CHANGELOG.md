@@ -20,6 +20,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The AI Views card now carries a live sample and a switch to turn it on, in place of a description of what it would look like. `Analytics`
 - Switching projects from the admin sidebar now opens that project's dashboard rather than its published docs. `Dashboard`
 - Goals no longer ship a default funnel nobody declared, and the Journey tab now shows the same honest empty state as the rest of Goals until one exists. `Analytics`
+- Docsbook MCP tool calls are now billed **per call** against your account balance, at the flat price shown on each tool's row — fixed before the call and independent of how big the answer is. Discovery, connecting and creating a workspace stay free, a failed call says so, and a call we never ran is never charged. `MCP`
+- Every MCP tool call now runs as a background job instead of inside the web request, so a tool can no longer be cut off by a request time limit and each call leaves its own durable record. Quick calls take a little longer in exchange. `MCP`
+- Each row of the MCP tools table is now a single line, so the whole catalogue reads at a glance; the callable id stays on the tool's own page and on hover. `MCP`
 
 ### Removed
 
