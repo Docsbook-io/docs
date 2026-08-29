@@ -5,6 +5,26 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 29.08.2026
+
+### Added
+
+- Your agent can now hand a whole documentation job to Docsbook instead of doing it itself. `run_docs_analyze`, `run_docs_create`, `run_docs_manage` and `run_docs_automate` run the matching docs-skill on our side, against your workspace, with the full administrative toolset the skill was written for, and return a run id you read with `get_agent_run`. Work that takes minutes no longer has to fit in one request, and an assistant with no other Docsbook tools connected can still get an audit done. `MCP`
+- `get_agent_run`, `list_agent_runs` and `cancel_agent_run` report a run's state and live progress, return its report and everything it changed once it finishes, and stop one that is still going. `MCP`
+- The Entry and Exit hover cards now show which channels readers arrived from and left through, so a page's traffic can be read by source without leaving the breakdown. `Analytics`
+
+### Changed
+
+- The admin panel's MCP section is now one searchable, sortable table of every tool with its billing class and how much of your monthly allowance it buys, instead of a picker column showing one tool at a time. Tools you can compare are tools you can budget for. `MCP`
+- Feeds, Changes and Live now show the real page behind their upgrade gate rather than a drawing of it, so you can see what the feature actually does before paying for it. `Dashboard`
+- The AI Views card now carries a live sample and a switch to turn it on, in place of a description of what it would look like. `Analytics`
+- Switching projects from the admin sidebar now opens that project's dashboard rather than its published docs. `Dashboard`
+- Goals no longer ship a default funnel nobody declared, and the Journey tab now shows the same honest empty state as the rest of Goals until one exists. `Analytics`
+
+### Removed
+
+- The Skills section of the admin panel, which listed an externally published catalog on its own release schedule and said nothing about your workspace. The catalog still ships and the assistant still opens skills by name. `Dashboard`
+
 ## NEW - 28.08.2026
 
 ### Added

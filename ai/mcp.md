@@ -318,6 +318,23 @@ weekly:  get_content_health  → take the worst 3
 
 Documentation that repairs itself and shows its work — "saw the problem" and "fixed the problem" without leaving the connection.
 
+## Handing over the whole job
+
+Every tool above answers inside the call that asked for it. Four do not, and that is the point of them.
+
+Auditing a site, building one, restructuring it, or standing up the monitors that keep it honest is minutes of work — reading pages, reasoning over numbers, committing files. `find_skill` handles that by handing the SKILL.md to *your* agent, which only works if your agent is also connected here, has picked a workspace, and will spend twenty tool calls on it. These four run the skill on our side instead, against your workspace, with the full administrative toolset the skill was written for.
+
+| Tool | What it is worth | Min plan |
+|---|---|---|
+| `run_docs_analyze` | The full `docs-analyze` audit, run for you: what is wrong, judged from search positions, reader behaviour and your own goals — plus the gap no number shows, the audiences and use cases the docs never address. It is declared audit-mode, so it cannot change anything and works with a read-only token. | PRO |
+| `run_docs_create` | The full `docs-create` pipeline: audit the product, decide the structure, write the pages, publish. From your site, a repository, another platform you are leaving, or a product name alone. | PRO |
+| `run_docs_manage` | The `docs-manage` rulebook applied rather than quoted: pages rewritten, the site configured, goals and funnels declared. Use it when the request is a judgement ("make this good") rather than a value ("set the accent to #0f0"). | PRO |
+| `run_docs_automate` | `docs-automate`, so the checks keep happening: drift guards, webhooks, CI checks, alerts and standing monitors. | PRO |
+
+**Starting a job and reading its outcome are two separate calls.** A `run_docs_*` call returns `{ run_id, state: "queued" }` — never findings, never pages. `get_agent_run` returns the state, live progress while it runs, and once it has succeeded the report, every action the run took, and what changed. `list_agent_runs` finds a run id you lost; `cancel_agent_run` stops one that has not finished, without undoing what it already committed.
+
+The three that write require a **read-write** token. `run_docs_analyze` does not, because it cannot write.
+
 ## Reading the numbers honestly
 
 Every analytics response carries its own caveats in a `metrics` field. Three matter enough to repeat:
@@ -342,7 +359,7 @@ Each tool declares a minimum plan. The server returns a structured error when a 
 | Plan | Available tool groups | What you can decide with it |
 |---|---|---|
 | Free | Workspace, branding, UI, navigation, traffic analytics (24h), `find_skill`, `find_widget`, `search_docs`, `get_doc_outline`, `write_docs` (with a read-write token), SEO/GEO/AEO | Whether readers arrive at all |
-| PRO | + `get_search_rankings`, AI settings, languages, translations, private docs (`update_access`), demand gaps, **visit outcomes, dead-end pages, content health, route patterns, funnels, change history** | Which page is costing you customers, and whether the fix worked |
+| PRO | + `get_search_rankings`, AI settings, languages, translations, private docs (`update_access`), demand gaps, **visit outcomes, dead-end pages, content health, route patterns, funnels, change history**, background agent runs (`run_docs_analyze` / `_create` / `_manage` / `_automate`, `get_agent_run`, `list_agent_runs`, `cancel_agent_run`) | Which page is costing you customers, and whether the fix worked |
 | PRO+ | + `get_insights`, `get_chat_intent`, `get_visits`, page journeys, top visitors, visitor drill-down, chat hooks, `query_events` | Who is deciding whether to buy, and what blocks the purchase |
 | Business | + webhooks, `get_retention`, bring-your-own AI/translation API key | Long-run retention, and reacting without opening a dashboard |
 
@@ -350,5 +367,5 @@ Each tool declares a minimum plan. The server returns a structured error when a 
 
 - [MCP tools reference](../reference/mcp-tools.md) — every tool with its parameters and minimum plan.
 - [Chat Hooks](./chat-hooks.md) — Configure pre/post-LLM hooks via MCP.
-- [Docs Skills](./skills.md) — Discover SKILL.md files through `find_skill`.
+- [Docs Skills](./skills.md) — Discover SKILL.md files through `find_skill`, or have one run for you with `run_docs_*`.
 - [Webhooks](../webhooks.md) — Register event handlers from MCP.
