@@ -40,7 +40,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - `Feeds` now filters events with three separate chips — Workspace, MCP and Analytics — each opening only its own catalog, instead of one menu you scrolled past two stores to use. `Feeds`
 - MCP traffic in `Feeds` is now filterable per tool as well as per price class, so one filter can mean the expensive half of a single tool's calls. The narrowing rides the export and saved lists too, so a downloaded file matches what was on screen. `Feeds`
 - The search, filters and column picker above the `Users` and Chat conversation tables are now a single row that stops growing as you add filters, and the period picker moved into it — the first row of data is that much closer to the top. `Analytics`
-- The Chat page now always reports the last 24 hours, so its tiles and the conversation list under them can no longer quote different windows; the 30-day history upsell goes with the picker it was promising. The interval pills stay on the framed card. `AI Chat`
+- The Chat page now reports your whole chat history rather than a single window, and its tiles and conversation list can no longer quote different periods. There is no interval picker: hover any tile to see that figure for the last 24 hours instead, shown as zeros on a quiet day rather than left blank. The interval pills stay on the framed card. `AI Chat`
+- The conversation list now loads a page at a time instead of the whole history at once, so the Chat page opens at the same speed however long the assistant has been running. The footer says how many conversations are on screen and how many there are in all, and **Load more** fetches the next batch. `AI Chat`
 - The conversations table on the Chat page now uses the pane's full width, matching the readers table, and its heading is gone — the sidebar row already says Chat. `AI Chat`
 
 ### Fixed
