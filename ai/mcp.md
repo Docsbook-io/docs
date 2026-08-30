@@ -387,7 +387,7 @@ The exact class and price of every tool is on its row in the **MCP** section of 
 
 **It comes off the balance of the project the call is about**, the same balance a top-up funds and the rest of that project's AI work draws on, and it appears as its own line in Spend by source. Which project pays is worked out from the call itself — the workspace you named, the repository it is scoped to — and only ever a project you own. A call that names no project is served unmetered. A tool that goes on to do AI work is metered for that work as well; the two add rather than replace each other.
 
-**When the balance runs out**, a metered call is refused before it runs, and the refusal names which project ran out, what the call costs, what is left, and where to top that project up. There is no tier to buy and nothing refills a balance on a schedule. Free discovery keeps working, so your agent can still find out what happened.
+**When the balance runs out**, a metered call is refused before it runs, and the refusal names which project ran out, what the call costs, what is left, and where to top that project up. There is no tier to buy, and nothing is granted to a balance on a schedule — though you can set up a monthly payment of your own on the billing screen, which tops the same balance up each month. Free discovery keeps working, so your agent can still find out what happened.
 
 **A call that fails is still charged** — the work happened, and the answer says so. A call we never managed to run is not charged.
 

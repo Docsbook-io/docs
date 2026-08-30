@@ -9,6 +9,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Added
 
+- Every new project now starts with **$1** of real credit, and a few minutes in a card offers **$5 more** to claim — yours to spend on AI chat, translations, MCP calls or an agent run, with nothing to pay until it runs out. It appears in the sidebar and as a strip across the top of `Billing`, and claiming it is one button. `Billing`
+- The sidebar card can be dismissed outright, unlike the low-balance warning beside it, which still only folds to a single row. Dismissing it costs you nothing: the same bonus stays claimable on the billing screen. `Dashboard`
+- `Billing` gained **Support us** beside **Add credit** — a monthly amount that tops the same project balance up each month, rather than a plan. It unlocks nothing and gates nothing; every dollar of it lands as credit you spend the same way. Cancel it whenever you like. `Billing`
+
 - A card in `Analytics` you have no data for yet now shows sample figures with a **Turn on** button, and pressing it runs a short guide inside that card: each step names a control by the label printed on it, how to read the figure including what it is not evidence of, and the move it leads to. `Analytics`
 - Every panel readout now has a guide of its own — `Conversations`, `Dialogs`, `Goals & funnels`, `Users`, `Live`, `Changes`, `Search rankings`, `Feeds`, the translation reports and the MCP cards included — instead of a three-line summary derived from its upgrade copy. `Dashboard`
 - Your agent can now ask one question and get a checked answer back. Nineteen scenario tools each answer a single question about your docs — which pages are one edit away from traffic they already rank for (`audit_seo`), why traffic fell and what was ruled out (`diagnose_traffic_drop`), which pages you do not have yet (`find_content_gaps`), whether a change actually worked (`verify_change_impact`), whether answer engines can quote you (`audit_geo`), and fifteen more — each returning a structured answer instead of a paragraph to read. `MCP`
