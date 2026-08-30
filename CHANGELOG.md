@@ -99,6 +99,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Every admin panel page header is now the same height as the sidebar's project switcher above it, instead of sitting noticeably taller. `Dashboard`
 - Switching between admin panel sections now updates the page's URL, so a section can be bookmarked, shared, or reopened as-is after a refresh. `Dashboard`
 - The `Spent` column's figure in reader tables now reads in neutral gray, so it no longer competes with `Potential`'s green figure right beside it — the rose arrow still marks which way the money moved. `Analytics`
+- A guide step inside a card now opens small: the name of the thing it is about and two lines saying what it is. How to read the figure and the move it leads to sit behind a chevron on the step itself, so the explanation no longer covers the report you just switched on. `Dashboard`
+- A guide step now lights the exact control it is about — a strip of figures, one row, a toolbar, a table's header — instead of the whole card, so it no longer has to spell out in words where to look. `Dashboard`
 
 ### Removed
 
