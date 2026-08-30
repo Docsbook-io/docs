@@ -64,6 +64,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The conversations table on the Chat page now uses the pane's full width, matching the readers table, and its heading is gone — the sidebar row already says Chat. `AI Chat`
 - A switched-off card no longer turns itself on when you press its background: only **Turn on** does. A click aimed at a row you wanted to read, or a touch-scroll on a phone, used to switch the card on and start its walkthrough, and the card's introduction does not come back once it has been dismissed. `Dashboard`
 - Every tab in an `Analytics` card now says on hover what its list actually counts, so "Exit" reads as the page people leave from rather than one that failed, "Direct / None" as traffic with no referrer rather than missing data, and "Lang" as the reader's browser preference rather than the language your docs are written in. `Analytics`
+- The second built-in feed in `Feeds` is now **Reader events**, everything the people reading your docs did: pages read, searches run, questions asked of the AI and feedback left. It replaces **Unanswered questions**, which only filled up where an answer came up empty; those two event types are still one click away in the Workspace filter. `Feeds`
 
 ### Fixed
 

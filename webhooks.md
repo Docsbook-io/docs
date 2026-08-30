@@ -63,9 +63,12 @@ sidebar's **Feeds** section rather than a page of its own; the row you're on is 
 `+` on the section creates a new list from an empty filter. There is no separate title above the
 feed: the highlighted row already says what you're looking at.
 
-Four feeds are built in — **All events** (unfiltered), **Unanswered questions**, **Reader
-feedback** and **Delivery trouble** — so there is something to open on your first visit, before
-you have saved anything of your own. They are starting filters rather than saved lists, so they
+Four feeds are built in — **All events** (unfiltered), **Reader events**, **Reader
+feedback** and **MCP calls** — so there is something to open on your first visit, before
+you have saved anything of your own. **Reader events** is everything the people reading your docs
+did — pages read, searches run, questions asked of the AI, feedback left — and **MCP calls** is
+every metered call an agent made; both are feeds to read, since neither kind of event is one an
+alert can be attached to. They are starting filters rather than saved lists, so they
 cannot be deleted and nothing can be pointed at them directly. Narrow one and **Save as list**
 turns it into a feed of your own, which appears as its own row in the sidebar and is the form an
 alert can be attached to.
