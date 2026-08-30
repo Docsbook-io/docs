@@ -15,11 +15,20 @@ conversations that produced them:
 
 | Card | Metric | Description |
 |---|---|---|
+| **Conversations** | Revenue | What the readers who used your chat are worth, counted once per reader on the same scale the Potential column and Goals & funnels use |
+| **Conversations** | Cost | What running the chat actually billed over the same window, from the AI usage ledger. Shown in red, because it is the one figure here where money leaves |
+| **Conversations** | Savings | Estimated support cost avoided, based on answered conversations. An estimate, unlike the two figures before it |
 | **Conversations** | Questions | Chat threads readers started, all of them |
 | **Conversations** | Answered | Share of conversations where the model, reading the transcript, judges the reader actually got an answer to what they asked |
-| **Conversations** | Savings | Estimated support cost avoided, based on answered conversations |
-| **Conversations** | Cost | Total billed AI spend behind those conversations, shown as one line against Savings |
-| **Dialogs** | Per-dialog cost | Shown next to each conversation's estimated savings right in the list; open one for the full cost/savings breakdown and its complete question-and-answer transcript |
+| **Dialogs** | Per-conversation Potential and Cost | The two money columns lead the table, ahead of Time. Open a row for that conversation's full breakdown and its complete question-and-answer transcript |
+
+**Revenue is two things added up, and the tooltip keeps them apart.** Part of it
+is readers who actually reached the page you declared as your goal, valued at
+what that goal declares or at your average product price. The rest is a fraction
+of that price assigned to readers who only match part of a converter's path — a
+forecast, not money received. Hover the tile to see the split. A reader who
+opened four conversations counts once, so the figure cannot climb just because
+somebody had to re-ask.
 
 The Chat page reports **everything** — every conversation still on record —
 and has no interval control. The tiles and the conversation list under them
@@ -36,11 +45,13 @@ signal-of-value reading (a citation click, a like, an outbound click) and says
 so when you hover it. The answered/dead-end/unrated **outcome** split on
 Analytics still uses that older reading throughout.
 
-**Hover any tile to see the last 24 hours.** Each of the four carries the same
-reading over the past day: Savings, Questions and Earned as their own figure,
-Answered as a count ("2 of 3") rather than a percentage, because over a single
-day a percentage swings by whole points per conversation. A quiet day shows
-zeros and says so — that is a reading, not a gap.
+**Hover a tile to see the last 24 hours.** Savings and Questions carry the same
+reading over the past day as their own figure, and Answered carries a count
+("2 of 3") rather than a percentage, because over a single day a percentage
+swings by whole points per conversation. A quiet day shows zeros and says so —
+that is a reading, not a gap. Revenue and Cost have no separate day figure:
+both are read over the window the page is showing, and a second reading would
+mean asking for the whole window again.
 
 Conversations are kept for **30 days**, which is how far back "everything"
 goes. Asking the in-product assistant for the Conversations card by name still
@@ -61,8 +72,9 @@ period control here. Clicking a row there no longer opens it into
 
 1. Open your documentation site's admin
 2. Click the **Chat** row in the sidebar — it opens into its own page, the same way **Settings** does
-3. The four tiles across the top show the totals for everything on record —
-   hover one for its last-24-hours figure. The conversation table directly
+3. The five tiles across the top show the totals for everything on record,
+   leading with what the chat brought in and what it cost — hover one for its
+   last-24-hours figure where it has one. The conversation table directly
    under them is those same conversations, one per row, with its own search,
    filters and column picker on a single row above it. Open a row for that
    conversation's full transcript and its cost/savings breakdown

@@ -87,6 +87,11 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Changed
 
+- The `Chat` page now leads with the two questions you open it with: what the assistant brought in, and what it cost. **Revenue** is what the readers who used it are worth, counted once per reader on the same scale `Goals & funnels` uses, with the tooltip keeping "reached your goal" apart from "part-way there". **Cost** sits beside it in red — what the chat actually billed, from the ledger, over the same window rather than a fixed week. `AI Chat`
+- **Savings** keeps its place after them, because support cost avoided is worth seeing and is not the same money as either. It now says on its own tile that it is an estimate standing next to two measurements. The old **Earned** tile, which counted link follows rather than money, has gone; those clicks are still on the conversation rows. `AI Chat`
+- The conversation table now opens with **Potential** and **Cost** ahead of **Time**, instead of at the far right behind six other columns where a narrow panel had to be scrolled to reach either. Potential is green, with the money reading it carries. `AI Chat`
+- **Last seen**, **Completed at** and **Savings** are no longer shown by default in that table — the first repeats the order the table is already sorted in, the second reads the same on every row of the same reader, and the third is an estimate standing next to two measured columns. All three are one click away in the column picker, still sortable and still filterable. `AI Chat`
+
 - The billing filters on the `MCP` tools list now lead with **Agent** instead of with the cheapest class. The strip scrolls sideways, so at most window widths its tail was off-screen — which put the one family that runs a whole job and hands you back a report where nobody saw it. Sorting the table by billing is unchanged. `MCP`
 - Prompts calling a scenario or background-agent tool now show the **PRO** badge they always required. Around eighty-five of them were labelled free while the tool behind them was not. `MCP`
 - `diagnose_intent_mismatch` was being quoted at the wrong price and the wrong wait, because both rate tables matched the bare word "intent" from an older, single-tool rule. It is an agent run and now says so — a caller told to expect a few seconds would have given up on something that takes minutes. `MCP`
