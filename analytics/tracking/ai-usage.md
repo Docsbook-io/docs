@@ -15,11 +15,19 @@ conversations that produced them:
 
 | Card | Metric | Description |
 |---|---|---|
-| **Conversations** | Questions | Chat threads readers started in the selected window |
+| **Conversations** | Questions | Chat threads readers started in the last 24 hours |
 | **Conversations** | Answered | Share of conversations that showed a sign of value (a citation click, a like, an outbound click) |
 | **Conversations** | Savings | Estimated support cost avoided, based on answered conversations |
-| **Conversations** | Cost | Total billed AI spend for the window, shown as one line against Savings |
+| **Conversations** | Cost | Total billed AI spend over the same 24 hours, shown as one line against Savings |
 | **Dialogs** | Per-dialog cost | Shown next to each conversation's estimated savings right in the list; open one for the full cost/savings breakdown and its complete question-and-answer transcript |
+
+The Chat page reports **the last 24 hours** and has no interval control. It
+answers "what did the assistant do today", and the tiles and the conversation
+list under them always describe the same window, so the two can never quote
+different numbers for the same question. Longer-range chat reading lives on the
+**Analytics** page, which has its own date-range picker (see below). Asking the
+in-product assistant for the Conversations card by name still gives you the
+card with its own 24h / 7d / 30d pills.
 
 Cost breakdown by provider/model, monthly limits, translation usage, and time
 ranges are unchanged — see the sections below.
@@ -36,10 +44,11 @@ period control here. Clicking a row there no longer opens it into
 
 1. Open your documentation site's admin
 2. Click the **Chat** row in the sidebar — it opens into its own page, the same way **Settings** does
-3. The **Conversations** card shows the totals; scroll down to **Dialogs** to browse
-   individual conversations and their cost. **Dialogs** loads older conversations
-   automatically as you scroll — there's no separate time range or filters to set
-   there, since **Conversations** already covers both for the whole page
+3. The four tiles across the top show the totals for the last 24 hours; the
+   conversation table directly under them is every one of those conversations,
+   one per row, with its own search, filters and column picker on a single row
+   above it. Open a row for that conversation's full transcript and its
+   cost/savings breakdown
 
 ## Cost Estimation
 
