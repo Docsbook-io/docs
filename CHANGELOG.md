@@ -79,6 +79,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 - A recommendation is now one row instead of a paragraph: the change, how much it matters, the pages it touches as chips carrying the icon of what each one is, and the forecast on the right. The explanation moved to hover, and on a touch screen it stays under the title. Five recommendations that filled 789 pixels now take 565, so a set of seven can be compared without scrolling. `AI Chat`
 - Recommendations are now grouped by the kind of work they are — page text, structure, and workspace settings — each under its own heading with a count, instead of naming the kind in small grey text at the end of the row. `AI Chat`
+- Hovering a prompt in `Prompts` now opens a card that carries every action the row has, each with its name beside the icon: Copy, Edit, Trigger, Schedule, Transcript and Run. The row's icons only exist while the pointer is on the row, so reading the full wording used to take them all away and leave copying as the only thing you could do with what you had just read. It is also the first place the panel says in words what the pencil, the bell and the clock do. `Prompts`
+- A prompt that already runs on a schedule or fires on an event now shows that on those two buttons in blue, in the card and on the row. The colour was there in the code and had never actually rendered, so a prompt already working by itself looked the same as one that had never been set up. `Prompts`
 
 ### Fixed
 
