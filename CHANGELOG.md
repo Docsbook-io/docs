@@ -22,7 +22,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Turning a card on now opens its guide directly, and the second "See what this shows" link under the button is gone — it led to the same place the button did. `Dashboard`
 - The **Turn on** panel now fits the card it sits on, dropping to the card's name and the button on a half-width card and to the button alone on a phone; a guide opened on a card that narrow moves to a sheet at the bottom of the screen so its text stays readable and its controls stay reachable. `Dashboard`
 - The setup guides launched from `Recommendations` now walk their steps over sample data. They are written for a workspace set up minutes ago, and three of their stops were explaining an empty table. `Dashboard`
-- The admin panel sidebar's footer no longer names a plan tier next to your account — it now shows a bare usage bar under your account name, with the exact allowance in a hover tooltip. `Dashboard`
+- The admin panel sidebar's footer no longer names a plan tier next to your account. What is left of the project's balance is a ring around your avatar instead, draining as the balance drains, with the exact amount, the percentage and where to top up shown when you hover it. It turns amber and then red before it looks empty, and draws nothing at all where there is no balance on record. `Dashboard`
 - A tool's page in the `MCP` section now opens straight onto the install card for your AI client, instead of a numbered two-step guide that offered a second way to connect above it. `Dashboard`
 - That same tool page now also shows a full stat row — including price per call and rate limit — and its example prompts can be run directly against your connected assistant, not just copied. `Dashboard`
 - `Feeds` now lists feeds as rows in the sidebar with a one-line toolbar of icon filters and an always-visible search box, instead of a separate picker page. `Feeds`
@@ -34,6 +34,11 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The reader table's `Goals` column is gone: the goals a reader reached, with how long each took and what each was worth, now open in the hover of their `Completed at` cell, freeing the width that used to push `Last seen` off the right edge. `Analytics`
 - `Completed at` now shows a reader's most recent goal completion on any page that is not already narrowed to a single goal, where it used to be blank. `Analytics`
 - Read time, Visits, Pages and Time to goal now read at the same size as the columns beside them, and every column is wide enough for its own header. `Analytics`
+- `Feeds` now filters events with three separate chips — Workspace, MCP and Analytics — each opening only its own catalog, instead of one menu you scrolled past two stores to use. `Feeds`
+- MCP traffic in `Feeds` is now filterable per tool as well as per price class, so one filter can mean the expensive half of a single tool's calls. The narrowing rides the export and saved lists too, so a downloaded file matches what was on screen. `Feeds`
+- The search, filters and column picker above the `Users` and Chat conversation tables are now a single row that stops growing as you add filters, and the period picker moved into it — the first row of data is that much closer to the top. `Analytics`
+- The Chat page now always reports the last 24 hours, so its tiles and the conversation list under them can no longer quote different windows; the 30-day history upsell goes with the picker it was promising. The interval pills stay on the framed card. `AI Chat`
+- The conversations table on the Chat page now uses the pane's full width, matching the readers table, and its heading is gone — the sidebar row already says Chat. `AI Chat`
 
 ### Fixed
 
