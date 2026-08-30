@@ -45,6 +45,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 - When the admin assistant genuinely cannot finish something, the turn now ends on a card that names what blocked it, what was already tried, and a message to us already written — one field to check and one click, instead of an apology and an empty support form to compose from scratch. `AI Chat`
 
+- An open conversation on the `Chat` page now has **Improve** beside **Analyze**. Analyze reads the transcript for where it went wrong; Improve answers the other question — what to change in your docs so the next reader asking this does not need the chat at all, named at the right layer: a page that should exist, a link that should have connected two pages, or a retrieval problem no rewrite will solve. `AI Chat`
+- Every prompt in `Prompts` now suggests what to arm it with. The suggestion is read from your own prompt — its wording, its tools, its tags — and says which part it read, so it is a shortcut you can check rather than one you have to undo later. Both pickers open with it, because "run this when the docs change" and "run this every Monday" are answers to the same question. `Prompts`
+- The event picker now offers every event your workspace can actually react to, in plain words with the machine name under them, grouped the way `Feeds` groups the same events, with a filter box pinned above a list that is now past forty. `Prompts`
+
 ### Changed
 
 - **New chat** now heads your conversations in the assistant's chat list, directly above them, instead of sitting at the very top of the column two groups away from the list it starts one in. It still answers to nothing that is folded. `AI Chat`
@@ -100,6 +104,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The button on `Search rankings` no longer switches SEO, GEO and AEO on for you. It walks you to them instead: the panel moves to `Settings` ▸ `SEO & GEO`, lights each of the three in turn and says what it does and who it is for — search engines, AI answer engines, or featured snippets and voice — and the last step brings you back to `Search rankings`. Each switch stays live under the light, so you can turn one on where you are standing or just press Next. `SEO`
 - Nothing is switched on unless you switch it. If you turned one on along the way, the walkthrough ends pointing at **Load your Google positions**; if you turned none on, it says so and how to go back, rather than promising data that is not coming. `SEO`
 
+- `Analytics` no longer counts you and your team browsing your own docs as readers. Every figure that describes an audience — the dead-end rate, the funnel, the breakdowns, the headline and goals — now leaves your own visits out alongside bots. A workspace with no audience yet used to show visits, a bounce rate and a session time that were entirely its owner checking pages after a publish, which is the one reading that feels like a signal and is not. Your visits are not deleted, only kept out of the reader figures. `Analytics`
+
 ### Fixed
 
 - The rename, pin and delete actions on a chat row are now reachable without a mouse. Tabbing to a row reveals them, and on a touch screen they are always there. Deleting a chat previously appeared on hover only, which no touch device and no keyboard could produce. `AI Chat`
@@ -112,6 +118,14 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - `Outcome` on that card no longer reports a window with no conversations as `Answered 0 / Dead end 0 / Unrated 0`. Three zeros read as three measured failures; nothing measured now says so. And `Coverage gaps` says plainly when it is empty because nothing dead-ended, which is the best reading it has, instead of offering to fix a working assistant. `Analytics`
 - The admin assistant no longer tells you the project you have open is not on Docsbook. It could reach that ending while its own tools were returning your pages and your commit history; when it does now, it is caught and the turn continues on the real project by name instead of offering to create the workspace you are already looking at. `AI Chat`
 - Approving proposed changes in a review card now reliably applies them. The assistant previously had to retype every approved file's full text from scratch to commit it, and on a large batch it could refuse the whole thing rather than risk getting that copy wrong. Approved changes are now committed straight from the proposal you reviewed, so nothing is retyped and nothing is refused. `AI Chat`
+
+- Publishing now refreshes a custom domain straight away. A workspace on its own domain only ever picked up a change when its page cache expired, so a commit could take up to a day to appear on the docs your readers actually visit, while the same change showed immediately everywhere else. `Custom Domain`
+- Large documentation pages no longer fail to render. A page over roughly 250KB could exhaust the renderer's memory and return an error instead of the page; those pages now render with syntax highlighting skipped rather than not at all. `Docs`
+- `docsbook.io/llms-full.txt` now serves the full documentation text instead of a short product summary. It was reading the docs off the server's own filesystem, where they are not present, and silently falling back every time. `AI`
+- Custom-domain workspaces are no longer crawled twice. The same pages were reachable through the `docsbook.io` mirror as well as your own domain, so search engines indexed both and split the ranking between them; the mirror now points at your domain as the original. `SEO`
+- The proposed-changes panel is now readable in dark mode; its diff sat on a light background whatever theme you were using. `AI Chat`
+- An `MCP` scenario tool given a malformed piece of evidence now fails the call and says so, instead of crashing partway through scoring. `MCP`
+- The public skills catalog now spells names the way the rest of the product does — `SEO` and `GEO` rather than "Seo" and "Geo". `Skills`
 
 ### Improved
 

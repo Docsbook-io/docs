@@ -95,6 +95,22 @@ is missing.
 
 Matching is by domain, with `www.` treated as the same site. Other subdomains are not folded in — your docs usually live on one, and counting a click back into the docs as a sale would flatter the number.
 
+### Who counts as a visitor
+
+Two kinds of visit are left out of every reader figure on this page: bots, and
+**you and your team browsing your own docs**.
+
+The second one matters most on a young project. Before this, a workspace with no
+audience yet still showed visits, a bounce rate and a session time — all of them
+you, checking your own pages after a publish. That is the one reading that feels
+like a signal and is not, and it is exactly when you are most likely to act on
+it.
+
+So a number here that is lower than you expected, or zero on a workspace you have
+been opening all week, is the report answering honestly: nobody outside your team
+has read this yet. Your own visits are not deleted, only kept out of the reader
+figures.
+
 ### New and returning visitors
 
 The Visitors chart draws two lines: readers seen for the first time, and readers coming back. Hover any point for the pageviews, pages per visitor, and the returning rate in that hour or day.
