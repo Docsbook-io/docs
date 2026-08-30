@@ -9,7 +9,7 @@ Docsbook ships a Model Context Protocol (MCP) server. Connect Claude Code or any
 
 ## What MCP is
 
-The Model Context Protocol is an open standard for exposing tools, resources, and prompts to AI agents over a typed RPC interface. The Docsbook MCP server exposes 146 tools — 79 named tools, one registration tool per webhook event (18 typed events), four background-run tools, and 45 scenario tools that each answer one question about your documentation or about the business it serves, with a validated JSON payload — covering the full product surface.
+The Model Context Protocol is an open standard for exposing tools, resources, and prompts to AI agents over a typed RPC interface. The Docsbook MCP server exposes 151 tools — 79 named tools, one registration tool per webhook event (18 typed events), four background-run tools, 45 scenario tools that each answer one question about your documentation or about the business it serves with a validated JSON payload, and five collectors that hand back the evidence those scenarios are built on, with no judgement in it — covering the full product surface.
 
 ## Endpoint
 
@@ -335,6 +335,28 @@ Auditing a site, building one, restructuring it, or standing up the monitors tha
 
 The three that write require a **read-write** token. `run_docs_analyze` does not, because it cannot write.
 
+## Buying the evidence without the opinion
+
+An audit does seven things in one call: gathers, normalises, interprets, judges, scores, ranks, recommends. Run the first two twice and you get the same answer, and anybody can redo them by hand and check. From `judge` onward the answer is the model's. Both halves used to cost the same $0.25, which meant the half you can verify was sold at the price of the half you have to trust.
+
+Five **collectors** are the first half on its own, at **$0.0040** a call:
+
+| Tool | What it hands back |
+|---|---|
+| `collect_page_text` | Your live pages as the wire actually serves them — status, title, meta description, headings, code blocks, and how many words of prose survive with no JavaScript engine — beside the size of the source we store for the same path. The gap between those two is the row: 8 000 characters in the repository arriving as 40 words is a page that is perfect to every check reading the source and unquotable to every assistant reading the page. |
+| `collect_corpus_map` | Every page with its size, heading count and depth, the sections, the stubs, and how much of it navigation reaches. |
+| `collect_assistant_questions` | What readers asked your docs assistant, verbatim, which of it went unanswered, the answer rate with its denominator, and the languages it arrived in. |
+| `collect_traffic` | Who arrived, how the visits ended, which pages they ended on, and the 2–4 page sequences readers walk — four tables, kept apart. |
+| `collect_onsite_search` | What readers typed into your own search box, what returned nothing, and what returned results and got no click — three tables, kept apart, because the first is a missing page and the second is a losing title. |
+
+There is no model in the path, so there is nothing in them to disbelieve — and the payload proves it rather than claiming it. Every answer carries a **`reproduce`** block: the exact MCP calls and the arguments they were made with, per row. Run them yourself and you get the same record back, apart from the timestamp. Nothing an audit returns can offer that, because an audit's answer passed through a model.
+
+What you do not get is a judgement. No findings, no scores, no ranking, no recommendation — those are what the `$0.2500` buys, and a collector that quietly included one would be an audit at a sixtieth of the price.
+
+**When the cheap one is the right one.** With no Search Console connected, `audit_seo` scores its ranking axes as unmeasured and still charges $0.25; `collect_corpus_map` needs no search data, no traffic and no history at all, and hands back real rows on a site that went up this morning. The same applies when you want the numbers an audit was built on before you decide whether to buy the reading of them.
+
+**What is missing is said out loud.** A source that could not be read appears three times — in `skipped`, in `unavailable` with what having it would have added, and in its own `reproduce` row with the reason it failed. A rate with nothing to divide by comes back as `null` with the reason, never as a zero, and every rate carries its denominator.
+
 ## Reading the numbers honestly
 
 Every analytics response carries its own caveats in a `metrics` field. Three matter enough to repeat:
@@ -378,6 +400,7 @@ Every call is charged a **flat price, fixed before the call runs and independent
 | Write | $0.0005 | $0.50 | `update_*`, `create_*`, `set_*`, `register_*` |
 | Analytics | $0.0010 | $1.00 | Scans over the event store: funnels, journeys, retention, feeds |
 | Egress | $0.0020 | $2.00 | `fetch_url`, `test_*`, `replay_*` — anything leaving our network |
+| Probe | $0.0040 | $4.00 | `collect_*` — one family of facts gathered and normalised, with no model in it |
 | AI | $0.0120 | $12.00 | `write_docs`, `search_docs`, `search`, `get_insights` |
 | Agent | $0.2500 | $250.00 | A whole agent run behind one call: `audit_*`, `diagnose_*`, `verify_*`, `map_*`, `find_content_gaps`, `assess_*`, `compare_*`, `plan_*`, `design_*`, `run_docs_*` |
 
