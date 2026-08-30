@@ -31,6 +31,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - An open conversation on the `Chat` page now has **Analyze**, which reads the transcript for the turn where it went wrong and separates the three causes that look alike: the answer is not in your docs, it is there and was not found, or it was found and reads badly. `AI Chat`
 - The assistant's chat list now shows `Scheduled` and `Triggers` before you have any, each ending in a row that takes you to `Prompts` where a scheduled or event-fired chat is actually made. Both used to appear only once they already had runs in them. `AI Chat`
 - Those two fold away and carry their count on the folded line, and a group you have nothing in yet starts folded, opening by itself the first time it runs. Your conversations are not one of them: they stay below, always open, headed by **New chat**. Typing in the search box opens a folded group that has a match in it. `AI Chat`
+- A chat in that list can now be renamed, so a column of conversations that all open "Work out how to…" can be told apart at a glance. Clearing the name you gave it brings back the one taken from your first message. `AI Chat`
+- Chats you keep coming back to can now be pinned, and pinning collects them into a `Favorites` group above everything else in the list. A pinned chat is never the one dropped when the list reaches the number of conversations this browser keeps. Names and pins live in the browser you set them in, like the conversations themselves. `AI Chat`
 - The assistant can now search the web while it works with you, so an answer about anything outside your project — what a competitor charges, what a framework is currently called, whether a convention still holds — arrives with the pages it read rather than from memory. It searches on its own whenever a recommendation rests on the outside world, and you see the search happen in the thread, with the sources it found named by domain. `AI Chat`
 - Search results are treated as a way to pick a source, not to quote one: before any figure, version or price from the web is written into your docs, the assistant opens the page itself. If the search cannot run, it says so instead of answering as though it had searched. `AI Chat`
 
@@ -79,6 +81,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Recommendations are now grouped by the kind of work they are — page text, structure, and workspace settings — each under its own heading with a count, instead of naming the kind in small grey text at the end of the row. `AI Chat`
 
 ### Fixed
+
+- The rename, pin and delete actions on a chat row are now reachable without a mouse. Tabbing to a row reveals them, and on a touch screen they are always there. Deleting a chat previously appeared on hover only, which no touch device and no keyboard could produce. `AI Chat`
 
 - `Analytics` cards no longer flicker between their sample and an empty card every 30 seconds while a switched-off card is on screen, which also restarted an open guide from its first step. `Analytics`
 
