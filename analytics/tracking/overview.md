@@ -145,6 +145,34 @@ The **Feedback** tab of the same card ranks your pages by the thumbs readers gav
 
 Rows are sorted by dislikes first: the page people voted down is the one to rewrite, while an upvoted page only confirms what already works. Both counts are always shown, zeros included.
 
+## A card you have no data for yet
+
+A report with nothing in it teaches nothing, so a card that has none of your own
+rows yet does not render empty. It renders over **sample figures**, faded, with
+one button in the middle of it: **Turn on**.
+
+Pressing it runs a short guide inside that card, over those same sample figures.
+Each step names something on the card by the label printed on it, says how to
+read it — including what the figure is *not* evidence of — and names the move it
+leads to. Finishing or skipping the guide switches the card to your own numbers.
+
+Three things worth knowing about it:
+
+- **It is per card, not per page.** The six figures at the top, each breakdown
+  card, AI Views and the two chat cards are switched on separately. A site with
+  plenty of traffic and no CTA clicks meets the guide on **Conversions** and
+  nowhere else.
+- **It gates nothing.** Every figure on this page was collected the whole time
+  regardless — the switch only decides which of two presentations of the same
+  card you are looking at, and it is remembered in your browser, per workspace.
+  A teammate's view of the card is unaffected, and clearing site data simply
+  offers the guide again.
+- **A card that already has your rows in it is never covered.** It explains
+  itself, so there is nothing for a panel over it to add.
+
+The sample figures are the ones the product tour uses, so what you see before
+switching a card on is the same thing you saw while trying Docsbook out.
+
 ## How to Open
 
 1. Open any page of your documentation site.

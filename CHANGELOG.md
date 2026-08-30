@@ -9,6 +9,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Added
 
+- A card in `Analytics` you have no data for yet now shows sample figures with a **Turn on** button, and pressing it runs a short guide inside that card: each step names a control by the label printed on it, how to read the figure including what it is not evidence of, and the move it leads to. `Analytics`
+- Every panel readout now has a guide of its own — `Conversations`, `Dialogs`, `Goals & funnels`, `Users`, `Live`, `Changes`, `Search rankings`, `Feeds`, the translation reports and the MCP cards included — instead of a three-line summary derived from its upgrade copy. `Dashboard`
 - Your agent can now ask one question and get a checked answer back. Nineteen scenario tools each answer a single question about your docs — which pages are one edit away from traffic they already rank for (`audit_seo`), why traffic fell and what was ruled out (`diagnose_traffic_drop`), which pages you do not have yet (`find_content_gaps`), whether a change actually worked (`verify_change_impact`), whether answer engines can quote you (`audit_geo`), and fifteen more — each returning a structured answer instead of a paragraph to read. `MCP`
 - Every number in those answers has to trace to evidence the run actually gathered, and one that traces to nothing fails the call rather than shipping. An invented figure is no longer something you have to check for. `MCP`
 - Where a scenario tool scores your docs, the score is computed from that evidence with its weights published alongside it, so two runs are comparable; an axis that could not be checked reports as unmeasured rather than as zero. `MCP`
@@ -16,6 +18,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Changed
 
+- Each card on `Analytics` now carries its own **Turn on** rather than one button covering the whole page, so the guide you get explains the card in front of you and a site with traffic everywhere except CTA clicks meets it on `Conversions` alone. `Analytics`
+- Turning a card on now opens its guide directly, and the second "See what this shows" link under the button is gone — it led to the same place the button did. `Dashboard`
+- The **Turn on** panel now fits the card it sits on, dropping to the card's name and the button on a half-width card and to the button alone on a phone; a guide opened on a card that narrow moves to a sheet at the bottom of the screen so its text stays readable and its controls stay reachable. `Dashboard`
+- The setup guides launched from `Recommendations` now walk their steps over sample data. They are written for a workspace set up minutes ago, and three of their stops were explaining an empty table. `Dashboard`
 - The admin panel sidebar's footer no longer names a plan tier next to your account — it now shows a bare usage bar under your account name, with the exact allowance in a hover tooltip. `Dashboard`
 - A tool's page in the `MCP` section now opens straight onto the install card for your AI client, instead of a numbered two-step guide that offered a second way to connect above it. `Dashboard`
 - That same tool page now also shows a full stat row — including price per call and rate limit — and its example prompts can be run directly against your connected assistant, not just copied. `Dashboard`
@@ -28,6 +34,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The reader table's `Goals` column is gone: the goals a reader reached, with how long each took and what each was worth, now open in the hover of their `Completed at` cell, freeing the width that used to push `Last seen` off the right edge. `Analytics`
 - `Completed at` now shows a reader's most recent goal completion on any page that is not already narrowed to a single goal, where it used to be blank. `Analytics`
 - Read time, Visits, Pages and Time to goal now read at the same size as the columns beside them, and every column is wide enough for its own header. `Analytics`
+
+### Fixed
+
+- `Analytics` cards no longer flicker between their sample and an empty card every 30 seconds while a switched-off card is on screen, which also restarted an open guide from its first step. `Analytics`
 
 ### Improved
 
