@@ -25,6 +25,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Running out of balance now names which project ran out, what the call costs, what is left, and where to top that project up, instead of offering a tier to buy or a monthly reset to wait for. `MCP`
 - MCP spend now appears as its own row in `Spend by source`, so the balance no longer drops further than "spent" can account for. `Dashboard`
 - The admin chat no longer draws a second floating top bar over the one already there. `AI Chat`
+- The reader table's `Goals` column is gone: the goals a reader reached, with how long each took and what each was worth, now open in the hover of their `Completed at` cell, freeing the width that used to push `Last seen` off the right edge. `Analytics`
+- `Completed at` now shows a reader's most recent goal completion on any page that is not already narrowed to a single goal, where it used to be blank. `Analytics`
+- Read time, Visits, Pages and Time to goal now read at the same size as the columns beside them, and every column is wide enough for its own header. `Analytics`
 
 ### Improved
 
