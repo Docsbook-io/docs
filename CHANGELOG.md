@@ -58,6 +58,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Beside it, an **Impact** column says what running it typically moves and which way — support load, upkeep hours, manual watching, time to an answer, citations, markets, traffic, conversion — green for up and red for down, where down is the good one on anything that costs you. `Prompts`
 - Both are estimates of what prompts of that kind do, and both say so when you hover them: neither is a reading off your own workspace, and the cost hover breaks the figure into the calls and the turns it is made of. `Prompts`
 
+- `Prompts` gained an **Impact** menu of its own beside **Filters**, for the prompts that move one particular thing — support load, upkeep hours, manual checks, time to an answer, citations, markets, traffic, conversion. It asks what you are trying to move rather than what a prompt is about, so a support inbox on fire collects the prompts that help with it whatever they are tagged and whether or not you have ever touched one. Picking two means either would help, not both at once, and every family carries the count it would leave. `Prompts`
+- The Impact chip on a row is the same narrowing, so pressing one is the shortcut to the menu. It narrows by the kind of payoff, never by the size of it. `Prompts`
+
 ### Changed
 
 - Creating a site without an account is now one field. `Create` used to open on three cards asking whether what you have is a website, a repo or files, and each card led to its own form. You now paste the one thing you came with — a site, a GitHub repo, a PDF or screenshots, or a sentence about what you sell — and Docsbook works out which it is. The heading names what the field takes, and **Add GitHub URL** and **Add website URL** in the **+** menu drop the start of a link into it. `Create`
@@ -127,6 +130,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - `Analytics` no longer counts you and your team browsing your own docs as readers. Every figure that describes an audience — the dead-end rate, the funnel, the breakdowns, the headline and goals — now leaves your own visits out alongside bots. A workspace with no audience yet used to show visits, a bounce rate and a session time that were entirely its owner checking pages after a publish, which is the one reading that feels like a signal and is not. Your visits are not deleted, only kept out of the reader figures. `Analytics`
 
 - The `Tags` column in `Prompts` is now off by default, one click away in the **Columns** menu. The prompt itself already says what it is about in the widest column on screen, and the **Filters** menu keeps every label — including the ones a truncated cell never showed — so narrowing by one is unchanged. `Prompts`
+
+- The `Tools` column in `Prompts` is now off by default too, alongside `Tags`. The chips named which endpoints the agent would reach for, and both questions you actually decide on — the price and the payoff — are computed from that same list, with the cost hover naming the dearest thing the prompt touches. Every tool is still listed in the row's card, and the column is one click away in **Columns**. `Prompts`
+- The figures in the Impact column are smaller and more careful than they shipped this morning: single digits and low teens rather than numbers in the thirties and forties. They are what a documentation change plausibly moves, not what a landing page would claim. `Prompts`
 
 ### Fixed
 
