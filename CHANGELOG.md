@@ -52,6 +52,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The two figures above those tables are kept apart on purpose. AI answers and MCP calls are **charged** — that money came off your balance — while events are **priced** so the traffic is not invisible and nothing is deducted for them, and every section says which it is. One total covering both would be a bill for money nobody took. `Feeds`
 - Pick a window of **24 hours**, **7 days** or **30 days**, and export what you are looking at: the breakdown itself as a spreadsheet, with each line's cost as a number you can sum and a column saying whether it was charged, or the raw events behind it bounded by the same window. `Feeds`
 - **See usage** on the balance card in the sidebar now opens that breakdown. It used to open the billing screen, which answers a different question with the same word: a balance says how much is left, never what took it. **Top up**, beside it, still goes to billing. `Dashboard`
+- The `Chat` page now has an **Open chat** button beside its title, which opens the actual reader-facing chat on your published docs — not the admin assistant this panel already offers on its own `AI Chat` tab. `AI Chat`
 
 ### Changed
 
@@ -141,6 +142,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The proposed-changes panel is now readable in dark mode; its diff sat on a light background whatever theme you were using. `AI Chat`
 - An `MCP` scenario tool given a malformed piece of evidence now fails the call and says so, instead of crashing partway through scoring. `MCP`
 - The public skills catalog now spells names the way the rest of the product does — `SEO` and `GEO` rather than "Seo" and "Geo". `Skills`
+- The empty state on `Translations`' overview totals no longer blurs, matching the reader map's card a few hundred pixels below it on the same page: a dimmed sample with a floating card, not a blurred one. `Translations`
 
 ### Improved
 
