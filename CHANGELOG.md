@@ -143,6 +143,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - An `MCP` scenario tool given a malformed piece of evidence now fails the call and says so, instead of crashing partway through scoring. `MCP`
 - The public skills catalog now spells names the way the rest of the product does — `SEO` and `GEO` rather than "Seo" and "Geo". `Skills`
 - The empty state on `Translations`' overview totals no longer blurs, matching the reader map's card a few hundred pixels below it on the same page: a dimmed sample with a floating card, not a blurred one. `Translations`
+- Every other card that shows a sample behind its **Fix it** button — the docs assistant's tabs, `Goals & funnels`, and the rest sharing that same backdrop — no longer blurs it either, matching the `Translations` fix above. `Dashboard`
 
 ### Improved
 
