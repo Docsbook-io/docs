@@ -34,6 +34,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The assistant can now search the web while it works with you, so an answer about anything outside your project — what a competitor charges, what a framework is currently called, whether a convention still holds — arrives with the pages it read rather than from memory. It searches on its own whenever a recommendation rests on the outside world, and you see the search happen in the thread, with the sources it found named by domain. `AI Chat`
 - Search results are treated as a way to pick a source, not to quote one: before any figure, version or price from the web is written into your docs, the assistant opens the page itself. If the search cannot run, it says so instead of answering as though it had searched. `AI Chat`
 
+- Each improvement the assistant recommends now carries what it is expected to gain: a range of extra search clicks, and beside it what that is worth per month. Both are computed from your own Search Console history and the value you have declared a visit to have, never written by the assistant, and hovering the row shows the arithmetic — impressions, clicks, the rate the page converts at today, and the rate pages at its position typically manage on your site. `AI Chat`
+- Those figures say nothing they cannot support. A page already doing better than its position predicts shows how much traffic the change touches rather than a gain; a structure or settings recommendation carries no prediction at all, because neither changes how often a listing is clicked; and a page with too little search history shows an empty space rather than a zero. Every prediction is marked an estimate while the assumption behind it is reasoned rather than measured against what past changes actually did. `AI Chat`
+
 ### Changed
 
 - **New chat** now heads your conversations in the assistant's chat list, directly above them, instead of sitting at the very top of the column two groups away from the list it starts one in. It still answers to nothing that is folded. `AI Chat`
@@ -69,6 +72,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Every tab in an `Analytics` card now says on hover what its list actually counts, so "Exit" reads as the page people leave from rather than one that failed, "Direct / None" as traffic with no referrer rather than missing data, and "Lang" as the reader's browser preference rather than the language your docs are written in. `Analytics`
 - The second built-in feed in `Feeds` is now **Reader events**, everything the people reading your docs did: pages read, searches run, questions asked of the AI and feedback left. It replaces **Unanswered questions**, which only filled up where an answer came up empty; those two event types are still one click away in the Workspace filter. `Feeds`
 - Every button in the admin panel that starts the assistant on a ready-made prompt — an **Improve** on a reader, a goal or a funnel step, a **Run** in `Prompts`, an example on an `MCP` tool's page — now opens a new chat instead of adding a turn to whichever conversation you had open last. The one you were already having stays as you left it, and the new question is answered on its own rather than in the context of an unrelated one. `AI Chat`
+
+- A recommendation is now one row instead of a paragraph: the change, how much it matters, the pages it touches as chips carrying the icon of what each one is, and the forecast on the right. The explanation moved to hover, and on a touch screen it stays under the title. Five recommendations that filled 789 pixels now take 565, so a set of seven can be compared without scrolling. `AI Chat`
+- Recommendations are now grouped by the kind of work they are — page text, structure, and workspace settings — each under its own heading with a count, instead of naming the kind in small grey text at the end of the row. `AI Chat`
 
 ### Fixed
 
