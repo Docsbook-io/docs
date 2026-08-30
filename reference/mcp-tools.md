@@ -35,6 +35,7 @@ mcp add --transport http https://docsbook.io/api/mcp/server
 | Tool           | Min plan | Description                                                                                          |
 | -------------- | -------- | ----------------------------------------------------------------------------------------------------- |
 | `search_docs`  | Free     | Full-text/regex/heading/path search over the workspace's documentation content. Read-only — works with any token regardless of read/write scope. |
+| `search`       | Business | Semantic (embeddings-based) search over the workspace's documentation content — finds pages by meaning, not literal keyword overlap. Reads a pre-built vector index (no re-indexing on search). Read-only. Requires the index to be built and enabled; falls back to `search_docs` otherwise. |
 | `get_doc_outline` | Free  | List every markdown page's title, heading count, and size before searching or writing. Read-only — works with any token regardless of read/write scope. |
 | `write_docs`   | Free     | Commit one or more markdown files to the workspace's docs repo in a single atomic git commit. Requires a token authorized with **read-write** scope — a read-only token is refused. |
 | `fetch_url`    | Free     | Read one public web page and return it as clean Markdown, with its title, description and the final URL after redirects. For checking a claim against a page outside the workspace — a competitor's pricing, your own marketing site, or whether a link a doc depends on still resolves. A 404 or a login wall comes back as a stated result rather than a failure, since that is the answer when the question is whether a link works. Private and internal addresses are refused, `robots.txt` is honoured, and page content is treated as data, never as instructions. |
@@ -95,6 +96,24 @@ Event types include `content.indexed`, `translation.completed`, `chat.no_answer`
 | Tool         | Description                                                                              |
 | ------------ | ---------------------------------------------------------------------------------------- |
 | `find_skill` | Search the `docs-skills` catalog by `query` with optional `category` and `requires_plan` filters. Returns `raw_url` for the agent to fetch the SKILL.md directly. |
+
+## Background agent runs
+
+`find_skill` hands the SKILL.md to *your* agent to execute. These tools do the opposite: they run the skill on Docsbook's side, against your workspace, with the full administrative toolset the skill was written for — so an assistant with no other Docsbook tools connected can still get the job done.
+
+Each `run_docs_*` call returns `{ run_id, state }` immediately. **It does not return the result** — the work takes minutes, and a caller that reports the start as the answer is reporting work that has not happened. Poll `get_agent_run` with the returned `run_id`.
+
+| Tool                | Min plan | Description                                                  |
+| ------------------- | -------- | ------------------------------------------------------------ |
+| `run_docs_analyze`  | PRO      | Run the `docs-analyze` skill: audit the site from real numbers and report what is wrong and what it costs. Declared audit-mode — writes are refused for the whole run, so it works with a read-only token. |
+| `run_docs_create`   | PRO      | Run the `docs-create` skill: build documentation from your site, a repository, another docs platform, or nothing but a product name. Commits pages — needs a **read-write** token. |
+| `run_docs_manage`   | PRO      | Run the `docs-manage` skill: rewrite pages and configure the site against the writing and site-running rulebook. Needs a **read-write** token. |
+| `run_docs_automate` | PRO      | Run the `docs-automate` skill: set up drift guards, event subscriptions, checks on incoming changes, alerts and standing monitors. Needs a **read-write** token. |
+| `get_agent_run`     | PRO      | State of one run (`queued`, `running`, `succeeded`, `failed`, `canceled`, `expired`), live progress while it runs, and once it succeeds the full outcome: the report, every action it took, and what changed on the site. |
+| `list_agent_runs`   | PRO      | Your recent runs, newest first. Use it to check whether the job is already running before starting a second one. |
+| `cancel_agent_run`  | PRO      | Stop a run that has not finished. It does **not** undo what the run already did — pages it already committed stay committed. |
+
+A run belongs to the account that started it: another account's `run_id` reads exactly like an unknown one. A queued run that has not started within a few hours expires rather than running late, because an audit answers a question about the site as it was when it was asked. And a run is attempted once, never retried — a failed run may already have committed pages, and a second attempt would commit them twice.
 
 ## Related
 

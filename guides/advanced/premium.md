@@ -26,7 +26,7 @@ A subscription is bought once per **account**, not per project. It grants a numb
 | Privacy & access (password / SSO) | ❌ | ❌ | ✅ |
 | Bring your own AI/translation API key | ❌ | ❌ | ✅ |
 | Semantic search over your docs | ❌ | ❌ | ✅ |
-| Webhooks | 0 | 25 | 100 |
+| Webhooks | ❌ | ∞ | ∞ |
 | Free trial | — | 14 days | 14 days |
 
 ## On Every Plan (including Free)
@@ -96,7 +96,6 @@ These capabilities are exclusive to the **Business** plan — Pro does not inclu
 - **Hosted, interactive API reference** — renders your OpenAPI/Swagger spec on its own page.
 - **Changes impacts** — what a docs change did to traffic and answers afterward.
 - **Collaborators** — invite your team into one live AI chat session.
-- **More webhooks** — up to 100 per workspace, versus 25 on Pro.
 - **Done-for-you setup** — migration to Docsbook, full branding setup, AI agents configured for your docs, and Slack & PR integrations set up for you.
 
 ## Project Seats

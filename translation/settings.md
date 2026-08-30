@@ -94,7 +94,7 @@ Each language version is indexed separately by search engines, which means passi
 
 Open **Translations** in the settings panel. One interval dropdown at the top governs the whole page, and everything under it reports the window you picked:
 
-- **Savings** — what a human translator would have charged for the same word count, minus what the AI translation actually cost you. The translator rate is an industry estimate, not a quote you received, so read this as an order of magnitude rather than an invoice.
+- **Savings** — what a human translator would have charged for the same content at $5 per 1,000 characters, minus what the AI translation actually cost you. The translator rate is an industry estimate, not a quote you received, so read this as an order of magnitude rather than an invoice.
 - **Visitors** — unique readers who landed on a translated page, with crawlers excluded.
 - **Conversion** — how much better or worse readers of translated pages convert compared with readers of your original-language pages. A negative number is a real answer, not an error: it means the translated pages are reaching people who bounce, and it is worth knowing.
 
@@ -133,11 +133,15 @@ missing measurement can never look like a missing translation.
 
 ## One Language at a Time
 
-The page above covers every language at once, which is not the question you act on. That one is always about a single language: keep paying for German, or not. So each language has a page of its own — click **Translations** in the sidebar and pick it from the list.
+The page above covers every language at once, which is not the question you act on. That one is always about a single language: keep paying for German, or not. So each language has a page of its own — click **Translations** in the sidebar, then pick the language from the tabs across the top of the page.
 
-### Is this language keeping up?
+### At the top: is it on, and is it keeping up?
 
-The page opens on that question, because it is the one you act on daily — a conversion lift measured over a week is worth nothing if it was measured on pages that went stale a fortnight ago. At the top of every language page:
+Beside the language's name sits everything you can *do* to it, on one line: the on/off **switch**, a state chip saying whether the language is level with your docs and when it was last written to, and a button that runs a translation now.
+
+The switch is here, and not only in settings, so you can act on what the page just told you. Turning a language **on** still quotes the bill first, exactly as it does in settings — the same confirmation dialog, not a cheaper-looking second way to start spending. Turning one **off** asks nothing, because it costs nothing and deletes nothing.
+
+The state chip opens onto everything behind that one word:
 
 - **Coverage** — one percentage, over a bar split by the *kind* of gap. Pages that are translated and current, pages whose source has since changed, and pages never translated at all are three different colours, because they call for different responses. A page that fell behind is telling your reader something your docs no longer say; a page never translated simply falls back to your original.
 - **Last update** — when this language was last written to, and which commit your docs are currently at.
@@ -145,16 +149,38 @@ The page opens on that question, because it is the one you act on daily — a co
 - **Recent runs** — the last dozen runs as a strip, coloured by how each one ended. One failed run is a blip; a strip that has not finished cleanly in a month is a problem, and a single "last run failed" cannot tell you which you have.
 - **Why it stopped** — when a run ended short, the reason in plain words: budget exhausted, provider quota, an unreadable repository.
 
-The language's on/off **switch** lives here too, so you can act on what the panel just told you without going back to settings. Turning one **on** still quotes the bill first, exactly as it does in settings — it is the same confirmation dialog, not a cheaper-looking second way to start spending. Turning one **off** asks nothing, because it costs nothing and deletes nothing.
+The run button holds the two ways to start one by hand: **Translate now**, which fills in what is missing or behind, and **Re-translate everything**, which discards what is stored and translates the whole thing again.
 
-The number that page is built around is one the overview cannot show you: **how many people from that language's countries visit your docs at all**, in whatever language they end up reading. On its own, "180 readers in German" tells you nothing — it could be your entire German-speaking audience or a rounding error. Against 1,240 visitors from German-speaking countries it is a decision, and the 1,060 who never landed on the translation are either the reason to keep it running or something to go look at.
+### Did it pay off, and what did it cost?
 
-Around that comparison the page shows which of the language's countries the translation reached and which it missed, both counts day by day, the pages those readers actually opened, how they converted against your original pages, and what the language has cost you against a human translator.
+Two rows of figures, and neither reads correctly without the other — 180 readers is a good week or a waste depending on whether they cost you four dollars or four hundred.
 
-Two things worth knowing about how it counts:
+The first row is **who it reached**. The number it is built around is one the overview cannot show you: **how many people from that language's countries visit your docs at all**, in whatever language they end up reading. On its own, "180 readers in German" tells you nothing — it could be your entire German-speaking audience or a rounding error. Against 1,240 visitors from German-speaking countries it is a decision, and the 1,060 who never landed on the translation are either the reason to keep it running or something to go look at. Beside it: how those readers convert against readers of your original pages, and how much of your documentation carries this language at all.
+
+The second row is **what it cost to reach them, and what it brought in** — what you have spent, what that saved against a human translator's rate, what those readers were worth in revenue (based on your Call To Action and Average Product Price — set both to see a figure here, and Docsbook names whichever one is missing rather than showing a blank as if it earned nothing), and how much of the work was served from cache rather than sent to the model again.
+
+Every figure in both rows explains itself: press the **?** beside its name for what it counts and what it does not.
+
+Two things worth knowing about how the audience is counted:
 
 - A language is measured against **all** its countries, not one. Portuguese is Brazil and Portugal, Spanish is sixteen countries, German is five.
 - Readers of a language who are **not** in its countries — diaspora, travellers, anyone who simply prefers it — are reported separately rather than folded into the share. A language read entirely outside its own countries still has a real audience, and you can see it.
+
+### Did the translation follow what you shipped?
+
+Below the figures is the one part of the page that names something to go fix: your documentation's commits, newest first, each with a verdict on how its pages stand in this language.
+
+It is asked per commit rather than per page because a commit is what you remember. "The pricing rewrite went out on Tuesday" is a thing you know; "one file under `pricing/` is behind" is a thing you would have to work out. A commit with nothing amber has been followed in full, and you can skip the row without opening it.
+
+Each commit also shows what translating it into this language cost and which AI model did the work, next to the author's avatar and how long ago it landed. The cost is worked out from when the translation call happened relative to the commit — Docsbook does not record a commit hash against every AI call, so a call that lands before any commit you can see stays uncosted rather than being guessed onto the nearest row.
+
+Open a commit to see every documentation page it touched, each marked **translated**, **behind**, **not translated**, **manual** (written or uploaded by a person, so its freshness is that person's call) or **removed** (a path your source has since renamed or deleted). Open a page to read the change itself — the patch, fetched from your repository at that moment and labelled as the source-language revision your translation is judged against, not the translated text itself.
+
+The state is always how the page stands **now**, not how it stood on the day of that commit. What you can act on is whether your readers are being served the right thing today, and a commit since superseded by a newer one is exactly how a page ends up behind.
+
+### Who actually read it
+
+The page ends on the readers themselves — the same table as **Users**, narrowed to this language and opened on its widest set of columns: where each reader connected from, which translation they read, what they came through, how far they got, which goals they reached and what they are worth. By the time you reach it the totals above are already answered, and the question left is which of these people to go talk to.
 
 A language you switch off keeps its page. Turning one off deletes nothing, so its pages, its cost and its past readers are all still there — shown as history, next to the country audience that keeps arriving whether or not there is a translation waiting for them. That pairing is what answers "should I turn this back on?".
 

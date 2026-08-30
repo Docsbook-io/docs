@@ -51,23 +51,35 @@ A 2xx response = delivered. Anything else triggers retry until the attempt budge
 ## Seeing what your workspace emits
 
 The **Feeds** panel in your admin shows every event the workspace produced, newest first —
-**including events no alert was watching**. You do not need a webhook registered to see the feed
+**including events no alert was watching**, and every MCP tool call made against it. You do not need a webhook registered to see the feed
 fill up, which is the point: it is how you find out which events your docs actually emit before you
 decide what to be notified about. The feed is live — it refreshes itself every few seconds while
 you're looking at it, so there is no time range to pick and nothing to remember to reload.
+
+### Picking a feed
 
 Which feed you're reading — the built-in ones or a list you saved — is picked from rows in the
 sidebar's **Feeds** section rather than a page of its own; the row you're on is highlighted, and a
 `+` on the section creates a new list from an empty filter. There is no separate title above the
 feed: the highlighted row already says what you're looking at.
 
-The feed itself reads in day sections, and each item is one event: a coloured tile for its type,
-the one-line summary, and where it went — plus the reader's avatar, when the event was caused by
-one (a plan or usage event has nobody to attribute it to). Status, event type and destination show
-as small glyphs with the word a click away in a popover, so a dense row still fits an avatar.
-Clicking a card expands it in place to show the full event — every delivery attempt with its
-response, replay, and the raw payload. An event carries a single status, folded from its
-deliveries with the worst outcome winning:
+Four feeds are built in — **All events** (unfiltered), **Unanswered questions**, **Reader
+feedback** and **Delivery trouble** — so there is something to open on your first visit, before
+you have saved anything of your own. They are starting filters rather than saved lists, so they
+cannot be deleted and nothing can be pointed at them directly. Narrow one and **Save as list**
+turns it into a feed of your own, which appears as its own row in the sidebar and is the form an
+alert can be attached to.
+
+### Reading the feed
+
+The feed reads in day sections, and each item is **one line**: the reader's avatar when a reader
+caused the event (a plan, usage or MCP event has nobody to attribute it to), a coloured tile for its
+type, the event name, the one-line summary, and where it went. Status, event type and destination
+show as small glyphs with the word a click away in a popover, so the whole thing stays one line.
+Times are clock times, since the day is already named by the section above. Clicking a row expands
+it in place to show the full event — every delivery attempt with its response, replay, and the raw
+payload. An event carries a single status, folded from its deliveries with the worst outcome
+winning:
 
 | Status | Meaning |
 |---|---|
@@ -77,13 +89,45 @@ deliveries with the worst outcome winning:
 | `failed` | A destination refused it and the budget is exhausted. |
 | `not sent` | It happened, and no alert was subscribed to it. |
 
+### MCP tool calls in the feed
+
+The feed also shows **every MCP tool call an agent made against this workspace**, alongside the
+events your docs dispatched. One line per call: the tool it called, whether it worked, how long it
+took and what it cost at the list price on the [MCP rate card](/ai/mcp). Failed calls say so.
+Calls that were not about any one project — describing the server, listing your projects, creating
+one — belong to your account rather than to a project, so they appear in no project's feed.
+
+They are shown **by default**; there is nothing to switch on. In the **Add event** picker they sit
+in their own **MCP calls** section, filtered by the call's *billing class* — `mcp.read`,
+`mcp.write`, `mcp.query`, `mcp.egress`, `mcp.generate`, `mcp.agent` — rather than by tool name,
+which is the axis that costs you money and the one that keeps working as new tools ship. The tool's
+own name is on every row and in every payload, so filtering to one tool is a payload search away.
+Free calls (`get_info`, `find_skill`, `find_widget` and the rest of discovery) are never metered
+and so leave no row.
+
+A tool call was never forwarded anywhere, so it reads as **not sent** and, like reader activity, it
+drops out the moment you filter by destination or by a delivery status. Pinning a *visitor* also
+drops it: an agent holding a token is not one of your readers, and counting its calls as somebody's
+browsing would be wrong.
+
+### Narrowing the feed
+
 Filter the feed by event type, status, destination, visitor, a completed goal, or free text matched
 anywhere in the payload — one toolbar row above the feed, no title above it. Each of the first five
 facets is an icon button: hover or focus it to see its name, and once it's set it fills in with the
-value itself. Free text is its own always-visible search box at the end of that row rather than a
-facet you open first. A visitor filter is one click away from **Analytics** — open a reader there
-and jump straight to everything they did — one click away from a card's own avatar in the feed
-itself, or a pasted-in id by hand. Saving a filter turns it into
+value itself, and clicking that value edits it again. Free text is its own always-visible search box
+at the end of that row rather than a facet you open first. A visitor filter is one click away
+from **Analytics** — open a reader there and jump straight to everything they did — one click away
+from a row's own avatar in the feed itself, or a pasted-in id by hand. Pinning a reader widens what
+the feed searches: alongside the events your docs dispatched, it pulls that reader's own activity on
+the site — the pages they read, what they searched, what they asked — so a pinned feed is everything
+that reader did, not only the parts an alert could have fired on. It also puts a card above the
+feed saying who that reader is: where they read from, on what device, system and browser, the
+language they read in, the page they keep coming back to, how long they have spent reading your
+docs in total, the goals they have reached, and what they are worth today as well as what they
+might still be. The card is for a single pinned reader
+only, since a goal filter is a crowd and one country and one browser averaged over a crowd
+describe nobody. Saving a filter turns it into
 an **event list** — so narrowing the feed and defining what to be notified about are the same
 gesture. Test pings appear in the feed like any other event; a replay shows up as another attempt
 under the event it belongs to. **Export** downloads exactly what you are looking at, filters applied
@@ -109,8 +153,8 @@ Untick a list and the notifier stops firing on it; untick the last one and the d
 attached to nothing, delivering nothing until you point it somewhere again. Deleting an event list
 does the same to whatever fired on it — a subscription is never widened by losing its list.
 
-Only saved lists can be served: the unfiltered **All events** view is the feed's default, not a
-list, so save the filter you want first.
+Only saved lists can be served: the built-in feeds, **All events** among them, are filters rather
+than lists, so save the one you want as a feed of your own first.
 
 ## Event catalog
 

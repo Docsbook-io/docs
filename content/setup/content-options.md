@@ -69,13 +69,13 @@ The Copy page dropdown includes Copy Skills.md URL, View as Markdown, and one-cl
 
 Shows the AI controls on the page. Requires the AI Agent to be enabled.
 
-On the page itself this renders as an icon button in the bottom toolbar.
-Readers get **Chat**, which opens the AI assistant. Signed-in owners also get
-**Editor**, which arms block-level editing of the live page. Pressing whichever
-one is active returns the page to its normal state.
+On the page itself this renders as an **Ask AI** button in the action row above
+the content, next to **Copy page**. Pressing it opens the question box at the
+bottom of the page, already pointed at the page being read; pressing it again
+puts the box away.
 
 You can show it:
-- On the page (the toolbar button, above the content)
+- On the page (the action row above the content)
 - In the right outline panel (table of contents area)
 
 Both can be on at the same time if you want maximum discoverability.

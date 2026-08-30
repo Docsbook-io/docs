@@ -86,7 +86,7 @@ Claude understands context. It knows that "run the command" means `ejecuta el co
 
 ### Quality at Scale
 
-Human translators cost $0.10–$0.30 per word. A 50-page documentation site is typically 25,000–40,000 words. That's $2,500–$12,000 per language — before you account for updates.
+Human translation agencies typically bill per word, which breaks down as a measure the moment a language has no whitespace-delimited words to count — Chinese and Japanese, most notably. Docsbook prices the counterfactual at $5 per 1,000 characters instead, a measure that works the same way in every language, and that is the number the "Saved" figure on your Translations dashboard is built on. For a documentation site of any real size, that adds up to real money per language — before you account for updates.
 
 With Docsbook, translation is included in your plan. Re-translating an updated page is a click, and you are only charged for the sections that actually changed. No invoices. No turnaround time. No coordination overhead.
 

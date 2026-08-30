@@ -114,6 +114,8 @@ Turn any top-level repository folder into its own tab in the subheader — the r
 
 A folder shown in the subheader can also be hidden from — or kept in — the left sidebar independently; see the **Folder Visibility** card next to Subheader Folders for that toggle.
 
+One folder is exempt: **Getting Started** always stays in the sidebar, and its toggle is locked on. It is where a reader who closes the introduction early goes back to, so hiding it strands them with no way to return.
+
 ---
 
 > **Build the navigation experience your readers need.**

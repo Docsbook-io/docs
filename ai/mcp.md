@@ -9,7 +9,7 @@ Docsbook ships a Model Context Protocol (MCP) server. Connect Claude Code or any
 
 ## What MCP is
 
-The Model Context Protocol is an open standard for exposing tools, resources, and prompts to AI agents over a typed RPC interface. The Docsbook MCP server exposes 84 tools — 66 named tools plus one registration tool per webhook event — covering the full product surface.
+The Model Context Protocol is an open standard for exposing tools, resources, and prompts to AI agents over a typed RPC interface. The Docsbook MCP server exposes 94 tools — 76 named tools plus one registration tool per webhook event (18 typed events) — covering the full product surface.
 
 ## Endpoint
 
@@ -23,7 +23,7 @@ Authentication is OAuth 2.0 Authorization Code with PKCE. Bearer tokens are retu
 
 The Docsbook MCP server is a remote HTTP server with OAuth — every modern MCP client can connect to it using the same endpoint.
 
-You can also browse the catalog inside your own project: open the admin panel, pick `Agents` in the sidebar, then `MCP`. It lists every tool the server serves right now — read live from the server rather than from a written-down copy — with each tool's description, its arguments, price and rate limit, and example prompts you can copy for your own client or run directly against the project's connected assistant.
+You can also browse the catalog inside your own project: open the admin panel and pick `MCP` in the sidebar. It is a table of every tool the server serves right now — read live from the server rather than from a written-down copy — with each tool's billing class, price per call, how much of your monthly allowance it buys, its rate limit, and whether readers can call it without a token. Search it, filter it by billing class, or sort by any column; opening a row gives that tool's own page — what it does, its arguments, example prompts you can copy for your own client or run directly against the project's connected assistant, and the install card for your client.
 
 ### Claude Code
 
@@ -219,6 +219,7 @@ Diagnosis without a fix is a report. These close the loop inside one connection.
 | Tool | What it is worth | Min plan |
 |---|---|---|
 | `search_docs` | Verbatim, citable sections — text, regex, heading or path modes. What an agent reads *before* editing so it changes the right lines. | Free |
+| `search` | Semantic (embeddings-based) search — finds a page by what it *means*, not what it literally says, using a pre-built vector index. Catches the natural-language question that phrases nothing like the page title. Falls back cleanly to `search_docs` when no index is built yet. | Business |
 | `get_doc_outline` | Every page with title, heading count, size. Cheap orientation before a search or a write. | Free |
 | `write_docs` | Commits one or many markdown files in **one atomic git commit**. Turns analysis into a shipped change. | Free |
 | `fetch_url` | Reads one public web page as clean Markdown. The tool that lets an agent check a page against the world outside your workspace — a competitor's pricing, your own marketing site, or whether a link a doc depends on is still alive. | Free |
@@ -317,6 +318,23 @@ weekly:  get_content_health  → take the worst 3
 
 Documentation that repairs itself and shows its work — "saw the problem" and "fixed the problem" without leaving the connection.
 
+## Handing over the whole job
+
+Every tool above answers inside the call that asked for it. Four do not, and that is the point of them.
+
+Auditing a site, building one, restructuring it, or standing up the monitors that keep it honest is minutes of work — reading pages, reasoning over numbers, committing files. `find_skill` handles that by handing the SKILL.md to *your* agent, which only works if your agent is also connected here, has picked a workspace, and will spend twenty tool calls on it. These four run the skill on our side instead, against your workspace, with the full administrative toolset the skill was written for.
+
+| Tool | What it is worth | Min plan |
+|---|---|---|
+| `run_docs_analyze` | The full `docs-analyze` audit, run for you: what is wrong, judged from search positions, reader behaviour and your own goals — plus the gap no number shows, the audiences and use cases the docs never address. It is declared audit-mode, so it cannot change anything and works with a read-only token. | PRO |
+| `run_docs_create` | The full `docs-create` pipeline: audit the product, decide the structure, write the pages, publish. From your site, a repository, another platform you are leaving, or a product name alone. | PRO |
+| `run_docs_manage` | The `docs-manage` rulebook applied rather than quoted: pages rewritten, the site configured, goals and funnels declared. Use it when the request is a judgement ("make this good") rather than a value ("set the accent to #0f0"). | PRO |
+| `run_docs_automate` | `docs-automate`, so the checks keep happening: drift guards, webhooks, CI checks, alerts and standing monitors. | PRO |
+
+**Starting a job and reading its outcome are two separate calls.** A `run_docs_*` call returns `{ run_id, state: "queued" }` — never findings, never pages. `get_agent_run` returns the state, live progress while it runs, and once it has succeeded the report, every action the run took, and what changed. `list_agent_runs` finds a run id you lost; `cancel_agent_run` stops one that has not finished, without undoing what it already committed.
+
+The three that write require a **read-write** token. `run_docs_analyze` does not, because it cannot write.
+
 ## Reading the numbers honestly
 
 Every analytics response carries its own caveats in a `metrics` field. Three matter enough to repeat:
@@ -338,16 +356,47 @@ Use `search_docs`/`write_docs` when the agent only has an MCP connection (no loc
 
 Each tool declares a minimum plan. The server returns a structured error when a tool is called below the required tier.
 
+This table is about **availability, not price** — "Free" here means the Free plan can call the tool, not that the call is free. What a call costs is [below](#what-a-call-costs).
+
 | Plan | Available tool groups | What you can decide with it |
 |---|---|---|
 | Free | Workspace, branding, UI, navigation, traffic analytics (24h), `find_skill`, `find_widget`, `search_docs`, `get_doc_outline`, `write_docs` (with a read-write token), SEO/GEO/AEO | Whether readers arrive at all |
-| PRO | + `get_search_rankings`, AI settings, languages, translations, private docs (`update_access`), demand gaps, **visit outcomes, dead-end pages, content health, route patterns, funnels, change history** | Which page is costing you customers, and whether the fix worked |
+| PRO | + `get_search_rankings`, AI settings, languages, translations, private docs (`update_access`), demand gaps, **visit outcomes, dead-end pages, content health, route patterns, funnels, change history**, background agent runs (`run_docs_analyze` / `_create` / `_manage` / `_automate`, `get_agent_run`, `list_agent_runs`, `cancel_agent_run`) | Which page is costing you customers, and whether the fix worked |
 | PRO+ | + `get_insights`, `get_chat_intent`, `get_visits`, page journeys, top visitors, visitor drill-down, chat hooks, `query_events` | Who is deciding whether to buy, and what blocks the purchase |
 | Business | + webhooks, `get_retention`, bring-your-own AI/translation API key | Long-run retention, and reacting without opening a dashboard |
+
+## What a call costs
+
+Plan gating decides **whether** a tool answers you. This decides **what the answer costs**, and the two are separate: a tool listed as available on Free is available on Free, and calling it still draws on your balance.
+
+Every call is charged a **flat price, fixed before the call runs and independent of the size of the answer**. The same reporting call costs the same on a site with ten pages and one with ten thousand. The price is decided by what serving the call makes us do:
+
+| Class | Per call | Per 1 000 calls | Tools |
+|---|---|---|---|
+| Included | Free | Free | `get_info`, `find_skill`, `find_widget`, `list_workspaces`, `get_workspace`, `create_workspace` |
+| Read | $0.0002 | $0.20 | A page, a setting or a registry row we already store |
+| Write | $0.0005 | $0.50 | `update_*`, `create_*`, `set_*`, `register_*` |
+| Analytics | $0.0010 | $1.00 | Scans over the event store: funnels, journeys, retention, feeds |
+| Egress | $0.0020 | $2.00 | `fetch_url`, `test_*`, `replay_*` — anything leaving our network |
+| AI | $0.0120 | $12.00 | `write_docs`, `search_docs`, `search`, `get_insights` |
+
+The exact class and price of every tool is on its row in the **MCP** section of your admin panel, next to how many calls your monthly allowance buys.
+
+**Discovery is free.** Describing the server, finding a skill or a widget, listing your workspaces and creating one are never metered — you should not be charged for the handshake, or for the call that creates the thing being billed.
+
+**It comes off your account balance**, the same monthly allowance the rest of Docsbook's AI work draws on, and it appears as its own line in your usage breakdown. A tool that goes on to do AI work is metered for that work as well; the two add rather than replace each other.
+
+**When the balance runs out**, a metered call is refused before it runs, and the refusal names the price and what you have left. Free discovery keeps working, so your agent can still find out what happened.
+
+**A call that fails is still charged** — the work happened, and the answer says so. A call we never managed to run is not charged.
+
+**You can read the calls line by line.** Every metered call appears in the project's [Feeds](/webhooks#mcp-tool-calls-in-the-feed) panel — which tool, whether it worked, how long it took and what it cost — filterable by billing class. Calls that were about no single project (describing the server, listing your projects, creating one) belong to your account and appear in no project's feed; free discovery calls leave no row at all.
+
+Unauthenticated, repo-scoped access to a public documentation site is never metered.
 
 ## Related
 
 - [MCP tools reference](../reference/mcp-tools.md) — every tool with its parameters and minimum plan.
 - [Chat Hooks](./chat-hooks.md) — Configure pre/post-LLM hooks via MCP.
-- [Docs Skills](./skills.md) — Discover SKILL.md files through `find_skill`.
+- [Docs Skills](./skills.md) — Discover SKILL.md files through `find_skill`, or have one run for you with `run_docs_*`.
 - [Webhooks](../webhooks.md) — Register event handlers from MCP.

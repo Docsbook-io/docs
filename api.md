@@ -13,9 +13,9 @@ build your own support bot, Slack integration, or CLI on top of it.
 
 ## Getting your API key
 
-Open **Integrations** — reachable from your avatar dropdown in the `/chat` input,
-or your profile dropdown in the admin panel. From there you can view (masked or
-revealed), copy, or reset your key.
+Open **Integrations** — reachable from your avatar dropdown in the assistant's
+input, or your profile dropdown in the admin panel. From there you can view
+(masked or revealed), copy, or reset your key.
 
 There is one live key per workspace. Resetting immediately revokes the old one —
 there is no key history, so update any callers before you reset.
