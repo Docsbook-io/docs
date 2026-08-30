@@ -54,6 +54,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - **See usage** on the balance card in the sidebar now opens that breakdown. It used to open the billing screen, which answers a different question with the same word: a balance says how much is left, never what took it. **Top up**, beside it, still goes to billing. `Dashboard`
 - The `Chat` page now has an **Open chat** button beside its title, which opens the actual reader-facing chat on your published docs — not the admin assistant this panel already offers on its own `AI Chat` tab. `AI Chat`
 
+- Every prompt in `Prompts` now shows what one run is worth, in a **Cost** column: the MCP calls it makes plus the model turns around them, so a prompt costing a fraction of a cent is told apart from one costing a quarter of a dollar before you put it on an hourly schedule. `Prompts`
+- Beside it, an **Impact** column says what running it typically moves and which way — support load, upkeep hours, manual watching, time to an answer, citations, markets, traffic, conversion — green for up and red for down, where down is the good one on anything that costs you. `Prompts`
+- Both are estimates of what prompts of that kind do, and both say so when you hover them: neither is a reading off your own workspace, and the cost hover breaks the figure into the calls and the turns it is made of. `Prompts`
+
 ### Changed
 
 - Creating a site without an account is now one field. `Create` used to open on three cards asking whether what you have is a website, a repo or files, and each card led to its own form. You now paste the one thing you came with — a site, a GitHub repo, a PDF or screenshots, or a sentence about what you sell — and Docsbook works out which it is. The heading names what the field takes, and **Add GitHub URL** and **Add website URL** in the **+** menu drop the start of a link into it. `Create`
@@ -121,6 +125,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Nothing is switched on unless you switch it. If you turned one on along the way, the walkthrough ends pointing at **Load your Google positions**; if you turned none on, it says so and how to go back, rather than promising data that is not coming. `SEO`
 
 - `Analytics` no longer counts you and your team browsing your own docs as readers. Every figure that describes an audience — the dead-end rate, the funnel, the breakdowns, the headline and goals — now leaves your own visits out alongside bots. A workspace with no audience yet used to show visits, a bounce rate and a session time that were entirely its owner checking pages after a publish, which is the one reading that feels like a signal and is not. Your visits are not deleted, only kept out of the reader figures. `Analytics`
+
+- The `Tags` column in `Prompts` is now off by default, one click away in the **Columns** menu. The prompt itself already says what it is about in the widest column on screen, and the **Filters** menu keeps every label — including the ones a truncated cell never showed — so narrowing by one is unchanged. `Prompts`
 
 ### Fixed
 
