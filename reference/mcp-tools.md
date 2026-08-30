@@ -99,11 +99,11 @@ Event types include `content.indexed`, `translation.completed`, `chat.no_answer`
 
 ## Scenario tools — one question, one tool
 
-Thirty-one read-only tools, each named for a question a documentation owner actually asks. Each returns a **validated JSON payload** rather than a paragraph of prose: an `evidence` map holding every raw fact the run gathered, and claims that may only state a number appearing in evidence they cite. A number that traces to nothing fails the run instead of shipping, so an invented figure is not something you have to check for.
+Forty-five read-only tools, each named for a question a documentation owner actually asks. Each returns a **validated JSON payload** rather than a paragraph of prose: an `evidence` map holding every raw fact the run gathered, and claims that may only state a number appearing in evidence they cite. A number that traces to nothing fails the run instead of shipping, so an invented figure is not something you have to check for.
 
 Where a tool scores, the score is computed by us from the gathered evidence with its weights published in the payload — not written by the model. A model's 0-100 is not comparable to the same model's next week, which destroys the only reason to have one: watching it move. An axis that could not be checked reports as unmeasured, never as zero.
 
-All thirty-one change nothing and work with a **read-only** token: writes are refused for the whole run. Every finding carries the call that would fix it (`owner_tool` plus its arguments), so an audit hands off to `run_docs_create` / `run_docs_manage` / `run_docs_automate` without a human translating in between. They are billed in the **Agent** class.
+All forty-five change nothing and work with a **read-only** token: writes are refused for the whole run. Every finding carries the call that would fix it (`owner_tool` plus its arguments), so an audit hands off to `run_docs_create` / `run_docs_manage` / `run_docs_automate` without a human translating in between. They are billed in the **Agent** class.
 
 | Tool | What only it tells you |
 | ---- | ---------------------- |
@@ -143,6 +143,25 @@ The ten below answer a question about the **business** the documentation serves 
 | `assess_competitor_switching` | What an evaluator on a named incumbent needs to see and cannot find — plus the rival claims you should *not* write toward. |
 | `audit_release_adoption` | What shipped and stayed invisible: features with no page, and features with a page nothing links to. |
 | `assess_content_roi` | Which pages earn their upkeep and which to merge, redirect or retire — computed *after* the pages that inbound links protect. |
+
+The fourteen below exist because the method for them was already written in [`docs-skills`](https://github.com/Docsbook-io/docs-skills) and no tool answered it — one tool per reference that had none.
+
+| Tool | What only it tells you |
+| ---- | ---------------------- |
+| `audit_retrieval` | Why the assistant cannot find an answer that IS on the page — the passages that lose at retrieval and the property that makes each lose. |
+| `audit_site_config` | Which settings are on and doing nothing, checked against the live site rather than against the switch. |
+| `design_page_widgets` | Which pages are really tables or comparisons served as prose, with the widget from your live catalogue that fixes each. |
+| `diagnose_docs_drift` | Which pages the last release made wrong, by which of the five sources of truth moved, and which of it can be fixed unattended. |
+| `plan_automation_workflows` | What should keep happening without anybody remembering, and whether each check belongs in a hook, in CI, on a schedule or on a webhook. |
+| `assess_setup_readiness` | Which of these tools this workspace can actually answer with today, and the cheapest wire that unblocks the most. |
+| `map_content_sources` | The material that already exists and could be documentation — including the support answers and community threads nobody counts. |
+| `assess_fix_precedent` | Whether this KIND of change has ever worked here, before you repeat it on six more pages. |
+| `plan_audit_route` | Which two to four of these tools your question actually calls for — and which would cost a run and return nothing today. |
+| `map_business_value` | What each of these numbers is worth to the business, anchored on your own declared goals rather than an assumed deal size. |
+| `map_topic_authority` | Whether the corpus reads as the authority on one topic, and which concepts the field always names that yours never does. |
+| `audit_internal_links` | The region readers can only reach from the sidebar — where every page passes every per-page check and nobody arrives. |
+| `audit_translation_coverage` | Which languages are read, which translations are behind their source, and which locale is taxing every release for nobody. |
+| `diagnose_intent_mismatch` | What shape of answer a query wanted against the shape the ranking page delivers — and whether to reshape, split or retitle rather than rewrite. |
 
 Most take an optional `request` in your own words, which narrows the run without replacing the method, plus the typed inputs its question needs (`path`, `competitors`, `window_days`, `pages`). A payload that fails its own contract is reported as a failure with the violations listed — never as a successful answer with an empty result, because "no findings" reads as "the site is fine".
 
