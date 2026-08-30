@@ -15,9 +15,9 @@ Seven figures sit across the top of the panel. Click any of them to redraw the c
 |---|---|
 | Visitors | Distinct readers over the selected period, split into new and returning |
 | Revenue | What those readers were worth — see [Revenue](#revenue) |
+| Spend | What this project's AI cost over the same period — see [Spend](#spend) |
 | Conversion rate | Share of visitors who clicked through to your Call To Action URL |
 | Revenue/visitor | Revenue divided by visitors |
-| Spend | What this project's AI cost over the same period — see [Spend](#spend) |
 | Bounce rate | Share of visits that were one page, under three seconds, and nothing else |
 | Session time | How long an average visit lasted |
 
@@ -98,6 +98,27 @@ is missing.
 
 Matching is by domain, with `www.` treated as the same site. Other subdomains are not folded in — your docs usually live on one, and counting a click back into the docs as a sale would flatter the number.
 
+### Spend
+
+**Spend** is what left this project's balance over the same period: the AI calls
+your readers made in chat, the ones you made in the panel, translations,
+embeddings, and MCP calls billed against the project. Click it and the chart
+redraws as a cost line; each point names the billed calls behind it.
+
+It needs no settings — unlike Revenue, it is read straight off your billing
+ledger. That also makes it the one figure here whose `$0` is a real reading
+rather than a gap, so a period the panel could not read the ledger for says so
+instead of showing zero. Calls that ran on your own API key are counted and cost
+nothing.
+
+Because it does not come from visits, Spend stays meaningful in a period nobody
+visited — a translation run overnight is a real bill with no reader behind it,
+and that is usually the most useful thing this tile has to show you. Look for a
+cost spike that no visitor spike explains.
+
+Nothing you add to your balance is netted off this figure: it counts money going
+out, so a top-up does not make it dip.
+
 ### Who counts as a visitor
 
 Two kinds of visit are left out of every reader figure on this page: bots, and
@@ -119,27 +140,6 @@ figures.
 The Visitors chart draws two lines: readers seen for the first time, and readers coming back. Hover any point for the pageviews, pages per visitor, and the returning rate in that hour or day.
 
 Because events are kept for at most 30 days, "new" can only mean *not seen in the window we can still read* — never "never seen before". The tooltip states the exact horizon it checked.
-
-### Spend
-
-**Spend** is what left this project's balance over the same period: the AI calls
-your readers made in chat, the ones you made in the panel, translations,
-embeddings, and MCP calls billed against the project. Click it and the chart
-redraws as a cost line; each point names the billed calls behind it.
-
-It needs no settings — unlike Revenue, it is read straight off your billing
-ledger. That also makes it the one figure here whose `$0` is a real reading
-rather than a gap, so a period the panel could not read the ledger for says so
-instead of showing zero. Calls that ran on your own API key are counted and cost
-nothing.
-
-Because it does not come from visits, Spend stays meaningful in a period nobody
-visited — a translation run overnight is a real bill with no reader behind it,
-and that is usually the most useful thing this tile has to show you. Look for a
-cost spike that no visitor spike explains.
-
-Nothing you add to your balance is netted off this figure: it counts money going
-out, so a top-up does not make it dip.
 
 ### Bounce rate and session time
 
