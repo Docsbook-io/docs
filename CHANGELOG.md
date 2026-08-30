@@ -65,6 +65,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - A switched-off card no longer turns itself on when you press its background: only **Turn on** does. A click aimed at a row you wanted to read, or a touch-scroll on a phone, used to switch the card on and start its walkthrough, and the card's introduction does not come back once it has been dismissed. `Dashboard`
 - Every tab in an `Analytics` card now says on hover what its list actually counts, so "Exit" reads as the page people leave from rather than one that failed, "Direct / None" as traffic with no referrer rather than missing data, and "Lang" as the reader's browser preference rather than the language your docs are written in. `Analytics`
 - The second built-in feed in `Feeds` is now **Reader events**, everything the people reading your docs did: pages read, searches run, questions asked of the AI and feedback left. It replaces **Unanswered questions**, which only filled up where an answer came up empty; those two event types are still one click away in the Workspace filter. `Feeds`
+- Every button in the admin panel that starts the assistant on a ready-made prompt — an **Improve** on a reader, a goal or a funnel step, a **Run** in `Prompts`, an example on an `MCP` tool's page — now opens a new chat instead of adding a turn to whichever conversation you had open last. The one you were already having stays as you left it, and the new question is answered on its own rather than in the context of an unrelated one. `AI Chat`
 
 ### Fixed
 
@@ -76,6 +77,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 - Every admin panel page header is now the same height as the sidebar's project switcher above it, instead of sitting noticeably taller. `Dashboard`
 - Switching between admin panel sections now updates the page's URL, so a section can be bookmarked, shared, or reopened as-is after a refresh. `Dashboard`
+
+### Removed
+
+- The **Make these applicable** button that appeared under an answer listing improvements is gone. `AI Chat`
 
 ## NEW - 29.08.2026
 
