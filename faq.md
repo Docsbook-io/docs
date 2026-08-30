@@ -38,7 +38,7 @@ A: Currently only public ones. Private repos are planned for the future.
 
 **Q: Do I need a GitHub repo to try Docsbook?**
 
-A: No. At [docsbook.io/create](https://docsbook.io/create) you can generate a draft site from a website URL or just a text idea, then land on its admin panel — with the docs site one click away — and customize both before creating an account. The draft is built to sell, not only to explain: pages close with a call to action, and if your source publishes prices you also get a pricing page — built only from the figures found on your own site, never guessed. GitHub is only needed if you want to link an existing repo, or once you're ready to publish (any sign-in method works — GitHub, Google, Apple, or email).
+A: No. At [docsbook.io/create](https://docsbook.io/create) one field takes whatever you have — a website URL, a repo link, a PDF or screenshots, or just a sentence about what you sell — and generates a draft site from it, then you land on its admin panel — with the docs site one click away — and customize both before creating an account. The draft is built to sell, not only to explain: pages close with a call to action, and if your source publishes prices you also get a pricing page — built only from the figures found on your own site, never guessed. GitHub is only needed if you want to link an existing repo, or once you're ready to publish (any sign-in method works — GitHub, Google, Apple, or email).
 
 ---
 

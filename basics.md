@@ -35,9 +35,13 @@ There are two ways to create a workspace:
 
 **From a website scan or an idea (no repo needed):**
 ```
-1. You describe a website URL or an idea at docsbook.io/create
+1. You paste one thing into the single field at docsbook.io/create — a site,
+   a GitHub repo, a PDF or screenshots, or a sentence about what you sell.
+   Docsbook works out which it is; you don't pick a type
                     ↓
-2. Docsbook generates draft pages — you land on their admin panel, with the docs site one click away, and can customize before signing in
+2. Docsbook generates draft pages while you watch it work — each step names
+   what it read and found — then you land on their admin panel, with the docs
+   site one click away, and can customize before signing in
                     ↓
 3. You sign in, and the draft becomes a live Workspace automatically
                     ↓
