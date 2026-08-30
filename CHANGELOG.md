@@ -89,6 +89,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Fixed
 
 - The rename, pin and delete actions on a chat row are now reachable without a mouse. Tabbing to a row reveals them, and on a touch screen they are always there. Deleting a chat previously appeared on hover only, which no touch device and no keyboard could produce. `AI Chat`
+- A conversation reopened from the assistant's chat list now shows the answers, not only the questions you asked. A long turn — a docs audit, a page generation — outgrew what the browser will store, and every save carrying the answer was refused while the one carrying the question alone had already gone through. Long passages inside a stored conversation are now shortened to fit, marked where they were cut, and the conversation you are having keeps its place ahead of older ones when the browser runs out of room. `AI Chat`
 
 - `Analytics` cards no longer flicker between their sample and an empty card every 30 seconds while a switched-off card is on screen, which also restarted an open guide from its first step. `Analytics`
 
