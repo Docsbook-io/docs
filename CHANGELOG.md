@@ -29,6 +29,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The `SEO`, `GEO` and `AEO` cards each gained the same pair, and Analyze reads your live pages rather than the switch: a setting that is on while the markup never renders is exactly what a green Active pill cannot tell you. `SEO`
 - An open commit in `Changes` now has **Analyze**, which measures the pages it touched against the pages it did not over the same days, and is allowed to answer that it is too early to tell. `Changes`
 - An open conversation on the `Chat` page now has **Analyze**, which reads the transcript for the turn where it went wrong and separates the three causes that look alike: the answer is not in your docs, it is there and was not found, or it was found and reads badly. `AI Chat`
+- The assistant's chat list now shows `Scheduled` and `Triggers` before you have any, each ending in a row that takes you to `Prompts` where a scheduled or event-fired chat is actually made. Both groups used to appear only once they already had runs in them. `AI Chat`
+- The three groups in that list now fold away, carrying their count on the folded line, and the **New chat** row folds with the group it belongs to. Typing in the search box opens a folded group that has a match in it. `AI Chat`
 
 ### Changed
 
@@ -58,6 +60,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The Chat page now reports your whole chat history rather than a single window, and its tiles and conversation list can no longer quote different periods. There is no interval picker: hover any tile to see that figure for the last 24 hours instead, shown as zeros on a quiet day rather than left blank. The interval pills stay on the framed card. `AI Chat`
 - The conversation list now loads a page at a time instead of the whole history at once, so the Chat page opens at the same speed however long the assistant has been running. The footer says how many conversations are on screen and how many there are in all, and **Load more** fetches the next batch. `AI Chat`
 - The conversations table on the Chat page now uses the pane's full width, matching the readers table, and its heading is gone — the sidebar row already says Chat. `AI Chat`
+- A switched-off card no longer turns itself on when you press its background: only **Turn on** does. A click aimed at a row you wanted to read, or a touch-scroll on a phone, used to switch the card on and start its walkthrough, and the card's introduction does not come back once it has been dismissed. `Dashboard`
+- Every tab in an `Analytics` card now says on hover what its list actually counts, so "Exit" reads as the page people leave from rather than one that failed, "Direct / None" as traffic with no referrer rather than missing data, and "Lang" as the reader's browser preference rather than the language your docs are written in. `Analytics`
 
 ### Fixed
 
