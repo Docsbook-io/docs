@@ -145,8 +145,39 @@ describe nobody. Saving a filter turns it into
 an **event list** — so narrowing the feed and defining what to be notified about are the same
 gesture. Test pings appear in the feed like any other event; a replay shows up as another attempt
 under the event it belongs to. **Export** downloads exactly what you are looking at, filters applied
-and unbounded by time, as CSV, JSON or NDJSON. It sits at the end of that same toolbar row next to
-**Set up alert** — the two controls that act on the whole view rather than on one event.
+and unbounded by time, as CSV, JSON or NDJSON — unbounded because the feed itself carries no time
+range: it is live, and a file narrower than the view it copies is worse than no file. It sits at the
+end of that same toolbar row beside **Usage** and **Set up alert** — the three controls that act on
+the whole view rather than on one event.
+
+### What it all cost
+
+Every row in the feed carries a price, and one row at a time is not a column anyone can add up.
+**Usage**, on the toolbar, swaps the stream for the sum: what this project's money went on over a
+window, dearest first, in three sections.
+
+| Section | One row per | What the figure is |
+|---|---|---|
+| **AI & tokens** | surface and model | What each AI answer, translation or indexing run was priced at |
+| **MCP tool calls** | tool | The list price of the calls that tool actually made |
+| **Events logged** | event type | What recording that traffic costs, at the rate card |
+
+The first two are **charged**: that money came off the project's balance. The third is **not** —
+events are priced so the traffic is not invisible, and nothing is deducted for them. The two totals
+are therefore printed as two figures under two different words, and each section carries a `charged`
+or `not charged` badge, because one number covering all three would be a bill for money nobody took.
+
+Pick a window of **24 hours**, **7 days** or **30 days**. There is nothing longer because there is
+nothing longer to read: reader analytics are kept for 30 days and the AI ledger is pruned to match,
+so a 90-day button would answer for 30 days under the wrong label.
+
+**Export** here offers the breakdown itself as a CSV — one line per model, tool or event type, with
+its count and its cost as a plain number you can sum, and a column saying whether that line was
+charged — as well as the raw events behind it, bounded by the window you are looking at.
+
+The same screen is what **See usage** opens from the balance card in the sidebar. That card's other
+button, **Top up**, still goes to billing: one answers how much is left, this one answers what took
+it.
 
 ## Notifiers: where events go
 
