@@ -32,6 +32,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Changed
 
+- The `MCP` section now opens with a **Turn on** of its own, and that panel carries the installer: pick your client from the chips, copy the command, then press the button to walk the tool table with a guide. Connecting your editor and meeting the catalog now happen in one place, instead of the install card sitting one click deeper on a single tool's page. `MCP`
 - Each card on `Analytics` now carries its own **Turn on** rather than one button covering the whole page, so the guide you get explains the card in front of you and a site with traffic everywhere except CTA clicks meets it on `Conversions` alone. `Analytics`
 - Turning a card on now opens its guide directly, and the second "See what this shows" link under the button is gone — it led to the same place the button did. `Dashboard`
 - The **Turn on** panel now fits the card it sits on, dropping to the card's name and the button on a half-width card and to the button alone on a phone; a guide opened on a card that narrow moves to a sheet at the bottom of the screen so its text stays readable and its controls stay reachable. `Dashboard`
