@@ -58,20 +58,31 @@ you're looking at it, so there is no time range to pick and nothing to remember 
 
 ### Picking a feed
 
-Which feed you're reading — the built-in ones or a list you saved — is picked from rows in the
-sidebar's **Feeds** section rather than a page of its own; the row you're on is highlighted, and a
-`+` on the section creates a new list from an empty filter. There is no separate title above the
-feed: the highlighted row already says what you're looking at.
+The **Feeds** section opens on a page of cards — one per feed, each with a line saying what it
+holds, plus a **Create your own feed** card at the end. Opening a card switches to that feed itself,
+with no title or back link above it: you got here by picking a card, and the sidebar row for **Feeds**
+is the way back to them.
 
-Four feeds are built in — **All events** (unfiltered), **Reader events**, **Reader
-feedback** and **MCP calls** — so there is something to open on your first visit, before
-you have saved anything of your own. **Reader events** is everything the people reading your docs
-did — pages read, searches run, questions asked of the AI, feedback left — and **MCP calls** is
-every metered call an agent made; both are feeds to read, since neither kind of event is one an
-alert can be attached to. They are starting filters rather than saved lists, so they
-cannot be deleted and nothing can be pointed at them directly. Narrow one and **Save as list**
-turns it into a feed of your own, which appears as its own row in the sidebar and is the form an
-alert can be attached to.
+The same feeds are also rows under that sidebar section, for switching between them without leaving
+the one you're reading — but that list starts **closed**. Hover the **Feeds** row and a chevron
+takes over from its icon; click it to show up to five feeds, most-recently-opened first, with
+**Show N more** for the rest, and Docsbook remembers whether you left it open the next time you're
+back. The `+` that creates a new list from an empty filter sits both on that row and as a card in
+the gallery.
+
+Seven feeds are built in, so there is something to open on your first visit before you've saved
+anything of your own: **Reader events** (everything people reading your docs did — pages read,
+searches run, questions asked of the AI, feedback left), **Translations** (every language generated,
+outdated or still needed), **Language events** (which languages readers switch the docs into),
+**Chat events** (questions the AI assistant was asked, where it came up empty, which answers got a
+thumbs-down), **Reader feedback** (thumbs-down and comments, on a page or an answer), **MCP calls**
+(every metered call an agent made), and **All events** — everything, unfiltered, last on the list
+since it's the one you reach for when none of the named ones fit. **Reader events**, **Language
+events** and **MCP calls** are feeds to read rather than to subscribe to, since none of their events
+is one an alert can be attached to; the other four are exactly what you'd point a notifier at. All
+seven are starting filters rather than saved lists, so they cannot be deleted and nothing can be
+pointed at one directly — narrow one and **Save as list** turns it into a feed of your own, which
+appears as its own row and is the form an alert can be attached to.
 
 ### Reading the feed
 
