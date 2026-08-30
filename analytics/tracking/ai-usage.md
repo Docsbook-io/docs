@@ -16,7 +16,7 @@ conversations that produced them:
 | Card | Metric | Description |
 |---|---|---|
 | **Conversations** | Questions | Chat threads readers started, all of them |
-| **Conversations** | Answered | Share of conversations that showed a sign of value (a citation click, a like, an outbound click) |
+| **Conversations** | Answered | Share of conversations where the model, reading the transcript, judges the reader actually got an answer to what they asked |
 | **Conversations** | Savings | Estimated support cost avoided, based on answered conversations |
 | **Conversations** | Cost | Total billed AI spend behind those conversations, shown as one line against Savings |
 | **Dialogs** | Per-dialog cost | Shown next to each conversation's estimated savings right in the list; open one for the full cost/savings breakdown and its complete question-and-answer transcript |
@@ -25,6 +25,16 @@ The Chat page reports **everything** — every conversation still on record —
 and has no interval control. The tiles and the conversation list under them
 always describe the same set, so the two can never quote different numbers for
 the same question.
+
+**Answered is read, not inferred.** A separate model pass reads each
+conversation's transcript and decides whether the reader came away with a real
+answer or was left re-asking. Conversations are judged a handful at a time as
+you open the page, so the figure fills in over a few visits rather than all at
+once, and a conversation still waiting shows as unjudged rather than as
+unanswered. Under five judged conversations the tile falls back to the older
+signal-of-value reading (a citation click, a like, an outbound click) and says
+so when you hover it. The answered/dead-end/unrated **outcome** split on
+Analytics still uses that older reading throughout.
 
 **Hover any tile to see the last 24 hours.** Each of the four carries the same
 reading over the past day: Savings, Questions and Earned as their own figure,

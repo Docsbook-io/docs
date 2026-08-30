@@ -41,6 +41,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Each improvement the assistant recommends now carries what it is expected to gain: a range of extra search clicks, and beside it what that is worth per month. Both are computed from your own Search Console history and the value you have declared a visit to have, never written by the assistant, and hovering the row shows the arithmetic — impressions, clicks, the rate the page converts at today, and the rate pages at its position typically manage on your site. `AI Chat`
 - Those figures say nothing they cannot support. A page already doing better than its position predicts shows how much traffic the change touches rather than a gain; a structure or settings recommendation carries no prediction at all, because neither changes how often a listing is clicked; and a page with too little search history shows an empty space rather than a zero. Every prediction is marked an estimate while the assumption behind it is reasoned rather than measured against what past changes actually did. `AI Chat`
 
+- When the admin assistant genuinely cannot finish something, the turn now ends on a card that names what blocked it, what was already tried, and a message to us already written — one field to check and one click, instead of an apology and an empty support form to compose from scratch. `AI Chat`
+
 ### Changed
 
 - **New chat** now heads your conversations in the assistant's chat list, directly above them, instead of sitting at the very top of the column two groups away from the list it starts one in. It still answers to nothing that is folded. `AI Chat`
@@ -96,6 +98,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 - `Analytics` cards no longer flicker between their sample and an empty card every 30 seconds while a switched-off card is on screen, which also restarted an open guide from its first step. `Analytics`
 
+- The `Chat` page's **Answered** figure now actually fills in. Every visit read the transcripts, asked the model whether each conversation got a real answer, and then threw the verdicts away — so the same handful of conversations was re-read on every load and the column never moved past unjudged. Verdicts are now kept, and the reading builds up over a few visits instead of starting from nothing each time. `AI Chat`
+- The admin assistant no longer tells you the project you have open is not on Docsbook. It could reach that ending while its own tools were returning your pages and your commit history; when it does now, it is caught and the turn continues on the real project by name instead of offering to create the workspace you are already looking at. `AI Chat`
+
 ### Improved
 
 - The `MCP` tool table's search box and billing-class filters now stay on one line at every width, instead of the chips dropping onto a second row above the table. `Dashboard`
@@ -105,6 +110,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The `Spent` column's figure in reader tables now reads in neutral gray, so it no longer competes with `Potential`'s green figure right beside it — the rose arrow still marks which way the money moved. `Analytics`
 - A guide step inside a card now opens small: the name of the thing it is about and two lines saying what it is. How to read the figure and the move it leads to sit behind a chevron on the step itself, so the explanation no longer covers the report you just switched on. `Dashboard`
 - A guide step now lights the exact control it is about — a strip of figures, one row, a toolbar, a table's header — instead of the whole card, so it no longer has to spell out in words where to look. `Dashboard`
+
+- The `Chat` page now loads several times faster. Two of its readouts each asked for the whole conversation history — resolving a reader and a value for every dialog, and pricing them — only to keep a single percentage from the answer. They now ask for that figure alone. The same two readouts at the bottom of `Analytics` got the same treatment. `AI Chat`
 
 ### Removed
 
