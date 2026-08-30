@@ -5,6 +5,14 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 30.08.2026
+
+### Changed
+
+- `Feeds` now lists feeds as rows in the sidebar with a one-line toolbar of icon filters and an always-visible search box, instead of a separate picker page. `Feeds`
+- The `MCP` page under `Agents` drops its setup stepper for a full stat row (including price and rate limit) and example prompts you can run directly against your connected assistant, not just copy. `Agents`
+- `Analytics`' tabbed cards now share one consistent tab style, and the Chat page's "What readers asked" and "Where the answers led" panels moved to the bottom of `Analytics`, reading its own date-range picker instead of a separate control on the Chat page. `Analytics`
+
 ## NEW - 26.08.2026
 
 ### Added

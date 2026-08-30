@@ -32,6 +32,13 @@ Below the chart, four cards break the same period down. Each card holds several 
 | Conversions | CTA Clicks, Feedback |
 | AI Views (full width) | AI crawler requests over time, and per bot |
 
+At the very bottom of the page, two more cards — "What readers asked" and
+"Where the answers led" — break down your AI chat's own conversations
+(topics, why readers came, top searches, languages, outbound links, and the
+answered/dead-end/unrated split) over this same range. See
+[AI Usage & Cost Statistics](./ai-usage.md) for what each tab shows; unlike
+the cards above, rows here don't filter the rest of the dashboard.
+
 Each card picks its tab from a dropdown rather than a row of tabs: four or five
 tabs never fit a half-width card, and the row they used to sit in scrolled
 sideways inside a card that also scrolls down.

@@ -56,6 +56,11 @@ fill up, which is the point: it is how you find out which events your docs actua
 decide what to be notified about. The feed is live — it refreshes itself every few seconds while
 you're looking at it, so there is no time range to pick and nothing to remember to reload.
 
+Which feed you're reading — the built-in ones or a list you saved — is picked from rows in the
+sidebar's **Feeds** section rather than a page of its own; the row you're on is highlighted, and a
+`+` on the section creates a new list from an empty filter. There is no separate title above the
+feed: the highlighted row already says what you're looking at.
+
 The feed itself reads in day sections, and each item is one event: a coloured tile for its type,
 the one-line summary, and where it went — plus the reader's avatar, when the event was caused by
 one (a plan or usage event has nobody to attribute it to). Status, event type and destination show
@@ -73,14 +78,17 @@ deliveries with the worst outcome winning:
 | `not sent` | It happened, and no alert was subscribed to it. |
 
 Filter the feed by event type, status, destination, visitor, a completed goal, or free text matched
-anywhere in the payload. A visitor filter is one click away from **Analytics** — open a reader there
+anywhere in the payload — one toolbar row above the feed, no title above it. Each of the first five
+facets is an icon button: hover or focus it to see its name, and once it's set it fills in with the
+value itself. Free text is its own always-visible search box at the end of that row rather than a
+facet you open first. A visitor filter is one click away from **Analytics** — open a reader there
 and jump straight to everything they did — one click away from a card's own avatar in the feed
 itself, or a pasted-in id by hand. Saving a filter turns it into
 an **event list** — so narrowing the feed and defining what to be notified about are the same
 gesture. Test pings appear in the feed like any other event; a replay shows up as another attempt
-under the event it belongs to. **Export** beside the view's title downloads exactly what you are
-looking at, filters applied and unbounded by time, as CSV, JSON or NDJSON. It sits in the title row
-beside **Set up alert** — the two controls that act on the whole view rather than on one event.
+under the event it belongs to. **Export** downloads exactly what you are looking at, filters applied
+and unbounded by time, as CSV, JSON or NDJSON. It sits at the end of that same toolbar row next to
+**Set up alert** — the two controls that act on the whole view rather than on one event.
 
 ## Notifiers: where events go
 
