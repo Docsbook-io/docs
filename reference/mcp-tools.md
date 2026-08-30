@@ -99,11 +99,11 @@ Event types include `content.indexed`, `translation.completed`, `chat.no_answer`
 
 ## Scenario tools — one question, one tool
 
-Nineteen read-only tools, each named for a question a documentation owner actually asks. Each returns a **validated JSON payload** rather than a paragraph of prose: an `evidence` map holding every raw fact the run gathered, and claims that may only state a number appearing in evidence they cite. A number that traces to nothing fails the run instead of shipping, so an invented figure is not something you have to check for.
+Thirty-one read-only tools, each named for a question a documentation owner actually asks. Each returns a **validated JSON payload** rather than a paragraph of prose: an `evidence` map holding every raw fact the run gathered, and claims that may only state a number appearing in evidence they cite. A number that traces to nothing fails the run instead of shipping, so an invented figure is not something you have to check for.
 
 Where a tool scores, the score is computed by us from the gathered evidence with its weights published in the payload — not written by the model. A model's 0-100 is not comparable to the same model's next week, which destroys the only reason to have one: watching it move. An axis that could not be checked reports as unmeasured, never as zero.
 
-All nineteen change nothing and work with a **read-only** token: writes are refused for the whole run. Every finding carries the call that would fix it (`owner_tool` plus its arguments), so an audit hands off to `run_docs_create` / `run_docs_manage` / `run_docs_automate` without a human translating in between. They are billed in the **Agent** class.
+All thirty-one change nothing and work with a **read-only** token: writes are refused for the whole run. Every finding carries the call that would fix it (`owner_tool` plus its arguments), so an audit hands off to `run_docs_create` / `run_docs_manage` / `run_docs_automate` without a human translating in between. They are billed in the **Agent** class.
 
 | Tool | What only it tells you |
 | ---- | ---------------------- |
@@ -126,6 +126,23 @@ All nineteen change nothing and work with a **read-only** token: writes are refu
 | `plan_docs_structure` | What the documentation should contain and in what shape, page by page, before anybody writes a word. |
 | `design_goals_funnel` | What to measure, with each proposed goal's matcher resolved against the site as it is now. |
 | `design_monitors` | What should raise an alert, at what threshold, and what each alert will miss. |
+| `assess_hypothesis` | Whether a belief you already hold survives being attacked — with your own reader data and the open web, and it says which of the two the verdict rests on. |
+| `map_reader_segments` | How many different *kinds* of reader you have, each sized with its sample, plus the share of traffic no segment explains. |
+
+The ten below answer a question about the **business** the documentation serves rather than about the documentation, using your docs as one input among several.
+
+| Tool | What only it tells you |
+| ---- | ---------------------- |
+| `map_competitor_free_offers` | What everyone a buyer considers instead of you gives away free — the calculator, the sandbox, the templates, the free tier — with the wall in front of each, plus the need none of them serves. |
+| `design_free_tools` | Which reader need is answered by a working tool rather than a paragraph, with its class, its source of truth, and whether it is an existing widget, a custom one, or something needing a service. |
+| `plan_page_family` | Whether a repeating axis in your product justifies a generated page family — and whether a machine can keep that family correct once it exists. |
+| `assess_research_assets` | Which numbers you already hold that nobody outside could obtain at any price, and which of them clear the privacy, contractual and identifiability gate. |
+| `audit_linkability` | Whether a stranger writing their own page would ever cite yours — and which inbound links now arrive at something broken. |
+| `assess_support_deflection` | Which repeated questions reach a person that a page would have closed, ranked by how many *different* people asked. |
+| `map_integration_demand` | Which third-party tools readers are trying to use your product with, and what your docs currently say about each. |
+| `assess_competitor_switching` | What an evaluator on a named incumbent needs to see and cannot find — plus the rival claims you should *not* write toward. |
+| `audit_release_adoption` | What shipped and stayed invisible: features with no page, and features with a page nothing links to. |
+| `assess_content_roi` | Which pages earn their upkeep and which to merge, redirect or retire — computed *after* the pages that inbound links protect. |
 
 Most take an optional `request` in your own words, which narrows the run without replacing the method, plus the typed inputs its question needs (`path`, `competitors`, `window_days`, `pages`). A payload that fails its own contract is reported as a failure with the violations listed — never as a successful answer with an empty result, because "no findings" reads as "the site is fine".
 
