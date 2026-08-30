@@ -5,6 +5,16 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 30.08.2026
+
+### Changed
+
+- The admin panel sidebar's footer no longer names a plan tier next to your account — it now shows a bare usage bar under your account name, with the exact allowance in a hover tooltip. `Dashboard`
+
+### Improved
+
+- Every admin panel page header is now the same height as the sidebar's project switcher above it, instead of sitting noticeably taller. `Dashboard`
+
 ## NEW - 29.08.2026
 
 ### Added
