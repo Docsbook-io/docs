@@ -12,8 +12,23 @@ Publish your documentation in multiple languages — automatically, with no manu
 | Setting | What it does |
 |---|---|
 | Enabled languages | Which languages to publish your docs in |
+| Translation model | Which AI model translates your pages |
 | Language switcher in sidebar | Show the language selector in the left sidebar |
 | Language selector in header | Show the language selector in the top header bar |
+
+### Choosing the translation model
+
+**Settings ▸ Translations ▸ Translation Model** picks which model does the
+translating, on every plan including Free. Each option shows what it costs per
+1M tokens, so a cheaper model stretches the same AI budget over more pages, and
+a stronger one is a click away when a language reads badly. It is a separate
+choice from the model your chat runs on — translating prose and answering a
+reader's question are different jobs.
+
+The estimate you see before a run (below) is priced on the model you picked, so
+the quote and the charge describe the same model. If you brought your own
+translation API key (Business), the model is a free-text field on that card
+instead, against your own provider.
 
 ## How to Enable
 

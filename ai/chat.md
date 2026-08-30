@@ -52,6 +52,13 @@ providers:
 
 Pick which model runs your chat from the workspace settings **(every plan, including Free)** — it runs on Docsbook's key and comes out of your AI budget at that model's price.
 
+There are two model settings under **Settings ▸ Chat**, because two different models are at work:
+
+- **AI Visitors Chat Model** — what answers your readers in the docs chat.
+- **Admin & AI Agent Model** — what runs the assistant inside your dashboard: the one that reads your analytics, calls tools and edits your docs.
+
+Each lists its own models with the price per 1M tokens, so a cheap reader chat and a stronger admin assistant (or the reverse) is one choice each. Translations have a model setting of their own under **Settings ▸ Translations**.
+
 Bring your own API key from the workspace settings **(Business plan)** — costs charged by the upstream provider are billed to your key, and nothing is deducted from your Docsbook AI budget.
 
 ## Multiplayer chat (Business)
