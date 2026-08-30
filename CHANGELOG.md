@@ -14,6 +14,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Improved
 
 - Every admin panel page header is now the same height as the sidebar's project switcher above it, instead of sitting noticeably taller. `Dashboard`
+- Switching between admin panel sections now updates the page's URL, so a section can be bookmarked, shared, or reopened as-is after a refresh. `Dashboard`
 
 ## NEW - 29.08.2026
 
