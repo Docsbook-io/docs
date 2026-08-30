@@ -96,6 +96,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - A translation report with nothing in it yet now draws itself over sample figures, faded, with one line saying what is missing and a **Fix it** under it — instead of a column of zeros, em dashes and a grey sentence. That is the tiles on both pages, the commit ledger and the readers table; an empty reader map says the same over sample traffic, with the same button in the middle of it. `Translations`
 - The readers table on a language's page finally shows its **Fix it**. The button was already written into that table; this page had simply never given it anywhere to send the question. `Translations`
 
+- The button on `Search rankings` no longer switches SEO, GEO and AEO on for you. It walks you to them instead: the panel moves to `Settings` ▸ `SEO & GEO`, lights each of the three in turn and says what it does and who it is for — search engines, AI answer engines, or featured snippets and voice — and the last step brings you back to `Search rankings`. Each switch stays live under the light, so you can turn one on where you are standing or just press Next. `SEO`
+- Nothing is switched on unless you switch it. If you turned one on along the way, the walkthrough ends pointing at **Load your Google positions**; if you turned none on, it says so and how to go back, rather than promising data that is not coming. `SEO`
+
 ### Fixed
 
 - The rename, pin and delete actions on a chat row are now reachable without a mouse. Tabbing to a row reveals them, and on a touch screen they are always there. Deleting a chat previously appeared on hover only, which no touch device and no keyboard could produce. `AI Chat`
