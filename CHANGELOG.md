@@ -51,6 +51,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Changed
 
+- Your project's balance now has a row of its own at the bottom of the sidebar, with the amount spelled out in money and a **Top up** button on it, and pressing anywhere on the row opens the top-up screen. It used to be a small dial carrying no figures at all, whose numbers appeared only on hover — which a phone cannot do. `Billing`
+- The account menu now opens on the wallet: what is left, what has been spent, **Add credit** and **Pricing**, above everything else in the menu. Billing used to be a row fourth down a list of links, shaped exactly like the changelog and documentation links either side of it. `Billing`
+
 - **New chat** now heads your conversations in the assistant's chat list, directly above them, instead of sitting at the very top of the column two groups away from the list it starts one in. It still answers to nothing that is folded. `AI Chat`
 - The assistant's **Search chats** box is now set off by a line above and below it, so it reads as the thing narrowing the lists under it rather than as another row in them. `AI Chat`
 - What `Scheduled` and `Triggers` are is now told by hovering the group's name, in both groups and whether or not you have anything in them. It used to be a paragraph inside the group that only appeared while the group was empty, so it was on screen exactly when there was nothing to explain and gone the moment it filled. `AI Chat`
