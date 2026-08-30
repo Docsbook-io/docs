@@ -145,33 +145,48 @@ The **Feedback** tab of the same card ranks your pages by the thumbs readers gav
 
 Rows are sorted by dislikes first: the page people voted down is the one to rewrite, while an upvoted page only confirms what already works. Both counts are always shown, zeros included.
 
-## A card you have no data for yet
+## A report you have no data for yet
 
-A report with nothing in it teaches nothing, so a card that has none of your own
+A report with nothing in it teaches nothing, so a tab that has none of your own
 rows yet does not render empty. It renders over **sample figures**, faded, with
-one button in the middle of it: **Turn on**.
+its own icon in the middle of it and **Enable <em>Tab</em>** under it — Enable
+Headings, Enable Channels, Enable Feedback — and one line saying what that
+particular list answers.
 
-Pressing it runs a short guide inside that card, over those same sample figures.
-Each step names something on the card by the label printed on it, says how to
-read it — including what the figure is *not* evidence of — and names the move it
-leads to. Finishing or skipping the guide switches the card to your own numbers.
+The whole card is the button. Pressing anywhere on it runs a short guide inside
+that card, over those same sample figures: each step names something on the card
+by the label printed on it, says how to read it — including what the figure is
+*not* evidence of — and names the move it leads to. Finishing or skipping the
+guide switches that tab to your own numbers.
 
-Three things worth knowing about it:
+Four things worth knowing about it:
 
-- **It is per card, not per page.** The six figures at the top, each breakdown
-  card, AI Views and the two chat cards are switched on separately. A site with
-  plenty of traffic and no CTA clicks meets the guide on **Conversions** and
-  nowhere else.
+- **It is per tab, not per card and not per page.** Pages, Headings, Entry and
+  Exit are four switches, not one, and so are Referrers, Channels, UTM and
+  Keyword, Devices, Browsers, Countries and Languages, and CTA Clicks and
+  Feedback. They answer different questions with different caveats — Entry names
+  one page per visit while Pages credits every page a visit touched — and each
+  gets the explanation that is actually about it. A site with plenty of
+  referrers and no tagged campaign meets the guide on **UTM** and nowhere else.
+- **The tab strip stays live under it.** Switching tabs on a covered card moves
+  to that tab's own switch and its own description — and off the switch
+  entirely if that tab has rows of yours. Looking through the tabs before
+  turning any of them on is the expected first move.
 - **It gates nothing.** Every figure on this page was collected the whole time
   regardless — the switch only decides which of two presentations of the same
-  card you are looking at, and it is remembered in your browser, per workspace.
-  A teammate's view of the card is unaffected, and clearing site data simply
+  report you are looking at, and it is remembered in your browser, per
+  workspace. A teammate's view is unaffected, and clearing site data simply
   offers the guide again.
-- **A card that already has your rows in it is never covered.** It explains
+- **A tab that already has your rows in it is never covered.** It explains
   itself, so there is nothing for a panel over it to add.
 
+Four readouts are switched on whole rather than per tab: the six figures at the
+top, which have no tabs; **AI Views**, whose three tabs are one crawl stream
+split by why the crawler came; and the two chat cards, which drop a tab entirely
+when the window has no rows for it.
+
 The sample figures are the ones the product tour uses, so what you see before
-switching a card on is the same thing you saw while trying Docsbook out.
+switching a tab on is the same thing you saw while trying Docsbook out.
 
 ## How to Open
 
