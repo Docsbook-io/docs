@@ -9,6 +9,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Added
 
+- `Analytics` gained a **Spend** figure beside Revenue/visitor: what this project's AI actually cost over the period on screen — reader chat, your own chat, translations, embeddings and MCP calls — with a chart of when it was spent and the billed calls behind each point. It needs no setup, it keeps working in a period nobody visited (an overnight translation run is a real bill with no reader behind it), and its arrow stays grey because spend has no good direction. `Analytics`
 - Every new project now starts with **$1** of real credit, and a few minutes in a card offers **$5 more** to claim — yours to spend on AI chat, translations, MCP calls or an agent run, with nothing to pay until it runs out. It appears in the sidebar and as a strip across the top of `Billing`, and claiming it is one button. `Billing`
 - The sidebar card can be dismissed outright, unlike the low-balance warning beside it, which still only folds to a single row. Dismissing it costs you nothing: the same bonus stays claimable on the billing screen. `Dashboard`
 - `Billing` gained **Support us** beside **Add credit** — a monthly amount that tops the same project balance up each month, rather than a plan. It unlocks nothing and gates nothing; every dollar of it lands as credit you spend the same way. Cancel it whenever you like. `Billing`

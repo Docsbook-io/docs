@@ -1,6 +1,6 @@
 ---
 title: "Analytics Overview"
-description: "Track visitors, revenue, conversion rate, bounce rate and session time for your documentation, plus top pages, referrers and live online readers — privacy-first analytics with no third-party trackers."
+description: "Track visitors, revenue, conversion rate, spend, bounce rate and session time for your documentation, plus top pages, referrers and live online readers — privacy-first analytics with no third-party trackers."
 ---
 
 # Web Analytics
@@ -9,7 +9,7 @@ Know exactly how many people read your docs and where they come from — without
 
 ## What You'll See
 
-Six figures sit across the top of the panel. Click any of them to redraw the chart below — except Revenue, which has no chart of its own (it is conversions multiplied by a fixed price, so its line would be the conversion line with a different label).
+Seven figures sit across the top of the panel. Click any of them to redraw the chart below — except Revenue, which has no chart of its own (it is conversions multiplied by a fixed price, so its line would be the conversion line with a different label).
 
 | Metric | Description |
 |---|---|
@@ -17,10 +17,11 @@ Six figures sit across the top of the panel. Click any of them to redraw the cha
 | Revenue | What those readers were worth — see [Revenue](#revenue) |
 | Conversion rate | Share of visitors who clicked through to your Call To Action URL |
 | Revenue/visitor | Revenue divided by visitors |
+| Spend | What this project's AI cost over the same period — see [Spend](#spend) |
 | Bounce rate | Share of visits that were one page, under three seconds, and nothing else |
 | Session time | How long an average visit lasted |
 
-Each one also shows how it moved against the period immediately before it. Green means the change is good news — which for bounce rate means going **down**.
+Each one also shows how it moved against the period immediately before it. Green means the change is good news — which for bounce rate means going **down**. Spend's arrow is grey in both directions, because spend has no good direction to point in.
 
 Below the chart, four cards break the same period down. Each card holds several tabs:
 
@@ -65,17 +66,19 @@ phone.
 
 ### Filtering
 
-Filtering by a row narrows **everything** — the other cards and the six figures
-above the chart — so a country, a device or a referrer can be read end to end:
-how many came, how well they converted, and which pages they read. Filters
-stack, and each one is a chip above the cards that removes itself when clicked.
+Filtering by a row narrows **everything** — the other cards and the visitor
+figures above the chart — so a country, a device or a referrer can be read end
+to end: how many came, how well they converted, and which pages they read.
+Filters stack, and each one is a chip above the cards that removes itself when
+clicked. Spend is the exception: a filter cuts *visits*, and an AI answer or a
+translation job is not a visit, so Spend keeps showing the whole project's bill.
 
 The tabs counted per event rather than per visit — Headings, Read Time, UTM,
 AI Views, CTA Clicks and Feedback — cannot be filtered this way. They say so
 above their rows while a filter is on, rather than showing unfiltered numbers
 under a filtered heading.
 
-**Online now** — a live count of readers active in the last five minutes — is not one of the six. It is a right-now number rather than a total over the period you picked, so it sits as its own chip beside the panel's title.
+**Online now** — a live count of readers active in the last five minutes — is not one of the seven. It is a right-now number rather than a total over the period you picked, so it sits as its own chip beside the panel's title.
 
 ### Revenue
 
@@ -116,6 +119,27 @@ figures.
 The Visitors chart draws two lines: readers seen for the first time, and readers coming back. Hover any point for the pageviews, pages per visitor, and the returning rate in that hour or day.
 
 Because events are kept for at most 30 days, "new" can only mean *not seen in the window we can still read* — never "never seen before". The tooltip states the exact horizon it checked.
+
+### Spend
+
+**Spend** is what left this project's balance over the same period: the AI calls
+your readers made in chat, the ones you made in the panel, translations,
+embeddings, and MCP calls billed against the project. Click it and the chart
+redraws as a cost line; each point names the billed calls behind it.
+
+It needs no settings — unlike Revenue, it is read straight off your billing
+ledger. That also makes it the one figure here whose `$0` is a real reading
+rather than a gap, so a period the panel could not read the ledger for says so
+instead of showing zero. Calls that ran on your own API key are counted and cost
+nothing.
+
+Because it does not come from visits, Spend stays meaningful in a period nobody
+visited — a translation run overnight is a real bill with no reader behind it,
+and that is usually the most useful thing this tile has to show you. Look for a
+cost spike that no visitor spike explains.
+
+Nothing you add to your balance is netted off this figure: it counts money going
+out, so a top-up does not make it dip.
 
 ### Bounce rate and session time
 
@@ -196,8 +220,8 @@ Four things worth knowing about it:
 - **A tab that already has your rows in it is never covered.** It explains
   itself, so there is nothing for a panel over it to add.
 
-Four readouts are switched on whole rather than per tab: the six figures at the
-top, which have no tabs; **AI Views**, whose three tabs are one crawl stream
+Four readouts are switched on whole rather than per tab: the seven figures at
+the top, which have no tabs; **AI Views**, whose three tabs are one crawl stream
 split by why the crawler came; and the two chat cards, which drop a tab entirely
 when the window has no rows for it.
 
