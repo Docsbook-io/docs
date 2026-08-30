@@ -10,8 +10,11 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Changed
 
 - The admin panel sidebar's footer no longer names a plan tier next to your account — it now shows a bare usage bar under your account name, with the exact allowance in a hover tooltip. `Dashboard`
+- A tool's page in the `MCP` section now opens straight onto the install card for your AI client, instead of a numbered two-step guide that offered a second way to connect above it. `Dashboard`
 
 ### Improved
+
+- The `MCP` tool table's search box and billing-class filters now stay on one line at every width, instead of the chips dropping onto a second row above the table. `Dashboard`
 
 - Every admin panel page header is now the same height as the sidebar's project switcher above it, instead of sitting noticeably taller. `Dashboard`
 - Switching between admin panel sections now updates the page's URL, so a section can be bookmarked, shared, or reopened as-is after a refresh. `Dashboard`
