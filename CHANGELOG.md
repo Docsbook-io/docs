@@ -22,6 +22,14 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The same **Improve** button now sits on every goal in `Goals & funnels` and on each step of a funnel, including beside the note that names where a route breaks, so a number that looks wrong is one click from an explanation of why. `Goals & funnels`
 - Those answers have to say what they compared against, and a figure that could not be read comes back as unmeasured rather than as zero. Nothing on your workspace is edited until you ask for it. `Analytics`
 
+- **Improve** now sits on each of the six figures across the top of `Analytics` too, so a conversion rate that fell overnight is one click from an explanation that says what it was compared against and which direction is the good one for that particular figure. `Analytics`
+- Hovering a point on the traffic chart now offers **Analyze** beside the date, which accounts for that one hour or day: whether it is unusual at all against the days around it, and what a spike was actually made of, a crawler and a launch being identical in a visitor count. The chart is now reachable by keyboard as well, with the arrow keys walking between points. `Analytics`
+- Every row inside the `Analytics` cards now carries **Improve** on hover, next to the filter it already had, so "Desktop", a referrer or a single page can be handed over as itself rather than described. `Analytics`
+- Each ranked query in `Search rankings` now offers both **Improve**, for how to climb, and **Analyze**, for what the person typing it actually wants and what happens to them after the click. `Search rankings`
+- The `SEO`, `GEO` and `AEO` cards each gained the same pair, and Analyze reads your live pages rather than the switch: a setting that is on while the markup never renders is exactly what a green Active pill cannot tell you. `SEO`
+- An open commit in `Changes` now has **Analyze**, which measures the pages it touched against the pages it did not over the same days, and is allowed to answer that it is too early to tell. `Changes`
+- An open conversation on the `Chat` page now has **Analyze**, which reads the transcript for the turn where it went wrong and separates the three causes that look alike: the answer is not in your docs, it is there and was not found, or it was found and reads badly. `AI Chat`
+
 ### Changed
 
 - Each card on `Analytics` now carries its own **Turn on** rather than one button covering the whole page, so the guide you get explains the card in front of you and a site with traffic everywhere except CTA clicks meets it on `Conversions` alone. `Analytics`
