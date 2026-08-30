@@ -16,6 +16,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Where a scenario tool scores your docs, the score is computed from that evidence with its weights published alongside it, so two runs are comparable; an axis that could not be checked reports as unmeasured rather than as zero. `MCP`
 - Every finding carries the call that would fix it, so an audit hands straight over to `run_docs_create`, `run_docs_manage` or `run_docs_automate` without anyone translating it in between. All nineteen change nothing themselves and work with a read-only token. `MCP`
 
+- Every reader in `Users` now has an **Improve** button on their row that hands that person to the assistant, which reads the path they actually walked and reports where your docs lost them instead of restating what they did. `Users`
+- The same **Improve** button now sits on every goal in `Goals & funnels` and on each step of a funnel, including beside the note that names where a route breaks, so a number that looks wrong is one click from an explanation of why. `Goals & funnels`
+- Those answers have to say what they compared against, and a figure that could not be read comes back as unmeasured rather than as zero. Nothing on your workspace is edited until you ask for it. `Analytics`
+
 ### Changed
 
 - Each card on `Analytics` now carries its own **Turn on** rather than one button covering the whole page, so the guide you get explains the card in front of you and a site with traffic everywhere except CTA clicks meets it on `Conversions` alone. `Analytics`
