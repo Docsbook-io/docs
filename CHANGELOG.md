@@ -7,6 +7,13 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ## NEW - 30.08.2026
 
+### Added
+
+- Your agent can now ask one question and get a checked answer back. Nineteen scenario tools each answer a single question about your docs — which pages are one edit away from traffic they already rank for (`audit_seo`), why traffic fell and what was ruled out (`diagnose_traffic_drop`), which pages you do not have yet (`find_content_gaps`), whether a change actually worked (`verify_change_impact`), whether answer engines can quote you (`audit_geo`), and fifteen more — each returning a structured answer instead of a paragraph to read. `MCP`
+- Every number in those answers has to trace to evidence the run actually gathered, and one that traces to nothing fails the call rather than shipping. An invented figure is no longer something you have to check for. `MCP`
+- Where a scenario tool scores your docs, the score is computed from that evidence with its weights published alongside it, so two runs are comparable; an axis that could not be checked reports as unmeasured rather than as zero. `MCP`
+- Every finding carries the call that would fix it, so an audit hands straight over to `run_docs_create`, `run_docs_manage` or `run_docs_automate` without anyone translating it in between. All nineteen change nothing themselves and work with a read-only token. `MCP`
+
 ### Changed
 
 - The admin panel sidebar's footer no longer names a plan tier next to your account — it now shows a bare usage bar under your account name, with the exact allowance in a hover tooltip. `Dashboard`
@@ -14,6 +21,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - That same tool page now also shows a full stat row — including price per call and rate limit — and its example prompts can be run directly against your connected assistant, not just copied. `Dashboard`
 - `Feeds` now lists feeds as rows in the sidebar with a one-line toolbar of icon filters and an always-visible search box, instead of a separate picker page. `Feeds`
 - `Analytics`' tabbed cards now share one consistent tab style, and the Chat page's "What readers asked" and "Where the answers led" panels moved to the bottom of `Analytics`, reading its own date-range picker instead of a separate control on the Chat page. `Analytics`
+- MCP calls are now charged to the balance of the project the call is about — the same balance a top-up funds. They were previously metered against your profile, which nothing tops up, so paying credited a row the billing never read. `MCP`
+- Running out of balance now names which project ran out, what the call costs, what is left, and where to top that project up, instead of offering a tier to buy or a monthly reset to wait for. `MCP`
+- MCP spend now appears as its own row in `Spend by source`, so the balance no longer drops further than "spent" can account for. `Dashboard`
+- The admin chat no longer draws a second floating top bar over the one already there. `AI Chat`
 
 ### Improved
 

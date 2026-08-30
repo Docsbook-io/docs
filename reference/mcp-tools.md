@@ -97,6 +97,38 @@ Event types include `content.indexed`, `translation.completed`, `chat.no_answer`
 | ------------ | ---------------------------------------------------------------------------------------- |
 | `find_skill` | Search the `docs-skills` catalog by `query` with optional `category` and `requires_plan` filters. Returns `raw_url` for the agent to fetch the SKILL.md directly. |
 
+## Scenario tools — one question, one tool
+
+Nineteen read-only tools, each named for a question a documentation owner actually asks. Each returns a **validated JSON payload** rather than a paragraph of prose: an `evidence` map holding every raw fact the run gathered, and claims that may only state a number appearing in evidence they cite. A number that traces to nothing fails the run instead of shipping, so an invented figure is not something you have to check for.
+
+Where a tool scores, the score is computed by us from the gathered evidence with its weights published in the payload — not written by the model. A model's 0-100 is not comparable to the same model's next week, which destroys the only reason to have one: watching it move. An axis that could not be checked reports as unmeasured, never as zero.
+
+All nineteen change nothing and work with a **read-only** token: writes are refused for the whole run. Every finding carries the call that would fix it (`owner_tool` plus its arguments), so an audit hands off to `run_docs_create` / `run_docs_manage` / `run_docs_automate` without a human translating in between. They are billed in the **Agent** class.
+
+| Tool | What only it tells you |
+| ---- | ---------------------- |
+| `audit_geo` | Whether answer engines can fetch your pages at all, and whether anything on them is quotable. Finds the reader who got their answer from an assistant and never visited. |
+| `audit_seo` | Which pages sit at positions 5–20 with impressions and no clicks — already shown to an audience, losing the click. The fix is a title, not a rewrite. |
+| `audit_content_health` | What is wrong with the writing on the pages readers actually fail on, as nine separate scores rather than one average. |
+| `audit_architecture` | The defects present in no single page: orphans, pages too many clicks deep, a tree grouped the way the team thinks rather than the way work is done. |
+| `audit_trust` | Why a factually correct site is not believed — led by whether a claim can be checked against a named source in ten seconds. |
+| `audit_vocabulary` | Readers who failed to reach a page that exists, because it is named in your words rather than theirs. Backed by what people typed into your search. |
+| `audit_conversion` | Whether the docs did the job you declared for them — and, first, whether each declared goal can fire at all. A goal that cannot fire looks identical to one with total drop-off. |
+| `map_capabilities` | What the product can do, who would need each of those things, and which of them the docs never mention. Invisible to every number, because a page that does not exist has no traffic. |
+| `find_content_gaps` | The specific pages you do not have, as named assets with a title, the job each serves and what it costs to write. |
+| `compare_competitors` | A dated matrix of who documents what — including what you already have and are underselling. |
+| `assess_market_expansion` | Which adjacent market survives its entry gates, and what entering costs in pages. |
+| `map_jobs_to_be_done` | What a reader must come to believe before they will switch, and the earliest rung of that ladder no page carries. |
+| `diagnose_traffic_drop` | The ranked causes of a fall **and** the causes checked and eliminated, with what eliminated each. |
+| `diagnose_page` | Which of the four reasons one page is failing — missing, unhelpful, unfindable, unserved — and the smallest thing that would fix it. |
+| `verify_change_impact` | Whether a change worked, judged against pages nobody touched. Before-and-after alone is refused. |
+| `verify_claims` | Which statements went out of date while nobody touched the page — prices, limits, version support, claims about other companies. |
+| `plan_docs_structure` | What the documentation should contain and in what shape, page by page, before anybody writes a word. |
+| `design_goals_funnel` | What to measure, with each proposed goal's matcher resolved against the site as it is now. |
+| `design_monitors` | What should raise an alert, at what threshold, and what each alert will miss. |
+
+Most take an optional `request` in your own words, which narrows the run without replacing the method, plus the typed inputs its question needs (`path`, `competitors`, `window_days`, `pages`). A payload that fails its own contract is reported as a failure with the violations listed — never as a successful answer with an empty result, because "no findings" reads as "the site is fine".
+
 ## Background agent runs
 
 `find_skill` hands the SKILL.md to *your* agent to execute. These tools do the opposite: they run the skill on Docsbook's side, against your workspace, with the full administrative toolset the skill was written for — so an assistant with no other Docsbook tools connected can still get the job done.

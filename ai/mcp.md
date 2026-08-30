@@ -9,7 +9,7 @@ Docsbook ships a Model Context Protocol (MCP) server. Connect Claude Code or any
 
 ## What MCP is
 
-The Model Context Protocol is an open standard for exposing tools, resources, and prompts to AI agents over a typed RPC interface. The Docsbook MCP server exposes 94 tools — 76 named tools plus one registration tool per webhook event (18 typed events) — covering the full product surface.
+The Model Context Protocol is an open standard for exposing tools, resources, and prompts to AI agents over a typed RPC interface. The Docsbook MCP server exposes 120 tools — 79 named tools, one registration tool per webhook event (18 typed events), four background-run tools, and 19 scenario tools that each answer one question about your documentation with a validated JSON payload — covering the full product surface.
 
 ## Endpoint
 
@@ -373,20 +373,21 @@ Every call is charged a **flat price, fixed before the call runs and independent
 
 | Class | Per call | Per 1 000 calls | Tools |
 |---|---|---|---|
-| Included | Free | Free | `get_info`, `find_skill`, `find_widget`, `list_workspaces`, `get_workspace`, `create_workspace` |
+| Included | Free | Free | `get_info`, `find_skill`, `find_widget`, `find_tool`, `list_workspaces`, `get_workspace`, `create_workspace` |
 | Read | $0.0002 | $0.20 | A page, a setting or a registry row we already store |
 | Write | $0.0005 | $0.50 | `update_*`, `create_*`, `set_*`, `register_*` |
 | Analytics | $0.0010 | $1.00 | Scans over the event store: funnels, journeys, retention, feeds |
 | Egress | $0.0020 | $2.00 | `fetch_url`, `test_*`, `replay_*` — anything leaving our network |
 | AI | $0.0120 | $12.00 | `write_docs`, `search_docs`, `search`, `get_insights` |
+| Agent | $0.2500 | $250.00 | A whole agent run behind one call: `audit_*`, `diagnose_*`, `verify_*`, `map_*`, `find_content_gaps`, `assess_*`, `compare_*`, `plan_*`, `design_*`, `run_docs_*` |
 
 The exact class and price of every tool is on its row in the **MCP** section of your admin panel, next to how many calls your monthly allowance buys.
 
 **Discovery is free.** Describing the server, finding a skill or a widget, listing your workspaces and creating one are never metered — you should not be charged for the handshake, or for the call that creates the thing being billed.
 
-**It comes off your account balance**, the same monthly allowance the rest of Docsbook's AI work draws on, and it appears as its own line in your usage breakdown. A tool that goes on to do AI work is metered for that work as well; the two add rather than replace each other.
+**It comes off the balance of the project the call is about**, the same balance a top-up funds and the rest of that project's AI work draws on, and it appears as its own line in Spend by source. Which project pays is worked out from the call itself — the workspace you named, the repository it is scoped to — and only ever a project you own. A call that names no project is served unmetered. A tool that goes on to do AI work is metered for that work as well; the two add rather than replace each other.
 
-**When the balance runs out**, a metered call is refused before it runs, and the refusal names the price and what you have left. Free discovery keeps working, so your agent can still find out what happened.
+**When the balance runs out**, a metered call is refused before it runs, and the refusal names which project ran out, what the call costs, what is left, and where to top that project up. There is no tier to buy and nothing refills a balance on a schedule. Free discovery keeps working, so your agent can still find out what happened.
 
 **A call that fails is still charged** — the work happened, and the answer says so. A call we never managed to run is not charged.
 
