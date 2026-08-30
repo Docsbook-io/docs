@@ -19,11 +19,18 @@ conversations that produced them:
 | **Conversations** | Answered | Share of conversations that showed a sign of value (a citation click, a like, an outbound click) |
 | **Conversations** | Savings | Estimated support cost avoided, based on answered conversations |
 | **Conversations** | Cost | Total billed AI spend for the window, shown as one line against Savings |
-| **Conversations** | Outcome | Breakdown of answered, dead-end, and unrated conversations — open any group straight into **Dialogs** |
 | **Dialogs** | Per-dialog cost | Shown next to each conversation's estimated savings right in the list; open one for the full cost/savings breakdown and its complete question-and-answer transcript |
 
 Cost breakdown by provider/model, monthly limits, translation usage, and time
 ranges are unchanged — see the sections below.
+
+The fuller breakdown of your chat traffic — topics, why readers came, top
+searches, languages, outbound links, and the answered/dead-end/unrated
+outcome split — no longer lives on this page. It now sits at the bottom of
+the **Analytics** page, as two cards ("What readers asked" and "Where the
+answers led"), reading Analytics' own date-range picker instead of a second
+period control here. Clicking a row there no longer opens it into
+**Dialogs** — that jump only works from within the Chat page itself.
 
 ## How to Open
 

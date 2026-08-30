@@ -11,6 +11,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 - The admin panel sidebar's footer no longer names a plan tier next to your account — it now shows a bare usage bar under your account name, with the exact allowance in a hover tooltip. `Dashboard`
 - A tool's page in the `MCP` section now opens straight onto the install card for your AI client, instead of a numbered two-step guide that offered a second way to connect above it. `Dashboard`
+- That same tool page now also shows a full stat row — including price per call and rate limit — and its example prompts can be run directly against your connected assistant, not just copied. `Dashboard`
+- `Feeds` now lists feeds as rows in the sidebar with a one-line toolbar of icon filters and an always-visible search box, instead of a separate picker page. `Feeds`
+- `Analytics`' tabbed cards now share one consistent tab style, and the Chat page's "What readers asked" and "Where the answers led" panels moved to the bottom of `Analytics`, reading its own date-range picker instead of a separate control on the Chat page. `Analytics`
 
 ### Improved
 

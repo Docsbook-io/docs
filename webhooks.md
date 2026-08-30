@@ -58,16 +58,17 @@ you're looking at it, so there is no time range to pick and nothing to remember 
 
 ### Picking a feed
 
-Feeds opens on **Select a feed**: a card for each one, with a line saying what it holds. Four are
-built in — **All events** (unfiltered), **Unanswered questions**, **Reader feedback** and
-**Delivery trouble** — so there is something to open on your first visit, before you have saved
-anything of your own. Below them sit the feeds you saved, each showing what it narrows to and a dot
-when a destination is already firing on it. **Create your own feed** is the last card; deleting one
-of yours is on its own card. Opening a feed replaces the page, and **‹ All feeds** brings you back.
+Which feed you're reading — the built-in ones or a list you saved — is picked from rows in the
+sidebar's **Feeds** section rather than a page of its own; the row you're on is highlighted, and a
+`+` on the section creates a new list from an empty filter. There is no separate title above the
+feed: the highlighted row already says what you're looking at.
 
-The built-in feeds are starting filters rather than saved lists, so they cannot be deleted and
-nothing can be pointed at them directly. Narrow one and **Save as list** turns it into a feed of
-your own — which is the form an alert can be attached to.
+Four feeds are built in — **All events** (unfiltered), **Unanswered questions**, **Reader
+feedback** and **Delivery trouble** — so there is something to open on your first visit, before
+you have saved anything of your own. They are starting filters rather than saved lists, so they
+cannot be deleted and nothing can be pointed at them directly. Narrow one and **Save as list**
+turns it into a feed of your own, which appears as its own row in the sidebar and is the form an
+alert can be attached to.
 
 ### Reading the feed
 
@@ -112,9 +113,10 @@ browsing would be wrong.
 ### Narrowing the feed
 
 Filter the feed by event type, status, destination, visitor, a completed goal, or free text matched
-anywhere in the payload. Each one is a chip above the feed — **Add event**, **Add visitor**,
-**Add goal**, **Add status**, **Add destination**, **Search payload** — which becomes the value you
-picked once it is set, and clicking that value edits it again. A visitor filter is one click away
+anywhere in the payload — one toolbar row above the feed, no title above it. Each of the first five
+facets is an icon button: hover or focus it to see its name, and once it's set it fills in with the
+value itself, and clicking that value edits it again. Free text is its own always-visible search box
+at the end of that row rather than a facet you open first. A visitor filter is one click away
 from **Analytics** — open a reader there and jump straight to everything they did — one click away
 from a row's own avatar in the feed itself, or a pasted-in id by hand. Pinning a reader widens what
 the feed searches: alongside the events your docs dispatched, it pulls that reader's own activity on
@@ -128,9 +130,9 @@ only, since a goal filter is a crowd and one country and one browser averaged ov
 describe nobody. Saving a filter turns it into
 an **event list** — so narrowing the feed and defining what to be notified about are the same
 gesture. Test pings appear in the feed like any other event; a replay shows up as another attempt
-under the event it belongs to. **Export** beside the view's title downloads exactly what you are
-looking at, filters applied and unbounded by time, as CSV, JSON or NDJSON. It sits in the title row
-beside **Set up alert** — the two controls that act on the whole view rather than on one event.
+under the event it belongs to. **Export** downloads exactly what you are looking at, filters applied
+and unbounded by time, as CSV, JSON or NDJSON. It sits at the end of that same toolbar row next to
+**Set up alert** — the two controls that act on the whole view rather than on one event.
 
 ## Notifiers: where events go
 
