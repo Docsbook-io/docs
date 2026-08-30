@@ -31,6 +31,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - An open conversation on the `Chat` page now has **Analyze**, which reads the transcript for the turn where it went wrong and separates the three causes that look alike: the answer is not in your docs, it is there and was not found, or it was found and reads badly. `AI Chat`
 - The assistant's chat list now shows `Scheduled` and `Triggers` before you have any, each ending in a row that takes you to `Prompts` where a scheduled or event-fired chat is actually made. Both groups used to appear only once they already had runs in them. `AI Chat`
 - The three groups in that list now fold away, carrying their count on the folded line, and the **New chat** row folds with the group it belongs to. Typing in the search box opens a folded group that has a match in it. `AI Chat`
+- The assistant can now search the web while it works with you, so an answer about anything outside your project — what a competitor charges, what a framework is currently called, whether a convention still holds — arrives with the pages it read rather than from memory. It searches on its own whenever a recommendation rests on the outside world, and you see the search happen in the thread, with the sources it found named by domain. `AI Chat`
+- Search results are treated as a way to pick a source, not to quote one: before any figure, version or price from the web is written into your docs, the assistant opens the page itself. If the search cannot run, it says so instead of answering as though it had searched. `AI Chat`
 
 ### Changed
 
