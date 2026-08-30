@@ -17,11 +17,13 @@ No account required to start. Create a documentation site in 3 simple steps.
 3. For website or idea sources, Docsbook generates a full draft site in under a minute — no account needed yet. You get nine pages, from the landing page to an FAQ and a reference, each closing with a call to action, plus a pricing page when your source publishes prices
 4. If you picked GitHub, you'll be taken straight to a live preview of your repo's docs
 
-> **Note:** For website/idea sources, your draft lives in your browser only until you publish. It opens as a real documentation site — header, sidebar tree, outline, breadcrumbs and prev/next — so you can browse every generated page and adjust branding, layout and SEO in the settings panel before deciding to sign in. **Ask AI** is also available on the draft — use it to tweak content or ask questions about your site. It comes with a free daily AI credit; short questions barely touch it, while rewriting a long page uses more of it. Once the credit runs out you're asked to sign in to keep chatting.
+> **Note:** For website/idea sources, your draft lives in your browser only until you publish. It opens on its own admin panel, the same one a published project gets: a picture of the site as it stands, how many pages it has, where the content came from, and every section for branding, layout and SEO — all before you decide to sign in.
+>
+> Your documentation is one click away inside it. Press **Open**, or the preview itself, to browse it as a real documentation site with header, sidebar tree, outline, breadcrumbs and prev/next. **Assistant** in the panel is where you tweak content or ask questions about your site; from there, **interactive mode** in the message box opens the site with the chat beside it and every block clickable. It comes with a free daily AI credit; short questions barely touch it, while rewriting a long page uses more of it. Once the credit runs out you're asked to sign in to keep chatting.
 
 ## Sign in to publish
 
-Once you're happy with the draft, click the blue button in the draft's toolbar — **Publish** if you haven't changed anything yet, **Save changes** if you have. Both do the same thing: turn the draft into a site of your own. If you arrived through a claim link we sent you, that button reads **Claim ownership** instead, because the site was already built for you.
+Once you're happy with the draft, press **Publish this site** on the panel's front page, or the blue button in the toolbar on the documentation itself — **Publish** if you haven't changed anything yet, **Save changes** if you have. All of them do the same thing: turn the draft into a site of your own. Nothing about it changes when you do; publishing is what gives it a public address, a search index and analytics. If you arrived through a claim link we sent you, that button reads **Claim ownership** instead, because the site was already built for you.
 
 1. Choose a sign-in method — GitHub, Google, Apple, or email (one-time code)
 2. Complete the sign-in flow for your chosen method

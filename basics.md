@@ -37,7 +37,7 @@ There are two ways to create a workspace:
 ```
 1. You describe a website URL or an idea at docsbook.io/create
                     ↓
-2. Docsbook generates draft pages — browse them as a real docs site and customize before signing in
+2. Docsbook generates draft pages — you land on their admin panel, with the docs site one click away, and can customize before signing in
                     ↓
 3. You sign in, and the draft becomes a live Workspace automatically
                     ↓

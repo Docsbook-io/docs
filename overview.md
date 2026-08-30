@@ -185,7 +185,7 @@ Every paid plan includes a monthly AI budget, shown in real dollars: Pro's is $8
    Click "Get started" at [docsbook.io](https://docsbook.io), then pick a source: a website URL to scan, a GitHub repo to link, or just an idea in text
 
 2. **Preview and refine**  
-   Your draft opens as a real documentation site — sidebar, outline, breadcrumbs and all. Browse the generated pages and tune branding, layout and SEO in the settings panel, all before signing in
+   Your draft opens on its own admin panel — the site pictured as it stands, its pages listed, every section for branding, layout and SEO — all before signing in. Press **Open**, or the preview itself, to browse the generated pages as a real documentation site with sidebar, outline, breadcrumbs and all
 
    The draft is written to convert, not just to inform: a landing page, getting started, concepts, feature overview, a how-to guide, use cases, an FAQ, a reference, and — when your source publishes prices — a pricing page. Pages that sell close with a call-to-action block, and every price, plan and limit is copied from your own site. Nothing commercial is invented: a plan whose price wasn't found reads "Contact sales".
 

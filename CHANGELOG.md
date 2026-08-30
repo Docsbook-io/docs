@@ -55,6 +55,11 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Changed
 
+- A draft you generate without an account now opens on its own admin panel instead of on the documentation full screen. The site is pictured as it stands, with its pages listed, where the content came from, and every section for branding, layout, SEO and the assistant — the same room a published project gets, for a site that only lacks an address. `Dashboard`
+- Your documentation is one click away inside it: press **Open**, or the preview itself, to read it as a real site. Because it is no longer where you land, that page no longer opens with the chat over it — it is now what you go to when you just want to read. `Dashboard`
+- **Assistant** in the draft's panel is where you rewrite a page, add one or change the wording, and **interactive mode** in its message box opens the site with the chat beside it and every block clickable, with a way back to the panel in the corner. `AI Chat`
+- Signing up to publish a draft now says what actually happens: the site stays exactly as it is and signing up makes it yours. It used to promise that your docs site would generate right after signup, to someone already looking at a finished one. `Dashboard`
+
 - Your project's balance now has a row of its own at the bottom of the sidebar, with the amount spelled out in money and a **Top up** button on it, and pressing anywhere on the row opens the top-up screen. It used to be a small dial carrying no figures at all, whose numbers appeared only on hover — which a phone cannot do. `Billing`
 - The account menu now opens on the wallet: what is left, what has been spent, **Add credit** and **Pricing**, above everything else in the menu. Billing used to be a row fourth down a list of links, shaped exactly like the changelog and documentation links either side of it. `Billing`
 
