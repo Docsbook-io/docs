@@ -7,6 +7,17 @@ description: "What shipped in Docsbook Feeds — the live event stream from your
 
 Everything that shipped in **Feeds**. This is the Feeds slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 31.08.2026
+
+### Added
+
+- **Set up Prompt** sits beside Set up alert on the feed's toolbar, with a count of what is already running on this feed. An alert forwards the feed to a person; a prompt hands it to your assistant to act on, and now both are one glance apart instead of two screens. `Feeds`
+- Each prompt watching a feed gets a chip on that toolbar — filled while it runs, hollow while it is paused, its last run in the tooltip — and clicking one opens the conversation the prompt has been having on its own, so you can see what it actually did rather than only that it is switched on. `Feeds`
+
+### Removed
+
+- The **Usage** button has left the feed's toolbar. The breakdown itself has not moved: **See usage** on the sidebar balance card still opens it. It is about the whole project over a window, while every other control on that row acts on the feed in front of you. `Feeds`
+
 ## NEW - 30.08.2026
 
 ### Added

@@ -147,14 +147,33 @@ gesture. Test pings appear in the feed like any other event; a replay shows up a
 under the event it belongs to. **Export** downloads exactly what you are looking at, filters applied
 and unbounded by time, as CSV, JSON or NDJSON — unbounded because the feed itself carries no time
 range: it is live, and a file narrower than the view it copies is worse than no file. It sits at the
-end of that same toolbar row beside **Usage** and **Set up alert** — the three controls that act on
-the whole view rather than on one event.
+end of that same toolbar row beside **Set up Prompt** and **Set up alert** — the three controls that
+act on the whole view rather than on one event.
+
+### Have a prompt run on a feed
+
+An alert forwards a feed's events to a person. **Set up Prompt**, next to it on the same row, hands
+them to your assistant instead: pick a prompt and it runs by itself every time something lands in
+this feed, with no one watching. The button carries a count, so a feed with something on it never
+looks like a feed with nothing on it, and each armed prompt gets a chip beside the destination chips
+— filled while it is running, hollow while it is paused, with its last run in the tooltip.
+
+Clicking a chip does not open its settings. It opens the **conversation** the prompt has been
+having: the transcript of what it actually did the last time this feed moved, in the assistant's
+Triggers group. That is the only thing that can tell you a prompt is working rather than merely
+switched on.
+
+A prompt watches a **saved** feed, so a view you have narrowed but not saved yet says so and points
+at **Save as list**. The same arming is available from the other side — the Prompts page's
+**On event** picker now lists your feeds above the individual events — and deleting a feed
+disarms whatever watched it rather than deleting the prompt.
 
 ### What it all cost
 
 Every row in the feed carries a price, and one row at a time is not a column anyone can add up.
-**Usage**, on the toolbar, swaps the stream for the sum: what this project's money went on over a
-window, dearest first, in three sections.
+**See usage** on the balance card in the sidebar swaps the stream for the sum: what this project's
+money went on over a window, dearest first, in three sections. It is not on the feed's own toolbar,
+because the figure is about the whole project rather than about the feed you are looking at.
 
 | Section | One row per | What the figure is |
 |---|---|---|

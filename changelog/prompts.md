@@ -7,6 +7,12 @@ description: "What shipped in the Docsbook prompt library — the catalog of pro
 
 Everything that shipped in **Prompts**. This is the Prompts slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 31.08.2026
+
+### Added
+
+- A prompt can now be armed on one of your saved feeds instead of a single event, so it runs whenever anything lands in that feed — the same set of events the feed already shows you, chosen once on the page where you watched them arrive. The **On event** picker lists your feeds above the individual events, each with what it covers. `Prompts`
+
 ## NEW - 30.08.2026
 
 ### Added
