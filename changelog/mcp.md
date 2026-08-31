@@ -7,6 +7,12 @@ description: "What shipped in the Docsbook MCP server — the tools it serves, w
 
 Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 31.08.2026
+
+### Improved
+
+- The client picker on **MCP tools**, **Prompts**, and a tool's own install card now opens on an **Agent** tab by default — one prompt to copy for any agent that can read a playbook, instead of hunting your specific client among eight tabs first. The per-client tabs (Claude Code, Cursor, Codex, and the rest) are still there if you'd rather copy the exact command yourself. `MCP`
+
 ## NEW - 30.08.2026
 
 ### Added
