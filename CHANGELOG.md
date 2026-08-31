@@ -21,6 +21,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 - Reviewing an AI-proposed change in `AI Chat` now shows each file's diff collapsed by default, so a multi-file proposal reads as a scannable list of files first instead of an unbroken wall of diffs, and the card itself now picks up your workspace's own accent color instead of a flat neutral background. `AI Chat`
 
+### Fixed
+
+- Header navigation links on a docs site served at an apex path (like `docsbook.io/docs`) no longer 404 — they used to resolve against the site root instead of the site's own base path, so a link meant for that site could bounce through a subdomain that doesn't exist. `Changes`
+
 ## NEW - 30.08.2026
 
 ### Added

@@ -7,6 +7,12 @@ description: "What shipped in the Docsbook Changes tab — commit history of you
 
 Everything that shipped in **Changes**. This is the Changes slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 31.08.2026
+
+### Fixed
+
+- Header navigation links on a docs site served at an apex path (like `docsbook.io/docs`) no longer 404 — they used to resolve against the site root instead of the site's own base path, so a link meant for that site could bounce through a subdomain that doesn't exist. `Changes`
+
 ## NEW - 30.08.2026
 
 ### Added
