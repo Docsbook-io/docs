@@ -5,6 +5,19 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 01.09.2026
+
+### Added
+
+- A **Sources** section in the admin panel: connect the repository your docs are written against, or the website that carries your real prices and limits, and the assistant reads it itself. Asking it to update the documentation or resolve drift now starts by fetching your source instead of answering from memory — a repository hands back its files, a site hands back its pages. Paste any link and Docsbook works out whether it is a repository, a folder inside one, a whole site or a single page. `Sources`
+- Every connected source shows a green **LiveSync** badge and, once something has actually fetched it, when it was last read. Sources can be paused (kept in the list, stopped being read) or removed. `Sources`
+- `list_sources` and `read_source` are served over your project's MCP endpoint, so a source you register means the same thing in Claude Code or Cursor as it does in the panel. Scenario tools that already read the outside world now reach your registered source instead of guessing at an address. `MCP`
+- A **Sources** column on the Prompts table, and the same chips under an MCP tool's description, showing which of your sources that particular run can actually read — lit where it fetches them, unlit where it only knows they exist, and blank where the run reaches no source at all. `Prompts`
+
+### Fixed
+
+- The signed-out preview priced a chat conversation at $0.21-$0.41 while the Cost tile above it worked out to about a cent and a half. The rows are the figure an owner multiplies by their own traffic before deciding whether to switch the chat on, and they were eighteen times the truth. `AI Chat`
+
 ## NEW - 31.08.2026
 
 ### Added

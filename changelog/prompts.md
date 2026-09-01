@@ -7,6 +7,12 @@ description: "What shipped in the Docsbook prompt library — the catalog of pro
 
 Everything that shipped in **Prompts**. This is the Prompts slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 01.09.2026
+
+### Added
+
+- A **Sources** column on the Prompts table, and the same chips under an MCP tool's description, showing which of your sources that particular run can actually read — lit where it fetches them, unlit where it only knows they exist, and blank where the run reaches no source at all. `Prompts`
+
 ## NEW - 31.08.2026
 
 ### Added

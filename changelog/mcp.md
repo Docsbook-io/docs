@@ -7,6 +7,12 @@ description: "What shipped in the Docsbook MCP server — the tools it serves, w
 
 Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 01.09.2026
+
+### Added
+
+- `list_sources` and `read_source` are served over your project's MCP endpoint, so a source you register means the same thing in Claude Code or Cursor as it does in the panel. Scenario tools that already read the outside world now reach your registered source instead of guessing at an address. `MCP`
+
 ## NEW - 31.08.2026
 
 ### Improved

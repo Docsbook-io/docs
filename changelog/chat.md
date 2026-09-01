@@ -7,6 +7,12 @@ description: "What shipped in Docsbook AI Chat — the assistant on your docs si
 
 Everything that shipped in **Chat**. This is the Chat slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 01.09.2026
+
+### Fixed
+
+- The signed-out preview priced a chat conversation at $0.21-$0.41 while the Cost tile above it worked out to about a cent and a half. The rows are the figure an owner multiplies by their own traffic before deciding whether to switch the chat on, and they were eighteen times the truth. `AI Chat`
+
 ## NEW - 31.08.2026
 
 ### Improved

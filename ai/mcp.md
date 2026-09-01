@@ -9,7 +9,7 @@ Docsbook ships a Model Context Protocol (MCP) server. Connect Claude Code or any
 
 ## What MCP is
 
-The Model Context Protocol is an open standard for exposing tools, resources, and prompts to AI agents over a typed RPC interface. The Docsbook MCP server exposes 151 tools — 79 named tools, one registration tool per webhook event (18 typed events), four background-run tools, 45 scenario tools that each answer one question about your documentation or about the business it serves with a validated JSON payload, and five collectors that hand back the evidence those scenarios are built on, with no judgement in it — covering the full product surface.
+The Model Context Protocol is an open standard for exposing tools, resources, and prompts to AI agents over a typed RPC interface. The Docsbook MCP server exposes 153 tools — 81 named tools, one registration tool per webhook event (18 typed events), four background-run tools, 45 scenario tools that each answer one question about your documentation or about the business it serves with a validated JSON payload, and five collectors that hand back the evidence those scenarios are built on, with no judgement in it — covering the full product surface.
 
 ## Endpoint
 
