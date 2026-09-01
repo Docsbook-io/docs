@@ -9,9 +9,20 @@ description: "Connect a repository or a website as a source of truth, and the Do
 
 Open the **Sources** section of your project's admin panel, directly under MCP and Prompts.
 
+## The catalogue
+
+The section is a table of every kind of source Docsbook knows about, grouped as *Your project*, *Documentation platforms*, *Knowledge bases*, *Code and APIs* and *Community*. Rows you have connected are lit; the rest are grey, and most of them connect in one paste — a published documentation site is a website whoever built it, so Mintlify, GitBook, ReadMe, Docusaurus, Read the Docs and the others need nothing set up per vendor.
+
+Grey means two different things, and the row says which:
+
+- **Not connected** — the row offers a **Connect**. Reading it works today.
+- **Not available yet** — the row offers no button, and prints what it would need: an authorisation you grant once, a bot token, or a reader for a repository host we do not read yet. Where a workaround exists the row names it — a public help centre connects as a Website today.
+
+A row without a button is deliberate. A Connect that cannot connect would make every other row on the screen untrustworthy.
+
 ## Connecting one
 
-There is one field. Paste a link, and Docsbook works out what it is:
+Press **Connect** on a row, or the **New Source** button above the table for anything at all. Either way there is one field, and the **address** decides what the source is and which row it lands under — not the row you pressed:
 
 | What you paste | What it becomes | What gets read |
 |---|---|---|
@@ -19,8 +30,13 @@ There is one field. Paste a link, and Docsbook works out what it is:
 | `github.com/acme/api/tree/main/docs` | Repository folder | Only that subtree |
 | `acme.com` or `acme.com/docs` | Website | Several of its pages, found from its own `sitemap.xml` |
 | `acme.com/pricing.html` | Page | That one page |
+| `acme.mintlify.app`, `acme.gitbook.io`, `acme.notion.site`… | That vendor's row | The same as a website, filed where you would look for it |
+
+If the address disagrees with the row you opened, the dialog says so before you commit.
 
 A link pasted from an issue or a pull request connects the **repository**, not the issue. Tracking parameters (`?utm_source=…`) are dropped, so the same page pasted from a tweet and from your address bar is one source rather than two.
+
+A project can connect **more than one of the same kind** — two websites, two repositories, two forums. Use **New Source**, or **+ Add** on a row that already has one.
 
 Two entries appear without you adding them, and neither can be removed here:
 
@@ -34,6 +50,8 @@ Each connected source can carry a short note about *why* it is connected. That n
 Every connected source shows a green dot and the word **LiveSync**.
 
 > **That badge means the source is connected and your agents may read it. It is not a health check.** Nothing pings the host, and nothing checks the repository still exists — a status light that no code writes is worse than no light at all. The honest signal is **Last read**, shown on the row and written only when a tool actually fetched the source successfully.
+
+A provider's connections show as chips in the last column; open the row to see each one's note, when it was last read, and its controls.
 
 **Pause** keeps a source in the list and stops anything reading it. **Remove** disconnects it. The two are different on purpose: "stop reading this for now" should not make you retype the address later.
 

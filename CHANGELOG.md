@@ -9,11 +9,17 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Added
 
-- A **Sources** section in the admin panel: connect the repository your docs are written against, or the website that carries your real prices and limits, and the assistant reads it itself. Asking it to update the documentation or resolve drift now starts by fetching your source instead of answering from memory — a repository hands back its files, a site hands back its pages. Paste any link and Docsbook works out whether it is a repository, a folder inside one, a whole site or a single page. `Sources`
+- A **Sources** section in the admin panel — what your documentation is allowed to read from. It lists every kind of source Docsbook can read, from your own repository and website to Mintlify, GitBook, ReadMe, Notion, Zendesk, npm and two dozen more, with the ones you have connected lit and the rest offering a **Connect**. Connect one and asking the assistant to update the documentation or resolve drift starts by fetching it, instead of answering from memory: a repository hands back its files, a site hands back its pages. `Sources`
+- Connecting is one paste — the address decides whether it is a repository, a folder inside one, a whole site or a single page, and which row it belongs under. A row that would need an integration nobody has built yet says what it needs and offers no button, rather than a button that does nothing. `Sources`
+- **New Source** connects a second website, a second repository or a second forum: a project is not limited to one of each, and every connection carries its own note and its own pause switch. `Sources`
 - Every connected source shows a green **LiveSync** badge and, once something has actually fetched it, when it was last read. Sources can be paused (kept in the list, stopped being read) or removed. `Sources`
 - `list_sources` and `read_source` are served over your project's MCP endpoint, so a source you register means the same thing in Claude Code or Cursor as it does in the panel. Scenario tools that already read the outside world now reach your registered source instead of guessing at an address. `MCP`
 - A **Sources** column on the Prompts table, and the same chips under an MCP tool's description, showing which of your sources that particular run can actually read — lit where it fetches them, unlit where it only knows they exist, and blank where the run reaches no source at all. `Prompts`
-- **Create new project** is pinned under the project list in the sidebar's switcher, so starting one no longer means going back out to the dashboard gallery first. `Dashboard`
+- **Create new project** is reachable from anywhere now: a **New project** button in the dashboard header, and a row pinned under the project list in the sidebar's switcher. With enough projects to paginate, the gallery previously offered no way to start one at all, and the switcher's own row scrolled away with the list. `Dashboard`
+
+### Changed
+
+- The standalone balance row above the account menu is gone; your wallet now lives in the account menu's own **Balance** block, and the sidebar keeps the notice that warns when a project is running low. One balance was being stated twice in the same column. `Dashboard`
 
 ### Fixed
 

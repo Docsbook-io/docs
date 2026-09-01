@@ -194,9 +194,9 @@ so a 90-day button would answer for 30 days under the wrong label.
 its count and its cost as a plain number you can sum, and a column saying whether that line was
 charged — as well as the raw events behind it, bounded by the window you are looking at.
 
-The same screen is what **See usage** opens from the balance card in the sidebar. That card's other
-button, **Top up**, still goes to billing: one answers how much is left, this one answers what took
-it.
+The same screen is what **See usage** opens from the sidebar's balance notice — the card that warns
+when this project is running low. Topping up is in the account menu's **Balance** block: one answers
+how much is left, this one answers what took it.
 
 ## Notifiers: where events go
 
