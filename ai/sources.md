@@ -11,7 +11,7 @@ Open the **Sources** section of your project's admin panel, directly under MCP a
 
 ## The catalogue
 
-The section is a table of every kind of source Docsbook knows about, grouped as *Your project*, *Documentation platforms*, *Knowledge bases*, *Code and APIs* and *Community*. Rows you have connected are lit; the rest are grey, and most of them connect in one paste — a published documentation site is a website whoever built it, so Mintlify, GitBook, ReadMe, Docusaurus, Read the Docs and the others need nothing set up per vendor.
+The section is a table of every kind of source Docsbook knows about — *Your project*, *Documentation platforms*, *Knowledge bases*, *Code and APIs* and *Community*, narrowed through a **Filters** menu rather than divided into grouped sections. Each connection gets its own row: two connected websites are two rows, not one row you have to open to see them. A kind with nothing connected still gets exactly one grey row. Most kinds connect in one paste — a published documentation site is a website whoever built it, so Mintlify, GitBook, ReadMe, Docusaurus, Read the Docs and the others need nothing set up per vendor.
 
 Grey means two different things, and the row says which:
 
@@ -36,7 +36,7 @@ If the address disagrees with the row you opened, the dialog says so before you 
 
 A link pasted from an issue or a pull request connects the **repository**, not the issue. Tracking parameters (`?utm_source=…`) are dropped, so the same page pasted from a tweet and from your address bar is one source rather than two.
 
-A project can connect **more than one of the same kind** — two websites, two repositories, two forums. Use **New Source**, or **+ Add** on a row that already has one.
+A project can connect **more than one of the same kind** — two websites, two repositories, two forums. Use **New Source** for the next one too; it lands as its own row beside the one you already have.
 
 Two entries appear without you adding them, and neither can be removed here:
 
@@ -45,15 +45,13 @@ Two entries appear without you adding them, and neither can be removed here:
 
 Each connected source can carry a short note about *why* it is connected. That note is not decoration: the assistant reads it as instruction.
 
-## Live, paused, and what the green dot means
+## Online, paused, and what the green dot means
 
-Every connected source shows a green dot and the word **LiveSync**.
+Every connected source shows a green dot and the word **Online**. A paused one shows a grey dot and **Paused**.
 
-> **That badge means the source is connected and your agents may read it. It is not a health check.** Nothing pings the host, and nothing checks the repository still exists — a status light that no code writes is worse than no light at all. The honest signal is **Last read**, shown on the row and written only when a tool actually fetched the source successfully.
+> **That status means the source is connected and your agents may read it. It is not a health check.** Nothing pings the host, and nothing checks the repository still exists — a status light that no code writes is worse than no light at all. The honest signal is its own **Last used** column, written only when a tool actually fetched the source successfully.
 
-A provider's connections show as chips in the last column; open the row to see each one's note, when it was last read, and its controls.
-
-**Pause** keeps a source in the list and stops anything reading it. **Remove** disconnects it. The two are different on purpose: "stop reading this for now" should not make you retype the address later.
+Each row carries its address as a chip and its own controls: **Disconnect** keeps a source in the list and stops anything reading it — press it again (it becomes **Connect**) to resume. **Remove** takes the connection off the list outright. **Open** visits the address itself. The two ways to stop reading a source are different on purpose: "stop reading this for now" should not make you retype the address later.
 
 ## What reads them
 
