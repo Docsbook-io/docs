@@ -13,6 +13,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Every connected source shows a green **LiveSync** badge and, once something has actually fetched it, when it was last read. Sources can be paused (kept in the list, stopped being read) or removed. `Sources`
 - `list_sources` and `read_source` are served over your project's MCP endpoint, so a source you register means the same thing in Claude Code or Cursor as it does in the panel. Scenario tools that already read the outside world now reach your registered source instead of guessing at an address. `MCP`
 - A **Sources** column on the Prompts table, and the same chips under an MCP tool's description, showing which of your sources that particular run can actually read — lit where it fetches them, unlit where it only knows they exist, and blank where the run reaches no source at all. `Prompts`
+- **Create new project** is pinned under the project list in the sidebar's switcher, so starting one no longer means going back out to the dashboard gallery first. `Dashboard`
 
 ### Fixed
 
