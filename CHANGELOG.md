@@ -16,10 +16,12 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - `list_sources` and `read_source` are served over your project's MCP endpoint, so a source you register means the same thing in Claude Code or Cursor as it does in the panel. Scenario tools that already read the outside world now reach your registered source instead of guessing at an address. `MCP`
 - A **Sources** column on the Prompts table, and the same chips under an MCP tool's description, showing which of your sources that particular run can actually read — lit where it fetches them, unlit where it only knows they exist, and blank where the run reaches no source at all. `Prompts`
 - **Create new project** is reachable from anywhere now: a **New project** button in the dashboard header, and a row pinned under the project list in the sidebar's switcher. With enough projects to paginate, the gallery previously offered no way to start one at all, and the switcher's own row scrolled away with the list. `Dashboard`
+- **Open documentation** sits in the sidebar switcher's footer next to Create new project, one click out to the docs from wherever you're working. `Dashboard`
 
 ### Changed
 
 - The standalone balance row above the account menu is gone; your wallet now lives in the account menu's own **Balance** block, and the sidebar keeps the notice that warns when a project is running low. One balance was being stated twice in the same column. `Dashboard`
+- The sidebar switcher's organization list is flat now: every connected organization is the same kind of row, with the one your open project belongs to sorted first and checked, instead of getting its own section with its projects listed directly above everyone else. `Dashboard`
 
 ### Fixed
 
