@@ -7,6 +7,12 @@ description: "What shipped in the Docsbook MCP server — the tools it serves, w
 
 Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 02.09.2026
+
+### Changed
+
+- The MCP page's title bar now shows a **Connect MCP** button instead of a copyable project URL — it opens a guide with the exact command or config for your client. Every MCP URL shown in the admin panel now points at the shared `docsbook.io` endpoint rather than a workspace subdomain, matching how connecting actually works: authorization is scoped to your account, not to one project's URL. `MCP`
+
 ## NEW - 01.09.2026
 
 ### Added
