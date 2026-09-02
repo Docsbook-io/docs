@@ -16,6 +16,8 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 - The `draft_*` tools return the artifact itself — the page, the answer block, the link insertions, the outreach message — as markdown ready to apply, and name the call that applies it. They still write nothing themselves, so the whole family stays safe on a read-only token. `MCP`
 - Every tool's page and the tools reference now carry a **per-tool price and wait**: the [MCP tools reference](./reference/mcp-tools.md) lists all 135 with what only that one tells you, what it costs, and how long the call is held open. `MCP`
 - The assistant can now read and write that tracker itself — `list_issues`, `get_issue` and `create_issue`, in the admin chat and over your MCP endpoint. Ask it to open an issue, add something to the backlog, or write down what an audit just found, and the finding outlives the conversation instead of ending with it. Filing needs a read-write token; reading does not. `MCP`
+- `generate_issues` runs issue generation as a background job, so it keeps working after you close the panel and can be started from Claude Code or Cursor without opening it at all. `MCP`
+- The MCP tools table now carries an **Impact** column: which number each tool works on and which way that number is good news, so you can tell what a tool is for before you spend a call on it. No percentage — one call is a step inside a plan the table never reads, and a figure there would be a forecast rather than a fact. `MCP`
 
 ### Changed
 

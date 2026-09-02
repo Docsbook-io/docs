@@ -14,7 +14,7 @@ One visit is a look; a second is a product someone is actually adopting. This is
 ### Added
 
 - The `draft_*` tools return the artifact itself — the page, the answer block, the link insertions, the outreach message — as markdown ready to apply, and name the call that applies it. They still write nothing themselves, so the whole family stays safe on a read-only token. `MCP`
-- **Generate Issues** asks your assistant to look at the project and file what it finds, after you pick which stages of work to generate along: observe, understand, discover, decide, plan, execute, measure, verify, learn, coordinate. Picking is the point — asked for issues with no stage named, an assistant returns things to *build* every time, and a backlog with no Measure or Verify in it belongs to a team that never finds out whether the last thing it built worked. `Issues`
+- **Generate Issues** asks your assistant to look at the project and file what it finds, after two questions: which stage of work you want to be in — observe, understand, discover, decide, plan, execute, measure, verify, learn, coordinate — and which number you want moved. Asking is the point. With no stage named an assistant returns things to *build* every time, and a backlog with no Measure or Verify in it belongs to a team that never finds out whether the last thing it built worked; the pair you pick also selects the agents that already cover it, so the issues come from this project's own evidence rather than from general advice. `Issues`
 
 ### Changed
 

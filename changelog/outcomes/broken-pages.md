@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Broken pages** — fewer pa
 
 Claims and links that stopped being true — found before a reader finds them. This is the Broken pages slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 02.09.2026
+
+### Changed
+
+- The setup checklist now opens with an audit instead of an interview: the first step files what is actually wrong with your generated draft as issues you can work through one at a time, rather than asking you what is missing before you have had a chance to find out.
+
 ## NEW - 31.08.2026
 
 ### Improved
