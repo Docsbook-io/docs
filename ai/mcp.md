@@ -9,7 +9,7 @@ Docsbook ships a Model Context Protocol (MCP) server. Connect Claude Code or any
 
 ## What MCP is
 
-The Model Context Protocol is an open standard for exposing tools, resources, and prompts to AI agents over a typed RPC interface. The Docsbook MCP server exposes 153 tools — 81 named tools, one registration tool per webhook event (18 typed events), four background-run tools, 45 scenario tools that each answer one question about your documentation or about the business it serves with a validated JSON payload, and five collectors that hand back the evidence those scenarios are built on, with no judgement in it — covering the full product surface.
+The Model Context Protocol is an open standard for exposing tools, resources, and prompts to AI agents over a typed RPC interface. The Docsbook MCP server exposes 244 tools — 81 named tools, one registration tool per webhook event (18 typed events), four background-run tools, 135 action tools that each perform one step of documentation work on one subject and answer with a validated JSON payload, and five collectors that hand back the evidence those actions are built on, with no judgement in it — covering the full product surface.
 
 ## Endpoint
 
@@ -351,9 +351,9 @@ Five **collectors** are the first half on its own, at **$0.0040** a call:
 
 There is no model in the path, so there is nothing in them to disbelieve — and the payload proves it rather than claiming it. Every answer carries a **`reproduce`** block: the exact MCP calls and the arguments they were made with, per row. Run them yourself and you get the same record back, apart from the timestamp. Nothing an audit returns can offer that, because an audit's answer passed through a model.
 
-What you do not get is a judgement. No findings, no scores, no ranking, no recommendation — those are what the `$0.2500` buys, and a collector that quietly included one would be an audit at a sixtieth of the price.
+What you do not get is a judgement. No findings, no scores, no ranking, no recommendation — those are what an action tool's price buys, and a collector that quietly included one would be an agent run at a fraction of the price.
 
-**When the cheap one is the right one.** With no Search Console connected, `audit_seo` scores its ranking axes as unmeasured and still charges $0.25; `collect_corpus_map` needs no search data, no traffic and no history at all, and hands back real rows on a site that went up this morning. The same applies when you want the numbers an audit was built on before you decide whether to buy the reading of them.
+**When the cheap one is the right one.** With no Search Console connected, `measure_intent_match` scores its ranking axes as unmeasured and still charges for the run; `collect_corpus_map` needs no search data, no traffic and no history at all, and hands back real rows on a site that went up this morning. The same applies when you want the numbers an action was built on before you decide whether to buy the reading of them.
 
 **What is missing is said out loud.** A source that could not be read appears three times — in `skipped`, in `unavailable` with what having it would have added, and in its own `reproduce` row with the reason it failed. A rate with nothing to divide by comes back as `null` with the reason, never as a zero, and every rate carries its denominator.
 
@@ -402,7 +402,9 @@ Every call is charged a **flat price, fixed before the call runs and independent
 | Egress | $0.0020 | $2.00 | `fetch_url`, `test_*`, `replay_*` — anything leaving our network |
 | Probe | $0.0040 | $4.00 | `collect_*` — one family of facts gathered and normalised, with no model in it |
 | AI | $0.0120 | $12.00 | `write_docs`, `search_docs`, `search`, `get_insights` |
-| Agent | $0.2500 | $250.00 | A whole agent run behind one call: `audit_*`, `diagnose_*`, `verify_*`, `map_*`, `find_content_gaps`, `assess_*`, `compare_*`, `plan_*`, `design_*`, `run_docs_*` |
+| Agent | $0.0740 – $0.2450 | $74 – $245 | A whole agent run behind one call: the 135 action tools (`observe_*`, `explain_*`, `discover_*`, `decide_*`, `plan_*`, `draft_*`, `measure_*`, `verify_*`, `learn_*`, `handoff_*`), plus `audit_geo` and `run_docs_*` at $0.2500 |
+
+**An action tool is priced from the work it declares** — how many families of evidence it reads, how many model round trips it may take, whether it leaves your site, whether it writes an artifact — rather than one flat figure for the whole class. So a narrow observation is a third of the price of a deep draft, and its published wait (roughly 20 s to 70 s) differs the same way. Both figures are on the tool's own row in the panel and in the [tools reference](../reference/mcp-tools.md).
 
 The exact class and price of every tool is on its row in the **MCP** section of your admin panel, next to how many calls your monthly allowance buys.
 

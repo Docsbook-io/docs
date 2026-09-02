@@ -7,6 +7,12 @@ description: "What shipped in the Docsbook Changes tab — commit history of you
 
 Everything that shipped in **Changes**. This is the Changes slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 02.09.2026
+
+### Changed
+
+- Admin settings now open as a page everywhere on a documentation site — the settings gear, the account menu's settings rows and the language picker's "Activate languages" all navigate to the dashboard instead of throwing a full-height panel over the docs. An anonymous draft keeps its own page, so its unsaved work survives the trip. `Changes`
+
 ## NEW - 31.08.2026
 
 ### Fixed
