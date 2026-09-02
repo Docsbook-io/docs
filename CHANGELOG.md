@@ -28,6 +28,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The landing page now shows the real admin panel above the pricing card, in the same signed-out preview the anonymous draft ships, instead of hand-drawn mockups that drifted from the product they pictured. `Landing`
 - The MCP page's title bar now shows a **Connect MCP** button instead of a copyable project URL — it opens a guide with the exact command or config for your client. Every MCP URL shown in the admin panel now points at the shared `docsbook.io` endpoint rather than a workspace subdomain, matching how connecting actually works: authorization is scoped to your account, not to one project's URL. `MCP`
 
+### Fixed
+
+- Selecting a passage of text on an anonymous, pre-signup draft now surfaces the "Ask AI" popup, the same as it already did on a claimed site. `AI Chat`
+
 ## NEW - 01.09.2026
 
 ### Added

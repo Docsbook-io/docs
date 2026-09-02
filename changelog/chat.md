@@ -7,6 +7,12 @@ description: "What shipped in Docsbook AI Chat — the assistant on your docs si
 
 Everything that shipped in **Chat**. This is the Chat slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 02.09.2026
+
+### Fixed
+
+- Selecting a passage of text on an anonymous, pre-signup draft now surfaces the "Ask AI" popup, the same as it already did on a claimed site. `AI Chat`
+
 ## NEW - 01.09.2026
 
 ### Fixed
