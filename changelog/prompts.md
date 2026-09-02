@@ -7,6 +7,12 @@ description: "What shipped in the Docsbook prompt library — the catalog of pro
 
 Everything that shipped in **Prompts**. This is the Prompts slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 02.09.2026
+
+### Added
+
+- Copying a prompt from the Prompts table now appends what the receiving assistant cannot know: which project it is about, the project's docs URL and repository, the Docsbook MCP endpoint, the tools that prompt calls, and an instruction not to invent what only those tools could have answered. The same sentence pasted into Claude, ChatGPT, Cursor or Codex used to read as a request about no particular site. The note is composed at the clipboard only — it is never stored and never sent on a scheduled run. `Prompts`
+
 ## NEW - 01.09.2026
 
 ### Added

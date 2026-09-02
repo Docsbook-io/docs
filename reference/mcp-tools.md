@@ -44,6 +44,20 @@ mcp add --transport http https://docsbook.io/api/mcp/server
 
 For deeper local graph navigation (outline, fuzzy headings, link references, resolve links) while an agent has your docs checked out on disk, use [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) instead — run `npx markdown-lsp <subcommand> ./docs` to expose LSP-style `doc_*` tools on the working tree. See the [markdown-lsp README](https://github.com/Docsbook-io/markdown-lsp) for setup. `search_docs`/`write_docs` and `markdown-lsp` are complementary: the former work over the hosted MCP connection with no local checkout, the latter needs the repo on disk.
 
+## Issue tracker
+
+The issues on the GitHub repository your documentation is built from — the work that is open on the project. This is where a finding outlives the conversation that produced it: an agent that has just audited your documentation can write down what it found instead of leaving it in a chat log.
+
+The same three tools are what the admin panel's **Issues** section reads and writes, so an issue filed from Claude Code shows up on that table and vice versa.
+
+| Tool           | Min plan | Description                                                                                          |
+| -------------- | -------- | ----------------------------------------------------------------------------------------------------- |
+| `list_issues`  | Free     | List the issues on the project's repository — open, closed or all, optionally filtered by label. Pull requests are never included. Read-only. Call it before `create_issue`: an issue that duplicates an open one is worse than no issue. |
+| `get_issue`    | Free     | Read one issue in full — its complete body, labels, state and link. Read-only. Acting on the 280-character preview `list_issues` returns is how you implement the wrong half of a request. |
+| `create_issue` | Free     | File an issue on the project's repository, with a title, a markdown body and labels. Requires a token authorized with **read-write** scope — a read-only token is refused. One call per issue. Returns the issue's number and link. |
+
+A Docsbook-hosted site's issues live on the repository Docsbook hosts for it; a site built from your own repository uses that repository, and an MCP call acts as Docsbook's own account there — enough to read a public repository and open an issue on it, and a stated permission error on a private one rather than an empty list.
+
 ## AI chat
 
 | Tool                      | Min plan | Description                                |
