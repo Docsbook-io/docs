@@ -1,0 +1,506 @@
+---
+title: "First-visit bounce changelog"
+description: "Everything Docsbook shipped that makes the first screen look like your product rather than a template — branding, theme, typography and your own domain."
+---
+
+# First-visit bounce changelog
+
+Everything Docsbook shipped that moves one number: **First-visit bounce** — fewer first visits ending in nothing. On this axis, down is better.
+
+Docs that look like the product, rather than like a template someone forgot. This is the First-visit bounce slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
+
+## NEW - 02.09.2026
+
+### Changed
+
+- The admin panel's sidebar now groups Overview, Analytics, Users, Translations and Chat above a plain rule, Changes and Issues above a second one, and the rest below — three bands instead of one flat list, with no heading spelling out what already reads by position. `Panel`
+
+## NEW - 01.09.2026
+
+### Added
+
+- **Create new project** is reachable from anywhere now: a **New project** button in the dashboard header, and a row pinned under the project list in the sidebar's switcher. With enough projects to paginate, the gallery previously offered no way to start one at all, and the switcher's own row scrolled away with the list. `Dashboard`
+- **Open documentation** sits in the sidebar switcher's footer next to Create new project, one click out to the docs from wherever you're working. `Dashboard`
+
+### Changed
+
+- The account menu's wallet is two plain rows now — **Billing** (opens the same top-up screen) and **Usage** (the per-model spend breakdown) — rather than a standalone balance row and then a bespoke balance card; the sidebar's own low-balance notice is still what warns when a project is running low. `Dashboard`
+- The sidebar switcher's organization list is flat now: every connected organization is the same kind of row, with the one your open project belongs to sorted first and checked, instead of getting its own section with its projects listed directly above everyone else. `Dashboard`
+
+## NEW - 31.08.2026
+
+### Removed
+
+- The **Usage** button has left the feed's toolbar. The breakdown itself has not moved: **See usage** on the sidebar balance card still opens it. It is about the whole project over a window, while every other control on that row acts on the feed in front of you. `Feeds`
+
+### Improved
+
+- Reviewing an AI-proposed change in `AI Chat` now shows each file's diff collapsed by default, so a multi-file proposal reads as a scannable list of files first instead of an unbroken wall of diffs, and the card itself now picks up your workspace's own accent color instead of a flat neutral background. `AI Chat`
+
+## NEW - 30.08.2026
+
+### Added
+
+- Every new project now starts with **$1** of real credit, and a few minutes in a card offers **$5 more** to claim — yours to spend on AI chat, translations, MCP calls or an agent run, with nothing to pay until it runs out. It appears in the sidebar and as a strip across the top of `Billing`, and claiming it is one button. `Billing`
+- The sidebar card can be dismissed outright, unlike the low-balance warning beside it, which still only folds to a single row. Dismissing it costs you nothing: the same bonus stays claimable on the billing screen. `Dashboard`
+- **See usage** on the balance card in the sidebar now opens that breakdown. It used to open the billing screen, which answers a different question with the same word: a balance says how much is left, never what took it. **Top up**, beside it, still goes to billing. `Dashboard`
+- And ten more: what should keep happening without anybody remembering, and whether each check belongs in a hook or in CI (`plan_automation_workflows`); which of these tools your workspace can answer with at all, and the cheapest thing to connect (`assess_setup_readiness`); the material you already have that could be docs, support answers and community threads included (`map_content_sources`); whether this kind of change has ever worked here before you repeat it (`assess_fix_precedent`); which two to four tools your question actually calls for (`plan_audit_route`); what each number is worth to the business (`map_business_value`); whether the corpus reads as an authority or as a site that mentions a topic (`map_topic_authority`); the region readers can only reach from the sidebar (`audit_internal_links`); which languages are read and which translations are behind their source (`audit_translation_coverage`); and what shape of answer a query wanted against what the ranking page delivers (`diagnose_intent_mismatch`). `MCP`
+
+### Changed
+
+- You now watch your site being built instead of watching a progress bar. Each step appears as it starts and closes with what it actually found — the pages read off your site, the colours taken from it, the page list it settled on — and each finished page shows up the moment it is written, rather than all at once at the end. The old bar named stages that never ran on your particular source and counted down seconds it had no way to know. `Create`
+- A draft you generate without an account now opens on its own admin panel instead of on the documentation full screen. The site is pictured as it stands, with its pages listed, where the content came from, and every section for branding, layout, SEO and the assistant — the same room a published project gets, for a site that only lacks an address. `Dashboard`
+- Your project's balance now has a row of its own at the bottom of the sidebar, with the amount spelled out in money and a **Top up** button on it, and pressing anywhere on the row opens the top-up screen. It used to be a small dial carrying no figures at all, whose numbers appeared only on hover — which a phone cannot do. `Billing`
+- The panel on those cards lost its button — the whole card is the button now. What is left is the tab's own icon in a coloured circle, **Enable Headings** under it and one line saying what that list answers, centred over the faded sample with no box around it. Cards that fill the page, like `Changes` and `Live`, keep their button. `Analytics`
+- The admin panel sidebar's footer no longer names a plan tier next to your account. What is left of the project's balance is a small dial at the end of that row instead, draining as the balance drains, with the exact amount, the percentage and where to top up shown when you hover it. It turns amber and then red before it looks empty. It is always there while you are signed in: where there are no figures for it, it stays empty and says the balance is not known rather than showing you a number nobody measured. `Dashboard`
+- `Feeds` now lists feeds as rows in the sidebar with a one-line toolbar of icon filters and an always-visible search box, instead of a separate picker page. `Feeds`
+- The conversations table on the Chat page now uses the pane's full width, matching the readers table, and its heading is gone — the sidebar row already says Chat. `AI Chat`
+- `Feeds` opens on a page of cards again — one per built-in feed plus your own saved lists, each with a line saying what it holds — instead of straight onto the unfiltered stream. The sidebar list from earlier today is still there for switching feeds without leaving one, but now starts closed behind a chevron on the `Feeds` row, remembering whether you left it open. `Feeds`
+- A prompt that already runs on a schedule or fires on an event now shows that on those two buttons in blue, in the card and on the row. The colour was there in the code and had never actually rendered, so a prompt already working by itself looked the same as one that had never been set up. `Prompts`
+
+### Fixed
+
+- Publishing now refreshes a custom domain straight away. A workspace on its own domain only ever picked up a change when its page cache expired, so a commit could take up to a day to appear on the docs your readers actually visit, while the same change showed immediately everywhere else. `Custom Domain`
+- The proposed-changes panel is now readable in dark mode; its diff sat on a light background whatever theme you were using. `AI Chat`
+
+### Improved
+
+- Every admin panel page header is now the same height as the sidebar's project switcher above it, instead of sitting noticeably taller. `Dashboard`
+
+## NEW - 29.08.2026
+
+### Changed
+
+- Switching projects from the admin sidebar now opens that project's dashboard rather than its published docs. `Dashboard`
+
+## NEW - 28.08.2026
+
+### Added
+
+- The admin panel's sidebar now has an account menu at the bottom: your account and theme, your other projects, this project's home page, the changelog, the documentation, help and the way out, all from one place. `Dashboard`
+- A **Getting started** checklist now sits at the bottom of the admin panel's sidebar, showing what your site still needs — its content, your branding, the AI chat, languages, your agent, your domain, and being findable. It ticks steps off as they are configured, collapses to a single row, and disappears once you are done. `Dashboard`
+- The Overview now shows a **Reader map** of where this week's readers are, coloured by whether a translation reaches them, without leaving the front page. `Dashboard`
+- The admin panel's sidebar now warns you before your AI allowance runs out: a small card above **Getting started** showing the share left, when the cycle resets, and a way through to your usage or a plan. It appears at a quarter left, again at a tenth, and once more when nothing is left, and closing it keeps it quiet until one of those actually happens. `Limits`
+
+### Changed
+
+- The admin panel's sidebar now shows which plan the project is on next to a bar for how much of this cycle's AI allowance is gone. The exact spend, in dollars, and the days left before it resets are on hover. `Dashboard`
+- `MCP` and `Skills` are now rows of their own in the admin panel's sidebar, one click each, instead of pages nested inside an `Agents` section. `Dashboard`
+- The admin panel's sidebar now opens with **Panel**, **Customize**, **Settings** and **Assistant** switchers: you pick which set of pages the column lists, then the page. The one you are in shows its name, the rest collapse to their icon, and Assistant leaves the list you were using alone. `Dashboard`
+- The Overview shows a picture of your site instead of embedding the live site. Embedding it counted a visit in your own analytics every time you opened the panel, and showed an empty box for sites on a custom domain that blocks embedding. `Dashboard`
+- The Conversations table now shows one line per row, with a reader's country and device as icons beside their name and the site that referred them shown with its own favicon. Cost and Savings are their own columns, the topic column is labelled Topic, and a Time column shows how long the conversation ran and how long that reader has spent on your docs. `AI Chat`
+- Saved feeds now live on that page instead of the sidebar, where each one had room for its name and nothing else. Every card says what its feed narrows to, shows a dot when a destination already fires on it, and carries its own delete. `Feeds`
+- **Spend by source** is now one row per source — its name, what it has spent, one bar and one percentage — instead of four coloured tiles, and every source is listed whether or not it has spent anything, so you can see where money can go before it goes there. Colour now means only one thing: amber as a source nears its own limit, red once it reaches it. `Limits`
+- Your languages are now a tab strip at the top of the Translations page instead of a second sidebar column, on every screen size. They are views of one subject, not separate sections. `Translations`
+- The admin panel's sidebar now names the plan of the project you have open, at the top beside its name. On seats a project can be free while the account is paying, and it is the project's plan that decides what the panel lets you use. `Dashboard`
+- The project's name at the top of that sidebar is now one line and reads as the heading of the column. The owner that used to sit under it is still on the row as the avatar, and still names the first group of the project menu. `Dashboard`
+- A funnel step's tooltip now draws each top source with that site's own favicon and each top country with its flag, and groups referrers by site: one site linking in from four pages used to fill the list with four truncated copies of the same name and push a real source out of it. `Analytics`
+- The project's name in the admin panel's sidebar is now the same size as the navigation under it, and a paid plan shows as a crown beside the name instead of a text label competing with it for the row. `Dashboard`
+- The admin panel's sidebar header now shows the project's own icon or logo, instead of always your GitHub avatar. `Dashboard`
+- The Analytics Visitors tile, its chart and every breakdown ranked by visitors now follow your workspace's own accent colour instead of a fixed blue. `Analytics`
+- A finished recommendation, and the Chat and Analytics curves on the Overview, now show in your workspace's own accent colour instead of grey or a fixed blue. `Dashboard`
+
+### Removed
+
+- The low-credit pop-up no longer floats over the bottom-right of the assistant. It is the sidebar card above, which does not cover what you are reading and does not repeat what the sidebar already says. `AI Chat`
+
+### Improved
+
+- Reader avatars are now far less likely to give two different readers the same colour. The palette was built for eight chart series and collided constantly across a 25-row table; the colour is now generated per reader, and hard-to-tell-apart pairs drop from roughly 4% to under 2%. Affects `AI Chat`, `Analytics` and the Journey tab. `Analytics`
+- Every row and switcher in the admin panel's sidebar is now one text size and one icon size, a step smaller than before, so the navigation reads as navigation rather than competing with the page beside it. `Dashboard`
+
+### Fixed
+
+- Your plan now shows in the admin panel's sidebar even when there are no usage figures to draw a bar from. `Dashboard`
+- The **Getting Started** folder can no longer be hidden from the sidebar. Hiding it stranded any reader who closed the introduction early with no way back to it. `Dashboard`
+- The admin panel's sidebar now shows the plan your account is actually paying for, not this one project's: a Pro or Business account with an unseated project no longer reads as Free there. `Dashboard`
+- Goal events in `Feeds` now carry their goal's colour. The tint only appeared for goals with a colour set by hand, which almost none have, so for most projects it silently never showed at all. `Feeds`
+
+## NEW - 26.08.2026
+
+### Changed
+
+- The doc toolbar's trigger is now an inverted pill, and its brand mark opens chat directly. `AI Chat`
+
+## NEW - 24.08.2026
+
+### Fixed
+
+- Sample figures shown to a signed-out visitor are blurred everywhere they appear, including the commit list and chat sidebar, so invented numbers can never be read as a site's real ones. `Preview`
+- A social link to LinkedIn, YouTube or Slack now shows the site header, which previously appeared only for GitHub, Discord or X. `Branding`
+
+## NEW - 23.08.2026
+
+### Added
+
+- Every conversation in `Chat` — the dialog list, the sidebar, and the open conversation — now shows the flag of the language it was written in. `AI Chat`
+- An `Average Product Price` setting under `Branding`. Together with your `Call To Action URL` it turns readers who click through to your sales page into a revenue figure. Set only one of the two and the revenue tiles stay switched off saying which half is missing, rather than reporting a confident `$0`. `Settings`
+- The average product price can also be set from the assistant and over MCP, through `update_branding`. `MCP`
+- Your workspace's background glow and accent color now carry into the AI chat panel too — full-screen and side-by-side — instead of stopping at the docs page's edge. `Theme Settings`
+- A language's last dozen runs are shown as a strip coloured by how each one ended, so a single failed run reads differently from a language that has not finished cleanly in weeks. `Translations`
+
+### Changed
+
+- A thin sample no longer refuses to judge. A handful of visits still moves the score, just far less, and the page states how confident it is. A score with little behind it is never coloured and never called a success. `Changes`
+- `New list from current filter` in the `Feeds` sidebar is now just `New List`. `Feeds`
+- The settings gear on your docs site opens the panel on its main page instead of jumping into `Branding`. `Docs`
+- The standalone `Support` button beside the gear is gone. Support is reachable from the settings panel's own sidebar. `Docs`
+- The chat and change-history icons in the chat header now read in full color instead of muted. `AI Chat`
+
+### Removed
+
+- The `Notifiers` group in the `Feeds` sidebar, and with one group left, the `Events` heading above the lists. Destinations are reached from the chips beside the filters, from `Set up alert`, and from the `Add notifier` menu. `Feeds`
+- The centered "Docsbook" logo and wordmark shown above the composer on an empty conversation. The input stays exactly where it was. `AI Chat`
+- The Docsbook logo and its menu from the chat header. Settings now opens in one click (see above); the connected repository, theme and sign out moved into the settings panel and the project picker. `AI Chat`
+
+## NEW - 22.08.2026
+
+### Added
+
+- Every language you translate into now has a page of its own under `Translations` — pick it from the sidebar to see how many readers arrive from that language's countries in the first place, how many of them actually read in it, where it landed and where it missed, what they read, and what the language has cost against a human translator. `Translation`
+- The `Translations` tab has a reader map that plots every country your readers come from as its own flag, ringed in a colour saying whether a translation is actually reaching it — green where they read the docs in their language, amber where the translation exists and most still read the original, red where readers arrive and none of them do. It never counts your own language as a missing translation. `Translation`
+- Every country in the `Countries` breakdown now carries the share of its readers who landed on a translated page, coloured by the same verdict as its marker; point at a row to read what the colour means and light that country on the map. `Translation`
+- The `Feeds` sidebar splits into `Events` and `Notifiers`, each with its own create action, so a destination can be added before there is a list for it and a list before there is anywhere to send it. `Feeds`
+- Every event type in `Feeds` carries its own coloured tile and glyph, and destination labels show the real Slack and Discord marks, so a mixed stream is scannable without reading it. `Feeds`
+
+### Changed
+
+- The admin panel's sidebar now opens `Get Support` directly, replacing the old `Book a demo` link — booking a demo lives inside that tab now, alongside `Contact Us`. `Settings`
+- The `Feeds` page dropped its wrapping card and the `Feed`/`Subscriptions` tabs: each saved list now shows its alert status right in the switcher, the sidebar drills into your lists the same way `Settings` drills into its categories, and setting up or managing an alert happens in one panel. `Feeds`
+- `Chat` now opens into its own page from the sidebar, the same way `Settings` and `Feeds` do — `Dialogs` no longer sits beside `Conversations` as a separate card: it drops its own time range and filters (`Conversations` already covers the whole page) and loads older conversations automatically as you scroll. `AI Chat`
+- The `Changes` tab drops its date-range picker, commit count and card frame — pick a commit from the scrolling list and its impact opens right beside it, as colored charts instead of a paragraph. `Changes`
+- The reader map dropped its colour legend: the breakdown rows beside it carry the colours now, on figures that say what they measure. `Translation`
+- The `api` widget's playground now takes your workspace's colours instead of a fixed blue: the accent, buttons, focus rings and path parameters follow your brand, and the method chips stay readable on a dark or tinted page. `Widgets`
+- Saved lists in `Feeds` are now created and deleted from the sidebar, and the list dropdown is gone from the panel, so one control owns which list you are looking at. `Feeds`
+- The sidebar's plan usage meter is now clickable anywhere on the card, not just the `Manage` link, and highlights on hover to show it. `Billing`
+- The `Powered by Docsbook` badge now shows in a footer strip under your docs on every plan, replacing the old sidebar toggle. `Branding`
+- Every tag on a `Dialogs` row and on an open conversation's header — buying stage, outcome, docs gap — now carries its own colour instead of some falling back to plain grey. `AI Chat`
+
+### Removed
+
+- `Remove Branding` — hiding the `Powered by Docsbook` badge is no longer possible on any plan. `Branding`
+
+## NEW - 21.08.2026
+
+### Changed
+
+- An empty chat with no project selected now opens with your projects to pick from, and the connectable repositories under them. It used to open with the setup checklist, whose every step configures one specific site, so it asked you to brand, translate and publish a project you had not chosen yet. `AI Chat`
+- The lists under the chat composer are set at a readable size and scroll with the page instead of inside their own box, so a long list is no longer cropped at an edge that looks like its end. The composer itself stays in the middle of the screen however long that list is. `AI Chat`
+
+## NEW - 14.08.2026
+
+### Changed
+
+- The landing page now opens on what you get, a branded site from your GitHub docs in 15 seconds, and its main button reads `Get started`. `Landing`
+
+### Fixed
+
+- Country flags in the translation language picker now render the same on every platform instead of depending on the operating system's emoji font. `Translations`
+- Switching or resetting the sidebar language now lands on the right URL. `Docs`
+- The Limits panel no longer reports a brand-new wallet as out of budget. `Billing`
+
+## NEW - 10.08.2026
+
+### Changed
+
+- Custom domain and white-label now start on `Pro` instead of `Business`. Your own domain and your own brand are the first two things a site owner wants, so they no longer wait for the $159 tier. `Pricing`
+- The preview tour introduces branding second-to-last, closer to the point where you would use it. `Onboarding`
+
+## NEW - 08.08.2026
+
+### Fixed
+
+- The sidebar no longer shows translated labels on a page whose body is still in the original language. `Docs`
+
+## NEW - 03.08.2026
+
+### Fixed
+
+- Pricing pages across the docs (blog comparisons, MCP reference, AI features overview, quick-start, branding guide) no longer show AI chat, SEO/GEO/AEO, or the MCP server as paid-tier features — they are free on every plan, including Free. Custom domain and white-label are now correctly attributed to Business (not Pro), and the Source-of-Truth content graph to Business (not Pro). `Docs`
+
+## NEW - 01.08.2026
+
+### Added
+
+- An `Add a page` button in the sidebar creates a new documentation page from a title, a folder and an optional brief. `Block Editor`
+- A `Call To Action URL` field sets the one page your docs should drive readers to. Your AI chat points evaluating readers there, content generation writes pages towards it and can add it to your header as a button, and analytics counts conversations ending on that domain as reaching the goal. `Branding`
+- Your AI agent can read and set the call-to-action page through `update_branding`, and sees it on every workspace it reads. `MCP`
+
+### Changed
+
+- The chat's target page setting moved from `AI Chat` to `Branding` and is now called `Call To Action URL`, since it is your project's goal rather than a chat option. Anything you already set is unchanged. `Branding`
+- The account menu (theme, Integrations, sign out) and the `Workspace settings` gear moved from the chat input's footer to the header, next to your avatar. `AI Chat`
+
+### Fixed
+
+- A workspace's forced light or dark theme no longer loses to the system theme in the AI chat and other admin surfaces. `Branding`
+
+## NEW - 31.07.2026
+
+### Fixed
+
+- Cards, tables, and the accordion/stepper surface now match a custom-branded workspace's background instead of staying stark white. `Branding`
+- The sidebar now opens with your introduction and quick start instead of whatever page happens to come first alphabetically, and leaves reference pages, changelogs and FAQs at the end. Previous/next links follow the same order. `Navigation`
+
+## NEW - 30.07.2026
+
+### Added
+
+- Add a [lucide](https://lucide.dev/icons) icon next to any page or folder in the left sidebar, and to any tab in the subheader folder navigation. `Sidebar`
+
+## NEW - 28.07.2026
+
+### Added
+
+- Headings and body text can now use different fonts, so you can pair a display face with a readable content face. `Design`
+
+### Changed
+
+- Growth and Scale now include every Business capability — custom domain, white-label, webhooks, your own AI and translation keys, UTM analytics and API reference — which the higher-priced tiers were previously denied. `Pricing`
+- A draft generated before signing in now opens as a real documentation site — header, sidebar tree, outline, breadcrumbs and prev/next — so you can browse every generated page and tune branding, layout and SEO before deciding to publish. `Design`
+
+## NEW - 14.07.2026
+
+### Added
+
+- `Header Layout` card — pick a preset arrangement (Classic, Search-centric, Split, Centered, Minimal) for the header's theme toggle, search, Ask AI, and nav links; independent of which blocks are shown. `Header`
+
+### Improved
+
+- Redesigned social-media preview cards for doc pages — cleaner editorial layout with your logo, accent color, and page title. `Social Preview`
+
+### Fixed
+
+- Favicon not loading on some subdomains (`docs.*`, alias subdomains). `Branding`
+- Account switcher dropdown in settings sidebar was too narrow, squeezing org names and links. `Navigation`
+
+## NEW - 12.07.2026
+
+### Fixed
+
+- Navigation link button color picker restored in workspace settings — links with a saved color could no longer be recolored or reset to a plain text link. `Navigation`
+
+## 0.26.5 - 29.06.2026
+
+### Fixed
+
+- New documentation projects are named from your product or brand instead of your full request sentence (e.g. "Coffee Shop" rather than "Create New Docs For A Coffee Shop"). `Workspace`
+
+## 0.25.1 - 08.06.2026
+
+### Fixed
+
+- **Docs**: Removed internal operational files (`TWITTER_SETUP`, `outreach/`) from the public documentation sidebar — visitors no longer see private tooling pages
+
+## 0.24.0 - 04.06.2026
+
+### Fixed
+
+- **Admin**: Fix branding Save not updating sidebar/header name live in preview mode — `DocsContentArea` now resolves `previewSettings` fields with workspace fallback for `customName`, `iconUrl`, `logoUrl`, `fontFamily`
+
+## 0.22.3 - 30.05.2026
+
+### Fixed
+
+- Fix 503 errors on sidebar RSC prefetch in preview mode — prefetch disabled so navigation still works on click
+
+## 0.22.1 - 28.05.2026
+
+### Fixed
+
+- Fixed broken navigation on `docs.docsbook.io` alias — clicking any sidebar/inline link returned 404 because cached HTML carried the `/docs/` repo prefix while middleware rewrote it again. Added `x-docs-alias` header in `src/proxy.ts` and routed `basePath` to empty in `src/app/[user]/[repo]/[[...path]]/page.tsx` so links render as `/ai/mcp` instead of `/docs/ai/mcp`. Existing `docsbook-io.docsbook.io/docs/*` paths keep working unchanged
+
+## 0.21.7 - 27.05.2026
+
+### Fixed
+
+- Mobile sidebar overlay no longer covers sticky subheader in `src/components/docs/Sidebar.tsx` and `src/components/docs/Subheader.tsx` — overlay `top` now adds the subheader's `2.25rem` when present, and subheader `z-index` raised from `z-30` to `z-40` so it stays above the overlay just like the main header
+
+## 0.21.6 - 27.05.2026
+
+### Fixed
+
+- Fixed mobile sidebar backdrop overlay no longer covering the header in `src/components/docs/Sidebar.tsx` — overlay now starts below the header (h-12 + preview banner offset) and z-index lowered from 40 to 30 so the header stays interactive while the sidebar is open
+- Fixed mobile outline (right table-of-contents panel) backdrop overlay no longer covering the header in `src/components/docs/Outline.tsx` — same treatment as the sidebar overlay so the header stays clickable when the outline drawer is open on mobile
+
+## 0.21.2 - 25.05.2026
+
+### Fixed
+
+- Mobile header: removed the second nav-links row on small screens — header now shows only logo + CTA button
+
+## 0.20.1 - 25.05.2026
+
+### Changed
+
+- Landing page positioning rewritten for AI crawlers — ChatGPT and Perplexity were describing Docsbook as a plain GitBook/Mintlify/Docusaurus alternative, missing the entire AI-Native layer. Hero H1 changed from "The AI Knowledge Platform" to "Docs from GitHub. For humans and AI agents." with concrete subtitle naming MCP, llms.txt, and 15 languages. New full-width "Built for AI agents" bento card with terminal mock (`claude mcp add`), MCP tool grid (`doc_outline`, `doc_search_text`, `read_doc_sections`, …) and client logos (Claude Code, Cursor, ChatGPT, Perplexity, Cline). New "AI Agents" social-proof tab with CTA to `/mcp`. `metadata.title`, `metadata.description`, JSON-LD `SoftwareApplication.featureList`, and FAQPage rewritten to surface MCP server, llms.txt, Source of Truth graph, Skills catalog, and updated pricing ($150 lifetime PRO / $59/mo PRO+) so AI search engines cite the current product correctly
+
+## 0.20.0 - 25.05.2026
+
+### Added
+
+- SEO content hub — 20 new long-tail GEO/AEO blog posts in `docs/blog/` targeting AI search citation (ChatGPT, Perplexity, Claude, Gemini) and high-intent developer queries. Covers comparisons (Docusaurus vs Docsbook 2026, AI docs platform comparison, free hosting comparison, docs as code vs managed), AI infrastructure (`llms.txt` complete guide, JSON-LD for documentation, MCP server for documentation, docs-skills for AI agents, how to get docs cited by ChatGPT, Perplexity citations for docs, multi-language documentation SEO, AI chat build vs buy), migrations (GitBook → Docsbook, Docusaurus → Docsbook), and practical guides (custom domain how-to, API documentation best practices 2026, documentation analytics, README → docs site, why README-only projects need a docs site, best docs platforms for startups 2026). `docs/blog/README.md` restructured into five sections: Foundations, SEO & AI search (GEO/AEO), AI features, Comparisons & migration, Practical guides
+
+## 0.18.0 - 24.05.2026
+
+### Added
+
+- Devices, Browsers and AI Visits analytics — new row of cards under Pages/Referrers in the Analytics tab. First card has tabs for `Devices` (Mobile/Desktop/Tablet) and `Browsers` (Chrome, Safari, Firefox, Edge, Brave, Arc, Vivaldi, Yandex…) with favicon icons. Second card lists AI crawler visits (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Bingbot, Applebot-Extended, Meta-ExternalAgent, CCBot, Bytespider, MistralAI-User and 12+ more) grouped by provider so you can see exactly which AI agents read your docs
+- Ask AI on text selection — when readers highlight a snippet inside the docs, a floating `Ask AI` bubble appears above the selection; one click sends the selected text to AI Chat as a ready prompt. Tooglable per-workspace (Content tab in admin and `show_ask_ai_on_selection` in MCP `update_ui_settings`). On by default. Reduces friction for "explain this paragraph" / "rephrase this" use cases and pushes AI engagement
+
+### Changed
+
+- Moved "Get Support" out of the admin sidebar — replaced the bulky "Help & Support" section with a subtle "Need help? Contact support" footer link pinned to the bottom of the settings modal sidebar, freeing vertical space
+- Reordered and trimmed the floating admin toolbar — now 5 quick-access buttons (Analytics, AI Chat, AI Translations, Design, SEO) instead of 6; removed setup-once entries (Custom Domain, MCP Server) and surfaced SEO, which was previously only reachable via the settings modal
+
+### Fixed
+
+- `CopyCommand` on mobile — reduced padding/height, font-size scaled down, long install command no longer breaks the layout
+
+## 0.17.3 - 23.05.2026
+
+### Changed
+
+- Reworked landing header navigation — replaced old category dropdowns (AI, Analytics, Branding, Widgets, Translation) with 3 direct links (`AI`, `MCP`, `Skills`) plus 2 curated dropdowns: `Documentation` (Quick Start, Basics, Creating Docs, Custom Domain, AI Translations, FAQ) and `Blog` (all 5 posts)
+
+## 0.17.0 - 23.05.2026
+
+### Fixed
+
+- Wrap long project names in sidebar to prevent overflow outside the sidebar boundary
+
+### Changed
+
+- Fix system theme not applying correctly due to shared `localStorage` key across workspaces
+- Fix `docs-proxy` route ignoring saved `defaultTheme` and always falling back to `light`
+
+### Added
+
+- 10 new MCP Example Questions in admin (copy brandbook from a URL, change logo, custom domain, translations, social links, AI key, analytics, reindex, read sections); moved the `authentication module` example to the bottom of the list
+
+## 0.16.3 - 23.05.2026
+
+### Fixed
+
+- Neutralize green styling on "Get Support" button in workspace settings sidebar — now matches the muted look of other navigation items
+
+## 0.16.1 - 22.05.2026
+
+### Added
+
+- New `/start` page replaces the `LivePreviewExpanded` modal on "Start for free" — logo, GitHub URL input, Sign in with GitHub, email/Discord support links, social icons, hero-style shards background, cascade animations
+
+## 0.15.0 - 22.05.2026
+
+### Fixed
+
+- Replaced PNG logo with inline SVG in `opengraph-image` for correct social preview branding
+
+### Fixed
+
+- Left `Sidebar` collapsible folders not opening when navigating via subheader links without full page reload
+
+## 0.12.0 - 17.05.2026
+
+### Fixed
+
+- Sidebar folder collapse/expand now works correctly
+
+## 0.11.1 - 17.05.2026
+
+### Improved
+
+- Documentation content and sidebar now render on the server for faster load and better SEO
+
+## 0.11.0 - 16.05.2026
+
+### Fixed
+
+- Default theme now always applies when theme-switching widgets are disabled
+- Sidebar labels translate instantly without requiring a page refresh
+- English sidebar labels now work when switching back to English
+
+## 0.10.0 - 15.05.2026
+
+### Added
+
+- Folder visibility toggles — hide specific folders from the sidebar in `Admin Panel`
+- Per-theme accent, muted, and base color customization in `Branding`
+- Live font preview — font names in the picker display in their actual typeface
+- Accent color tinting on inline code, code blocks, and sidebar hover states
+
+### Improved
+
+- Theme and Branding settings reorganized for clarity in `Admin Panel`
+
+### Fixed
+
+- Favicon correctly shows custom workspace icon and uses accent color as background
+- Globe icon size and color now consistent in language picker
+
+## 0.8.2 - 13.05.2026
+
+### Fixed
+
+- Language code now inserts at the correct position in sidebar links
+- Sidebar footer border no longer shows when all footer controls are hidden
+
+## 0.8.1 - 12.05.2026
+
+### Fixed
+
+- Sidebar dividers now only appear when there is content to separate
+- Multi-line folder names in sidebar now left-align correctly
+
+## 0.7.0 - 11.05.2026
+
+### Added
+
+- Custom background color support for individual header navigation links
+
+## 0.4.0 - 10.05.2026
+
+### Added
+
+- Background glow effect using accent color in `Theme Settings`
+
+### Fixed
+
+- Header and sidebar horizontal alignment on desktop
+
+## 0.3.1 - 09.05.2026
+
+### Improved
+
+- Sidebar folders auto-expand and scroll to active page on nested pages
+
+## 0.2.3 - 09.05.2026
+
+### Improved
+
+- Syntax highlighting switched to native GitHub themes (light and dark)
+
+### Fixed
+
+- Sidebar stays fixed during scroll — no more jumping
+
+## 0.2.0 - 08.05.2026
+
+### Added
+
+- System theme option — respects OS-level dark/light preference
+- Theme dropdown picker in sidebar and header (Light / Dark / System)
+
+## 0.1.1 - 07.05.2026
+
+### Improved
+
+- Sidebar Language and Theme toggle button padding and visual style
+
+## 0.1.0 - 06.05.2026
+
+### Fixed
+
+- Custom workspace favicons now display correctly in browser tabs
+
+<!-- Generated by scripts/changelog/split.mjs from docs/CHANGELOG.md. Do not edit by hand: the entry goes in the general changelog, and the axis is read from its wording via src/lib/outcomes/axes.json. -->
