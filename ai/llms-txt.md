@@ -19,6 +19,7 @@ Docsbook serves `llms.txt` at two scopes.
 |---|---|---|
 | Platform | `docsbook.io/llms.txt` | Description of Docsbook itself and its main navigation |
 | Workspace | `docsbook.io/[user]/llms.txt` | Structured list of pages for that user's docs |
+| Showcase demo on the apex path | `docsbook.io/[demo]/llms.txt` | The same list, scoped to that one demo and named after it (with `llms-full.txt` beside it) |
 
 Each scope also has a `llms-full.txt` variant.
 

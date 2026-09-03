@@ -9,6 +9,16 @@ Everything Docsbook shipped that moves one number: **Repeat readers** — more r
 
 One visit is a look; a second is a product someone is actually adopting. This is the Repeat readers slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 03.09.2026
+
+### Fixed
+
+- A project's carried balance survives the monthly rollover again. On 1 September the rollover replaced every carried balance with the retired plans' zero allowance: 399 projects held $200.73 in credit that every metered call refused as insufficient while the balance readout still showed the money. The rollover now keeps what is there (or tops it up to an allowance, if one ever returns), and the AI usage analytics and the MCP `get_ai_usage` card derive that rule instead of restating it, so what the card promises is what a call can spend. `Billing`
+
+### Security
+
+- `list_workspaces`, `get_workspace` and the fifteen `update_*` tools no longer return the raw workspace row. The project's live REST API key is replaced by `hasApiKey`, and the semantic index blob (95% of one answer, 2.1 MB across `list_workspaces`, which clients refused whole) by `hasSourceOfTruthGraph` plus `sourceOfTruthLastIndexedAt`, so an MCP client gets an answer it can act on and no transcript downstream of a call holds a working credential. `MCP`
+
 ## NEW - 02.09.2026
 
 ### Added
