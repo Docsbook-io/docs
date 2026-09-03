@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Support load** — fewer qu
 
 Questions the docs answer are questions your inbox never sees. This is the Support load slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 03.09.2026
+
+### Added
+
+- Readers can rate a page from the page itself: a **"Was this page helpful?"** bar now sits at the end of the article, above the previous/next links, so the feedback that tells you which pages fail reaches you from phone readers too. The older thumbs up/down lived only in the right-hand panel, which a narrow screen never renders, so half your audience had no way to answer. On for every project, with its own toggle in Settings → Content next to the in-panel one. `Page Feedback`
+
 ## NEW - 02.09.2026
 
 ### Added

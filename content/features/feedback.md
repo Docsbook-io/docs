@@ -9,16 +9,37 @@ Collect thumbs-up / thumbs-down ratings from readers on every page.
 
 ## What It Does
 
-Adds a small **"Was this page helpful? 👍 👎"** widget at the bottom of each page.
+Asks readers **"Was this page helpful? 👍 👎"** and records their answer.
 
-Readers click once — no forms, no email, no friction.
+Readers click once — no forms, no email, no friction. One vote per page view: after voting, the buttons lock and a short thank-you replaces the question.
+
+## Two Places It Can Appear
+
+You get two independent toggles, because they catch readers at different moments.
+
+| | **Under the page** | **In the "On this page" panel** |
+|---|---|---|
+| Where | At the end of the article, above the previous/next links | In the right-hand outline, below the table of contents |
+| Setting | **Rate this page** (Content tab) | **Rate Page** (Right Sidebar tab) |
+| Default | **On** | Off |
+| On a phone | Shown | Not shown — the right-hand panel isn't rendered on narrow screens |
+
+The bar under the page is the one most projects want on: readers reach it by finishing the page, which is the moment they have an opinion, and it's the only one your phone readers can see at all.
+
+Turn on both and you collect a single combined series — the two are separate places to ask, not separate metrics.
 
 ## How to Enable
 
+**Under the page (on by default):**
+
 1. Open your docs site.
-2. Float Widget → **Design** → **Content** tab.
-3. Turn on **Page Feedback**.
-4. Save.
+2. Float Widget → **Settings** → **Content** tab.
+3. **Rate this page** → toggle on.
+
+**In the "On this page" panel:**
+
+1. Float Widget → **Settings** → **Right Sidebar** tab.
+2. **Rate Page** → toggle on.
 
 ## Viewing Results
 
