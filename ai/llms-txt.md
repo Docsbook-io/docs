@@ -11,18 +11,19 @@ This page says exactly what Docsbook puts in those files, where they are served,
 
 ## Where does Docsbook serve llms.txt?
 
-Docsbook serves four files, two at the platform level and two per workspace. All four are `text/plain; charset=utf-8` and need no authentication.
+Docsbook serves an index and a full-text file at the platform level, and the same pair for every workspace published on a path of the apex domain — a showcase demo included, since a demo is a workspace. All of them are `text/plain; charset=utf-8` and need no authentication.
 
 | File | URL | What it contains |
 |---|---|---|
 | Platform index | `https://docsbook.io/llms.txt` | Docsbook itself and its main navigation |
 | Platform full text | `https://docsbook.io/llms-full.txt` | The body of those pages, concatenated |
-| Workspace index | `https://<workspace>.docsbook.io/llms.txt` | Every public page of that workspace, as links |
-| Workspace full text | `https://<workspace>.docsbook.io/llms-full.txt` | The full Markdown of every one of those pages |
+| Workspace index | `https://docsbook.io/<workspace>/llms.txt` | Every public page of that workspace, as links |
+| Workspace full text | `https://docsbook.io/<workspace>/llms-full.txt` | The full Markdown of every one of those pages |
+| Showcase demo | `https://docsbook.io/<demo>/llms.txt` | The same list scoped to that one demo, with `llms-full.txt` beside it |
 
-A workspace published on a path of the apex domain is served the same pair at that path — `https://docsbook.io/<workspace>/llms.txt` — and that form is scoped to the one project named in the URL, so a crawler fetching one product's index is never handed another product's pages.
+Each workspace form is scoped to the one project named in the URL, so a crawler fetching one product's index is never handed another product's pages.
 
-Both files list each page at its **canonical** URL. A workspace whose pages are canonical on the apex domain is never advertised on its mirror subdomain, because that host redirects and answers `Disallow: /` in `robots.txt` — a list of URLs a crawler is told not to fetch is worse than no list.
+Every one of these files lists each page at its **canonical** URL. A workspace whose pages are canonical on the apex domain is never advertised on its mirror subdomain, because that host redirects and answers `Disallow: /` in `robots.txt` — a list of URLs a crawler is told not to fetch is worse than no list.
 
 ## What exactly does Docsbook put in llms.txt?
 

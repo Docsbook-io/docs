@@ -5,14 +5,33 @@ description: "Add a one-click Was this page helpful widget to every Docsbook pag
 
 # Page feedback
 
-Page feedback in Docsbook is a **Was this page helpful?** control at the bottom of every page. A reader answers with one click — no form, no email address — and the answer lands in your analytics against that page.
+Page feedback in Docsbook is a **Was this page helpful?** control that a reader answers with one click — no form, no email address — and the answer lands in your analytics against that page. It counts one vote per page view: after voting, the buttons lock and a short thank-you replaces the question.
+
+## Where page feedback can appear
+
+Page feedback has two independent toggles, because they catch readers at different moments.
+
+| | **Under the page** | **In the "On this page" panel** |
+|---|---|---|
+| Where | At the end of the article, above the previous/next links | In the right-hand outline, below the table of contents |
+| Setting | **Rate this page** (Content tab) | **Rate Page** (Right Sidebar tab) |
+| Default | **On** | Off |
+| On a phone | Shown | Not shown — the right-hand panel is not rendered on narrow screens |
+
+The bar under the page is the one most projects want on: readers reach it by finishing the page, which is the moment they have an opinion, and it is the only one your phone readers can see at all. Turning on both collects a single combined series — the two are separate places to ask, not separate metrics.
 
 ## Turn on page feedback
 
+Under the page (on by default):
+
 1. Open your docs site while signed in.
-2. Open Float Widget → **Design** → **Content** tab.
-3. Turn on **Page feedback**.
-4. Click **Save**.
+2. Open Float Widget → **Settings** → **Content** tab.
+3. Turn **Rate this page** on.
+
+In the "On this page" panel:
+
+1. Open Float Widget → **Settings** → **Right Sidebar** tab.
+2. Turn **Rate Page** on.
 
 ## Read the results
 

@@ -5,6 +5,25 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 03.09.2026
+
+### Added
+
+- Every MCP tool now has its own page at its own address: the URL carries the tool, so the page survives a refresh and can be bookmarked or sent to a colleague, instead of existing only for whoever happened to click the row. `MCP`
+- Clicking a call in a tool's history opens the whole call: what went in, what came back, who asked for it (your own Run, a connected MCP client, a schedule, an event), how long it took, what it was priced at, and what actually left your balance. The price and the billed amount are shown as two figures on purpose, since a call costing less than a cent is charged and still bills $0.00, and either number on its own misreads. `MCP`
+- A **Cost** column on that history, so you can see what a tool has been spending on this project without opening a single row. `MCP`
+- The prompts listed under a tool can be searched once that tool has more than a handful of them, so finding the right example is reading one line instead of scrolling the list. `Prompts`
+- Readers can rate a page from the page itself: a **"Was this page helpful?"** bar now sits at the end of the article, above the previous/next links, so the feedback that tells you which pages fail reaches you from phone readers too. The older thumbs up/down lived only in the right-hand panel, which a narrow screen never renders, so half your audience had no way to answer. On for every project, with its own toggle in Settings → Content next to the in-panel one. `Page Feedback`
+
+### Fixed
+
+- Showcase demos served on the apex path (`docsbook.io/[demo]`) now answer `llms.txt` and `llms-full.txt`, named after the demo rather than the account, and their translated pages open at `docsbook.io/[demo]/[lang]/…` with a canonical that points at itself, so an AI assistant can read and cite every public demo and search engines index its translations instead of following 112 sitemap entries into a noindex 404. `SEO`
+- A project's carried balance survives the monthly rollover again. On 1 September the rollover replaced every carried balance with the retired plans' zero allowance: 399 projects held $200.73 in credit that every metered call refused as insufficient while the balance readout still showed the money. The rollover now keeps what is there (or tops it up to an allowance, if one ever returns), and the AI usage analytics and the MCP `get_ai_usage` card derive that rule instead of restating it, so what the card promises is what a call can spend. `Billing`
+
+### Security
+
+- `list_workspaces`, `get_workspace` and the fifteen `update_*` tools no longer return the raw workspace row. The project's live REST API key is replaced by `hasApiKey`, and the semantic index blob (95% of one answer, 2.1 MB across `list_workspaces`, which clients refused whole) by `hasSourceOfTruthGraph` plus `sourceOfTruthLastIndexedAt`, so an MCP client gets an answer it can act on and no transcript downstream of a call holds a working credential. `MCP`
+
 ## NEW - 02.09.2026
 
 ### Added

@@ -9,6 +9,17 @@ Everything Docsbook shipped that moves one number: **AI spend** — less money b
 
 Sees where the model budget actually goes before the invoice does. This is the AI spend slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 03.09.2026
+
+### Added
+
+- Clicking a call in a tool's history opens the whole call: what went in, what came back, who asked for it (your own Run, a connected MCP client, a schedule, an event), how long it took, what it was priced at, and what actually left your balance. The price and the billed amount are shown as two figures on purpose, since a call costing less than a cent is charged and still bills $0.00, and either number on its own misreads. `MCP`
+- A **Cost** column on that history, so you can see what a tool has been spending on this project without opening a single row. `MCP`
+
+### Fixed
+
+- A project's carried balance survives the monthly rollover again. On 1 September the rollover replaced every carried balance with the retired plans' zero allowance: 399 projects held $200.73 in credit that every metered call refused as insufficient while the balance readout still showed the money. The rollover now keeps what is there (or tops it up to an allowance, if one ever returns), and the AI usage analytics and the MCP `get_ai_usage` card derive that rule instead of restating it, so what the card promises is what a call can spend. `Billing`
+
 ## NEW - 02.09.2026
 
 ### Added
