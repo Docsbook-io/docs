@@ -1,50 +1,65 @@
 ---
-title: "Full-Text Search"
-description: "Configure full-text search across your Docsbook documentation — header search button, sidebar search box, and how readers find content instantly."
+title: "Turn on full-text search on your documentation site"
+description: "Put a search box in your Docsbook header or sidebar, pick which one your readers get, and see exactly what the search index covers."
 ---
 
-# Search Options
+# Turn on full-text search
 
-Configure how visitors search your documentation.
+Docsbook indexes every markdown page in your repository and can expose that index in two places: a search button in the header, and a search box in the left sidebar. Reader search costs nothing from your project balance — it queries an index Docsbook already built.
 
-## Settings
+## Turn on the header search button
 
-| Setting | Where it appears |
-|---|---|
-| Search button | In the top header bar |
-| Search in sidebar | In the left sidebar panel |
+1. Open your docs site while signed in.
+2. Open Float Widget → **Design** → **Header** tab.
+3. Turn on **Search button**.
+4. Click **Save**.
 
-## How to Configure
+The button appears in the top bar of every page.
 
-**For the header search button:**
-Float Widget → **Design** → **Header** tab → toggle **Search button**.
+## Turn on sidebar search
 
-**For the sidebar search:**
-Float Widget → **Design** → **Left Sidebar** tab → toggle **Search in sidebar**.
+1. Open your docs site while signed in.
+2. Open Float Widget → **Design** → **Left Sidebar** tab.
+3. Turn on **Search in sidebar**.
+4. Click **Save**.
 
-## Which to Use?
+The box appears above the navigation tree in the left panel.
 
-Both options are available, but enabling one location is usually enough.
+## Choose where the search box belongs
 
-| Placement | Best for |
-|---|---|
-| Header | Most discoverable for first-time visitors |
-| Sidebar | Power users who navigate the sidebar frequently |
+Both placements can run at the same time. Enabling one is usually enough.
 
-Enabling both works fine — it's a matter of design preference. If your header is already crowded with links, sidebar search is a clean alternative.
+| Placement | Best for | Trade-off |
+|---|---|---|
+| Header | First-time visitors, who look at the top bar first | Competes for space with your header links |
+| Sidebar | Readers who already navigate by the tree | Hidden on narrow screens where the sidebar collapses |
 
-## How Search Works
+If your header already carries several links, use sidebar search instead of adding another control to the top bar.
 
-Docsbook indexes all markdown content in your repository. The search index updates automatically when your docs change on GitHub.
+## What Docsbook search indexes
 
-Search covers:
+Docsbook full-text search covers every markdown file the site publishes, and the index is rebuilt when your repository changes on GitHub. There is nothing to reindex by hand.
+
+Search matches:
+
 - Page titles
 - Headings
 - Body text
+- Code blocks, ranked below prose
 
-Code blocks are indexed but lower-ranked than prose content.
+Keyword search runs against that index and never calls an AI model, so it does not draw on your project balance. Semantic search — matching by meaning rather than by keyword — does call a model, and is billed against the balance like any other AI usage.
 
----
+## Next steps
 
-> **Help readers find answers instantly.**
-> [Connect your GitHub repo →](https://docsbook.io/connect)
+- [See what readers searched for](../../analytics/tracking/overview.md) — the queries that returned nothing tell you which page to write next.
+- [Content options](../setup/content-options.md) — the other controls in the same Design panel.
+
+<!-- widget:cta -->
+
+## Put search in front of your readers
+
+Every new project starts with $1 of balance, and reader search does not spend it.
+
+[Create a project](https://docsbook.io/start)
+
+<!-- /widget -->

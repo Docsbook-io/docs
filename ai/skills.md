@@ -1,15 +1,15 @@
 ---
-title: "Docs Skills — AI Agent Skills for Documentation"
-description: "An open catalog of four SKILL.md files that extend Claude, Cursor, Copilot, and Codex with Docsbook-aware capabilities for analysing, creating, managing and automating documentation. Install them locally, discover them at runtime through MCP, or have Docsbook run one for you."
+title: "Docs Skills: teach any AI agent to do documentation work"
+description: "An open catalog of four SKILL.md files teaching Claude, Cursor, Copilot and Codex to analyse, create, manage and automate docs — locally or run for you."
 ---
 
 # Docs Skills
 
-`docs-skills` is an open catalog of SKILL.md files for AI agents. Each skill teaches an agent how to do one of the four jobs documentation work comes in: find what is wrong with docs that exist, create docs that do not, decide what a page should say and what the site around it should do, or make any of that keep happening on its own.
+`docs-skills` is an open catalog of SKILL.md files for AI agents, published by Docsbook and usable with or without a Docsbook account. Each skill teaches an agent how to do one of the four jobs documentation work comes in: find what is wrong with docs that exist, create docs that do not, decide what a page should say and what the site around it should do, or make any of that keep happening on its own.
 
 The catalog lives at [github.com/Docsbook-io/docs-skills](https://github.com/Docsbook-io/docs-skills).
 
-### What is a Skill?
+## What is a Skill?
 
 A **Skill** is a reusable workflow — a set of Guardrails, Steps, and Acceptance Criteria encoded in a SKILL.md file. Think of it as a QA Checklist: you apply it in any project, with any agent (Claude Code, Cursor, Copilot, Codex). It does not carry project-specific context.
 
@@ -28,7 +28,7 @@ Documentation work is four jobs, and every request lands in one of them. The cat
 | `docs-manage` | management | What should this page say, and what should the site around it do? |
 | `docs-automate` | automation | Make it keep happening without anyone remembering. |
 
-All four are available on every plan, including Free.
+The catalog is open source and free to install. Running a skill with your own agent costs you nothing here — it is your agent, on your machine, spending your model budget.
 
 ## Three consumption modes
 
@@ -55,7 +55,7 @@ The tool returns matching SKILL.md entries with a `raw_url` field. The agent fet
 
 ### Have Docsbook run it for you
 
-The two modes above both end with *your* agent executing the skill, which needs it to be connected here, to have picked a workspace, and to be willing to spend twenty tool calls. On PRO and above there is a third mode: ask Docsbook to run the skill instead.
+The two modes above both end with *your* agent executing the skill, which needs it to be connected here, to have picked a workspace, and to be willing to spend twenty tool calls. The third mode hands the whole job to Docsbook instead: the skill runs on Docsbook's machines, against your workspace, and draws on that project's balance.
 
 ```typescript
 run_docs_analyze({ request: "why is our quickstart getting impressions but no clicks?" })
@@ -81,13 +81,24 @@ One tool per skill — `run_docs_analyze`, `run_docs_create`, `run_docs_manage`,
 
 Browse the full catalog at [docsbook.io/skills](https://docsbook.io/skills), with install snippets and prompts for each skill.
 
-## Pricing
+## What does running a skill cost?
 
-The catalog and the `find_skill` MCP tool are available on **all plans**, including Free — installing a skill locally and running it with your own agent costs nothing here. Individual skills may invoke MCP tools that require a paid plan. Having Docsbook run a skill for you (`run_docs_*`) is a **PRO** capability, because the work runs on our machines and our AI budget.
+Reading the catalog costs nothing. `find_skill` is a discovery tool and is never metered, and a SKILL.md file fetched from GitHub and run by your own agent never touches Docsbook at all.
+
+Two things do draw on the balance of the project they run against:
+
+- **The MCP tools a skill calls.** A skill that reads analytics, searches your docs or commits a page spends what those calls spend — see [what a call draws on](./mcp.md#what-does-a-call-to-the-docsbook-mcp-server-draw-on).
+- **`run_docs_*`**, because the run happens on Docsbook's machines and its own model budget. One call is one whole agent run: minutes of work, a report, and a run record.
+
+Current amounts are on the [Docsbook pricing page](https://docsbook.io/pricing).
+
+## Next steps
+
+Ask a connected agent for `find_skill({ query: "audit my docs" })` and run what it returns — no install, and nothing to configure first.
 
 ## Related
 
-- [MCP Server](./mcp.md) — How `find_skill` is exposed to agents, and how `run_docs_*` runs a skill for you.
+- [MCP Server](./mcp.md) — how `find_skill` is exposed to agents, and how `run_docs_*` runs a skill for you.
 - [llms.txt](./llms-txt.md) — The other discovery surface for AI clients.
 - [docs-subagents](https://github.com/Docsbook-io/docs-subagents) — subagents for autonomous doc automation.
 - [markdown-lsp](https://github.com/Docsbook-io/markdown-lsp) — open-source LSP parser for Markdown that powers local doc-graph search.

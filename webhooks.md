@@ -1,14 +1,18 @@
 ---
-title: "Webhook Events Reference"
-description: "Subscribe to Docsbook workspace events — content indexed, translations, AI chat, feedback, plan changes — with HMAC-signed retries and typed payloads."
+title: "Subscribe to what happens inside your Docsbook workspace"
+description: "The 18 typed events a Docsbook workspace emits, their payload fields, the HMAC signature to verify, the retry schedule, and the feed that shows them live."
 ---
 
 # Webhooks
 
 Docsbook can notify your systems about events that happen inside a workspace —
 new content indexed, translations needed, chat questions asked, traffic anomalies
-and more. Each webhook is **typed**: you subscribe to one specific event, and
+and more. Each webhook is **typed**: you subscribe to one of 18 specific events, and
 Docsbook only POSTs to your URL when that exact event fires.
+
+Registering a webhook and receiving its deliveries costs nothing against the
+project's balance. Deliveries you replay or test by hand are metered as egress,
+because each one is an outbound call Docsbook makes on your behalf.
 
 ## How it works
 
@@ -19,7 +23,7 @@ Docsbook only POSTs to your URL when that exact event fires.
 
 ### Request format
 
-```
+```http
 POST https://your-url.example.com
 Content-Type: application/json
 User-Agent: Docsbook-Webhooks/1.0
@@ -107,7 +111,7 @@ winning:
 
 The feed also shows **every MCP tool call an agent made against this workspace**, alongside the
 events your docs dispatched. One line per call: the tool it called, whether it worked, how long it
-took and what it cost at the list price on the [MCP rate card](/ai/mcp). Failed calls say so.
+took and what it cost at the list price on the [MCP rate card](ai/mcp.md). Failed calls say so.
 Calls that were not about any one project — describing the server, listing your projects, creating
 one — belong to your account rather than to a project, so they appear in no project's feed.
 
@@ -222,39 +226,30 @@ than lists, so save the one you want as a feed of your own first.
 
 ## Event catalog
 
-Registering **any** webhook requires the **Business** plan (see [Webhook count limits](#webhook-count-limits) below) — the "Min plan" column below is the additional capability an event itself needs on top of that; for the three "advanced" events, Business already satisfies it.
+A Docsbook workspace emits 18 typed events. Each row below names the event exactly as it appears in the `X-Docsbook-Event` header and in the `event` field of the body, with the fields its `data` object carries.
 
-| Event | Min plan | Payload fields |
-|---|---|---|
-| `content.indexed` | Business | `pages_count`, `relations_count`, `indexed_at` |
-| `content.outdated` _(deprecated — no longer fired automatically)_ | Business | `last_indexed_at`, `repo_head_sha` |
-| `translation.needed` | Business | `source_path`, `language` |
-| `translation.completed` | Business | `source_path`, `language`, `origin` |
-| `translation.outdated` | Business | `source_path`, `language`, `source_hash_changed` |
-| `chat.question_asked` | Business | `question`, `answered`, `chat_id` |
-| `chat.no_answer` | Business | `question`, `chat_id` |
-| `chat.negative_feedback` | Business | `chat_id`, `question`, `answer` |
-| `search.no_results` | Business | `query` |
-| `search.popular` | Business | `query`, `count_24h` |
-| `traffic.spike` _(advanced event)_ | Business | `path`, `views`, `baseline` |
-| `traffic.drop` _(advanced event)_ | Business | `path`, `views`, `baseline` |
-| `feedback.received` | Business | `path`, `rating`, `comment` |
-| `plan.upgraded` | Business | `from`, `to` |
-| `plan.downgraded` | Business | `from`, `to` |
-| `usage.limit_approaching` | Business | `metric` (`ai`\|`translation`), `used`, `limit` |
-| `mcp.tool_called` _(advanced event)_ | Business | `tool_name`, `args` |
-
-## Webhook count limits
-
-Each workspace has a maximum number of active webhooks, based on plan:
-
-| Plan | Max webhooks |
+| Event | Payload fields |
 |---|---|
-| Free | 0 |
-| Pro | 0 |
-| Business | 25 |
+| `content.indexed` | `pages_count`, `relations_count`, `indexed_at` |
+| `content.outdated` _(deprecated — no longer fired automatically)_ | `last_indexed_at`, `repo_head_sha` |
+| `translation.needed` | `source_path`, `language` |
+| `translation.completed` | `source_path`, `language`, `origin` |
+| `translation.outdated` | `source_path`, `language`, `source_hash_changed` |
+| `chat.question_asked` | `question`, `answered`, `chat_id` |
+| `chat.no_answer` | `question`, `chat_id` |
+| `chat.negative_feedback` | `chat_id`, `question`, `answer` |
+| `search.no_results` | `query` |
+| `search.popular` | `query`, `count_24h` |
+| `traffic.spike` _(advanced event)_ | `path`, `views`, `baseline` |
+| `traffic.drop` _(advanced event)_ | `path`, `views`, `baseline` |
+| `feedback.received` | `path`, `rating`, `comment` |
+| `plan.upgraded` | `from`, `to` |
+| `plan.downgraded` | `from`, `to` |
+| `usage.limit_approaching` | `metric` (`ai`\|`translation`), `used`, `limit` |
+| `usage.overage_limit_reached` | `workspace_id`, `overage_spent_cents`, `overage_limit_cents` |
+| `mcp.tool_called` _(advanced event)_ | `tool_name`, `args` |
 
-Webhooks are a **Business-exclusive** capability — Free and Pro/Pro+ workspaces cannot register any webhooks; only Business unlocks them (up to 25 per workspace).
+Three of the eighteen are marked _advanced_ — `traffic.spike`, `traffic.drop` and `mcp.tool_called`. Each is derived from a baseline or from metered activity rather than fired directly by one action.
 
 ## Registering a webhook
 
@@ -291,19 +286,21 @@ a scheme (e.g. `Bearer sk-...`), it's sent unchanged.
 Each event has a dedicated MCP tool, so an AI agent can subscribe to a specific
 notification stream without picking strings:
 
-```
-register_webhook_content_indexed(workspace_id: 42, url: "https://...")
-register_webhook_translation_needed(repo: "owner/repo", url: "https://...")
-register_webhook_traffic_spike(workspace_id: 42, url: "https://...")
+```text
+register_webhook_content_indexed(workspace_id: 42, url: "https://YOUR_ENDPOINT")
+register_webhook_translation_needed(repo: "owner/repo", url: "https://YOUR_ENDPOINT")
+register_webhook_traffic_spike(workspace_id: 42, url: "https://YOUR_ENDPOINT")
 ```
 
-Other MCP tools:
+Other MCP tools, with the billing class each call is metered under:
 
-- `list_webhooks(workspace_id)` — Free
-- `unregister_webhook(webhook_id)` — Free
-- `test_webhook(webhook_id)` — Free (enqueues a synthetic ping)
-- `list_webhook_deliveries(webhook_id)` — Pro
-- `replay_webhook_delivery(delivery_id)` — Pro
+| Tool | Billing | What it does |
+|---|---|---|
+| `list_webhooks(workspace_id)` | Read | List the webhooks registered on the workspace |
+| `unregister_webhook(webhook_id)` | Write | Remove one subscription |
+| `test_webhook(webhook_id)` | Egress | Enqueue a synthetic ping to the registered URL |
+| `list_webhook_deliveries(webhook_id)` | Analytics | Delivery history with status, retry count and payload |
+| `replay_webhook_delivery(delivery_id)` | Egress | Re-deliver one past delivery |
 
 ### REST endpoints
 
@@ -317,10 +314,17 @@ Other MCP tools:
 - `GET  /api/webhooks/:id/deliveries` — recent deliveries
 - `POST /api/webhook-deliveries/:id/replay` — re-enqueue an existing delivery
 
-## Retry & failure semantics
+## Retry and failure semantics
 
 - Worker runs every minute via Vercel cron.
 - A delivery is attempted up to 3 times.
 - Backoff is enforced from `created_at` of the row: 1s, 10s, 60s.
 - After the 3rd failure → `status = "failed"`. Use `replay_webhook_delivery` to re-attempt.
 - Response code and (truncated) body are stored on every delivery row.
+
+## Related
+
+- [MCP tools reference](reference/mcp-tools.md) — the `register_webhook_<event>` tools and every other tool on the server
+- [MCP server overview](ai/mcp.md) — connecting a client, and the rate card the feed prices calls against
+- [Tracked events reference](analytics/tracking/events.md) — the reader actions behind several of these events
+- [Analytics overview](analytics/tracking/overview.md) — reading the same activity as a report rather than as a stream

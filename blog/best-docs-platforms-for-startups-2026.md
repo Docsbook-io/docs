@@ -1,9 +1,9 @@
 ---
-title: "Best Documentation Platforms for Startups in 2026"
-description: "Eight documentation platforms ranked for startups under 50 people — setup time, pricing, AI features, and which one to pick at each stage. Honest, opinionated, written by the Docsbook team."
+title: "The best documentation platforms for startups in 2026"
+description: "Eight documentation platforms ranked for startups under 50 people — what to pick at each stage, what does not matter yet, and how to keep the exit cheap."
 ---
 
-# Best Documentation Platforms for Startups in 2026
+# The best documentation platforms for startups in 2026
 
 Startups have different docs needs than enterprises. You optimize for time, not seats. You ship before you scale. You will rewrite this site at least twice before you reach 50 customers.
 
@@ -13,11 +13,11 @@ This is the platform-picking guide we wish existed when we were running founders
 
 | Stage | Best fit | Why |
 |---|---|---|
-| Pre-launch (0 users) | **Docsbook Free** | $0, 5-second setup, SEO from day one |
-| Just shipped (1–100 users) | **Docsbook Pro ($59/mo)** | AI chat, full SEO, translations |
-| Growing (100–10k users) | **Docsbook Business** or **Mintlify** | Webhooks, higher limits |
-| Mid-market (10k+) | **Mintlify** or **GitBook** | Editor seats, deeper collaboration |
-| OSS with engineering capacity | **Docusaurus** or **Starlight** | Free, customizable, you own the stack |
+| Pre-launch (0 users) | **Docsbook** | 5-second setup, nothing to pay to publish, SEO from day one |
+| Just shipped (1–100 users) | **Docsbook** | AI chat, full SEO and translations without a new subscription |
+| Growing (100–10k users) | **Docsbook** or **Mintlify** | Webhooks, feed notifiers, API reference rendering |
+| Mid-market (10k+) | **Mintlify** or **GitBook** | Editor seats, deeper collaboration, procurement-shaped contracts |
+| OSS with engineering capacity | **Docusaurus** or **Starlight** | Free, customisable, you own the stack |
 
 ## What actually matters at startup stage
 
@@ -33,8 +33,8 @@ What does not matter at startup stage:
 
 - Granular permission systems
 - Approval workflows
-- 99.99% SLA
-- Integration with your enterprise SSO
+- A contractual uptime commitment
+- Integration with enterprise single sign-on
 
 Optimize for those later. Pick a platform you can leave when you need to.
 
@@ -42,28 +42,28 @@ Optimize for those later. Pick a platform you can leave when you need to.
 
 ### 1. Docsbook — our pick
 
-[Docsbook](https://docsbook.io) is the platform we built because we wanted this for our other products. 5-second setup from a GitHub repo, AI chat included, translations to 15 languages, $59/month for PRO. Source files stay in GitHub — no vendor lock-in.
+[Docsbook](https://docsbook.io) is the platform we built because we wanted it for our other products. Five-second setup from a GitHub repository, AI chat included, translations into 15 languages, an MCP server. Source files stay in GitHub, so there is nothing to migrate out. Pricing is pay-as-you-go rather than tiered: each project carries a balance spent on AI usage, and publishing, hosting and page views draw nothing from it — current numbers on [docsbook.io/pricing](https://docsbook.io/pricing).
 
 - Best when: you want docs live today, your content lives in markdown
 - Worst when: you need MDX components or deep React-level theme overrides
 
 ### 2. Mintlify
 
-Polished docs platform with strong API reference rendering. $150/month entry.
+Polished docs platform with strong API reference rendering. $150/month entry. Confirm the current figure on [mintlify.com/pricing](https://mintlify.com/pricing).
 
 - Best when: pure API product, comfortable with MDX, can invest in `mint.json` config
 - Worst when: cost-sensitive, multi-language audience
 
 ### 3. GitBook
 
-Enterprise-grade collaboration. Per-editor pricing reaches ~$200/mo per seat.
+Enterprise-grade collaboration. Priced on two axes at once — per site and per collaborating user — so the bill grows with headcount. On 2026-09-03 [gitbook.com/pricing](https://www.gitbook.com/pricing) listed Free at $0 per site/month with one user, Premium at $65 per site/month plus $12 per user/month, and Ultimate at $249 per site/month plus $12 per user/month.
 
 - Best when: 30+ editors, mature company, deep collaboration is critical
 - Worst when: startup stage — cost is brutal
 
 ### 4. ReadMe
 
-API-first docs with developer dashboards. From $99/month.
+API-first docs with developer dashboards. On 2026-09-03 [readme.com/pricing](https://readme.com/pricing) listed Starter at $0/month, Pro at $250/month billed annually, and the "Ask AI" add-on at $150/month on top.
 
 - Best when: API product with a "your API key" surface
 - Worst when: non-API product or general docs
@@ -101,8 +101,8 @@ Astro-based, content-first, fast.
 ```
 Do you have a docs engineer?
 ├── No
-│   ├── Cost-sensitive? ────────────────→ Docsbook (Free or $59/mo PRO)
-│   ├── Pure API product, $150/mo OK? ──→ Mintlify
+│   ├── Cost-sensitive? ────────────────→ Docsbook (pay for AI use, not for the site)
+│   ├── Pure API product, budget OK? ───→ Mintlify
 │   └── 30+ editors? ───────────────────→ GitBook
 └── Yes
     ├── OSS with React expertise? ──────→ Docusaurus
@@ -127,13 +127,15 @@ Three things to verify before picking any platform:
 
 Docsbook scores 3/3 because your files live in GitHub. Mintlify scores 3/3 because it stores in Git. GitBook and ReadMe — partial.
 
-## Related reading
+## How much does each of these cost right now?
 
-- [Docusaurus vs Docsbook in 2026](./docusaurus-vs-docsbook-2026.md)
-- [AI documentation platforms compared (2026)](./ai-docs-platform-comparison.md)
-- [Docs as code vs managed platform](./docs-as-code-vs-managed-platform.md)
-- [Free docs hosting comparison](./free-docs-hosting-comparison.md)
+Deliberately not answered on this page. Vendor prices change, and the sentence a reader — or an assistant summarising this page next year — repeats to a buyer should not be one we wrote from memory. Every competitor figure above carries the date it was read from that vendor's own pricing page. For Docsbook, [docsbook.io/pricing](https://docsbook.io/pricing) is generated from the live pricing constants on every request, so it cannot go stale; nothing else, including this page, is a source for a Docsbook price.
 
----
+[Start free — no credit card](https://docsbook.io/start)
 
-Try Docsbook Free on your repo: paste `github.com/yourorg/yourrepo` at [docsbook.io](https://docsbook.io). Site live in 5 seconds.
+## Next steps
+
+- [Free documentation hosting compared](./free-docs-hosting-comparison.md) — if the budget is genuinely zero
+- [AI documentation platforms compared](./ai-docs-platform-comparison.md) — the AI feature matrix behind these picks
+- [Docs as code vs managed platform](./docs-as-code-vs-managed-platform.md) — the decision stated as a principle
+- [Should you move off Docusaurus in 2026?](./docusaurus-vs-docsbook-2026.md) — if you already have a Docusaurus site

@@ -1,11 +1,11 @@
 ---
-title: "API Reference"
-description: "Call Docsbook from your own backend — authenticate with your workspace API key and export your AI docs-chat as a REST endpoint."
+title: "Call your documentation's AI chat from your own backend"
+description: "Authenticate with your workspace API key and POST a question to the Docsbook REST endpoint to get an answer grounded in your own documentation pages."
 ---
 
 # API
 
-Every workspace has one public API key, used to authenticate calls to Docsbook's
+The Docsbook REST API answers a question against your own documentation. Every workspace has one public API key, used to authenticate calls to Docsbook's
 REST API from your own backend. Today the API exposes one capability: exporting
 your workspace's AI docs-chat as a plain REST endpoint — the same grounded-answer
 engine that powers the AI chat widget on your published docs site, so you can
@@ -24,13 +24,13 @@ there is no key history, so update any callers before you reset.
 
 Every request is authenticated with a Bearer token — your workspace's API key.
 
-```
-Authorization: Bearer dbk_<your_api_key>
+```http
+Authorization: Bearer dbk_YOUR_API_KEY
 ```
 
-Keep your key secret — it grants full access to your workspace's AI chat, billed
-against your account's AI budget (the same budget the docs-chat widget uses;
-there is no separate API-only quota).
+Keep your key secret — it grants full access to your workspace's AI chat. Every
+answer is billed against the same project balance the docs-chat widget spends;
+there is no separate API-only allowance.
 
 <!-- widget:api -->
 
@@ -51,7 +51,7 @@ grounded in your own pages.
 
 ```bash
 curl -X POST https://docsbook.io/api/v1/chat \
-  -H "Authorization: Bearer dbk_<your_api_key>" \
+  -H "Authorization: Bearer dbk_YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"question": "How do I set a custom domain?"}'
 ```
@@ -72,6 +72,13 @@ curl -X POST https://docsbook.io/api/v1/chat \
 |---|---|
 | `401` | Missing or invalid API key |
 | `403` | AI chat is not enabled for this workspace |
-| `429` | The account's AI budget is exhausted |
+| `429` | The project's balance is exhausted |
 
 <!-- /widget -->
+
+## Related
+
+- [MCP tools reference](./reference/mcp-tools.md) — the tool surface an agent uses instead of this endpoint
+- [AI chat](./ai/chat.md) — the assistant this endpoint exposes, and how it is configured
+- [Webhooks](./webhooks.md) — being told when a question goes unanswered, rather than polling for it
+- [AI usage & cost statistics](./analytics/tracking/ai-usage.md) — what these calls cost and what readers asked

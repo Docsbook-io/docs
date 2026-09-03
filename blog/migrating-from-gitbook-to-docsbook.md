@@ -1,11 +1,11 @@
 ---
-title: "Migrating from GitBook to Docsbook: A Step-by-Step Guide"
-description: "How to move your docs from GitBook to Docsbook without breaking SEO — export, GitHub import, redirects, custom domain. The migration most teams complete in under an afternoon."
+title: "Migrating from GitBook to Docsbook: a step-by-step guide"
+description: "Move your docs off GitBook without losing search traffic — export, import from GitHub, wire the custom domain, and get every redirect right."
 ---
 
-# Migrating from GitBook to Docsbook
+# Migrating from GitBook to Docsbook: a step-by-step guide
 
-You hit the GitBook per-editor wall. Or the AI Search add-on price. Or you noticed your team is paying $2,400/year for a docs site that does not index well. This is the practical migration guide.
+You hit the point where GitBook's per-user fee grows faster than the docs do. Or the AI add-on price. Or you noticed you are paying an annual bill for a docs site that does not index well. This is the practical migration guide.
 
 Most teams complete this in under three hours. The expensive part is the redirects.
 
@@ -15,7 +15,7 @@ Most teams complete this in under three hours. The expensive part is the redirec
 2. Push to a new GitHub repository
 3. Connect Docsbook to that repo (5 seconds)
 4. Verify the site at `docsbook.io/yourorg/yourrepo`
-5. Wire your custom domain `docs.yourcompany.com` to Docsbook (PRO+)
+5. Wire your custom domain `docs.yourcompany.com` to Docsbook
 6. Set up redirects from old GitBook paths
 7. Update internal links across your site
 
@@ -85,7 +85,7 @@ If your repo has `docs/` folder, Docsbook uses it. If your docs live at the root
 
 ## Step 4: Custom domain
 
-Business ($159/month) includes custom domain. Free and Pro do not.
+Docsbook serves `docs.yourcompany.com` with automatic SSL.
 
 In Docsbook dashboard:
 
@@ -159,7 +159,7 @@ See [llms.txt: the complete guide](./llms-txt-guide.md) for what to expect.
 
 | | GitBook | Docsbook |
 |---|---|---|
-| Cost | ~$200/mo per editor | $0 / $59 mo / $159 mo |
+| Pricing model | Per site, plus a fee per collaborating user ([gitbook.com/pricing](https://www.gitbook.com/pricing), read 2026-09-03) | Pay-as-you-go balance per project, spent on AI usage ([docsbook.io/pricing](https://docsbook.io/pricing), generated live) |
 | AI chat | Add-on | Built-in |
 | AI translation | Not available | 15 languages |
 | MCP server | Not available | Built-in |
@@ -182,12 +182,10 @@ In our experience helping teams migrate:
 
 The expensive part is socializing the URL change internally and updating saved replies in your support tool.
 
-## Related reading
+[Start free — no credit card](https://docsbook.io/start)
 
-- [GitBook vs Docsbook](./gitbook-vs-docsbook.md) — feature-by-feature
-- [Custom domain for docs how-to](./custom-domain-for-docs-howto.md)
-- [Documentation SEO guide](./documentation-seo-guide.md)
+## Next steps
 
----
-
-Start the migration: paste your GitHub repo at [docsbook.io](https://docsbook.io). Site live in 5 seconds, custom domain in 5 minutes.
+- [GitBook vs Docsbook](./gitbook-vs-docsbook.md) — the feature-by-feature comparison behind this move
+- [Custom domain for documentation](./custom-domain-for-docs-howto.md) — the DNS and SSL half of step 4
+- [Documentation SEO guide](./documentation-seo-guide.md) — how to keep rankings through the URL change

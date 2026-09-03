@@ -1,218 +1,87 @@
 ---
-title: "Docsbook Overview"
-description: "Understand what Docsbook is, how it works, its architecture, and why it's the fastest way to publish beautiful documentation from GitHub."
+title: "How Docsbook publishes documentation machines can cite"
+description: "Docsbook publishes the documentation you already have to a site people and AI assistants can read, and reports what those readers did next."
 ---
 
-# Docsbook Overview
+# How Docsbook publishes documentation machines can cite
 
-**Docsbook** is an AI-powered documentation platform that turns any GitHub repository into a beautiful, fully-featured documentation site in seconds. No setup, no configuration, no CI/CD needed.
+Docsbook is a documentation platform that publishes Markdown — from a GitHub repository, a website scan, or a written brief — as a live site at `docsbook.io/{owner}/{repo}`. After this page you can decide whether Docsbook fits your product, and which of its three jobs you need first: reaching people who search, giving AI assistants facts they can quote about you, and measuring what the pages earned.
 
-## What is Docsbook?
+Most companies with a product, customers and an ad budget still cannot be recommended by Google or by an AI assistant, because there is nothing to read: what exists is out of date, hidden behind a login, or disagrees with the product. Docsbook publishes what is already written to where machines read it, and shows how many readers it brought.
 
-Docsbook is a knowledge platform that automatically:
+## What happens between your repository and a published page
 
-1. **Reads your GitHub repository** — any public repo with a `README.md` or `docs/` folder
-2. **Publishes instantly** — your documentation appears at `docsbook.io/owner/repo` in seconds
-3. **Stays in sync** — every `git push` automatically updates your live documentation
-4. **Adds intelligence** — AI chatbot, 15-language translations, full analytics, custom domains
-5. **Keeps your data safe** — files stay in GitHub, no vendor lock-in
-
-In one sentence: **GitHub repo → Beautiful docs + AI chat + SEO + analytics in 5 seconds.**
-
-## How Docsbook Works
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│  Your GitHub Repo (public)                                   │
-│  ├─ README.md or docs/                                       │
-│  └─ Markdown files                                           │
-└──────────────────┬──────────────────────────────────────────┘
-                   │ GitHub OAuth + Git fetch
-                   ▼
-┌─────────────────────────────────────────────────────────────┐
-│  Docsbook Indexer                                             │
-│  ├─ Parse markdown + frontmatter                             │
-│  ├─ Extract headings, links, metadata                        │
-│  ├─ Build Source of Truth graph (LSP-style navigation)       │
-│  └─ Index for search & AI embedding                          │
-└──────────────────┬──────────────────────────────────────────┘
-                   │ Reindex on every push
-                   ▼
-┌─────────────────────────────────────────────────────────────┐
-│  Live Documentation Site                                      │
-│  docsbook.io/owner/repo                                      │
-│  ├─ Beautiful, responsive design                             │
-│  ├─ Full-text search                                         │
-│  ├─ Dark/light themes (customizable)                         │
-│  ├─ Mobile-friendly                                          │
-│  └─ Custom domain (docs.yourcompany.com)                     │
-└──────────────────┬──────────────────────────────────────────┘
-                   │ Static HTML + CDN
-                   ▼
-┌─────────────────────────────────────────────────────────────┐
-│  AI-Powered Features                                           │
-│  ├─ AI chatbot trained on your docs (all plans)              │
-│  ├─ 15-language automatic translations (Pro/Business)        │
-│  ├─ Source of Truth graph for agents                         │
-│  └─ Analytics + webhooks for integrations                    │
-└─────────────────────────────────────────────────────────────┘
-```
-
-## Core Concepts
-
-### Workspace
-A **workspace** = one documentation site. You can create unlimited workspaces from any GitHub repositories you own or have access to.
-
-**Example:**
-- Workspace 1: `acme/api-docs` → `docsbook.io/acme/api-docs`
-- Workspace 2: `acme/sdk` → `docsbook.io/acme/sdk`
-
-### Plans
-| Plan | Cost | What You Get |
+| Stage | What Docsbook does | What you get |
 |---|---|---|
-| **Free** | $0 | Unlimited docs, branding, basic UI controls, analytics (24h), AI chat ($0.15/mo AI budget, your choice of model), SEO / AEO / GEO |
-| **Pro** | $85/mo, 7-day free trial | 1 project seat, your own custom domain, translations, advanced AI chat config (custom prompt, hooks), search & feedback analytics, $85/mo AI budget |
-| **Business** | $200/mo, 14-day free trial | Everything in Pro, plus unlimited project seats, unlimited webhooks, bring-your-own API key, semantic search, hosted API reference, UTM analytics, 30-day analytics history, a $200/mo AI budget, and higher translation limits |
+| 1. Connect a source | Reads a GitHub repository, scans a website, or drafts from a sentence about your product | A draft site you can open before you sign in |
+| 2. Index | Parses Markdown and frontmatter, extracts headings, links and metadata, builds a navigable graph | Full-text search, a per-page outline, links between files resolved |
+| 3. Publish | Serves the site at `docsbook.io/{owner}/{repo}`, rendered on the server | A public URL with sitemap, OpenGraph and JSON-LD |
+| 4. Expose to machines | Serves `llms.txt` and an MCP server with 260 tools | Assistants and agents can read your docs, and agents can edit them |
+| 5. Sync | Re-checks GitHub when the site is visited and re-indexes what changed | Pages match the repository with no build step and no CI pipeline |
+| 6. Measure | Records page views, searches, events, feedback and AI usage | Reports on which pages are read and where readers stop |
 
-All monthly plans (Pro, Business) can also be billed annually at a ~30% discount. All plans: **unlimited repositories, forever.**
+## Reach: a page for each question your customers ask
 
-A subscription is bought once per account and grants project seats — a project is paid while it holds one, and you can move a seat between projects. The AI budget is shared across every paid project on the account, and free projects are unlimited.
+A documentation page that answers one narrow question costs less to write than a landing page and keeps earning search traffic for years, because the question does not go out of fashion. Docsbook gives each page its own URL, its own title and description, its own entry in `sitemap.xml`, and its own JSON-LD — so a page about one question competes on that question rather than being buried inside a marketing site.
 
-Every paid plan includes a monthly AI budget, shown in real dollars: Pro's is $85/month, Business's is $200/month.
+Docsbook generates the machine-readable surfaces for this automatically: meta tags, `sitemap.xml`, OpenGraph, canonical URLs, and JSON-LD for FAQ and HowTo content. See [SEO](./content/features/seo.md) for the search-engine surface and [GEO](./content/features/geo.md) for the generative-engine one.
 
-## Key Features by Category
+## Machine-readable facts: what an assistant quotes about you
 
-### 🚀 Publishing
-- **Instant publication** — docs live in seconds, no builds or deploys
-- **Auto-sync** — push to GitHub, documentation updates automatically
-- **Multiple repos** — create unlimited workspaces
-- **No configuration** — Docsbook detects your markdown structure automatically
+An AI assistant recommending a product quotes what it can read and verify cheaply: prices, limits, what the product does not do, and who the company is. Where your documentation says nothing, the assistant fills the gap with a competitor's page. Docsbook's job here is to make those facts readable — as HTML rendered on the server, as `llms.txt`, and as an MCP server.
 
-### 🎨 Design & Branding
-- Custom colors (light/dark), fonts, logo, favicon
-- Light/dark theme toggle
-- Mobile-responsive design
-- Show/hide UI elements (search, breadcrumbs, feedback, prev/next buttons)
+Three surfaces do this work:
 
-### 🤖 AI Features
-- **AI Chatbot** — answers questions based on your documentation (every plan, limited by a monthly AI budget in dollars; Pro/Business get progressively larger budgets)
-- **Semantic search** — the biggest single improvement to AI chat answer quality: the chat finds the right section by meaning, answers from it with the page cited instead of inventing one, and replies faster because it retrieves less. Toggle it on in **AI Chat → Semantic Search**, where you also see whether the index is current and can rebuild it (Business)
-- **Custom AI chat config** — system prompt, chat hooks (Pro / Business)
-- **Multiplayer AI chat** — see who from your team is in the chat, invite a teammate by email, and share one live session where you both watch the answer stream in (Business)
-- **LSP-style tools** — semantic search, link resolution, outline navigation
+- **`llms.txt`** — a plain-text index of your documentation at the site root, for AI agents that look for one. See [llms.txt](./ai/llms-txt.md).
+- **MCP server** — 260 tools over the Model Context Protocol, so Claude Code, Cursor or ChatGPT can read your pages, search them, and commit changes back. See [MCP server](./ai/mcp.md).
+- **AEO markup** — FAQPage, HowTo and speakable JSON-LD generated from your Markdown, for answer boxes and voice assistants. See [AEO](./content/features/aeo.md).
 
-### 🌍 Translation & Localization (Pro / Business)
-- **15 languages** — English, Spanish, French, German, Portuguese, Italian, Russian, Chinese, Japanese, Korean, Arabic, Hindi, Turkish, Polish, Dutch
-- **SEO per language** — each translation is indexed separately by Google
-- **Auto-detect** — shows readers content in their browser language
-- **Manual or AI-powered** — choose your translation workflow
+## Analytics: which pages are read and where readers stop
 
-### 📊 Analytics (Free+)
-- Page views, unique visitors, top pages, referrers
-- AI usage tracking (queries, remaining quota)
-- Countries & languages of readers
-- **Pro / Business:** Advanced journey mapping, visitor drill-down, failed searches, negative feedback
+Docsbook records every page view, search query, feedback vote and tracked event on your documentation, and reports them per page. That answers the questions a marketer asks about a docs site: which pages nobody reaches, which searches return nothing, how far a reader gets before leaving, and which countries and languages they arrive from.
 
-### 🔗 Integrations
-- **Custom domain (Pro and above)** — `docs.yourcompany.com` with free SSL
-- **Webhooks (Business)** — 15 event types (chat questions, translations, traffic spikes)
-- **MCP server** — control Docsbook from Claude Code, Cursor, ChatGPT
-- **GitHub integration** — "Edit on GitHub" links on every page
+Events, goals and funnels let you mark a path through the docs and count how many readers finish it. See [Tracking overview](./analytics/tracking/overview.md) for what is measured and [Events](./analytics/tracking/events.md) for the event catalogue.
 
-### 🔍 Search Engine Optimization (all plans)
-- **SEO** — meta tags, sitemap.xml, JSON-LD schema, OpenGraph
-- **GEO** — TL;DR blocks, publication date, author attribution for AI search engines (Perplexity, ChatGPT Search, Google AI Overviews)
-- **AEO** — FAQ markup, HowTo schema, voice assistant optimization
+## Who Docsbook is for
 
-## Technology Stack
+| Reader | What they are buying |
+|---|---|
+| Founder | Their product appears in ChatGPT, Perplexity and Google answers to their customers' questions |
+| Marketer | Documentation as a channel: conversion visible before the button, goals and funnels, dead-end pages named |
+| Engineer or product manager | Repository to site in seconds, source of truth in GitHub, MCP from Claude Code, export in one click |
 
-### Frontend
-- Next.js 16 + React 19
-- TypeScript, Tailwind CSS, shadcn/ui
-- Framer Motion (animations)
+## What Docsbook does not do
 
-### Backend
-- PostgreSQL (Neon serverless)
-- Redis (caching)
-- Drizzle ORM (database)
+Docsbook does not offer SAML SSO, team accounts with role-based access control, a SOC 2 Type II report, or a Data Processing Agreement — all four are on the compliance roadmap, not shipped. There is no WYSIWYG editor aimed at a non-technical author: pages are Markdown files, edited in the web editor, in GitHub, or by an agent over MCP. See [MCP security](./ai/mcp-security.md) for the current compliance position.
 
-### AI & Features
-- OpenRouter (multi-provider LLM support)
-- OpenAI, Gemini, Anthropic (custom API keys)
-- MCP 1.0 (OAuth 2.0 compatible)
+## What Docsbook runs on
 
-### Infrastructure
-- Vercel (hosting, CDN, custom domains)
-- Axiom (analytics & logging)
-- Paddle (billing & subscriptions)
+Docsbook is a Next.js 16 and React 19 application on Vercel, with Postgres (Neon) and Redis behind it, Drizzle as the ORM, and Paddle as the merchant of record. Markdown is parsed with unified, remark and rehype, highlighted with Shiki, and navigated with [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp), Docsbook's open-source documentation parser. AI calls are routed through OpenRouter, or through your own provider key.
 
-### Markdown & Parsing
-- **markdown-lsp** — our open-source LSP parser for documentation
-- unified / remark / rehype (markdown processing)
-- Shiki (syntax highlighting)
+## What it costs
 
-## Quick Links
+Docsbook meters four things against each project's own balance, and nothing else:
 
-- **[Getting Started](./quick-start.md)** — Set up your first workspace in 3 minutes
-- **[Core Concepts](./basics.md)** — Workspace, plans, and how everything connects
-- **[AI Features Guide](./ai/)** — Chat, translations, Source of Truth
-- **[MCP Server](./ai/mcp.md)** — Use Docsbook from Claude Code and other AI tools
-- **[Webhooks Reference](./webhooks.md)** — Integrate Docsbook with your tools
-- **[Skills Catalog](./ai/skills.md)** — Automation & docs-specific tools
+- **Readers (AI Chat)** — an AI answer given to a reader of your documentation.
+- **Admin & AI Agent** — an agent run you or a connected agent started.
+- **AI Translations** — translating a page into another language.
+- **Semantic Index** — building the embeddings the AI chat retrieves from.
 
-## Why Docsbook?
+Hosting, a custom domain and its TLS certificate, readers, editors, GitHub sync, full-text search, branding and analytics are unmetered. Every new project starts with **$1.00** of balance and can claim **$5.00** more once it is 3 minutes old; top-ups after that run from $20.00 to $5,000.00. See [Pricing](./pricing.md) for the mechanism and [docsbook.io/pricing](https://docsbook.io/pricing) for current figures.
 
-### vs. GitBook / Notion
-- **Cheaper** — Docsbook Pro vs. $8-10/month/user on GitBook/Notion
-- **Faster** — 5 seconds to deploy vs. 2-3 days to set up
-- **No vendor lock-in** — your docs stay in GitHub
-- **Built-in AI** — chat + translations included
+## Next steps
 
-### vs. Docusaurus / Mintlify
-- **Zero config** — Docsbook auto-detects your markdown
-- **Auto-sync** — no build pipelines or GitHub Actions
-- **AI out of the box** — no integration setup
-- **Better analytics** — understand who reads what
-
-### vs. ReadTheDocs / Sphinx
-- **Modern design** — beautiful by default
-- **AI-first** — chat, translations, semantic search
-- **Easier maintenance** — just write markdown in GitHub
-
-## Getting Started
-
-1. **Generate a draft — no account needed**  
-   Click "Get started" at [docsbook.io](https://docsbook.io), then pick a source: a website URL to scan, a GitHub repo to link, or just an idea in text
-
-2. **Preview and refine**  
-   Your draft opens on its own admin panel — the site pictured as it stands, its pages listed, every section for branding, layout and SEO — all before signing in. Press **Open**, or the preview itself, to browse the generated pages as a real documentation site with sidebar, outline, breadcrumbs and all
-
-   The draft is written to convert, not just to inform: a landing page, getting started, concepts, feature overview, a how-to guide, use cases, an FAQ, a reference, and — when your source publishes prices — a pricing page. Pages that sell close with a call-to-action block, and every price, plan and limit is copied from your own site. Nothing commercial is invented: a plan whose price wasn't found reads "Contact sales".
-
-3. **Sign in to publish**  
-   Choose GitHub, Google, Apple, or email — your draft becomes a live workspace automatically, no re-work needed. GitHub-sourced sites authorize repo access at this step.
-
-4. **Share your docs**  
-   Your documentation is live at `docsbook.io/owner/repo`
-
-5. **Customize** (optional)  
-   Add branding, enable AI chat, set up a custom domain, or make it private with a password/SSO gate
-
-6. **Keep it updated**  
-   Push to GitHub, docs update automatically (GitHub-sourced sites)
-
-That's it! No build step, no deployment, no CI/CD.
-
----
+- [Quick start](./quick-start.md) — publish a documentation site, from source to public URL
+- [Concepts](./basics.md) — workspace, project balance, indexing and the other terms used here
+- [Use cases](./use-cases.md) — the jobs teams hire documentation for
+- [FAQ](./faq.md) — sync, privacy, data ownership and billing questions
 
 <!-- widget:cta -->
 
-## Ready to start?
+## Publish a site and look at it
 
-Your first site takes about three minutes, and you can see the draft before signing in.
+The draft is generated before you sign in, so you can judge the result before committing to anything.
 
-[Create your first site](https://docsbook.io/create) · [Read the FAQ](./faq.md)
+[Start free — no credit card](https://docsbook.io/start)
 
 <!-- /widget -->
-
-**Questions?** [Contact us](mailto:support@docsbook.io).

@@ -1,9 +1,9 @@
 ---
-title: "Perplexity Citations for Documentation: How to Be Cited"
-description: "Perplexity cites differently than ChatGPT and Google AI Overviews. This is the practical guide to getting your docs into Perplexity answers — structure, robots, sources, and what their crawler actually reads."
+title: "Perplexity citations for documentation: how to be cited"
+description: "Perplexity cites differently from ChatGPT and Google AI Overviews. What its crawler reads, how to structure pages for it, and how to measure honestly."
 ---
 
-# Perplexity Citations for Documentation
+# Perplexity citations for documentation: how to be cited
 
 Perplexity has the most aggressive citation behavior of any AI search product in 2026. Where ChatGPT often paraphrases without a link, Perplexity surfaces the URL right next to every claim. This makes Perplexity the highest-leverage AI search channel for documentation traffic.
 

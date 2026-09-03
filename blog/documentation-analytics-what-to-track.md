@@ -1,9 +1,9 @@
 ---
-title: "Documentation Analytics: What to Track in 2026"
-description: "Most docs analytics show pageviews and stop. This is the practical guide to documentation metrics that actually matter — failed searches, AI questions, negative feedback, and what each tells you."
+title: "Documentation analytics: the metrics worth tracking"
+description: "Pageviews tell you scope, not health. Here are the documentation metrics that surface real failures — failed searches, unanswered questions, dead ends."
 ---
 
-# Documentation Analytics: What to Track
+# Documentation analytics: the metrics worth tracking
 
 Pageviews lie. Top pages by views tell you which pages are popular, not which pages are useful. The metrics that actually move documentation quality are different.
 
@@ -81,7 +81,7 @@ Patterns to look for:
 
 Pageviews are background context. They tell you scope, not health.
 
-A page with 10,000 pageviews/month and a 4% negative-feedback rate is more urgent than a page with 100 pageviews/month and a 10% negative-feedback rate. Volume × failure rate = total bad UX.
+Rank pages by volume multiplied by failure rate, not by either one alone. A heavily read page with a modest negative-feedback rate is failing more readers in absolute terms than a rarely read page with a terrible one, and the second is the page that a rate-sorted list puts on top. Sort by the product of the two and you are working on the pages that actually hurt.
 
 ## What bounce rate is good for
 
@@ -146,4 +146,6 @@ This is the highest ROI loop in documentation. Each iteration turns a known cont
 
 ---
 
-Docsbook ships failed-searches, AI-questions, and negative-feedback analytics on PRO, with page journeys on PRO+. [See it on your docs →](https://docsbook.io/start)
+Docsbook reports failed searches, unanswered assistant questions, negative feedback and page journeys, so the gaps arrive as a list of pages to write rather than as a chart to interpret.
+
+[Start free — no credit card](https://docsbook.io/start)

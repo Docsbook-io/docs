@@ -1,308 +1,162 @@
 ---
-title: "How to Set Up a Custom Domain"
-description: "Point docs.yourcompany.com at Docsbook with automatic SSL — branding, SEO, and trust benefits of serving documentation under your own domain."
+title: "Point your own domain at your Docsbook documentation"
+description: "Add docs.yourcompany.com in settings, create the DNS record Docsbook shows you, wait for propagation, and get an automatic SSL certificate."
 ---
 
-# Setting Up a Custom Domain
+# Set up a custom domain
 
-Use your own domain instead of `docsbook.io` for your documentation.
+A custom domain serves your Docsbook documentation from an address you own — `docs.example.com` instead of `docsbook.io/user/repo`. Docsbook issues the SSL certificate automatically once DNS resolves.
 
-**Required:** Pro (monthly, 7-day free trial) or Business (monthly, 14-day free trial)
+Serving the site, the domain and its certificate call no AI model, so a custom domain does not draw on the project's balance no matter how much traffic it carries.
 
-## Why Use a Custom Domain?
+## Why serve docs from your own domain
 
-### Benefits
+- **Search authority accrues to your domain.** Links people make to your documentation point at `example.com`, so the authority those links carry lands on the domain you are trying to rank, not on `docsbook.io`.
+- **Readers see one company.** The address bar matches the product they came from.
+- **The address survives a move.** If you ever leave Docsbook, `docs.example.com` keeps working against whatever serves it next; a `docsbook.io/user/repo` URL does not.
 
-- 🎯 **Branding** — documentation under your own domain
-- 📈 **SEO** — links to your domain improve your ranking
-- 🔐 **Trust** — visitors see your domain, not someone else's
-- 💼 **Brand consistency** — looks like your own product
+## Before you start
 
-### Examples
+You need two things:
 
-```
-❌ Without domain:
-docsbook.io/mycompany/product
+1. **A domain you control**, registered at any registrar.
+2. **Access to that domain's DNS settings**, so you can add one record.
 
-✅ With domain:
-docs.mycompany.com
-```
+## Step 1: open the Custom domain setting
 
-## Requirements
+1. Open your documentation while signed in.
+2. Click the Float Widget in the bottom right.
+3. Open **Settings** → **Custom Domain**.
 
-1. **Your own domain** — registered by you
-   - If you don't have one — buy on [GoDaddy](https://www.godaddy.com), [Namecheap](https://www.namecheap.com), or another registrar
+## Step 2: enter your domain
 
-2. **Pro or Business plan
-   - If you haven't upgraded yet — [do it now](./premium.md)
+1. Type your domain, for example `docs.example.com`.
+2. Click **Save**.
 
-3. **Access to DNS settings** — at your domain registrar
+Docsbook generates the DNS record you need and displays it immediately, with a **Copy** button on every value.
 
-## Step 1: Open Settings
+## Step 3: add the DNS record at your registrar
 
-1. View your documentation while logged in
-2. Click the Float Widget in the bottom right
-3. Open **Settings**
+The record type depends on whether you use a subdomain or the root of the domain.
 
-## Step 2: Enter Your Domain
-
-In the **Custom Domain** section:
-
-1. Enter your domain (e.g., `docs.example.com`)
-2. Click **Save**
-
-Docsbook will generate the DNS configuration.
-
-## Step 3: Update DNS
-
-As soon as you type your domain, the **Custom Domain** section shows the exact DNS record to add, with a **Copy** button on every value — no need to look anything up. The record type depends on whether you use a subdomain or a root domain:
-
-**Subdomain** (recommended, e.g. `docs.example.com`) — add a **CNAME**:
+**Subdomain** — recommended, e.g. `docs.example.com`. Add a **CNAME**:
 
 | Name / Host | Type | Value |
-|------|------|-------|
-| `docs` (just the subdomain) | CNAME | `cname.vercel-dns.com` |
+|---|---|---|
+| `docs` (the subdomain only) | CNAME | `cname.vercel-dns.com` |
 
-**Root / apex domain** (e.g. `example.com`) — most registrars reject CNAME on the root, so add an **A** record instead:
+**Root or apex domain** — e.g. `example.com`. Most registrars reject a CNAME on the root, so add an **A** record instead:
 
 | Name / Host | Type | Value |
-|------|------|-------|
+|---|---|---|
 | `@` | A | `216.150.1.1` |
 
-> The admin panel shows the precise values for **your** domain (the exact IP or CNAME target Vercel recommends). Always copy from there — the values above are typical defaults.
+> Copy the values from the **Custom Domain** panel rather than from this page. The panel shows the exact target for *your* domain; the values above are the usual defaults and can differ.
 
-Copy each value directly from the admin panel and paste it into the matching field at your DNS registrar.
+### Where the DNS settings live at common registrars
 
-### Where to Change DNS?
+**GoDaddy**
 
-Open the control panel of your domain registrar:
+1. Sign in at [godaddy.com](https://godaddy.com).
+2. Go to **My Domains** → your domain → **DNS**.
+3. Click **Add** and fill in: Type `CNAME`, Name `docs`, Points to `cname.vercel-dns.com`.
+4. Save.
 
-#### GoDaddy
+**Namecheap**
 
-1. Open [godaddy.com](https://godaddy.com) → Sign in
-2. My Domains → Select domain → DNS
-3. Click "Add" next to DNS
-4. Fill in:
-   - Type: CNAME
-   - Name: `docs`
-   - Points to: `cname.vercel-dns.com`
-5. Save
+1. Sign in at [namecheap.com](https://namecheap.com).
+2. Go to **Domain List** → **Manage** → **Advanced DNS**.
+3. Add a record: Type `CNAME`, Host `docs`, Value `cname.vercel-dns.com`, TTL `3600`.
+4. Save.
 
-#### Namecheap
+**Ionos (formerly 1&1)**
 
-1. Open [namecheap.com](https://namecheap.com) → Sign in
-2. Domain List → Manage
-3. Advanced DNS
-4. Add new record:
-   - Type: CNAME
-   - Host: `docs`
-   - Value: `cname.vercel-dns.com`
-   - TTL: 3600
-5. Save
+1. Sign in and open **Domains**.
+2. Select your domain and open **Manage DNS**.
+3. Add a record: Type `CNAME`, Subdomain `docs`, Alias `cname.vercel-dns.com`.
+4. Save.
 
-#### Google Domains
+Any other registrar works the same way: find the DNS or nameserver panel, add a record of the type shown in the Docsbook panel, and paste the value.
 
-1. Open [domains.google.com](https://domains.google.com)
-2. Select domain
-3. DNS → Custom records
-4. Create new record:
-   - DNS Record Type: CNAME
-   - Name: `docs`
-   - Data: `cname.vercel-dns.com`
-5. Save
+### If you want the root domain instead of a subdomain
 
-#### 1and1 / Ionos
+Use `docs.example.com` where you can. It is easier to configure and leaves `example.com` free for your product site.
 
-1. Sign in → Domains
-2. Select domain
-3. Manage DNS
-4. Add record:
-   - Type: CNAME
-   - Subdomain: `docs`
-   - Alias: `cname.vercel-dns.com`
-5. Save
+If you do need the root, use the **A** record above — copy the exact IP shown in the Custom Domain panel — and write to [support@docsbook.io](mailto:support@docsbook.io) if your registrar's interface does not offer one.
 
-### Using a Root Domain
+## Step 4: wait for DNS to propagate
 
-If you want `example.com` (without `docs`):
+DNS changes usually take 15–30 minutes to become visible and can take up to 48 hours.
 
-1. **Our recommendation:** use `docs.example.com`
-   - Easier to configure
-   - Lets you use `example.com` for the project site
+Click **Check domain status** in the **Custom Domain** panel. It reports one of three states:
 
-2. **If you still want root:**
-   - Some registrars don't allow CNAME on root
-   - Use an **A** record instead of CNAME — copy the exact IP shown in the admin panel for your domain (typically `216.150.1.1`)
-   - Contact [support@docsbook.io](mailto:support@docsbook.io) for help
+| Status | What it means | What to do |
+|---|---|---|
+| **Domain verified** (green) | DNS resolves and the domain is live | Nothing; open the site |
+| **Waiting for DNS verification** (yellow) | The record is not visible yet | Wait 15–60 minutes and check again |
+| **Conflicting DNS record found** (yellow) | Another record on the same name is interfering | Remove the conflicting record and check again |
 
-## Step 4: Wait
+To confirm from outside Docsbook, run a lookup:
 
-After adding the DNS record, updates propagate:
-
-- **Usually:** 15-30 minutes
-- **Maximum:** 48 hours
-
-To check propagation, use the built-in **"Check domain status"** button in the **Custom Domain** section of the admin panel. It shows one of three statuses:
-
-- **Domain verified! ✓** (green) — DNS is live, your domain is active.
-- **Waiting for DNS verification** (yellow) — record not yet visible; DNS is still propagating (allow 15–60 minutes).
-- **Conflicting DNS record found** (yellow) — another record is interfering; remove it and try again.
-
-You can also verify using [DNSChecker](https://dnschecker.org): enter your domain and confirm it resolves to `cname.vercel-dns.com`.
-
-## Step 5: SSL Certificate
-
-Once DNS propagates, Docsbook automatically:
-
-1. Detects your domain
-2. Creates an SSL certificate (Let's Encrypt)
-3. Enables HTTPS
-
-Your site is available at:
-
-```
-https://docs.example.com ✅
-```
-
-## Verifying Your Domain
-
-### How to check everything is working?
-
-**Method 1: Built-in status check (recommended)**
-1. Open the Float Widget → Settings → **Custom Domain**
-2. Click **"Check domain status"**
-3. A green **"Domain verified! ✓"** message confirms your domain is live
-
-**Method 2: Simple check**
-1. Open in browser: `https://your-domain.com`
-2. Your documentation should load
-
-**Method 3: DNS check**
 ```bash
-# In terminal
 nslookup docs.example.com
-# Should show: cname.vercel-dns.com
 ```
 
-**Method 4: Online service**
-1. Open [mxtoolbox.com](https://mxtoolbox.com)
-2. CNAME lookup
-3. Enter your domain
-4. Should show `cname.vercel-dns.com`
+The answer should name `cname.vercel-dns.com`. [DNSChecker](https://dnschecker.org) shows the same answer from several countries at once, which is useful while propagation is partial.
+
+## Step 5: let the SSL certificate issue
+
+Once DNS resolves, Docsbook detects the domain, requests a Let's Encrypt certificate, and enables HTTPS. Nothing to click.
+
+Your documentation is then served at:
+
+```text
+https://docs.example.com
+```
 
 ## Troubleshooting
 
 <!-- widget:accordion -->
 
-### DNS Not Updating
+### The domain still does not work after two hours
 
-**Problem:** 2+ hours have passed, but domain doesn't work
+1. Check the record in [DNSChecker](https://dnschecker.org) — if it is not visible there, the record is wrong or not saved.
+2. Confirm the record type and value match the Custom Domain panel exactly.
+3. Open the site in a private browser window, which skips your local cache.
+4. Allow up to 48 hours before treating it as a failure.
 
-**Solutions:**
-1. Clear browser cache (Ctrl+Shift+Delete)
-2. Use a private browser window
-3. Check DNS via [DNSChecker](https://dnschecker.org)
-4. Verify the CNAME record is added correctly
-5. Wait another 24 hours
+### The old site keeps showing
 
-### Old Site Still Showing
+Your browser cached it. Press Ctrl+F5 (Cmd+Shift+R on macOS) or open a private window. If the old version persists for more than 24 hours, check the domain status in the panel.
 
-**Problem:** DNS updated, but old version of site
+### HTTPS shows a certificate error
 
-**Solutions:**
-1. Press Ctrl+F5 (full cache clear)
-2. Open in private window
-3. Wait 24 hours
+The certificate is issued after DNS resolves, so a fresh domain can serve HTTP before HTTPS is ready. Wait an hour, confirm DNS has propagated, and check the domain name for typos. If it persists, write to [support@docsbook.io](mailto:support@docsbook.io).
 
-### HTTPS Not Working
+### The domain shows a Vercel error page
 
-**Problem:** `https://` shows a certificate error
+The domain resolves but is not yet attached. Click **Check domain status** in **Settings** → **Custom Domain**, confirm the domain is saved in Docsbook, and confirm the DNS record matches. Allow one to two hours for the two sides to agree.
 
-**Solutions:**
-1. Wait 1 hour — certificate is being created
-2. Verify DNS has updated
-3. Check domain name for typos
-4. Contact [support@docsbook.io](mailto:support@docsbook.io)
+### Cloudflare proxying blocks verification
 
-### Domain Shows Vercel or Error
-
-**Problem:** Visiting the domain shows a Vercel message
-
-**Solutions:**
-1. Click **"Check domain status"** in Settings → Custom Domain to see the current verification state
-2. Check the domain is added in Docsbook (visible in Settings)
-3. Make sure the DNS CNAME is correct
-4. Wait 1-2 hours for sync
-
-### CloudFlare proxy conflict
-
-**Problem:** Domain configured but not verifying, or showing SSL errors
-
-**Solution:** If you use CloudFlare, set the DNS record to **DNS only** (grey cloud icon, not orange). The orange cloud (proxy mode) intercepts traffic before Vercel can verify the domain. Switch to grey cloud, then click **"Check domain status"** again.
+Set the DNS record to **DNS only** — the grey cloud, not the orange one. The orange cloud proxies traffic before the domain can be verified, which shows up as a domain that never verifies or as SSL errors. Switch to grey, then click **Check domain status** again.
 
 <!-- /widget -->
 
-## Changing Your Domain
+## Change or remove the domain
 
-### How to switch to a different one?
+To move to a different domain: open **Settings** → **Custom Domain**, replace the value, click **Save**, and add the DNS record for the new domain. The old domain stops serving your docs.
 
-1. Open settings
-2. Change the domain in the **Custom Domain** field
-3. Click Save
-4. Update DNS for the new domain
-5. The old domain will stop working
+To go back to the Docsbook address: clear the **Custom Domain** field and click **Save**. Your documentation returns to `docsbook.io/username/repo`.
 
-## Removing Your Domain
+## After the domain is live
 
-### How to go back to docsbook.io?
+- **Update every link that points at the old address** — your GitHub README, your product site, your email signature, and your social profiles. Links left on the old address send authority to `docsbook.io`.
+- **Prefer a subdomain per purpose** — `docs.example.com`, `guide.example.com`, `api.example.com`. Putting docs on the root competes with your main site.
+- **Watch the traffic that arrives.** [Web analytics](../../analytics/tracking/overview.md) reports views, referrers and search queries against the new domain from the first visit.
 
-1. Open settings
-2. Clear the **Custom Domain** field
-3. Click Save
+## Next steps
 
-Documentation returns to:
-```
-docsbook.io/username/repo
-```
-
-## Best Practices
-
-### 1. Use a Subdomain
-
-```
-✅ docs.example.com
-✅ guide.example.com
-✅ api.example.com
-
-❌ example.com (if your main site is there)
-```
-
-### 2. Tell People About the Domain
-
-Update links to your documentation everywhere:
-- GitHub README
-- Project website
-- Email signatures
-- Social media
-
-### 3. Set Up Email (Optional)
-
-Now that you have a domain, you can add email:
-- [Google Workspace](https://workspace.google.com) — business Gmail
-- [Zoho Mail](https://www.zoho.com/mail) — free option
-- [Protonmail](https://proton.me) — private email
-
-This is a separate service from Docsbook, configured through your registrar.
-
-### 4. Use for SEO
-
-Now that the site is under your domain:
-- Set up Google Analytics
-- Track traffic
-- Submit to search engines
-
-## What's Next?
-
-- [Translating Documentation](./translation.md)
-- [Pro and Business plans](./premium.md)
-- [Managing Documentation](../getting-started/managing-docs.md)
+- [Enable AI translations](./translation.md) — each language is served under the same domain as its own indexed path.
+- [Restrict who can read your docs](./sso.md) — a custom domain and a password or SSO gate work together.
+- [Manage your documentation site](../getting-started/managing-docs.md) — the rest of the settings panel.

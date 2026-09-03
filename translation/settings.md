@@ -1,13 +1,13 @@
 ---
-title: "Translation Settings"
-description: "Configure multi-language publishing in Docsbook — enable target languages, toggle the language switcher in the sidebar or header, and control translations."
+title: "Enable languages and control translation of your docs"
+description: "Switch on a target language, pick the model that translates it, see what a run will cost before you confirm it, and read whether the language paid off."
 ---
 
 # Translation Settings
 
-Publish your documentation in multiple languages — automatically, with no manual work.
+Translation settings are where you switch a language on for your Docsbook documentation site, choose which model translates it, and watch what each run costs. Translating a page spends your project's balance; serving an already-translated page to a reader does not.
 
-## Settings
+## Translation settings
 
 | Setting | What it does |
 |---|---|
@@ -19,46 +19,46 @@ Publish your documentation in multiple languages — automatically, with no manu
 ### Choosing the translation model
 
 **Settings ▸ Translations ▸ Translation Model** picks which model does the
-translating, on every plan including Free. Each option shows what it costs per
-1M tokens, so a cheaper model stretches the same AI budget over more pages, and
-a stronger one is a click away when a language reads badly. It is a separate
+translating. Each option shows what it costs per 1M tokens, so a cheaper model
+stretches the same balance over more pages, and a stronger one is a click away
+when a language reads badly. It is a separate
 choice from the model your chat runs on — translating prose and answering a
 reader's question are different jobs.
 
 The estimate you see before a run (below) is priced on the model you picked, so
 the quote and the charge describe the same model. If you brought your own
-translation API key (Business), the model is a free-text field on that card
-instead, against your own provider.
+translation API key, the model is a free-text field on that card instead, and
+the run is billed by your own provider rather than against your project
+balance.
 
-## How to Enable
+## How to enable a language
 
-1. Requires a **Pro plan**.
-2. Open your docs site.
-3. Float Widget → **Translation** tab.
-4. Check the language you want to enable.
-5. Confirm in the dialog that appears — translation then starts in the background.
+1. Open your docs site.
+2. Float Widget → **Translation** tab.
+3. Check the language you want to enable.
+4. Confirm in the dialog that appears — it quotes the run first — and translation starts in the background.
 
 If the language switcher is already showing on your site, you can also open it and press **Activate languages** — it opens the same **Translation** tab. That entry point appears only for you as the owner (or in admin preview), never for your readers.
 
 Translation typically takes **1–5 minutes** for small repositories, up to 30 minutes for large ones.
 
-### Before You Confirm
+### Before you confirm
 
 Turning a language on opens a confirmation dialog so you know the cost before you commit to it. It shows:
 
 - **Pages to translate** — how many pages are not yet translated, out of the total. If everything is already translated, it says so and enabling costs nothing.
 - **Estimated cost** — what the run is expected to cost, or *Billed to your own API key* if you brought your own provider.
-- **Budget left** — how much of your AI budget (or translation limit) remains.
+- **Balance left** — how much of this project's balance remains.
 
-If the run does not fit in what is left, the dialog says what percentage of the docs your budget covers and offers an upgrade. You can still press **Translate what fits** — the pages that fit are translated now, and the rest are picked up automatically once your budget refreshes.
+If the run does not fit in what is left, the dialog says what percentage of the docs your balance covers and offers a top-up. You can still press **Translate what fits** — the pages that fit are translated now, and the rest are picked up automatically once the balance allows.
 
-### Following a Running Translation
+### Following a running translation
 
-While a run is in progress, the language row shows a progress bar and a **35/80** counter (pages handled out of pages in the run). A language whose last run did not finish is marked **Stopped**; hover it to see the reason — budget exhausted, provider quota, or a failure. Long runs resume on their own, in chunks, until every page is done.
+While a run is in progress, the language row shows a progress bar and a **35/80** counter (pages handled out of pages in the run). A language whose last run did not finish is marked **Stopped**; hover it to see the reason — balance exhausted, provider quota, or a failure. Long runs resume on their own, in chunks, until every page is done.
 
-## Supported Languages
+## Which languages can Docsbook translate into?
 
-15 core languages are available:
+Docsbook translates into 15 languages, listed below with the code that appears in the URL of each translated page. English is the default and is not counted as a translation of itself.
 
 | Language | Code |
 |---|---|
@@ -78,7 +78,7 @@ While a run is in progress, the language row shows a progress bar and a **35/80*
 | Dutch | `nl` |
 | English | `en` (default) |
 
-## Language Switcher Placement
+## Language switcher placement
 
 The language switcher can appear in the **sidebar**, the **header**, or both.
 
@@ -90,26 +90,26 @@ The language switcher can appear in the **sidebar**, the **header**, or both.
 | Sidebar | Saves header space when header is already full |
 
 Configure placement in:
-- [Header Options →](../design/layout/header)
-- [Sidebar Control →](../design/layout/sidebar)
+- [Header Options →](../design/layout/header.md)
+- [Sidebar Control →](../design/layout/sidebar.md)
 
-## URL Structure
+## URL structure of a translated page
 
 Each language gets its own URL path:
 
-```
+```text
 docsbook.io/{username}/{repo}           → English (default)
 docsbook.io/{username}/es/{repo}        → Spanish
 docsbook.io/{username}/fr/{repo}        → French
 ```
 
-Each language version is indexed separately by search engines, which means passive SEO traffic in every language you publish.
+Each language version is indexed separately by search engines, so a translated page can match a query your original-language page never would.
 
-## Was Translating Worth It?
+## Was translating worth it?
 
 Open **Translations** in the settings panel. One interval dropdown at the top governs the whole page, and everything under it reports the window you picked:
 
-- **Savings** — what a human translator would have charged for the same content at $5 per 1,000 characters, minus what the AI translation actually cost you. The translator rate is an industry estimate, not a quote you received, so read this as an order of magnitude rather than an invoice.
+- **Savings** — what a human translator would have charged for the same content at the per-1,000-character rate printed beside the figure, minus what the AI translation actually cost you. That translator rate is an industry estimate, not a quote you received, so read this as an order of magnitude rather than an invoice.
 - **Visitors** — unique readers who landed on a translated page, with crawlers excluded.
 - **Conversion** — how much better or worse readers of translated pages convert compared with readers of your original-language pages. A negative number is a real answer, not an error: it means the translated pages are reaching people who bounce, and it is worth knowing.
 
@@ -143,14 +143,14 @@ region's language, Docsbook has no language for it, or the window has nothing me
 Two things the map deliberately will not say. It never reports your own language as a missing
 translation: if your docs are in English then American readers count as served, and a workspace
 whose docs are written in German gets the mirror image. And where the per-country language
-breakdown is not available to your plan, markers read as unmeasured grey rather than red, so a
+breakdown could not be measured for a window, markers read as unmeasured grey rather than red, so a
 missing measurement can never look like a missing translation.
 
-## One Language at a Time
+## One language at a time
 
 The page above covers every language at once, which is not the question you act on. That one is always about a single language: keep paying for German, or not. So each language has a page of its own — click **Translations** in the sidebar, then pick the language from the tabs across the top of the page.
 
-### At the top: is it on, and is it keeping up?
+### Is this language on, and is it keeping up?
 
 Beside the language's name sits everything you can *do* to it, on one line: the on/off **switch**, a state chip saying whether the language is level with your docs and when it was last written to, and a button that runs a translation now.
 
@@ -158,15 +158,15 @@ The switch is here, and not only in settings, so you can act on what the page ju
 
 The state chip opens onto everything behind that one word:
 
-- **Coverage** — one percentage, over a bar split by the *kind* of gap. Pages that are translated and current, pages whose source has since changed, and pages never translated at all are three different colours, because they call for different responses. A page that fell behind is telling your reader something your docs no longer say; a page never translated simply falls back to your original.
+- **Coverage** — one percentage, over a bar split by the *kind* of gap. Pages that are translated and current, pages whose source has since changed, and pages never translated at all are three different colours, because they call for different responses. A page that fell behind is telling your reader something your docs no longer say; a page never translated falls back to your original.
 - **Last update** — when this language was last written to, and which commit your docs are currently at.
 - **What is running now** — a live progress bar while a run is in flight, naming who started it: **you**, someone else on the dashboard, switching the language on, or a commit Docsbook followed.
 - **Recent runs** — the last dozen runs as a strip, coloured by how each one ended. One failed run is a blip; a strip that has not finished cleanly in a month is a problem, and a single "last run failed" cannot tell you which you have.
-- **Why it stopped** — when a run ended short, the reason in plain words: budget exhausted, provider quota, an unreadable repository.
+- **Why it stopped** — when a run ended short, the reason in plain words: balance exhausted, provider quota, an unreadable repository.
 
 The run button holds the two ways to start one by hand: **Translate now**, which fills in what is missing or behind, and **Re-translate everything**, which discards what is stored and translates the whole thing again.
 
-### Did it pay off, and what did it cost?
+### Did this language pay off, and what did it cost?
 
 Two rows of figures, and neither reads correctly without the other — 180 readers is a good week or a waste depending on whether they cost you four dollars or four hundred.
 
@@ -179,9 +179,9 @@ Every figure in both rows explains itself: press the **?** beside its name for w
 Two things worth knowing about how the audience is counted:
 
 - A language is measured against **all** its countries, not one. Portuguese is Brazil and Portugal, Spanish is sixteen countries, German is five.
-- Readers of a language who are **not** in its countries — diaspora, travellers, anyone who simply prefers it — are reported separately rather than folded into the share. A language read entirely outside its own countries still has a real audience, and you can see it.
+- Readers of a language who are **not** in its countries — diaspora, travellers, anyone who prefers it — are reported separately rather than folded into the share. A language read entirely outside its own countries still has a real audience, and you can see it.
 
-### Did the translation follow what you shipped?
+### Did the translation follow the commits you shipped?
 
 Below the figures is the one part of the page that names something to go fix: your documentation's commits, newest first, each with a verdict on how its pages stand in this language.
 
@@ -193,13 +193,13 @@ Open a commit to see every documentation page it touched, each marked **translat
 
 The state is always how the page stands **now**, not how it stood on the day of that commit. What you can act on is whether your readers are being served the right thing today, and a commit since superseded by a newer one is exactly how a page ends up behind.
 
-### Who actually read it
+### Who actually read this language
 
 The page ends on the readers themselves — the same table as **Users**, narrowed to this language and opened on its widest set of columns: where each reader connected from, which translation they read, what they came through, how far they got, which goals they reached and what they are worth. By the time you reach it the totals above are already answered, and the question left is which of these people to go talk to.
 
 A language you switch off keeps its page. Turning one off deletes nothing, so its pages, its cost and its past readers are all still there — shown as history, next to the country audience that keeps arriving whether or not there is a translation waiting for them. That pairing is what answers "should I turn this back on?".
 
-## Keeping Translations Current
+## Keeping translations current
 
 On the **Auto** translation mode, Docsbook follows your repository: when you push a commit that changes a documented page, the pages that fell behind are re-translated for every enabled language without you asking. Pages the commit did not touch cost nothing, and stale pages are re-done before never-translated ones — a translation that now says something your docs no longer say is worse for a reader than a page that falls back to the original.
 
@@ -211,13 +211,12 @@ Following commits stays inside the fences you already set:
 |---|---|
 | Translation mode | Only **Auto** follows commits. On **Manual** and **External webhook** nothing starts by itself. |
 | Enabled languages | Only languages you switched on. A language that is off is never translated. |
-| Plan | Requires a plan that includes translation. |
-| Budget and quota | The same AI spend budget and provider limits as any other run. When the budget runs out the run stops and says so, and resumes when it refreshes. |
+| Balance and quota | The project's own balance and your provider's limits, the same as any other run. When the balance runs out the run stops and says so, and resumes once it is topped up. |
 | Runs in flight | Never starts a second run for a language that is already translating. |
 
 To correct or replace a specific translation by hand, ask your AI agent to re-translate a page, or use the MCP translation tools (`upload_translation`, `approve_translation`, `delete_translation`). A translation you upload or approve is marked as hand-written, so later automatic runs leave it alone.
 
-## Disabling a Language
+## Disabling a language
 
 Uncheck the language in the Translation tab → Save, or use the switch on that language's own page. No confirmation is asked, because nothing is destroyed.
 
@@ -225,9 +224,9 @@ Visitors on that language's URL are automatically redirected to the English vers
 
 **Turning a language off never deletes what is already translated**, and turning it back on does not pay again for pages that have not changed — only new or edited pages are translated. Re-enabling a language you previously used is effectively instant and free. You can experiment with languages without risking a second bill.
 
----
+## Related
 
-> **Reach a global audience without hiring translators.**
-> [Upgrade to Pro →](https://docsbook.io/connect)
-
-See also: [How AI Translations work →](./ai-translations)
+- [How AI translations work](./ai-translations.md) — the pipeline behind these settings, and what is left untranslated
+- [Visitor countries report](../analytics/reports/countries.md) — which regions arrive that you do not translate for yet
+- [Header layout and navigation](../design/layout/header.md) — placing the language switcher in the header
+- [Sidebar layout and configuration](../design/layout/sidebar.md) — placing it in the sidebar instead

@@ -1,9 +1,9 @@
 ---
-title: "MCP Server for Documentation: What It Is and Why It Matters in 2026"
-description: "Model Context Protocol explained for docs teams — how Claude Code and Cursor read and edit your docs through MCP, what tools matter, and why this is a primary AI distribution channel."
+title: "MCP server for documentation: what it is and why it wins"
+description: "How Claude Code and Cursor read and edit documentation through Model Context Protocol, which tools matter, and why agents are now a traffic channel."
 ---
 
-# MCP Server for Documentation
+# MCP server for documentation: what it is and why it wins
 
 Model Context Protocol (MCP) is the connector standard Anthropic released in late 2024. By mid-2026 it is supported by Claude Code, Cursor, ChatGPT, and a growing list of agents. For documentation, MCP turns your docs from a website-only asset into a programmatic surface that AI agents can read and act on.
 
@@ -14,8 +14,8 @@ This post explains what MCP is, what tools a docs MCP server exposes, and how Do
 - MCP = standard way for AI agents to call external tools
 - A docs MCP server exposes tools like `get_analytics`, `update_branding`, `set_chat_hooks`
 - Agents discover capabilities, request OAuth, then call tools as part of their work
-- Docsbook ships a managed MCP server at `docsbook.io/api/mcp/server` with 61 tools
-- This is now a primary AI distribution channel — Mintlify reports 45% of their docs traffic comes from AI agents, with Claude Code at 25% and Cursor at 18%
+- Docsbook ships a managed MCP server at `docsbook.io/api/mcp/server`
+- This is now a primary AI distribution channel — Mintlify measured AI coding agents at 45.3% of requests to the docs sites it hosts in March 2026, Claude Code at 25.2% and Cursor at 18.0% ([source](https://www.mintlify.com/blog/state-of-ai))
 
 ## What MCP actually is
 
@@ -48,7 +48,7 @@ A user in Claude Code can say "set my docs accent color to brand purple and add 
 
 ## What tools a good docs MCP server exposes
 
-Docsbook's MCP server exposes 61 tools across these categories:
+Docsbook's MCP server exposes tools in these categories. The full list is returned by the server itself on connection — the table below is the shape, not the inventory:
 
 | Category | Examples |
 |---|---|
@@ -91,9 +91,9 @@ LSP — Language Server Protocol — is what powers go-to-definition, find-refer
 
 Three signals from 2025–2026:
 
-1. **Mintlify telemetry** — 45.3% of their docs requests come from AI agents (Claude Code 25%, Cursor 18%, others 2%)
-2. **Anthropic dogfooding** — Anthropic's own docs and Claude Code documentation are MCP-first
-3. **Docsbook adoption** — workspaces with MCP enabled see 3–4× more agent-driven traffic than those without
+1. **Mintlify telemetry.** Mintlify measured 30 days of traffic across the documentation sites it hosts — roughly 790 million requests — and reported that AI coding agents accounted for **45.3% of all requests**, with Claude Code at 25.2% and Cursor at 18.0% ([The state of agent traffic in documentation](https://www.mintlify.com/blog/state-of-ai), published 3 April 2026). Its follow-up measurement put the agent share at **66% of traffic in July 2026** ([2026 midyear report](https://www.mintlify.com/blog/state-of-docs-traffic), published 29 July 2026). That is one vendor's fleet rather than the whole web, but it is the largest published measurement of agent traffic to documentation.
+2. **Anthropic dogfooding.** Anthropic's own documentation and the Claude Code docs are MCP-first.
+3. **The client side is already built.** Claude Code, Cursor and ChatGPT ship MCP support, so the connector does not need adoption on the reader's side — only on yours.
 
 If you build for developers and your audience uses Claude Code or Cursor, MCP is no longer optional infrastructure.
 
@@ -108,14 +108,15 @@ A reasonable docs MCP server requires:
 - Write access if you want config edits
 - Rate limiting and audit logging
 
-About 4–6 engineering weeks if you have not done it before. The Docsbook MCP server is free on every plan — Pro at $59/month adds AI settings, SEO write access, and translations on top — and `markdown-lsp` is free and open source for the doc-graph read tools.
+About 4–6 engineering weeks if you have not done it before. Docsbook's MCP server comes with the workspace and costs nothing to run; `markdown-lsp` is free and open source for the doc-graph read tools.
 
-## Related reading
+Docsbook ships a managed MCP server with OAuth, so Claude Code and Cursor read and edit your docs without you running anything. Connection details are at [docsbook.io/mcp](https://docsbook.io/mcp).
 
-- [llms.txt: the complete guide](./llms-txt-guide.md) — companion standard
-- [AI documentation platforms compared (2026)](./ai-docs-platform-comparison.md)
-- [How to get docs cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md)
+[Start free — no credit card](https://docsbook.io/start)
 
----
+## Next steps
 
-Docsbook ships a managed MCP server with OAuth and 61 tools. [Connect from Claude Code →](https://docsbook.io/mcp)
+- [docs-skills: modular capabilities for AI agents](./docs-skills-for-ai-agents.md) — the layer that sits on top of MCP
+- [llms.txt explained](./llms-txt-guide.md) — the companion standard for agents without MCP
+- [AI documentation platforms compared](./ai-docs-platform-comparison.md) — which of the four ship an MCP server
+- [How to get your documentation cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — the discovery side of the same channel

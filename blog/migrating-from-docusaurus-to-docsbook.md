@@ -1,9 +1,9 @@
 ---
-title: "Migrating from Docusaurus to Docsbook: A Step-by-Step Guide"
-description: "Move your Docusaurus site to Docsbook without breaking SEO — adapt MDX to markdown, kill the CI pipeline, port redirects, and keep your URLs. Honest tradeoffs included."
+title: "Migrating from Docusaurus to Docsbook, step by step"
+description: "Move a Docusaurus site to Docsbook without losing search traffic — adapt MDX, retire the CI pipeline, port redirects, and keep every URL working."
 ---
 
-# Migrating from Docusaurus to Docsbook
+# Migrating from Docusaurus to Docsbook, step by step
 
 Docusaurus is great until the next major migration lands and you spend a sprint on it instead of shipping the product. This guide walks through the realistic migration path.
 
@@ -104,7 +104,7 @@ You can delete `sidebars.js`, `docusaurus.config.js`, `babel.config.js`, and the
 
 ## Step 3: Connect Docsbook
 
-Your docs are already in `docs/`. Just connect:
+Your docs are already in `docs/`. Connect the repository:
 
 - [docsbook.io](https://docsbook.io) → Sign in with GitHub
 - Paste `github.com/yourorg/yourrepo`
@@ -112,7 +112,7 @@ Your docs are already in `docs/`. Just connect:
 
 ## Step 4: Custom domain
 
-Business ($159/mo) includes custom domain.
+Docsbook serves `docs.yourcompany.com` with automatic SSL.
 
 - Docsbook dashboard → Settings → Domain
 - Enter `docs.yourcompany.com`
@@ -203,12 +203,13 @@ Docusaurus's `docs/versioned_docs/version-1.0/` pattern is not directly supporte
 - Startup, ~300 pages, moderate MDX: half a day
 - Mid-stage, ~1000 pages, heavy MDX: 1–2 days
 
-## Related reading
+Test the migration before committing to it. Publishing a second site from the same repository costs nothing and changes nothing about the Docusaurus deploy still serving your readers — if the result does not reach parity, you have lost the five seconds it took.
 
-- [Docusaurus vs Docsbook in 2026](./docusaurus-vs-docsbook-2026.md)
-- [Docs as code vs managed platform](./docs-as-code-vs-managed-platform.md)
-- [Custom domain for docs how-to](./custom-domain-for-docs-howto.md)
+[Start free — no credit card](https://docsbook.io/start)
 
----
+## Next steps
 
-Test the migration first: paste your repo at [docsbook.io](https://docsbook.io). The site builds in 5 seconds. If it does not match your Docusaurus parity, you have lost nothing.
+- [Should you move off Docusaurus in 2026?](./docusaurus-vs-docsbook-2026.md) — the decision, if you have not made it yet
+- [Docusaurus alternatives in 2026: 9 platforms compared](./docusaurus-vs-docsbook.md) — the wider field
+- [Custom domain for docs](./custom-domain-for-docs-howto.md) — the DNS and redirect half of this migration
+- [Docs as code vs a managed platform](./docs-as-code-vs-managed-platform.md) — the principle behind the move

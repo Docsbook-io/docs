@@ -1,9 +1,9 @@
 ---
-title: "Free Documentation Hosting: Honest Comparison (2026)"
-description: "Six free options for hosting documentation in 2026 — Docsbook Free, GitHub Pages, Vercel, Netlify, ReadTheDocs, Cloudflare Pages. What you actually get on the free tier and where each one fails."
+title: "Free documentation hosting compared: six real options"
+description: "Six ways to host documentation for nothing — GitHub Pages, Vercel, Netlify, Cloudflare Pages, ReadTheDocs and Docsbook — and what each one costs in time."
 ---
 
-# Free Documentation Hosting Compared
+# Free documentation hosting compared: six real options
 
 "Free" rarely means free. Every free docs hosting option has a real cost in setup time, missing features, or eventual upgrade. This is the comparison that tells you which "free" is closest to actually free.
 
@@ -13,35 +13,35 @@ We make Docsbook. We list our limitations honestly.
 
 | Option | Setup time | Custom domain | AI chat | Search | Analytics | Real cost |
 |---|---|---|---|---|---|---|
-| **Docsbook Free** | 5 sec | Paid only | Free, included | Free | 24h | None for OSS |
+| **Docsbook** | 5 sec | Included, with SSL | Included, metered per project | Included | Included | AI usage draws on a per-project balance |
 | **GitHub Pages** | 1–4 hours | Free + DNS | None | None | None | Your hosting time |
 | **Vercel free** | 1–2 hours | 50/account | None | None | Limited | Build minutes after free tier |
 | **Netlify free** | 1–2 hours | Free | None | None | Limited | Bandwidth caps |
 | **ReadTheDocs free** | 30 min | Paid only | None | Basic | None | Sphinx complexity |
 | **Cloudflare Pages** | 1 hour | Free | None | None | None | Build minutes |
 
-If your priority is "live today with good defaults," Docsbook Free wins. If your priority is "I want to own every layer," GitHub Pages + a static generator wins. Everything in between is a tradeoff.
+If your priority is "live today with good defaults," Docsbook wins. If your priority is "I want to own every layer," GitHub Pages + a static generator wins. Everything in between is a tradeoff.
 
-## Docsbook Free
+## Docsbook
 
-What you get:
+What you get, without paying anything to publish:
 
-- 5-second setup from a GitHub repo
-- Custom brand colors (light + dark), logo, icon, font
+- 5-second setup from a GitHub repository
+- Custom brand colours (light and dark), logo, icon, font
 - Search, breadcrumbs, copy-code, theme toggle
-- Header links, social links (GitHub, Discord, Twitter)
-- Last 24 hours of analytics (pageviews, top pages, referrers, countries)
-- `llms.txt` + `llms-full.txt` for AI discoverability
-- AI chat trained on your content (200 questions/month is on PRO; Free includes basic AI features)
+- Header links and social links (GitHub, Discord, X)
+- Analytics — pageviews, top pages, referrers, countries
+- `llms.txt` and `llms-full.txt` for AI discoverability
+- An MCP server, so Claude Code and Cursor can read and edit the docs
+- AI chat trained on your content
 
-What you do not get:
+What it costs, and what it does not:
 
-- Custom domain (`docs.yourcompany.com`) — PRO+ feature
-- AI translation to 15 languages — PRO feature
-- "Powered by Docsbook" stays in the footer on every plan — there's no paid tier that removes it
-- Analytics beyond 24h
+- **Publishing, hosting, the custom domain and every page a reader opens cost nothing.** They do not draw on any balance.
+- **AI usage is metered.** Each project carries its own balance, and questions to the assistant and translation runs spend it. Current numbers are on [docsbook.io/pricing](https://docsbook.io/pricing), generated from the live pricing constants on every request.
+- **The footer credit is permanent.** Every Docsbook site renders a small "Powered by Docsbook" link in the page footer. There is no setting and no plan that removes it.
 
-Best for: OSS projects, indie products, MVPs, anyone who wants a real docs site without managing hosting.
+Best for: OSS projects, indie products, MVPs, and anyone who wants a real docs site without managing hosting.
 
 ## GitHub Pages
 
@@ -147,9 +147,9 @@ Best for: teams already on Cloudflare with strong DevOps capacity.
 
 The cheapest dollar-cost option is rarely the cheapest total-cost option.
 
-A reasonable model: your time is worth $50–200/hour depending on your role. A docs setup that takes 4 hours costs $200–800 in opportunity cost. Docsbook Free saves all of that time at the cost of a small "Powered by Docsbook" credit in the footer, which stays on every plan.
+Do this arithmetic with your own numbers rather than with ours: take the hourly cost of the person who would do the setup, multiply by the hours in the table above, and compare that against the alternative. We publish no dollar figure for it, because an hourly rate we invented for you would be a made-up number dressed as a calculation.
 
-For a solo founder or a 3-person startup, this math almost always favors Docsbook Free or PRO.
+What Docsbook trades for those hours is concrete and small: every site carries a "Powered by Docsbook" link in its footer, on every site, with no way to remove it.
 
 ## The hidden cost: feature creep
 
@@ -160,22 +160,27 @@ Most teams that pick a self-hosted free option eventually add:
 - Analytics ($0–50/month)
 - Translation pipeline (weeks of engineering)
 
-By the time the "free" stack is complete, it costs more than Docsbook PRO ($59/month) or Business ($159/month).
+Price that stack against Docsbook on [docsbook.io/pricing](https://docsbook.io/pricing) rather than against a number quoted here. The shape of the comparison is what matters: the self-hosted stack accumulates several fixed monthly subscriptions plus the engineering time to wire them together, while Docsbook charges for AI usage and nothing for the site.
 
 ## How to pick
 
-- **Will you spend more than 2 hours setting up docs hosting?** → Docsbook Free
-- **Are you a Python OSS team with Sphinx already?** → ReadTheDocs
-- **Do you want to own every layer and enjoy it?** → GitHub Pages or Cloudflare Pages
-- **Do you need custom domain on day one?** → Docsbook Business ($159/month)
-- **Will you translate to multiple languages?** → Docsbook PRO
+- **Will you spend more than two hours setting up docs hosting?** → Docsbook
+- **Are you a Python OSS team already on Sphinx?** → ReadTheDocs
+- **Do you want to own every layer, and enjoy owning it?** → GitHub Pages or Cloudflare Pages
+- **Do you need `docs.yourcompany.com` on day one?** → Docsbook, Netlify or Cloudflare Pages
+- **Will you publish in several languages?** → Docsbook, which indexes each locale at its own URL
 
-## Related reading
+## Why does this page not quote our own price?
 
-- [Best documentation platforms for startups in 2026](./best-docs-platforms-for-startups-2026.md)
-- [How to host documentation from GitHub](./how-to-host-docs-from-github.md)
-- [Turn your README.md into a documentation site](./readme-md-to-docs-site.md)
+Because a price copied into a blog post goes stale without telling anyone, and a stale price is the single most damaging thing a comparison page can carry: it is exactly the sentence a reader — or an AI assistant summarising this page six months from now — will repeat to a buyer.
 
----
+[docsbook.io/pricing](https://docsbook.io/pricing) is generated from the live pricing constants on every request. It has no "last updated" date because there is nothing on it that can go stale. Read the number there; treat any Docsbook price you find anywhere else, including here, as a rumour.
 
-Try Docsbook Free: paste your repo at [docsbook.io](https://docsbook.io). Site live in 5 seconds, no credit card.
+[Start free — no credit card](https://docsbook.io/start)
+
+## Next steps
+
+- [Best documentation platforms for startups in 2026](./best-docs-platforms-for-startups-2026.md) — the same field ranked by company stage
+- [How to host documentation from GitHub](./how-to-host-docs-from-github.md) — the step-by-step for the three main paths
+- [Turn your README.md into a documentation site](./readme-md-to-docs-site.md) — the shortest path if your docs are one file
+- [Custom domain for documentation](./custom-domain-for-docs-howto.md) — DNS, SSL and redirects for `docs.yourcompany.com`

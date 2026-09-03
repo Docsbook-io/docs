@@ -1,9 +1,9 @@
 ---
-title: "Why we don't use Notion for docs — engineering lessons"
-description: "A first-person take on why Notion stopped being a fit for product documentation — search, version control, hreflang, AI crawling, performance, and lock-in, with what we use instead."
+title: "Why we stopped using Notion for product documentation"
+description: "A first-person account of where Notion stops working as product docs — search, versioning, hreflang, AI crawling, performance — and what replaced it."
 ---
 
-# Why we don't use Notion for docs — engineering lessons
+# Why we stopped using Notion for product documentation
 
 I used to put everything in Notion. Internal handbook, product specs, customer-facing FAQ, API examples, the runbook for the on-call rotation, the changelog, the half-finished onboarding guide that nobody read. One workspace, one search box, one set of permissions. It felt great for about eighteen months.
 
@@ -11,7 +11,7 @@ Then we tried to grow traffic to the docs. And then we tried to add a second lan
 
 This is that list. It is not a takedown — Notion is a genuinely good product for what it is built for. It is a post about the specific moment when "good wiki" stops being "good docs", and how to notice that moment before you have 400 pages and a sales team that needs the docs to actually rank.
 
-## Where Notion still wins
+## Where does Notion still win?
 
 Before the complaints, the honest part.
 
@@ -59,7 +59,7 @@ If you ever plan to ship docs in more than one language, do not start in Notion.
 
 This is the new one, and the one I underestimated.
 
-By 2026, a meaningful share of "how does X work" questions never reach your website. The user asks ChatGPT, Claude, or Perplexity, and the answer is synthesised from whatever those models can see. Mintlify publicly reports that 45% of their docs traffic is now from AI agents. Our own numbers are smaller but moving the same direction.
+By 2026, a meaningful share of "how does X work" questions never reach your website. The user asks ChatGPT, Claude, or Perplexity, and the answer is synthesised from whatever those models can see. Mintlify measured 30 days of traffic across the documentation sites it hosts — roughly 790 million requests — and reported that AI coding agents accounted for **45.3% of all requests**, with Claude Code at 25.2% and Cursor at 18.0% ([The state of agent traffic in documentation](https://www.mintlify.com/blog/state-of-ai), published 3 April 2026). Its follow-up measurement put the agent share at **66% of traffic in July 2026** ([2026 midyear report](https://www.mintlify.com/blog/state-of-docs-traffic), published 29 July 2026). That is one vendor's fleet rather than the whole web, but it is the largest published measurement of agent traffic to documentation. Our own numbers are smaller and moving the same direction.
 
 For an AI crawler to cite your docs, it has to be able to *read* your docs. That means clean server-rendered HTML, semantic headings, a `sitemap.xml`, ideally an `llms.txt` listing the canonical content, and an `Allow` for the major AI user-agents in `robots.txt`. Notion gives you almost none of this. The HTML is JavaScript-heavy, there is no `llms.txt`, and the AI crawler answer-rate is empirically poor.
 
@@ -93,7 +93,7 @@ Notion is built for the first job and patched for the second. You end up with a 
 
 The boundary between "wiki" and "docs" is worth making physical. Different system, different repo, different review workflow, different domain.
 
-## What we use now
+## What do we use instead?
 
 For internal stuff that needs comments, opinions, drafts, and inline databases — strategy docs, RFCs, meeting notes, the handbook — Notion is still the right tool. We did not stop using Notion. We stopped using it for the wrong job.
 
@@ -107,6 +107,15 @@ We built Docsbook because we wanted "git repo of markdown" to be five seconds aw
 
 If your docs need to be found by people who do not work at your company, they are an SEO and AI-discoverability product. Treat them like one. Put them in source control, render them as HTML, give every language a real URL, and make sure a crawler can read them without running your JavaScript.
 
-A wiki is for the people who are already inside. Docs are for the people who are still outside, looking in. You only get one shot at that first impression, and it usually happens at 2am, on a phone, while the user is annoyed. Build for that user, not for the team meeting where the doc got written.
+A wiki is for the people who are already inside. Docs are for the people who are still outside, looking in. You get one shot at that first impression, and it usually happens at 2am, on a phone, while the reader is annoyed. Build for that reader, not for the meeting where the doc got written.
 
 That is the lesson. Everything else is implementation detail.
+
+[Start free — no credit card](https://docsbook.io/start)
+
+## Next steps
+
+- [How to host documentation from a GitHub repository](./how-to-host-docs-from-github.md) — the three paths out of a wiki
+- [Documentation SEO guide](./documentation-seo-guide.md) — the search problem section 1 describes, in full
+- [Multi-language documentation SEO](./multi-language-documentation-seo.md) — the architecture point from section 3
+- [How to get your documentation cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — the crawler problem from section 4

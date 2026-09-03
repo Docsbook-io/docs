@@ -1,13 +1,13 @@
 ---
-title: "AI Usage & Cost Statistics"
-description: "Monitor your AI chat requests, translation usage, and estimated costs per model. Track spending across different AI providers and models."
+title: "See what your AI chat was asked and what it cost you"
+description: "Read the Chat page of your Docsbook workspace: how many readers asked, how many got a real answer, what the conversations were worth, and what they billed."
 ---
 
 # AI Usage & Cost Statistics
 
-Monitor how your AI features are being used and estimate the costs associated with each AI request.
+The Chat page of a Docsbook workspace reports what your AI assistant was asked, how much of it it actually answered, what those readers were worth, and what running the assistant billed against the project's balance. Answering a reader is one of the few things that spends that balance; reading this page is not.
 
-## What You'll See
+## What you will see
 
 Usage and cost live inside the **Conversations** and **Dialogs** cards now, not a
 separate "AI Usage" section — the numbers are more useful next to the
@@ -68,7 +68,7 @@ answers led"), reading Analytics' own date-range picker instead of a second
 period control here. Clicking a row there no longer opens it into
 **Dialogs** — that jump only works from within the Chat page itself.
 
-## How to Open
+## How to open the Chat page
 
 1. Open your documentation site's admin
 2. Click the **Chat** row in the sidebar — it opens into its own page, the same way **Settings** does
@@ -85,9 +85,9 @@ period control here. Clicking a row there no longer opens it into
    batch. Search and filters apply to what has been loaded, so on a long
    history load more if a filter looks emptier than you expect
 
-## Cost Estimation
+## How the cost of an AI request is estimated
 
-Docsbook estimates costs based on:
+Docsbook estimates the cost of an AI request from three things:
 
 - **Token counts**: Approximated from text length (~4 characters per token)
 - **Model pricing**: Current market rates for popular models (OpenAI, Anthropic, Gemini, etc.)
@@ -104,33 +104,23 @@ Supported pricing models:
 
 > **Note**: Estimated costs are approximate and may differ from actual provider invoices due to token counting differences, special pricing, and volume discounts.
 
-## Monthly Limits
+## What spends the balance, and what does not
 
-AI usage is metered in money, not in requests. Each paid plan includes a monthly AI budget:
+AI usage is metered in money, not in requests: every project carries its own balance, and each call takes what that call was priced at. Choosing a cheaper model therefore makes the same balance go further, which is why the model picker exists.
 
-| Plan | Monthly AI budget |
+| Spends the project balance | Costs nothing |
 |---|---|
-| **Free** | $0.15 |
-| **Pro** | $85.00 |
-| **Business** | $200.00 |
+| An AI answer given to a reader in chat | Reading any analytics report |
+| A question you ask the assistant in the panel | Hosting and serving your documentation |
+| Translating a page | Serving an already-translated page |
+| Building the semantic index and its embeddings | Branding, theming and navigation settings |
+| A background agent run | Registering a webhook and receiving its deliveries |
 
-Every call is charged at the model provider's real price plus a 150% markup, so a cheaper model stretches the same budget further.
+When a project's balance runs out, AI usage pauses rather than overrunning: the assistant stops answering until the balance is topped up, and nothing else about the site changes. Current rates are published on the [Docsbook pricing page](https://docsbook.io/pricing).
 
-When a plan exceeds its monthly budget, AI usage simply pauses until the next billing cycle — see [Pricing & Plans](../../content/setup/pricing-spec.md#usage-budget) for details. You're never billed above your plan's price.
+Calls made on your own provider API key are counted here and billed by that provider instead, so they cost the project balance nothing.
 
-## Translation Usage
-
-Translation requests use a separate monthly quota:
-
-| Plan | Translations/Month |
-|---|---|
-| **Free** | 0 translations |
-| **PRO** | 50 translations |
-| **PRO+** | 500 translations |
-
-Learn more: [AI Translations](../../ai/translations.md)
-
-## Cost Breakdown by Model
+## Cost breakdown by model
 
 The cost breakdown table shows your spending by AI provider and model:
 
@@ -141,25 +131,23 @@ The cost breakdown table shows your spending by AI provider and model:
 
 The models are sorted by total cost, so you can quickly see which models are driving your AI expenses.
 
-## Custom API Keys
+## Custom API keys
 
-If you've set your own API keys for OpenAI, Anthropic, or Gemini, the costs are:
+If you have set your own API keys for OpenAI, Anthropic, or Gemini, the costs of a call made on them are:
 
 - **Calculated by the provider** (not estimated by Docsbook)
 - **Visible in your provider's billing dashboard** (OpenAI Platform, Anthropic Console, Google Cloud)
-- **Not included in Docsbook usage limits** (you manage costs separately)
+- **Not deducted from the project balance** (you manage those costs with your provider)
 
-Learn more: [Using Your Own API Keys](../../ai/chat.md#custom-api-keys)
+Learn more: [AI chat](../../ai/chat.md) — choosing a provider and a model
 
-## Time Ranges
+## Time ranges
 
-AI usage metrics are available for:
+Ask the in-product assistant for the Conversations card by name and it comes with its own **24h**, **7d** and **30d** pills. Thirty days is the longest window: conversations are kept for 30 days, and the AI ledger is pruned to match, so there is nothing older to report.
 
-| Range | Plan required |
-|---|---|
-| Last 24 hours | Free |
-| Last 7 days | Pro |
-| Last 30 days | Business |
+## Related
 
-> **Start using AI chat today.**
-> [Create a documentation site →](https://docsbook.io/connect)
+- [Analytics overview](./overview.md) — the Spend figure and the two chat cards at the bottom of that page
+- [Tracked events reference](./events.md) — the chat events behind these totals
+- [AI chat](../../ai/chat.md) — configuring the assistant these numbers describe
+- [How AI translations work](../../translation/ai-translations.md) — the other thing that spends the same balance

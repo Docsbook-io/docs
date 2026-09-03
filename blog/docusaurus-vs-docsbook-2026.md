@@ -1,100 +1,86 @@
 ---
-title: "Docusaurus vs Docsbook in 2026: The Honest Comparison"
-description: "Docusaurus is free, Docsbook Pro is $59/month. We map 2026 setup time, hosting, AI features, SEO, and total cost so you can pick the right one — written by the Docsbook team."
+title: "Should you move off Docusaurus in 2026? A decision guide"
+description: "A decision guide for teams already running Docusaurus: what the setup really costs per quarter, when staying is correct, and what changes if you move."
 ---
 
-# Docusaurus vs Docsbook in 2026
+# Should you move off Docusaurus in 2026? A decision guide
 
-Docusaurus is the open-source default. Docsbook is the managed alternative. The honest answer in 2026: it depends on whether your time is more expensive than $59/month.
+This page answers one question: you already run Docusaurus, should you keep running it? It is a decision guide, not a catalogue. If you have not picked a direction yet, read [Docusaurus alternatives in 2026: 9 platforms compared](./docusaurus-vs-docsbook.md) first — that page ranks the whole field. If you have already decided to move to Docsbook, skip to [Migrating from Docusaurus to Docsbook](./migrating-from-docusaurus-to-docsbook.md).
 
-This is a 2026 refresh of [Docusaurus vs Docsbook](./docusaurus-vs-docsbook.md) with updated pricing, new AI features, and current migration paths.
+The short answer: Docusaurus stays correct as long as someone on the team is paid to own a frontend build. It stops being correct the moment nobody is.
 
-## TL;DR
+## When should you stay on Docusaurus?
 
-| | Docusaurus | Docsbook |
+Stay on Docusaurus when one of these is true. Each of them means the ownership cost is already paid, so moving buys you nothing.
+
+- Your Docusaurus deployment works today and the next major-version migration is not due.
+- You embed React components inside docs pages — interactive demos, custom plugins, live playgrounds.
+- Someone's job description includes maintaining the docs site, at least in part.
+- You want no vendor relationship at all, and you accept hosting and CI as your own cost.
+
+The React ecosystem, MDX and `swizzle` theming are real strengths. Nothing on this page claims Docusaurus is a bad tool; it claims it is a tool with an owner, and asks whether you have one.
+
+## When should you move off Docusaurus?
+
+Move when the site has no owner and the work keeps arriving anyway. The concrete signals:
+
+- Your docs already live in `README.md` and a `docs/` folder, and nobody wants a second place for them.
+- You want AI chat over your content and do not want to build and operate a retrieval pipeline.
+- You need the docs in more than one language, indexed separately per locale, and there is no translation pipeline to inherit.
+- The docs site is the thing that breaks when a Node minor version changes, and there is no one whose week has room for that.
+- You want to manage the docs from Claude Code or Cursor through MCP rather than from a config file.
+
+## What does a Docusaurus stack actually cost to run?
+
+The honest answer is that the invoice is small and the hours are not. "Docusaurus is free" describes the licence, not the deployment. These are the line items to price against your own numbers — we deliberately publish no dollar figures here, because they depend on your host, your traffic and your salaries.
+
+| Line item | Who pays it | How it shows up |
 |---|---|---|
-| Setup | 2–3 days | 5 seconds |
-| Hosting | You manage (Vercel/Netlify/Pages) | Included |
-| AI chat | None (plugin work) | Built-in on every plan, capped by spend budget |
-| AI translation | None | 15 languages, capped by spend budget |
-| MCP server | None | 61 tools, OAuth 2.0 |
-| llms.txt | Manual | Auto for site + each workspace |
-| Cost | Free + your hours | $0 / $59 mo / $159 mo |
-| Source of truth | Git | Your GitHub repo (unchanged) |
-| Vendor lock-in | None | None — files stay in GitHub |
-| Best for | OSS with engineering capacity | Indie, startups, "ship today" |
+| Hosting and CDN | Your host's invoice | Small, predictable, easy to forget |
+| Search | Algolia DocSearch approval queue, or an engineer self-hosting search | Free but gated, or free but yours to run |
+| Major-version migrations | Engineering time | Theming, MDX version and plugin API each broke across Docusaurus 1 → 2 → 3 |
+| Custom theme upkeep | Engineering time | A `swizzle` directory that one person understands |
+| AI chat, if you add one | A third-party subscription plus integration time | Not part of Docusaurus |
+| Translation, if you add it | Engineering time plus a translation service | Not part of Docusaurus |
 
-## When Docusaurus wins
+Price your own version of this table before you decide. The comparison that matters is not "free versus a subscription" — it is "unbilled hours versus a billed service".
 
-Pick Docusaurus when:
+## What does Docsbook cost by comparison?
 
-- You already have a Docusaurus deployment that works and the next migration isn't due
-- You need React component embeds inside docs pages (interactive demos, custom plugins)
-- You have a docs engineer whose job is partly maintaining the site
-- You want zero ongoing vendor relationship and you accept the hosting cost
+Docsbook is pay-as-you-go rather than tiered. Each project carries its own balance, and that balance is spent on AI usage — publishing the site, hosting it, serving a custom domain and every page a reader opens draw nothing from it. Current numbers live on [docsbook.io/pricing](https://docsbook.io/pricing), which is generated from the live pricing constants on every request. A price copied into a blog post goes stale without telling anyone, so this page quotes none.
 
-The React ecosystem, MDX, swizzle theming — these are real strengths. We do not claim Docusaurus is bad.
+## What do you give up by moving?
 
-## When Docsbook wins
+Three things, and they are the three reasons to stay above.
 
-Pick Docsbook when:
+- **Custom React components inside docs pages.** You can still host a demo elsewhere and link to it, but it will not be inline.
+- **Swizzle-level theme overrides.** You get colour tokens, fonts, layout switches, header and footer customisation — not arbitrary component replacement.
+- **The plugin system.** Search, AI, translation and analytics are built in rather than pluggable, which is the trade: less to configure, less to change.
 
-- Your docs already live in `README.md` and a `docs/` folder — and they should stay there
-- You want AI chat trained on your content without building a RAG pipeline
-- You want translations to 15 languages with separate SEO indexing per locale, on day one
-- The cost of an engineer-day exceeds a month of Docsbook Pro ($59)
-- You want to manage docs from Claude Code or Cursor through MCP
+## What do you gain by moving?
 
-## The 2026 cost reality
+- The site publishes from the GitHub repository you already have, with no build step and no CI pipeline.
+- AI chat over your own content from the first day, with no retrieval pipeline to operate.
+- Translations into 15 languages, each indexed separately per locale.
+- An MCP server, so Claude Code and Cursor read and edit the docs configuration directly.
+- `llms.txt` and `llms-full.txt` generated automatically for the site and for each workspace.
+- Analytics that report pageviews, the questions readers asked the assistant, and the searches that returned nothing.
 
-The "Docusaurus is free" line stopped being accurate around the time CI minutes started costing money.
+Source files never leave your repository, so the move is reversible: the thing you would migrate back is already in Git.
 
-A typical Docusaurus stack in 2026:
-
-| Line item | Cost |
-|---|---|
-| Hosting (Vercel/Netlify pro tier) | $20–40/mo |
-| Algolia DocSearch (if approved) or self-host | $0–60/mo |
-| Major version migration every 18 months | 1–2 engineer-weeks |
-| Custom theme maintenance | 2–4 hours/mo |
-| AI chat plugin (if you add one) | $30–100/mo |
-| Translation pipeline (if you build one) | weeks of engineering |
-
-Docsbook PRO is $59/month, includes hosting, AI chat, translations, MCP, analytics. The break-even is usually month one.
-
-## Migration path
-
-If you decide to move:
+## How would the move actually go?
 
 1. Your `docs/` folder is the source. Point Docsbook at `github.com/yourorg/yourrepo`.
-2. Site lives at `docsbook.io/yourorg/yourrepo` in 5 seconds.
-3. Wire your custom domain `docs.yourcompany.com` (Business feature) and redirect old Docusaurus URLs to the same path.
-4. Keep the Docusaurus repo as a fallback. Delete it when traffic confirms parity.
+2. The site appears at `docsbook.io/yourorg/yourrepo`.
+3. Wire your custom domain, `docs.yourcompany.com`, and redirect the old Docusaurus URLs path-for-path.
+4. Keep the Docusaurus repository as a fallback until traffic confirms parity, then delete it.
 
-See [Migrating from Docusaurus to Docsbook](./migrating-from-docusaurus-to-docsbook.md) for the full checklist.
+Step 3 is the one that decides whether the move costs you search traffic. [Migrating from Docusaurus to Docsbook](./migrating-from-docusaurus-to-docsbook.md) has the full redirect checklist.
 
-## What you give up
+[Start free — no credit card](https://docsbook.io/start)
 
-- Custom React component embeds inside docs (you can still link to a hosted demo)
-- Swizzle-level theme overrides (you get color tokens, fonts, layout switches, header/footer customization)
-- Plugin system (most use cases are already built-in: search, AI, translation, analytics)
+## Next steps
 
-## What you gain
-
-- 5-second setup
-- AI chat on your content from day one
-- 15-language translations with separate SEO per locale
-- MCP server: Claude Code can read and edit your docs config
-- `llms.txt` and `llms-full.txt` auto-generated for the platform and each workspace
-- Analytics: pageviews, AI questions, failed searches, top countries
-- $59/mo instead of $200+/mo in hosting + engineering
-
-## Related reading
-
-- [Docusaurus vs Docsbook](./docusaurus-vs-docsbook.md) — broader comparison covering 8 other alternatives
-- [Migrating from Docusaurus to Docsbook](./migrating-from-docusaurus-to-docsbook.md) — step-by-step
-- [Docs as code vs managed platform](./docs-as-code-vs-managed-platform.md) — the philosophical version of this comparison
-
----
-
-Try Docsbook on your repo: paste `github.com/yourorg/yourrepo` at [docsbook.io](https://docsbook.io). If it doesn't beat your current Docusaurus deploy in five minutes, you don't owe us anything.
+- [Docusaurus alternatives in 2026: 9 platforms compared](./docusaurus-vs-docsbook.md) — the full field, if Docsbook is not the only candidate
+- [Migrating from Docusaurus to Docsbook](./migrating-from-docusaurus-to-docsbook.md) — the step-by-step move with redirects
+- [Docs as code vs managed platform](./docs-as-code-vs-managed-platform.md) — the same decision stated as a principle rather than a bill

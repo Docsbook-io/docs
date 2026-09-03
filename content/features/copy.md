@@ -1,59 +1,58 @@
 ---
-title: "Copy Page & Markdown Buttons"
-description: "Let readers copy a full page as markdown or copy code blocks with one click — perfect for pasting context into ChatGPT, Claude, or other AI assistants."
+title: "Let readers copy your docs page as markdown or code"
+description: "Add a Copy page button, per-code-block copy icons, and one-click hand-off of the page into ChatGPT, Claude, Cursor, Windsurf or VS Code MCP."
 ---
 
-# Copy Options
+# Copy page and copy markdown buttons
 
-Give readers easy ways to copy your documentation content.
+The Docsbook copy controls hand a reader the raw markdown of the page they are reading, either as a whole page or one code block at a time. A reader who copies a page into an AI assistant gets your exact wording instead of the assistant's summary of it.
 
-## Settings
+## What each setting does
 
 | Setting | What it does |
 |---|---|
-| Copy page button | Adds a "Copy page" button — copies the full page as markdown |
-| Copy markdown | Shows a markdown copy option on code blocks |
-| Copy page menu items | Seven independent toggles — Copy Skills.md URL, View as Markdown, and one per AI client (ChatGPT, Claude, Cursor, Windsurf, VS Code MCP) — for what appears in the Copy page dropdown |
+| Copy page button | Adds a **Copy page** button that copies the whole page as markdown |
+| Copy markdown | Adds a copy icon to every code block |
+| Copy page menu items | Seven independent toggles for what appears in the Copy page dropdown |
 
-## How to Enable
+## Turn on the copy controls
 
-1. Open your docs site.
-2. Float Widget → **Design** → **Content** tab.
-3. Toggle the desired copy options.
-4. Save.
+1. Open your docs site while signed in.
+2. Open Float Widget → **Design** → **Content** tab.
+3. Turn on the copy options you want.
+4. Click **Save**.
 
----
+## What the Copy page button copies
 
-## Copy Page Button
+The Copy page button sits in the action row above the page content. Clicking it puts the entire page on the clipboard as raw markdown — headings, tables and code included, with no site chrome.
 
-Adds a button (usually near the top of the page) that copies the entire page content as raw markdown.
+Readers use it to paste a page into an AI prompt, to lift a procedure into an internal runbook, or to quote your docs while writing their own.
 
-**Use cases:**
-- Readers who want to paste page content into an AI prompt (e.g., ChatGPT, Claude) for further analysis.
-- Teams that want to quickly copy documentation into internal tools.
-- Technical writers who reference your docs while writing their own.
+## What is in the Copy page dropdown
 
----
+The Copy page button expands into a dropdown with seven items: Copy page, Copy Skills.md URL, View as Markdown, and one-click links that open the current page in **ChatGPT**, **Claude**, **Cursor**, **Windsurf**, or **Connect via VS Code MCP**.
 
-## Copy Page Menu
+Each of the seven has its own toggle, so you can keep the plain copy actions and drop a single AI client, or keep only the base Copy page button and turn everything else off. Once every item is off, the dropdown's chevron disappears, because there is nothing left to open.
 
-The "Copy page" button expands into a dropdown with more options: Copy page, Copy Skills.md URL, View as Markdown, and — by default — a set of one-click links that open the page directly in an AI client: **ChatGPT**, **Claude**, **Cursor**, **Windsurf**, and **Connect via VS Code MCP**.
+All seven are on by default. Toggle them in Float Widget → **Design** → **Content** tab, on the **Copy page menu** card.
 
-Each of those seven items has its own toggle, so you can keep exactly the ones you want and hide the rest — e.g. keep the plain copy actions but drop just Windsurf, or keep only the base "Copy page" button and turn everything else off. The dropdown's chevron hides itself automatically once every item is off, since there'd be nothing left to open.
+## Copy icons on code blocks
 
-**All enabled by default.** Toggle them individually in Float Widget → **Design** → **Content** tab, on the "Copy page menu" card.
+With **Copy markdown** on, every fenced code block shows a small copy icon that copies the raw code without the surrounding prose.
 
----
+Each click is recorded as an event, so [Events analytics](../../analytics/tracking/events.md) shows which of your examples readers actually take away.
 
-## Copy Markdown on Code Blocks
+## Next steps
 
-When enabled, every code block shows a small "copy" icon. Clicking it copies the raw code.
+- [Content options](../setup/content-options.md) — the rest of the toggles on the same Design tab.
+- [Content widgets](./widgets.md) — turn a region of markdown into cards, steps or an API playground.
 
-This is a standard developer experience feature. Most developers expect it — enabling it removes friction from your most technical readers.
+<!-- widget:cta -->
 
-**Tip:** This is tracked as an event in [Events Analytics](../../analytics/tracking/events), so you can see which code examples are copied most often.
+## Make your pages worth copying
 
----
+Every new project starts with $1 of balance, and the copy controls do not spend it.
 
-> **Make your documentation worth copying.**
-> [Connect your GitHub repo →](https://docsbook.io/connect)
+[Create a project](https://docsbook.io/start)
+
+<!-- /widget -->

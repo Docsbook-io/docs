@@ -1,9 +1,9 @@
 ---
-title: "AI Chat for Documentation: Build vs Buy (2026)"
-description: "The actual cost of building RAG-based AI chat for your docs vs buying a managed solution. Engineering weeks, vector storage, model costs, ongoing maintenance — and where each option breaks."
+title: "AI chat for documentation: should you build or buy?"
+description: "The real cost of building retrieval-based AI chat for your docs versus buying it — engineering weeks, model spend, and where each option breaks."
 ---
 
-# AI Chat for Documentation: Build vs Buy
+# AI chat for documentation: should you build or buy?
 
 You decided your docs need AI chat. The next decision matters more than people expect — it determines 3–6 weeks of engineering and the next 18 months of model-cost optimization.
 
@@ -13,11 +13,11 @@ This is the honest cost breakdown in 2026.
 
 | | Build it | Buy it |
 |---|---|---|
-| Initial cost | 3–6 engineer weeks ($30k–60k) | $0–150 setup |
-| Monthly cost | $200–800 (infra + models) | $59–250 |
-| Time to live | 1–2 months | Hours |
+| Initial cost | 3–6 engineer weeks of build | Setup time, measured in hours |
+| Monthly cost | Vector store, embeddings, model calls, and the person who owns it | A subscription or metered usage, depending on the vendor |
+| Time to live | Weeks to months | Hours |
 | Customization | Full | Hooks, system prompt, provider |
-| Maintenance | 2–4 hours/week | 0 |
+| Maintenance | Continuous — retrieval quality decays as docs change | The vendor's problem |
 | Best for | Specific RAG needs, non-docs use cases | Documentation specifically |
 
 For documentation specifically, buy it. Build it only if your AI chat needs extend beyond docs — knowledge base + product help + support deflection across multiple surfaces.
@@ -117,7 +117,7 @@ Bring your docs URL, get a chat widget. Examples: kapa.ai, intercom Fin, custom 
 
 Docsbook, Mintlify, GitBook ship AI chat as a feature. The chat is trained on your content and integrated into the docs UI.
 
-- **Cost**: $59–250/month
+- **Cost**: a subscription on Mintlify and GitBook, metered AI usage on Docsbook — read each vendor's own pricing page
 - **Pros**: one platform, one bill, native integration, one analytics view
 - **Cons**: your choice of provider is the platform's choice
 
@@ -138,16 +138,16 @@ Build only when one or more of these apply:
 3. **Custom retrieval logic** — your content has structure (graph, hierarchy) that off-the-shelf retrieval cannot exploit
 4. **Already-existing platform** — you have a customer-facing AI surface that needs to extend to docs
 
-For just-docs use cases, buy.
+If documentation is the only surface, buy.
 
 ## What you can customize on Docsbook AI chat
 
 Docsbook gives you more control than most managed options:
 
 - **Provider** — OpenAI, Anthropic, Gemini, OpenRouter. Bring your own API key, pick your model.
-- **System prompt** — full text replacement (PRO+ feature)
-- **Pre/post hooks** — intercept queries before LLM call, post-process answers (PRO+ feature)
-- **Usage** — monthly AI budget per plan; usage pauses until the next cycle if you use it up, never billed above your plan price
+- **System prompt** — full text replacement
+- **Pre/post hooks** — intercept a query before the model call, post-process the answer
+- **Usage** — metered in dollars against the project's balance; when the balance runs out the assistant stops answering rather than billing further
 
 If you outgrow these knobs, the "build it" math changes — but most teams do not.
 
@@ -155,11 +155,11 @@ If you outgrow these knobs, the "build it" math changes — but most teams do no
 
 Three questions, in order:
 
-1. **Are docs the only AI surface you need?** Yes → buy. No → consider build.
-2. **Is $59–159/month material to you?** Yes → buy PRO monthly at $59. No → buy Business monthly at $159.
-3. **Will you maintain the pipeline yourself for 18+ months?** No → buy. Yes and the answers to 1–2 are also yes → build is viable.
+1. **Are docs the only AI surface you need?** Yes → buy. No → consider building, because the pipeline is then shared across several surfaces.
+2. **Do you have someone who will own retrieval quality for the next eighteen months?** No → buy. The pipeline is not the hard part; keeping its answers good as the docs change is.
+3. **Is the subscription cost material against an engineer's time?** Compare a month of the platform against a day of the person who would otherwise maintain it, using your own numbers.
 
-For Docsbook customers we have onboarded, the buy decision is correct ~95% of the time. The 5% who should build are usually building broader AI products and docs is just one surface.
+Buying is the right answer for most teams for one structural reason: docs AI is a maintenance commitment, not a build. The teams that should build are the ones building a broader AI product where documentation is one surface among several.
 
 ## Related reading
 
@@ -169,4 +169,6 @@ For Docsbook customers we have onboarded, the buy decision is correct ~95% of th
 
 ---
 
-Docsbook AI chat: bring your own provider, custom system prompt on PRO+, hooks on PRO+. $59/month for PRO. [See it on your docs →](https://docsbook.io/start)
+Docsbook AI chat: bring your own provider, set your own system prompt, and hook the request before and after the model call. Cost is metered in dollars against the project's balance rather than sold as a tier — current numbers on [docsbook.io/pricing](https://docsbook.io/pricing).
+
+[Start free — no credit card](https://docsbook.io/start)

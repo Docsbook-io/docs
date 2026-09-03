@@ -1,17 +1,17 @@
 ---
-title: "Visitor Countries Report"
-description: "See the top 30 countries your documentation readers come from and what language they use — make informed decisions about which translations to enable."
+title: "Find the countries you attract but do not translate for"
+description: "The countries report pairs each country your documentation readers come from with the share of them who actually landed on a page in a translated language."
 ---
 
 # Countries & Language Analytics
 
-See where your readers are in the world and which language they read your docs in.
+The countries report of your Docsbook documentation site names where your readers are and which language they read in. Its point is the pairing: a country that sends you readers and gets none of them onto a translated page is a market you already attract and lose at the language barrier. Reading it costs nothing against your project's balance.
 
 ---
 
 ## Countries
 
-Shows the top 30 countries by visit count, with each country's share of total traffic — and, beside
+The Countries list shows the top 30 countries by visit count, with each country's share of total traffic — and, beside
 each, the share of that country's readers who landed on a page in a translated language, coloured
 green, amber or red by the same rule the map uses.
 
@@ -24,7 +24,7 @@ green, amber or red by the same rule the map uses.
 
 ---
 
-## Countries Breakdown
+## Countries breakdown
 
 Full table view: country name, flag, visit count, and percentage of total visitors.
 
@@ -38,9 +38,9 @@ The breakdown covers up to 30 countries. Countries below the threshold are group
 
 ---
 
-## Reader Map
+## Which regions arrive that you are not translating for?
 
-Country counts and language counts each answer half a question. The map is the half that only
+Country counts and language counts each answer half a question. The reader map is the half that only
 exists in both together: for every country your readers came from, how many of them actually
 landed on a page in a translated language.
 
@@ -69,19 +69,19 @@ on the map.
 
 Two things the map will not say. Your own language is never reported as a missing translation: if
 your docs are in English then American readers count as served, and a workspace whose docs are
-written in German gets the mirror image. And where the per-country language breakdown is not
-available to your plan, markers read as unmeasured grey rather than red, so a missing measurement
+written in German gets the mirror image. And where the per-country language breakdown could not be
+measured for the window, markers read as unmeasured grey rather than red, so a missing measurement
 can never look like a missing translation.
 
 > Colour needs at least one translation language enabled to say anything useful.
-> [Set up translations →](https://docsbook.io/docs/translation/settings)
+> See [translation settings](../../translation/settings.md).
 
 
 ---
 
 ## Languages
 
-Traffic split by translation language — how many visitors read each language version of your docs.
+The Languages list splits traffic by translation language — how many visitors read each language version of your docs.
 
 | Column | What it shows |
 |---|---|
@@ -95,13 +95,14 @@ This shows only non-English traffic (the default language is not tracked as a se
 
 ---
 
-## One Language at a Time
+## One language at a time
 
 Every section above covers all countries and all languages at once. To judge a single language — how much of its own audience it actually reaches, and what it has cost — open **Translations** and pick that language from the sidebar.
 
-[What a language's page shows →](https://docsbook.io/docs/translation/settings)
+[What a language's page shows](../../translation/settings.md#one-language-at-a-time)
 
----
+## Related
 
-> **Understand your global audience.**
-> [Connect your GitHub repo →](https://docsbook.io/connect)
+- [Translation settings](../../translation/settings.md) — enabling a language for a region this report flags red
+- [How AI translations work](../../translation/ai-translations.md) — what a translation run does and what it leaves alone
+- [Analytics overview](../tracking/overview.md) — the Countries and Languages tabs inside the main panel

@@ -1,9 +1,9 @@
 ---
-title: "Multi-Language Documentation SEO: hreflang, URLs, and AI Translation in 2026"
-description: "How to make multi-language documentation rank in Google and AI search per locale — separate URLs, hreflang, when AI translation is good enough, and what breaks if you skip steps."
+title: "Multi-language documentation SEO: hreflang and URLs"
+description: "How translated documentation earns traffic per locale — separate URLs, hreflang, when machine translation is good enough, and what breaks if you skip steps."
 ---
 
-# Multi-Language Documentation SEO
+# Multi-language documentation SEO: hreflang and URLs
 
 Most product docs in 2026 are English-only. The teams that translate properly capture organic traffic the English-only sites never see — searches in Japanese, Spanish, German, Mandarin for the same buying intent.
 
@@ -36,7 +36,7 @@ docs.yourcompany.com/ja/quick-start
 docs.yourcompany.com/es/quick-start
 ```
 
-Without separate URLs, Google indexes only one version. You lose 90% of the multi-language SEO upside.
+Without separate URLs there is nothing for a search engine to index per language: one URL holds one document in its index, so whichever language it saw is the only one that can rank. Every other locale is invisible to search in its own language, no matter how good the translation is.
 
 ## hreflang setup
 
@@ -66,11 +66,11 @@ Three factors:
 | Code samples | N/A | Keep original |
 | Error messages | High when terminology is consistent | Use AI |
 
-The improvement from 2023 → 2026 in LLM translation quality has been dramatic for technical content. For docs specifically, AI now matches or beats human translation on:
+LLM translation quality for technical content improved sharply between 2023 and 2026. For documentation specifically, machine translation has structural advantages over a human process rather than merely a price advantage:
 
-- Terminology consistency (humans drift, models do not)
-- Speed (15 languages in minutes)
-- Cost ($0.001 per page vs $0.10 per word with humans)
+- **Terminology consistency.** A model applies the same term to the same concept across a thousand pages; a rotating pool of human translators drifts, and the drift is invisible until a reader files a bug about it.
+- **Speed.** Fifteen languages in minutes rather than a quote-and-schedule cycle per language.
+- **Revision cost.** The real expense of human translation is not the first pass but every subsequent one: change a paragraph and you pay per word again, in every language. Machine translation recomputes the changed page. That is why translated docs go stale under a human pipeline and stay current under a machine one.
 
 What humans still beat:
 
@@ -112,7 +112,7 @@ Google Gemini uses Google's underlying index. The same hreflang and locale signa
 Three steps to enable a language:
 
 1. Dashboard → Settings → Languages → select language → enable
-2. AI translates the entire docs to that language (PRO: 50/month, PRO+: 500/month)
+2. AI translates the whole doc set into that language; the translation run is metered in dollars against the project's balance
 3. Page appears at `/{language-code}/{path}` with hreflang and `lang` set correctly
 
 15 languages supported: EN, ES, FR, DE, PT, IT, RU, ZH, JA, KO, AR, HI, TR, PL, NL.
@@ -143,19 +143,19 @@ Translating 200 pages to 14 additional languages:
 
 | | DIY human translation | Docsbook AI translation |
 |---|---|---|
-| Cost | $20,000–80,000 | Included in plan |
-| Time | 2–6 months | Hours |
-| Update cost | $0.10–0.30 per word | Free recompute when source changes |
-| SEO indexing | Manual hreflang setup | Automatic |
+| Cost | Per-word, quoted per language, paid again on every revision | Metered per translation run against the project balance |
+| Time | Months | Hours |
+| Update cost | Charged again per word whenever the source page changes | Recomputed when the source changes |
+| SEO indexing | Manual hreflang setup | Automatic per locale |
+| Best for | Legal, regulated and marketing copy where a human must sign off | Reference and how-to content that changes often |
 
-The Docsbook PRO+ plan ($59/mo) includes 500 translations/month — enough to keep 200 pages in 14 languages refreshed continuously.
+Machine translation is not strictly better. It is better at the thing that kills most translation projects, which is not the first pass but the twentieth revision.
 
-## Related reading
+[Start free — no credit card](https://docsbook.io/start)
 
-- [Documentation SEO guide](./documentation-seo-guide.md)
-- [AI search and documentation](./ai-search-documentation.md)
-- [How to get docs cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md)
+## Next steps
 
----
-
-Translate your docs to 15 languages with separate SEO per locale: [start here](https://docsbook.io/start). Each language indexed in its own market.
+- [Documentation SEO guide](./documentation-seo-guide.md) — the single-locale foundation this page extends
+- [AI search for documentation](./ai-search-documentation.md) — on-site search across locales
+- [How to get your documentation cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — assistants ask in many languages too
+- [JSON-LD for documentation](./json-ld-for-documentation.md) — the structured data that goes on each translated page

@@ -1,17 +1,17 @@
 ---
-title: "AI Search for Documentation Explained"
-description: "Why keyword search fails in docs and how AI-powered semantic search understands developer intent — the shift from string matching to question answering."
+title: "AI search for documentation: why keyword search fails"
+description: "Why keyword search returns nothing for the questions readers actually type, how semantic search fixes it, and what to measure before and after."
 ---
 
-# AI Search in Documentation: Why Keyword Search Is Dead
+# AI search for documentation: why keyword search fails
 
-## The Problem with Traditional Search
+## Why does keyword search fail in documentation?
 
 You've seen it a hundred times. A user types "how do I reset my password" into a documentation search bar and gets zero results — because the actual page is titled "Account Recovery Options."
 
 Traditional keyword search matches strings. It doesn't understand meaning. And in 2025, that's no longer acceptable.
 
-## How Developers Actually Search
+## How do developers actually phrase a search?
 
 Developers don't search with precise keywords. They search with intent:
 
@@ -22,7 +22,7 @@ Developers don't search with precise keywords. They search with intent:
 
 None of these match a page title exactly. Keyword search fails all of them. AI search understands all of them.
 
-## What AI Search Actually Does
+## What does AI search actually do differently?
 
 Modern AI search (also called semantic search or vector search) works differently:
 
@@ -32,21 +32,23 @@ Modern AI search (also called semantic search or vector search) works differentl
 
 The result: users find answers on the first try, even when they don't know the exact terminology.
 
-## The Business Impact
+## What changes for the business when search works?
 
-### Fewer Support Tickets
+### Fewer support tickets
 
-When users find answers in documentation, they don't open support tickets. Teams that upgrade from keyword to AI search report **35–50% reduction** in "I couldn't find it in the docs" tickets.
+A reader who finds the answer on the page does not open a ticket. That is the whole mechanism, and it is worth stating as a mechanism rather than a percentage: semantic search matches the reader's phrasing against the meaning of your pages, so the question that used to return nothing now returns the page that answers it.
 
-### Higher Feature Adoption
+Measure it on your own product rather than trusting an industry average. Tag support tickets for one month with "the answer already exists in our docs" and watch that count after the switch — that number is yours and it is real, where a benchmark percentage from someone else's product is neither.
+
+### Higher feature adoption
 
 Features don't get used if users can't find how to use them. AI search surfaces relevant documentation proactively — users discover features they didn't know existed.
 
-### Better Onboarding
+### Better onboarding
 
 New users navigating unfamiliar products ask vague questions. AI search handles vague well. "Where do I start" becomes a valid search query.
 
-## AI Search and LLM Discoverability
+## How does on-site search relate to AI discoverability?
 
 Here's something most documentation platforms miss: AI search isn't just for humans anymore.
 
@@ -60,7 +62,7 @@ Docsbook optimizes for this automatically:
 - Exposes a documentation API for programmatic access
 - Ensures fast load times for crawler efficiency
 
-## Implementing AI Search: Build vs Buy
+## Should you build AI search or buy it?
 
 Building semantic search from scratch requires:
 - A vector database (Pinecone, Weaviate, or pgvector)
@@ -74,10 +76,17 @@ That's a 3–6 week engineering project, minimum.
 
 Docsbook ships AI search out of the box. Zero configuration. Works on day one.
 
-## Conclusion
+## The bottom line
 
-Keyword search was fine in 2015. In 2025, developers expect to ask questions in plain language and get answers — not results. AI search is now table stakes for developer documentation.
+Keyword search matches strings; readers ask questions. Semantic search closes that gap by matching meaning, which is why a query phrased in the reader's words can reach a page written in yours. It is no longer a differentiator between documentation platforms — it is the baseline, and the thing worth comparing is what each platform reports back to you about the searches that still fail.
 
----
+Docsbook includes semantic search and reports the queries that returned nothing, so the gaps arrive as a list of pages to write.
 
-**Docsbook includes AI-powered search on every plan. [See it in action →](https://docsbook.io/start?utm_source=blog&utm_medium=cta&utm_campaign=ai_search_documentation)**
+[Start free — no credit card](https://docsbook.io/start)
+
+## Next steps
+
+- [Documentation analytics: the metrics worth tracking](./documentation-analytics-what-to-track.md) — what to do with the failed searches this surfaces
+- [Documentation SEO guide](./documentation-seo-guide.md) — the off-site half of the same findability problem
+- [How to get your documentation cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — when the search happens inside an assistant instead
+- [AI chat for documentation: should you build or buy?](./ai-chat-for-documentation-build-vs-buy.md) — the cost side of the build-vs-buy question above

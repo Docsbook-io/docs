@@ -1,353 +1,147 @@
 ---
-title: "How to Enable AI Translations"
-description: "Step-by-step guide to enable AI-powered translations in Docsbook — pick target languages, let Claude translate, and serve indexed pages per locale."
+title: "Translate your Docsbook documentation into 15 languages"
+description: "Pick target languages, let Docsbook translate every page, serve each language on its own indexed path, and keep the cost of a re-translation predictable."
 ---
 
-# How to Translate Your Documentation
+# Translate your documentation
 
-Automatically translate your documentation to any language.
+Docsbook translates your documentation with an AI model and serves each language on its own path, indexed separately by search engines. You pick the languages; every published page is translated and re-translated as you edit.
 
-**Required:** Pro (monthly, 7-day free trial) or Business (monthly, 14-day free trial)
+Translation is the capability that spends money fastest, because every page in every enabled language is a model call. Read [what translation costs](#what-translation-costs) before you enable a second language.
 
-## What Is Automatic Translation?
+## The 15 supported languages
 
-Docsbook can translate all your documentation to other languages **automatically**.
+Docsbook translates into 15 languages:
 
-Select the target languages — AI does the rest.
+| Language | Code | Language | Code | Language | Code |
+|---|---|---|---|---|---|
+| English | `en` | Italian | `it` | Arabic | `ar` |
+| Spanish | `es` | Russian | `ru` | Hindi | `hi` |
+| French | `fr` | Chinese | `zh` | Turkish | `tr` |
+| German | `de` | Japanese | `ja` | Polish | `pl` |
+| Portuguese | `pt` | Korean | `ko` | Dutch | `nl` |
 
-**Example:**
+If you need a language that is not on this list, write to [support@docsbook.io](mailto:support@docsbook.io).
 
-```
-Original documentation in English
-                ↓
-Select: Spanish, French, German
-                ↓
-All pages translated automatically
-                ↓
-Visitors see a language selection menu
-```
+## Enable a language
 
-## Supported Languages
+1. Open your documentation while signed in.
+2. Click the Float Widget → **Settings**.
+3. Open **Translation Languages**.
+4. Tick the languages you want.
+5. Click **Save**.
 
-Docsbook supports **15 languages** for automatic AI translation:
+Docsbook queues every published page for every language you ticked and starts translating. The language row shows a progress counter while a run is going, and marks the language **Stopped** with a reason if a run ended early.
 
-- English (EN)
-- Español / Spanish (ES)
-- Français / French (FR)
-- Deutsch / German (DE)
-- Português / Portuguese (PT)
-- Italiano / Italian (IT)
-- Русский / Russian (RU)
-- 中文 / Chinese (ZH)
-- 日本語 / Japanese (JA)
-- 한국어 / Korean (KO)
-- العربية / Arabic (AR)
-- हिन्दी / Hindi (HI)
-- Türkçe / Turkish (TR)
-- Polski / Polish (PL)
-- Nederlands / Dutch (NL)
+A large run is processed in chunks and resumes on its own until it finishes, so you do not need to watch it.
 
-## Enabling Translations
+## What translation costs
 
-### Step 1: Check Your Plan
+Translating a page calls an AI model, and every model call is charged against that project's balance. A new project starts with **$1.00** of balance.
 
-Translation is available on Pro and Business.
+The arithmetic that matters before you tick a box: **one enabled language multiplies your page count by one.** A 40-page site with three languages enabled is 120 translated pages on the first run, and every subsequent edit re-translates that page in all three.
 
-1. Open settings (Float Widget)
-2. Check status — should show "Pro" or "Business"
-3. If Free — [upgrade](./premium.md)
+Two controls keep this predictable:
 
-### Step 2: Open Translation Settings
+- **A per-source ceiling.** In **Settings** → **Usage**, set a per-cycle ceiling on **AI Translations** specifically. When translations reach it they stop and everything else — reader answers, the editor — keeps running. See [How Docsbook charges for AI usage](../../content/setup/pricing-spec.md).
+- **Manual mode.** On **Manual** or **External webhook** mode nothing re-translates by itself, so a burst of edits does not trigger a burst of spend.
 
-1. Click Float Widget → Settings
-2. Find **Translation Languages**
+Reading a translated page costs nothing. Only producing one does.
 
-### Step 3: Select Languages
+## Choose when translations update
 
-```
-☑ English (default)
-☐ Español
-☐ Français
-☐ Deutsch
-☐ Italiano
-☐ Português
-☐ Русский
-☐ 日本語
-... and more
+| Mode | What triggers a translation |
+|---|---|
+| **Auto** | A push that changes a documented page re-queues that page in every enabled language |
+| **Manual** | Nothing starts by itself; you re-run translation from the Translation tab |
+| **External webhook** | Nothing starts by itself; your own system decides when |
+
+On **Auto**, Docsbook checks your repository for new commits roughly every 15 minutes, so a catch-up starts within about that window rather than the instant you push. Pages that have fallen behind are translated before pages that were never translated at all.
+
+On any mode you can ask your AI agent to re-translate a specific page, or re-run a language from the Translation tab.
+
+## What readers see
+
+A language selector appears in your site header. Translated pages live under a language prefix:
+
+```text
+docs.example.com/page        English
+docs.example.com/es/page     Spanish
+docs.example.com/fr/page     French
+docs.example.com/de/page     German
 ```
 
-1. Check the languages you need
-2. Click Save
-3. Docsbook starts translating
+Without a custom domain the same structure sits under your project path:
 
-### Step 4: Wait
-
-Translation takes:
-- **Small documentation (< 10 pages):** 1-2 minutes
-- **Medium (10-50 pages):** 5-10 minutes
-- **Large (> 50 pages):** 15-30 minutes
-
-When done, translated versions appear on the site.
-
-## How Is Translation Used?
-
-### Language Selection Menu
-
-Your site will have a language selector:
-
-```
-[EN ▼]  ← click to select another language
+```text
+docsbook.io/user/repo            English
+docsbook.io/user/repo/es         Spanish
+docsbook.io/user/repo/de/guides  German subpage
 ```
 
-Clicking opens the list:
+## What gets translated and what does not
 
-```
-▼ English
-  Español
-  Français
-  Deutsch
-  Italiano
-```
+| Translated | Left as written |
+|---|---|
+| Body text and headings | Code blocks |
+| Image alt text | Inline code |
+| Tables | URLs and link targets |
+| Sidebar navigation | |
 
-### URLs of Translated Pages
+## How the translations are indexed
 
-Translated pages are available at different paths:
+Each language is a separate set of pages with its own URLs, and Docsbook emits `hreflang` tags linking them to each other. Search engines index each language independently, so a reader searching in Spanish can land on your Spanish page rather than on an English one they will bounce from.
 
-```
-English:  docs.example.com/page
-Spanish:  docs.example.com/es/page
-French:   docs.example.com/fr/page
-German:   docs.example.com/de/page
-```
+## Review and override a translation
 
-### What Gets Translated?
+The AI translation is a starting point, not a final draft. Idioms, product-specific jargon and cultural references are where it is weakest.
 
-- ✅ All text content
-- ✅ Headings
-- ✅ Image descriptions
-- ✅ Tables
-- ✅ Navigation (sidebar)
-- ❌ Code blocks (stays as is)
-- ❌ URLs and links (stay as is)
-- ❌ Inline code (stays as is)
+To override a page:
 
-## Translation Quality
+1. Open the **Translation** tab.
+2. Download the translation for the language you want to correct.
+3. Edit the markdown.
+4. Upload it back.
 
-### How Does It Work?
+Docsbook serves your version from then on and does not overwrite it on the next automatic pass.
 
-Uses artificial intelligence (Claude from Anthropic) for translation.
+## Write source pages that translate well
 
-**Quality:** Good for technical documentation
+The quality of a translation is set by the source text. Four habits do most of the work:
 
-**What translates well:**
-- Instructions and guides
-- Technical explanations
-- Lists and tables
-- Simple language
+**Write plain sentences.** "To install the package, run the command" translates cleanly. "Pip this bad boy and you're golden" does not.
 
-**What may need editing:**
-- Idioms and expressions
-- Cultural references
-- Specific slang
+**Avoid idioms.** "The setup takes three steps" survives translation; "it's a piece of cake" arrives as a dessert.
 
-### Example Translation
+**Use structure.** Short paragraphs, clear headings, lists and tables give the model unambiguous units to work with.
 
-```
-Original English:
-"Getting started is straightforward. Enter your URL to finish setup."
-
-Translated Spanish:
-"Comenzar es sencillo. Ingresa tu URL para completar la configuración."
-```
-
-## Updating Translations
-
-### When Does Translation Update?
-
-Enabling a language translates your whole site once. After that, on the **Auto** translation mode Docsbook follows your repository: a push that changes a documented page puts that page back in the queue for every enabled language, with the pages that fell behind translated before the ones never translated at all. Docsbook checks for new commits about every 15 minutes, so a catch-up starts within roughly that window rather than the instant you push.
-
-On **Manual** and **External webhook** nothing starts by itself. There, and any time you want a page redone sooner, ask your AI agent to re-translate the page or re-run translation from the Translation tab.
-
-A large re-run is processed in chunks and resumes on its own until it finishes, so you do not need to keep an eye on it. The language row shows a progress counter while it runs, and marks the language **Stopped** with a reason if a run ended early.
-
-### How to Update Manually?
-
-If you want to override automatic translation:
-
-1. Download translations
-2. Edit the files
-3. Upload back
-4. Docsbook uses your version
-
-(Contact support@docsbook.io for help)
-
-## SEO & Translations
-
-### Search Engines
-
-Each language:
-- Fully indexed by Google
-- Separate pages in search
-- Automatically adds hreflang tags
-
-**Result:** Spanish speakers find your documentation in Spanish in Google.
-
-### Traffic to Other Languages
-
-Adding translations can:
-- 📈 Increase visits
-- 🌍 Expand audience
-- 🔍 Improve SEO ranking
-
-## Best Practices for Translation
-
-### 1. Write Clearly
-
-```
-✅ Good (easy to translate):
-"To install the package, run the command."
-
-❌ Bad (hard to translate):
-"Pip this bad boy and you're golden."
-```
-
-Plain English translates better.
-
-### 2. Avoid Idioms
-
-```
-✅ Good:
-"The setup process takes three steps."
-
-❌ Bad:
-"It's a piece of cake to set up."
-```
-
-Idioms often get lost in translation.
-
-### 3. Use Structure
-
-```
-✅ Good structure translates better:
-- Short paragraphs
-- Clear headings
-- Lists and tables
-```
-
-### 4. Keep Code Comments in English
+**Keep code and code comments in English.** A translated docstring desynchronises from the code it documents.
 
 ```python
-# Good — keep English
+# Keep comments in English
 def setup():
     """Configure the system."""
     pass
-
-# Bad — mixing languages
-def setup():
-    """Configurar el sistema."""
-    pass
 ```
 
-### 5. Use ISO Date Format
+**Write dates in ISO format** — `2026-03-25`, not `25/03/2026`, which means two different days depending on the reader.
 
-```
-✅ ISO format: 2024-03-25
-❌ Local: 25/03/2024
-```
+## Manage the language list
 
-ISO format is consistent everywhere.
+**Add a language:** open **Settings** → **Translation Languages**, tick it, and save. Docsbook translates the current pages into it.
 
-## Managing Translations
+**Remove a language:** untick it and save. Those pages stop being served and readers on those URLs are redirected to the default language. Nothing is deleted — the translations are kept, so turning the language back on is immediate and does not pay again for pages that have not changed.
 
-### Add a New Language
+**Change the default language:** pick from **Default Language** in the same panel. Visitors see that language first.
 
-1. Open Settings
-2. Click "Add language"
-3. Select language
-4. Save
+## See which languages readers actually use
 
-Docsbook translates current pages to the new language.
+Open Float Widget → **Analytics**. Views, visitors and top pages are reported per path, and each language sits under its own prefix (`/es`, `/fr`, `/de`), so the language breakdown falls out of the page report.
 
-### Remove a Language
+A language with translated pages and no traffic after a month is a language to untick — the pages stay stored, and you stop paying to re-translate them on every edit.
 
-1. Open Settings
-2. Click ✕ next to the language
-3. Save
+## Next steps
 
-Pages in that language stop being served — visitors on those URLs are redirected to the default language. Nothing is deleted: the translations are kept, so turning the language back on is instant and does not pay again for pages that have not changed.
-
-### Change Default Language
-
-Default is English. To change it:
-
-1. Open Settings
-2. Select from **Default Language**
-3. Save
-
-Visitors see this language first.
-
-## URL Examples
-
-### Structure of Translated Sites
-
-**Without custom domain:**
-```
-docsbook.io/user/repo              — English
-docsbook.io/user/repo/es           — Spanish
-docsbook.io/user/repo/fr           — French
-docsbook.io/user/repo/de/guides    — German (subpage)
-```
-
-**With custom domain:**
-```
-docs.example.com                    — English
-docs.example.com/es                 — Spanish
-docs.example.com/fr                 — French
-docs.example.com/de/api/overview    — German (subpage)
-```
-
-## Analytics by Language
-
-### Which Language Is Most Popular?
-
-(Will be built-in soon)
-
-For now you can track via Google Analytics:
-
-1. Add GA code to the site
-2. Filter by URL (`/es`, `/fr`, `/de`)
-3. See traffic by language
-
-Contact support@docsbook.io for help.
-
-## Translation FAQ
-
-**Q: Can AI translation be wrong?**
-
-A: Yes, sometimes. Especially with technical terms or specific content. You can edit translations manually.
-
-**Q: How long does translation take?**
-
-A: 1 to 30 minutes depending on volume.
-
-**Q: Can I edit translations manually?**
-
-A: Yes, download translations, edit, upload back.
-
-**Q: What if I need a rare language?**
-
-A: Docsbook supports 15 languages today. If you need another one, contact support@docsbook.io.
-
-**Q: Is translation free?**
-
-A: Translations are included in Pro and Business, with a higher monthly limit on Business. No extra per-translation charges below those limits.
-
-**Q: Will translation update when I update docs?**
-
-A: On the **Auto** mode, yes. Docsbook checks your repository roughly every 15 minutes and re-translates the pages a commit changed, for every language you have enabled, within your usual budget and provider limits. On **Manual** and **External webhook** it does not — there, ask your AI agent to re-translate a page, or re-run translation from the Translation tab. Each language's page shows what is running, who or what started it, and how much of that language is currently in step with your docs.
-
-## What's Next?
-
-- [Custom Domain](./custom-domain.md)
-- [Pro and Business plans](./premium.md)
-- [Managing Documentation](../getting-started/managing-docs.md)
+- [How Docsbook charges for AI usage](../../content/setup/pricing-spec.md) — set the per-source ceiling before a large run.
+- [Set up a custom domain](./custom-domain.md) — every language is served under the same domain.
+- [Web analytics](../../analytics/tracking/overview.md) — the per-path report that shows which languages earn their keep.

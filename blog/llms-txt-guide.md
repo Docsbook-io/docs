@@ -1,9 +1,9 @@
 ---
-title: "llms.txt: The Complete Guide for 2026"
-description: "What llms.txt is, why AI crawlers need it, how it differs from robots.txt and sitemap.xml, and a working example for documentation sites. Updated for ChatGPT, Perplexity, Claude, and Gemini."
+title: "llms.txt explained: the complete guide for docs sites"
+description: "What llms.txt is, how it differs from robots.txt and sitemap.xml, what evidence supports it, and a working example for a documentation site."
 ---
 
-# llms.txt: The Complete Guide
+# llms.txt explained: the complete guide for docs sites
 
 `llms.txt` is a plain-text file at the root of your domain that tells AI agents what your site is about and which pages are the canonical source for which topic. It is to ChatGPT, Claude, and Perplexity what `robots.txt` was to Googlebot in 2003: a small, voluntary, hugely consequential standard.
 
@@ -119,4 +119,6 @@ For a more thorough check, ask ChatGPT or Claude to "fetch and summarize https:/
 
 ---
 
-Docsbook generates `llms.txt` and `llms-full.txt` automatically for every workspace, on every plan including Free. [Publish your docs →](https://docsbook.io/start)
+Docsbook generates `llms.txt` and `llms-full.txt` automatically for every workspace, with nothing to enable and nothing to pay for.
+
+[Start free — no credit card](https://docsbook.io/start)

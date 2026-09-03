@@ -1,9 +1,9 @@
 ---
-title: "FAQ Reply Notebook — copy-paste answers for community comments"
-description: "Internal notebook with ready-to-paste answers to the questions people keep asking about Docsbook on Reddit, X, IndieHackers, Product Hunt, and HackerNews. TL;DR for quick replies, Long versions for posts and threads."
+title: "FAQ reply notebook: copy-paste answers for comments"
+description: "Ready-to-paste answers to the questions people keep asking about Docsbook in public threads — a short version for replies, a long one for posts."
 ---
 
-# FAQ Reply Notebook
+# FAQ reply notebook: copy-paste answers for comments
 
 > **For internal use** — copy-paste replies for Reddit, X, IndieHackers, Product Hunt, HackerNews, and comments under competitor posts.
 >
@@ -27,7 +27,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 ### Who is it for?
 
-**TL;DR:** SaaS founders, dev-tool teams, and OSS maintainers who want serious docs without spending two weeks on Docusaurus setup or $200+/month on GitBook.
+**TL;DR:** SaaS founders, dev-tool teams, and OSS maintainers who want serious docs without spending two weeks on Docusaurus setup or a per-editor subscription on GitBook.
 
 **Long:** The sweet spot is a small team that already writes Markdown in GitHub and wants the published site, search, AI chat, translations, and analytics — without owning the infra. Teams that also want a custom domain or webhooks step up to Business. If you have a tech writer and a custom design system, Docusaurus is probably still better. If you have a 20-person docs team and enterprise SSO requirements, GitBook fits. Everyone in between is who Docsbook is built for.
 
@@ -53,33 +53,33 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 ### How much does it cost?
 
-**TL;DR:** Free forever for the basics. Pro is **$59/month** (AI chat, translations, SEO). Business is **$159/month** and adds custom domain, webhooks, bring-your-own API keys, and higher AI/translation limits.
+**TL;DR:** We don't sell tiers. Every project carries its own balance and the balance is spent on AI usage — the site, hosting, custom domain and page views cost nothing. Current numbers: https://docsbook.io/pricing
 
-**Long:** Free covers any public GitHub repo, branding, UI controls, navigation, 24h analytics, and base MCP tools. Pro ($59/month) adds AI chat, AI translations (15 languages), full SEO, and longer analytics windows (up to 30 days). Business ($159/month) includes everything in Pro plus a set of Business-exclusive capabilities: custom domain with free SSL, webhooks, bring-your-own AI/translation API key, and higher usage limits. Per-workspace billing, not per-seat.
+**Long:** Publishing a docs site from a GitHub repo, hosting it, serving it on your own domain with SSL, and every reader who opens a page — none of that draws on anything. What is metered is AI: questions to the assistant and translation runs are charged against a balance held per project, at the provider's real price for the model that answered plus our markup, and the dashboard shows you the model, its rate and the markup so the deduction is checkable. Billing is per account, not per seat, so nobody pays for a colleague who might fix a typo. Don't quote a price from me — https://docsbook.io/pricing is generated from the live pricing constants on every request, so it is right at the moment you open it.
 
 ---
 
 ### Is the Free plan a trial?
 
-**TL;DR:** No. Free is forever. You can run a real public docs site on it with custom branding, navigation, theme, fonts — just no AI chat, no translations, no custom domain.
+**TL;DR:** There is no trial, because there is no tier to trial. Run a real public docs site with custom branding, navigation, theme, fonts, your own domain and SSL, and pay nothing — AI usage is the only thing that draws on a balance.
 
-**Long:** I (Dan) made Free generous because I want OSS maintainers and indie hackers to actually use the thing without thinking about pricing. The paid plans exist for people who need AI features or a custom domain. If your repo is public and you just want a nice docs site, Free is everything you need.
+**Long:** I (Dan) wanted OSS maintainers and indie hackers to use the thing without thinking about pricing at all, so the site itself is not what we charge for. What costs money is what costs us money: LLM inference. If your repo is public and you want a good docs site with a custom domain, there is nothing to buy. When you start leaning on the assistant or on translations, that's when the balance matters.
 
 ---
 
 ### Why is Pro a subscription and not a lifetime deal?
 
-**TL;DR:** We used to sell a one-time lifetime PRO plan; it's no longer offered to new customers, and existing lifetime customers are grandfathered. Current plans are subscriptions because AI chat, translations, and the MCP server carry ongoing inference and infrastructure cost.
+**TL;DR:** We used to sell a one-time lifetime PRO plan; it's no longer offered, and existing lifetime customers are grandfathered. What replaced it is pay-as-you-go, because AI chat and translations carry ongoing inference cost that a flat lifetime price cannot cover.
 
-**Long:** Docs are a living product now — the old flat lifetime price didn't scale with how much LLM inference a workspace actually uses. Pro ($59/month) and Business ($159/month) are subscriptions so we can keep AI/translation limits generous and keep shipping. If you bought the original one-time lifetime PRO before the move to subscriptions, you keep your original features forever at no extra cost — but that plan is retired and isn't sold anymore.
+**Long:** A flat lifetime price could not scale with how much LLM inference a workspace actually uses — one heavy user could cost more in a month than they paid once. So the model now charges for exactly that: the AI usage, metered against a per-project balance, with the site itself free. If you bought the original one-time lifetime PRO before the change, you keep your original features at no extra cost; that plan is retired and isn't sold anymore.
 
 ---
 
 ### What happens if I exceed AI request limits?
 
-**TL;DR:** AI chat pauses until your next billing cycle — never billed above your plan price — or bring your own OpenAI / Anthropic / Gemini / OpenRouter key on Business, then it's free on our side.
+**TL;DR:** AI usage stops when the project's balance runs out — you are never billed past what you put in — and you top it up when you want more. You can also bring your own OpenAI / Anthropic / Gemini / OpenRouter key and pay the provider directly instead.
 
-**Long:** Every paid plan (Pro, Business, Growth, Scale) has a monthly AI budget, with higher-tier plans set higher. If you use it up, AI chat simply pauses until the next cycle instead of billing anything further. Business also lets you plug in your own API key in the AI settings and route requests through your provider — then we don't meter at all. Same applies to translations, which stay on the older request-count model for now.
+**Long:** Each project carries its own balance and every AI call is deducted from it at the model's real price plus our markup, both shown in the dashboard. When the balance reaches zero the assistant stops answering rather than billing you further — there is no overage and no surprise invoice. Top the project up and it resumes. You can also plug your own API key into the AI settings and route requests through your provider, in which case we meter nothing at all. Current numbers: https://docsbook.io/pricing
 
 ---
 
@@ -95,9 +95,9 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 ### How is this different from GitBook?
 
-**TL;DR:** Same outcome (hosted docs site), ~$200/month cheaper, includes AI chat + AI translations in the price, content stays in *your* GitHub repo.
+**TL;DR:** Same outcome (a hosted docs site), a completely different pricing shape — GitBook charges per site and per editor, we charge for AI usage and nothing for the site — and your content stays in *your* GitHub repo.
 
-**Long:** GitBook starts at ~$8/user/month and serious teams end up paying $200+/month. AI features, translations, and analytics are paid add-ons. Content lives in GitBook's CMS — to leave, you export. Docsbook is $0 / $59 (Pro, AI + translations) / $159 (Business, adds custom domain, webhooks) per month, and your Markdown stays in your GitHub repo. The trade-off: GitBook has a richer WYSIWYG editor; we don't have one — you write Markdown.
+**Long:** GitBook's price has two axes at once: a per-site fee and a per-user fee for everyone who edits content. On 2026-09-03 their pricing page listed Free at $0 per site/month with one user, Premium at $65 per site/month plus $12 per user/month, and Ultimate at $249 per site/month plus $12 per user/month — check https://www.gitbook.com/pricing for today's figures. Content lives in GitBook's CMS, so leaving means an export. With us the site costs nothing regardless of how many people edit it, AI usage is metered against a per-project balance, and your Markdown never leaves your GitHub repo. The trade-off is real: GitBook has a richer WYSIWYG editor; we don't have one — you write Markdown.
 
 ---
 
@@ -113,7 +113,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 **TL;DR:** Comparable feature set (hosted docs, AI), but Mintlify pushes you toward MDX in their structure. Docsbook reads plain Markdown from any GitHub repo and is generally cheaper.
 
-**Long:** Mintlify is good — well-designed, well-marketed. Where we differ: (1) we work with any public GitHub repo that has Markdown in `README.md` or `docs/`, no project-specific config required; (2) per-workspace pricing, not per-seat, starting at $59/month vs. Mintlify's $150/month entry; (3) we expose a full MCP server with 61 tools, so AI agents can manage your workspace programmatically (read the doc graph, search by symbol, change branding, etc.). Their core docs experience is more polished out-of-the-box; ours catches up faster the more you customize.
+**Long:** Mintlify is good — well-designed, well-marketed. Where we differ: (1) we work with any public GitHub repo that has Markdown in `README.md` or `docs/`, no project-specific config required; (2) they sell a monthly plan, we meter AI usage against a per-project balance and charge nothing for the site — compare https://mintlify.com/pricing against https://docsbook.io/pricing; (3) we expose a full MCP server, so AI agents can manage your workspace programmatically — read the doc graph, search by symbol, change branding. Their core docs experience is more polished out of the box; ours catches up the more you customise.
 
 ---
 
@@ -127,7 +127,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 ### How is this different from Readme.io?
 
-**TL;DR:** Readme.io is API-docs-focused and expensive ($99–$3000/month). Docsbook is broader (any docs from any GitHub repo), much cheaper, and bundles AI + translations.
+**TL;DR:** Readme.io is API-docs-focused and sells AI as a paid add-on on top of the plan (on 2026-09-03 their page listed Starter $0/month, Pro $250/month billed annually, and "Ask AI" at $150/month — see https://readme.com/pricing). Docsbook is broader — any docs from any GitHub repo — and AI is metered by usage rather than sold as a tier.
 
 **Long:** If you have an OpenAPI spec and want polished API reference with try-it-now, Readme.io is built for that exact job and does it well. Docsbook is a more general docs platform — guides, references, blog posts, anything you can put in Markdown. If you need both, plenty of teams use Readme.io for API reference and Docsbook for the broader docs site.
 
@@ -171,23 +171,23 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 ### Does Docsbook generate `llms.txt`?
 
-**TL;DR:** Yes. Every workspace gets `/llms.txt` and `/llms-full.txt` automatically, on every plan including Free. Platform-level too: `docsbook.io/llms.txt`.
+**TL;DR:** Yes. Every workspace gets `/llms.txt` and `/llms-full.txt` automatically, with nothing to enable. Platform-level too: `docsbook.io/llms.txt`.
 
-**Long:** `llms.txt` is the emerging standard for telling AI agents (Perplexity, ChatGPT Search, Cursor, Cline) what your site is and how it's structured. We generate it from your doc graph — list of pages with titles and descriptions, in a format the AI clients actually parse. `llms-full.txt` is the same plus full content. Both work without configuration; they exist the moment your workspace is indexed. This is one of the reasons Docsbook content gets cited by AI search disproportionately well.
+**Long:** `llms.txt` is the emerging standard for telling AI agents (Perplexity, ChatGPT Search, Cursor, Cline) what your site is and how it's structured. We generate it from your doc graph — list of pages with titles and descriptions, in a format the AI clients actually parse. `llms-full.txt` is the same plus full content. Both work without configuration; they exist the moment your workspace is indexed. Whether an assistant then cites you depends on your content, not on the file — no platform can promise a citation, and we don't.
 
 ---
 
 ### What about regular SEO?
 
-**TL;DR:** Built-in. Meta tags, OpenGraph, sitemap.xml, JSON-LD (WebSite, Organization, SoftwareApplication, FAQPage), canonical URLs, separate indexing per language. Free on every plan.
+**TL;DR:** Built-in. Meta tags, OpenGraph, sitemap.xml, JSON-LD (WebSite, Organization, SoftwareApplication, FAQPage), canonical URLs, separate indexing per language — nothing to enable and nothing to pay for.
 
-**Long:** Each page gets a proper `<title>`, `<meta description>`, OpenGraph image, and JSON-LD blocks for structured data. Sitemap is auto-generated and pings Google on update. Translations are exposed with hreflang. Custom domain (Business) plus the SEO setup means a Docsbook site behaves like a real docs site to Google, not a SPA. This is the main reason teams pick us over Notion for public docs.
+**Long:** Each page gets a proper `<title>`, `<meta description>`, OpenGraph image, and JSON-LD blocks for structured data. Sitemap is auto-generated and pings Google on update. Translations are exposed with hreflang. A custom domain plus the SEO setup means a Docsbook site behaves like a real docs site to Google, not a SPA. This is the main reason teams pick us over Notion for public docs.
 
 ---
 
 ### Will AI search engines actually cite my docs?
 
-**TL;DR:** Yes if your content is well-structured and your `llms.txt` is solid — both of which Docsbook does by default. We see Docsbook-hosted docs cited regularly in Perplexity and ChatGPT Search.
+**TL;DR:** Sometimes, and nobody can promise more than that. Docsbook removes the mechanical blockers — server-rendered HTML, clean headings, sitemap, `llms.txt`, crawler access — but whether an engine cites you depends on your content and on the engine, and the same prompt returns different sources run to run.
 
 **Long:** AI search citation depends on (1) being indexable (we handle that), (2) being structured so the model can extract concrete claims (heading hierarchy, code blocks, lists — your Markdown already does this), (3) having `llms.txt` (we generate it), (4) being authoritative for the topic (that's on you and how you write). On the technical side, Docsbook removes the usual blockers. For agents working against your repo directly, [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) adds LSP-style navigation (`doc_outline`, `doc_search_symbols`, `doc_resolve_link`, etc.) so they can navigate precisely instead of slurping raw HTML.
 
@@ -205,7 +205,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 ### Does it work with private repos?
 
-**TL;DR:** Public repos work out of the box. Private repos via authenticated GitHub OAuth — same flow, we just need read access to the specific repo.
+**TL;DR:** Public repos work out of the box. Private repos go through authenticated GitHub OAuth — the same flow, with read access to the specific repo.
 
 **Long:** When you connect GitHub, you grant access to the repos you want indexed. For OSS projects this is the public-repo flow with no extra scopes. For private repos, you authorize specific repos through the GitHub App and we read them with the user's token. We never store the content authoritatively — only the indexed graph and cache, which we can invalidate at any time.
 
@@ -221,7 +221,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 ### Is there an MCP server?
 
-**TL;DR:** Yes — full OAuth 2.0 MCP server at `https://docsbook.io/api/mcp/server` with 61 tools for workspace management, branding, analytics, webhooks, and translations. For doc-graph search use [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) locally, not the hosted MCP.
+**TL;DR:** Yes — a full OAuth 2.0 MCP server at `https://docsbook.io/api/mcp/server`, with tools for workspace management, branding, analytics, webhooks and translations. The server returns its own tool list on connection, so don't quote a count from me. For doc-graph search use [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) locally, not the hosted MCP.
 
 **Long:** Connect the hosted MCP with `claude mcp add --transport http https://docsbook.io/api/mcp/server`. After OAuth, the agent gets tools across workspace management (create, branding, UI), AI chat (system prompt, hooks), translations (approve, upload, delete), analytics (questions, unanswered, failed searches), and webhooks (register, list, replay). For LSP-style doc-graph operations — outline, symbol search, link resolution, references — use [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) locally instead (`npx markdown-lsp <subcommand> ./docs`). It parses the repo on disk, which is faster and cheaper than going over the network.
 
@@ -257,17 +257,17 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 ### "Why not just use Docusaurus, it's free?"
 
-**TL;DR:** Docusaurus is free in dollars, not in time. Two days of setup + ongoing maintenance of a Node.js app costs more than a year of Docsbook Pro if you bill your own time.
+**TL;DR:** Docusaurus is free in dollars, not in time. Two days of setup plus ongoing maintenance of a Node.js app is real money the moment you bill your own hours — run that arithmetic with your own rate.
 
 **Long:** Docusaurus is great and I recommend it for teams that want full control. But "free" is the framework — you still need to host it, maintain the build, manage dependencies, add a search service (Algolia $$$), add analytics, add AI chat (custom), add i18n (custom), etc. The total cost of ownership over a year is meaningful. Docsbook trades the customization ceiling for setup time and bundled features. Both are valid choices.
 
 ---
 
-### "$59/month for a docs site, that seems steep."
+### "Paying for a docs site seems steep."
 
 **TL;DR:** Compare it to what else is out there — GitBook, Mintlify, and Readme.io all start well above that for a comparable feature set. Free covers a real public docs site with no AI needed.
 
-**Long:** I get the reaction at first glance. Compare it to GitBook ($200/mo for a real team), Mintlify ($150/mo+), Readme.io ($99/mo+) — all of which are subscriptions, same as us. Pro at $59/mo covers AI chat, translations, and SEO. Business at $159/mo is for teams that also want a custom domain, webhooks, or bring-your-own API keys. If you only need a public docs site with branding and no AI, Free is genuinely free forever.
+**Long:** I get the reaction at first glance, but we are not priced like the others. GitBook, Mintlify and Readme all sell tiers — a fixed monthly subscription, and on GitBook a per-user fee on top. We do not sell tiers at all: each project carries its own balance, and that balance is spent on AI usage. Publishing the site, hosting it, the custom domain and every page a reader opens draw nothing from it. So if you want a public docs site with branding and no AI, there is nothing to pay. Current numbers are on https://docsbook.io/pricing, which is generated from the live pricing constants on every request — don't quote a price from me, quote it from there.
 
 ---
 
@@ -275,7 +275,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 **TL;DR:** GitHub-only today. GitLab and Bitbucket are on the roadmap but not soon. If you have an active need, email me — that helps prioritize.
 
-**Long:** Honest answer: GitHub covers ~90% of the OSS and dev-tool market we're aimed at, and supporting one provider deeply is better than supporting three providers shallowly. GitLab support is plausible because their API is similar; Bitbucket is harder. If GitLab support would unblock you, tell me — I keep a list and that's what moves features up.
+**Long:** Honest answer: GitHub is where the overwhelming majority of the OSS and dev-tool projects we're aimed at actually keep their code, and supporting one provider deeply is better than supporting three shallowly. GitLab support is plausible because their API is similar; Bitbucket is harder. If GitLab support would unblock you, tell me — I keep a list and that's what moves features up.
 
 ---
 
@@ -283,7 +283,7 @@ description: "Internal notebook with ready-to-paste answers to the questions peo
 
 **TL;DR:** GitHub already has Pages and Wikis — neither is a real docs platform. Even if they shipped one, AI chat / translations / analytics / MCP / custom domain are the differentiators.
 
-**Long:** GitHub Pages has existed for a decade and people still use Docusaurus, GitBook, Mintlify, Readme.io. Why? Because "static HTML hosting from a repo" is the easy 20% — the hard 80% is search, AI, i18n, SEO, analytics, custom domain UX, dashboard, billing for non-technical buyers. The risk isn't GitHub adding docs hosting; the risk is one of the existing players doing the AI + GitHub-native angle better. That's the bar we hold ourselves to.
+**Long:** GitHub Pages has existed for a decade and people still use Docusaurus, GitBook, Mintlify, Readme.io. Why? Because "static HTML hosting from a repo" is the easy part — the hard part is search, AI, i18n, SEO, analytics, custom domain UX, dashboard, and billing for non-technical buyers. The risk isn't GitHub adding docs hosting; the risk is one of the existing players doing the AI + GitHub-native angle better. That's the bar we hold ourselves to.
 
 ---
 
@@ -306,7 +306,7 @@ The hard part isn't writing the FAQ once — it's keeping it accurate as the pro
 
 ### Pull from social channels (needs MCP access)
 
-- **Reddit MCP** — read comments on `r/SaaS`, `r/devops`, `r/programming` mentioning "GitBook", "Docusaurus", "Mintlify", "docs hosting". Real wild questions, not just our existing audience.
+- **Reddit MCP** — read comments on `r/SaaS`, `r/devops`, `r/programming` mentioning "GitBook", "Docusaurus", "Mintlify", "docs hosting". Real questions from outside our existing audience.
 - **X/Twitter MCP** — same, but for tweets mentioning competitors or "docs site".
 - **Discord/Slack** — if we have an instance, mine support questions. Doesn't exist yet.
 - **HackerNews** — Algolia HN API is public, no MCP needed; a 50-line script catches every Docsbook/competitor mention.

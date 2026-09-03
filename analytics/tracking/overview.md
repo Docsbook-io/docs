@@ -1,21 +1,35 @@
 ---
-title: "Analytics Overview"
-description: "Track visitors, revenue, conversion rate, spend, bounce rate and session time for your documentation, plus top pages, referrers and live online readers — privacy-first analytics with no third-party trackers."
+title: "Read the analytics panel of your documentation site"
+description: "What each figure, card and tab in the Docsbook analytics panel measures, what it is not evidence of, and which decision about your documentation it supports."
 ---
 
 # Web Analytics
 
-Know exactly how many people read your docs and where they come from — without any third-party trackers.
+The Docsbook analytics panel reports who read your documentation, where they came from, which pages held them, whether they reached the page you are selling, and what your project spent on AI over the same window. It runs on your own site with no third-party trackers, and reading it costs nothing against your project's balance.
 
-## What You'll See
+## What each figure answers
+
+Every figure on this page exists to settle one question about your documentation. The table below maps the question to the figure; the sections after it say what each figure measures and — as importantly — what it is not evidence of.
+
+| Your question | The figure that answers it |
+|---|---|
+| Is anybody outside my team reading this? | Visitors, with your own team's visits excluded — see [Who counts as a visitor](#who-counts-as-a-visitor) |
+| Are they arriving and bouncing straight off? | Bounce rate and Session time |
+| Do they reach the page that sells? | Conversion rate, and the CTA Clicks card |
+| What was that worth? | Revenue and Revenue/visitor, once Branding has both settings |
+| What is this documentation costing me? | Spend, read straight off the billing ledger |
+| Which pages are dead, and which hold people? | The Pages card, ranked by Views or Reading time |
+| Are AI crawlers reading the docs at all? | The AI Views card, one line per crawler |
+
+## What you will see
 
 Seven figures sit across the top of the panel. Click any of them to redraw the chart below — except Revenue, which has no chart of its own (it is conversions multiplied by a fixed price, so its line would be the conversion line with a different label).
 
 | Metric | Description |
 |---|---|
 | Visitors | Distinct readers over the selected period, split into new and returning |
-| Revenue | What those readers were worth — see [Revenue](#revenue) |
-| Spend | What this project's AI cost over the same period — see [Spend](#spend) |
+| Revenue | What those readers were worth — see [What did the documentation earn?](#what-did-the-documentation-earn) |
+| Spend | What this project's AI cost over the same period — see [What is the documentation costing?](#what-is-the-documentation-costing) |
 | Conversion rate | Share of visitors who clicked through to your Call To Action URL |
 | Revenue/visitor | Revenue divided by visitors |
 | Bounce rate | Share of visits that were one page, under three seconds, and nothing else |
@@ -50,13 +64,13 @@ card says which figure the list is ranked by — click it to switch, and every
 card switches with it. Two bars are always drawn behind each row: blue is
 whatever the list is ranked by, rose is always the money.
 
-**Pages and Headings rank by two more figures**: `Views` and `Reading time`.
+**Pages and Headings in the Docsbook analytics panel rank by two more figures**: `Views` and `Reading time`.
 Those only mean something for a row that names a place in your docs, which is
 why they are offered there and nowhere else — and they count only what happened
 on that page. A reader who opened three pages gives each of them its own views
 and its own seconds, rather than making all three look as busy as the busiest.
 Reading time is averaged over the readers it was actually measured for; a page
-with no measurements shows a dash, never `0`. It stays a **Pro** feature.
+with no measurements shows a dash, never `0`.
 
 Hover a row for its visitors, revenue, revenue per visitor and conversion rate,
 and for two buttons: one filters the whole dashboard by that value, the other
@@ -64,7 +78,7 @@ opens the page or site the row points at. **Details** at the foot of the card
 opens the same numbers as a full table, where the filter is a tap away on a
 phone.
 
-### Filtering
+### Filtering the dashboard by a row
 
 Filtering by a row narrows **everything** — the other cards and the visitor
 figures above the chart — so a country, a device or a referrer can be read end
@@ -80,16 +94,16 @@ under a filtered heading.
 
 **Online now** — a live count of readers active in the last five minutes — is not one of the seven. It is a right-now number rather than a total over the period you picked, so it sits as its own chip beside the panel's title.
 
-### Revenue
+### What did the documentation earn?
 
-Revenue needs two settings, and reports nothing until it has both:
+Revenue in the Docsbook analytics panel needs two settings, and reports nothing until it has both:
 
 - your **Call To Action URL** decides *which* click counts as a conversion — a reader who left your docs for that domain;
 - your **Average Product Price** decides what such a click is *worth*.
 
-Both live in **Design → Branding**. Until both are filled in, the Revenue and Revenue/visitor tiles are switched off and say which one is missing. They deliberately never show `$0`: a missing price is not a price of zero, and a confident `$0` would read as "nothing sold" when nothing is actually being measured.
+Both live in **Design → Branding**; see [Branding](../../design/style/branding.md). Until both are filled in, the Revenue and Revenue/visitor tiles are switched off and say which one is missing. They deliberately never show `$0`: a missing price is not a price of zero, and a confident `$0` would read as "nothing sold" when nothing is actually being measured.
 
-Once both are set, Revenue is simply the number of readers who reached your call-to-action page multiplied by your average price. A reader who clicks through five times counts once.
+Once both are set, Revenue is the number of readers who reached your call-to-action page multiplied by your average price. A reader who clicks through five times counts once.
 
 The same rule produces the revenue on every card row, so the cards and the
 figures above them can never disagree about what a sale is. Until both settings
@@ -98,7 +112,7 @@ is missing.
 
 Matching is by domain, with `www.` treated as the same site. Other subdomains are not folded in — your docs usually live on one, and counting a click back into the docs as a sale would flatter the number.
 
-### Spend
+### What is the documentation costing?
 
 **Spend** is what left this project's balance over the same period: the AI calls
 your readers made in chat, the ones you made in the panel, translations,
@@ -119,7 +133,7 @@ cost spike that no visitor spike explains.
 Nothing you add to your balance is netted off this figure: it counts money going
 out, so a top-up does not make it dip.
 
-### Who counts as a visitor
+### Who counts as a visitor?
 
 Two kinds of visit are left out of every reader figure on this page: bots, and
 **you and your team browsing your own docs**.
@@ -149,7 +163,7 @@ A **bounce** is a visit of one page, under three seconds, with nothing else — 
 
 If a period holds very few visits, the panel says so under the figures: percentages over a handful of visits swing by whole points per visit, and are a direction rather than a measurement.
 
-### Keyword
+### Which Google queries is the site found by?
 
 The **Keyword** tab of the Sources card is the one list that does not come from
 your visitors: it comes from Google Search Console. An impression that never
@@ -163,7 +177,7 @@ here is an **estimate** — clicks multiplied by your site-wide revenue per
 visitor — and is labelled and drawn as one, because a modelled figure should
 never look like a measured one.
 
-### AI Views
+### Which AI crawlers are reading the docs?
 
 The **AI Views** card charts one line per AI crawler instead of a single total, so you can tell which assistants are reading your docs and how that changes over time. The twelve busiest bots are charted, each labelled with the provider behind it, above the per-bot totals.
 
@@ -175,11 +189,11 @@ works rather than which site. Hovering a channel names the three sites it
 actually consists of, with their shares: "organic search" that is 96% Google and
 one spread across five engines are different situations.
 
-### CTA Clicks
+### Did readers reach the page that sells?
 
-The **CTA Clicks** card ranks every destination readers left your documentation for — your signup page, pricing, the repo, anything external — so you can see which call to action readers actually follow and from which page they follow it.
+The **CTA Clicks** card of the Docsbook analytics panel ranks every destination readers left your documentation for — your signup page, pricing, the repo, anything external — so you can see which call to action readers actually follow and from which page they follow it.
 
-### Feedback
+### Which pages did readers vote down?
 
 The **Feedback** tab of the same card ranks your pages by the thumbs readers gave them. Both vote widgets are counted together — the "was this helpful" rating at the foot of a page, and the thumbs on an AI answer given on that page — because the question it answers is which page readers approve of, not which button they pressed.
 
@@ -215,8 +229,8 @@ Four things worth knowing about it:
 - **It gates nothing.** Every figure on this page was collected the whole time
   regardless — the switch only decides which of two presentations of the same
   report you are looking at, and it is remembered in your browser, per
-  workspace. A teammate's view is unaffected, and clearing site data simply
-  offers the guide again.
+  workspace. A teammate's view is unaffected, and clearing site data offers
+  the guide again.
 - **A tab that already has your rows in it is never covered.** It explains
   itself, so there is nothing for a panel over it to add.
 
@@ -228,30 +242,32 @@ when the window has no rows for it.
 The sample figures are the ones the product tour uses, so what you see before
 switching a tab on is the same thing you saw while trying Docsbook out.
 
-## How to Open
+## How to open the analytics panel
 
 1. Open any page of your documentation site.
 2. Click the **Analytics** tab in the floating toolbar at the bottom.
 3. The overview loads automatically with **Today** selected.
 
-## Time Ranges
+## Time ranges
 
 Use the interval switcher (next to the Online badge) to change the window:
 
-| Range | Plan required |
+| Range | What it covers |
 |---|---|
-| Now (live) | Free |
-| Today | Free |
-| Yesterday | Free |
-| Last 24 hours | Free |
-| Last 7 days | Pro |
-| Last 30 days | Growth / Business / Scale |
+| Now (live) | The last hour, per minute, refreshed while you watch |
+| Today | The current calendar day, from midnight |
+| Yesterday | The previous calendar day, whole |
+| Last 24 hours | A rolling day back from now |
+| Last 7 days | A rolling week back from now |
+| Last 30 days | A rolling month back from now |
+
+Thirty days is the longest window there is, because events are kept for 30 days and nothing older survives to be charted.
 
 Today and Yesterday are calendar days, not a rolling 24 hours — Today starts at midnight, so early in the day it covers less than Last 24 hours does.
 
 **Now** puts the chart in live mode: the switcher shows a pulsing dot, and the chart and top figures refresh every 5 seconds with a per-minute view of the last hour. The rest of the page (the four cards below, and every other range) still refreshes every 30 seconds.
 
-## Reading Referrers
+## Reading referrers
 
 Referrers are grouped by hostname. **Direct / None** means the visitor typed your
 URL, came from a bookmark, or arrived from a link that stripped its referrer — on
@@ -261,9 +277,12 @@ rather than dropped.
 Rows show the subdomain in grey and the domain in black, so a column of hosts
 reads by the site behind them.
 
-A spike in a specific referrer usually means someone shared your docs — great signal for which content resonates.
+A spike in a specific referrer usually means someone shared your docs, which tells you which page was worth sharing.
 
----
+## Related
 
-> **Start tracking your readers today.**
-> [Connect your GitHub repo →](https://docsbook.io/connect)
+- [Tracked events reference](./events.md) — every event behind these figures, and what each one means
+- [AI usage & cost statistics](./ai-usage.md) — the chat conversations behind the Spend figure
+- [Read time report](../reports/read-time.md) — how the Reading time ranking is measured
+- [Visitor countries report](../reports/countries.md) — the Countries tab as its own report, with the reader map
+- [Branding](../../design/style/branding.md) — the Call To Action URL and Average Product Price that switch Revenue on
