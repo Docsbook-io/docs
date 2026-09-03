@@ -1,9 +1,9 @@
 ---
-title: "MCP changelog"
-description: "What shipped in the Docsbook MCP server — the tools it serves, what each call costs, and who is allowed to call them."
+title: "What changed in the Docsbook MCP server, and when it shipped"
+description: "Every release that touched the MCP server: the tools it serves, what each call costs, who may call them, and the outcome each tool is bought to move."
 ---
 
-# MCP changelog
+# What changed in the Docsbook MCP server, and when it shipped
 
 Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
@@ -14,6 +14,7 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 - Every MCP tool now has its own page at its own address: the URL carries the tool, so the page survives a refresh and can be bookmarked or sent to a colleague, instead of existing only for whoever happened to click the row. `MCP`
 - Clicking a call in a tool's history opens the whole call: what went in, what came back, who asked for it (your own Run, a connected MCP client, a schedule, an event), how long it took, what it was priced at, and what actually left your balance. The price and the billed amount are shown as two figures on purpose, since a call costing less than a cent is charged and still bills $0.00, and either number on its own misreads. `MCP`
 - A **Cost** column on that history, so you can see what a tool has been spending on this project without opening a single row. `MCP`
+- `list_content_widgets` now answers "does this page want a widget, and where?" before an agent picks one. Agents were reaching for the two widgets whose examples they had seen and leaving every other moment on the page as plain markdown. `MCP`
 
 ### Security
 
@@ -26,7 +27,7 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 - The MCP server's agent family is now **135 action tools**, one per step of documentation work rather than one per discipline. Ten verbs — observe, explain, discover, decide, plan, draft, measure, verify, learn, handoff — across fifteen subjects: your capability map, jobs to be done, topical authority, search intent, programmatic SEO, free tools, original research, AI search, competitors, reader vocabulary, content architecture, internal linking, trust, backlinks and market expansion. Ask for a step (`observe_link_graph`, `decide_next_market`, `draft_comparison_page`) instead of an audit, and get rows you can act on instead of a report. `MCP`
 - Every action tool names the number it is bought to move — support load, organic traffic, AI citations, time to answer, conversion and eight more — in its own description, so an agent choosing between them is choosing an outcome. `MCP`
 - The `draft_*` tools return the artifact itself — the page, the answer block, the link insertions, the outreach message — as markdown ready to apply, and name the call that applies it. They still write nothing themselves, so the whole family stays safe on a read-only token. `MCP`
-- Every tool's page and the tools reference now carry a **per-tool price and wait**: the [MCP tools reference](./reference/mcp-tools.md) lists all 135 with what only that one tells you, what it costs, and how long the call is held open. `MCP`
+- Every tool's page and the tools reference now carry a **per-tool price and wait**: the [MCP tools reference](../reference/mcp-tools.md) lists all 135 with what only that one tells you, what it costs, and how long the call is held open. `MCP`
 - The assistant can now read and write that tracker itself — `list_issues`, `get_issue` and `create_issue`, in the admin chat and over your MCP endpoint. Ask it to open an issue, add something to the backlog, or write down what an audit just found, and the finding outlives the conversation instead of ending with it. Filing needs a read-write token; reading does not. `MCP`
 - `generate_issues` runs issue generation as a background job, so it keeps working after you close the panel and can be started from Claude Code or Cursor without opening it at all. `MCP`
 - The MCP tools table now carries an **Impact** column: which number each tool works on and which way that number is good news, so you can tell what a tool is for before you spend a call on it. No percentage — one call is a step inside a plan the table never reads, and a figure there would be a forecast rather than a fact. `MCP`
@@ -182,5 +183,13 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 ### Changed
 
 - MCP tool count claims corrected to the real number across the site and `/llms.txt`. `MCP`
+
+## Related
+
+- [Full Docsbook changelog](../CHANGELOG.md) — every release, across every section
+- [MCP server](../ai/mcp.md) — connecting an agent to your docs
+- [MCP tools reference](../reference/mcp-tools.md) — every tool, its price and its wait
+- [Changelogs by panel section](./README.md) — the same releases, cut by where they landed
+- [Changelogs by outcome](./outcomes/README.md) — the same releases, cut by the number they move
 
 <!-- Generated by scripts/changelog/split.mjs from docs/CHANGELOG.md. Do not edit by hand: add the entry to the general changelog with its component tag and rerun the script. -->

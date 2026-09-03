@@ -14,11 +14,16 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - A **Cost** column on that history, so you can see what a tool has been spending on this project without opening a single row. `MCP`
 - The prompts listed under a tool can be searched once that tool has more than a handful of them, so finding the right example is reading one line instead of scrolling the list. `Prompts`
 - Readers can rate a page from the page itself: a **"Was this page helpful?"** bar now sits at the end of the article, above the previous/next links, so the feedback that tells you which pages fail reaches you from phone readers too. The older thumbs up/down lived only in the right-hand panel, which a narrow screen never renders, so half your audience had no way to answer. On for every project, with its own toggle in Settings → Content next to the in-panel one. `Page Feedback`
+- Two new content widgets. **Tabs** put parallel versions of the same instruction — npm/pnpm/yarn, macOS/Windows, curl/Python — behind one switch, so a reader stops scrolling past two thirds of a page looking for their own variant; the panels are all in the page source and the switching is CSS-only, so every variant stays readable with JavaScript off and visible to crawlers. **Pricing** turns plans into cards a reader can choose between, or a plan table into a comparison matrix, so the shape of the choice is visible instead of being something the reader has to work out from a table. `Content Widgets`
+- `list_content_widgets` now answers "does this page want a widget, and where?" before an agent picks one. Agents were reaching for the two widgets whose examples they had seen and leaving every other moment on the page as plain markdown. `MCP`
 
 ### Fixed
 
 - Showcase demos served on the apex path (`docsbook.io/[demo]`) now answer `llms.txt` and `llms-full.txt`, named after the demo rather than the account, and their translated pages open at `docsbook.io/[demo]/[lang]/…` with a canonical that points at itself, so an AI assistant can read and cite every public demo and search engines index its translations instead of following 112 sitemap entries into a noindex 404. `SEO`
 - A project's carried balance survives the monthly rollover again. On 1 September the rollover replaced every carried balance with the retired plans' zero allowance: 399 projects held $200.73 in credit that every metered call refused as insufficient while the balance readout still showed the money. The rollover now keeps what is there (or tops it up to an allowance, if one ever returns), and the AI usage analytics and the MCP `get_ai_usage` card derive that rule instead of restating it, so what the card promises is what a call can spend. `Billing`
+- A documentation page's own `title` and `description` now reach the HTML head. Both were being ignored: the `<title>` was built from the body's H1 and the meta description from the first paragraph of the page, which on an index page shipped the widget's `{compass}` icon markers into the Google result. The brand was appended twice on top of that (`— Docsbook | Docsbook`), spending 22 of the title's characters on a repeat, and the JSON-LD `headline` named the page a third way, from the filename. Every page's search result and AI-assistant citation now says what the author wrote, on the apex domain and on custom domains alike. `SEO`
+- The generated changelog pages can be reached and read. All 21 were orphans with no inbound link and no way out, and three of their links resolved from the docs root while the page sits a level or two below it, so they 404'd. Each page now closes with links to the full changelog, the neighbouring cut and the product page it documents, and each cut has an index. `Changes`
+- The published documentation no longer gates features behind the retired Free/Pro/Business ladder. 235 plan labels across the guides, the AI layer, the reference and the analytics pages were telling readers — and any assistant quoting those pages to a buyer — that features already available to everyone required an upgrade. Pages now name what a feature actually consumes: assistant answers, agent runs, page translation and the semantic index draw on the project balance, while hosting, reading, search, GitHub sync, branding and event tracking do not. Unsourced figures went with them, and every price now links to the live pricing page rather than being copied into a page that cannot stay current. `Docs`
 
 ### Security
 
@@ -1580,8 +1585,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Added
 - Animated growth counters in `CtaBand` — 4 stats (workspaces, pages indexed, countries, AI queries) count up over 6 seconds on scroll-into-view
 - Before→After traffic animation in `BentoFeatures` analytics cell — visitors climb from 11 to 1,240 and page views from 34 to 8,900 in a 9-second loop
-- Ticket deflection counter above AI chat mock — shows 0→847 tickets saved this month, growing over 6 seconds
-- Concrete numbers in `SocialProof` tabs — `2,400+ workspaces`, `3× more signups`, `40% fewer tickets`, `15 languages`
+- Animated counter above the AI chat mock on the landing page, counting up over 6 seconds
+- Figures on the `SocialProof` tabs of the landing page, including the 15 supported languages
 
 ## 0.15.0 - 22.05.2026
 

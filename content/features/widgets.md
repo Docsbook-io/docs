@@ -1,6 +1,6 @@
 ---
 title: "Content widgets: rich blocks written in plain markdown"
-description: "Reference for every Docsbook content widget — cards, accordion, stepper, api, cta, cta-form and recommendations — and the markers each one reads."
+description: "Reference for every Docsbook content widget — cards, tabs, accordion, stepper, pricing, api, cta, cta-form and recommendations — and the markers each reads."
 ---
 
 # Content widgets
@@ -80,6 +80,21 @@ Turns link lists into a responsive grid. Best on index and hub pages that send r
 <!-- /widget -->
 ```
 
+### tabs — parallel versions behind one switch
+
+Turns headed sections into a tab strip with one visible panel. Use it when the same instruction exists in several parallel versions and the reader needs exactly one of them: a package manager, an operating system, a language SDK, a hosted-versus-self-hosted path.
+
+- Each heading becomes one tab; everything under it until the next heading of the same level becomes that tab's panel.
+- The first tab is the one that opens, so put the variant most readers want first.
+- A heading may end with `{icon-name}`, e.g. `### macOS {apple}`. Give every tab an icon or none of them — a strip where only some tabs have one reads as broken.
+- Any markdown works inside a panel, including tables and code blocks with syntax highlighting.
+- Content before the first heading renders above the strip as an intro. Use it for the one sentence true of every tab.
+- Keep labels to one or two words. The strip scrolls sideways rather than wrapping, so a sentence-length label pushes the other tabs out of sight.
+- Up to 8 tabs are switchable. A 9th section and beyond render below the strip as ordinary headings — nothing is lost, but a set that long wanted a list of headings.
+- The panels are all in the page source and the switching is CSS-only, so every variant stays readable with JavaScript off and visible to crawlers.
+
+Do not use it to hide content the reader needs all of. That is `accordion` on scanned reference material, and plain headings for a sequence.
+
 ### accordion — collapsible rows
 
 Turns headed sections into rows the reader expands. Best for material people scan rather than read: FAQs, troubleshooting, per-option details.
@@ -95,6 +110,26 @@ Turns headed sections into a connected, top-to-bottom sequence. Use it when the 
 
 - Each heading becomes one step, numbered in document order.
 - Adding or removing a step renumbers the rest automatically.
+
+### pricing — plans a reader can choose between
+
+Turns plans into a row of comparable cards, or a plan table into a comparison matrix. Use it where a reader has to *choose* between tiers rather than read about them.
+
+The widget picks its shape from what you wrote: headings present gives one card per plan, a region that is one plain table instead is re-rendered as a matrix. Write whichever shape the page already is.
+
+**Plan shape.** Each heading is a plan name.
+
+- The first paragraph under the heading is the price, rendered large: `**$20** / month` emphasises the number and keeps the unit beside it. Write `Free` or `Contact sales` the same way when there is no figure.
+- The second paragraph is one line on who the plan is for. It sits between the price and the list, which is the narrowest part of the card.
+- A list becomes what the plan includes, each item ticked. An item written struck through — `~~Priority support~~` — gets a dash and renders muted, which shows what a cheaper plan leaves out without a second list.
+- A paragraph that is only `**bold text**` directly under the heading becomes that plan's badge and marks it featured: a ring around the card and a solid button. Use it on at most one plan.
+- The plan's last link-only paragraph becomes its buttons, exactly as in `cta`. The featured plan's first button is solid and the rest are ghosts, so the block has one loud thing in it.
+
+**Matrix shape.** The first column names the feature and every other column is a plan. A cell whose whole text is `yes`, `no`, `✓`, `—`, `included` or `none` becomes a tick or a dash, with the word kept in the markup for screen readers. A cell holding anything else — `3 seats`, `Unlimited`, a footnote — is left exactly as written. An empty cell stays empty: silence is not a "no".
+
+`cols=1|2|3|4` on the opening marker fixes the grid at that many columns. The default fits as many cards as the page allows.
+
+Never write a price, plan name, limit or service commitment into this widget that you did not read from the source. It is the one widget whose content is a commercial promise.
 
 ### api — an interactive endpoint playground
 
