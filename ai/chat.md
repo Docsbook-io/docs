@@ -27,7 +27,7 @@ Three things in the chat spend the balance, and they are the three that call a m
 - Building or rebuilding the semantic index.
 - An agent run started from the chat.
 
-The current prices, and what a plan includes, are on the [Docsbook pricing page](https://docsbook.io/pricing.md) — it is generated from the live billing constants on every request, so it is the only figure worth quoting. When a project's balance runs out, AI chat pauses instead of billing you further, and the widget says so.
+The current prices, and what a plan includes, are on the [Docsbook pricing page](https://docsbook.io/pricing) — it is generated from the live billing constants on every request, so it is the only figure worth quoting. When a project's balance runs out, AI chat pauses instead of billing you further, and the widget says so.
 
 ## Semantic search
 
@@ -90,4 +90,4 @@ If a reader opens the chat widget on a documentation site that has no AI Chat co
 - [Chat Hooks](./chat-hooks.md) — intercept the prompt and the answer.
 - [Sources](./sources.md) — what the assistant reads before it answers.
 - [MCP Server](./mcp.md) — manage chat settings from Claude Code.
-- [Pricing](https://docsbook.io/pricing.md) — what an answer draws on.
+- [Pricing](https://docsbook.io/pricing) — what an answer draws on.

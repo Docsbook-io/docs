@@ -7,7 +7,7 @@ description: "Connect Claude Code, Cursor, Codex or any MCP client to Docsbook a
 
 The Docsbook MCP server is a remote Model Context Protocol server that exposes your documentation and its whole admin surface to an AI agent. Connect Claude Code or any MCP-compatible client to one endpoint and read your pages, commit changes, read analytics, and change settings without leaving the editor.
 
-This page is the reference for what the server serves and what a call draws on. Every tool listed here is callable by any connected client; what a metered call costs is on the [Docsbook pricing page](https://docsbook.io/pricing.md) and on each tool's own row in your admin panel.
+This page is the reference for what the server serves and what a call draws on. Every tool listed here is callable by any connected client; what a metered call costs is on the [Docsbook pricing page](https://docsbook.io/pricing) and on each tool's own row in your admin panel.
 
 ## What is the Docsbook MCP server?
 
@@ -400,7 +400,7 @@ A call is charged a **flat amount, fixed before the call runs and independent of
 
 **An action tool is priced from the work it declares** — how many families of evidence it reads, how many model round trips it may take, whether it leaves your site, whether it writes an artifact — rather than one flat figure for the whole class. So a narrow observation draws a fraction of what a deep draft does, and its published wait (roughly 20 s to 70 s) differs the same way.
 
-The current amount for every class and every individual tool is on the tool's own row in the **MCP** section of your admin panel, read live from the server rather than from a written-down copy, and on the [Docsbook pricing page](https://docsbook.io/pricing.md). This page deliberately quotes neither: a price copied into documentation is a price that goes stale without anyone noticing.
+The current amount for every class and every individual tool is on the tool's own row in the **MCP** section of your admin panel, read live from the server rather than from a written-down copy, and on the [Docsbook pricing page](https://docsbook.io/pricing). This page deliberately quotes neither: a price copied into documentation is a price that goes stale without anyone noticing.
 
 **Discovery is never metered.** Describing the server, finding a skill or a widget, listing your workspaces and creating one cost nothing — you should not be charged for the handshake, or for the call that creates the thing being billed.
 
@@ -430,4 +430,4 @@ When a call is refused, the server returns a structured error naming the reason 
 - [Chat Hooks](./chat-hooks.md) — Configure pre/post-LLM hooks via MCP.
 - [Docs Skills](./skills.md) — Discover SKILL.md files through `find_skill`, or have one run for you with `run_docs_*`.
 - [Webhooks](../webhooks.md) — Register event handlers from MCP, and verify their signatures.
-- [Pricing](https://docsbook.io/pricing.md) — what a metered call draws on, generated from the live billing constants.
+- [Pricing](https://docsbook.io/pricing) — what a metered call draws on, generated from the live billing constants.

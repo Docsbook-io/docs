@@ -24,7 +24,7 @@ Pick by what you are trying to make happen. Every surface below is part of the p
 | Pre/post-LLM chat hooks | Your own HTTPS endpoint, inside the chat pipeline | Nothing extra beyond the answer itself | [Chat Hooks](./chat-hooks.md) |
 | Docs Skills catalog | Any agent that can read a SKILL.md file | Nothing to install and run locally | [Skills](./skills.md) |
 
-What each of those costs in money is on the [Docsbook pricing page](https://docsbook.io/pricing.md), which is generated from the live billing constants on every request.
+What each of those costs in money is on the [Docsbook pricing page](https://docsbook.io/pricing), which is generated from the live billing constants on every request.
 
 ## How does Docsbook decide which pages an assistant sees?
 

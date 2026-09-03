@@ -83,7 +83,7 @@ With one connected, that question has an address. The assistant reads your prici
 
 ## What does reading a source draw on?
 
-`list_sources` reads rows Docsbook already stores and is charged as an ordinary read. `read_source` leaves the Docsbook network to fetch your repository or your website — and a website source fetches several pages per call — so it is charged as an outbound call. Both come off the balance of the project the call is about. Amounts are on the [Docsbook pricing page](https://docsbook.io/pricing.md).
+`list_sources` reads rows Docsbook already stores and is charged as an ordinary read. `read_source` leaves the Docsbook network to fetch your repository or your website — and a website source fetches several pages per call — so it is charged as an outbound call. Both come off the balance of the project the call is about. Amounts are on the [Docsbook pricing page](https://docsbook.io/pricing).
 
 ## Next steps
 

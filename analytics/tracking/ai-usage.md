@@ -116,7 +116,7 @@ AI usage is metered in money, not in requests: every project carries its own bal
 | Building the semantic index and its embeddings | Branding, theming and navigation settings |
 | A background agent run | Registering a webhook and receiving its deliveries |
 
-When a project's balance runs out, AI usage pauses rather than overrunning: the assistant stops answering until the balance is topped up, and nothing else about the site changes. Current rates are published on the [Docsbook pricing page](https://docsbook.io/pricing.md).
+When a project's balance runs out, AI usage pauses rather than overrunning: the assistant stops answering until the balance is topped up, and nothing else about the site changes. Current rates are published on the [Docsbook pricing page](https://docsbook.io/pricing).
 
 Calls made on your own provider API key are counted here and billed by that provider instead, so they cost the project balance nothing.
 

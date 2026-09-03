@@ -90,7 +90,7 @@ Two things do draw on the balance of the project they run against:
 - **The MCP tools a skill calls.** A skill that reads analytics, searches your docs or commits a page spends what those calls spend — see [what a call draws on](./mcp.md#what-does-a-call-to-the-docsbook-mcp-server-draw-on).
 - **`run_docs_*`**, because the run happens on Docsbook's machines and its own model budget. One call is one whole agent run: minutes of work, a report, and a run record.
 
-Current amounts are on the [Docsbook pricing page](https://docsbook.io/pricing.md).
+Current amounts are on the [Docsbook pricing page](https://docsbook.io/pricing).
 
 ## Next steps
 

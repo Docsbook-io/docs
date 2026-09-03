@@ -55,7 +55,7 @@ Two consequences worth planning around:
 - **Enable languages deliberately.** Each extra language multiplies the work done on every push.
 - **A large restructuring commit re-translates everything it touched.** Renaming a heading across 40 pages is 40 re-translations per language.
 
-Current amounts are on the [Docsbook pricing page](https://docsbook.io/pricing.md).
+Current amounts are on the [Docsbook pricing page](https://docsbook.io/pricing).
 
 ## Next steps
 

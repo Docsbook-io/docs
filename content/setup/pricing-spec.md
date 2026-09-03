@@ -7,17 +7,15 @@ description: "What a project balance is, which actions spend it, how a call is p
 
 Docsbook meters money, not features. Each **project** carries its own balance, every AI call is charged against that project's balance at what the call cost plus a markup, and the dashboard shows the model, its per-1M-token rate and the markup, so the amount deducted is one you can check.
 
-Current prices and what a subscription includes are published at **[docsbook.io/pricing](https://docsbook.io/pricing)**. That page is generated from the live billing constants on every request, so it is the only place a price is guaranteed to be current — this page deliberately quotes none.
+Current prices are published at **[docsbook.io/pricing](https://docsbook.io/pricing)**. That page is generated from the live billing constants on every request, so it is the only place a price is guaranteed to be current — this page deliberately quotes none.
 
 For the short version of the model, read [Docsbook pricing](../../pricing.md). This page is the operational detail: what a balance is, which action spends it, and where to put a ceiling on one source.
 
 ## What a project balance is
 
-A project balance is a single pot of money attached to one documentation project, not to your account and not to a plan. Projects do not share a balance: spending on one never drains another.
+A project balance is a single pot of money attached to one documentation project, not to your account. Projects do not share a balance: spending on one never drains another. When a project's balance is exhausted, AI usage on that project stops until it is topped up; nothing is charged beyond what was already paid, and there is no overage bill.
 
-A newly created project starts with **$1.00** of balance. After that the balance moves in two directions only — down as AI usage is charged against it, and up when it is topped up.
-
-When a project's balance is exhausted, AI usage on that project stops until the balance is restored. Nothing is charged beyond what has already been paid for; there is no overage bill.
+[Docsbook pricing](../../pricing.md) covers the rest of that story — the credit a new project starts with, the welcome bonus, and the top-up limits. This page does not repeat it.
 
 ## Which actions spend the balance
 

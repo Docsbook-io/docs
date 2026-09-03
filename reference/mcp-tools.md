@@ -20,7 +20,7 @@ The **Billing** column names the class a call is metered under, against the proj
 | AI | Model-backed: something a model writes, reads or ranks for you |
 | Agent | A whole agent run: minutes of work, a report, and its own run record |
 
-Current rates per class are published on the [Docsbook pricing page](https://docsbook.io/pricing.md). A call refused for an empty balance says so; nothing on this page is gated by anything else.
+Current rates per class are published on the [Docsbook pricing page](https://docsbook.io/pricing). A call refused for an empty balance says so; nothing on this page is gated by anything else.
 
 To connect from Claude Code:
 
@@ -157,7 +157,7 @@ Where a tool scores — the fifteen `measure_*` tools, one per domain — the sc
 
 **All 135 change nothing** and work with a **read-only** token: writes are refused for the whole run. Every one of them bills in the **Agent** class. That includes `draft_*`, which produces the page or the block and names the call that would apply it (`run_docs_create` / `run_docs_manage`) rather than applying it itself. Every row carries that call, so an analysis hands off without a human translating in between.
 
-**Each one is priced from the work it declares** — how many families of evidence it reads, how many model round trips it may take, whether it leaves your site, whether it emits an artifact — so a narrow observation costs a fraction of a deep draft rather than every action carrying one flat agent figure. The wait differs the same way, and the typical wait is listed per tool below. Each tool's current price is shown against it in the panel and on the [Docsbook pricing page](https://docsbook.io/pricing.md).
+**Each one is priced from the work it declares** — how many families of evidence it reads, how many model round trips it may take, whether it leaves your site, whether it emits an artifact — so a narrow observation costs a fraction of a deep draft rather than every action carrying one flat agent figure. The wait differs the same way, and the typical wait is listed per tool below. Each tool's current price is shown against it in the panel and on the [Docsbook pricing page](https://docsbook.io/pricing).
 
 ### Product & capability map
 

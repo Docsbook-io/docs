@@ -28,53 +28,20 @@ Prices change, and a price copied into a documentation page goes stale silently.
 | Bring your own AI key | Your provider bills you for usage directly; Docsbook bills you nothing for it | [AI chat](../../ai/chat.md) |
 | Webhooks and feed notifiers | Discord and webhook notifications on documentation events | [Webhooks](../../webhooks.md) |
 
-Migration onto Docsbook, full branding setup, agent configuration and Slack or pull-request integrations can be done for you rather than by you. What a subscription covers is listed on the [pricing page](https://docsbook.io/pricing).
+Migration onto Docsbook, full branding setup, agent configuration and Slack or pull-request integrations can be done for you rather than by you. Those are done-for-you services rather than capabilities you switch on; the [pricing page](https://docsbook.io/pricing) says which are included.
 
-## What spends money, and what does not
+## What any of this costs
 
-Each project carries its own balance. A new project starts with **$1.00** of it. Spending on one project never touches another.
+Only work that calls an AI model costs money: answers the reader-facing assistant writes, pages translated into another language, work you ask the admin assistant or the on-page editor to do, and building the semantic index. Every capability in the table above is available to every project; none of them is withheld until you pay.
 
-Only work that calls an AI model is charged:
+Everything else in that table — hosting, the custom domain and its SSL certificate, GitHub sync, keyword search, branding, navigation, widgets, feedback and analytics — costs nothing from the balance, however much traffic the site gets.
 
-- Answers the reader-facing assistant writes
-- Pages translated into another language
-- Work you ask the admin assistant or the on-page editor to do
-- Building the semantic index over your docs
+Two pages carry the detail, and this one deliberately repeats neither:
 
-Everything else — hosting, your custom domain and its SSL certificate, GitHub sync, keyword search, branding, navigation, widgets, feedback, event tracking and the analytics that read it — costs nothing from the balance, no matter how much traffic the site gets.
+- [Docsbook pricing](../../pricing.md) — what a project balance is, the free credit a new project starts with, and how top-ups work.
+- [How Docsbook charges for AI usage](../../content/setup/pricing-spec.md) — how a single call is priced, how to cap one source of spend, and how billing and cancellation work.
 
-When the balance runs out, AI usage on that project stops until the balance is restored. There is no overage bill.
-
-For how a single call is priced, and how to cap one source of spend so translations cannot absorb everything, see [How Docsbook charges for AI usage](../../content/setup/pricing-spec.md).
-
-## How payment works
-
-1. Open your workspace in the Float Widget.
-2. Click **Upgrade**.
-3. Paddle checkout opens inline, on the Docsbook domain.
-4. Enter your card details and confirm.
-
-Payments are processed by **Paddle**, the merchant of record. Docsbook never sees your card number; Paddle handles PCI compliance, EU VAT and US sales tax. Cancel at any time from the dashboard at [docsbook.io/chat](https://docsbook.io/chat).
-
-Your markdown never leaves your GitHub repository, so cancelling costs you no content — there is nothing to export back out.
-
-## Frequently asked questions
-
-### How soon after paying can I use what I paid for?
-
-Immediately, as soon as Paddle confirms the payment or the trial starts. There is no provisioning step.
-
-### Is a subscription per project or per account?
-
-A subscription is bought once per **account**, and your projects draw on it. Each project still keeps its own balance for AI usage, so the two questions — what your account pays for and what a given project has spent — stay separate.
-
-### What happened to the old lifetime plan?
-
-The one-time lifetime plan is no longer sold. Customers who bought it keep it.
-
-### Where do I find the price?
-
-At [docsbook.io/pricing](https://docsbook.io/pricing), which is regenerated on every request. Any price written into a documentation page — including this one — would be a copy that can go stale.
+Current prices are published at [docsbook.io/pricing](https://docsbook.io/pricing), regenerated on every request. A price written into a documentation page is a copy that goes stale silently, so none appears here.
 
 ## Next steps
 
