@@ -1,15 +1,17 @@
 ---
-title: "Source of Truth — Local Doc Graph for AI Agents"
-description: "A structured graph of every page, section, and link in your docs, indexed locally by Claude Code via markdown-lsp. No server-side index, no PRO+ gating."
+title: "Source of Truth: a local doc graph for your AI agent"
+description: "Give an agent a structured graph of every page, section and link in your docs, built on its own machine by markdown-lsp — no hosted index, no quota, no upload."
 ---
 
 # Source of Truth
 
 Source of Truth is a structured graph of your entire documentation — pages, headings, sections, and cross-links — built locally by AI agents like Claude Code via [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp). The agent runs the parser on your repository, holds the graph in memory, and queries it through LSP-style tools while it works on your docs.
 
-> **Note.** Server-side Source of Truth indexing and the MCP graph tools (`get_doc_graph`, `read_doc_sections`, `reindex_doc_graph`, and the 17 `doc_*` tools) were removed in **v0.22.0**. The graph now lives entirely on the agent's machine — there is no hosted index, no reindex quota, and no PRO+ gating for it.
+> **Note.** Server-side Source of Truth indexing and the MCP graph tools (`get_doc_graph`, `read_doc_sections`, `reindex_doc_graph`, and the 17 `doc_*` tools) were removed in **v0.22.0**. The graph now lives entirely on the agent's machine: there is no hosted index, no reindex quota, and nothing about it draws on your project balance.
 
-## Install
+## How do I give an agent the Source of Truth graph?
+
+Run `markdown-lsp` in the repository you want the agent to query, and the graph is available to it for as long as it works there. Nothing is uploaded and nothing needs to be enabled in Docsbook.
 
 The graph search is powered by [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) — our open-source LSP implementation for Markdown, published on npm as `markdown-lsp`. Run it in any repo whose docs you want to query:
 
@@ -68,15 +70,20 @@ These are MCP tools the plugin exposes to Claude Code (or any MCP-compatible cli
 | `doc_search_links_from` | All outgoing links from a page |
 | `doc_resolve_link` | Convert a relative or wiki link into a resolved target page + anchor |
 
-## Why local instead of server-side
+## Why is the graph local instead of hosted?
 
-- **No quotas.** Reindex as often as the agent needs — it's all on disk.
-- **No PRO+ gating.** The graph is free and works on any Docsbook plan, including non-Docsbook docs.
-- **Always fresh.** The graph reflects uncommitted edits the moment the agent saves them.
-- **Private.** Your unpublished drafts never leave the machine.
+Docsbook builds the Source of Truth graph on the agent's machine because the three things an agent needs from it — freshness, privacy and unlimited re-reads — are exactly the three a hosted index cannot give.
+
+- **No quotas, and no cost.** Reindex as often as the agent needs; it is all on disk, and no call is metered.
+- **Always fresh.** The graph reflects uncommitted edits the moment the agent saves them, which a hosted index built from pushed commits cannot do.
+- **Private.** Unpublished drafts never leave the machine.
+- **Not tied to Docsbook.** `markdown-lsp` runs against any Markdown repository, including documentation that is not published here.
+
+The trade-off is real and worth naming: an agent with no checkout of your repository gets nothing from this graph. That agent should use the hosted [`search_docs` and `get_doc_outline`](./mcp.md#how-do-i-search-and-edit-docs-content-from-an-agent) tools instead.
 
 ## Related
 
-- [MCP Server](./mcp.md) — The hosted MCP server for workspace, branding, analytics, and webhooks.
-- [docs-skills](./skills.md) — AI skills catalogue that builds on top of the graph.
-- [Webhooks](../webhooks.md) — Subscribe to `content.indexed` and `content.outdated` events on the hosted side.
+- [MCP Server](./mcp.md) — the hosted server for workspace, content, analytics and webhooks.
+- [Docs Skills](./skills.md) — the skills catalog that builds on top of the graph.
+- [llms.txt](./llms-txt.md) — the machine-readable index of the *published* site, for agents with no checkout.
+- [Webhooks](../webhooks.md) — subscribe to `content.indexed` and `content.outdated` on the hosted side.

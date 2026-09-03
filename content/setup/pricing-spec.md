@@ -1,94 +1,72 @@
 ---
-title: "Pricing & Plans"
-description: "Docsbook pricing — Free forever, Pro, and Business — with AI budgets, project seats, translations, and feature access broken down per plan. Pro adds live auto translations and a custom domain; Business adds premium support, unlimited seats, privacy & access control, bring-your-own API keys, and semantic search on top."
+title: "How Docsbook bills AI usage against a project balance"
+description: "What a project balance is, which actions spend it, how a call is priced, and where to set a per-source ceiling so one job cannot absorb everything."
 ---
 
-# Pricing & Plans
+# How Docsbook charges for AI usage
 
-Docsbook has three plans. A subscription is bought once per **account** and grants a number of project **seats** — a project becomes paid while it holds a seat, and you can move a seat between projects. Free projects are unlimited on every plan.
+Docsbook meters money, not features. Each **project** carries its own balance, every AI call is charged against that project's balance at what the call cost plus a markup, and the dashboard shows the model, its per-1M-token rate and the markup, so the amount deducted is one you can check.
 
-## Free
+Current prices and what a subscription includes are published at **[docsbook.io/pricing](https://docsbook.io/pricing)**. That page is generated from the live billing constants on every request, so it is the only place a price is guaranteed to be current — this page deliberately quotes none.
 
-- $0 forever
-- All basic features: branding, UI settings, navigation, basic analytics
-- Reader-facing AI chat ($0.15/month AI budget), with your choice of AI model
-- SEO / GEO / AEO tools — meta tags, sitemap, OpenGraph, JSON-LD
-- No translations, no custom domain
+For the short version of the model, read [Docsbook pricing](../../pricing.md). This page is the operational detail: what a balance is, which action spends it, and where to put a ceiling on one source.
 
-## Pro
+## What a project balance is
 
-$85/month ($59/month billed yearly), 14-day free trial. Best for solo founders, indie devs, and small teams.
+A project balance is a single pot of money attached to one documentation project, not to your account and not to a plan. Projects do not share a balance: spending on one never drains another.
 
-Everything in Free, plus:
+A newly created project starts with **$1.00** of balance. After that the balance moves in two directions only — down as AI usage is charged against it, and up when it is topped up.
 
-- 1 project seat
-- Live auto translations — 15 languages, re-translated automatically on every edit
-- Custom domain (`docs.yourcompany.com`) with free SSL
-- Advanced AI chat config — chat hooks, custom system prompt, chat analysis dashboard
-- Full analytics and chat history (30 days), Google Search rankings, conversions & funnels
-- $85/month AI budget
-- Webhooks — unlimited
-- Privacy & access control — see Business
+When a project's balance is exhausted, AI usage on that project stops until the balance is restored. Nothing is charged beyond what has already been paid for; there is no overage bill.
 
-## Business
+## Which actions spend the balance
 
-$200/month ($140/month billed yearly), 14-day free trial. Everything in Pro, plus premium support and a set of Business-exclusive capabilities, for teams and heavier usage.
+Only work that calls an AI model costs money. Everything Docsbook does with your markdown is free of the balance.
 
-- Everything in Pro
-- Premium support — a person on our team works directly with you to integrate Docsbook into your business
-- Unlimited project seats
-- Privacy & access control — password-protect a workspace, or gate it behind your own SSO/OIDC identity provider
-- Bring your own AI chat and/or translation API key (with custom model)
-- Semantic search over your docs, hosted interactive API reference, changes impacts, collaborators
-- Webhooks — unlimited
-- $200/month AI budget
+| Spends the balance | Does not spend the balance |
+|---|---|
+| Answers the reader-facing AI assistant writes | Serving and reading your documentation site |
+| Translating a page into another language | Hosting, your custom domain and its SSL certificate |
+| Work you ask the admin AI agent or editor to do | Full-text keyword search |
+| Building the semantic index over your docs | GitHub sync, the web editor, and the Edit on GitHub link |
+| | Branding, navigation, widgets, feedback and event tracking |
 
-## Limits Summary
+The practical consequence: a documentation site with search, custom branding and a custom domain can run indefinitely without spending anything, and the cost starts the moment a model is asked to write or translate something.
 
-| Feature                      | Free     | Pro     | Business |
-| ----------------------------- | -------- | ------- | -------- |
-| GitHub repositories           | ∞        | ∞       | ∞        |
-| Paid project seats            | 0        | 1       | Unlimited |
-| AI chat (reader-facing)       | ✅       | ✅      | ✅       |
-| Live auto translations        | ❌       | ✅      | ✅       |
-| Custom domain                 | ❌       | ✅      | ✅       |
-| Privacy & access (password/SSO) | ❌     | ❌      | ✅       |
-| SEO / GEO / AEO               | ✅       | ✅      | ✅       |
-| Choose your AI model          | ✅       | ✅      | ✅       |
-| Bring your own API key        | ❌       | ❌      | ✅       |
-| Webhooks                      | ❌       | ∞       | ∞        |
-| Monthly AI budget             | $0.15    | $85     | $200     |
-| Payment                       | —        | monthly/annual | monthly/annual |
-| Per-source spend limits       | ❌       | ✅      | ✅       |
+## How a single call is priced
 
-Pro and Business do **not** unlock the same set of features: premium support, unlimited seats, privacy & access, bring-your-own API keys, and semantic search are Business-exclusive. See [AI Chat](../../ai/chat.md) and [Translations](../../ai/translations.md) for current limit numbers.
+Usage is priced in money, not in tokens. Every call is charged at the real price the provider charges for the model that answered, plus a markup. The model that ran, its per-1M-token rate and the markup all appear in your dashboard beside the deduction.
 
-The AI budget is per **account** and shared across every paid project on it. On Pro, if you need more than one paid project, you can buy extra seats — up to twice your plan's seat allowance.
+You can choose which model runs. A cheaper model makes the same balance go further, and switching costs nothing.
 
-Both Pro and Business can also be billed annually at a 30% discount off the monthly price.
+You can also bring your own provider API key. The provider then bills you directly for usage and Docsbook bills you nothing for it.
 
-## Usage Budget
+## Cap one source of spend
 
-Every plan's monthly AI budget is a hard ceiling: once it's exhausted, AI usage simply pauses until the next billing cycle. You are never billed above your plan's price.
+From the **Usage** tab in workspace settings you can set an optional per-cycle ceiling on each individual spend source:
 
-### Per-Source Limits
+| Source | What it covers |
+|---|---|
+| Readers (AI Chat) | Answers written for visitors to your site |
+| Admin & AI Agent | Work you ask the assistant to do on your docs |
+| AI Translations | Pages translated into your enabled languages |
+| Semantic Index | Embedding your pages so search matches by meaning |
 
-From the **Usage** tab in workspace settings, you can also set an optional per-cycle ceiling for each individual spend source — Readers (AI Chat), Admin & AI Agent, AI Translations, Semantic Index — counted against the plan budget. It answers "AI Translations must not cost me more than $3 this month." When a source reaches its limit it stops until the next cycle while the others keep running; a blank field means no limit, and $0 switches that source off entirely. Limits are shown as a marker on the matching bar under **Spend by source**, so the plan's budget and your own ceiling are both visible.
+A ceiling answers "AI translations must not run away with this project's balance." When a source reaches its ceiling it stops and the other sources keep running. A blank field means no ceiling; `$0` switches that source off entirely.
 
-Usage is priced in money, not tokens: every AI call is charged at the real price the provider charges for the model that answered, plus a markup. The model, its per-1M-token rate and the markup are all shown in your dashboard, so the amount deducted is one you can check. On every plan, including Free, you can switch models — a cheaper model makes the same budget go further. On Business you can bring your own API key instead, pay the provider directly, and we bill you nothing for usage.
+Each ceiling is drawn as a marker on the matching bar under **Spend by source**, so the balance and your own limit stay visible together.
 
-## Upgrade Paths
+## Billing and cancellation
 
-- **Free → Pro** — monthly subscription, 14-day free trial, instant activation
-- **Free → Business** — monthly subscription, 14-day free trial, instant activation
-- **Pro → Business** — upgrade anytime for premium support, unlimited seats, and Business-only capabilities
-- **Pro/Business → Free** — cancel anytime via the Customer Portal
+Billing runs through **Paddle**, which acts as the merchant of record and handles card processing, EU VAT and US sales tax. Docsbook never sees your card number.
 
-## Refund Policy
+Manage or cancel from the dashboard at [docsbook.io/chat](https://docsbook.io/chat). Your markdown stays in your GitHub repository throughout, so leaving is an export rather than a migration.
 
-Full refund within 30 days, no questions asked. Contact [support@docsbook.io](mailto:support@docsbook.io).
+Billing questions go to [support@docsbook.io](mailto:support@docsbook.io).
 
 ## Related
 
-- [Premium Features](../../guides/advanced/premium.md) — what each paid plan unlocks
-- [AI Chat](../../ai/chat.md), [Translations](../../ai/translations.md), [Source of Truth](../../ai/source-of-truth.md)
+- [Docsbook pricing](../../pricing.md) — the model in one page, and the link to the live figures.
+- [AI chat](../../ai/chat.md) — the reader-facing assistant, the largest single consumer of a project balance.
+- [Translations](../../ai/translations.md) — how a page is queued, translated and re-translated.
+- [AI usage analytics](../../analytics/tracking/ai-usage.md) — where the balance actually went.

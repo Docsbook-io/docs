@@ -1,15 +1,15 @@
 ---
-title: "Content Options & Settings"
-description: "Show or hide UI elements around your documentation content — scroll-to-top, prev/next buttons, breadcrumbs, and Ask AI placement options."
+title: "Show or hide the controls around your page content"
+description: "Toggle the scroll-to-top button, prev/next arrows, breadcrumbs, the Ask AI button and the Copy page dropdown on your Docsbook documentation site."
 ---
 
-# Content Options
+# Content options
 
-Control the UI elements that appear around your page content.
+Content options are the Docsbook toggles that control the interface *around* your page — the navigation and action controls, not the words. All of them live on one tab and apply to every page on the site.
 
-> Looking to change how the content itself renders — cards, accordions, steps, call-to-action blocks? That is [Content Widgets](../features/widgets.md), written in the markdown rather than toggled here.
+> Looking to change how the content itself renders — cards, accordions, steps, call-to-action blocks? That is [Content widgets](../features/widgets.md), written in the markdown rather than toggled here.
 
-## Settings
+## What each option does
 
 | Setting | What it does |
 |---|---|
@@ -18,69 +18,68 @@ Control the UI elements that appear around your page content.
 | Breadcrumbs | Breadcrumb trail above the page title |
 | Ask AI button | Chat button shown on the page (owners also get Editor) |
 | Ask AI in outline | AI button shown in the right-side table of contents panel |
-| Copy page menu items | Seven independent toggles for the Copy page dropdown — Skills.md URL, view as Markdown, and one per AI client (ChatGPT, Claude, Cursor, Windsurf, VS Code MCP) |
+| Copy page menu items | Seven independent toggles for the Copy page dropdown |
 
-## How to Configure
+## Change a content option
 
-1. Open your docs site.
-2. Float Widget → **Design** → **Content** tab.
-3. Toggle the desired options.
-4. Save.
+1. Open your docs site while signed in.
+2. Open Float Widget → **Design** → **Content** tab.
+3. Toggle the options you want.
+4. Click **Save**.
 
----
+## Scroll to top
 
-## Scroll to Top
+A small floating arrow appears once the reader scrolls down. One click returns them to the top of the page.
 
-A small floating arrow that appears after the reader scrolls down. One click returns them to the top of the page.
+Turn it on for long reference pages, API tables, or any page taller than one screen.
 
-**Recommended for:** Long reference pages, API docs, or any page that exceeds one screen height.
+## Prev / Next buttons
 
----
+Adds **← Previous** and **Next →** arrows at the bottom of every page, linking to the adjacent pages in your sidebar order.
 
-## Prev / Next Buttons
-
-Adds "← Previous" and "Next →" navigation arrows at the bottom of every page, linking to the adjacent pages in your sidebar order.
-
-**Recommended for:** Tutorial-style docs where readers follow a sequence. Leave off for reference docs where pages are consulted independently.
-
----
+Turn them on for docs read in sequence, such as a tutorial series. Leave them off for reference docs, where each page is consulted on its own and the arrows suggest an order that does not exist.
 
 ## Breadcrumbs
 
-Shows the current page location as a path above the heading:
+Shows the current page's location as a path above the heading:
 
+```text
+Home > Guides > Custom domain
 ```
-Home > Guides > Custom Domain
-```
 
-[More about breadcrumbs in sidebar settings →](../../design/layout/sidebar)
+Breadcrumbs read the same folder structure the sidebar does, so they follow your repository layout with nothing to configure. See [Sidebar settings](../../design/layout/sidebar.md) for the related navigation controls.
 
----
+## Copy page menu
 
-## Copy Page Menu
+The Copy page dropdown holds seven items: Copy page, Copy Skills.md URL, View as Markdown, and one-click links that open the current page in ChatGPT, Claude, Cursor, Windsurf, or via VS Code MCP. Each has its own toggle.
 
-The Copy page dropdown includes Copy Skills.md URL, View as Markdown, and one-click links that open the current page directly in ChatGPT, Claude, Cursor, Windsurf, or via VS Code MCP — seven items in total, each with its own toggle. Turn off any subset to keep the dropdown focused on just the items you want; once every item is off, the dropdown's chevron disappears entirely.
+Turn off any subset to keep the dropdown down to the items you want. Once every item is off, the dropdown's chevron disappears, because there is nothing left to open. See [the Copy page dropdown](../features/copy.md#what-is-in-the-copy-page-dropdown) for what each item hands the reader.
 
-[More about the Copy page dropdown →](../features/copy#copy-page-menu)
+## Ask AI button
 
----
+Shows the AI controls on the page. It requires the AI agent to be enabled.
 
-## Ask AI Button
+On the page this renders as an **Ask AI** button in the action row above the content, next to **Copy page**. Pressing it opens the question box at the bottom of the page, already pointed at the page being read; pressing it again puts the box away.
 
-Shows the AI controls on the page. Requires the AI Agent to be enabled.
+You can show it in two places:
 
-On the page itself this renders as an **Ask AI** button in the action row above
-the content, next to **Copy page**. Pressing it opens the question box at the
-bottom of the page, already pointed at the page being read; pressing it again
-puts the box away.
+- On the page, in the action row above the content
+- In the right outline panel, beside the table of contents
 
-You can show it:
-- On the page (the action row above the content)
-- In the right outline panel (table of contents area)
+Both can be on at once. Unlike the other options on this tab, this one leads somewhere that spends money: every answer the assistant writes is billed against the project's balance, while the button itself costs nothing until a reader asks something.
 
-Both can be on at the same time if you want maximum discoverability.
+## Next steps
 
----
+- [Content widgets](../features/widgets.md) — the reference for blocks written in the markdown itself.
+- [Copy page and copy markdown buttons](../features/copy.md) — what the Copy page dropdown hands a reader.
+- [Sidebar settings](../../design/layout/sidebar.md) — the navigation tree these controls sit around.
 
-> **Give readers the navigation experience they deserve.**
-> [Connect your GitHub repo →](https://docsbook.io/create)
+<!-- widget:cta -->
+
+## Set up the controls your readers need
+
+Every new project starts with $1 of balance, and these toggles do not spend it.
+
+[Create a project](https://docsbook.io/start)
+
+<!-- /widget -->

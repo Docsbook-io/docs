@@ -1,13 +1,13 @@
 ---
-title: "Tracked Events Reference"
-description: "Every interaction Docsbook tracks — AI chat opens, code copies, outbound clicks, sidebar navigation, language switches — for engagement insights."
+title: "Every reader action Docsbook records on your docs site"
+description: "The full list of events Docsbook records on a documentation site: chat opens, questions, code copies, outbound clicks, navigation, language and heading views."
 ---
 
 # Events Analytics
 
-Track what visitors *do* on your docs — not just what they view.
+Docsbook records what a reader *does* on your documentation site, not only which page they opened. Seven event types are tracked on every site; each is counted per event rather than per visit, and event tracking costs nothing against your project's balance.
 
-## Tracked Events
+## Tracked events
 
 | Event | What it means |
 |---|---|
@@ -19,27 +19,29 @@ Track what visitors *do* on your docs — not just what they view.
 | Language switches | Visitor changed the display language |
 | Heading views | Visitor scrolled a heading into view while reading the page |
 
-## How to Open
+## How to open the events breakdown
 
 Float Widget → **Analytics** tab → scroll to the **Events** section.
 
 Events are shown as a breakdown with counts and percentages for the selected time range.
 
-## How to Use This Data
+## What each pattern means, and what to do about it
 
-**High AI opens, low queries** → Visitors are curious about AI but find the suggested questions unclear. Try updating your [custom questions](https://docsbook.io/docs/analytics/tracking/events).
+Each row below is a shape these events take on a real documentation site, and the move it points at.
+
+**High AI opens, low queries** → Readers open the assistant and then do not ask. The suggested questions are the thing they read first; see [AI chat](../../ai/chat.md) for setting them.
 
 **High code copies** → Your code examples are useful. Consider adding more.
 
 **Heading views concentrated near the top of a long page** → Readers aren't scrolling past the intro. Consider moving key content up or shortening the page.
 
-**High language switches** → Visitors want content in their language. [Enable more translations →](https://docsbook.io/docs/translation/settings)
+**High language switches** → Readers want content in their own language. See [translation settings](../../translation/settings.md) for enabling one.
 
 **High outbound clicks on a specific page** → That page is a good traffic handoff point to your product.
 
-## Drill into a single visitor (MCP, PRO+)
+## How do I see what one visitor did?
 
-You can investigate what one specific anonymous visitor actually did, end-to-end, via the MCP server.
+Two MCP tools reconstruct a single anonymous visitor's session on your documentation, end to end: `get_top_visitors` lists the busiest visitors over a period, and `get_visitor_activity` returns one visitor's events in order. Both are analytics reads over the event warehouse — they change nothing.
 
 ```text
 get_top_visitors(period: "7d", limit: 25)
@@ -65,7 +67,9 @@ Use cases:
 
 Only events that carry server-side IP (`docs.pageview`, `docs.page_feedback`, `landing.cta_click`) can be attributed to a visitor. Pure client-side events (theme toggles, code copies) are visible in aggregate but not per-visitor.
 
----
+## Related
 
-> **See your events data live.**
-> [Connect your GitHub repo →](https://docsbook.io/connect)
+- [Analytics overview](./overview.md) — the cards and figures these events feed
+- [MCP tools reference](../../reference/mcp-tools.md) — `get_top_visitors`, `get_visitor_activity` and the rest of the analytics tools
+- [Webhooks](../../webhooks.md) — being told when an event fires instead of checking for it
+- [AI usage & cost statistics](./ai-usage.md) — the conversations behind the AI chat events

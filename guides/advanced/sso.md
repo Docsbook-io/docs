@@ -1,17 +1,17 @@
 ---
-title: "Private Docs: Password & SSO Setup"
-description: "Restrict who can read your documentation — set a shared password, or gate the site behind your own Google Workspace, Microsoft Entra ID, or Okta SSO."
+title: "Restrict who can read your Docsbook documentation site"
+description: "Switch a workspace to private, then gate it with a shared password or your own Google Workspace, Microsoft Entra ID or Okta OIDC provider."
 ---
 
-# Private Docs: Password & SSO
+# Private docs: password and SSO
 
-By default, a Docsbook site is public — anyone with the link can read it. On Pro and Business, you
-can switch a workspace to **private** and require readers to unlock it first, either with a shared
-password or by signing in through your own SSO identity provider.
+By default, a Docsbook site is public — anyone with the link can read it. You can switch a
+workspace to **private** and require readers to unlock it first, either with a shared password or
+by signing in through your own identity provider.
 
-**Required:** Pro (monthly, 7-day free trial) or Business (monthly, 14-day free trial)
+Access control calls no AI model, so gating a workspace does not draw on the project's balance.
 
-## How It Works
+## How private mode works
 
 - **Public** (default) — anyone with the link reads the site, same as today.
 - **Private** — an anonymous reader sees an unlock screen instead of your content. Nothing about
@@ -21,7 +21,7 @@ password or by signing in through your own SSO identity provider.
 - You can configure a password, SSO, or both at once. If both are set, a reader picks whichever
   they have.
 
-## Option 1: Password Protection
+## Option 1: password protection
 
 The simpler option — set one shared password for the whole workspace.
 
@@ -34,11 +34,16 @@ Readers who enter the correct password stay unlocked for a while, so they don't 
 it on every visit. To change the password, set a new one the same way. To remove password
 protection, click **Remove** next to the password field.
 
-## Option 2: SSO (Bring Your Own Identity Provider)
+## Option 2: SSO with your own identity provider
 
-For team or company docs, SSO lets readers sign in with their existing work account instead of
-sharing a password. You register your own app with your identity provider — Docsbook never sees or
-stores your provider's admin credentials, only the OAuth app details you enter.
+Docsbook SSO is **OIDC only**. You register an OIDC app with your own identity provider and enter
+its details below; readers then sign in with their existing work account instead of a shared
+password. Docsbook never sees or stores your provider's admin credentials — only the OAuth app
+details you enter.
+
+**SAML is not supported.** If your identity provider is configured for SAML and cannot issue an
+OIDC app registration, password protection is the option available to you today. Docsbook lists
+SAML as planned, not shipped, and this page describes only what works now.
 
 You'll need, from your identity provider's app registration:
 
@@ -52,7 +57,7 @@ You'll need, from your identity provider's app registration:
 | JWKS URI | Where Docsbook verifies the identity token's signature |
 | Allowed domain *(optional)* | Restrict sign-in to one email domain, e.g. `acme.com` — anyone outside it is rejected even with valid IdP credentials |
 
-### Google Workspace
+### Set up Google Workspace
 
 1. In the [Google Cloud Console](https://console.cloud.google.com), create an **OAuth 2.0 Client ID** (type: Web application)
 2. Add redirect URI: `https://docsbook.io/api/workspaces/<workspace_id>/access/sso/callback` (your workspace ID is shown in the Privacy & Access panel)
@@ -63,7 +68,7 @@ You'll need, from your identity provider's app registration:
    - JWKS URI: `https://www.googleapis.com/oauth2/v3/certs`
 4. Set **Allowed domain** to your Google Workspace domain (e.g. `acme.com`) to restrict sign-in to your organization
 
-### Microsoft Entra ID
+### Set up Microsoft Entra ID
 
 1. In the [Entra admin center](https://entra.microsoft.com), register a new application
 2. Add redirect URI: `https://docsbook.io/api/workspaces/<workspace_id>/access/sso/callback`
@@ -74,7 +79,7 @@ You'll need, from your identity provider's app registration:
    - Token endpoint: `https://login.microsoftonline.com/<tenant-id>/oauth2/v2.0/token`
    - JWKS URI: `https://login.microsoftonline.com/<tenant-id>/discovery/v2.0/keys`
 
-### Okta
+### Set up Okta
 
 1. In your Okta admin console, create a new **OIDC – Web Application** integration
 2. Add sign-in redirect URI: `https://docsbook.io/api/workspaces/<workspace_id>/access/sso/callback`
@@ -84,7 +89,7 @@ You'll need, from your identity provider's app registration:
    - Token endpoint: `https://<your-org>.okta.com/oauth2/v1/token`
    - JWKS URI: `https://<your-org>.okta.com/oauth2/v1/keys`
 
-### Saving SSO Settings
+### Save your SSO settings
 
 1. Open the Float Widget → **Settings** → **Privacy & Access**
 2. Switch visibility to **Private** if you haven't already
@@ -94,15 +99,15 @@ You'll need, from your identity provider's app registration:
 To remove SSO, click **Remove** next to the SSO status. Removing SSO does not affect a
 separately-configured password, and vice versa.
 
-## Via MCP (AI agents)
+## Configure access from an AI agent
 
-An AI agent connected to your workspace's MCP server can configure this with the `update_access`
-tool — same fields as above, passed as `visibility`, `password`, and `sso` (with `client_id`,
+An AI agent connected to your workspace's MCP server can set visibility, the password and the SSO
+details with the `update_access` tool — same fields as above, passed as `visibility`, `password`, and `sso` (with `client_id`,
 `client_secret`, `authorization_endpoint`, `token_endpoint`, `jwks_uri`, `allowed_domain`).
 
 ## Troubleshooting
 
-### Reader gets "Incorrect password"
+### A reader gets "Incorrect password"
 
 Passwords are case-sensitive. Set a new one if you're unsure what was configured — the current
 password can't be revealed, only replaced.
@@ -119,7 +124,8 @@ Double-check the client secret and the three endpoint URLs — a typo in any of 
 handshake. Endpoints must be the exact ones your identity provider issues for your tenant/org, not
 generic placeholders.
 
-## What's Next?
+## Next steps
 
-- [Managing Your Documentation](../getting-started/managing-docs.md)
-- [Pro and Business plans](./premium.md)
+- [Manage your documentation site](../getting-started/managing-docs.md) — where the Privacy & Access panel sits among the other settings.
+- [What Docsbook includes and what costs money](./premium.md) — the capabilities around this one, and what draws on the project balance.
+- [MCP tools reference](../../reference/mcp-tools.md) — the full argument list for `update_access`.

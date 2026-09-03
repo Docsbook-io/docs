@@ -1,19 +1,19 @@
 ---
-title: "Content Widgets — Rich Blocks in Plain Markdown"
-description: "Turn a section of your markdown into a card grid, accordion, numbered steps, API playground, or call-to-action block using invisible HTML comments."
+title: "Content widgets: rich blocks written in plain markdown"
+description: "Reference for every Docsbook content widget — cards, accordion, stepper, api, cta, cta-form and recommendations — and the markers each one reads."
 ---
 
-# Content Widgets
+# Content widgets
 
-A content widget renders part of your page as a rich UI block — a grid of cards, a collapsible FAQ, numbered steps — without leaving markdown behind.
+A Docsbook content widget renders part of your page as a rich UI block — a grid of cards, a collapsible FAQ, numbered steps — without leaving markdown behind.
 
 You mark the region with two HTML comments. They are invisible in every markdown reader, so the same file still reads correctly on GitHub, in your editor, and in any other tool. Only Docsbook re-shapes it.
 
 ```markdown
 <!-- widget:cards -->
 
-- [Overview](./overview.md) — What this product is {compass}
-- [Getting Started](./quick-start.md) — Begin in 3 minutes {rocket}
+- [Search](./search.md) — Let readers find a page by keyword {search}
+- [Page feedback](./feedback.md) — Ask whether the page helped {thumbs-up}
 
 <!-- /widget -->
 ```
@@ -46,10 +46,10 @@ Turns link lists into a responsive grid. Best on index and hub pages that send r
 ```markdown
 <!-- widget:cards -->
 
-## Start Here
+## Start here
 
-- [Overview](./overview.md) — What this product is {compass}
-- [Getting Started](./quick-start.md) — Begin in 3 minutes {rocket}
+- [Search](./search.md) — Let readers find a page by keyword {search}
+- [Page feedback](./feedback.md) — Ask whether the page helped {thumbs-up}
 
 <!-- /widget -->
 ```
@@ -63,19 +63,19 @@ Turns link lists into a responsive grid. Best on index and hub pages that send r
 ```markdown
 <!-- widget:cards cols=2 -->
 
-- [Self-hosting](./guides/self-hosting.md) — Run it on your own infrastructure {server}
+- [Full-text search](./search.md) — Match a reader's keyword against your pages {search}
 
-  Ships as a single container with Postgres. Expect an afternoon for the first
-  deploy, and no ongoing maintenance beyond upgrades.
+  Indexes every markdown file the site publishes and rebuilds itself when the
+  repository changes. Nothing to reindex by hand.
 
-  [Read the guide](./guides/self-hosting.md)
+  [Read the guide](./search.md)
 
-- [Cloud](./guides/cloud.md) — Let us run it for you {cloud}
+- [Page feedback](./feedback.md) — Ask whether the page helped {thumbs-up}
 
-  Backups, upgrades and monitoring are ours. You keep a data-export endpoint,
-  so moving to self-hosting later is a copy, not a migration.
+  One click from the reader, no form and no email address. Results land per
+  page, so you can sort by the pages rated worst.
 
-  [Compare the two](./guides/hosting-options.md)
+  [Read the guide](./feedback.md)
 
 <!-- /widget -->
 ```
@@ -119,11 +119,11 @@ A small bordered block closing a page with the one thing the reader should do ne
 ```markdown
 <!-- widget:cta -->
 
-## Publish your docs in three minutes
+## Publish your docs from GitHub
 
 Connect a repository and your markdown is live.
 
-[Start free](https://example.io/signup) · [See pricing](./pricing.md)
+[Create a project](https://docsbook.io/start) · [See pricing](https://docsbook.io/pricing)
 
 <!-- /widget -->
 ```
@@ -173,14 +173,15 @@ The **Widgets** section of your project settings shows the same set as a gallery
 
 Every widget is on for every project. If one does not suit your documentation, switch it off in **Settings → Widgets** and Docsbook stops rendering it across the whole site.
 
-Switching a widget off never edits your files. The `<!-- widget:… -->` comments stay exactly where an author put them, every word between them still publishes, and the region simply appears as ordinary markdown — the same thing that happens to a misspelled widget name. Switch it back on and every page that used it returns to the rich block, with nothing to re-write.
+Switching a widget off never edits your files. The `<!-- widget:… -->` comments stay exactly where an author put them, every word between them still publishes, and the region appears as ordinary markdown — the same thing that happens to a misspelled widget name. Switch it back on and every page that used it returns to the rich block, with nothing to re-write.
 
 Two consequences worth knowing:
 
 - The live editor stops offering a switched-off widget, and so does the assistant when it writes a page for you. Neither can hand you markers that would not render.
 - Pages already translated into another language keep the widget until their next translation pass. Only the original picks the change up immediately.
 
----
+## Related
 
-> **Documentation your readers actually act on.**
-> [Connect your GitHub repo →](https://docsbook.io/connect)
+- [Content options](../setup/content-options.md) — the toggles that control the UI around your content, rather than the content itself.
+- [Copy page and copy markdown buttons](./copy.md) — the action row the `cta` widget sits below.
+- [Editing on the page](../../guides/getting-started/managing-docs.md) — apply a widget to a block without typing the markers.

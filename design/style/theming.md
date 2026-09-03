@@ -1,15 +1,15 @@
 ---
-title: "Theming — Light, Dark, System"
-description: "Control the light and dark mode experience in your Docsbook site — toggle the theme switcher and set the default theme readers see on first visit."
+title: "Set the light and dark theme of your documentation site"
+description: "Choose the theme a first-time reader of your Docsbook site sees, decide whether the light and dark switcher is shown at all, and pick where it sits."
 ---
 
 # Theming
 
-Control the light/dark mode experience for your readers.
+Theming decides which of the two themes — light or dark — a reader of your Docsbook documentation site sees first, and whether they can switch. A returning reader always sees the theme they last chose, so the default only ever applies to a first visit.
 
 ---
 
-## Theming Options
+## Theming options
 
 | Setting | What it does |
 |---|---|
@@ -28,25 +28,26 @@ Float Widget → **Design** → **Theme** tab → adjust settings → Save.
 
 ---
 
-## Theme Settings
+## Theme settings
 
-### Default Theme
+### Default theme
 
-Sets what a new visitor sees before they've made any choice.
+The default theme is what a new visitor to your documentation site sees before they have made any choice.
 
 Options: `Light` | `Dark`
 
 The visitor's preference is saved in their browser — so returning visitors always see their last-used theme, regardless of your default.
 
-### Theme Toggle Visibility
+### Theme toggle visibility
 
-When enabled, a sun/moon icon appears in the header or sidebar for visitors to switch themes manually.
+The theme toggle is the light/dark switcher your readers press. When it is enabled, a sun/moon icon appears in the header or sidebar for visitors to switch themes manually.
 
 You can also control *where* the toggle appears:
-- **In the header** → via [Header Options](../layout/header#header-options)
-- **In the sidebar** → via [Sidebar Control](../layout/sidebar)
+- **In the header** → via [Header Options](../layout/header.md#header-options)
+- **In the sidebar** → via [Sidebar Control](../layout/sidebar.md)
 
----
+## Related
 
-> **Build docs your readers enjoy using.**
-> [Connect your GitHub repo →](https://docsbook.io/connect)
+- [Header layout and navigation](../layout/header.md) — one of the two places the theme toggle can sit
+- [Sidebar layout and configuration](../layout/sidebar.md) — the other place it can sit
+- [Branding — colors, fonts, logos](./branding.md) — the accent color drawn over both themes

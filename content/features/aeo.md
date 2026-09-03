@@ -1,59 +1,63 @@
 ---
-title: "AEO — Answer Engine Optimization in Docsbook"
-description: "Optimize for featured snippets, People Also Ask and voice assistants. Docsbook auto-generates FAQPage, HowTo and speakable JSON-LD from your markdown — no manual schema needed."
-tldr: "Enable AEO in the SEO / GEO admin tab. Docsbook scans your markdown for FAQ sections and 'How to ...' step-by-step lists, then emits FAQPage and HowTo JSON-LD plus speakable markup for voice assistants — automatically."
+title: "AEO: get your docs into answer boxes and voice replies"
+description: "Docsbook detects FAQ sections and How-to procedures in your Markdown and emits FAQPage, HowTo and speakable JSON-LD — with the shapes the detector needs."
+tldr: "Turn AEO on in the admin SEO / GEO tab. Docsbook scans your Markdown for FAQ sections and 'How to …' numbered procedures, then emits FAQPage and HowTo JSON-LD plus speakable markup for voice assistants."
 ---
 
 # AEO — Answer Engine Optimization
 
-AEO targets the surfaces where users get an instant answer instead of a list of links: Google's featured snippets and *People Also Ask*, Bing answer boxes, Alexa and Google Assistant voice responses, and increasingly the conversational front-end of every search.
+Docsbook AEO generates the structured data that answer surfaces read: Google's featured snippets and *People Also Ask*, Bing answer boxes, and the voice replies of Google Assistant and Alexa. Toggle **AEO** on in the admin **SEO / GEO** tab, and Docsbook emits `FAQPage`, `HowTo` and `speakable` JSON-LD from the Markdown you already wrote.
 
-Three structural patterns dominate these surfaces — FAQ, step-by-step instructions and short speakable summaries. Docsbook generates all three from regular markdown.
+AEO is markup: it describes content a page already has. Its neighbours cover the other two surfaces — [SEO](./seo.md) for ranking in the result list, and [GEO](./geo.md) for being quoted by an AI assistant.
 
-## What Docsbook does when AEO is enabled
+Docsbook emits each object **only when the page genuinely contains the matching content**. A page with no FAQ gets no `FAQPage`. Structured data describing content a reader cannot find is a manual-action risk, not an optimisation.
 
-Toggle **AEO** on in the admin **SEO / GEO** tab.
+## What shape must an FAQ have to be detected?
 
-### FAQPage auto-detect
+Docsbook turns a Markdown section into `FAQPage` JSON-LD when it matches one of two patterns:
 
-Any markdown section structured as an FAQ becomes `FAQPage` JSON-LD. The detector looks for two patterns:
+1. An `## FAQ` heading (or *Frequently Asked Questions*, or the Russian equivalents) followed by `### Question?` H3s — each H3 becomes a question.
+2. Any `### heading ending with a question mark`, anywhere in the document.
 
-1. An `## FAQ` (or *Frequently Asked Questions*) heading followed by `### Question?` H3s — each H3 becomes a question.
-2. Any `### Question ending with a ?` anywhere in the document.
-
-Answers are extracted from the paragraphs between the question heading and the next heading. Up to 20 questions per page, answers capped at 1000 characters.
-
-**Authoring tip:** keep each answer self-contained — Google strips the FAQ snippet from context, so it must read standalone.
+The answer is the paragraphs between the question heading and the next heading. Docsbook takes **up to 20 questions per page** and truncates each answer at **1,000 characters**.
 
 ```markdown
 ## FAQ
 
 ### How do I add a custom domain?
 
-Open the admin panel, go to Custom Domain, type `docs.yourcompany.com` and press save. SSL provisions in 30 seconds.
+Open the admin panel, go to Custom Domain, enter `docs.yourcompany.com` and save. Docsbook then provisions the certificate.
 
-### Is GitBook export compatible?
+### Is a GitBook export compatible?
 
 Yes — Docsbook reads standard CommonMark from GitHub, the same format GitBook exports.
 ```
 
-### HowTo auto-detect
+**Authoring rule:** keep each answer self-contained. Google strips the FAQ snippet out of its context, so an answer that starts "As mentioned above…" is an answer nobody can use. Open with a direct yes, no, or number.
 
-Any H1/H2/H3 starting with **"How to ..."** (or Russian **"Как ..."**) followed by a numbered list becomes a `HowTo` JSON-LD object. Each numbered item becomes a `HowToStep` with a `name` (first sentence) and `text` (full step).
+## What shape must a procedure have to become a HowTo?
 
-Requirements: at least 3 numbered steps, capped at 20. Up to 5 HowTos per page.
+Docsbook turns a heading into `HowTo` JSON-LD when three conditions hold together:
+
+1. An H1, H2 or H3 begins with **"How to …"** (or the Russian **"Как …"**).
+2. A numbered list follows it.
+3. That list has **at least 3 steps**.
+
+Each numbered item becomes a `HowToStep`, with its first sentence as the step `name` and the full item as its `text`. Docsbook caps a procedure at **20 steps** and a page at **5 HowTo objects**. A stepper widget counts too: a numbered procedure written as a Docsbook stepper region is read the same way as a numbered list.
 
 ```markdown
 ## How to publish your first docs site
 
-1. Go to docsbook.io and sign in with GitHub.
+1. Sign in at docsbook.io with your GitHub account.
 2. Paste the URL of any public repository.
-3. Pick a name and click Publish — your site is live in 15 seconds.
+3. Pick a name and publish.
 ```
 
-### Speakable markup
+A two-step procedure produces nothing. If the steps are genuinely two, that is the right outcome — do not pad a list to reach the threshold.
 
-The page's `TechArticle` schema gets a `speakable` block:
+## What does speakable markup do?
+
+With AEO on, the page's `TechArticle` schema gains a `speakable` block naming the parts a voice assistant should read aloud:
 
 ```json
 {
@@ -64,23 +68,31 @@ The page's `TechArticle` schema gets a `speakable` block:
 }
 ```
 
-Voice assistants (Google Assistant, Alexa) use this hint to know which parts of the page to read aloud. The selector list prioritizes the GEO TL;DR block (when GEO is on), then falls back to the first paragraph and H1.
+The selector list prefers the [GEO](./geo.md) TL;DR block when GEO is on, then falls back to the first paragraph, then to the H1. The practical consequence: whatever a reader sees first is also what a voice assistant says first, so a page opening with background rather than an answer reads badly out loud.
 
-## Authoring patterns that win
+## Authoring patterns for answer surfaces
 
-- **Phrase H2/H3 as questions** — "How do I cancel a subscription?" outperforms "Subscription cancellation".
-- **Keep answers 40–60 words** — that's the sweet spot for featured snippet length.
-- **Use tables and ordered lists** — Google extracts these almost verbatim into rich results.
-- **Open every FAQ answer with a direct yes/no/number** — *"Yes, Docsbook supports custom domains on the Business plan."*
+- **Phrase a heading as the question a reader would ask** — "How do I cancel a subscription?" is matched by more queries than "Subscription cancellation". This also feeds the H3-ending-in-a-question-mark detector above.
+- **Open every FAQ answer with a direct yes, no, or number**, then explain.
+- **Use tables and ordered lists** for anything enumerable; answer surfaces extract them close to verbatim.
+- **Keep each answer readable alone** — it will be displayed without the paragraph before it.
+- **Do not add FAQ markup to prose that is not a FAQ.** Exhaustive FAQ markup on non-FAQ pages is a weak-tier tactic at best, and misdescribing your page is the way to lose rich results entirely.
 
-## How to enable
+Docsbook does not promise a snippet. Whether a page wins one depends on the query, the competition and the engine — markup makes a page *eligible*, and that is the honest claim.
+
+## How to enable AEO
 
 1. Open your workspace admin panel (FloatWidget) → **SEO / GEO** tab.
 2. Toggle **AEO — Answer Engine Optimization** on.
-3. The change applies on next render — view source of any page to see `FAQPage` / `HowTo` JSON-LD if matching sections exist.
+3. The change applies on the next render. View source on any page to confirm the `FAQPage` and `HowTo` JSON-LD, if matching sections exist.
+
+## Next steps
+
+Turn AEO on, then check one page with a FAQ and one with a "How to" procedure — the JSON-LD in the page source tells you immediately whether the detector matched what you wrote.
 
 ## Related
 
-- [SEO Optimization](./seo) — classical search engine optimization
-- [GEO — Generative Engine Optimization](./geo) — citability in AI search
-- [llms.txt for AI agents](../../ai/llms-txt)
+- [SEO](./seo.md) — meta tags, sitemap, canonical URLs and `noindex`.
+- [GEO](./geo.md) — the TL;DR block the speakable selector prefers, and citation by assistants.
+- [llms.txt](../../ai/llms-txt.md) — the site-level index for AI crawlers.
+- [Search options](./search.md) — on-site search for readers who are already on the page.

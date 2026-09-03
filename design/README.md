@@ -1,11 +1,11 @@
 ---
-title: "Design & Branding"
-description: "Customize colors, fonts, logo, and layout. Configure header and sidebar, set light and dark themes, and match your docs to your product brand."
+title: "Brand and lay out your Docsbook documentation site"
+description: "Set the name, logo, accent color and fonts of your documentation site, then choose what its header and left sidebar show the people reading it."
 ---
 
 # Design & Branding
 
-All visual customization lives here — brand identity (logo, colors, fonts) and layout structure (header, sidebar). Branding is available on every plan, including Free.
+All visual customization lives here — brand identity (logo, colors, fonts) and layout structure (header, sidebar). Nothing on these pages spends your project's balance: branding, layout and theming are settings, not billed work.
 
 ## In this section
 
@@ -18,3 +18,4 @@ All visual customization lives here — brand identity (logo, colors, fonts) and
 
 - [Content & Setup](../content/README.md)
 - [Guides](../guides/README.md)
+- [Analytics & insights](../analytics/README.md) — what readers do with the site you just styled

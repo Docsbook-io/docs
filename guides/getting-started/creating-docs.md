@@ -1,322 +1,187 @@
 ---
-title: "Creating Your First Docs Site"
-description: "Beginner-friendly walkthrough to create your first Docsbook site from GitHub — what you need, screenshots, and tips even if you've never used GitHub before."
+title: "Create your first Docsbook site from a GitHub repo"
+description: "Fork an example repository, connect it to Docsbook, edit a page on GitHub, and watch the published documentation site update — no coding needed."
 ---
 
-# Creating a Documentation Site
+# Create your first documentation site
 
-This guide walks you through setting up your first documentation site on Docsbook from a GitHub repository — no coding experience required. Each step includes screenshots so you always know exactly where to click.
+In this tutorial you publish a documentation site from a GitHub repository and change a page on it. You need no coding experience and nothing installed: every step happens in a browser.
 
-> **Don't have a GitHub repo, or want to try Docsbook first?** Go to [docsbook.io/create](https://docsbook.io/create) instead — one field takes whatever you already have: a website URL, a repo link, a PDF or screenshots, or just a sentence about what you sell. You get a draft site to preview before creating any account. Come back to this guide when you want to connect an existing GitHub repo.
+**What you will have at the end:** a live documentation site at `docsbook.io/YOUR-USERNAME/docs`, and one page on it that you edited yourself.
 
-## What You'll Need
+## Before you start
 
-Before starting, ensure you have:
+You need two things:
 
-- **A computer with internet access** — any OS works (Windows, Mac, Linux)
-- **A free GitHub account** — this is where your documentation files will live
+- **A browser and an internet connection.** Any operating system works.
+- **A GitHub account.** It is free. Step 1 creates one if you do not have one.
 
-If you don't have a GitHub account yet, go to [github.com](https://github.com) and click **Sign up** — it's free and takes about two minutes.
+> **What is GitHub?** GitHub is a website where people store and share text files. Think of Google Drive, built for documentation and code. Docsbook reads your files from GitHub and publishes them as a documentation website.
 
-> **What is GitHub?** GitHub is a website where people store and share files — especially for documentation and software projects. Think of it like Google Drive, designed for text files and code. Docsbook reads your files from GitHub and turns them into a documentation website.
+## Step 1: create a GitHub account
 
----
+Skip this step if you already have an account.
 
-## Step 1 — Create a GitHub Account (skip if you already have one)
+1. Go to [github.com](https://github.com).
+2. Click **Sign up** in the top-right corner.
+3. Enter your email address and choose a password.
+4. Choose a username. It appears in your documentation URL, as in `docsbook.io/your-username/your-repo`.
+5. Confirm the verification code GitHub emails you.
 
-1. Go to [github.com](https://github.com)
-2. Click **Sign up** in the top-right corner
-3. Enter your email address and choose a password
-4. Choose a username — this will appear in your docs URL (e.g. `docsbook.io/your-username/your-repo`)
-5. Verify your email address
+![GitHub homepage with the Sign up button in the top-right corner](./images/github-signup.png)
 
-![Screenshot: GitHub homepage with Sign up button highlighted](./images/github-signup.png)
+## Step 2: fork the example repository
 
----
+A **repository** — "repo" for short — is a folder on GitHub that holds your documentation files. One repository publishes one documentation site.
 
-## Step 2 — Create a Repository for Your Documentation
+Rather than starting from an empty one, copy the Docsbook example repository. Copying someone else's repository is called **forking**, and your copy is independent: what you change never affects the original.
 
-> **What is a repository?** A repository (or "repo") is like a folder on GitHub. It stores all your documentation files. You'll need one repository per documentation site.
+1. Go to [github.com/docsbook-io/docs](https://github.com/docsbook-io/docs).
 
-### Option A — Start with an Example (Recommended for beginners)
+   ![Docsbook example repository page with the Fork button in the top right](./images/fork-button.png)
 
-Copy one of our ready-made example repositories. This is called **forking** — it creates your own copy of the repository that you can edit.
+2. Click **Fork** in the top-right corner.
 
-1. Go to [github.com/docsbook-io/docs](https://github.com/docsbook-io/docs)
-2. You'll see a page with files and a description
+3. Leave every setting as it is and click **Create fork**.
 
-   ![Screenshot: docsbook-io/docs repository page with Fork button visible in top-right](./images/fork-button.png)
+   ![GitHub fork dialog with the Create fork button highlighted](./images/fork-dialog.png)
 
-3. Click the **Fork** button in the top-right corner of the page
+4. GitHub opens your new repository at `github.com/YOUR-USERNAME/docs`.
 
-   > **What does Fork mean?** "Forking" means making your own copy of someone else's repository. It's like pressing "Duplicate" on a Google Doc. Your copy is independent — changes you make won't affect the original.
+   ![Your forked copy of the docs repository, listing its markdown files](./images/forked-repo.png)
 
-4. A dialog appears. Leave all settings as they are and click **Create fork**
+You now have a repository holding example documentation, ready to publish.
 
-   ![Screenshot: Fork dialog with "Create fork" button highlighted](./images/fork-dialog.png)
+## Step 3: connect the repository to Docsbook
 
-5. After a moment, GitHub takes you to your new repository at `github.com/YOUR-USERNAME/docs`
+1. Go to [docsbook.io/connect](https://docsbook.io/connect).
 
-   ![Screenshot: Your newly forked repository page](./images/forked-repo.png)
+   ![Docsbook sign-in page offering GitHub, Google, Apple and email sign-in](./images/docsbook-connect.png)
 
-**Done.** You now have a repository with example documentation files ready to edit.
+2. Choose a sign-in method — GitHub, Google, Apple, or a one-time code by email — and complete it.
 
----
+3. If you signed in with Google, Apple or email, Docsbook asks for GitHub access. Click **Authorize docsbook**.
 
-### Option B — Start from Scratch
+   > Docsbook reads your repository files. It cannot modify or delete anything in your repository unless you ask it to.
 
-If you prefer to begin with a blank slate:
+4. Find the repository you forked in the list and click it.
 
-1. Sign in to GitHub
-2. Go to [github.com/new](https://github.com/new)
+   ![Docsbook repository list with one repository selected](./images/select-repo.png)
 
-   ![Screenshot: GitHub new repository form](./images/new-repo-form.png)
+5. Docsbook builds your site and redirects you to it.
 
-3. Fill in the form:
-   - **Repository name** — choose a short name with no spaces, e.g. `my-docs` or `product-docs`
-   - **Description** — optional, a brief description of what this is
-   - **Visibility** — select **Public** (Docsbook requires public repositories)
-   - Check **Add a README file** — this creates your homepage
+Your documentation is now live at:
 
-4. Click **Create repository**
-
-   ![Screenshot: Create repository button highlighted](./images/create-repo-button.png)
-
-5. Your new repository opens. It contains one file: `README.md`
-
----
-
-## Step 3 — Connect Your Repository to Docsbook
-
-Connect your GitHub repository to Docsbook to create your documentation site.
-
-1. Go to [docsbook.io/connect](https://docsbook.io/connect)
-
-   ![Screenshot: Docsbook connect page with Sign in button](./images/docsbook-connect.png)
-
-2. Choose a sign-in method — GitHub, Google, Apple, or email (one-time code) — and complete the sign-in flow
-
-3. If you signed in with Google, Apple, or email, Docsbook prompts you to authorize GitHub access. Click **Authorize docsbook**
-
-   > Docsbook only reads your repository files — it cannot modify or delete anything.
-
-4. You'll see a list of your repositories. Find the one you just created and click on it
-
-   ![Screenshot: Repository list on Docsbook connect page with a repo highlighted](./images/select-repo.png)
-
-5. Docsbook creates your documentation site. You'll be redirected to it automatically.
-
-Your documentation site is now live at:
-```
-docsbook.io/YOUR-GITHUB-USERNAME/YOUR-REPO-NAME
+```text
+docsbook.io/YOUR-GITHUB-USERNAME/docs
 ```
 
----
+Open it and click through the sidebar. Every page you see is a markdown file in the repository you forked.
 
-## Step 4 — Edit Your Documentation
+## Step 4: edit a page on GitHub
 
-There are three ways to edit your documentation files. Choose the one that feels most comfortable.
+1. Open your repository at `github.com/YOUR-USERNAME/docs`.
+2. Click the file you want to change — start with `README.md`.
 
----
+   ![Repository file list with README.md highlighted](./images/repo-file-list.png)
 
-### Option A — Edit Directly on GitHub (Easiest, no setup needed)
+3. Click the **pencil icon** near the top right of the file.
 
-Edit files in your browser on GitHub — no software to install.
+   ![GitHub file view with the pencil edit icon highlighted](./images/edit-pencil-icon.png)
 
-#### Edit an existing page
+4. Change a sentence. The file is written in **Markdown**: `**bold**` renders as bold, `# Heading` renders as a large heading. The [markdown syntax reference](#reference-markdown-syntax) at the end of this page covers the rest.
 
-1. Go to your repository on GitHub (e.g. `github.com/YOUR-USERNAME/docs`)
-2. Click on the file you want to edit, for example `README.md`
+   ![GitHub markdown editor with edited text in the file](./images/github-editor.png)
 
-   ![Screenshot: Repository file list with README.md highlighted](./images/repo-file-list.png)
+5. Scroll down to **Commit changes**.
+6. Write a short note describing what you changed, such as "Update the introduction".
+7. Click **Commit changes**.
 
-3. Click the **pencil icon** (✏️) near the top-right of the file content
+   ![GitHub Commit changes form with the green commit button highlighted](./images/commit-changes.png)
 
-   ![Screenshot: File view with pencil/edit icon highlighted](./images/edit-pencil-icon.png)
+## Step 5: see the change on your site
 
-4. The file opens in an editor. Make your changes.
+Go back to your Docsbook site and reload the page you edited. Your new sentence is there.
 
-   > Your documentation uses **Markdown** — a simple way to format text. For example: `**bold**` becomes **bold**, `# Heading` becomes a large heading. See the [Markdown guide](#markdown-basics) below for more.
+That is the whole loop: commit to GitHub, and the published site follows. You have finished the tutorial.
 
-   ![Screenshot: GitHub file editor with some text being typed](./images/github-editor.png)
+## Add and delete pages
 
-4.1 Learn [how to edit Markdown](https://www.markdownguide.org/) files with pretty customization
+Adding a page is the same loop with a different button.
 
-5. When you're done editing, scroll down to the **Commit changes** section
-6. Optionally, write a short note describing what you changed (e.g. "Update introduction")
-7. Click **Commit changes**
+**Add a page:**
 
-   ![Screenshot: Commit changes form with green Commit button highlighted](./images/commit-changes.png)
+1. Open your repository and click **Add file** → **Create new file**.
 
-8. Go back to your Docsbook site and refresh — your changes appear immediately.
+   ![GitHub Add file dropdown open, showing the Create new file option](./images/add-file-dropdown.png)
 
----
+2. In **Name your file**, type the path and filename, such as `guides/installation.md`. Typing a `/` creates the folder.
 
-#### Add a new page
+   ![New file name field containing guides/installation.md](./images/new-file-name.png)
 
-1. Go to your repository on GitHub
-2. Click **Add file** → **Create new file**
+3. Write the content and click **Commit new file**.
 
-   ![Screenshot: Add file dropdown with "Create new file" option highlighted](./images/add-file-dropdown.png)
+The page appears in your Docsbook sidebar on its own.
 
-3. In the **Name your file** field, type the path and filename. For example: `guides/installation.md`
+**Delete a page:**
 
-   > Typing a `/` in the name automatically creates a folder. For example, `guides/installation.md` creates a `guides` folder with `installation.md` inside.
+1. Open the file in your repository.
+2. Click the **⋯** menu near the top right.
 
-   ![Screenshot: New file name field with "guides/installation.md" typed](./images/new-file-name.png)
+   ![GitHub file view with the three-dot menu open](./images/three-dots-menu.png)
 
-4. Write your content in the editor below
-5. Click **Commit new file**
+3. Click **Delete file**, then **Commit changes**.
 
-   ![Screenshot: Commit new file button highlighted](./images/commit-changes.png)
+## Other ways to do this
 
-The new page appears in your Docsbook sidebar automatically.
+The tutorial above uses the path that works with nothing installed. Three alternatives exist once you are past the first site.
 
----
+**Start from an empty repository instead of forking.** Go to [github.com/new](https://github.com/new), give the repository a short name with no spaces, select **Public**, tick **Add a README file**, and click **Create repository**. Then connect it exactly as in step 3.
 
-#### Delete a page
+![GitHub new repository form with the Create repository button highlighted](./images/create-repo-button.png)
 
-1. Open the file in your repository
-2. Click the **⋯ (three dots)** menu icon near the top-right
+**Write pages with an AI coding assistant.** Claude Code reads, creates and edits files through conversation, which is faster when you are producing many pages at once. Install it from [claude.ai/code](https://claude.ai/code), ask it to clone your repository, then describe what you want — "create `guides/installation.md` with sections for requirements, installation and first login". When you are done, tell it to commit and push, and your site updates.
 
-   ![Screenshot: File view with three-dot menu highlighted](./images/three-dots-menu.png)
+**Edit on the published page itself.** Once your site is connected you can change a block from the page you are reading, inside the Docsbook AI chat, without GitHub and without an install. See [editing on the live page](./managing-docs.md#edit-a-page-without-leaving-the-browser).
 
-3. Click **Delete file**
-4. Click **Commit changes** to confirm
+## Reference: markdown syntax
 
----
+Markdown is a set of symbols that control formatting. These are the ones documentation uses.
 
-### Option B — Edit with Claude Code (AI-assisted, no terminal needed)
+### Text
 
-Claude Code is an AI coding assistant that can read, create, and edit your documentation files through conversation — no terminal commands or Git knowledge required. Useful for producing a lot of content quickly.
-
-#### Setup (one time)
-
-1. Go to [claude.ai/code](https://claude.ai/code) and download Claude Code
-2. Install it following the on-screen instructions
-3. Open Claude Code and say:
-
-   > *"Clone my GitHub repository github.com/YOUR-USERNAME/YOUR-REPO-NAME to my computer and open it"*
-
-   Claude handles the rest — no terminal needed.
-
-#### Creating and editing documentation
-
-Describe what you want in the chat panel:
-
-**Create a new page**
-> *"Create a new file called `guides/installation.md` with a getting started guide. Include sections for system requirements, installation steps, and first login."*
-
-**Edit an existing page**
-> *"Open `guides/quick-start.md` and add a Troubleshooting section at the end with 5 common problems and solutions."*
-
-**Rewrite or improve**
-> *"Read `guides/quick-start.md` and make it shorter — aim for someone with no technical background."*
-
-**Create multiple pages at once**
-> *"Create the following pages: `guides/faq.md` with 10 billing questions, and `api/overview.md` with a REST API overview."*
-
-Claude writes the content and saves the files. Review the result and ask for adjustments if needed.
-
-![Screenshot: Claude Code chat with a request typed and the response being written into the file](./images/claude-code-chat.png)
-
-#### Save and publish your changes
-
-When you're done, tell Claude:
-
-> *"Commit all changes and push to GitHub."*
-
-Claude runs the necessary commands for you. Your Docsbook site updates within seconds.
-
----
-
-### Option C — Edit on the page itself (no GitHub, no install)
-
-Once your site is connected, you can edit it from the page you are looking at, inside the Docsbook AI chat.
-
-1. Open your project in the chat and put the preview beside it (split view).
-2. Switch the bar above the preview from **Preview** to **Edit**.
-3. Click any block on the page — a panel opens with what you can do to it.
-
-From that panel you can rewrite the block with AI, edit its text directly, make it more concise, expand it, turn it into a widget, or remove it. Dragging a block by its handle moves it to another position; the page shows the pending order until you **Save** or **Revert**.
-
-Every action goes to the assistant as an ordinary instruction and is committed to your source repository like any other change — nothing is applied silently behind your back.
-
-**When to use it:** small corrections and reordering while you are reading the page. For writing several pages at once, Option B is faster.
-
----
-
-### Ask what to improve, then pick what happens
-
-Any time you ask the assistant what to improve — "what should I fix first", "make this findable in search", "these pages feel thin" — the answer comes back as a list you tick, not as prose you would have to re-type.
-
-Each row is one concrete change to one of your real pages: what it changes, why it helps, and which page it touches. Some rows are a setting rather than a rewrite — "turn on search optimization" opens the card that does it. Nothing is ticked to start with: tick the ones you want and press **Apply** once, and every ticked row is done together in a single pass. What you leave unticked is never written at all.
-
-The list itself is not guesswork. The assistant reads the documentation skill that covers what you asked — search and indexing, tone, accessibility, translation — checks what it can measure about your site, and checks which settings cards exist, then recommends from what those turned up. It says which skill it applied.
-
-What happens on Apply depends on auto-mode:
-
-- **auto-mode off** (the default) — the picked changes come back as before/after diffs you approve or reject page by page before anything is published.
-- **auto-mode on** — they are written and published straight away, with a summary of what changed.
-- **a picked setting** — its card opens in the chat so you flip the switch yourself.
-
----
-
-## Connect your docs
-
-After, you should connect your repository. Go to [docsbook.io/connect](https://docsbook.io/connect) — this page lets you sign in and select a repository at any time.
-
----
-
-## Markdown Basics
-
-Docsbook uses **Markdown** — a simple set of symbols that control how text is formatted. Here's everything you need to know:
-
-### Text formatting
-
-| What you type | What it looks like |
+| What you type | What it renders as |
 |---|---|
 | `**bold text**` | **bold text** |
 | `*italic text*` | *italic text* |
 | `~~strikethrough~~` | ~~strikethrough~~ |
 | `` `inline code` `` | `inline code` |
 
-### Headings
+### Headings, lists and links
 
 ```markdown
 # Large heading (page title)
 ## Medium heading (section)
 ### Small heading (sub-section)
-```
 
-### Lists
-
-```markdown
 - First item
 - Second item
-  - Nested item (indent with 2 spaces)
+  - Nested item, indented by two spaces
 
 1. First step
 2. Second step
-3. Third step
+
+[Link to an external site](https://example.com)
+[Link to another page in your docs](./managing-docs.md)
 ```
 
-### Links
+### Images and code blocks
 
 ```markdown
-[Click here](https://example.com)
-[Link to another page in your docs](./other-page.md)
+![Fork dialog with the Create fork button highlighted](./images/fork-dialog.png)
 ```
 
-### Images
-
-```markdown
-![Description of image](./images/my-screenshot.png)
-```
-
-### Code blocks
-
-Use triple backticks to show code with syntax highlighting:
+Fence a code block with triple backticks and name the language, so it gets syntax highlighting:
 
 ````markdown
 ```javascript
@@ -324,34 +189,33 @@ console.log("Hello!")
 ```
 ````
 
-### Callout / Quote
+### Callouts
 
 ```markdown
-> This is a note or important callout.
+> This is a note or an important callout.
 ```
 
----
+## Reference: how your files become pages
 
-## Your Docs Site Structure
+Docsbook builds the sidebar from your file and folder names. There is nothing to configure.
 
-Docsbook builds the sidebar navigation automatically from your file and folder structure. There's nothing to configure.
-
-| Files in your repository | Sidebar in Docsbook |
+| File in your repository | Page in the sidebar |
 |---|---|
 | `README.md` | Home |
 | `installation.md` | Installation |
 | `guides/quick-start.md` | Guides → Quick Start |
 | `api/overview.md` | Api → Overview |
 
-**Tips:**
-- File and folder names become the page titles (hyphens are replaced with spaces)
-- `README.md` inside a folder becomes the index page for that folder
-- Lowercase names with hyphens produce cleaner URLs: `getting-started.md` → `/getting-started`
+Three rules follow from that:
 
----
+- File and folder names become page titles, with hyphens replaced by spaces.
+- `README.md` inside a folder becomes that folder's index page.
+- Lowercase names with hyphens produce readable URLs: `getting-started.md` becomes `/getting-started`.
 
-## Next Steps
+For what decides the *order* of those pages, see [Manage your documentation site](./managing-docs.md#understand-the-sidebar-order).
 
-- [Managing Your Documentation Site](./managing-docs.md)
-- [Setting Up a Custom Domain](../advanced/custom-domain.md)
-- [PRO and PRO+ plans](../advanced/premium.md)
+## Next steps
+
+- [Manage your documentation site](./managing-docs.md) — update content, control access, and fix a site that has not refreshed.
+- [Set up a custom domain](../advanced/custom-domain.md) — serve the docs from `docs.yourcompany.com`.
+- [Turn on full-text search](../../content/features/search.md) — let readers find a page by keyword.

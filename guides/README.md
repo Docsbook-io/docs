@@ -1,22 +1,26 @@
 ---
-title: "Guides"
-description: "Step-by-step tutorials — from creating your first workspace to advanced PRO features like custom domains and AI translation."
+title: "Guides: publish, manage and extend a Docsbook site"
+description: "Task-oriented walkthroughs for Docsbook — publish your first site from GitHub, then add a custom domain, translations or an access gate."
 ---
 
 # Guides
 
-Task-oriented walkthroughs. Start with **Getting started** if you're publishing your first docs; move to **Advanced** when you need a custom domain, multiple languages, or PRO-only features.
+Start with **Getting started** if you are publishing documentation for the first time. Move to **Advanced** when the site is live and you need it on your own domain, in more languages, or behind a gate.
 
-## In this section
+## Getting started
 
-- [Creating docs](./getting-started/creating-docs.md) — create a workspace from a GitHub repo
-- [Managing docs](./getting-started/managing-docs.md) — update settings, reindex, and invite collaborators
-- [Custom domain](./advanced/custom-domain.md) — point `docs.yourcompany.com` to Docsbook with free SSL
-- [Translation](./advanced/translation.md) — turn on AI translation for up to 15 languages
-- [Private docs: password & SSO](./advanced/sso.md) — restrict access with a password or your own SSO identity provider
-- [PRO and PRO+ plans](./advanced/premium.md) — what the paid plans unlock
+- [Create your first documentation site](./getting-started/creating-docs.md) — a tutorial: fork an example repository, connect it, and edit a page.
+- [Manage your documentation site](./getting-started/managing-docs.md) — update pages, undo a publish, and fix a site that has not refreshed.
+
+## Advanced
+
+- [Set up a custom domain](./advanced/custom-domain.md) — point `docs.yourcompany.com` at your docs, with an automatic SSL certificate.
+- [Translate your documentation](./advanced/translation.md) — 15 languages, each served on its own indexed path.
+- [Restrict who can read your docs](./advanced/sso.md) — a shared password, or your own OIDC identity provider.
+- [What Docsbook includes and what costs money](./advanced/premium.md) — the capability list, and which actions draw on the project balance.
 
 ## Related
 
-- [Content & Setup](../content/README.md)
-- [Translation & i18n](../translation/README.md)
+- [Content and setup](../content/README.md) — connect a repository and choose what appears around your pages.
+- [Translation and i18n](../translation/README.md) — how translated pages are stored and served.
+- [Design and branding](../design/README.md) — colours, logo, layout and theme.

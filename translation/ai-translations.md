@@ -1,15 +1,15 @@
 ---
-title: "AI-Powered Translations"
-description: "How Docsbook auto-translates documentation with Claude AI — incremental re-translation, resumable runs with progress, cached delivery, and zero translation files to maintain."
+title: "How Docsbook translates your documentation with AI"
+description: "What the translation pipeline does to a page: which parts it sends to the model, what it leaves alone, how runs resume, and why re-translating a typo is cheap."
 ---
 
 # AI Translations
 
-How Docsbook automatically translates your documentation using Claude AI.
+Docsbook translates your documentation with Claude, page by page, straight from the Markdown in your repository. There are no translation files, no keys and no export step: you switch a language on, and translated pages appear on their own URLs. Each translation run spends your project's balance; serving a translated page afterwards does not.
 
-## How It Works
+## How AI translation works
 
-1. You enable a language in [Translation Settings](./settings).
+1. You enable a language in [Translation Settings](./settings.md).
 2. Docsbook fetches your markdown files from GitHub.
 3. Each file is sent to **Claude** (by Anthropic) for translation.
 4. Translated pages are cached for fast delivery.
@@ -17,9 +17,9 @@ How Docsbook automatically translates your documentation using Claude AI.
 
 No manual work. No translation files to maintain. No YAML keys.
 
-Enabling a language translates your whole site once. After that, on the **Auto** mode Docsbook follows your repository: a push that changes a documented page puts that page back in the queue for every enabled language, checked for roughly every 15 minutes. On **Manual** and **External webhook** nothing starts by itself. To correct a specific translation by hand, ask your AI agent to re-translate a page or use the MCP translation tools — see [Translation Settings](./settings).
+Enabling a language translates your whole site once. After that, on the **Auto** mode Docsbook follows your repository: a push that changes a documented page puts that page back in the queue for every enabled language, checked for roughly every 15 minutes. On **Manual** and **External webhook** nothing starts by itself. To correct a specific translation by hand, ask your AI agent to re-translate a page or use the MCP translation tools — see [Translation Settings](./settings.md).
 
-## Long Runs Resume Where They Stopped
+## Long runs resume where they stopped
 
 A large site takes more than one pass to translate. Docsbook runs the job in chunks and keeps a cursor, so a run that hits a time limit picks up from the next untranslated page instead of starting over or stalling.
 
@@ -29,16 +29,16 @@ A large site takes more than one pass to translate. Docsbook runs the job in chu
 
 You do not need to re-click anything to keep a long translation moving.
 
-## Watching Progress
+## Watching progress
 
 The **Languages** card in the Translation tab shows what a running job is doing:
 
 - A progress bar and a **35/80** counter — pages handled out of pages in the run.
-- **Stopped** on a language whose last run did not finish. Hover it to see why: the AI budget ran out, a provider quota was hit, or the run failed.
+- **Stopped** on a language whose last run did not finish. Hover it to see why: the project's balance ran out, a provider quota was hit, or the run failed.
 
-When a run stops on budget, the remaining pages are translated on a later run once the budget refreshes — nothing you already paid for is lost.
+When a run stops on balance, the remaining pages are translated on a later run once the balance allows — nothing you already paid for is lost.
 
-## What Gets Translated
+## What gets translated, and what does not
 
 | Translated | Not translated |
 |---|---|
@@ -51,7 +51,7 @@ When a run stops on budget, the remaining pages are translated on a later run on
 
 Code is intentionally left in the original language — it should stay consistent regardless of the reader's locale.
 
-## Translation Cache
+## Translation cache
 
 Translations are cached per page per language, keyed to the file's content hash on GitHub.
 
@@ -63,11 +63,11 @@ This means re-enabling a language that was previously active is instant — no r
 
 Because the cache is keyed by content, re-translating is cheap: a page is split into sections, and only the sections whose text actually changed are sent to Claude. Fixing a typo costs one section, not a whole page.
 
-## Translation Quality
+## Translation quality
 
-Claude produces high-quality technical documentation translations — the same model that powers Claude.ai, trained on a large corpus of technical writing in dozens of languages.
+Docsbook translates with Claude, the same model family behind Claude.ai. What that buys over a general-purpose translator is context: the surrounding page, the code around a sentence, and the terms your docs already use.
 
-### Why Claude Outperforms Generic Translation
+### How Claude differs from generic machine translation
 
 Generic machine translation (Google Translate, DeepL) is built for general-purpose text. Developer documentation has a different structure: imperative commands, technical terms, code-adjacent prose, and precision-critical instructions where a mistranslation causes a broken setup.
 
@@ -84,29 +84,29 @@ Claude understands context. It knows that "run the command" means `ejecuta el co
 - Cultural references or idioms
 - Highly domain-specific jargon
 
-### Quality at Scale
+### How the "Saved" figure is calculated
 
-Human translation agencies typically bill per word, which breaks down as a measure the moment a language has no whitespace-delimited words to count — Chinese and Japanese, most notably. Docsbook prices the counterfactual at $5 per 1,000 characters instead, a measure that works the same way in every language, and that is the number the "Saved" figure on your Translations dashboard is built on. For a documentation site of any real size, that adds up to real money per language — before you account for updates.
+Human translation agencies typically bill per word, which breaks down as a measure the moment a language has no whitespace-delimited words to count — Chinese and Japanese, most notably. Docsbook prices the counterfactual per 1,000 characters instead, a measure that works the same way in every language, and that rate is printed beside the "Saved" figure on your Translations dashboard. It is a comparison against a price list, not money you had and kept: nobody was paid either amount.
 
-With Docsbook, translation is included in your plan. Re-translating an updated page is a click, and you are only charged for the sections that actually changed. No invoices. No turnaround time. No coordination overhead.
+What a Docsbook run actually costs comes off your project's balance, and only the sections that changed are sent to the model. Re-translating an updated page is a click, with no invoice, no turnaround time and no coordination.
 
-## SEO Impact of Translations
+## What translation does to search
 
-Every translated language version is a fully separate set of URLs, indexed independently by Google.
+Every translated language version of your Docsbook site is a fully separate set of URLs, indexed independently by Google.
 
-```
-docsbook.io/{user}/{repo}        → ranks for English queries
-docsbook.io/{user}/{repo}/es     → ranks for Spanish queries
-docsbook.io/{user}/{repo}/de     → ranks for German queries
+```text
+docsbook.io/{user}/{repo}        → English pages
+docsbook.io/{user}/{repo}/es     → Spanish pages
+docsbook.io/{user}/{repo}/de     → German pages
 ```
 
 Docsbook automatically adds `hreflang` tags to every page, which tells Google which language version to show to which audience. Without these tags, Google may show the wrong language to international visitors — or ignore translated pages entirely.
 
-**What this means in practice:** enabling Spanish translation doesn't just serve your existing Spanish-speaking users better. It creates an entirely new set of pages that rank for Spanish-language searches your English docs never would have appeared in. You're multiplying your search surface area by the number of languages you publish.
+**What this means in practice:** enabling Spanish translation does not only serve your existing Spanish-speaking readers. It creates a separate set of pages, in Spanish, that a Spanish-language query can match at all — something an English-only page cannot do however well it ranks. Whether those pages are found is decided by the same things that decide it for your English pages; translation only makes them eligible.
 
-A documentation site that was ranking for 500 English queries now ranks for 500 queries in each additional language — passively, without any extra content work.
+Which regions arrive without a translation waiting for them is a question the [visitor countries report](../analytics/reports/countries.md) answers directly.
 
-## Writing Tips for Better AI Translation
+## Writing tips for better AI translation
 
 Clear source content produces better translations. Follow these guidelines:
 
@@ -116,9 +116,8 @@ Clear source content produces better translations. Follow these guidelines:
 - **Keep code comments in English.** They're excluded from translation but should be readable by all developers.
 - **Use consistent terminology.** If you call something a "workspace" in one place, don't call it a "project" in another.
 
----
+## Related
 
-> **Go global without the translation overhead.**
-> [Enable translations →](https://docsbook.io/connect)
-
-See also: [Translation Settings →](./settings)
+- [Translation settings](./settings.md) — switching a language on, the cost quote before a run, and per-language results
+- [Visitor countries report](../analytics/reports/countries.md) — which countries read a translation and which do not
+- [Sidebar layout and configuration](../design/layout/sidebar.md) — showing the language switcher to readers

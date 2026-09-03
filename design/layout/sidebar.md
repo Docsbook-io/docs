@@ -1,13 +1,13 @@
 ---
-title: "Sidebar Layout & Configuration"
-description: "Configure the left navigation panel in Docsbook — sidebar search, breadcrumbs, language switcher, page/folder icons, subheader folder tabs, and how readers move between documentation pages."
+title: "Configure the left sidebar of your documentation site"
+description: "Choose what the left navigation panel shows: sidebar search, breadcrumbs, the language switcher, page and folder icons, and top-level folders as subheader tabs."
 ---
 
 # Sidebar Control
 
-Configure what appears in the left navigation panel of your documentation.
+The sidebar is the left navigation panel of your Docsbook documentation site: the page tree, plus optional search, breadcrumbs, a language switcher and per-page icons. Every setting here is a display choice and costs nothing against your project balance.
 
-## Settings
+## Sidebar settings
 
 | Setting | What it does |
 |---|---|
@@ -17,7 +17,7 @@ Configure what appears in the left navigation panel of your documentation.
 | Sidebar icons | Show a [lucide](https://lucide.dev/icons) icon next to a specific page or folder |
 | Subheader folder icons | Show a lucide icon on a folder's tab in the subheader |
 
-## How to Configure
+## How to configure the sidebar
 
 1. Open your docs site.
 2. Float Widget → **Design** → **Left Sidebar** tab.
@@ -45,34 +45,34 @@ conversation.
 
 ---
 
-## Language Switcher
+## Language switcher in the sidebar
 
-Shows a language selector inside the sidebar so readers can switch translation languages.
+The sidebar language switcher is a language selector shown inside the left panel so readers can switch translation languages.
 
 **When to use:** Enable this when your header is already crowded with other elements.
 
-> Note: Enable *either* the sidebar switcher *or* the [header language selector](./header#header-options) — not both. Showing it in two places creates redundancy.
+> Note: Enable *either* the sidebar switcher *or* the [header language selector](./header.md#header-options) — not both. Showing it in two places creates redundancy.
 
 Requires at least one translation language to be enabled. Until then, opening the switcher on your own site shows **Activate languages**, which takes you straight to the translation settings. Your readers see a plain *No languages added* notice instead.
-[Set up translations →](../../translation/settings)
+[Set up translations →](../../translation/settings.md)
 
 ---
 
-## Search in Sidebar
+## Search in the sidebar
 
-Adds a search input box directly inside the left sidebar panel.
+Sidebar search is a search input box shown inside the left sidebar panel of your Docsbook site.
 
 This is an alternative to the header search button. Some readers prefer sidebar search because it doesn't cover page content.
 
-[More about search options →](../../content/features/search)
+[More about search options →](../../content/features/search.md)
 
 ---
 
 ## Breadcrumbs
 
-Shows the current page location as a trail above the page title:
+Breadcrumbs show the current page's location in your documentation as a trail above the page title:
 
-```
+```text
 Home > Guides > Custom Domain
 ```
 
@@ -82,11 +82,11 @@ Breadcrumbs help readers in large documentation sites understand where they are 
 
 ---
 
-## Sidebar Icons
+## Sidebar icons
 
 Add an icon next to any individual page or folder in the left sidebar, so readers can scan the tree visually instead of by label alone.
 
-**How to Configure**
+**How to configure**
 
 1. Open your docs site.
 2. Float Widget → **Design** → **Left Sidebar** tab.
@@ -100,11 +100,11 @@ The picker only offers icon names from the current lucide icon set — searching
 
 ---
 
-## Subheader Folders
+## Subheader folders
 
-Turn any top-level repository folder into its own tab in the subheader — the row of tabs shown below the main header, on docs pages. Each enabled folder can also carry a lucide icon on its tab.
+Subheader folders turn any top-level repository folder into its own tab in the subheader — the row of tabs shown below the main header, on docs pages. Each enabled folder can also carry a lucide icon on its tab.
 
-**How to Configure**
+**How to configure**
 
 1. Open your docs site.
 2. Float Widget → **Design** → **Header** tab.
@@ -116,7 +116,9 @@ A folder shown in the subheader can also be hidden from — or kept in — the l
 
 One folder is exempt: **Getting Started** always stays in the sidebar, and its toggle is locked on. It is where a reader who closes the introduction early goes back to, so hiding it strands them with no way to return.
 
----
+## Related
 
-> **Build the navigation experience your readers need.**
-> [Connect your GitHub repo →](https://docsbook.io/connect)
+- [Header layout and navigation](./header.md) — the top bar, and the other place the language switcher can sit
+- [Search options](../../content/features/search.md) — what the sidebar search box searches
+- [Translation settings](../../translation/settings.md) — the languages the switcher offers
+- [Theming — light, dark, system](../style/theming.md) — the other place the theme toggle can sit

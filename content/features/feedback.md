@@ -1,44 +1,49 @@
 ---
-title: "Page Feedback (Thumbs Up/Down)"
-description: "Collect thumbs-up and thumbs-down ratings on every documentation page — frictionless feedback that surfaces weak content in your Docsbook analytics."
+title: "Collect thumbs-up and thumbs-down feedback on every page"
+description: "Add a one-click Was this page helpful widget to every Docsbook page, then read the per-page results and decide which pages to rewrite."
 ---
 
-# Page Feedback
+# Page feedback
 
-Collect thumbs-up / thumbs-down ratings from readers on every page.
+Page feedback in Docsbook is a **Was this page helpful?** control at the bottom of every page. A reader answers with one click — no form, no email address — and the answer lands in your analytics against that page.
 
-## What It Does
+## Turn on page feedback
 
-Adds a small **"Was this page helpful? 👍 👎"** widget at the bottom of each page.
+1. Open your docs site while signed in.
+2. Open Float Widget → **Design** → **Content** tab.
+3. Turn on **Page feedback**.
+4. Click **Save**.
 
-Readers click once — no forms, no email, no friction.
+## Read the results
 
-## How to Enable
+Open Float Widget → **Analytics** tab and scroll to the **Feedback** section. It shows:
 
-1. Open your docs site.
-2. Float Widget → **Design** → **Content** tab.
-3. Turn on **Page Feedback**.
-4. Save.
+- Total thumbs-up and thumbs-down counts across the site
+- A per-page breakdown, so you can sort by the pages readers rated worst
 
-## Viewing Results
-
-Float Widget → **Analytics** tab → scroll to the **Feedback** section.
-
-You'll see:
-- Total thumbs up and thumbs down counts
-- Per-page breakdown — which pages are rated helpful and which aren't
-
-## How to Use Feedback Data
+## Act on what the ratings say
 
 | Signal | What to do |
 |---|---|
-| Page has mostly 👎 | Rewrite for clarity, add examples, or split into smaller pages |
-| Page has mostly 👍 | Use it as a template for writing new pages |
-| Page has no ratings | It may not be getting traffic — check [Web Analytics](../../analytics/tracking/overview) |
+| Mostly thumbs-down | Rewrite for clarity, add an example, or split the page in two |
+| Mostly thumbs-up | Reuse its structure as the template for new pages |
+| No ratings at all | Check whether the page gets traffic in [Web analytics](../../analytics/tracking/overview.md) before rewriting it |
 
-Page feedback is most useful for **instructional pages** (how-to guides, tutorials). For reference pages (API lists, configuration tables), ratings are less meaningful.
+Feedback is most informative on instructional pages — tutorials and how-to guides — where a reader either finished the task or did not. On reference pages such as parameter tables, a rating tells you little.
 
----
+Collecting a rating calls no AI model, so page feedback does not draw on your project balance.
 
-> **Let your readers tell you what works.**
-> [Connect your GitHub repo →](https://docsbook.io/connect)
+## Next steps
+
+- [Web analytics](../../analytics/tracking/overview.md) — pair a low rating with the traffic the page gets before you decide to rewrite it.
+- [Full-text search](./search.md) — failed searches are the other signal that a page is missing or misnamed.
+
+<!-- widget:cta -->
+
+## Find out which pages are letting readers down
+
+Every new project starts with $1 of balance, and page feedback does not spend it.
+
+[Create a project](https://docsbook.io/start)
+
+<!-- /widget -->

@@ -1,13 +1,13 @@
 ---
-title: "Header Layout & Navigation"
-description: "Customize the top navigation bar of your Docsbook site — header links, social icons, theme toggle, search button, and language switcher placement."
+title: "Configure the header of your Docsbook documentation site"
+description: "Choose what the top navigation bar of your documentation site shows: header links, social icons, the search button, Ask AI, theme toggle and language switcher."
 ---
 
 # Header Options
 
-Control what appears in the top navigation bar of your documentation site.
+The header is the top navigation bar of your Docsbook documentation site. It holds your project name and logo, your own links, social icons, and the search, Ask AI, theme and language controls. Every setting on this page is a display choice — changing the header costs nothing against your project balance.
 
-## Settings
+## Header settings
 
 | Setting | What it does |
 |---|---|
@@ -19,7 +19,7 @@ Control what appears in the top navigation bar of your documentation site.
 | Language selector in header | Show the language switcher in the header |
 | Search button in header | Show a search icon/button in the header |
 
-## How to Configure
+## How to configure the header
 
 1. Open your docs site.
 2. Float Widget → **Design** → **Header** tab.
@@ -45,7 +45,7 @@ conversation.
 
 ---
 
-## Header Layout Presets
+## Header layout presets
 
 The **Header Layout** card is the first card in the Header tab. It picks a preset arrangement for the blocks in your top navigation — theme toggle, search, Ask AI, and nav links — without changing which blocks are shown.
 
@@ -65,9 +65,9 @@ Click a preset to apply it — one click sets all six underlying placement field
 
 ---
 
-## Header Links
+## Header links
 
-Add custom navigation links that appear in the top bar — useful for linking to your product, blog, changelog, or support.
+Header links are the custom text links in your Docsbook site's top bar. Add them that appear in the top bar — useful for linking to your product, blog, changelog, or support.
 
 **Format:** Each link has a **label** and a **URL**.
 
@@ -80,9 +80,9 @@ Example:
 
 ---
 
-## Social Links
+## Social links
 
-Add icon links for your community and social presence.
+Social links are icon links in the Docsbook header pointing at your community — GitHub, Twitter / X and Discord. Add one per platform.
 
 Supported platforms:
 - **GitHub** — links to your repository or organization
@@ -93,7 +93,7 @@ Social links appear as small icons in the header. They help readers find your co
 
 ---
 
-## Theme & Language in Header
+## Theme and language controls in the header
 
 You can place the theme toggle and language switcher in the header instead of (or in addition to) the sidebar.
 
@@ -104,18 +104,20 @@ For finer control over *where in the header* the theme toggle and search sit rel
 - Header placement: more visible, less click-depth for new visitors.
 - Sidebar placement: saves header space, better for dense headers.
 
-[Sidebar options →](./sidebar)
-[Theming options →](../style/theming)
+- [Sidebar options](./sidebar.md)
+- [Theming options](../style/theming.md)
 
 ---
 
-## Hiding the Header
+## Hiding the header
 
 Setting **Show header** to off removes the entire top navigation bar.
 
 Only do this for embed or kiosk use cases where your docs are framed inside another product. For standalone documentation sites, always keep the header visible.
 
----
+## Related
 
-> **Design navigation that guides your readers.**
-> [Connect your GitHub repo →](https://docsbook.io/connect)
+- [Sidebar layout and configuration](./sidebar.md) — the other half of your navigation
+- [Theming — light, dark, system](../style/theming.md) — what the theme toggle in the header switches
+- [Branding — name, logo, colors, fonts](../style/branding.md) — the name and logo the header shows
+- [Translation settings](../../translation/settings.md) — what the language switcher in the header offers

@@ -1,57 +1,66 @@
 ---
-title: "GitHub Integration"
-description: "Enable an Edit on GitHub link on every Docsbook page so readers can fix typos or contribute updates directly from your documentation site."
+title: "Add an Edit on GitHub link to every documentation page"
+description: "Turn on the reader-facing Edit on GitHub link, set the edit base URL for your repository layout, and let readers open a pull request on a typo."
 ---
 
-# GitHub Integration
+# Add an Edit on GitHub link
 
-Let readers jump directly to edit any page on GitHub — making community contributions effortless.
+The **Edit on GitHub** link appears at the bottom of every page on your Docsbook site and opens that page's source file in the GitHub editor. A reader who spots a typo can fix it and open a pull request without knowing anything about Docsbook.
 
-> Looking for something else? This page is about the reader-facing edit link. To connect a GitHub account, or to move a Docsbook-hosted project into a repository you own, open the project picker in the AI chat header and use **Connected repository** — see [Quick Start](../../quick-start.md).
+> Looking for something else? This page covers the reader-facing edit link. To connect a GitHub account, or to move a Docsbook-hosted project into a repository you own, open the project picker in the AI chat header and use **Connected repository** — see [Quick start](../../quick-start.md).
 
-## Settings
+## What the two settings do
 
 | Setting | What it does |
 |---|---|
-| Show "Edit on GitHub" | Adds an edit link at the bottom of every page |
-| GitHub edit base URL | Base path for the edit link |
+| Show "Edit on GitHub" | Adds the edit link at the bottom of every page |
+| GitHub edit base URL | The base path the link is built from |
 
-## How to Enable
+## Turn on the edit link
 
-1. Open your docs site.
-2. Float Widget → **Design** → **Content** tab.
+1. Open your docs site while signed in.
+2. Open Float Widget → **Design** → **Content** tab.
 3. Turn on **Show "Edit on GitHub"**.
-4. Set the **GitHub edit base URL** (see below).
-5. Save.
+4. Set the **GitHub edit base URL** — see the next section.
+5. Click **Save**.
 
-## Setting the Edit Base URL
+## Set the GitHub edit base URL
 
-The edit base URL tells Docsbook where to send readers when they click "Edit on GitHub."
+The edit base URL tells Docsbook where to send a reader who clicks the link. Docsbook appends the current page's path to it.
 
-**Format:**
+```text
+https://github.com/YOUR_USERNAME/YOUR_REPO/edit/YOUR_BRANCH/YOUR_DOCS_FOLDER
 ```
-https://github.com/{username}/{repo}/edit/{branch}/{docs-folder}
-```
 
-**Examples:**
+Pick the row that matches where your markdown lives:
 
 | Repository | Docs location | Edit base URL |
 |---|---|---|
-| `myname/my-repo` | Root of repo | `https://github.com/myname/my-repo/edit/main` |
+| `myname/my-repo` | Root of the repository | `https://github.com/myname/my-repo/edit/main` |
 | `myname/my-repo` | `/docs` folder | `https://github.com/myname/my-repo/edit/main/docs` |
 | `myname/my-repo` | `master` branch | `https://github.com/myname/my-repo/edit/master` |
 
-Docsbook automatically appends the current page path to this base URL.
+Leave the field empty and Docsbook builds the link from the repository you connected.
 
-If you leave this field empty, Docsbook uses a sensible default based on your repository.
+## When to turn it on
 
-## Why Enable It?
+For an **open-source project**, the edit link is the cheapest contribution path you can offer: a reader fixes a wrong flag or a stale version number in the browser, and you get a pull request instead of an issue.
 
-For **open-source projects**, the "Edit on GitHub" link is essential — it lets community members fix typos, clarify explanations, and improve examples with a single click.
+For **internal team docs**, it lets anyone on the team propose a wording change without learning the Docsbook interface — they edit the file on GitHub and the site follows.
 
-For **team documentation**, it allows any team member to propose improvements without needing to know how Docsbook works — they just edit the file directly on GitHub.
+The edit link calls no AI model, so it does not draw on your project balance.
 
----
+## Next steps
 
-> **Turn your readers into contributors.**
-> [Connect your GitHub repo →](https://docsbook.io/create)
+- [Content options](./content-options.md) — the other toggles on the same Design tab.
+- [Manage your documentation site](../../guides/getting-started/managing-docs.md) — how an edit on GitHub reaches your live site.
+
+<!-- widget:cta -->
+
+## Turn your readers into contributors
+
+Every new project starts with $1 of balance, and the edit link does not spend it.
+
+[Create a project](https://docsbook.io/start)
+
+<!-- /widget -->
