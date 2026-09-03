@@ -5,6 +5,15 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 03.09.2026
+
+### Added
+
+- Every MCP tool now has its own page at its own address: the URL carries the tool, so the page survives a refresh and can be bookmarked or sent to a colleague, instead of existing only for whoever happened to click the row. `MCP`
+- Clicking a call in a tool's history opens the whole call: what went in, what came back, who asked for it (your own Run, a connected MCP client, a schedule, an event), how long it took, what it was priced at, and what actually left your balance. The price and the billed amount are shown as two figures on purpose, since a call costing less than a cent is charged and still bills $0.00, and either number on its own misreads. `MCP`
+- A **Cost** column on that history, so you can see what a tool has been spending on this project without opening a single row. `MCP`
+- The prompts listed under a tool can be searched once that tool has more than a handful of them, so finding the right example is reading one line instead of scrolling the list. `Prompts`
+
 ## NEW - 02.09.2026
 
 ### Added

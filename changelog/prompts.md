@@ -7,6 +7,12 @@ description: "What shipped in the Docsbook prompt library — the catalog of pro
 
 Everything that shipped in **Prompts**. This is the Prompts slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 03.09.2026
+
+### Added
+
+- The prompts listed under a tool can be searched once that tool has more than a handful of them, so finding the right example is reading one line instead of scrolling the list. `Prompts`
+
 ## NEW - 02.09.2026
 
 ### Added
