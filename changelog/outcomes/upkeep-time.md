@@ -16,6 +16,10 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 - Two new content widgets. **Tabs** put parallel versions of the same instruction — npm/pnpm/yarn, macOS/Windows, curl/Python — behind one switch, so a reader stops scrolling past two thirds of a page looking for their own variant; the panels are all in the page source and the switching is CSS-only, so every variant stays readable with JavaScript off and visible to crawlers. **Pricing** turns plans into cards a reader can choose between, or a plan table into a comparison matrix, so the shape of the choice is visible instead of being something the reader has to work out from a table. `Content Widgets`
 - `list_content_widgets` now answers "does this page want a widget, and where?" before an agent picks one. Agents were reaching for the two widgets whose examples they had seen and leaving every other moment on the page as plain markdown. `MCP`
 
+### Changed
+
+- Pointing at a block in **interactive mode** now hands you the finished prompt instead of sending it off: it names the page, the section and the exact text it means, it is copied to your clipboard the moment it opens, and it stays editable if you want to add a constraint before you use it. Paste it into the agent that already works on your main branch and the rewrite lands as your own commit, reviewed where you review code — and arming the mode no longer opens anything over the page, so the doc you are pointing at stays the whole screen. `Editor`
+
 ### Fixed
 
 - A documentation page's own `title` and `description` now reach the HTML head. Both were being ignored: the `<title>` was built from the body's H1 and the meta description from the first paragraph of the page, which on an index page shipped the widget's `{compass}` icon markers into the Google result. The brand was appended twice on top of that (`— Docsbook | Docsbook`), spending 22 of the title's characters on a repeat, and the JSON-LD `headline` named the page a third way, from the filename. Every page's search result and AI-assistant citation now says what the author wrote, on the apex domain and on custom domains alike. `SEO`

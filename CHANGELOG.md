@@ -17,6 +17,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Two new content widgets. **Tabs** put parallel versions of the same instruction — npm/pnpm/yarn, macOS/Windows, curl/Python — behind one switch, so a reader stops scrolling past two thirds of a page looking for their own variant; the panels are all in the page source and the switching is CSS-only, so every variant stays readable with JavaScript off and visible to crawlers. **Pricing** turns plans into cards a reader can choose between, or a plan table into a comparison matrix, so the shape of the choice is visible instead of being something the reader has to work out from a table. `Content Widgets`
 - `list_content_widgets` now answers "does this page want a widget, and where?" before an agent picks one. Agents were reaching for the two widgets whose examples they had seen and leaving every other moment on the page as plain markdown. `MCP`
 
+### Changed
+
+- Pointing at a block in **interactive mode** now hands you the finished prompt instead of sending it off: it names the page, the section and the exact text it means, it is copied to your clipboard the moment it opens, and it stays editable if you want to add a constraint before you use it. Paste it into the agent that already works on your main branch and the rewrite lands as your own commit, reviewed where you review code — and arming the mode no longer opens anything over the page, so the doc you are pointing at stays the whole screen. `Editor`
+
 ### Fixed
 
 - Showcase demos served on the apex path (`docsbook.io/[demo]`) now answer `llms.txt` and `llms-full.txt`, named after the demo rather than the account, and their translated pages open at `docsbook.io/[demo]/[lang]/…` with a canonical that points at itself, so an AI assistant can read and cite every public demo and search engines index its translations instead of following 112 sitemap entries into a noindex 404. `SEO`
