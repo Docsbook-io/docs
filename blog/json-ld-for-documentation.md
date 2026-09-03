@@ -1,20 +1,20 @@
 ---
-title: "JSON-LD for Documentation: Schema Types That Matter in 2026"
-description: "Which JSON-LD schema types actually move the needle for documentation in Google and AI search — TechArticle, FAQPage, HowTo, SoftwareApplication, with copy-paste examples."
+title: "JSON-LD for documentation: schema types that matter"
+description: "Which JSON-LD schema types are worth adding to documentation pages, which no longer earn rich results, and copy-paste examples you can validate today."
 ---
 
-# JSON-LD for Documentation
+# JSON-LD for documentation: schema types that matter
 
-JSON-LD is structured data embedded in your HTML that tells search engines and AI agents what type of content is on the page. For documentation specifically, the right schema types unlock rich results in Google, increase AI citation likelihood, and improve discoverability across surfaces.
+JSON-LD is structured data embedded in your HTML that tells search engines and AI agents what type of content is on the page. For documentation, the right schema types make the page's type, steps, breadcrumbs and product identity machine-readable instead of leaving them implied by layout.
 
-This post lists the schema types that matter and provides working examples.
+This post lists the schema types worth adding, names the one whose rich result Google has since restricted, and gives working examples. It does not promise a ranking or a citation: no reviewed technique has a stable, cross-platform causal effect on either.
 
 ## TL;DR
 
 | Schema | Used on | Why it matters |
 |---|---|---|
 | `TechArticle` | How-to and tutorial pages | Tells Google "this is technical content" |
-| `FAQPage` | Any page with Q&A | Rich snippets in search, AI citation |
+| `FAQPage` | Any page with Q&A | Machine-readable Q&A pairs — but no rich result for most sites, see below |
 | `HowTo` | Step-by-step guides | Step-by-step rich results in Google |
 | `SoftwareApplication` | Product overview page | Pricing, ratings, OS surfaced |
 | `Article` | Blog posts and announcements | Standard article rich results |
@@ -92,16 +92,18 @@ If your page has Q&A structure, `FAQPage` schema makes Google show those Q&As di
     "name": "Can I have multiple API keys?",
     "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Yes. Up to 50 keys per project on the Pro plan, unlimited on Enterprise."
+      "text": "Yes. Replace this answer with the real limit from your own product."
     }
   }]
 }
 </script>
 ```
 
-The result in Google: your FAQ items appear as expandable rows below the main result. Click-through rates increase 20–40% for pages with FAQ rich snippets.
+### Does FAQPage markup still produce a rich result in Google?
 
-Also: AI agents cite FAQ-tagged content disproportionately because it is pre-structured.
+For almost all documentation sites, no. Google restricted the FAQ rich result in 2023, and its own documentation now states that the feature "is only shown for well-known, authoritative government and health websites" ([Google Search Central, FAQPage structured data](https://developers.google.com/search/docs/appearance/structured-data/faqpage), read 2026-09-03). Any guide promising a click-through lift from FAQ snippets on a product docs site is describing the pre-2023 world.
+
+That is not a reason to delete the markup. `FAQPage` still does one thing well: it states, in a form a parser cannot misread, that this block is a question and that block is its answer. Keep it where the page genuinely is a list of questions and answers, and expect no visual change in Google.
 
 ## HowTo: step-by-step guides
 

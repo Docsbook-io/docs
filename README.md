@@ -65,6 +65,7 @@ New to Docsbook? Read [the overview](./overview.md) first, then [publish a site]
 
 - [Pricing](./pricing.md) — What is metered, and what a project balance pays for {credit-card}
 - [FAQ](./faq.md) — Cost, cancellation, sync, privacy and data ownership {help-circle}
+- [Reference index](./reference/README.md) — Every reference page in one list {book-open}
 - [MCP tools reference](./reference/mcp-tools.md) — Every tool, its parameters and its price class {list}
 - [REST API](./api.md) — Call your docs chat from your own backend {code}
 - [Content widgets](./content/features/widgets.md) — Cards, accordions, steps and CTA blocks in Markdown {layout-grid}

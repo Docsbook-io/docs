@@ -1,19 +1,19 @@
 ---
-title: "docs-skills: Modular Capabilities for AI Agents on Your Docs"
-description: "What docs-skills are, why Claude Code and Cursor use them, and how the open-source catalog lets agents understand any documentation site. The new layer between MCP and your content."
+title: "docs-skills: modular capabilities for AI agents on docs"
+description: "What docs-skills are, what the open-source catalog contains, and how the layer sits between an MCP server and the documentation an agent acts on."
 ---
 
-# docs-skills: Modular Capabilities for AI Agents
+# docs-skills: modular capabilities for AI agents on docs
 
 In 2026, AI agents do not just read documentation — they take actions on it. They publish a docs site, fix broken links, generate `llms.txt`, write missing pages, audit accessibility. The way they know how to do these actions is through "skills" — packaged, discoverable, declarative capability descriptions.
 
-This post explains what skills are, why Docsbook ships an open-source catalog of 52 of them, and how this fits between MCP and your content.
+This post explains what skills are, what Docsbook's open-source catalog contains today, and how the layer fits between MCP and your content.
 
 ## TL;DR
 
 - A "skill" is a `SKILL.md` file with frontmatter that describes a capability — what it does, when to trigger it, what tools it needs
 - AI agents (Claude Code, Cursor) read skills and execute them autonomously
-- [docs-skills](https://github.com/Docsbook-io/docs-skills) is an open-source catalog of 52 skills for documentation
+- [docs-skills](https://github.com/Docsbook-io/docs-skills) is an open-source catalog of four documentation skills
 - Docsbook MCP exposes `find_skill` so agents discover skills by query at runtime
 - You can install skills locally (`npx docs-skills install`) or use them through MCP
 
@@ -26,7 +26,10 @@ A minimal `SKILL.md`:
 name: docs-pr-check
 description: Validate documentation changes in a pull request — check for broken links, missing frontmatter, accessibility issues, and SEO regressions. Use when reviewing docs PRs.
 category: automation
-requires_plan: free
+mode: agent
+keywords: [pull request, broken links, frontmatter, review]
+requires_docsbook_mcp: true
+version: 1
 ---
 
 # docs-pr-check
@@ -43,6 +46,8 @@ Steps:
 Tools used: `doc_search_unresolved`, `doc_outline`, `doc_resolve_link` (Docsbook MCP)
 ```
 
+The skill above is an illustration of the format, not an entry in the catalog — the four real skills are listed further down. The frontmatter fields are the ones the schema actually defines: `name`, `description`, `category`, `mode`, `keywords`, `requires_docsbook_mcp` and `version`.
+
 The frontmatter is the contract. The body is the prompt.
 
 ## Why this matters for documentation
@@ -55,27 +60,26 @@ Without skills, an AI agent reading your docs MCP has to guess what to do. With 
 
 ### 2. Modular reuse
 
-A skill written for one project works on any project. The `docs-pr-check` skill applies to any docs repo. The `docs-tune-ai-chat` skill applies to any Docsbook workspace.
+A skill written for one project works on any project. `docs-manage` is the rulebook for writing a page and running the site it lives on, and it applies to any documentation repository, on Docsbook or not.
 
 ### 3. Composition
 
-Skills can chain. The `docs-analyze` skill orchestrates 10 sub-skills (`docs-seo`, `docs-accessibility`, `docs-i18n`, etc.) into a single audit run. This composition is declarative in the SKILL.md.
+Skills compose rather than multiply. Each one carries a `references/` directory of focused documents that it loads only when the task needs them — `docs-manage` alone holds separate references for retrieval, conversion and writing rules. The agent reads the skill, then reads the one reference that matters, instead of loading a catalogue.
 
 ## The docs-skills catalog
 
-[docs-skills](https://github.com/Docsbook-io/docs-skills) is an open-source catalog of 52 skills across seven categories:
+### What is in the docs-skills catalog?
 
-| Category | Skills |
+[docs-skills](https://github.com/Docsbook-io/docs-skills) is an open-source catalog of **four** skills, each covering one job an agent does with documentation. It was previously a long list of narrow skills; it was consolidated because an agent choosing between fifty near-synonymous descriptions picks badly, and four jobs are distinguishable.
+
+| Skill | The job it does |
 |---|---|
-| **analysis** (15) | docs-analyze, docs-seo, docs-accessibility, docs-i18n, docs-style-tone, docs-structure-templates, docs-content-types, docs-audience, docs-navigation-linking, docs-media, docs-maintenance, docs-competitor-gap, docs-pricing-consistency, docs-trust-audit, docs-title-rewriter |
-| **creation** (13) | docs-create, docs-create-interactive, docs-detect-source, docs-from-site, docs-ai-retrieval, docs-authoring-rules, docs-branding, docs-content-widgets, docs-sales-conversion, docs-first-run-enrichment |
-| **observability** (10) | docs-gap-finder, docs-change-impact, docs-dead-end-hunter, docs-buying-blockers, docs-funnel-mapper, docs-engagement-analyzer, docs-question-clusterer, docs-utm-analyzer, docs-visitor-cohort, docs-link-click-analyzer |
-| **automation** (7) | docs-enable-translation, docs-pr-check, docs-tune-ai-chat, docs-stale-watcher, docs-release-announce, docs-translate-webhook, docs-sync |
-| **publishing** (3) | docs-publish, docs-setup-workspace, docs-generate-agents-md |
-| **planning** (2) | docs-health-triage, docs-strategy-plan |
-| **growth** (2) | docs-rank-recovery, docs-audience-enricher |
+| `docs-create` | Create documentation that did not exist — from a product website, a code repository, another docs platform you are migrating off, or nothing but a product name |
+| `docs-analyze` | Find what is wrong with documentation that already exists and fix it, starting from search positions, AI-answer signals, reader behaviour and funnels |
+| `docs-manage` | The rulebook for writing a page and for running the site it lives on — page type, structure, style, audience, retrieval, conversion |
+| `docs-automate` | Set up the things that should keep happening without anyone remembering — drift guards, translation triggers, release announcements |
 
-Each skill is a standalone `SKILL.md` in the GitHub repo. Some chain to others.
+Each skill is a standalone `SKILL.md` in the GitHub repository, with a `references/` directory the agent reads on demand. The machine-readable index is `index.json` in the same repository; the counts above were read from it on 2026-09-03.
 
 ## Two ways to use skills
 
@@ -170,13 +174,13 @@ A useful skill is:
 
 The repo has a `SKILL.md` template and a contribution guide.
 
-## Related reading
+Docsbook ships docs-skills support: the `find_skill` MCP tool for runtime discovery, and `npx docs-skills install` for a local copy. Publish a workspace and the MCP endpoint comes with it — the setup steps are at [docsbook.io/mcp](https://docsbook.io/mcp).
 
-- [MCP server for documentation](./mcp-server-for-documentation.md) — the layer below skills
-- [How to get docs cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md)
-- [llms.txt: the complete guide](./llms-txt-guide.md)
-- [AI documentation platforms compared (2026)](./ai-docs-platform-comparison.md)
+[Start free — no credit card](https://docsbook.io/start)
 
----
+## Next steps
 
-Docsbook ships docs-skills support — `find_skill` MCP tool plus local install. [Connect from Claude Code →](https://docsbook.io/mcp)
+- [MCP server for documentation](./mcp-server-for-documentation.md) — the layer skills sit on top of
+- [How to get your documentation cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — what agents do with the docs they can read
+- [llms.txt explained](./llms-txt-guide.md) — the companion file for agents that do not speak MCP
+- [AI documentation platforms compared](./ai-docs-platform-comparison.md) — which platforms expose an MCP server at all

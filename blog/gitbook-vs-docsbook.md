@@ -1,13 +1,13 @@
 ---
-title: "GitBook vs Docsbook in 2026: Honest Pricing, Migration, and Feature Comparison"
-description: "Considering a GitBook alternative? Side-by-side comparison of GitBook and Docsbook on pricing per editor, vendor lock-in, AI chat, translations, and migration path. Where each one wins."
+title: "GitBook vs Docsbook: pricing, lock-in and migration"
+description: "GitBook and Docsbook compared on how each one charges, where your content actually lives, what AI you get, and what the migration between them costs."
 ---
 
-# GitBook vs Docsbook: Which Documentation Platform Should You Pay For in 2026?
+# GitBook vs Docsbook: pricing, lock-in and migration
 
 GitBook is the documentation platform of choice for Zoom, FedEx, Nvidia, and a long tail of mid-market and enterprise teams. It looks polished, has a comfortable WYSIWYG editor, and the AI Search feature actually works.
 
-So why does the search query "GitBook alternative" hit five-figure monthly volume?
+So why do teams go looking for a GitBook alternative?
 
 Because two years into a GitBook contract most teams notice the same three things: the bill scales with every new editor on the team, content lives inside GitBook's database rather than in their repo, and the platform that promised to handle their docs forever now has to be migrated away from.
 
@@ -19,16 +19,16 @@ This post is the honest comparison. We make Docsbook, so we'll tell you when it 
 |---|---|---|
 | **Best for** | Mid-market and enterprise teams with budget and dedicated docs owners | Indie hackers, startups, OSS, and teams whose source of truth is GitHub |
 | **Setup** | Hours to a day | 5 seconds |
-| **Pricing model** | Per editor per month | Flat monthly per workspace |
-| **Entry price (2026)** | Free / Plus from $8 per editor / Pro from $15 per editor / Business from $25 per editor + Enterprise custom | Free / $59 per month (Pro) / $159 per month (Business) |
+| **Pricing model** | Per site per month, plus a fee per collaborating user | Pay-as-you-go balance per project, spent on AI usage |
+| **Where the current price lives** | [gitbook.com/pricing](https://www.gitbook.com/pricing) | [docsbook.io/pricing](https://docsbook.io/pricing), generated live on every request |
 | **Source of truth** | GitBook's database (Git Sync is an add-on) | Your GitHub repo, period |
-| **AI chat** | Built-in (AI Search) | Built-in on every plan, capped by spend budget |
+| **AI chat** | Built-in (AI Search) | Built-in, metered against the project balance |
 | **Multi-language** | Add-on, limited | 15 languages, each indexed separately for SEO |
-| **MCP server** | None | 61 tools, OAuth 2.0, used by Claude Code and Cursor |
+| **MCP server** | None | Yes, OAuth 2.0, used by Claude Code and Cursor |
 | **llms.txt** | Not built-in | Auto-generated platform-wide and per workspace |
 | **Vendor lock-in** | High — content in their DB | None — your repo stays canonical |
-| **Custom domain** | Paid | Business |
-| **White-label** | Enterprise only | Free, every plan — never paywalled |
+| **Custom domain** | Paid | Supported, with automatic SSL |
+| **Footer credit** | Removable on the top tier | A "Powered by Docsbook" link in the footer, on every site |
 
 If you only read one row: GitBook is priced and built for a team that has a docs owner and a budget line. Docsbook is priced and built for a team where the docs live in `docs/` next to the code and nobody wants to own a separate docs system.
 
@@ -36,15 +36,13 @@ If you only read one row: GitBook is priced and built for a team that has a docs
 
 Four reasons show up in every churn conversation we have with new Docsbook customers migrating off GitBook.
 
-### 1. The bill scales with the team, not the docs
+### 1. The bill grows with the number of people who edit
 
-GitBook charges per editor. In 2026 that is roughly $8 per editor on Plus, $15 on Pro, and $25 on Business — and the AI features, advanced permissions, and the analytics most teams actually want live above Pro.
+GitBook's price has two axes. Read from its own pricing page on 2026-09-03, [gitbook.com/pricing](https://www.gitbook.com/pricing) lists Free at $0 per site/month with one user, Premium at $65 per site/month plus $12 per user/month, Ultimate at $249 per site/month plus $12 per user/month, and Enterprise on request. Readers cost nothing — the per-user fee applies to people who collaborate on content inside the GitBook app.
 
-A six-engineer team on Business is paying $159 per month for what is, fundamentally, a Markdown editor with hosting attached. For larger teams it gets worse: a 30-person engineering org with five real docs editors and twenty-five "occasionally fixes a typo" contributors is staring at a four-figure annual bill before they've shipped a single page.
+That shape has a consequence worth naming plainly: every additional colleague who might fix a typo adds a recurring line to the bill. It is a coherent model — it funds the WYSIWYG editor, the change-request flow and the sales team — but it prices the thing most product teams want more of, which is more engineers touching the docs.
 
-This is the model GitBook needs to fund the WYSIWYG editor, the change-request flow, and the enterprise sales team. It is not a bad model. It is just a model that punishes you for involving more engineers in writing docs — which is the opposite of what most product teams want.
-
-Docsbook charges per workspace, not per editor. AI chat and SEO are free on every plan. Pro is $59 per month and adds translations, raw analytics, and a custom AI chat system prompt. Business is $159 per month and adds custom domain, webhooks, and a larger AI spend budget on top. Anyone on your GitHub team can edit the underlying Markdown — there's no editor seat to buy, because the editor is the editor they already use.
+Docsbook does not charge per editor and does not sell tiers. Each project carries its own balance, and the balance is spent on AI usage; publishing the site, hosting it, serving a custom domain and every page a reader opens draw nothing from it. Anyone on your GitHub team can edit the underlying Markdown, because the editor is the one they already use. Current numbers are on [docsbook.io/pricing](https://docsbook.io/pricing).
 
 ### 2. Vendor lock-in is real
 
@@ -52,7 +50,7 @@ GitBook's Git Sync is an add-on, and even with it enabled, the canonical source 
 
 We have seen this play out the same way three times: a team decides to leave, exports their content, and discovers that the export is a ZIP of Markdown files that doesn't match the structure of their repo, with image links pointing at GitBook's CDN. Migration is not a button. It is a project.
 
-Docsbook is the inverse model. Your Markdown sits in your GitHub repo. We index it, render it, and ship it. If you stop paying, the docs are still right there in `docs/` — you just lose the hosted site, the AI chat, and the translations. The asset stays yours because it never moved.
+Docsbook is the inverse model. Your Markdown sits in your GitHub repo. We index it, render it, and ship it. If you stop paying, the docs are still right there in `docs/` — what you lose is the hosted site, the AI chat, and the translations. The asset stays yours because it never moved.
 
 ### 3. The migration off Docusaurus or off Markdown is half the cost
 
@@ -66,56 +64,46 @@ Docsbook reads your Markdown as-is. If `README.md` and a `docs/` folder work on 
 
 In 2024, AI Search was the reason to pay GitBook. In 2026 every serious documentation platform has it. The question is no longer "do you have AI" — it is "how much does AI cost on top of the editor seat I'm already paying for, and where does my AI traffic come from."
 
-Docsbook ships AI chat free on every plan, including Free — it's capped by a monthly spend budget in dollars, not gated behind a paid tier. Business ($159 per month) gets a larger spend budget. The MCP server is included on both, which means Claude Code and Cursor users can read and edit your docs directly. We also publish `llms.txt` and `llms-full.txt` automatically, both at the platform level and per workspace.
+Docsbook meters AI in dollars against the project's balance rather than gating it behind a tier, so the question "which plan has AI" does not arise. The MCP server is included, which means Claude Code and Cursor users read and edit your docs directly, and `llms.txt` and `llms-full.txt` are published automatically at the platform level and per workspace.
 
-That last part matters more than it looks. Mintlify recently reported that 45.3% of all traffic to their hosted docs comes from AI agents, with Claude Code at 25% and Cursor at 18%. If your docs are not optimized for AI agents in 2026, you are leaving close to half your discovery channel on the table.
+That last part matters more than it looks. Mintlify measured 30 days of traffic across the documentation sites it hosts — roughly 790 million requests — and reported that AI coding agents accounted for **45.3% of all requests**, with Claude Code at 25.2% and Cursor at 18.0% ([The state of agent traffic in documentation](https://www.mintlify.com/blog/state-of-ai), published 3 April 2026). Its follow-up measurement put the agent share at **66% of traffic in July 2026** ([The state of docs traffic: a 2026 midyear report](https://www.mintlify.com/blog/state-of-docs-traffic), published 29 July 2026). That is one vendor's fleet, not the whole web — but it is the largest published measurement of agent traffic to documentation, and the direction is not subtle.
 
 ## Side-by-side feature comparison
 
 | Feature | GitBook | Docsbook |
 |---|---|---|
 | Setup time | Hours to a day | 5 seconds |
-| Free plan | Yes, limited | Yes, full feature set with "Powered by" footer |
+| Free entry | $0 per site/month, one user (gitbook.com/pricing, read 2026-09-03) | Publishing a site costs nothing; AI usage is metered against a balance |
 | Source of truth | GitBook DB (Git Sync optional) | GitHub repo |
 | Editor | WYSIWYG block editor | Markdown in your repo |
-| AI chat | AI Search, varies by plan | Free on every plan, capped by spend budget |
-| AI translations | No | 15 languages, separate SEO indexing (Pro) |
-| MCP server | No | 61 tools (workspace, branding, analytics, search, content graph) |
+| AI chat | AI Search, varies by plan | Included, metered in dollars against the project balance |
+| AI translations | No | 15 languages, separate SEO indexing |
+| MCP server | No | Yes — workspace, branding, analytics, search and content-graph tools |
 | llms.txt | No | Yes, platform and workspace |
-| Source-of-truth content graph for AI agents | No | Yes (Business) |
-| Custom domain | Paid | Business |
-| Custom branding | Paid | All plans (colors, fonts, logo, dark/light) |
-| White-label / remove "Powered by" | Enterprise | Free, every plan — never paywalled |
-| Multi-language | Add-on, limited | 15 languages built in (Pro) |
-| Analytics | Built-in, basic | Built-in, Axiom-backed, full event stream on Business |
-| Webhooks | Limited | 15+ event types, HMAC-signed — Business only |
-| Pricing model | Per editor per month | Per workspace |
+| Source-of-truth content graph for AI agents | No | Yes |
+| Custom domain | Paid | Supported, with automatic SSL |
+| Custom branding | Paid | Colours, fonts, logo, light and dark |
+| Footer credit | Removable on the top tier | Not removable — every site carries a "Powered by Docsbook" footer link |
+| Multi-language | Add-on, limited | 15 languages built in |
+| Analytics | Built-in, basic | Built-in, with the full event stream |
+| Webhooks | Limited | HMAC-signed events for content, traffic, search and chat |
+| Pricing model | Per site plus per collaborating user | Pay-as-you-go balance per project |
 | Vendor lock-in | High | None |
 
-## Pricing breakdown — what you actually pay
+## How do the two pricing models actually compare?
 
-Let's do the math for three realistic team sizes.
+They cannot be compared as two numbers, because they meter different things — and that difference is the whole decision.
 
-**Solo developer / indie hacker.** You have one repo, you want a docs site, you want AI search.
+| | GitBook | Docsbook |
+|---|---|---|
+| What you pay for | A site, plus every person who edits it | AI usage, against a balance held per project |
+| What grows the bill | Hiring someone who might fix a typo | Asking the assistant more questions |
+| What costs nothing | Readers | The site, its hosting, its domain, and every page view |
+| Where the current number lives | [gitbook.com/pricing](https://www.gitbook.com/pricing) | [docsbook.io/pricing](https://docsbook.io/pricing) |
 
-- GitBook Plus: $8 per month → $96 per year, AI Search limited
-- Docsbook Pro: $59 per month → $708 per year, with AI chat and SEO included
+Two consequences follow. On GitBook, the cheapest docs team is a small one, so the model quietly discourages the thing most engineering orgs want — more engineers editing docs. On Docsbook, the cheapest docs team is one whose readers find the answer on the page rather than asking the assistant, so the model rewards writing the page.
 
-Docsbook costs more per year here, but it's the flat rate for AI chat, translations, and SEO bundled — no add-ons to buy separately as GitBook's Plus tier gets outgrown.
-
-**Five-person startup.** Five engineers, all of whom occasionally edit docs.
-
-- GitBook Pro at $15 per editor: $75 per month → $900 per year
-- Docsbook Business: $159 per month → $1,908 per year, no per-seat math, custom domain included
-
-You stop paying every time you hire someone who might fix a typo, and the price is the same whether it's 5 or 50 engineers touching docs.
-
-**Mid-market team, twenty editors.** Real docs owner, multilingual product, some compliance needs.
-
-- GitBook Business at $25 per editor: $500 per month → $6,000 per year, multi-language as add-on
-- Docsbook Business: $159 per month → $1,908 per year, 15 languages with separate SEO indexing included
-
-The difference here is large enough that most teams just hadn't done the math. If you have, it's why you're reading this post.
+Do the arithmetic against your own team size on the vendor's own page. This post deliberately publishes no worked example: GitBook's numbers change, ours are generated per request, and a table of both would be wrong within a quarter of publishing. [docsbook.io/pricing](https://docsbook.io/pricing) is regenerated from the live pricing constants on every request, which is why it is the only number worth quoting back to us.
 
 ## Migration path: GitBook → Docsbook
 
@@ -124,7 +112,7 @@ If you're considering moving, here's the realistic path. We've watched this run 
 1. **Export from GitBook.** Use GitBook's space export to get your content as Markdown. Expect to fix image paths and any block-editor weirdness manually — count on a half day to a day depending on how many custom blocks you used.
 2. **Drop the files into a `docs/` folder in any GitHub repo.** Public or private. If you don't have a repo, create one.
 3. **Paste the repo URL into Docsbook.** Site goes live in 5 seconds at `docsbook.io/owner/repo`. Verify everything renders.
-4. **Connect your custom domain.** Business gives you `docs.yourcompany.com` with automatic SSL — point your DNS, done.
+4. **Connect your custom domain.** Point DNS at Docsbook to serve `docs.yourcompany.com` with automatic SSL.
 5. **Enable AI chat and translations.** Optional but cheap to turn on. Most teams turn them on the same day.
 6. **Set up redirects on the old GitBook domain.** Use Cloudflare Workers, Netlify, or a redirect service to send `*.gitbook.io/yourspace/*` to the new paths.
 7. **Cancel GitBook.**
@@ -151,28 +139,31 @@ No, but your content is. Your Markdown lives in your GitHub repo and you can sto
 **Does Docsbook support private repos?**
 Yes. You authorize Docsbook to read a private repo, and the published site can also be private or public depending on your settings.
 
-**Can I keep editing in GitBook and just mirror to Docsbook?**
+**Can I keep editing in GitBook and mirror to Docsbook?**
 You can, but it defeats the point. Pick one source of truth. If GitBook is yours, stay on GitBook. If GitHub is yours, come over.
 
 **What happens to my SEO if I migrate?**
-Set up 301 redirects from old GitBook URLs to the new Docsbook paths and you keep your link equity. Most teams see no traffic dip; many see a modest lift because Docsbook's per-page meta and JSON-LD are more aggressive than GitBook's defaults.
+Set up 301 redirects from every old GitBook URL to the matching Docsbook path. Search engines follow a 301 and carry the ranking signals across; a path you forget to redirect is the one that loses traffic. Docsbook emits per-page meta tags and JSON-LD by default, so the new pages are not missing markup the old ones had — but no platform can promise you a ranking, and this one does not.
 
 **Does Docsbook have AI search like GitBook?**
-Yes. AI chat trained on your docs, included in Pro. You can also bring your own API key (OpenRouter, OpenAI, Anthropic, Gemini) on Business.
+Yes. AI chat is trained on your own docs, and its cost is metered in dollars against the project's balance rather than gated behind a tier. You can also bring your own API key — OpenRouter, OpenAI, Anthropic or Gemini — and pay the provider directly instead.
 
 **Can I customize the look and feel?**
-Yes. Logo, favicon, accent colors for light and dark, Google Fonts, and per-component visibility toggles (search bar, copy button, edit-on-GitHub link, AI chat button, etc.) — all on the free plan. The one thing no plan removes is the small "Powered by Docsbook" credit in the footer.
+Yes. Logo, favicon, accent colours for light and dark, Google Fonts, and per-component visibility toggles — search bar, copy button, edit-on-GitHub link, AI chat button and the rest. The one thing you cannot switch off is the small "Powered by Docsbook" link in the page footer: it renders on every Docsbook site, unconditionally.
 
 ## The honest bottom line
 
 GitBook is a great product for a specific audience: mid-market and enterprise teams who want WYSIWYG editing, live collaboration, and don't mind paying per editor.
 
-Docsbook is a great product for a different audience: teams whose docs live in GitHub today, who don't want to migrate their content into a vendor database, and who'd rather pay a flat $59–159 per month than $25 per editor forever.
+Docsbook is a good product for a different audience: teams whose docs already live in GitHub, who do not want their content inside a vendor's database, and who would rather pay for what the AI actually does than for the number of people allowed to edit.
 
-If you're the first audience, GitBook is the right call. If you're the second — and most engineering teams are — Docsbook is the better fit, and the math gets better every year you stay.
+If you are the first audience, GitBook is the right call. If you are the second, Docsbook is the better fit — and the deciding factor is not the price today but which number grows when the team does.
 
----
+[Start free — no credit card](https://docsbook.io/start)
 
-**Try Docsbook on your repo in 5 seconds. Free plan is free forever. [Start now →](https://docsbook.io/start?utm_source=blog&utm_medium=cta&utm_campaign=gitbook_vs_docsbook)**
+## Next steps
 
-> Pro is $59/month with a 7-day trial. Business is $159/month with a 14-day trial.
+- [Migrating from GitBook to Docsbook](./migrating-from-gitbook-to-docsbook.md) — the export, the import and the redirect list
+- [Docusaurus alternatives in 2026: 9 platforms compared](./docusaurus-vs-docsbook.md) — the wider field, if GitBook is not your only candidate
+- [AI documentation platforms compared](./ai-docs-platform-comparison.md) — the AI feature matrix across four managed platforms
+- [Custom domain for documentation](./custom-domain-for-docs-howto.md) — the DNS and SSL steps for `docs.yourcompany.com`

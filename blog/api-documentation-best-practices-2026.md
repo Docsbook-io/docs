@@ -1,9 +1,9 @@
 ---
-title: "API Documentation Best Practices in 2026"
-description: "What separates great API docs from average ones in 2026 — OpenAPI hygiene, code samples that work, AI Q&A on top, and the structure that ranks in Google and AI search."
+title: "API documentation best practices for developers in 2026"
+description: "OpenAPI hygiene, code samples that run, AI question answering on top, and the page structure that earns high-intent search and assistant traffic."
 ---
 
-# API Documentation Best Practices in 2026
+# API documentation best practices for developers in 2026
 
 API documentation is the highest-stakes documentation a company writes. Developers decide whether to integrate your product based on whether your docs answer their questions in the first five minutes. Get this right and you lower the support cost forever. Get it wrong and developers churn before they sign up.
 

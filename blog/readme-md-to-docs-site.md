@@ -1,9 +1,9 @@
 ---
-title: "Turn Your README.md into a Documentation Site (2026)"
-description: "Most open-source projects have docs hidden in README.md. This is how to turn that README into a real documentation site in 5 seconds — without rewriting anything."
+title: "Turn your README.md into a real documentation site"
+description: "Most open-source projects hide their docs in README.md. Here is how to publish that file as a real documentation site without rewriting anything."
 ---
 
-# Turn Your README.md into a Documentation Site
+# Turn your README.md into a real documentation site
 
 Your project's docs live in `README.md`. You always meant to set up a real docs site. You looked at Docusaurus, opened the configuration guide, closed the tab.
 
@@ -14,7 +14,7 @@ This post is the 5-second alternative.
 - Most OSS projects publish docs as `README.md` only
 - A README is fine, but it does not index in Google as well as a real docs site, has no AI chat, no analytics, no translations
 - Docsbook turns a `README.md` (and optional `docs/`) into a site at `docsbook.io/yourorg/yourrepo` in 5 seconds
-- Free plan covers public repos. No CI/CD, no config files.
+- Publishing a public repository costs nothing. No CI/CD, no config files.
 
 ## Why a README is not enough
 
@@ -75,36 +75,33 @@ description: "Get up and running in 60 seconds"
 
 `title` becomes the page title in search engines. `description` becomes the meta description. If you skip both, Docsbook uses the first H1 as title and the first paragraph as description.
 
-## The free plan covers most OSS projects
+## What does publishing an OSS project cost?
 
-Free includes:
+Publishing the site costs nothing, and neither does anyone reading it. What is metered is AI usage: each project carries its own balance, and questions to the assistant and translation runs spend it. Current numbers live on [docsbook.io/pricing](https://docsbook.io/pricing), generated from the live pricing constants on every request.
 
-- Any public GitHub repo
-- Custom site name, icon, logo, accent colors (light + dark)
+Publishing a repository gives you:
+
+- Any public GitHub repository, rendered as a site
+- Custom site name, icon, logo, accent colours for light and dark
 - Theme toggle, search, breadcrumbs, copy-code buttons
-- Header links, social links (GitHub, Discord, Twitter)
-- Last 24 hours of analytics
+- Header links and social links (GitHub, Discord, X)
+- Analytics — pageviews, top pages, referrers, countries
 - `llms.txt` and `llms-full.txt` for AI discoverability
-- AI chat backed by your README + `docs/`
+- An MCP server, so Claude Code and Cursor can read and edit the docs
+- AI chat backed by your `README.md` and `docs/`
+- `docs.yourproject.com` with automatic SSL
 
-What you do not get on Free:
+The one thing you cannot switch off is the small "Powered by Docsbook" link in the page footer. It renders on every Docsbook site, unconditionally — that is the trade for not running the hosting yourself.
 
-- Custom domain (Business feature)
-- AI translations to 15 languages
-- The "Powered by Docsbook" credit stays in the footer — it isn't a paid removal, it's just how the product works
-- Analytics beyond 24h
-- MCP server for advanced workflows
+## How do I use my own domain instead of docsbook.io?
 
-For most OSS projects, Free is fine. Upgrade when you outgrow it.
+Point a subdomain at Docsbook and it serves your docs there with SSL provisioned automatically.
 
-## Custom domain (paid)
-
-If you want `docs.yourproject.com` instead of `docsbook.io/yourorg/yourrepo`:
-
-- Business ($159/month)
 - Dashboard → Settings → Domain
 - DNS: CNAME `docs` → `cname.vercel-dns.com`
-- SSL is automatic and free
+- SSL is automatic
+
+Full walkthrough, including apex domains and redirects: [Custom domain for documentation](./custom-domain-for-docs-howto.md).
 
 ## What happens when you push
 
@@ -112,28 +109,29 @@ You push a commit to `main`. Docsbook indexes the change and updates the site. N
 
 ## Common questions
 
-### Does it work for private repos?
+### Does it work for private repositories?
 
-Yes, on paid plans. Docsbook authenticates through your GitHub OAuth scope.
+Yes. Docsbook authenticates through your GitHub OAuth scope, and the published site can itself be public or private.
 
 ### What about MDX or interactive demos?
 
-Docsbook is markdown-first. For interactive demos, link out to a hosted demo. If your project needs deep React component embedding, see [Docusaurus vs Docsbook 2026](./docusaurus-vs-docsbook-2026.md) — Docusaurus is the better fit.
+Docsbook is Markdown-first. For interactive demos, host the demo elsewhere and link to it. If your project needs React components embedded inside docs pages, see [Should you move off Docusaurus in 2026?](./docusaurus-vs-docsbook-2026.md) — Docusaurus is the better fit for that.
 
 ### Will it look like every other Docsbook site?
 
-You control brand colors, fonts, layout, header, footer, sidebar, and can add a custom domain on Business — the one thing you can't remove is the small "Powered by Docsbook" credit in the footer, on any plan.
+You control brand colours, fonts, layout, header, footer, sidebar and your own domain. The one thing you cannot remove is the small "Powered by Docsbook" link in the footer — it renders on every Docsbook site.
 
 ### Can I move away later?
 
 Yes. Your files are in GitHub. Cancel the subscription, point DNS elsewhere, your content is untouched.
 
-## Related reading
+Paste `github.com/yourorg/yourrepo` and the site is live in five seconds. Nothing is copied out of your repository, so the README stays the source of truth.
 
-- [Why README-only projects need a docs site](./why-readme-only-projects-need-a-docs-site.md)
-- [How to host documentation from GitHub](./how-to-host-docs-from-github.md)
-- [Free docs hosting comparison](./free-docs-hosting-comparison.md)
+[Start free — no credit card](https://docsbook.io/start)
 
----
+## Next steps
 
-Try it on your project: paste `github.com/yourorg/yourrepo` at [docsbook.io](https://docsbook.io). Site live in 5 seconds.
+- [Why README-only projects need a documentation site](./why-readme-only-projects-need-a-docs-site.md) — the case for doing this at all
+- [How to host documentation from a GitHub repository](./how-to-host-docs-from-github.md) — the other two routes, with tradeoffs
+- [Free documentation hosting compared](./free-docs-hosting-comparison.md) — six options against each other
+- [Custom domain for docs](./custom-domain-for-docs-howto.md) — moving the result to your own domain

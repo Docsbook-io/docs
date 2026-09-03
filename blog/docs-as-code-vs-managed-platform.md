@@ -1,9 +1,9 @@
 ---
-title: "Docs as Code vs Managed Platform: The 2026 Tradeoff"
-description: "When 'docs as code' is the right pattern and when a managed docs platform wins — engineering ownership, deployment burden, AI features, and the math on engineering hours vs subscription cost."
+title: "Docs as code vs a managed platform: the 2026 tradeoff"
+description: "When docs-as-code is the right pattern and when a managed platform wins — who owns the build, what breaks, and how to price the difference."
 ---
 
-# Docs as Code vs Managed Platform
+# Docs as code vs a managed platform: the 2026 tradeoff
 
 "Docs as code" — your documentation lives in Git, is reviewed via pull requests, deploys via CI — is the dominant pattern at engineering-led companies. "Managed platform" — you log in, configure, and ship — is the dominant pattern at design-led and indie companies. Both work. Both fail in different ways.
 
@@ -50,11 +50,13 @@ Product marketers, support team members, and CS leads often need to update docs.
 
 ### 2. AI features are needed and your team will not build them
 
-A managed platform that includes AI chat, AI translation, MCP, llms.txt, analytics out of the box saves 3–6 engineer-weeks per feature. Most teams cannot justify that work for docs.
+A managed platform that ships AI chat, AI translation, MCP, `llms.txt` and analytics gives you each of those as a switch rather than as a project. Each one is a real project if you build it: retrieval, an evaluation loop, a translation pipeline with per-locale routing, an event store. Most teams can justify none of that work for docs specifically.
 
 ### 3. Deployment ownership is overhead, not value
 
-Maintaining a Docusaurus deployment is 1–2 engineering days per quarter on average. That is 5–10 days per year of work that ships zero user value. A managed platform makes this number zero.
+The recurring work on a self-hosted docs site is real but unscheduled: major-version migrations, dependency and Node version drift, build failures nobody owns, search that needs re-approval or re-hosting. None of it ships anything a reader can see.
+
+Price it from your own repository rather than from an average: count the commits to your docs infrastructure over the last four quarters that changed no content. That number is the thing a managed platform removes.
 
 ## The hybrid: Docsbook
 
@@ -76,36 +78,30 @@ Let us compare 24-month total cost of ownership for a typical 5-engineer startup
 
 | Line item | 24-month cost |
 |---|---|
-| Vercel Pro | $480 |
-| Initial setup | 16 hours × $100/hr = $1,600 |
-| Major version migrations (2 over 24 months) | 40 hours × $100/hr = $4,000 |
-| Quarterly maintenance | 16 hours × $100/hr = $1,600 |
-| Add AI chat (build) | 80 hours × $100/hr = $8,000 |
-| Add AI chat (run, 24 months) | $200/mo × 24 = $4,800 |
-| Add Algolia DocSearch | $0–60/mo × 24 = $0–1,440 |
-| Add translations pipeline | $0 (skipped, too expensive) |
-| **Total** | **$20,920** + no translations |
+| Hosting on a paid tier | A recurring invoice you will not notice |
+| Initial setup | Engineering hours, once |
+| Major-version migrations | Engineering hours, roughly twice over two years |
+| Quarterly maintenance | Engineering hours, recurring, unscheduled |
+| Building AI chat | Engineering weeks, plus continuing ownership of retrieval quality |
+| Running AI chat | Vector store, embeddings and model calls, monthly |
+| Search (Algolia DocSearch, or self-hosted) | Free if approved, otherwise a subscription or more hours |
+| Translation pipeline | Usually skipped, because it is a project rather than a line item |
 
-### Docsbook PRO+ (with everything)
-
-| Line item | 24-month cost |
-|---|---|
-| PRO+ subscription | $59/mo × 24 = $1,416 |
-| Initial setup | 0.5 hours × $100/hr = $50 |
-| Maintenance | $0 |
-| **Total** | **$1,466** + AI chat, translations, MCP, analytics |
-
-The cost gap is large. The engineering hours are the dominant line item.
-
-### Docsbook PRO (subscription)
+### The managed side
 
 | Line item | 24-month cost |
 |---|---|
-| PRO subscription | $59/mo × 24 = $1,416 |
-| Initial setup | 0.5 hours × $100/hr = $50 |
-| **Total** | **$1,466** + AI chat (200 q/mo), translations (50/mo) |
+| Subscription or metered usage | The vendor's number — read it on their own pricing page |
+| Initial setup | Under an hour |
+| Maintenance | None |
 
-This is the indie-hacker math. (Docsbook previously sold a one-time lifetime PRO plan; it is no longer offered to new customers — existing lifetime purchasers keep their original terms.)
+### How to actually run this comparison
+
+Fill both tables with your own numbers rather than ours. We deliberately publish no dollar figures here, because the only honest ones are yours: your hosting tier, your engineers' loaded cost, your traffic.
+
+Two things are worth noticing once you have filled them in. First, engineering hours dominate the self-hosted column, and they are the entries nobody budgets for. Second, the translation row is almost always empty on the self-hosted side — not because translation is worthless, but because it never clears the bar as a project, which means the comparison is not like-for-like unless you say so out loud.
+
+(Docsbook previously sold a one-time lifetime PRO plan; it is no longer offered, and existing lifetime purchasers keep their original terms.)
 
 ## When the cost math reverses
 
@@ -144,4 +140,6 @@ GitBook scores poorly on the first (content in their DB), well on the others. Mi
 
 ---
 
-Docsbook is the hybrid: Git source, managed AI/SEO/translations/MCP. PRO at $59/month. [See it on your repo →](https://docsbook.io/start)
+Docsbook is the hybrid: the source stays in Git, while AI, SEO, translations and MCP are managed. Pricing is metered on AI usage rather than sold as a tier — current numbers on [docsbook.io/pricing](https://docsbook.io/pricing).
+
+[Start free — no credit card](https://docsbook.io/start)

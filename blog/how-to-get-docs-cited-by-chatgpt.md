@@ -1,9 +1,9 @@
 ---
-title: "How to Get Your Documentation Cited by ChatGPT (2026)"
-description: "A practical checklist for making documentation discoverable and quotable by ChatGPT, Claude, Perplexity, and Gemini — llms.txt, structure, factual prose, and the JSON-LD that matters."
+title: "How to get your documentation cited by ChatGPT in 2026"
+description: "A working checklist for making docs readable and quotable by ChatGPT, Claude, Perplexity and Gemini — structure, crawler access, and honest measurement."
 ---
 
-# How to Get Your Documentation Cited by ChatGPT
+# How to get your documentation cited by ChatGPT in 2026
 
 When a developer asks ChatGPT "how do I use feature X in product Y", one of two things happens. Either ChatGPT cites your docs and quotes you correctly, or it hallucinates an API surface that does not exist. Which one happens depends on the work you have done.
 
@@ -51,7 +51,7 @@ AI models prefer declarative sentences over hedged marketing language. Compare:
 
 versus
 
-> "Docsbook publishes a documentation site from a GitHub repository in five seconds. PRO is $59/month. Translations support 15 languages."
+> "Docsbook publishes a documentation site from a GitHub repository in five seconds. Translations support 15 languages. Pricing is metered on AI usage rather than sold as tiers."
 
 The second sentence is quotable. The first is filler. Quotable sentences end up in answers; filler does not.
 

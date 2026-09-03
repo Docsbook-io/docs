@@ -1,9 +1,9 @@
 ---
-title: "Why README-Only Projects Need a Documentation Site"
-description: "GitHub READMEs are not enough in 2026. Here is why open-source and indie projects gain real distribution by publishing a proper docs site — SEO, AI search, UX, and trust."
+title: "Why README-only projects need a documentation site"
+description: "A single README caps what search engines and AI assistants can find about your project. Here is what a docs site adds and when it is worth the move."
 ---
 
-# Why README-Only Projects Need a Documentation Site
+# Why README-only projects need a documentation site
 
 Most open-source projects ship with just a README. It is a defensible choice — one file, lives next to the code, easy to update. But in 2026, this is leaving meaningful distribution on the table.
 
@@ -142,4 +142,6 @@ For everything else, having a docs site is the better default in 2026.
 
 ---
 
-Try Docsbook Free on your project: paste `github.com/yourorg/yourrepo` at [docsbook.io](https://docsbook.io). Site live in 5 seconds.
+Publishing a site from your repository costs nothing — paste `github.com/yourorg/yourrepo` and it is live in five seconds.
+
+[Start free — no credit card](https://docsbook.io/start)

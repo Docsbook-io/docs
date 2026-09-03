@@ -1,80 +1,86 @@
 ---
-title: "Why Documentation Matters for SaaS"
-description: "The hidden ROI of great developer documentation — faster onboarding, fewer support tickets, lower churn, and how to measure the cost of bad docs."
+title: "Why documentation matters for SaaS: the hidden ROI"
+description: "Bad documentation moves cost onto support, onboarding and feature adoption. Here is how to measure that cost yourself and which mechanisms reduce it."
 ---
 
-# Why Documentation Matters: The Hidden ROI of Developer Experience
+# Why documentation matters for SaaS: the hidden ROI
 
-## Introduction
+Documentation is the only part of your product that works while nobody is on shift. It answers at 3am, in a search result, inside an AI assistant, and in the first ten minutes of an evaluation. This page explains the mechanisms by which documentation moves money, and how to measure them on your own product instead of trusting an industry average.
 
-Every developer knows the frustration: you're trying to integrate a service, and the documentation is outdated, scattered across multiple sites, or worse — non-existent. Bad documentation costs money. Great documentation saves it.
+We make Docsbook. Every number below is one you measure yourself — we do not publish benchmark percentages we cannot source.
 
-But how much does documentation actually matter? And why do so many companies still get it wrong?
+## What does bad documentation actually cost?
 
-## The Cost of Bad Documentation
+Bad documentation does not create a cost line. It moves cost onto three teams that already have budget: support, engineering onboarding, and sales. That is why it stays invisible in a spreadsheet and expensive in practice.
 
-### Time Waste in Onboarding
+The three transfers, in the order most companies notice them:
 
-When developers can't find answers in documentation, they waste time:
-- 30 minutes searching forums instead of 5 minutes reading docs
-- 3 hours debugging from trial-and-error instead of 20 minutes following a guide
-- Multiple Slack messages asking questions that should have been answered by docs
+1. **Support.** A question the docs do not answer becomes a ticket. Your support team spends its day being a slower, more expensive search interface for knowledge you already own.
+2. **Onboarding.** A new engineer who cannot find the answer reconstructs it by reading source code or asking a colleague. Both cost more than reading a page, and the colleague pays too.
+3. **Adoption and evaluation.** A feature nobody can find is a feature nobody uses. An evaluator who cannot answer "does it do X?" in the first five minutes assumes it does not.
 
-For a team of 10 engineers at $100/hour, that's **$500 per engineer per month** in wasted time from poor documentation.
+## How do I measure the cost of bad documentation on my own product?
 
-### Reduced Adoption
+Measure the transfers, not the docs. Four counts, all of which you can pull this week:
 
-Users won't adopt features they don't understand. A poorly documented API endpoint is essentially invisible. Studies show that **60% of feature adoption failures** are due to unclear or missing documentation.
+| What to count | Where it lives | What it tells you |
+|---|---|---|
+| Tickets whose answer already exists in the docs | Support inbox, tagged for a month | How much of support is a findability problem |
+| Searches on your docs site that returned nothing | Docs site search log | The exact words readers use that your pages do not |
+| Questions your docs assistant could not answer | AI chat logs | Gaps stated as questions, in the reader's phrasing |
+| Pages readers reach and immediately leave | Docs analytics | Pages that match a query but do not answer it |
 
-### Support Burden
+The first two are the cheapest and the most convincing. A month of tagged tickets turns "our docs could be better" into a list with counts next to it.
 
-Every question that should have been answered by documentation becomes a support ticket. Your support team becomes documentation maintainers instead of solving real problems.
+## Why do so many SaaS companies still get this wrong?
 
-## The Documentation Landscape Today
+Documentation has no owner in most orgs. Engineering writes it under deadline, marketing does not consider it a channel, and support inherits the consequences without the ability to fix the cause. Nobody's quarterly goal moves when a page gets better, so nobody edits the page.
 
-### The Problem: Fragmentation
+The second reason is that the work is invisible until it is measured. Support ticket volume is reported; "tickets that a page would have prevented" is not reported anywhere by default.
 
-Current documentation solutions fragment the experience:
-- **Docusaurus**: Open-source, free, but requires engineering effort
-- **ReadTheDocs**: Good for API docs, limited customization
-- **GitBook**: Polished UI, but lacks technical features
-- **Mintlify**: AI-focused, beautiful, but expensive and limited flexibility
+## What does the documentation landscape look like in 2026?
 
-Each solution trades off between simplicity, cost, and features.
+The tools split into two families, and picking the wrong family costs more than picking the wrong product inside a family.
 
-## The Docsbook Difference
+| Family | Examples | You own | You do not own |
+|---|---|---|---|
+| Static site generators | Docusaurus, VitePress, MkDocs Material, Starlight | Full control of theme and build | Hosting, search, upgrades, AI features |
+| Managed platforms | Docsbook, GitBook, Mintlify, ReadMe | Content | Build, hosting, search, AI, analytics |
 
-Docsbook solves the documentation problem by combining:
+Static generators cost engineering hours and no subscription. Managed platforms cost a subscription and no engineering hours. Both fail in the same way when nobody owns the content.
 
-1. **Simplicity** — Write in Markdown, push to GitHub. No build steps, no deployment complexity.
-2. **AI-Powered Search** — Find answers faster with semantic search that understands intent.
-3. **Beautiful, Fast** — Optimized for reading and discovery, not just serving files.
-4. **SEO-Ready** — Rank higher on Google, appear in AI search results (ChatGPT, Gemini, Perplexity).
+For a detailed head-to-head, see [Docusaurus alternatives in 2026](./docusaurus-vs-docsbook.md), [GitBook vs Docsbook](./gitbook-vs-docsbook.md) and [free documentation hosting compared](./free-docs-hosting-comparison.md).
 
-## Real Impact: By the Numbers
+## What does Docsbook change about this?
 
-Companies that invest in documentation see:
-- **40% reduction** in support tickets
-- **25% faster** developer onboarding
-- **60% higher** feature adoption
-- **Better SEO** rankings and organic traffic to product pages
+Docsbook publishes the Markdown already in your GitHub repository as a documentation site, and reports what readers did with it. The mechanisms, not the promises:
 
-## How to Measure Documentation Quality
+- **The source of truth stays in Git.** Docs are edited in the same pull request as the code that changed, so a page going stale is visible in review rather than discovered by a customer.
+- **The site is readable by machines.** Docsbook publishes `llms.txt` and runs an MCP server, so an assistant answering a question about your product can read your pages rather than guess. See [MCP server for documentation](./mcp-server-for-documentation.md).
+- **The assistant answers from your indexed pages.** A reader who would have opened a ticket gets the answer on the page instead, in the words they used to ask.
+- **Analytics report the gaps as questions.** Failed searches and unanswered assistant questions arrive as a list of things to write, in the reader's own words. See [documentation analytics: what to track](./documentation-analytics-what-to-track.md).
 
-Ask yourself:
-- Can a new developer set up the product in under 15 minutes?
-- Are the top 10 questions answered in your docs?
-- Does your documentation show up in Google search?
-- Can users find answers using natural language (not keyword matching)?
+## How do I know my documentation is good enough?
 
-If you're struggling with any of these, it's time to rethink your documentation strategy.
+Answer these four questions with evidence rather than opinion. Each maps to a count from the table above.
 
-## Conclusion
+- Can a new developer reach a first working result without asking a person?
+- Are the ten most common support questions answered on a page, each findable by the words the customer used?
+- Does a search engine or an AI assistant return your page for a question about your product, or does it return somebody else's?
+- When a reader searches your docs site and gets nothing, does anyone see that search?
 
-Documentation is not a side project. It's infrastructure. And infrastructure should be simple, scalable, and effective.
+If any of those has no answer, the fix is a measurement, not a redesign.
 
-Docsbook makes it easy to build documentation that actually works for your users — and for your business.
+## What does Docsbook cost?
 
----
+Docsbook is pay-as-you-go rather than tiered. Each project carries its own balance, and that balance is spent on AI usage — the site itself, its hosting, the reading and the search do not draw it down. Current numbers live on [docsbook.io/pricing](https://docsbook.io/pricing), which is generated from the live pricing constants on every request; a price copied into a blog post goes stale silently, so read it there.
 
-**Ready to improve your documentation? [Get started with Docsbook today](https://docsbook.io/start?utm_source=blog&utm_medium=cta&utm_campaign=why_documentation_matters).**
+Publish your existing repository, then read the failed searches for a week.
+
+[Start free — no credit card](https://docsbook.io/start)
+
+## Next steps
+
+- [Documentation analytics: what to track](./documentation-analytics-what-to-track.md) — the metrics behind the counts on this page
+- [Documentation SEO guide](./documentation-seo-guide.md) — making the pages findable once they exist
+- [How to get your documentation cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — the assistant-facing half of discovery

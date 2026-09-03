@@ -1,15 +1,15 @@
 ---
-title: "How to Host Documentation from GitHub"
-description: "Three ways to turn a GitHub repository into a live documentation site — GitHub Pages, Docusaurus, and Docsbook. Step-by-step tutorial with tradeoffs for each."
+title: "How to host documentation from a GitHub repository"
+description: "Three ways to turn a GitHub repository into a live documentation site — GitHub Pages, Docusaurus and Docsbook — with the setup steps and tradeoffs of each."
 ---
 
-# How to Host Documentation from GitHub
+# How to host documentation from a GitHub repository
 
 You have markdown files in a GitHub repo. You want them to live at a real URL — searchable, branded, indexed by Google, readable on mobile. The repo is the source of truth; the website is the surface.
 
 There are three common paths to get there. This tutorial walks through each one, with the actual setup steps and tradeoffs.
 
-## The Setup You Already Have
+## What do you already have?
 
 A typical docs repository looks like this:
 
@@ -26,10 +26,10 @@ my-product/
 You want this to become a website. The three realistic options are:
 
 1. **GitHub Pages** — free, raw, manual
-2. **Docusaurus** — flexible, code-heavy, self-hosted
+2. **Docusaurus** — code-heavy, self-hosted, customisable down to the theme component
 3. **Docsbook** — instant, managed, paste-the-URL
 
-## Option 1: GitHub Pages + Jekyll
+## Option 1: GitHub Pages with Jekyll
 
 GitHub Pages serves static sites from a repo branch for free. With a `_config.yml` it picks up Jekyll and renders your markdown.
 
@@ -61,7 +61,7 @@ Good for an internal wiki. Not good if your docs are a customer-facing product s
 
 ## Option 2: Docusaurus
 
-Docusaurus is Meta's open-source documentation framework. It's React-based, themeable, and powerful — if you're willing to maintain it.
+Docusaurus is Meta's open-source documentation framework. It is React-based and themeable down to individual components — if you are willing to maintain it.
 
 ### Steps
 
@@ -92,7 +92,7 @@ Docusaurus is Meta's open-source documentation framework. It's React-based, them
 - AI search, AI chat, AI translation — not included
 - You own every line of config
 
-Good if documentation is itself a product your team owns and ships. Painful if you just want your docs online.
+Good if documentation is itself a product your team owns and ships. Painful if what you want is your docs online.
 
 ## Option 3: Docsbook
 
@@ -122,7 +122,7 @@ That's it. Every `git push` to main updates the site automatically.
 
 - You don't own the rendering pipeline — but your markdown stays in your repo, so there's no lock-in. Cancel any time and your docs come with you.
 
-## Which One to Pick
+## Which option should you pick?
 
 | Use case | Pick |
 |---|---|
@@ -132,8 +132,15 @@ That's it. Every `git push` to main updates the site automatically.
 
 The honest answer: if documentation isn't your product, don't build a documentation platform. Use one.
 
-## Try It
+## Try it
 
-Hosting your docs from GitHub used to mean a config repo, a deploy pipeline, and weeks of cleanup. It doesn't anymore.
+Hosting docs from GitHub used to mean a config repository, a deploy pipeline, and recurring cleanup. Paste your repository URL and the site is live; the Markdown never leaves the repo, so the move is reversible.
 
-**Paste your repo URL at [docsbook.io](https://docsbook.io/start?utm_source=blog&utm_medium=cta&utm_campaign=how_to_host_docs_from_github) and your documentation site goes live in 30 seconds.**
+[Start free — no credit card](https://docsbook.io/start)
+
+## Next steps
+
+- [Turn your README.md into a documentation site](./readme-md-to-docs-site.md) — the shortest version of option 3
+- [Custom domain for docs](./custom-domain-for-docs-howto.md) — moving the finished site to `docs.yourcompany.com`
+- [Free documentation hosting compared](./free-docs-hosting-comparison.md) — the same three paths against three more
+- [Documentation SEO guide](./documentation-seo-guide.md) — making the published site findable

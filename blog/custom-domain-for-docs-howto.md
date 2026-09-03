@@ -1,9 +1,9 @@
 ---
-title: "Custom Domain for Documentation: docs.yourcompany.com Setup Guide"
-description: "How to set up a custom domain for documentation — DNS, SSL, redirects, subdomain vs subdirectory, and why this matters for SEO. Includes exact steps for Docsbook, GitBook, Mintlify."
+title: "Custom domain for docs: docs.yourcompany.com setup"
+description: "Set up docs.yourcompany.com end to end — subdomain versus subdirectory, DNS records, SSL, redirects, and the SEO consequences of each choice."
 ---
 
-# Custom Domain for Documentation
+# Custom domain for docs: docs.yourcompany.com setup
 
 `docs.yourcompany.com` looks more professional than `docsbook.io/yourorg/yourrepo`. It also matters for SEO, trust, and the "is this a real product" first impression. This is how to set it up correctly.
 
@@ -111,7 +111,7 @@ Add the new domain to Google Search Console. Submit the sitemap (Docsbook auto-g
 
 ### Canonical tags
 
-If you keep the old URL live as a fallback for any reason, set canonical tags on the old URL pointing to the new one. Better: just 301-redirect.
+If you keep the old URL live as a fallback for any reason, set canonical tags on the old URL pointing to the new one. A 301 redirect is better still, because it moves readers as well as ranking signals.
 
 ### `llms.txt` propagation
 
@@ -134,16 +134,16 @@ The user-visible experience should not change beyond the URL.
 
 ## Custom domain support by platform
 
-| Platform | Custom domain on free | Custom domain on paid |
+| Platform | Custom domain supported | What it costs |
 |---|---|---|
-| **Docsbook** | No | Business ($159/mo) |
-| **Mintlify** | No | Yes ($150+/mo) |
-| **GitBook** | No | Yes (paid plan, per editor) |
-| **ReadMe** | No | Yes ($99+/mo) |
-| **GitHub Pages** | Yes | Yes |
-| **Vercel/Netlify** | Yes (50/account on Vercel free) | Yes |
+| **Docsbook** | Yes, with automatic SSL | Nothing — the domain draws nothing from the project balance; see [docsbook.io/pricing](https://docsbook.io/pricing) |
+| **Mintlify** | Yes | On a paid plan — see [mintlify.com/pricing](https://mintlify.com/pricing) |
+| **GitBook** | Yes | On a paid plan — see [gitbook.com/pricing](https://www.gitbook.com/pricing) |
+| **ReadMe** | Yes | On a paid plan — see [readme.com/pricing](https://readme.com/pricing) |
+| **GitHub Pages** | Yes | Free |
+| **Vercel / Netlify** | Yes | Free tier, with per-account domain limits |
 
-For managed docs platforms, custom domain is a paid feature. Docsbook Business at $159/mo is the cheapest option in the comparable set.
+Prices in this category move; each vendor's own pricing page is the only reliable source, and this table links to all of them rather than restating numbers that go stale.
 
 ## Common mistakes
 
@@ -160,4 +160,6 @@ For managed docs platforms, custom domain is a paid feature. Docsbook Business a
 
 ---
 
-Docsbook supports `docs.yourcompany.com` with free SSL on Business ($159/mo). [See pricing →](https://docsbook.io)
+Docsbook serves `docs.yourcompany.com` with automatic SSL, and the domain draws nothing from your project balance.
+
+[Start free — no credit card](https://docsbook.io/start)

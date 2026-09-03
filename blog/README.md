@@ -1,60 +1,69 @@
 ---
-title: "Docsbook Blog"
-description: "Posts about documentation strategy, AI search, SEO, and head-to-head comparisons with Docusaurus, GitBook, and Mintlify. Practical writing for docs owners."
+title: "Docsbook blog: documentation strategy and comparisons"
+description: "Long-form posts on running documentation as a channel — AI search, SEO, analytics, and head-to-head comparisons of the platforms that host it."
 ---
 
-# Docsbook Blog
+# Docsbook blog: documentation strategy and comparisons
 
-Long-form posts on how documentation works in 2026 — comparisons with other tools, AI search behavior, and SEO patterns that actually move traffic. Written for people who own docs at a product company.
+Long-form posts on running documentation as a channel rather than as a chore. Every post here is written for the person who owns docs at a product company and has to justify the time.
 
-## In this section
+The posts are grouped by the job you are doing right now, not by the date they were published — a comparison written last quarter is still the right page to open when you are choosing a platform this week.
 
-### Foundations
+## I need to publish documentation that does not exist yet
 
-- [How to host documentation from GitHub](./how-to-host-docs-from-github.md) — three ways to turn a repo into a live docs site, compared
-- [Why documentation matters](./why-documentation-matters.md) — the business case for investing in docs
-- [Turn your README.md into a documentation site](./readme-md-to-docs-site.md) — 5-second setup from any GitHub repo
-- [Why README-only projects need a docs site](./why-readme-only-projects-need-a-docs-site.md) — distribution and AI discoverability you lose without one
-- [Best documentation platforms for startups in 2026](./best-docs-platforms-for-startups-2026.md) — eight platforms ranked by stage
-- [Free documentation hosting comparison](./free-docs-hosting-comparison.md) — six free options, honest tradeoffs
-- [Docs as code vs managed platform](./docs-as-code-vs-managed-platform.md) — when each pattern wins, with cost math
+Start here if the docs are in a README, a wiki, or nowhere.
 
-### SEO & AI search (GEO/AEO)
+- [Turn your README.md into a real documentation site](./readme-md-to-docs-site.md) — the shortest path from one file to a site
+- [How to host documentation from a GitHub repository](./how-to-host-docs-from-github.md) — three routes compared, with the setup steps for each
+- [Why README-only projects need a documentation site](./why-readme-only-projects-need-a-docs-site.md) — what a single file caps you at
+- [Custom domain for docs: docs.yourcompany.com setup](./custom-domain-for-docs-howto.md) — DNS, SSL and redirects, done once
 
-- [Documentation SEO guide](./documentation-seo-guide.md) — practical SEO for technical content
-- [AI search and documentation](./ai-search-documentation.md) — how ChatGPT, Perplexity, and Claude read your docs
-- [How to get docs cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — practical citation checklist for AI search
-- [Perplexity citations for docs](./perplexity-citations-for-docs.md) — Perplexity-specific guide to being cited
-- [llms.txt: the complete guide](./llms-txt-guide.md) — the new robots.txt for AI agents
-- [JSON-LD for documentation](./json-ld-for-documentation.md) — schema types that move the needle in 2026
-- [Multi-language documentation SEO](./multi-language-documentation-seo.md) — hreflang, separate URLs, AI translation
+## I am choosing a documentation platform
 
-### AI features
+Head-to-head comparisons. Each one names the cases where the other product wins.
 
-- [MCP server for documentation](./mcp-server-for-documentation.md) — Model Context Protocol explained for docs teams
-- [docs-skills for AI agents](./docs-skills-for-ai-agents.md) — modular capabilities Claude Code and Cursor use on your docs
-- [AI chat for documentation: build vs buy](./ai-chat-for-documentation-build-vs-buy.md) — RAG cost analysis vs managed
-- [AI documentation platforms compared (2026)](./ai-docs-platform-comparison.md) — Docsbook, Mintlify, GitBook, ReadMe head-to-head
+- [The best documentation platforms for startups in 2026](./best-docs-platforms-for-startups-2026.md) — eight platforms, ranked by company stage
+- [Docusaurus alternatives in 2026: 9 platforms compared](./docusaurus-vs-docsbook.md) — the full field, managed and self-hosted
+- [GitBook vs Docsbook](./gitbook-vs-docsbook.md) — how each one charges, and where the content lives
+- [Mintlify vs Docsbook](./mintlify-vs-docsbook.md) — configuration, AI and multi-language SEO
+- [AI documentation platforms compared](./ai-docs-platform-comparison.md) — what AI is actually implemented across four managed tools
+- [Free documentation hosting compared](./free-docs-hosting-comparison.md) — six ways to pay nothing, and what each costs in time
+- [Docs as code vs a managed platform](./docs-as-code-vs-managed-platform.md) — the same choice stated as a principle
 
-### Comparisons & migration
+## I already run docs somewhere and want to move
 
-- [Docusaurus vs Docsbook](./docusaurus-vs-docsbook.md) — setup, hosting, and total cost compared
-- [Docusaurus vs Docsbook in 2026](./docusaurus-vs-docsbook-2026.md) — refreshed comparison with 2026 pricing
-- [GitBook vs Docsbook](./gitbook-vs-docsbook.md) — per-editor pricing, vendor lock-in, and migration path
-- [Mintlify vs Docsbook](./mintlify-vs-docsbook.md) — features, pricing, and lock-in compared
-- [Migrating from GitBook to Docsbook](./migrating-from-gitbook-to-docsbook.md) — step-by-step migration guide
-- [Migrating from Docusaurus to Docsbook](./migrating-from-docusaurus-to-docsbook.md) — MDX to markdown, CI/CD cleanup
-- [Why we don't use Notion for docs](./notion-for-docs-engineering-lessons.md) — first-person engineering lessons on why Notion stops working as a docs system
+- [Should you move off Docusaurus in 2026?](./docusaurus-vs-docsbook-2026.md) — the decision before the migration
+- [Migrating from Docusaurus to Docsbook, step by step](./migrating-from-docusaurus-to-docsbook.md) — MDX, CI cleanup, redirects
+- [Migrating from GitBook to Docsbook](./migrating-from-gitbook-to-docsbook.md) — export, import, custom domain, redirects
+- [Why we stopped using Notion for product documentation](./notion-for-docs-engineering-lessons.md) — where a wiki stops being docs
 
-### Practical guides
+## I want people to find the docs I already have
 
-- [API documentation best practices in 2026](./api-documentation-best-practices-2026.md) — OpenAPI, samples, errors, versioning
-- [Custom domain for docs how-to](./custom-domain-for-docs-howto.md) — `docs.yourcompany.com` setup with DNS and SSL
-- [Documentation analytics: what to track in 2026](./documentation-analytics-what-to-track.md) — failed searches, AI questions, negative feedback
+Search engines first, then assistants — the two are related but not the same problem.
 
-### Internal
+- [Documentation SEO: how to rank developer documentation](./documentation-seo-guide.md) — the foundation the rest of this section builds on
+- [Multi-language documentation SEO](./multi-language-documentation-seo.md) — per-locale URLs and hreflang
+- [JSON-LD for documentation](./json-ld-for-documentation.md) — the schema types worth adding, and the one that no longer earns a rich result
+- [AI search for documentation](./ai-search-documentation.md) — why keyword search returns nothing for real questions
+- [How to get your documentation cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — the working checklist
+- [Perplexity citations for documentation](./perplexity-citations-for-docs.md) — what its crawler actually reads
+- [llms.txt explained](./llms-txt-guide.md) — what the file is, and how much of the claim around it is evidenced
 
-- [FAQ Reply Notebook](./faq-replies.md) — internal: copy-paste answers for community comments (Reddit, X, HN, IndieHackers)
+## I want the docs to work for AI agents, not only readers
+
+- [MCP server for documentation](./mcp-server-for-documentation.md) — how Claude Code and Cursor read and edit your docs
+- [docs-skills: modular capabilities for AI agents](./docs-skills-for-ai-agents.md) — the layer between MCP and your content
+- [AI chat for documentation: should you build or buy?](./ai-chat-for-documentation-build-vs-buy.md) — the cost of owning a retrieval pipeline
+
+## I need to prove the docs are working
+
+- [Documentation analytics: the metrics worth tracking](./documentation-analytics-what-to-track.md) — failed searches, unanswered questions, dead ends
+- [Why documentation matters for SaaS: the hidden ROI](./why-documentation-matters.md) — how to measure the cost of bad docs on your own product
+- [API documentation best practices for developers in 2026](./api-documentation-best-practices-2026.md) — the highest-stakes docs a company writes
+
+## Internal
+
+- [FAQ reply notebook](./faq-replies.md) — copy-paste answers for community comments on Reddit, X, Hacker News and IndieHackers
 
 ## Related
 
