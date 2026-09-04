@@ -22,6 +22,7 @@ Sees where the model budget actually goes before the invoice does. This is the A
 - The Pro trial banner is one line now: how many days are left, when it ends, and what upgrading costs or what switches off if you don't — instead of a headline plus a paragraph explaining the same three facts. `Billing`
 - AI usage now costs the provider's real price plus 70%, down from plus 900% — the model, its per-1M-token rate and the markup are still shown in your dashboard beside every deduction, just with a lower markup on top of it, so your AI bill drops without changing anything you do. `Billing`
 - The price shown for an agent's route, and for one subagent call in it, now reads **up to** instead of a bare figure. It is still exact for the metered calls themselves, but a run also spends from your AI balance on the model turns it makes, which is billed separately and can push the real cost above the number shown. `Agents`
+- The **MCP** tools table fits the panel again: every column is narrower, spend is one line instead of two, and each `agent_*` tool carries the icon of what it actually does rather than the same robot as the other fifty-three. A second dropdown narrows by **Impact** — what a tool moves — beside the one that narrows by what it costs, because those are two different questions. `MCP`
 
 ### Fixed
 

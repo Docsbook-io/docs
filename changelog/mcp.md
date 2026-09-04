@@ -16,6 +16,10 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 - An MCP tool's page now lists the **agents that use it** — the cards whose route actually calls that tool, armed ones first, each with its own switch — so you can put a tool on a schedule from the page where you just read what a call costs, instead of hunting for it among forty agents. `MCP`
 - A tool's **call history** is now the Feeds table narrowed to that tool, so what a call cost and what it answered read the same on the tool's page as they do in Feeds, and expanding a row still shows what went in and what came back. One log, one way to read it. `MCP`
 
+### Changed
+
+- The **MCP** tools table fits the panel again: every column is narrower, spend is one line instead of two, and each `agent_*` tool carries the icon of what it actually does rather than the same robot as the other fifty-three. A second dropdown narrows by **Impact** — what a tool moves — beside the one that narrows by what it costs, because those are two different questions. `MCP`
+
 ### Fixed
 
 - Background documentation jobs run again. The health probe in front of them was measuring the router rather than the runner and read a 404 that is the design as "the runner is unreachable", refusing every job for three days. `MCP`
