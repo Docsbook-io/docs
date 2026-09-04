@@ -19,6 +19,7 @@ Readers who came to learn and left having started — the docs' real job. This i
 ### Changed
 
 - The Pro trial banner is one line now: how many days are left, when it ends, and what upgrading costs or what switches off if you don't — instead of a headline plus a paragraph explaining the same three facts. `Billing`
+- Pressing **Improve** or **Analyze** anywhere in the panel — a reader row, a goal, a funnel step, a commit — now starts the agent that fits what you were looking at, carrying what was already on screen as that run's own instruction, and opens the run to watch live: a clock that keeps ticking while it works, and the instruction it started from shown apart from what it did. The button used to just copy that text to your clipboard, from when it opened a chat that no longer exists. `Agents`
 
 ### Fixed
 

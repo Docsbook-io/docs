@@ -33,6 +33,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - **Start agent** now sits at the top of an agent's panel, beside Close, reachable from Overview as well as Runs, instead of only appearing once you switched to the Runs tab. `Agents`
 - The trigger's "On a schedule / On an event / ..." control is now sized to match the detail underneath it, with the dividing line between them removed, so the two read as one card rather than two stacked controls. `Agents`
 - The setup checklist now offers connecting your own coding agent — Claude Code, Cursor, Codex, or whichever one you already work in — right after the content interview instead of near the bottom of the list, so the one thing that lets you drive the rest of setup from your own tool over MCP gets found instead of skipped.
+- Pressing **Improve** or **Analyze** anywhere in the panel — a reader row, a goal, a funnel step, a commit — now starts the agent that fits what you were looking at, carrying what was already on screen as that run's own instruction, and opens the run to watch live: a clock that keeps ticking while it works, and the instruction it started from shown apart from what it did. The button used to just copy that text to your clipboard, from when it opened a chat that no longer exists. `Agents`
 
 ### Fixed
 

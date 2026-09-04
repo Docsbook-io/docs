@@ -22,6 +22,7 @@ Everything that shipped in **Agents**. This is the Agents slice of the [full Doc
 - Which sources an agent may read is one picker that says what an empty pick means, instead of a wall of toggles as tall as the number of sources you are not choosing. `Agents`
 - **Start agent** now sits at the top of an agent's panel, beside Close, reachable from Overview as well as Runs, instead of only appearing once you switched to the Runs tab. `Agents`
 - The trigger's "On a schedule / On an event / ..." control is now sized to match the detail underneath it, with the dividing line between them removed, so the two read as one card rather than two stacked controls. `Agents`
+- Pressing **Improve** or **Analyze** anywhere in the panel — a reader row, a goal, a funnel step, a commit — now starts the agent that fits what you were looking at, carrying what was already on screen as that run's own instruction, and opens the run to watch live: a clock that keeps ticking while it works, and the instruction it started from shown apart from what it did. The button used to just copy that text to your clipboard, from when it opened a chat that no longer exists. `Agents`
 
 ### Fixed
 
