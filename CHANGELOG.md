@@ -46,6 +46,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Translating a page now costs roughly a third of what it did. Translations run on GPT-5.6 Luna by default instead of GPT-4o mini, which is the same rewrite-this-prose job at $0.055/$0.22 per 1M tokens against $0.15/$0.60, so the same balance stretches over about three times as many pages and a language you were putting off is affordable now. Projects that had explicitly chosen a pricier model were moved with the default; the picker in **Settings ▸ Translations ▸ Translation Model** still offers every model, and the estimate shown before a run is priced on whichever one you pick. `Translations`
 - Clicking the schedule's time no longer leaves it unclear what you are about to change. It is now the browser's own time control, in place of an invisible layer that gave no sign of which part a click had landed on. `Agents`
 - The **Was this page helpful?** prompt no longer draws border boxes around itself or its Yes/No buttons, and no longer sits flush against the previous/next links below it. `Page Feedback`
+- The Pull Requests panel no longer reports "Nothing is waiting for you" while a real pull request sits open on GitHub. Listing pull requests reused the credential resolution built for committing, so a project without escalated GitHub write access read its queue from the wrong repository instead of its own. Reading the queue no longer needs write access at all. `Changes`
 
 ### Removed
 
