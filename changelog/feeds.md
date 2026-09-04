@@ -9,6 +9,10 @@ Everything that shipped in **Feeds**. This is the Feeds slice of the [full Docsb
 
 ## NEW - 04.09.2026
 
+### Added
+
+- Avatars across Feeds, Users and Chat now carry a small flag badge when a reader's location is known, so who someone is reads at a glance instead of needing a click into their profile. `Feeds`
+
 ### Fixed
 
 - Your MCP call log stops losing the first half of a session. A call that costs nothing is still a call, so `get_info`, `get_workspace`, `list_workspaces`, `create_workspace`, `find_skill` and `find_widget` (what an agent opens a session with) now appear in Feeds and in the tools table against the right project. `Feeds`

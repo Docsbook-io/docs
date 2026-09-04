@@ -44,7 +44,7 @@ Below the chart, four cards break the same period down. Each card holds several 
 | Pages | Pages, Headings, Entry, Exit |
 | Sources | Referrers, Channels, UTM, Keyword |
 | Audience | Devices, Browsers, Countries, Languages |
-| Conversions | CTA Clicks, Feedback |
+| Conversions | CTA Clicks, Feedback, Searches |
 | AI Views (full width) | AI crawler requests over time, and per bot |
 
 At the very bottom of the page, two more cards — "What readers asked" and
@@ -88,9 +88,9 @@ clicked. Spend is the exception: a filter cuts *visits*, and an AI answer or a
 translation job is not a visit, so Spend keeps showing the whole project's bill.
 
 The tabs counted per event rather than per visit — Headings, Read Time, UTM,
-AI Views, CTA Clicks and Feedback — cannot be filtered this way. They say so
-above their rows while a filter is on, rather than showing unfiltered numbers
-under a filtered heading.
+AI Views, CTA Clicks, Feedback and Searches — cannot be filtered this way. They
+say so above their rows while a filter is on, rather than showing unfiltered
+numbers under a filtered heading.
 
 **Online now** — a live count of readers active in the last five minutes — is not one of the seven. It is a right-now number rather than a total over the period you picked, so it sits as its own chip beside the panel's title.
 
@@ -199,6 +199,12 @@ The **Feedback** tab of the same card ranks your pages by the thumbs readers gav
 
 Rows are sorted by dislikes first: the page people voted down is the one to rewrite, while an upvoted page only confirms what already works. Both counts are always shown, zeros included.
 
+### What are readers searching for that isn't there?
+
+The **Searches** tab of the same card ranks what readers typed into your on-page search box, one row per query, with how often it found something and how often it came back empty. A query can carry both counts at once — the same words sometimes resolve and sometimes come back with nothing.
+
+A query with no results is the reader telling you, in their own words, what the docs should cover: check whether a page answering it already exists under a different name, and if not, that is the next page to write. Unlike the other cards, Searches has no metric menu to re-rank by — these rows are counted per search event rather than per visit, so there is no revenue figure to sort on the way Pages and Sources offer.
+
 ## A report you have no data for yet
 
 A report with nothing in it teaches nothing, so a tab that has none of your own
@@ -217,8 +223,8 @@ Four things worth knowing about it:
 
 - **It is per tab, not per card and not per page.** Pages, Headings, Entry and
   Exit are four switches, not one, and so are Referrers, Channels, UTM and
-  Keyword, Devices, Browsers, Countries and Languages, and CTA Clicks and
-  Feedback. They answer different questions with different caveats — Entry names
+  Keyword, Devices, Browsers, Countries and Languages, and CTA Clicks, Feedback
+  and Searches. They answer different questions with different caveats — Entry names
   one page per visit while Pages credits every page a visit touched — and each
   gets the explanation that is actually about it. A site with plenty of
   referrers and no tagged campaign meets the guide on **UTM** and nowhere else.
