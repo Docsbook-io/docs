@@ -16,6 +16,14 @@ Readers who came to learn and left having started — the docs' real job. This i
 - An **Agents** section in the admin panel: forty goals your project can pursue on its own, each one an ordered route of subagents rather than a single call, with what it is for, the number it is bought to move, and what a run costs before you arm it. Recurring documentation work you were doing by hand every week can now be handed to a schedule. `Agents`
 - Arm one on a schedule you read as a sentence in your own clock: how often, which days, at what time, with the next run printed underneath in the same clock. The six presets it replaced were labelled in UTC, so checking one meant converting in your head, and "Tuesday and Thursday at nine" could not be asked for at all. `Agents`
 
+### Changed
+
+- The Pro trial banner is one line now: how many days are left, when it ends, and what upgrading costs or what switches off if you don't — instead of a headline plus a paragraph explaining the same three facts. `Billing`
+
+### Fixed
+
+- Your AI spend chart, per-model breakdown and the MCP `get_ai_usage` card now total what actually left your balance. A billing statement was reporting a figure it re-read from the row it had just rewritten instead of the one it started from, so a call that spent a real cent could log as $0.00 — across live projects the ledger was missing 17% of billed revenue, worse on the busiest one. Whatever a call's balance couldn't cover in full is now kept and collected on the next call that has money, instead of written off. `Billing`
+
 ### Removed
 
 - The **Prompts** section is gone. A prompt was text you copied into your own agent, so nothing in Docsbook could run it or tell you whether it ever ran; what it was reached for now lives where it can act — a goal on a schedule is an **Agent**, and "what can I say to this tool" is the one worked example on that tool's own page. Nothing you have to check by hand moved with it. `MCP`

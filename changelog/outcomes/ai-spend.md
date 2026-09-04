@@ -17,9 +17,14 @@ Sees where the model budget actually goes before the invoice does. This is the A
 - An MCP tool's page now lists the **agents that use it** — the cards whose route actually calls that tool, armed ones first, each with its own switch — so you can put a tool on a schedule from the page where you just read what a call costs, instead of hunting for it among forty agents. `MCP`
 - A tool's **call history** is now the Feeds table narrowed to that tool, so what a call cost and what it answered read the same on the tool's page as they do in Feeds, and expanding a row still shows what went in and what came back. One log, one way to read it. `MCP`
 
+### Changed
+
+- The Pro trial banner is one line now: how many days are left, when it ends, and what upgrading costs or what switches off if you don't — instead of a headline plus a paragraph explaining the same three facts. `Billing`
+
 ### Fixed
 
 - Your MCP call log stops losing the first half of a session. A call that costs nothing is still a call, so `get_info`, `get_workspace`, `list_workspaces`, `create_workspace`, `find_skill` and `find_widget` (what an agent opens a session with) now appear in Feeds and in the tools table against the right project. `Feeds`
+- Your AI spend chart, per-model breakdown and the MCP `get_ai_usage` card now total what actually left your balance. A billing statement was reporting a figure it re-read from the row it had just rewritten instead of the one it started from, so a call that spent a real cent could log as $0.00 — across live projects the ledger was missing 17% of billed revenue, worse on the busiest one. Whatever a call's balance couldn't cover in full is now kept and collected on the next call that has money, instead of written off. `Billing`
 - Translating a page now costs roughly a third of what it did. Translations run on GPT-5.6 Luna by default instead of GPT-4o mini, which is the same rewrite-this-prose job at $0.055/$0.22 per 1M tokens against $0.15/$0.60, so the same balance stretches over about three times as many pages and a language you were putting off is affordable now. Projects that had explicitly chosen a pricier model were moved with the default; the picker in **Settings ▸ Translations ▸ Translation Model** still offers every model, and the estimate shown before a run is priced on whichever one you pick. `Translations`
 
 ## NEW - 03.09.2026
