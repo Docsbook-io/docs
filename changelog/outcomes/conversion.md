@@ -15,6 +15,7 @@ Readers who came to learn and left having started — the docs' real job. This i
 
 - An **Agents** section in the admin panel: forty goals your project can pursue on its own, each one an ordered route of subagents rather than a single call, with what it is for, the number it is bought to move, and what a run costs before you arm it. Recurring documentation work you were doing by hand every week can now be handed to a schedule. `Agents`
 - Arm one on a schedule you read as a sentence in your own clock: how often, which days, at what time, with the next run printed underneath in the same clock. The six presets it replaced were labelled in UTC, so checking one meant converting in your head, and "Tuesday and Thursday at nine" could not be asked for at all. `Agents`
+- The project switcher's menu gained an **Upgrade project** button in its pinned footer, opening the same pricing modal the trial banner and win-back notice already use, so upgrading a project no longer means first finding the billing tab. `Billing`
 
 ### Changed
 

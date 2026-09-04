@@ -14,6 +14,7 @@ Questions the docs answer are questions your inbox never sees. This is the Suppo
 ### Fixed
 
 - The **Was this page helpful?** prompt no longer draws border boxes around itself or its Yes/No buttons, and no longer sits flush against the previous/next links below it. `Page Feedback`
+- **Ask AI** on your own site no longer strands you with neither the toolbar nor the composer after you hid a live chat thread — pressing it now un-collapses the hidden conversation instead of racing a composer bar that can't mount while it's still open. It also always opens the same composer a plain reader gets, so pressing your own Ask AI button shows what a customer actually sees. `AI Chat`
 
 ## NEW - 03.09.2026
 
