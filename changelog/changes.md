@@ -7,6 +7,12 @@ description: "Every release that touched the Changes tab: the commit history of 
 
 Everything that shipped in **Changes**. This is the Changes slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 04.09.2026
+
+### Added
+
+- Pull Requests now opens with a short walkthrough on a first visit instead of landing straight on a live GitHub read, the same "Turn on" introduction Agents and Sources already carry. `Changes`
+
 ## NEW - 03.09.2026
 
 ### Fixed

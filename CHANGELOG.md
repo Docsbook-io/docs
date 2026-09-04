@@ -20,6 +20,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - A tool's **call history** is now the Feeds table narrowed to that tool, so what a call cost and what it answered read the same on the tool's page as they do in Feeds, and expanding a row still shows what went in and what came back. One log, one way to read it. `MCP`
 - Agents can now be armed to run every hour, not just once a day at the fastest. The schedule sentence gained an **Hourly** option that asks which minute past the hour rather than a time of day, for work that should not wait for tomorrow's run. `Agents`
 - An open issue can be closed straight from its page — as completed, not planned, or duplicate, the same three reasons GitHub's own page offers — without leaving the panel to do it. `Issues`
+- Pull Requests now opens with a short walkthrough on a first visit instead of landing straight on a live GitHub read, the same "Turn on" introduction Agents and Sources already carry. `Changes`
+- Issues gets that same first-visit walkthrough instead of opening straight onto a live GitHub read. `Issues`
 
 ### Changed
 

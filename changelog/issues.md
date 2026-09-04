@@ -14,6 +14,7 @@ Everything that shipped in **Issues**. This is the Issues slice of the [full Doc
 - Every station of an agent's run files what it found as a GitHub issue on your own tracker, so nobody has to read a transcript to learn what needs doing. The finding outlives the run that produced it: a person can pick it up, the diff that fixes it can reference it, and merging that diff closes it. `Issues`
 - An issue an agent filed names that agent in its sidebar and opens its card from there, so "what wakes this thing, and what route is this station part of" is one click rather than a walk back through the panel. Beside it sit the run behind the finding, the other stations of the same route, the other issues that reference this one, and the pull request that closes it. `Issues`
 - An open issue can be closed straight from its page — as completed, not planned, or duplicate, the same three reasons GitHub's own page offers — without leaving the panel to do it. `Issues`
+- Issues gets that same first-visit walkthrough instead of opening straight onto a live GitHub read. `Issues`
 
 ### Changed
 
