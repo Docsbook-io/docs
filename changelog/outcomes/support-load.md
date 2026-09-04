@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Support load** — fewer qu
 
 Questions the docs answer are questions your inbox never sees. This is the Support load slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 04.09.2026
+
+### Fixed
+
+- The **Was this page helpful?** prompt no longer draws border boxes around itself or its Yes/No buttons, and no longer sits flush against the previous/next links below it. `Page Feedback`
+
 ## NEW - 03.09.2026
 
 ### Added

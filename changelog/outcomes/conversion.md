@@ -27,6 +27,7 @@ Readers who came to learn and left having started — the docs' real job. This i
 ### Removed
 
 - The **Prompts** section is gone. A prompt was text you copied into your own agent, so nothing in Docsbook could run it or tell you whether it ever ran; what it was reached for now lives where it can act — a goal on a schedule is an **Agent**, and "what can I say to this tool" is the one worked example on that tool's own page. Nothing you have to check by hand moved with it. `MCP`
+- The admin panel no longer shows a starting-credit or claimable-bonus card on a project's balance — new projects get a 14-day Pro trial instead of one-off dollar grants, so a card advertising cash that isn't offered anymore is gone too. `Billing`
 
 ## NEW - 03.09.2026
 

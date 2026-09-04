@@ -27,6 +27,10 @@ Sees where the model budget actually goes before the invoice does. This is the A
 - Your AI spend chart, per-model breakdown and the MCP `get_ai_usage` card now total what actually left your balance. A billing statement was reporting a figure it re-read from the row it had just rewritten instead of the one it started from, so a call that spent a real cent could log as $0.00 — across live projects the ledger was missing 17% of billed revenue, worse on the busiest one. Whatever a call's balance couldn't cover in full is now kept and collected on the next call that has money, instead of written off. `Billing`
 - Translating a page now costs roughly a third of what it did. Translations run on GPT-5.6 Luna by default instead of GPT-4o mini, which is the same rewrite-this-prose job at $0.055/$0.22 per 1M tokens against $0.15/$0.60, so the same balance stretches over about three times as many pages and a language you were putting off is affordable now. Projects that had explicitly chosen a pricier model were moved with the default; the picker in **Settings ▸ Translations ▸ Translation Model** still offers every model, and the estimate shown before a run is priced on whichever one you pick. `Translations`
 
+### Removed
+
+- The admin panel no longer shows a starting-credit or claimable-bonus card on a project's balance — new projects get a 14-day Pro trial instead of one-off dollar grants, so a card advertising cash that isn't offered anymore is gone too. `Billing`
+
 ## NEW - 03.09.2026
 
 ### Added
