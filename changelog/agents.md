@@ -23,6 +23,7 @@ Everything that shipped in **Agents**. This is the Agents slice of the [full Doc
 - **Start agent** now sits at the top of an agent's panel, beside Close, reachable from Overview as well as Runs, instead of only appearing once you switched to the Runs tab. `Agents`
 - The trigger's "On a schedule / On an event / ..." control is now sized to match the detail underneath it, with the dividing line between them removed, so the two read as one card rather than two stacked controls. `Agents`
 - Pressing **Improve** or **Analyze** anywhere in the panel — a reader row, a goal, a funnel step, a commit — now starts the agent that fits what you were looking at, carrying what was already on screen as that run's own instruction, and opens the run to watch live: a clock that keeps ticking while it works, and the instruction it started from shown apart from what it did. The button used to just copy that text to your clipboard, from when it opened a chat that no longer exists. `Agents`
+- The price shown for an agent's route, and for one subagent call in it, now reads **up to** instead of a bare figure. It is still exact for the metered calls themselves, but a run also spends from your AI balance on the model turns it makes, which is billed separately and can push the real cost above the number shown. `Agents`
 
 ### Fixed
 

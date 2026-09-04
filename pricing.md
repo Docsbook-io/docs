@@ -44,7 +44,7 @@ Top-ups do not expire and nothing is refilled on a schedule. If you want a recur
 
 ## What Docsbook charges for AI usage
 
-Docsbook charges the AI provider's real price for the model that answered, **plus 900%**. The model, its per-1M-token rate and the markup are all shown in your dashboard, so the amount deducted is one you can check against the provider's own price list. Choosing a cheaper model makes the same balance go further.
+Docsbook charges the AI provider's real price for the model that answered, **plus 70%**. The model, its per-1M-token rate and the markup are all shown in your dashboard, so the amount deducted is one you can check against the provider's own price list. Choosing a cheaper model makes the same balance go further.
 
 Bringing your own provider API key is supported. When you do, you pay the provider directly and Docsbook bills you nothing for that usage.
 
