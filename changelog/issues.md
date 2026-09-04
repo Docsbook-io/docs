@@ -16,6 +16,7 @@ Everything that shipped in **Issues**. This is the Issues slice of the [full Doc
 
 ### Changed
 
+- Reading an issue now tells you what came of it, not only what it says: the comments, the agent and the run that filed it, and the pull requests written against it. A hypothesis somebody wrote down and a hypothesis somebody actually tested read very differently, and the tracker was only showing you the first. `Issues`
 - An agent's issue now opens on what it FOUND. Why the run happened, what earlier steps handed it, what happens to anything it writes and the raw call all moved into one collapsed block at the bottom, so deciding what to do about a finding no longer means scrolling past four headings about the machinery to reach it. `Issues`
 
 ### Fixed

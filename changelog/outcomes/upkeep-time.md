@@ -13,6 +13,8 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 
 ### Added
 
+- Two MCP tools that answer **"have we already tried this?"** before an agent proposes anything. `search_prior_work` searches your repository's issues and pull requests together and says what happened to each — still open, closed without merging, or merged — and `get_pull_request` opens one of them with the files it touched, the agent and run that opened it, the issues it came out of, what reviewers said, and, once it merged, the commit its effect can be measured on. `MCP`
+- Fifty-four of the agent capabilities now run that check as their second step, so a recommendation arrives knowing whether this project already made that change and abandoned it. A pull request closed without merging is reported as a change your project rejected, never as a precedent for making it again, which is the reading that used to send the same idea round every quarter. `MCP`
 - An **Agents** section in the admin panel: forty goals your project can pursue on its own, each one an ordered route of subagents rather than a single call, with what it is for, the number it is bought to move, and what a run costs before you arm it. Recurring documentation work you were doing by hand every week can now be handed to a schedule. `Agents`
 - Arm one on a schedule you read as a sentence in your own clock: how often, which days, at what time, with the next run printed underneath in the same clock. The six presets it replaced were labelled in UTC, so checking one meant converting in your head, and "Tuesday and Thursday at nine" could not be asked for at all. `Agents`
 - A **Runs** tab beside the catalog answers "did anything run last night, and did it hold up" of the whole project. That history used to be reachable only from inside one agent's settings, so the question could only be asked forty times. `Agents`
@@ -22,6 +24,7 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 
 ### Changed
 
+- Reading an issue now tells you what came of it, not only what it says: the comments, the agent and the run that filed it, and the pull requests written against it. A hypothesis somebody wrote down and a hypothesis somebody actually tested read very differently, and the tracker was only showing you the first. `Issues`
 - An agent's issue now opens on what it FOUND. Why the run happened, what earlier steps handed it, what happens to anything it writes and the raw call all moved into one collapsed block at the bottom, so deciding what to do about a finding no longer means scrolling past four headings about the machinery to reach it. `Issues`
 - A run's transcript opens as its own table of contents, every station closed. Which stations ran, which held up and how long each took now fits on one screen instead of being spread over forty screens of prose. `Agents`
 - Which sources an agent may read is one picker that says what an empty pick means, instead of a wall of toggles as tall as the number of sources you are not choosing. `Agents`

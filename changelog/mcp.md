@@ -11,6 +11,8 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 
 ### Added
 
+- Two MCP tools that answer **"have we already tried this?"** before an agent proposes anything. `search_prior_work` searches your repository's issues and pull requests together and says what happened to each — still open, closed without merging, or merged — and `get_pull_request` opens one of them with the files it touched, the agent and run that opened it, the issues it came out of, what reviewers said, and, once it merged, the commit its effect can be measured on. `MCP`
+- Fifty-four of the agent capabilities now run that check as their second step, so a recommendation arrives knowing whether this project already made that change and abandoned it. A pull request closed without merging is reported as a change your project rejected, never as a precedent for making it again, which is the reading that used to send the same idea round every quarter. `MCP`
 - An MCP tool's page now lists the **agents that use it** — the cards whose route actually calls that tool, armed ones first, each with its own switch — so you can put a tool on a schedule from the page where you just read what a call costs, instead of hunting for it among forty agents. `MCP`
 - A tool's **call history** is now the Feeds table narrowed to that tool, so what a call cost and what it answered read the same on the tool's page as they do in Feeds, and expanding a row still shows what went in and what came back. One log, one way to read it. `MCP`
 
