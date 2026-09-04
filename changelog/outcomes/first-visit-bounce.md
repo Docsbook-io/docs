@@ -15,6 +15,10 @@ Docs that look like the product, rather than like a template someone forgot. Thi
 
 - An issue an agent filed names that agent in its sidebar and opens its card from there, so "what wakes this thing, and what route is this station part of" is one click rather than a walk back through the panel. Beside it sit the run behind the finding, the other stations of the same route, the other issues that reference this one, and the pull request that closes it. `Issues`
 
+### Changed
+
+- The **Issues** walkthrough now runs over example issues instead of an empty tracker. A first visit shows what a filed finding looks like — the badge that marks one an agent opened on its own, the labels that say which kind of reader raised it, an open one beside a closed one — so the introduction argues for the section rather than reporting that there is nothing in it. The examples say they are examples and disappear the moment a real issue exists. `Issues`
+
 ## NEW - 03.09.2026
 
 ### Fixed

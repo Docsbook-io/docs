@@ -13,6 +13,10 @@ Everything that shipped in **Changes**. This is the Changes slice of the [full D
 
 - Pull Requests now opens with a short walkthrough on a first visit instead of landing straight on a live GitHub read, the same "Turn on" introduction Agents and Sources already carry. `Changes`
 
+### Changed
+
+- The **Pull Requests** walkthrough does the same: the queue behind it now shows example changes waiting for approval, each with the agent that opened it and the issues it came out of, plus the publish-automatically switch the walkthrough talks about. It used to introduce itself with "Nothing is waiting for you", which is exactly what it says on the day you have not armed anything yet. `Changes`
+
 ### Fixed
 
 - The Pull Requests panel no longer reports "Nothing is waiting for you" while a real pull request sits open on GitHub. Listing pull requests reused the credential resolution built for committing, so a project without escalated GitHub write access read its queue from the wrong repository instead of its own. Reading the queue no longer needs write access at all. `Changes`
