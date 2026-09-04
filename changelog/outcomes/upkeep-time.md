@@ -31,6 +31,7 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 - Which sources an agent may read is one picker that says what an empty pick means, instead of a wall of toggles as tall as the number of sources you are not choosing. `Agents`
 - **Start agent** now sits at the top of an agent's panel, beside Close, reachable from Overview as well as Runs, instead of only appearing once you switched to the Runs tab. `Agents`
 - The trigger's "On a schedule / On an event / ..." control is now sized to match the detail underneath it, with the dividing line between them removed, so the two read as one card rather than two stacked controls. `Agents`
+- The setup checklist now offers connecting your own coding agent — Claude Code, Cursor, Codex, or whichever one you already work in — right after the content interview instead of near the bottom of the list, so the one thing that lets you drive the rest of setup from your own tool over MCP gets found instead of skipped.
 
 ### Fixed
 

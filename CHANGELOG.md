@@ -29,6 +29,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The Pro trial banner is one line now: how many days are left, when it ends, and what upgrading costs or what switches off if you don't — instead of a headline plus a paragraph explaining the same three facts. `Billing`
 - **Start agent** now sits at the top of an agent's panel, beside Close, reachable from Overview as well as Runs, instead of only appearing once you switched to the Runs tab. `Agents`
 - The trigger's "On a schedule / On an event / ..." control is now sized to match the detail underneath it, with the dividing line between them removed, so the two read as one card rather than two stacked controls. `Agents`
+- The setup checklist now offers connecting your own coding agent — Claude Code, Cursor, Codex, or whichever one you already work in — right after the content interview instead of near the bottom of the list, so the one thing that lets you drive the rest of setup from your own tool over MCP gets found instead of skipped.
 
 ### Fixed
 
