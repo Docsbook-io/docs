@@ -45,6 +45,7 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 ### Removed
 
 - The **Prompts** section is gone. A prompt was text you copied into your own agent, so nothing in Docsbook could run it or tell you whether it ever ran; what it was reached for now lives where it can act — a goal on a schedule is an **Agent**, and "what can I say to this tool" is the one worked example on that tool's own page. Nothing you have to check by hand moved with it. `MCP`
+- The **Generate Issues** button is gone from the Issues list. Asking for issues along a stage still works exactly as before — say it to the assistant, or arm the matching agent — the button was one way to compose that request, not a separate capability. `Issues`
 
 ## NEW - 03.09.2026
 

@@ -19,6 +19,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - An MCP tool's page now lists the **agents that use it** — the cards whose route actually calls that tool, armed ones first, each with its own switch — so you can put a tool on a schedule from the page where you just read what a call costs, instead of hunting for it among forty agents. `MCP`
 - A tool's **call history** is now the Feeds table narrowed to that tool, so what a call cost and what it answered read the same on the tool's page as they do in Feeds, and expanding a row still shows what went in and what came back. One log, one way to read it. `MCP`
 - Agents can now be armed to run every hour, not just once a day at the fastest. The schedule sentence gained an **Hourly** option that asks which minute past the hour rather than a time of day, for work that should not wait for tomorrow's run. `Agents`
+- An open issue can be closed straight from its page — as completed, not planned, or duplicate, the same three reasons GitHub's own page offers — without leaving the panel to do it. `Issues`
 
 ### Changed
 
@@ -45,6 +46,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Removed
 
 - The **Prompts** section is gone. A prompt was text you copied into your own agent, so nothing in Docsbook could run it or tell you whether it ever ran; what it was reached for now lives where it can act — a goal on a schedule is an **Agent**, and "what can I say to this tool" is the one worked example on that tool's own page. Nothing you have to check by hand moved with it. `MCP`
+- The **Generate Issues** button is gone from the Issues list. Asking for issues along a stage still works exactly as before — say it to the assistant, or arm the matching agent — the button was one way to compose that request, not a separate capability. `Issues`
 
 ## NEW - 03.09.2026
 
