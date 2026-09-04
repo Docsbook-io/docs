@@ -13,6 +13,7 @@ Docsbook keeps one changelog, [the full one](../CHANGELOG.md), and cuts it two w
 - [Issues](./issues.md) — What shipped in the Docsbook issue tracker, and when
 - [MCP](./mcp.md) — What changed in the Docsbook MCP server, and when it shipped
 - [Sources](./sources.md) — What changed in Docsbook Sources, and in which release
+- [Agents](./agents.md) — What changed in Docsbook Agents, and when it shipped
 - [Prompts](./prompts.md) — What changed in the Docsbook prompt library, and when
 - [Chat](./chat.md) — What changed in the Docsbook AI Chat assistant, and when
 - [SEO & GEO](./seo-geo.md) — What changed in Docsbook SEO and GEO, and in which release

@@ -7,7 +7,7 @@ description: "Connect a repository or a website as a source, and the Docsbook as
 
 A **Docsbook source** is a repository or website your documentation is allowed to read from. Connect one, and asking the assistant to *update the documentation* or *resolve the drift* starts with it going and reading — instead of answering from what it happens to remember about your product.
 
-Open the **Sources** section of your project's admin panel, directly under MCP and Prompts.
+Open the **Sources** section of your project's admin panel, directly under MCP and Agents.
 
 ## What can I connect as a source?
 
@@ -69,7 +69,7 @@ A repository read without a path lists its readable files; with one, it returns 
 
 ## Which runs can actually read a source?
 
-Not every tool reaches a source, so the panel says which do rather than implying they all can. Wherever a run is listed — the **Sources** column in the Prompts table, and the strip under an MCP tool's description — the chips are drawn in two states:
+Not every tool reaches a source, so the panel says which do rather than implying they all can. Wherever a run is listed — the strip under an MCP tool's description, and an agent's own settings — the chips are drawn in two states:
 
 - **Lit** — this run fetches the source: your site's pages, your repository's files.
 - **Unlit** — this run knows the source is connected and will not fetch it. Ask the assistant instead; it has no such limit.

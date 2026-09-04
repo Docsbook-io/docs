@@ -1,6 +1,6 @@
 ---
 title: "What changed in the Docsbook prompt library, and when"
-description: "Every release that touched Prompts: the catalog your agent runs, the wording your workspace overrode, the Impact column, and what runs on a schedule."
+description: "Every release that touched Prompts: the catalog, the wording your workspace overrode, the Impact column, and what ran on a schedule. The section was retired on 04.09.2026; this page is its history."
 ---
 
 # What changed in the Docsbook prompt library, and when
@@ -55,7 +55,7 @@ Everything that shipped in **Prompts**. This is the Prompts slice of the [full D
 ## Related
 
 - [Full Docsbook changelog](../CHANGELOG.md) — every release, across every section
-- [Skills and prompts](../ai/skills.md) — the skills and prompts an agent runs
+- [MCP server](../ai/mcp.md) — where a tool's worked example lives now
 - [Changelogs by panel section](./README.md) — the same releases, cut by where they landed
 - [Changelogs by outcome](./outcomes/README.md) — the same releases, cut by the number they move
 

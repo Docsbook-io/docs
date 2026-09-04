@@ -167,10 +167,10 @@ having: the transcript of what it actually did the last time this feed moved, in
 Triggers group. That is the only thing that can tell you a prompt is working rather than merely
 switched on.
 
-A prompt watches a **saved** feed, so a view you have narrowed but not saved yet says so and points
-at **Save as list**. The same arming is available from the other side — the Prompts page's
-**On event** picker now lists your feeds above the individual events — and deleting a feed
-disarms whatever watched it rather than deleting the prompt.
+What watches a feed watches a **saved** one, so a view you have narrowed but not saved yet says so
+and points at **Save as list**. The same arming is available from the other side — the **On a
+schedule or an event** panel on an MCP tool's own page lists your feeds above the individual
+events — and deleting a feed disarms whatever watched it rather than deleting the armed call.
 
 ### What it all cost
 
