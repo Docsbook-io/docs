@@ -18,6 +18,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - An issue an agent filed names that agent in its sidebar and opens its card from there, so "what wakes this thing, and what route is this station part of" is one click rather than a walk back through the panel. Beside it sit the run behind the finding, the other stations of the same route, the other issues that reference this one, and the pull request that closes it. `Issues`
 - An MCP tool's page now lists the **agents that use it** — the cards whose route actually calls that tool, armed ones first, each with its own switch — so you can put a tool on a schedule from the page where you just read what a call costs, instead of hunting for it among forty agents. `MCP`
 - A tool's **call history** is now the Feeds table narrowed to that tool, so what a call cost and what it answered read the same on the tool's page as they do in Feeds, and expanding a row still shows what went in and what came back. One log, one way to read it. `MCP`
+- Agents can now be armed to run every hour, not just once a day at the fastest. The schedule sentence gained an **Hourly** option that asks which minute past the hour rather than a time of day, for work that should not wait for tomorrow's run. `Agents`
 
 ### Changed
 
@@ -26,6 +27,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - A run's transcript opens as its own table of contents, every station closed. Which stations ran, which held up and how long each took now fits on one screen instead of being spread over forty screens of prose. `Agents`
 - Which sources an agent may read is one picker that says what an empty pick means, instead of a wall of toggles as tall as the number of sources you are not choosing. `Agents`
 - The Pro trial banner is one line now: how many days are left, when it ends, and what upgrading costs or what switches off if you don't — instead of a headline plus a paragraph explaining the same three facts. `Billing`
+- **Start agent** now sits at the top of an agent's panel, beside Close, reachable from Overview as well as Runs, instead of only appearing once you switched to the Runs tab. `Agents`
+- The trigger's "On a schedule / On an event / ..." control is now sized to match the detail underneath it, with the dividing line between them removed, so the two read as one card rather than two stacked controls. `Agents`
 
 ### Fixed
 
@@ -36,6 +39,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Your AI spend chart, per-model breakdown and the MCP `get_ai_usage` card now total what actually left your balance. A billing statement was reporting a figure it re-read from the row it had just rewritten instead of the one it started from, so a call that spent a real cent could log as $0.00 — across live projects the ledger was missing 17% of billed revenue, worse on the busiest one. Whatever a call's balance couldn't cover in full is now kept and collected on the next call that has money, instead of written off. `Billing`
 - A run whose hand-off went missing no longer spins for ever. The route is driven inside its own request, and anything still open is picked up within five minutes or reported as failed with the reason, so nobody has to watch a run to find out it stopped. `Agents`
 - Translating a page now costs roughly a third of what it did. Translations run on GPT-5.6 Luna by default instead of GPT-4o mini, which is the same rewrite-this-prose job at $0.055/$0.22 per 1M tokens against $0.15/$0.60, so the same balance stretches over about three times as many pages and a language you were putting off is affordable now. Projects that had explicitly chosen a pricier model were moved with the default; the picker in **Settings ▸ Translations ▸ Translation Model** still offers every model, and the estimate shown before a run is priced on whichever one you pick. `Translations`
+- Clicking the schedule's time no longer leaves it unclear what you are about to change. It is now the browser's own time control, in place of an invisible layer that gave no sign of which part a click had landed on. `Agents`
 
 ### Removed
 
