@@ -25,6 +25,10 @@ when a language reads badly. It is a separate
 choice from the model your chat runs on — translating prose and answering a
 reader's question are different jobs.
 
+Pick nothing and you get **GPT-5.6 Luna**, the cheapest option on the list and
+the model Docsbook's own admin assistant runs on. It is marked `(default)` in
+the picker.
+
 The estimate you see before a run (below) is priced on the model you picked, so
 the quote and the charge describe the same model. If you brought your own
 translation API key, the model is a free-text field on that card instead, and
