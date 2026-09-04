@@ -17,6 +17,7 @@ Sees where the model budget actually goes before the invoice does. This is the A
 - An MCP tool's page now lists the **agents that use it** — the cards whose route actually calls that tool, armed ones first, each with its own switch — so you can put a tool on a schedule from the page where you just read what a call costs, instead of hunting for it among forty agents. `MCP`
 - A tool's **call history** is now the Feeds table narrowed to that tool, so what a call cost and what it answered read the same on the tool's page as they do in Feeds, and expanding a row still shows what went in and what came back. One log, one way to read it. `MCP`
 - The project switcher's menu gained an **Upgrade project** button in its pinned footer, opening the same pricing modal the trial banner and win-back notice already use, so upgrading a project no longer means first finding the billing tab. `Billing`
+- The **Usage** view now opens with a stacked consumption chart — Daily, Weekly or Monthly bars split by whichever model, tool or event type actually spent the money that day, with a running cumulative total on request — so a spend spike is traced to its source instead of added up by hand across three flat tables. Every row below it now carries its own trend line too. `Feeds`
 
 ### Changed
 

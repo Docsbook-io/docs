@@ -12,6 +12,7 @@ Everything that shipped in **Feeds**. This is the Feeds slice of the [full Docsb
 ### Added
 
 - Avatars across Feeds, Users and Chat now carry a small flag badge when a reader's location is known, so who someone is reads at a glance instead of needing a click into their profile. `Feeds`
+- The **Usage** view now opens with a stacked consumption chart — Daily, Weekly or Monthly bars split by whichever model, tool or event type actually spent the money that day, with a running cumulative total on request — so a spend spike is traced to its source instead of added up by hand across three flat tables. Every row below it now carries its own trend line too. `Feeds`
 
 ### Fixed
 
