@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Repeat readers** — more r
 
 One visit is a look; a second is a product someone is actually adopting. This is the Repeat readers slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 04.09.2026
+
+### Fixed
+
+- Your MCP call log stops losing the first half of a session. A call that costs nothing is still a call, so `get_info`, `get_workspace`, `list_workspaces`, `create_workspace`, `find_skill` and `find_widget` (what an agent opens a session with) now appear in Feeds and in the tools table against the right project. `Feeds`
+
 ## NEW - 03.09.2026
 
 ### Fixed

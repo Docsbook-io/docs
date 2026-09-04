@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **First-visit bounce** — fe
 
 Docs that look like the product, rather than like a template someone forgot. This is the First-visit bounce slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 04.09.2026
+
+### Added
+
+- An issue an agent filed names that agent in its sidebar and opens its card from there, so "what wakes this thing, and what route is this station part of" is one click rather than a walk back through the panel. Beside it sit the run behind the finding, the other stations of the same route, the other issues that reference this one, and the pull request that closes it. `Issues`
+
 ## NEW - 03.09.2026
 
 ### Fixed

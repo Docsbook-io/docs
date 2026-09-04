@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **AI citations** — more ans
 
 Whether ChatGPT, Claude and Perplexity can read you — and quote you. This is the AI citations slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 04.09.2026
+
+### Changed
+
+- An agent's issue now opens on what it FOUND. Why the run happened, what earlier steps handed it, what happens to anything it writes and the raw call all moved into one collapsed block at the bottom, so deciding what to do about a finding no longer means scrolling past four headings about the machinery to reach it. `Issues`
+
 ## NEW - 03.09.2026
 
 ### Added

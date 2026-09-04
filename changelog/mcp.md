@@ -7,6 +7,25 @@ description: "Every release that touched the MCP server: the tools it serves, wh
 
 Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 04.09.2026
+
+### Added
+
+- An **Agents** section in the admin panel: forty goals your project can pursue on its own, each one an ordered route of subagents rather than a single call, with what it is for, the number it is bought to move, and what a run costs before you arm it. Recurring documentation work you were doing by hand every week can now be handed to a schedule. `Agents`
+- Arm one on a schedule you read as a sentence in your own clock: how often, which days, at what time, with the next run printed underneath in the same clock. The six presets it replaced were labelled in UTC, so checking one meant converting in your head, and "Tuesday and Thursday at nine" could not be asked for at all. `Agents`
+- A **Runs** tab beside the catalog answers "did anything run last night, and did it hold up" of the whole project. That history used to be reachable only from inside one agent's settings, so the question could only be asked forty times. `Agents`
+
+### Changed
+
+- A run's transcript opens as its own table of contents, every station closed. Which stations ran, which held up and how long each took now fits on one screen instead of being spread over forty screens of prose. `Agents`
+- Which sources an agent may read is one picker that says what an empty pick means, instead of a wall of toggles as tall as the number of sources you are not choosing. `Agents`
+
+### Fixed
+
+- A station with nothing to report no longer fails the whole run. On a project with no Search Console history and no in-doc searches, a station that correctly answered "there is no intent mismatch to explain here, and here is each check I could not make and why" was refused three times over and stopped the route, so an agent could not finish on exactly the projects it had least to invent about. `Agents`
+- Background documentation jobs run again. The health probe in front of them was measuring the router rather than the runner and read a 404 that is the design as "the runner is unreachable", refusing every job for three days. `MCP`
+- A run whose hand-off went missing no longer spins for ever. The route is driven inside its own request, and anything still open is picked up within five minutes or reported as failed with the reason, so nobody has to watch a run to find out it stopped. `Agents`
+
 ## NEW - 03.09.2026
 
 ### Added

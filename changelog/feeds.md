@@ -7,6 +7,12 @@ description: "Every release that touched Feeds: the live event stream from your 
 
 Everything that shipped in **Feeds**. This is the Feeds slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 04.09.2026
+
+### Fixed
+
+- Your MCP call log stops losing the first half of a session. A call that costs nothing is still a call, so `get_info`, `get_workspace`, `list_workspaces`, `create_workspace`, `find_skill` and `find_widget` (what an agent opens a session with) now appear in Feeds and in the tools table against the right project. `Feeds`
+
 ## NEW - 31.08.2026
 
 ### Added

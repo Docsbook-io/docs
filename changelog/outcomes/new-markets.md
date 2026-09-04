@@ -11,7 +11,7 @@ The readers who bounced because the docs were not in their language. This is the
 
 ## NEW - 04.09.2026
 
-### Changed
+### Fixed
 
 - Translating a page now costs roughly a third of what it did. Translations run on GPT-5.6 Luna by default instead of GPT-4o mini, which is the same rewrite-this-prose job at $0.055/$0.22 per 1M tokens against $0.15/$0.60, so the same balance stretches over about three times as many pages and a language you were putting off is affordable now. Projects that had explicitly chosen a pricier model were moved with the default; the picker in **Settings ▸ Translations ▸ Translation Model** still offers every model, and the estimate shown before a run is priced on whichever one you pick. `Translations`
 

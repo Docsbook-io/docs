@@ -11,8 +11,26 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 
 ## NEW - 04.09.2026
 
+### Added
+
+- An **Agents** section in the admin panel: forty goals your project can pursue on its own, each one an ordered route of subagents rather than a single call, with what it is for, the number it is bought to move, and what a run costs before you arm it. Recurring documentation work you were doing by hand every week can now be handed to a schedule. `Agents`
+- Arm one on a schedule you read as a sentence in your own clock: how often, which days, at what time, with the next run printed underneath in the same clock. The six presets it replaced were labelled in UTC, so checking one meant converting in your head, and "Tuesday and Thursday at nine" could not be asked for at all. `Agents`
+- A **Runs** tab beside the catalog answers "did anything run last night, and did it hold up" of the whole project. That history used to be reachable only from inside one agent's settings, so the question could only be asked forty times. `Agents`
+- Every station of an agent's run files what it found as a GitHub issue on your own tracker, so nobody has to read a transcript to learn what needs doing. The finding outlives the run that produced it: a person can pick it up, the diff that fixes it can reference it, and merging that diff closes it. `Issues`
+- An issue an agent filed names that agent in its sidebar and opens its card from there, so "what wakes this thing, and what route is this station part of" is one click rather than a walk back through the panel. Beside it sit the run behind the finding, the other stations of the same route, the other issues that reference this one, and the pull request that closes it. `Issues`
+
 ### Changed
 
+- An agent's issue now opens on what it FOUND. Why the run happened, what earlier steps handed it, what happens to anything it writes and the raw call all moved into one collapsed block at the bottom, so deciding what to do about a finding no longer means scrolling past four headings about the machinery to reach it. `Issues`
+- A run's transcript opens as its own table of contents, every station closed. Which stations ran, which held up and how long each took now fits on one screen instead of being spread over forty screens of prose. `Agents`
+- Which sources an agent may read is one picker that says what an empty pick means, instead of a wall of toggles as tall as the number of sources you are not choosing. `Agents`
+
+### Fixed
+
+- A station with nothing to report no longer fails the whole run. On a project with no Search Console history and no in-doc searches, a station that correctly answered "there is no intent mismatch to explain here, and here is each check I could not make and why" was refused three times over and stopped the route, so an agent could not finish on exactly the projects it had least to invent about. `Agents`
+- Issues an agent files carry their labels on GitHub again, and any label your repository does not have yet is created first. Without them the panel could not tell an agent's finding from something a person typed, so twenty findings opened with no run, no route and no sibling stations beside them. `Issues`
+- Your MCP call log stops losing the first half of a session. A call that costs nothing is still a call, so `get_info`, `get_workspace`, `list_workspaces`, `create_workspace`, `find_skill` and `find_widget` (what an agent opens a session with) now appear in Feeds and in the tools table against the right project. `Feeds`
+- A run whose hand-off went missing no longer spins for ever. The route is driven inside its own request, and anything still open is picked up within five minutes or reported as failed with the reason, so nobody has to watch a run to find out it stopped. `Agents`
 - Translating a page now costs roughly a third of what it did. Translations run on GPT-5.6 Luna by default instead of GPT-4o mini, which is the same rewrite-this-prose job at $0.055/$0.22 per 1M tokens against $0.15/$0.60, so the same balance stretches over about three times as many pages and a language you were putting off is affordable now. Projects that had explicitly chosen a pricier model were moved with the default; the picker in **Settings ▸ Translations ▸ Translation Model** still offers every model, and the estimate shown before a run is priced on whichever one you pick. `Translations`
 
 ## NEW - 03.09.2026
