@@ -179,7 +179,7 @@ never look like a measured one.
 
 ### Which AI crawlers are reading the docs?
 
-The **AI Views** card charts one line per AI crawler instead of a single total, so you can tell which assistants are reading your docs and how that changes over time. The twelve busiest bots are charted, each labelled with the provider behind it, above the per-bot totals.
+The **AI Views** card opens on the **Pages** grouping — which pages assistants read most — and can be switched to **Crawlers**, which charts one line per AI crawler instead, so you can tell which assistants are reading your docs and how that changes over time. The twelve busiest bots are charted, each labelled with the provider behind it, above the per-bot totals.
 
 ### Channels
 
@@ -252,7 +252,7 @@ switching a tab on is the same thing you saw while trying Docsbook out.
 
 1. Open any page of your documentation site.
 2. Click the **Analytics** tab in the floating toolbar at the bottom.
-3. The overview loads automatically with **Today** selected.
+3. The overview loads automatically with **Today** selected — or whichever range you picked last, which the panel remembers across visits.
 
 ## Time ranges
 
@@ -271,7 +271,7 @@ Thirty days is the longest window there is, because events are kept for 30 days 
 
 Today and Yesterday are calendar days, not a rolling 24 hours — Today starts at midnight, so early in the day it covers less than Last 24 hours does.
 
-**Now** puts the chart in live mode: the switcher shows a pulsing dot, and the chart and top figures refresh every 5 seconds with a per-minute view of the last hour. The rest of the page (the four cards below, and every other range) still refreshes every 30 seconds.
+**Now** puts the chart in live mode: the switcher shows a pulsing dot, and the chart and top figures refresh every 5 seconds with a per-minute view of the last hour. The rest of the page (the four cards below) shares a 30-second baseline refresh, but only while **Now** is selected — switch to any other range and refreshing stops until you interact with the page again, so a historical range you're not watching live is not silently refetched behind you.
 
 ## Reading referrers
 

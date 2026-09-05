@@ -11,10 +11,15 @@ Translation settings are where you switch a language on for your Docsbook docume
 
 | Setting | What it does |
 |---|---|
+| Default language | Your docs' own source language — never a translation target, see below |
 | Enabled languages | Which languages to publish your docs in |
 | Translation model | Which AI model translates your pages |
 | Language switcher in sidebar | Show the language selector in the left sidebar |
 | Language selector in header | Show the language selector in the top header bar |
+
+### Your project's default (source) language
+
+Docsbook detects the language your documentation is already written in — reading your repository's README — the first time a project connects, and shows the result in Settings labeled **auto-detected**. If the README was too short or missing to judge, it falls back to English labeled **best guess — please confirm**; either way you can change it, which relabels it **set by you**. Whatever this is set to is the source your other languages translate from, and it can never itself be switched on as a translation target — there is nothing to translate it into, since your docs are already written in it.
 
 ### Choosing the translation model
 
@@ -62,10 +67,11 @@ While a run is in progress, the language row shows a progress bar and a **35/80*
 
 ## Which languages can Docsbook translate into?
 
-Docsbook translates into 15 languages, listed below with the code that appears in the URL of each translated page. English is the default and is not counted as a translation of itself.
+Docsbook supports 15 languages, listed below with the code that appears in the URL of each translated page. Whichever one is your project's [default (source) language](#your-projects-default-source-language) is not counted as a translation of itself — it can be any of the 15, not always English.
 
 | Language | Code |
 |---|---|
+| English | `en` |
 | Spanish | `es` |
 | French | `fr` |
 | German | `de` |
@@ -80,7 +86,6 @@ Docsbook translates into 15 languages, listed below with the code that appears i
 | Turkish | `tr` |
 | Polish | `pl` |
 | Dutch | `nl` |
-| English | `en` (default) |
 
 ## Language switcher placement
 
@@ -102,7 +107,7 @@ Configure placement in:
 Each language gets its own URL path:
 
 ```text
-docsbook.io/{username}/{repo}           → English (default)
+docsbook.io/{username}/{repo}           → your project's default (source) language
 docsbook.io/{username}/es/{repo}        → Spanish
 docsbook.io/{username}/fr/{repo}        → French
 ```

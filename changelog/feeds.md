@@ -7,6 +7,13 @@ description: "Every release that touched Feeds: the live event stream from your 
 
 Everything that shipped in **Feeds**. This is the Feeds slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 05.09.2026
+
+### Fixed
+
+- Feeds opened from a visitor pin (in Users, Analytics, Live or Chat) now shows a real breadcrumb back to wherever you came from, instead of the small × on the filter chip being the only way out. `Feeds`
+- Feeds ▸ Usage now opens on the full 30-day window instead of 7, so you see all the spend history available by default. `Feeds`
+
 ## NEW - 04.09.2026
 
 ### Added

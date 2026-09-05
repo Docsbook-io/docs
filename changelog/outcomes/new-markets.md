@@ -9,6 +9,18 @@ Everything Docsbook shipped that moves one number: **New markets** — audiences
 
 The readers who bounced because the docs were not in their language. This is the New markets slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 05.09.2026
+
+### Added
+
+- Settings now shows whether your project's default language was auto-detected from your README, a safe guess made when the README was too short to read, or one you set yourself — so a new project shows what Docsbook picked for it before you'd think to check. `Translations`
+- Live analytics gets a spinning globe view beside the flat map: drag to throw it, click a country to see its readers there, open one straight into their Feeds profile. `Analytics`
+
+### Fixed
+
+- Enabling a language, or changing your project's default one, can no longer end with your docs "translating" themselves into their own source language. The coverage engine, the commit-follow scanner, and Settings all refuse it now, so no run — and no AI spend — is ever opened for a language your docs are already written in. `Translations`
+- Loading states across the admin panel — Overview, Chat, Translations, Search Console, MCP tools, budget, widgets, folder visibility and more — now render a skeleton shaped and sized like what's actually loading, with a shimmer sweep instead of a spinner in a box the wrong height or a flat pulsing block, so the panel stops visibly jumping while a page loads. `Panel`
+
 ## NEW - 04.09.2026
 
 ### Fixed

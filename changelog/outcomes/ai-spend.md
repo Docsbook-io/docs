@@ -9,6 +9,14 @@ Everything Docsbook shipped that moves one number: **AI spend** — less money b
 
 Sees where the model budget actually goes before the invoice does. This is the AI spend slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 05.09.2026
+
+### Fixed
+
+- Enabling a language, or changing your project's default one, can no longer end with your docs "translating" themselves into their own source language. The coverage engine, the commit-follow scanner, and Settings all refuse it now, so no run — and no AI spend — is ever opened for a language your docs are already written in. `Translations`
+- Loading states across the admin panel — Overview, Chat, Translations, Search Console, MCP tools, budget, widgets, folder visibility and more — now render a skeleton shaped and sized like what's actually loading, with a shimmer sweep instead of a spinner in a box the wrong height or a flat pulsing block, so the panel stops visibly jumping while a page loads. `Panel`
+- Feeds ▸ Usage now opens on the full 30-day window instead of 7, so you see all the spend history available by default. `Feeds`
+
 ## NEW - 04.09.2026
 
 ### Added

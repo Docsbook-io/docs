@@ -9,6 +9,16 @@ Everything Docsbook shipped that moves one number: **Upkeep time** — less time
 
 Work a person does by hand every week, handed to the agent instead. This is the Upkeep time slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 05.09.2026
+
+### Added
+
+- Agents now leads with a **Last Runs** shelf — the six most recently invoked agents, including ones you started by hand without arming them — so "what just ran" is answered before you go looking through the list. `Agents`
+
+### Fixed
+
+- Loading states across the admin panel — Overview, Chat, Translations, Search Console, MCP tools, budget, widgets, folder visibility and more — now render a skeleton shaped and sized like what's actually loading, with a shimmer sweep instead of a spinner in a box the wrong height or a flat pulsing block, so the panel stops visibly jumping while a page loads. `Panel`
+
 ## NEW - 04.09.2026
 
 ### Added

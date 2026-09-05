@@ -127,10 +127,6 @@ Questions the docs answer are questions your inbox never sees. This is the Suppo
 
 - The AI assistant is now a section of that panel, with the project already selected, instead of only an overlay on a docs page. `AI Chat`
 - A **Getting started** checklist now sits at the bottom of the admin panel's sidebar, showing what your site still needs — its content, your branding, the AI chat, languages, your agent, your domain, and being findable. It ticks steps off as they are configured, collapses to a single row, and disappears once you are done. `Dashboard`
-- The Users table now also prices the readers who have **not** reached your call to action, so a page of blanks becomes a ranked list of who to talk to next. A **Potential** figure is your average product price scaled by how much of a converting reader's path someone already matches: how long they have read, how many pages they opened, and how many of the pages that separate buyers from browsers they have been on. Hover a figure to see the comparison it was made against. `Analytics`
-- Project cards on the Dashboard now show revenue beside visitors once a project has an average product price and a Call To Action URL set. `Dashboard`
-- A language's Translations page now shows what its readers were worth as an **Earned** tile, priced from your Call To Action and Average Product Price, next to spend, savings and cache reuse. `Translations`
-- Goals now show what the readers standing on them might still be worth. Each goal in `Analytics` ▸ Goals, and each step of a funnel, carries the potential revenue of the readers who got that far and have not converted yet, next to the completion counts; hovering a day on the chart shows the same figure per goal. It is your average product price scaled by how much of a converting reader's path each of them already matches, so a leak can be ranked by the money parked behind it rather than by its percentage alone. `Analytics`
 - Chat conversations are now individually judged by AI on whether they actually answered the question, shown as its own column and rolled up into a more accurate Answered rate. `Analytics`
 - The conversations table and the Journey view now show when a reader completed a goal and what they're worth. `Analytics`
 
@@ -140,7 +136,6 @@ Questions the docs answer are questions your inbox never sees. This is the Suppo
 - The Conversations table now shows one line per row, with a reader's country and device as icons beside their name and the site that referred them shown with its own favicon. Cost and Savings are their own columns, the topic column is labelled Topic, and a Time column shows how long the conversation ran and how long that reader has spent on your docs. `AI Chat`
 - Opening a conversation now shows the transcript as a chat, with the reader's question and the assistant's answer as separate message bubbles, next to a panel with what's known about that reader — click it to see everything else they did, in `Feeds`. `AI Chat`
 - `Feeds` now opens on **Select a feed**: a card for each feed with a line saying what it holds. Four are built in — All events, Unanswered questions, Reader feedback and Delivery trouble — so there is something to open before you have saved anything of your own. `Feeds`
-- A language's sync state, coverage, source commit and any halt reason now live in a popover on the state chip, next to the switch and **Translate now** on one line. The 200px card that held them pushed "did this language pay off" below the fold. `Translations`
 - The Signals and Turns columns in Chat's conversations table are hidden by default; they're still available from the column picker. `Analytics`
 - The pricing tab now opens directly on the plan comparison, with your seat status and trial countdown shown there instead of in a separate card, and Usage and Contact Support one click away. `Pricing`
 
@@ -156,8 +151,6 @@ Questions the docs answer are questions your inbox never sees. This is the Suppo
 ### Fixed
 
 - The estimated **Savings** figure in `AI Chat` now subtracts what those conversations actually cost to run, instead of ignoring your real spend — a workspace with real chat activity no longer sees it read as $0. `AI Chat`
-- A reader's value in the goals table was counted once per goal rather than once per visit, so it read lower than the same money elsewhere in `Analytics`. Where no goal declares a value it now estimates from your average product price instead of showing a dash. `Analytics`
-- **Earned** on a commit in `Changes` now sums exactly the figures the Users table prints for the same readers — a goal's declared value first, then your average product price — instead of a second, shorter calculation that ignored declared values and disagreed with the table its own explanation points at. `Changes`
 - Savings in `AI Chat` no longer reads $0 for a real answer the reader didn't click through or rate — it now credits the AI's own verdict on whether the conversation was answered. `AI Chat`
 
 ## NEW - 26.08.2026
@@ -197,10 +190,7 @@ Questions the docs answer are questions your inbox never sees. This is the Suppo
 
 - A `Lang` tab on the `Conversations` card in `Chat` shows which languages readers write in, each row with its flag, so a workspace serving several languages can see the split at a glance. `AI Chat`
 - Every conversation in `Chat` — the dialog list, the sidebar, and the open conversation — now shows the flag of the language it was written in. `AI Chat`
-- An `Average Product Price` setting under `Branding`. Together with your `Call To Action URL` it turns readers who click through to your sales page into a revenue figure. Set only one of the two and the revenue tiles stay switched off saying which half is missing, rather than reporting a confident `$0`. `Settings`
-- The average product price can also be set from the assistant and over MCP, through `update_branding`. `MCP`
 - Your workspace's background glow and accent color now carry into the AI chat panel too — full-screen and side-by-side — instead of stopping at the docs page's edge. `Theme Settings`
-- Every language page opens on whether that language is keeping up — coverage split into current, fallen behind and never translated, when it was last written to, and which commit your docs stand at. `Translations`
 - A button back to `Fullscreen` from the side-by-side chat, next to the project picker — shown only while the chat sits beside your docs. `AI Chat`
 
 ### Changed
@@ -220,7 +210,6 @@ Questions the docs answer are questions your inbox never sees. This is the Suppo
 
 ### Removed
 
-- Overage billing. AI usage now simply pauses once the plan's monthly budget is used up — never billed above your plan price. `Usage`
 - The repository browsing list under `Connect a repository` in the project picker. `Start a new project` connects a new repo instead. `AI Chat`
 - The `Try Docsbook` prompt grid that used to follow a finished setup checklist. `AI Chat`
 - The centered "Docsbook" logo and wordmark shown above the composer on an empty conversation. The input stays exactly where it was. `AI Chat`
@@ -231,7 +220,6 @@ Questions the docs answer are questions your inbox never sees. This is the Suppo
 
 ### Added
 
-- `Changes` now reports what Google did with the pages a commit touched: average position, impressions, clicks and click-through rate against the rest of the site, a daily chart with the commit marked on it, and a per-URL rank table. `Changes`
 - A new `Dialogs` card lists every AI chat conversation individually — topic, funnel stage, answered/dead-end status, and estimated savings — open one to read the full exchange, its real cost, and how it compares to the topic's usual answer rate. `AI Chat`
 - The `Conversations` card gets an `Outcome` tab — answered, dead-end, and unrated conversations at a glance, each opening straight into `Dialogs` pre-filtered. `AI Chat`
 - Each conversation in `Dialogs` now shows what it actually cost to run, right next to its estimated savings. `AI Chat`
@@ -330,7 +318,6 @@ Questions the docs answer are questions your inbox never sees. This is the Suppo
 - Ask the chat what to fix in your docs and the answer arrives as ranked recommendation cards, each opening a fresh chat that already knows the page and the problem. `AI Chat`
 - A `Feedback` tab next to `CTA Clicks` ranks your pages by the thumbs readers gave them, most-disliked first, counting both the page rating and the votes on AI answers given there. `Analytics`
 - A `Feedback` tab in the chat card shows which topics readers approve of and which they vote down. `AI Chat`
-- `Search rankings` leads with four figures — impressions, clicks, average position and the queries you rank for — each with its own trend, and every query row carries the action to take on it. `SEO`
 
 ### Removed
 
@@ -448,9 +435,7 @@ Questions the docs answer are questions your inbox never sees. This is the Suppo
 
 ### Added
 
-- Paid plans no longer hard-stop when the monthly AI budget runs out — usage continues as metered overage billed on top of the subscription, up to a monthly cap you set yourself (default $20/month) from the Limits tab in workspace settings. `Billing`
 - Per-model AI spend view showing what each call cost at the provider's real price. `AI Chat`
-- Per-language coverage shows, for every page in your docs, how many are translated and current, how many are behind, and how many have no translation at all — so you can tell at a glance whether a language is genuinely complete. `Translations`
 - Choose which AI model answers your readers, from Pro upwards. `AI Chat`
 
 ### Fixed
@@ -592,12 +577,6 @@ Questions the docs answer are questions your inbox never sees. This is the Suppo
 ### Fixed
 
 - Prevent race conditions in monthly usage limits for `AI Chat`, `Translations`, and `Reindex` — concurrent requests could each pass a stale pre-check and push counters past the plan limit (visible as `78/50` pages translated on Pro). Replaced check-then-act with atomic conditional `UPDATE ... RETURNING` in `batchTranslate`, `/api/ai-chat`, and the MCP `reindex` endpoint
-
-## 0.17.0 - 23.05.2026
-
-### Changed
-
-- Fix system theme not applying correctly due to shared `localStorage` key across workspaces
 
 ## 0.16.3 - 23.05.2026
 

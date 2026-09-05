@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **First-visit bounce** — fe
 
 Docs that look like the product, rather than like a template someone forgot. This is the First-visit bounce slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 05.09.2026
+
+### Fixed
+
+- A dark or monochrome project icon in dark mode no longer sits inside an oversized white halo — it now gets a thin white border on a transparent background instead. `Branding`
+
 ## NEW - 04.09.2026
 
 ### Added

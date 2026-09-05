@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **AI citations** — more ans
 
 Whether ChatGPT, Claude and Perplexity can read you — and quote you. This is the AI citations slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 05.09.2026
+
+### Fixed
+
+- Analytics no longer keeps auto-refreshing a historical range you're not watching live — the 30-second poll now only fires while `Now` is selected. The AI Views card opens on Pages instead of Crawlers by default, and its crawler and page rows get the same Improve button already on other analytics rows. `Analytics`
+
 ## NEW - 04.09.2026
 
 ### Changed

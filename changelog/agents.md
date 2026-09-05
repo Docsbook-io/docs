@@ -7,6 +7,12 @@ description: "Every release that touched Agents: the goals your project pursues 
 
 Everything that shipped in **Agents**. This is the Agents slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 05.09.2026
+
+### Added
+
+- Agents now leads with a **Last Runs** shelf — the six most recently invoked agents, including ones you started by hand without arming them — so "what just ran" is answered before you go looking through the list. `Agents`
+
 ## NEW - 04.09.2026
 
 ### Added

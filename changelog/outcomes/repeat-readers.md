@@ -9,6 +9,16 @@ Everything Docsbook shipped that moves one number: **Repeat readers** — more r
 
 One visit is a look; a second is a product someone is actually adopting. This is the Repeat readers slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 05.09.2026
+
+### Changed
+
+- The Pages, Referrers, Devices and CTA breakdown cards now default their ranking to Revenue the moment your workspace can measure it (an Average Product Price and a CTA URL set), instead of Visitors — and both that pick and the analytics period switcher now remember your last choice across visits. `Analytics`
+
+### Fixed
+
+- Feeds opened from a visitor pin (in Users, Analytics, Live or Chat) now shows a real breadcrumb back to wherever you came from, instead of the small × on the filter chip being the only way out. `Feeds`
+
 ## NEW - 04.09.2026
 
 ### Fixed

@@ -5,6 +5,27 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 05.09.2026
+
+### Added
+
+- Settings now shows whether your project's default language was auto-detected from your README, a safe guess made when the README was too short to read, or one you set yourself — so a new project shows what Docsbook picked for it before you'd think to check. `Translations`
+- Agents now leads with a **Last Runs** shelf — the six most recently invoked agents, including ones you started by hand without arming them — so "what just ran" is answered before you go looking through the list. `Agents`
+- Live analytics gets a spinning globe view beside the flat map: drag to throw it, click a country to see its readers there, open one straight into their Feeds profile. `Analytics`
+
+### Changed
+
+- The Pages, Referrers, Devices and CTA breakdown cards now default their ranking to Revenue the moment your workspace can measure it (an Average Product Price and a CTA URL set), instead of Visitors — and both that pick and the analytics period switcher now remember your last choice across visits. `Analytics`
+
+### Fixed
+
+- Enabling a language, or changing your project's default one, can no longer end with your docs "translating" themselves into their own source language. The coverage engine, the commit-follow scanner, and Settings all refuse it now, so no run — and no AI spend — is ever opened for a language your docs are already written in. `Translations`
+- Feeds opened from a visitor pin (in Users, Analytics, Live or Chat) now shows a real breadcrumb back to wherever you came from, instead of the small × on the filter chip being the only way out. `Feeds`
+- Analytics no longer keeps auto-refreshing a historical range you're not watching live — the 30-second poll now only fires while `Now` is selected. The AI Views card opens on Pages instead of Crawlers by default, and its crawler and page rows get the same Improve button already on other analytics rows. `Analytics`
+- Loading states across the admin panel — Overview, Chat, Translations, Search Console, MCP tools, budget, widgets, folder visibility and more — now render a skeleton shaped and sized like what's actually loading, with a shimmer sweep instead of a spinner in a box the wrong height or a flat pulsing block, so the panel stops visibly jumping while a page loads. `Panel`
+- Feeds ▸ Usage now opens on the full 30-day window instead of 7, so you see all the spend history available by default. `Feeds`
+- A dark or monochrome project icon in dark mode no longer sits inside an oversized white halo — it now gets a thin white border on a transparent background instead. `Branding`
+
 ## NEW - 04.09.2026
 
 ### Added
