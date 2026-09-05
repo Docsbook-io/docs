@@ -20,6 +20,10 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 
 - Searching your docs by meaning is no longer behind a plan or a built index: `search` is on every project, and a project with no semantic index has the same question answered by full-text search rather than refused. A question someone's assistant asks of your docs now comes back answered instead of erroring, so it never has to reach your support inbox. `MCP`
 
+### Fixed
+
+- `list_workspaces` now warns when two of your projects resolve to the exact same live URL — a leftover from before project names were matched by case — and names which one is actually serving it, instead of showing both as equally live and leaving you to guess. `MCP`
+
 ## NEW - 04.09.2026
 
 ### Added
