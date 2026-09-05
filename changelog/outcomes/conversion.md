@@ -14,11 +14,18 @@ Readers who came to learn and left having started — the docs' real job. This i
 ### Added
 
 - A **Run a full product audit** agent checks whether your docs can be found, believed and stand up against competitors' — fetchability, proof signals, the objection a reader stalls on, and whether the numbers on the page are still true — in one pass, and files what needs fixing as issues on your own repo instead of a report somebody has to run by hand. `Agents`
+- Billing is a list of invoices now: what your next charge will be (an estimate you cannot pay early, because overage is still accruing into it), whether the invoice your project is running on has actually been paid, and every charge already taken — each subscription month, each top-up, and each settled overage charge as its own line rather than folded into a month it did not belong to. The old "This cycle" bar has gone; it summed an allowance, your credit and the overage cap into a number nobody is ever billed. `Pricing`
+- Your project's 14-day trial now has $20 of AI usage of its own — enough to index a real docs site and let its assistant answer real questions before you decide. It is spent before anything you have paid for, it survives adding a card mid-trial (you are still charged only when the trial would have ended), and whatever is left of it ends with the trial. `Pricing`
 
 ### Changed
 
 - Enterprise now promises full branding customization and content rewritten for SEO/GEO and sales as part of the engagement, alongside the existing turnkey setup and migration commitments already on the pricing page. `Pricing`
 - The Pages, Referrers, Devices and CTA breakdown cards now default their ranking to Revenue the moment your workspace can measure it (an Average Product Price and a CTA URL set), instead of Visitors — and both that pick and the analytics period switcher now remember your last choice across visits. `Analytics`
+
+### Fixed
+
+- Overage can no longer be raised past $200 a cycle from anywhere — the Limits card, or the API behind it. The field accepted $500 while every sentence in the product promised $200, so the guarantee on the pricing page was one saved setting away from being untrue, and the card now names the ceiling instead of only refusing you after you type past it. `Pricing`
+- A project whose last payment failed no longer keeps running up overage on the card that just declined. It spends the credit it already holds — that is yours — and the billing screen says plainly that settling the open invoice is what starts new usage again. Your docs site, its search and every published page stay online throughout. `Pricing`
 
 ## NEW - 04.09.2026
 

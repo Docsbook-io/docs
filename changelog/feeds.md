@@ -9,6 +9,10 @@ Everything that shipped in **Feeds**. This is the Feeds slice of the [full Docsb
 
 ## NEW - 05.09.2026
 
+### Added
+
+- Overage now warns you five times before it stops anything — at 75%, 85%, 90%, 95% and finally at the cap — each one saying how much room is left, what pauses when it is gone, and the two ways to keep it running. Register a webhook on `usage.limit_approaching` or `usage.overage_limit_reached` and the same five moments reach your channel, so nobody has to watch a balance to find out. `Webhooks`
+
 ### Fixed
 
 - Feeds opened from a visitor pin (in Users, Analytics, Live or Chat) now shows a real breadcrumb back to wherever you came from, instead of the small × on the filter chip being the only way out. `Feeds`
@@ -172,7 +176,7 @@ Everything that shipped in **Feeds**. This is the Feeds slice of the [full Docsb
 ## Related
 
 - [Full Docsbook changelog](../CHANGELOG.md) — every release, across every section
-- [Webhooks](../reference/webhooks.md) — the event catalog and payload schemas
+- [Webhooks](../webhooks.md) — the event catalog and payload schemas
 - [Changelogs by panel section](./README.md) — the same releases, cut by where they landed
 - [Changelogs by outcome](./outcomes/README.md) — the same releases, cut by the number they move
 

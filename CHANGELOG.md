@@ -24,6 +24,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - A **Mentions in AI** card beside Sources answers whether Google's AI Overview and AI Mode actually name your docs for the questions you care about: save up to five queries and a daily check reports, per query, whether you were mentioned and whether you were cited. Search Console tells you where you rank, and this tells you whether the answer above the ranking is yours. `AEO`
 - Clicking a page in the Graph now shows the numbers behind the colours instead of only the shading: indexed impressions, search clicks, crawler hits, AI training hits and exit clicks in one tile group, plus how long readers actually spend on the page. `Doc Graph`
 
+- Billing is a list of invoices now: what your next charge will be (an estimate you cannot pay early, because overage is still accruing into it), whether the invoice your project is running on has actually been paid, and every charge already taken — each subscription month, each top-up, and each settled overage charge as its own line rather than folded into a month it did not belong to. The old "This cycle" bar has gone; it summed an allowance, your credit and the overage cap into a number nobody is ever billed. `Pricing`
+- Overage now warns you five times before it stops anything — at 75%, 85%, 90%, 95% and finally at the cap — each one saying how much room is left, what pauses when it is gone, and the two ways to keep it running. Register a webhook on `usage.limit_approaching` or `usage.overage_limit_reached` and the same five moments reach your channel, so nobody has to watch a balance to find out. `Webhooks`
+- Your project's 14-day trial now has $20 of AI usage of its own — enough to index a real docs site and let its assistant answer real questions before you decide. It is spent before anything you have paid for, it survives adding a card mid-trial (you are still charged only when the trial would have ended), and whatever is left of it ends with the trial. `Pricing`
+
 ### Changed
 
 - Enterprise now promises full branding customization and content rewritten for SEO/GEO and sales as part of the engagement, alongside the existing turnkey setup and migration commitments already on the pricing page. `Pricing`
@@ -38,6 +42,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Fixed
 
+- Overage can no longer be raised past $200 a cycle from anywhere — the Limits card, or the API behind it. The field accepted $500 while every sentence in the product promised $200, so the guarantee on the pricing page was one saved setting away from being untrue, and the card now names the ceiling instead of only refusing you after you type past it. `Pricing`
+- A project whose last payment failed no longer keeps running up overage on the card that just declined. It spends the credit it already holds — that is yours — and the billing screen says plainly that settling the open invoice is what starts new usage again. Your docs site, its search and every published page stay online throughout. `Pricing`
 - Enabling a language, or changing your project's default one, can no longer end with your docs "translating" themselves into their own source language. The coverage engine, the commit-follow scanner, and Settings all refuse it now, so no run — and no AI spend — is ever opened for a language your docs are already written in. `Translations`
 - Feeds opened from a visitor pin (in Users, Analytics, Live or Chat) now shows a real breadcrumb back to wherever you came from, instead of the small × on the filter chip being the only way out. `Feeds`
 - Analytics no longer keeps auto-refreshing a historical range you're not watching live — the 30-second poll now only fires while `Now` is selected. The AI Views card opens on Pages instead of Crawlers by default, and its crawler and page rows get the same Improve button already on other analytics rows. `Analytics`

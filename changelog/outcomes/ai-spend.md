@@ -14,6 +14,9 @@ Sees where the model budget actually goes before the invoice does. This is the A
 ### Added
 
 - Clicking a page in the Graph now shows the numbers behind the colours instead of only the shading: indexed impressions, search clicks, crawler hits, AI training hits and exit clicks in one tile group, plus how long readers actually spend on the page. `Doc Graph`
+- Billing is a list of invoices now: what your next charge will be (an estimate you cannot pay early, because overage is still accruing into it), whether the invoice your project is running on has actually been paid, and every charge already taken — each subscription month, each top-up, and each settled overage charge as its own line rather than folded into a month it did not belong to. The old "This cycle" bar has gone; it summed an allowance, your credit and the overage cap into a number nobody is ever billed. `Pricing`
+- Overage now warns you five times before it stops anything — at 75%, 85%, 90%, 95% and finally at the cap — each one saying how much room is left, what pauses when it is gone, and the two ways to keep it running. Register a webhook on `usage.limit_approaching` or `usage.overage_limit_reached` and the same five moments reach your channel, so nobody has to watch a balance to find out. `Webhooks`
+- Your project's 14-day trial now has $20 of AI usage of its own — enough to index a real docs site and let its assistant answer real questions before you decide. It is spent before anything you have paid for, it survives adding a card mid-trial (you are still charged only when the trial would have ended), and whatever is left of it ends with the trial. `Pricing`
 
 ### Changed
 
@@ -21,6 +24,8 @@ Sees where the model budget actually goes before the invoice does. This is the A
 
 ### Fixed
 
+- Overage can no longer be raised past $200 a cycle from anywhere — the Limits card, or the API behind it. The field accepted $500 while every sentence in the product promised $200, so the guarantee on the pricing page was one saved setting away from being untrue, and the card now names the ceiling instead of only refusing you after you type past it. `Pricing`
+- A project whose last payment failed no longer keeps running up overage on the card that just declined. It spends the credit it already holds — that is yours — and the billing screen says plainly that settling the open invoice is what starts new usage again. Your docs site, its search and every published page stay online throughout. `Pricing`
 - Enabling a language, or changing your project's default one, can no longer end with your docs "translating" themselves into their own source language. The coverage engine, the commit-follow scanner, and Settings all refuse it now, so no run — and no AI spend — is ever opened for a language your docs are already written in. `Translations`
 - Loading states across the admin panel — Overview, Chat, Translations, Search Console, MCP tools, budget, widgets, folder visibility and more — now render a skeleton shaped and sized like what's actually loading, with a shimmer sweep instead of a spinner in a box the wrong height or a flat pulsing block, so the panel stops visibly jumping while a page loads. `Panel`
 - Feeds ▸ Usage now opens on the full 30-day window instead of 7, so you see all the spend history available by default. `Feeds`

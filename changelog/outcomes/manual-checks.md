@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Manual checks** — fewer t
 
 A watch someone keeps by remembering to look, kept by a webhook instead. This is the Manual checks slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 05.09.2026
+
+### Added
+
+- Overage now warns you five times before it stops anything — at 75%, 85%, 90%, 95% and finally at the cap — each one saying how much room is left, what pauses when it is gone, and the two ways to keep it running. Register a webhook on `usage.limit_approaching` or `usage.overage_limit_reached` and the same five moments reach your channel, so nobody has to watch a balance to find out. `Webhooks`
+
 ## NEW - 31.08.2026
 
 ### Added
