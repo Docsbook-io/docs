@@ -11,6 +11,10 @@ One visit is a look; a second is a product someone is actually adopting. This is
 
 ## NEW - 05.09.2026
 
+### Added
+
+- A **Dead ends** overlay on the Graph paints each page by the share of its visitor journeys that ended there — the pages readers land on and leave from, ranked as a proportion rather than a raw count, so a small page that stops everybody is not hidden behind a big one that stops a few. `Doc Graph`
+
 ### Changed
 
 - The Pages, Referrers, Devices and CTA breakdown cards now default their ranking to Revenue the moment your workspace can measure it (an Average Product Price and a CTA URL set), instead of Visitors — and both that pick and the analytics period switcher now remember your last choice across visits. `Analytics`

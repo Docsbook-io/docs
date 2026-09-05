@@ -13,6 +13,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Agents now leads with a **Last Runs** shelf — the six most recently invoked agents, including ones you started by hand without arming them — so "what just ran" is answered before you go looking through the list. `Agents`
 - Live analytics gets a spinning globe view beside the flat map: drag to throw it, click a country to see its readers there, open one straight into their Feeds profile. `Analytics`
 - Any coding agent can now search your documentation through your project's public MCP endpoint without signing in — it asks a question in plain words and gets back the pages that answer it, so a machine reading your docs lands on the right page instead of the nearest word match. `MCP`
+- The Graph now colours sections by how far down readers actually get: every heading carries its own read count, so the outline of a page shows where attention stops instead of every section painting the same grey. `Doc Graph`
+- A **Dead ends** overlay on the Graph paints each page by the share of its visitor journeys that ended there — the pages readers land on and leave from, ranked as a proportion rather than a raw count, so a small page that stops everybody is not hidden behind a big one that stops a few. `Doc Graph`
+- Clicking a page or a section in the Graph now lists the pull requests and issues already open on it — pull requests matched by the lines their diff actually changed, issues by the pages they name — so you can see somebody is already on it before starting the same work twice. `Doc Graph`
 
 ### Changed
 
@@ -21,6 +24,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The right-hand column of a pull request replaced its file-count line with a footprint bar: added against removed lines as a proportion, plus how many documentation pages, links and headings the change actually touched. `Changes`
 - The Pages, Referrers, Devices and CTA breakdown cards now default their ranking to Revenue the moment your workspace can measure it (an Average Product Price and a CTA URL set), instead of Visitors — and both that pick and the analytics period switcher now remember your last choice across visits. `Analytics`
 - Searching your docs by meaning is no longer behind a plan or a built index: `search` is on every project, and a project with no semantic index has the same question answered by full-text search rather than refused. A question someone's assistant asks of your docs now comes back answered instead of erroring, so it never has to reach your support inbox. `MCP`
+- The Graph draws immediately and fills in afterwards: the map of pages and sections comes back from cache in milliseconds, and the readership numbers, then the open pull requests and issues, land on it as they arrive. It used to wait for all three before drawing a single dot. `Doc Graph`
 
 ### Fixed
 
