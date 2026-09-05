@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **First-visit bounce** — fe
 
 Docs that look like the product, rather than like a template someone forgot. This is the First-visit bounce slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 05.09.2026
+
+### Changed
+
+- A merged pull request now tells you on its own page whether it worked: a score out of 100, four bars for readers served, reach, cost to run and edit quality, and the movements behind them — page reads, dead ends, search rank and AI spend, each coloured by whether it moved the way that is good for it. Checking whether an agent's change actually helped no longer means remembering to go and look on a second screen. `Changes`
+
 ## NEW - 04.09.2026
 
 ### Added

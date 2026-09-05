@@ -5,6 +5,18 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 05.09.2026
+
+### Changed
+
+- A merged pull request now tells you on its own page whether it worked: a score out of 100, four bars for readers served, reach, cost to run and edit quality, and the movements behind them — page reads, dead ends, search rank and AI spend, each coloured by whether it moved the way that is good for it. Checking whether an agent's change actually helped no longer means remembering to go and look on a second screen. `Changes`
+- A pull request still waiting for your decision shows the same block as a forecast read from the diff alone, and it stays grey until something measured stands behind it, so an unreviewed change can never be mistaken for a proven one. `Changes`
+- The right-hand column of a pull request replaced its file-count line with a footprint bar: added against removed lines as a proportion, plus how many documentation pages, links and headings the change actually touched. `Changes`
+
+### Removed
+
+- The **Merged & impact** view and its commit picker. What shipped and what it then did are now read on the pull request that shipped it, so the diff you approved and the result it produced are one page instead of two joined by a commit hash. `Changes`
+
 ## NEW - 04.09.2026
 
 ### Added
