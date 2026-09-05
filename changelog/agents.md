@@ -67,7 +67,7 @@ Everything that shipped in **Agents**. This is the Agents slice of the [full Doc
 ## Related
 
 - [Full Docsbook changelog](../CHANGELOG.md) — every release, across every section
-- [MCP server](../ai/mcp.md) — the calls an agent's route is made of
+- [MCP server](../agent-ready/mcp.md) — the calls an agent's route is made of
 - [Changelogs by panel section](./README.md) — the same releases, cut by where they landed
 - [Changelogs by outcome](./outcomes/README.md) — the same releases, cut by the number they move
 

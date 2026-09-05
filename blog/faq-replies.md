@@ -11,7 +11,7 @@ description: "Ready-to-paste answers to the questions people keep asking about D
 >
 > **Tone:** honest founder voice. No marketing fluff, no "revolutionary AI-powered platform". Lead with the concrete thing it does, mention the trade-off, link the docs if relevant.
 >
-> **Source of truth for numbers and facts:** [README.md](https://github.com/Docsbook-io/docsbook/blob/main/README.md). If a number here disagrees with README, README wins — fix this file.
+> **Source of truth for numbers and facts:** [the pricing page](https://docsbook.io/pricing) and [the docs overview](../overview.md). If a number here disagrees with those, they win — fix this file.
 
 ---
 
@@ -340,7 +340,7 @@ A weekly skill that:
 
 ## Related
 
-- [README — Docsbook product overview](https://github.com/Docsbook-io/docsbook/blob/main/README.md)
+- [Docsbook product overview](../overview.md)
 - [Public FAQ for users](../faq.md)
 - [Docusaurus vs Docsbook](./docusaurus-vs-docsbook.md)
 - [Mintlify vs Docsbook](./mintlify-vs-docsbook.md)

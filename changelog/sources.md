@@ -25,7 +25,7 @@ Everything that shipped in **Sources**. This is the Sources slice of the [full D
 ## Related
 
 - [Full Docsbook changelog](../CHANGELOG.md) — every release, across every section
-- [Sources](../ai/sources.md) — where your pages are read from
+- [Sources](../ai-chat/sources.md) — where your pages are read from
 - [Changelogs by panel section](./README.md) — the same releases, cut by where they landed
 - [Changelogs by outcome](./outcomes/README.md) — the same releases, cut by the number they move
 

@@ -20,6 +20,7 @@ Pages that already rank 5–20 are the cheapest traffic you will ever buy. This 
 
 - Enterprise now promises full branding customization and content rewritten for SEO/GEO and sales as part of the engagement, alongside the existing turnkey setup and migration commitments already on the pricing page. `Pricing`
 - The Pages, Referrers, Devices and CTA breakdown cards now default their ranking to Revenue the moment your workspace can measure it (an Average Product Price and a CTA URL set), instead of Visitors — and both that pick and the analytics period switcher now remember your last choice across visits. `Analytics`
+- The documentation is reorganised by capability — SEO, GEO, AEO, agent-ready content, chat, analytics and translations each have their own section — and every capability page now states how the feature is built, the evidence for it with a link to the source, and what is not proven, so you can check a claim before you build on it instead of taking it on trust. Old addresses redirect. `Documentation`
 
 ### Fixed
 

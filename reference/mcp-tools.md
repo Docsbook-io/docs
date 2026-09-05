@@ -406,7 +406,7 @@ The tools above run once, on request. These two arm a standing route that runs o
 
 ## Related
 
-- [MCP server overview](../ai-visibility/mcp.md) — connecting a client, the OAuth flow, and what the tools are for
+- [MCP server overview](../agent-ready/mcp.md) — connecting a client, the OAuth flow, and what the tools are for
 - [Webhooks reference](./webhooks.md) — the 18 typed events and their payload schemas
 - [API reference](./api.md) — the REST endpoint for asking your documentation a question
 - [Chat hooks](../ai-chat/chat-hooks.md) — what `set_chat_hooks` configures

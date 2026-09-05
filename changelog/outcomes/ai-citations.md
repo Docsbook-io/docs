@@ -20,11 +20,14 @@ Whether ChatGPT, Claude and Perplexity can read you — and quote you. This is t
 ### Changed
 
 - Enterprise now promises full branding customization and content rewritten for SEO/GEO and sales as part of the engagement, alongside the existing turnkey setup and migration commitments already on the pricing page. `Pricing`
+- The documentation is reorganised by capability — SEO, GEO, AEO, agent-ready content, chat, analytics and translations each have their own section — and every capability page now states how the feature is built, the evidence for it with a link to the source, and what is not proven, so you can check a claim before you build on it instead of taking it on trust. Old addresses redirect. `Documentation`
 
 ### Fixed
 
 - Analytics no longer keeps auto-refreshing a historical range you're not watching live — the 30-second poll now only fires while `Now` is selected. The AI Views card opens on Pages instead of Crawlers by default, and its crawler and page rows get the same Improve button already on other analytics rows. `Analytics`
 - Citations in the AI chat's answers now link to the exact section they cite instead of a dead or wrong anchor — a hand-written heading-slug rule broke every citation on a non-English page and drifted on plain punctuation elsewhere, landing readers at the top of the page instead of the section the answer actually came from. `AI Chat`
+- Every "Learn more" link in the panel, and the MCP address printed in `llms.txt` and `get-started.md`, now points straight at the page it names instead of redirecting through a retired address, so an assistant reading those files reaches the live page in one hop. `MCP`
+- The MCP tool count quoted on the site and in `llms.txt` was one behind the server (309 against 310 actually registered) and is now read from the same source the server is. `MCP`
 
 ## NEW - 04.09.2026
 

@@ -151,8 +151,8 @@ Everything that shipped in **SEO & GEO**. This is the SEO & GEO slice of the [fu
 ## Related
 
 - [Full Docsbook changelog](../CHANGELOG.md) — every release, across every section
-- [SEO](../content/features/seo.md) — how your pages rank in search engines
-- [GEO](../content/features/geo.md) — how answer engines come to cite you
+- [SEO](../seo/README.md) — how your pages rank in search engines
+- [GEO](../geo/README.md) — how answer engines come to cite you
 - [Changelogs by panel section](./README.md) — the same releases, cut by where they landed
 - [Changelogs by outcome](./outcomes/README.md) — the same releases, cut by the number they move
 

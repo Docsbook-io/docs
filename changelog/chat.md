@@ -412,8 +412,8 @@ Everything that shipped in **Chat**. This is the Chat slice of the [full Docsboo
 ## Related
 
 - [Full Docsbook changelog](../CHANGELOG.md) — every release, across every section
-- [AI Chat](../ai/chat.md) — the assistant readers talk to
-- [Chat hooks](../ai/chat-hooks.md) — what the assistant does on an event
+- [AI Chat](../ai-chat/chat.md) — the assistant readers talk to
+- [Chat hooks](../ai-chat/chat-hooks.md) — what the assistant does on an event
 - [Changelogs by panel section](./README.md) — the same releases, cut by where they landed
 - [Changelogs by outcome](./outcomes/README.md) — the same releases, cut by the number they move
 

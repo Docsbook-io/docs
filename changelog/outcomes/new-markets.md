@@ -17,6 +17,10 @@ The readers who bounced because the docs were not in their language. This is the
 - Live analytics gets a spinning globe view beside the flat map: drag to throw it, click a country to see its readers there, open one straight into their Feeds profile. `Analytics`
 - The `update_navigation` MCP tool can now rename what the sidebar shows for any page or folder, so an agent can tell eight sections apart whose files are all called `README.md` and all render as "Introduction". The override changes the sidebar text only, never the page's address or its place in the tree, so no inbound link breaks and nothing is reordered, and the new label is still translated into every enabled language. `MCP`
 
+### Changed
+
+- The documentation is reorganised by capability — SEO, GEO, AEO, agent-ready content, chat, analytics and translations each have their own section — and every capability page now states how the feature is built, the evidence for it with a link to the source, and what is not proven, so you can check a claim before you build on it instead of taking it on trust. Old addresses redirect. `Documentation`
+
 ### Fixed
 
 - Enabling a language, or changing your project's default one, can no longer end with your docs "translating" themselves into their own source language. The coverage engine, the commit-follow scanner, and Settings all refuse it now, so no run — and no AI spend — is ever opened for a language your docs are already written in. `Translations`

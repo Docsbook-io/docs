@@ -23,6 +23,8 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 ### Fixed
 
 - `list_workspaces` now warns when two of your projects resolve to the exact same live URL — a leftover from before project names were matched by case — and names which one is actually serving it, instead of showing both as equally live and leaving you to guess. `MCP`
+- Every "Learn more" link in the panel, and the MCP address printed in `llms.txt` and `get-started.md`, now points straight at the page it names instead of redirecting through a retired address, so an assistant reading those files reaches the live page in one hop. `MCP`
+- The MCP tool count quoted on the site and in `llms.txt` was one behind the server (309 against 310 actually registered) and is now read from the same source the server is. `MCP`
 
 ## NEW - 04.09.2026
 
@@ -210,7 +212,7 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 ## Related
 
 - [Full Docsbook changelog](../CHANGELOG.md) — every release, across every section
-- [MCP server](../ai/mcp.md) — connecting an agent to your docs
+- [MCP server](../agent-ready/mcp.md) — connecting an agent to your docs
 - [MCP tools reference](../reference/mcp-tools.md) — every tool, its price and its wait
 - [Changelogs by panel section](./README.md) — the same releases, cut by where they landed
 - [Changelogs by outcome](./outcomes/README.md) — the same releases, cut by the number they move

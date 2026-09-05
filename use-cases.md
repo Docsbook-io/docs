@@ -15,7 +15,7 @@ Six situations teams arrive with, and what Docsbook does about each. Every one e
 
 **What Docsbook does.** Docsbook publishes your pages as server-rendered HTML, so a crawler sees the text without running JavaScript, and adds the surfaces assistants look for: `sitemap.xml`, canonical URLs, JSON-LD, a visible last-modified date, and `llms.txt` at the site root. Each page gets its own URL and its own title, so a page about one narrow question competes on that question.
 
-**Start with:** [GEO — generative engine optimization](./ai-visibility/geo.md), then [llms.txt](./ai-visibility/llms-txt.md).
+**Start with:** [GEO — generative engine optimization](./geo/README.md), then [llms.txt](./geo/llms-txt.md).
 
 ## "Our docs get traffic and I cannot tell if it sells anything"
 

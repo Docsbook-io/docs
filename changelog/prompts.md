@@ -55,7 +55,7 @@ Everything that shipped in **Prompts**. This is the Prompts slice of the [full D
 ## Related
 
 - [Full Docsbook changelog](../CHANGELOG.md) — every release, across every section
-- [MCP server](../ai/mcp.md) — where a tool's worked example lives now
+- [MCP server](../agent-ready/mcp.md) — where a tool's worked example lives now
 - [Changelogs by panel section](./README.md) — the same releases, cut by where they landed
 - [Changelogs by outcome](./outcomes/README.md) — the same releases, cut by the number they move
 

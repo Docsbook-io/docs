@@ -249,19 +249,19 @@ Yes. Translations can be downloaded, corrected and uploaded back. Email [support
 
 SEO puts your documentation in Google's results. GEO — generative engine optimization — puts it in AI answers: Perplexity citations, ChatGPT Search, Google AI Overviews. AEO — answer engine optimization — adds the structured markup that featured snippets and voice assistants read.
 
-Docsbook generates all three from your Markdown: meta tags, `sitemap.xml`, OpenGraph, canonical URLs, TL;DR blocks, a visible `dateModified`, author markup, FAQPage and HowTo JSON-LD, and speakable selectors. See [SEO](./content/features/seo.md), [GEO](./content/features/geo.md) and [AEO](./content/features/aeo.md).
+Docsbook generates all three from your Markdown: meta tags, `sitemap.xml`, OpenGraph, canonical URLs, TL;DR blocks, a visible `dateModified`, author markup, FAQPage and HowTo JSON-LD, and speakable selectors. See [SEO](./seo/README.md), [GEO](./geo/README.md) and [AEO](./aeo/README.md).
 
 ### What are Docsbook skills?
 
 Docsbook skills are `SKILL.md` files that teach an AI agent how to do documentation work. The catalog is four orchestrator skills, one per job: `docs-analyze` finds what is wrong, `docs-create` writes what is missing, `docs-manage` decides what a page should say, and `docs-automate` makes any of it recur.
 
-Install them with `npx skills add Docsbook-io/docs-skills --skill '*'`, or let an MCP-connected agent discover them at runtime with `find_skill`. See [Docs skills](./ai/skills.md).
+Install them with `npx skills add Docsbook-io/docs-skills --skill '*'`, or let an MCP-connected agent discover them at runtime with `find_skill`. See [Docs skills](./agent-ready/skills.md).
 
 ### Can an AI agent edit my documentation?
 
 Yes. Docsbook's MCP server exposes 309 tools at `https://docsbook.io/api/mcp/server`, so Claude Code, Cursor or ChatGPT can read your pages, search them, change settings and commit new pages back. Writing requires a token authorised with read-write scope; a read-only token is refused.
 
-See [MCP server](./ai/mcp.md) and the [MCP tools reference](./reference/mcp-tools.md).
+See [MCP server](./agent-ready/mcp.md) and the [MCP tools reference](./reference/mcp-tools.md).
 
 ## Migrating from another tool
 

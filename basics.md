@@ -128,13 +128,13 @@ The `docsbook.io` address keeps working after a custom domain is attached. See [
 
 **`llms.txt`** is a plain-text index of a Docsbook site, served at the site root for AI agents that look for one. It lists the pages and what each one covers.
 
-Docsbook generates it from the indexed content, so it does not go stale separately from the site. See [llms.txt](./ai-visibility/llms-txt.md).
+Docsbook generates it from the indexed content, so it does not go stale separately from the site. See [llms.txt](./geo/llms-txt.md).
 
 ### MCP server
 
 The **MCP server** is Docsbook's Model Context Protocol endpoint at `https://docsbook.io/api/mcp/server`, exposing 309 tools that let an AI agent read your documentation, search it, change settings, and commit pages back. Authentication is Bearer over OAuth 2.0 with PKCE.
 
-Discovery calls are never metered; other calls draw on the project balance. See [MCP server](./ai-visibility/mcp.md) and the [MCP tools reference](./reference/mcp-tools.md).
+Discovery calls are never metered; other calls draw on the project balance. See [MCP server](./agent-ready/mcp.md) and the [MCP tools reference](./reference/mcp-tools.md).
 
 ### Float widget
 

@@ -1,6 +1,7 @@
 ---
 title: "MCP server: run your documentation from a coding agent"
 description: "Connect Claude Code, Cursor, Codex or any MCP client to Docsbook and read, write, measure and configure your documentation from inside the editor."
+tldr: "Docsbook's remote MCP server exposes 310 typed tools over one OAuth-protected endpoint — read pages, commit them, read analytics, change settings, start background agent runs. Calls are billed per call against the project's balance by billing class; discovery is free."
 ---
 
 # MCP Server
@@ -11,7 +12,7 @@ This page is the reference for what the server serves and what a call draws on. 
 
 ## What is the Docsbook MCP server?
 
-The Docsbook MCP server exposes **309 tools** over the Model Context Protocol, an open standard for handing tools, resources and prompts to AI agents over a typed RPC interface. Of those tools, 18 are one-per-webhook-event registrations, 136 are action tools that each perform one step of documentation work on one subject and answer with a validated JSON payload, five are collectors that hand back the evidence those actions are built on with no judgement in it, four start and read background runs, two connect and configure a repository or website as a source of truth, two find and arm a standing agent on a schedule, event or connected repository's commits, and the rest are named tools covering workspace, content, chat, analytics and webhook operations.
+The Docsbook MCP server exposes **310 tools** over the Model Context Protocol, an open standard for handing tools, resources and prompts to AI agents over a typed RPC interface. Of those tools, 18 are one-per-webhook-event registrations; 136 are action tools that each perform one step of documentation work on one subject and answer with a validated JSON payload; 41 are agents, one per goal, whose implementation is a route of those actions in order; 12 are backed by an external scraping vendor for the things Docsbook's own crawler cannot reach; five are collectors that hand back the evidence the actions are built on with no judgement in it; and four start and read background runs. The remaining 94 are the individually named tools covering workspace, content, chat, analytics and webhook operations — among them the two that connect and configure a repository or website as a source of truth, and the two that find and arm a standing agent on a schedule, an event or a connected repository's commits.
 
 ## Endpoint
 
@@ -21,13 +22,13 @@ The Docsbook MCP server is served at one URL for every workspace and every clien
 https://docsbook.io/api/mcp/server
 ```
 
-Authentication is OAuth 2.0 Authorization Code with PKCE. Bearer tokens are returned to the client and refreshed transparently. There is no per-project MCP URL to look up: the OAuth flow is scoped to the signed-in account, and the client picks the workspace afterwards.
+Authentication is an OAuth authorization-code flow with PKCE. The client receives one opaque Bearer token, which it presents on every call; no refresh token is issued and the token does not expire on its own, so rotation means revoking it in the panel and authorizing again. There is no per-project MCP URL to look up: the OAuth flow is scoped to the signed-in account, and the client picks the workspace afterwards. See [MCP server security](./mcp-security.md) for the flow, the scopes and the gaps.
 
 ## How do I connect my AI client to Docsbook?
 
 Point your client at `https://docsbook.io/api/mcp/server` and complete the OAuth prompt in the browser. The Docsbook MCP server is a remote HTTP server with OAuth, so every modern MCP client connects to it with the same endpoint and no local process to run. The subsections below give the exact command or config file for each client.
 
-You can also browse the catalog inside your own project: open the admin panel and pick `MCP` in the sidebar. The first time you open it the section offers a **Turn on** panel carrying the install command for your client, so you can connect before you read the catalog, and pressing it runs a short guide over the table itself. Behind it is a table of every tool the server serves right now, read live from the server rather than from a written-down copy, with each tool's billing class, price per call, how long a call typically stays open, and whether readers can call it without a token. Search it, narrow it with **Filters** — the billing classes, each printed with its own price — or sort by any column. Hovering a row opens a card with the rest of what there is to know about that tool: what it does, what a call costs and how long it typically stays open, how many arguments it takes and how many of them are required, how many worked examples call it, and — in your own project — what it has cost you so far and when you last called it, with the callable id in it ready to copy. Clicking a row opens that tool's own page, and the page has an address: the URL carries the tool, so you can refresh it, bookmark it, or send it to a colleague and land them on the same tool instead of back at a table of ninety rows. Everything on it is about that one tool. Its arguments are a form with a **Run** button that makes a real call against this project, and the button carries the price before the money moves. Under that is its **call history**, drawn by the same **Feeds** table you read everywhere else, narrowed to this one tool: one line per call, and expanding a row shows the call in full — what went in, what came back, who asked (your Run, an outside agent, a schedule, an event), how long it took, what it was priced at, and what actually left your balance. Below that is what runs it unattended: a schedule, an event, or one of your saved **Feeds**, so a call can watch a whole feed rather than a single event name, and each armed row shows what it already fires on so you never replace a run you set up earlier without seeing it. Last on the page are the **agents that use this tool** — the cards from the **Agents** section whose route actually calls it, armed ones first, each with its own switch, so you can put the tool on a schedule from the page where you just read what a call costs. Under them sits one worked example to copy into your own client; what runs from inside Docsbook is the call.
+You can also browse the catalog inside your own project: open the admin panel and pick `MCP` in the sidebar. The first time you open it the section offers a **Turn on** panel carrying the install command for your client, so you can connect before you read the catalog, and pressing it runs a short guide over the table itself. Behind it is a table of every tool the server serves right now, read live from the server rather than from a written-down copy, with each tool's billing class, price per call, how long a call typically stays open, and whether readers can call it without a token. Search it, narrow it with **Filters** — the billing classes, each printed with its own price — or sort by any column. Hovering a row opens a card with the rest of what there is to know about that tool: what it does, what a call costs and how long it typically stays open, how many arguments it takes and how many of them are required, how many worked examples call it, and — in your own project — what it has cost you so far and when you last called it, with the callable id in it ready to copy. Clicking a row opens that tool's own page, and the page has an address: the URL carries the tool, so you can refresh it, bookmark it, or send it to a colleague and land them on the same tool instead of back at a table of three hundred rows. Everything on it is about that one tool. Its arguments are a form with a **Run** button that makes a real call against this project, and the button carries the price before the money moves. Under that is its **call history**, drawn by the same **Feeds** table you read everywhere else, narrowed to this one tool: one line per call, and expanding a row shows the call in full — what went in, what came back, who asked (your Run, an outside agent, a schedule, an event), how long it took, what it was priced at, and what actually left your balance. Below that is what runs it unattended: a schedule, an event, or one of your saved **Feeds**, so a call can watch a whole feed rather than a single event name, and each armed row shows what it already fires on so you never replace a run you set up earlier without seeing it. Last on the page are the **agents that use this tool** — the cards from the **Agents** section whose route actually calls it, armed ones first, each with its own switch, so you can put the tool on a schedule from the page where you just read what a call costs. Under them sits one worked example to copy into your own client; what runs from inside Docsbook is the call.
 
 ### Claude Code
 
@@ -377,7 +378,7 @@ Every analytics response from the Docsbook MCP server carries its own caveats in
 There are two ways to work with your documentation content from an agent, and which one you want depends on whether the agent has the repository on disk:
 
 - **Hosted, via MCP tokens** — `search_docs` (read-only; works with any connected token regardless of its scope), `get_doc_outline` (read-only; lists every markdown page's title, heading count, and size before searching or writing), and `write_docs` (requires a token authorized with **read-write** scope; commits one or more files as a single atomic git commit). These run against the Docsbook-hosted repository directly, no local checkout needed.
-- **Local, via `markdown-lsp`** — for an agent working directly on your checked-out files, [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) exposes richer LSP-style `doc_*` tools (outline, fuzzy headings, full-text, link references, resolve links) by running `npx markdown-lsp <subcommand> ./docs` on the agent's machine. See [Source of Truth](./source-of-truth.md) for the tool list and rationale.
+- **Local, via `markdown-lsp`** — for an agent working directly on your checked-out files, [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) answers richer graph questions (workspace outline, fuzzy heading search, full-text with context, incoming and outgoing links, link resolution) as commands the agent runs — `npx markdown-lsp <subcommand> ./docs` — or as a language server. It is not an MCP server and needs no token. See [Source of Truth](./source-of-truth.md) for the subcommand list and the rationale.
 
 Use `search_docs`/`write_docs` when the agent only has an MCP connection (no local checkout); use `markdown-lsp` when the agent already has the repo on disk and wants deeper graph navigation.
 
@@ -389,14 +390,15 @@ A call is charged a **flat amount, fixed before the call runs and independent of
 
 | Class | What the call makes the server do | Tools in it |
 |---|---|---|
-| Included | Nothing but a lookup | `get_info`, `find_skill`, `find_widget`, `find_tool`, `list_workspaces`, `get_workspace`, `create_workspace` |
-| Read | Reads a row it already stores | A page, a setting or a registry row |
-| Write | Changes stored state | `update_*`, `create_*`, `set_*`, `register_*` |
-| Analytics | Scans the event store | Funnels, journeys, retention, feeds |
-| Egress | Leaves the Docsbook network | `fetch_url`, `read_source`, `test_*`, `replay_*` |
+| Included | Nothing but a lookup | `get_info`, `find_skill`, `find_widget`, `list_workspaces`, `get_workspace`, `create_workspace` |
+| Read | Reads a row it already stores | A page, a setting or a registry row — the class an unclassified tool falls to |
+| Write | Changes stored state | `create_*`, `update_*`, `set_*`, `delete_*`, `register_*`, `unregister_*`, `upload_*`, `approve_*`, `mark_*` |
+| Analytics | Scans the event store | Funnels, journeys, retention, rankings, feeds, `query_events` |
+| Egress | Leaves the Docsbook network | `fetch_url`, `read_source`, `test_*`, `replay_*`, the four tracker reads (`list_issues`, `get_issue`, `get_pull_request`, `search_prior_work`), and the vendor-backed scraping tools |
 | Probe | Gathers and normalises one family of facts, with no model in it | `collect_*` |
-| AI | Calls a model to write, read or rank | `write_docs`, `search_docs`, `search`, `get_insights` |
-| Agent | Runs a whole agent behind one call | The 135 action tools (`observe_*`, `explain_*`, `discover_*`, `decide_*`, `plan_*`, `draft_*`, `measure_*`, `verify_*`, `learn_*`, `handoff_*`), plus `audit_geo` and `run_docs_*` |
+| AI | Calls a model to write, read or rank | `write_docs`, `search_docs`, `search`, `get_insights`, `get_chat_intent` |
+| Lens | One model pass over an evidence record it was handed, re-read from a single declared angle | Reserved (`lens_*`) — no tool is in this class today |
+| Agent | Runs a whole agent behind one call | The 135 action tools (`observe_*`, `explain_*`, `discover_*`, `decide_*`, `plan_*`, `draft_*`, `measure_*`, `verify_*`, `learn_*`, `handoff_*`), the 41 `agent_*` goals, plus `audit_geo`, `generate_issues` and `run_docs_*` |
 
 **An action tool is priced from the work it declares** — how many families of evidence it reads, how many model round trips it may take, whether it leaves your site, whether it writes an artifact — rather than one flat figure for the whole class. So a narrow observation draws a fraction of what a deep draft does, and its published wait (roughly 20 s to 70 s) differs the same way.
 
@@ -418,8 +420,8 @@ Unauthenticated, repo-scoped access to a public documentation site is never mete
 
 Access to the Docsbook MCP server is decided by the token, not by a tier. A token carries a **scope**, and the scope is the only thing that separates reading from writing:
 
-- **Read-only** — every reporting, search and outline tool answers. `write_docs`, `create_issue` and the three writing `run_docs_*` runs refuse, and say why.
-- **Read-write** — the same, plus committing pages, filing issues and changing settings.
+- **Read-only** — every reporting, search and outline tool answers. `write_docs`, `create_issue`, `connect_source`, `configure_source`, `enable_agent` and the three writing `run_docs_*` runs refuse, and say why. Those eight are the tools that currently check the scope; the settings, webhook, goal and translation writers are gated by project ownership alone, so read-only is not a "changes nothing" token — see [MCP server security](./mcp-security.md#what-each-scope-can-do).
+- **Read-write** — everything the account can do: committing pages, filing issues, connecting sources, arming agents and changing settings.
 - **No token at all** — on a repo-scoped endpoint (`docsbook.io/{owner}/{repo}/api/mcp/server`), `get_info`, `find_skill`, `find_widget` and `list_content_widgets` answer from the public catalog, and `search` answers over that site's own documentation — the one tool here that reads a project, because what it reads is the published site. It is refused on a private site, on a site whose plan has lapsed, on an endpoint not pinned to a site, and when the project has no AI balance left; it takes no project argument, so it can only ever read the site it is pinned to. Every other tool requires a valid Bearer token tied to a Docsbook account.
 
 When a call is refused, the server returns a structured error naming the reason rather than a bare 403, so the agent can tell a reader what to fix. See [MCP Server — Trust & Security](./mcp-security.md) for the authentication flow and what the server stores.
@@ -428,6 +430,6 @@ When a call is refused, the server returns a structured error naming the reason 
 
 - [MCP tools reference](../reference/mcp-tools.md) — every tool with its parameters.
 - [Chat Hooks](../ai-chat/chat-hooks.md) — Configure pre/post-LLM hooks via MCP.
-- [Docs Skills](../ai-chat/skills.md) — Discover SKILL.md files through `find_skill`, or have one run for you with `run_docs_*`.
+- [Docs Skills](./skills.md) — Discover SKILL.md files through `find_skill`, or have one run for you with `run_docs_*`.
 - [Webhooks](../reference/webhooks.md) — Register event handlers from MCP, and verify their signatures.
 - [Pricing](https://docsbook.io/pricing) — what a metered call draws on, generated from the live billing constants.

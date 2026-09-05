@@ -7,6 +7,8 @@ description: "Find the Docsbook guide for the job you are doing — publishing f
 
 Docsbook publishes Markdown from a GitHub repository, a website scan, or a written brief as a documentation site people and AI assistants can read. This index is organised by the job you are doing, not by the menu the admin panel uses — pick the job, then the guide.
 
+Every capability page here follows one rule: it states **what you get**, **how it is built** in enough mechanical detail to predict the output, **the evidence** with a link to a primary source, and **what is not proven**. If we cannot source a claim, the page says so rather than dropping it — see [how we prove it](./evidence.md).
+
 New to Docsbook? Read [the overview](./overview.md) first, then [publish a site](./quick-start.md).
 
 <!-- widget:cards -->
@@ -17,6 +19,7 @@ New to Docsbook? Read [the overview](./overview.md) first, then [publish a site]
 - [Quick start](./quick-start.md) — Publish a documentation site, from source to public URL {rocket}
 - [Concepts](./basics.md) — Workspace, project balance, indexing and the other terms {box}
 - [Use cases](./use-cases.md) — The jobs teams hire documentation for {target}
+- [How we prove it](./evidence.md) — The evidence rule every capability page here follows {scale}
 
 ## Publish your documentation
 
@@ -29,28 +32,46 @@ New to Docsbook? Read [the overview](./overview.md) first, then [publish a site]
 - [Brand it](./design/style/branding.md) — Name, icon, accent colour, fonts {palette}
 - [Set the theme and layout](./design/style/theming.md) — Light, dark and system defaults {sun-moon}
 
-## Get cited by AI and found by search
+## Get found by search engines
 
-- [SEO](./ai-visibility/seo.md) — Meta tags, sitemap.xml, OpenGraph, canonical URLs {search}
-- [GEO](./ai-visibility/geo.md) — Be citable by Perplexity, ChatGPT Search and AI Overviews {sparkles}
-- [AEO](./ai-visibility/aeo.md) — FAQPage, HowTo and speakable markup for answer boxes {message-square-quote}
-- [llms.txt](./ai-visibility/llms-txt.md) — A plain-text index of your docs for AI agents {file-text}
-- [MCP server](./ai-visibility/mcp.md) — 309 tools that let an agent read and edit your docs {plug}
-- [Source of truth](./ai-visibility/source-of-truth.md) — The document graph an agent navigates {network}
-- [MCP security](./ai-visibility/mcp-security.md) — Current compliance position, and what is not offered yet {shield}
+- [SEO overview](./seo/README.md) — What Docsbook emits for search engines without you configuring anything {search}
+- [How the head is built](./seo/how-it-works.md) — Title, description, canonical, hreflang, cards, robots and sitemap, in resolution order {file-code}
+- [Indexing](./seo/indexing.md) — How a change reaches the index, and what actually gates that {refresh-cw}
+
+## Get quoted by AI assistants
+
+- [GEO overview](./geo/README.md) — What Docsbook adds so Perplexity, ChatGPT Search and AI Overviews can quote you {sparkles}
+- [Citation signals](./geo/citation-signals.md) — The rules that make a passage quotable, and what has been measured not to work {quote}
+- [llms.txt](./geo/llms-txt.md) — A plain-text index of your docs for AI clients, and who really reads it {file-text}
+
+## Win the answer box
+
+- [AEO overview](./aeo/README.md) — What an answer engine needs from a page, and what Docsbook emits {message-square-quote}
+- [Structured answers](./aeo/structured-answers.md) — The JSON-LD Docsbook emits, what triggers it, and what Google still shows {braces}
+- [Content rules](./aeo/content-rules.md) — The rules Docsbook writes by, each with what it does to an answering agent {list-checks}
+
+## Make your docs agent-ready
+
+- [Agent-ready overview](./agent-ready/README.md) — Documentation an agent can navigate and act on, not just read {bot}
+- [Docs skills](./agent-ready/skills.md) — SKILL.md files that teach any agent documentation work {graduation-cap}
+- [MCP server](./agent-ready/mcp.md) — The tools that let an agent read and edit your docs {plug}
+- [Source of truth](./agent-ready/source-of-truth.md) — The document graph an agent navigates {network}
+- [MCP security](./agent-ready/mcp-security.md) — Auth model, what a read-only token cannot do, and what is not offered yet {shield}
 
 ## Answer readers with AI chat
 
 - [AI chat](./ai-chat/chat.md) — An assistant that answers from your indexed pages {message-circle}
+- [Answer quality](./ai-chat/answer-quality.md) — The retrieval and grounding pipeline, and what happens when nothing matches {target}
 - [Full-text search](./ai-chat/search.md) — A search box in the header, the sidebar, or both {search}
 - [Connected sources](./ai-chat/sources.md) — Repositories and sites your agent may read as fact {link}
 - [Chat hooks](./ai-chat/chat-hooks.md) — Run your own code before and after the model {webhook}
-- [Docs skills](./ai-chat/skills.md) — SKILL.md files that teach an agent documentation work {graduation-cap}
 - [Page feedback](./ai-chat/feedback.md) — Thumbs up and down, per page {thumbs-up}
 
 ## Measure what your docs earn
 
 - [Tracking overview](./analytics/tracking/overview.md) — What Docsbook measures and where it comes from {bar-chart-3}
+- [How measurement works](./analytics/how-measurement-works.md) — Visitor identity, bot filtering, read time, and what is never collected {microscope}
+- [Goals and funnels](./analytics/reports/goals-and-funnels.md) — Whether readers reach the page that sells {git-fork}
 - [Events](./analytics/tracking/events.md) — AI opens, code copies, link clicks, goals {mouse-pointer-click}
 - [Read time](./analytics/reports/read-time.md) — How long readers spend on each page {timer}
 - [Countries and languages](./analytics/reports/countries.md) — Where readers are and what they read in {map}
@@ -60,6 +81,7 @@ New to Docsbook? Read [the overview](./overview.md) first, then [publish a site]
 
 - [Translation settings](./translation/settings.md) — Enable languages and place the switcher {sliders-horizontal}
 - [AI translations](./translation/ai-translations.md) — How automatic translation works, and how to correct it {languages}
+- [Translation quality](./translation/quality.md) — What is protected from translation, how drift is caught, and the hreflang side {badge-check}
 
 ## Reference
 

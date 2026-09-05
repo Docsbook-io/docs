@@ -23,6 +23,7 @@ One visit is a look; a second is a product someone is actually adopting. This is
 ### Fixed
 
 - Feeds opened from a visitor pin (in Users, Analytics, Live or Chat) now shows a real breadcrumb back to wherever you came from, instead of the small × on the filter chip being the only way out. `Feeds`
+- One reader typing one word no longer arrives in your insights as eight separate "missing page" fixes: keystroke-by-keystroke misses from the same visitor are folded into the longest thing they actually typed, and dropped entirely when they went on to click a result — so the failed-search list is a list of pages worth writing, not a list of somebody's typing. `Analytics`
 
 ## NEW - 04.09.2026
 

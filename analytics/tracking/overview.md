@@ -1,294 +1,258 @@
 ---
-title: "Read the analytics panel of your documentation site"
-description: "What each figure, card and tab in the Docsbook analytics panel measures, what it is not evidence of, and which decision about your documentation it supports."
+title: "Read the analytics panel: what each figure is, and is not, evidence of"
+description: "Every tile, card and tab in the Docsbook analytics panel — what it measures, where the number comes from, what it cannot tell you, and which decision it supports."
+tldr: "Seven tiles across the top, four breakdown cards under them, and an AI-crawler card below those. Six of the seven tiles are properties of a visit and are computed from one reconstructed event stream, so they cannot disagree; the seventh, Spend, is read off the billing ledger and is the only figure here whose zero is a measurement rather than a gap."
 ---
 
-# Web Analytics
-
-The Docsbook analytics panel reports who read your documentation, where they came from, which pages held them, whether they reached the page you are selling, and what your project spent on AI over the same window. It runs on your own site with no third-party trackers, and reading it costs nothing against your project's balance.
-
-## What each figure answers
-
-Every figure on this page exists to settle one question about your documentation. The table below maps the question to the figure; the sections after it say what each figure measures and — as importantly — what it is not evidence of.
-
-| Your question | The figure that answers it |
-|---|---|
-| Is anybody outside my team reading this? | Visitors, with your own team's visits excluded — see [Who counts as a visitor](#who-counts-as-a-visitor) |
-| Are they arriving and bouncing straight off? | Bounce rate and Session time |
-| Do they reach the page that sells? | Conversion rate, and the CTA Clicks card |
-| What was that worth? | Revenue and Revenue/visitor, once Branding has both settings |
-| What is this documentation costing me? | Spend, read straight off the billing ledger |
-| Which pages are dead, and which hold people? | The Pages card, ranked by Views or Reading time |
-| Are AI crawlers reading the docs at all? | The AI Views card, one line per crawler |
-
-## What you will see
-
-Seven figures sit across the top of the panel. Click any of them to redraw the chart below — except Revenue, which has no chart of its own (it is conversions multiplied by a fixed price, so its line would be the conversion line with a different label).
-
-| Metric | Description |
-|---|---|
-| Visitors | Distinct readers over the selected period, split into new and returning |
-| Revenue | What those readers were worth — see [What did the documentation earn?](#what-did-the-documentation-earn) |
-| Spend | What this project's AI cost over the same period — see [What is the documentation costing?](#what-is-the-documentation-costing) |
-| Conversion rate | Share of visitors who clicked through to your Call To Action URL |
-| Revenue/visitor | Revenue divided by visitors |
-| Bounce rate | Share of visits that were one page, under three seconds, and nothing else |
-| Session time | How long an average visit lasted |
-
-Each one also shows how it moved against the period immediately before it. Green means the change is good news — which for bounce rate means going **down**. Spend's arrow is grey in both directions, because spend has no good direction to point in.
-
-Below the chart, four cards break the same period down. Each card holds several tabs:
-
-| Card | Tabs |
-|---|---|
-| Pages | Pages, Headings, Entry, Exit |
-| Sources | Referrers, Channels, UTM, Keyword |
-| Audience | Devices, Browsers, Countries, Languages |
-| Conversions | CTA Clicks, Feedback, Searches |
-| AI Views (full width) | AI crawler requests over time, and per bot |
-
-At the very bottom of the page, two more cards — "What readers asked" and
-"Where the answers led" — break down your AI chat's own conversations
-(topics, why readers came, top searches, languages, outbound links, and the
-answered/dead-end/unrated split) over this same range. See
-[AI Usage & Cost Statistics](./ai-usage.md) for what each tab shows; unlike
-the cards above, rows here don't filter the rest of the dashboard.
-
-Each card picks its tab from a dropdown rather than a row of tabs: four or five
-tabs never fit a half-width card, and the row they used to sit in scrolled
-sideways inside a card that also scrolls down.
-
-Every row on the first three cards carries **both** figures: how many visitors it
-brought and how much revenue they were worth. The control on the right of the
-card says which figure the list is ranked by — click it to switch, and every
-card switches with it. Two bars are always drawn behind each row: blue is
-whatever the list is ranked by, rose is always the money.
-
-**Pages and Headings in the Docsbook analytics panel rank by two more figures**: `Views` and `Reading time`.
-Those only mean something for a row that names a place in your docs, which is
-why they are offered there and nowhere else — and they count only what happened
-on that page. A reader who opened three pages gives each of them its own views
-and its own seconds, rather than making all three look as busy as the busiest.
-Reading time is averaged over the readers it was actually measured for; a page
-with no measurements shows a dash, never `0`.
-
-Hover a row for its visitors, revenue, revenue per visitor and conversion rate,
-and for two buttons: one filters the whole dashboard by that value, the other
-opens the page or site the row points at. **Details** at the foot of the card
-opens the same numbers as a full table, where the filter is a tap away on a
-phone.
-
-### Filtering the dashboard by a row
-
-Filtering by a row narrows **everything** — the other cards and the visitor
-figures above the chart — so a country, a device or a referrer can be read end
-to end: how many came, how well they converted, and which pages they read.
-Filters stack, and each one is a chip above the cards that removes itself when
-clicked. Spend is the exception: a filter cuts *visits*, and an AI answer or a
-translation job is not a visit, so Spend keeps showing the whole project's bill.
-
-The tabs counted per event rather than per visit — Headings, Read Time, UTM,
-AI Views, CTA Clicks, Feedback and Searches — cannot be filtered this way. They
-say so above their rows while a filter is on, rather than showing unfiltered
-numbers under a filtered heading.
-
-**Online now** — a live count of readers active in the last five minutes — is not one of the seven. It is a right-now number rather than a total over the period you picked, so it sits as its own chip beside the panel's title.
-
-### What did the documentation earn?
-
-Revenue in the Docsbook analytics panel needs two settings, and reports nothing until it has both:
-
-- your **Call To Action URL** decides *which* click counts as a conversion — a reader who left your docs for that domain;
-- your **Average Product Price** decides what such a click is *worth*.
-
-Both live in **Design → Branding**; see [Branding](../../design/style/branding.md). Until both are filled in, the Revenue and Revenue/visitor tiles are switched off and say which one is missing. They deliberately never show `$0`: a missing price is not a price of zero, and a confident `$0` would read as "nothing sold" when nothing is actually being measured.
-
-Once both are set, Revenue is the number of readers who reached your call-to-action page multiplied by your average price. A reader who clicks through five times counts once.
-
-The same rule produces the revenue on every card row, so the cards and the
-figures above them can never disagree about what a sale is. Until both settings
-exist, the cards rank by visitors only and the metric control says which setting
-is missing.
-
-Matching is by domain, with `www.` treated as the same site. Other subdomains are not folded in — your docs usually live on one, and counting a click back into the docs as a sale would flatter the number.
-
-### What is the documentation costing?
-
-**Spend** is what left this project's balance over the same period: the AI calls
-your readers made in chat, the ones you made in the panel, translations,
-embeddings, and MCP calls billed against the project. Click it and the chart
-redraws as a cost line; each point names the billed calls behind it.
-
-It needs no settings — unlike Revenue, it is read straight off your billing
-ledger. That also makes it the one figure here whose `$0` is a real reading
-rather than a gap, so a period the panel could not read the ledger for says so
-instead of showing zero. Calls that ran on your own API key are counted and cost
-nothing.
-
-Because it does not come from visits, Spend stays meaningful in a period nobody
-visited — a translation run overnight is a real bill with no reader behind it,
-and that is usually the most useful thing this tile has to show you. Look for a
-cost spike that no visitor spike explains.
-
-Nothing you add to your balance is netted off this figure: it counts money going
-out, so a top-up does not make it dip.
-
-### Who counts as a visitor?
-
-Two kinds of visit are left out of every reader figure on this page: bots, and
-**you and your team browsing your own docs**.
-
-The second one matters most on a young project. Before this, a workspace with no
-audience yet still showed visits, a bounce rate and a session time — all of them
-you, checking your own pages after a publish. That is the one reading that feels
-like a signal and is not, and it is exactly when you are most likely to act on
-it.
-
-So a number here that is lower than you expected, or zero on a workspace you have
-been opening all week, is the report answering honestly: nobody outside your team
-has read this yet. Your own visits are not deleted, only kept out of the reader
-figures.
-
-### New and returning visitors
-
-The Visitors chart draws two lines: readers seen for the first time, and readers coming back. Hover any point for the pageviews, pages per visitor, and the returning rate in that hour or day.
-
-Because events are kept for at most 30 days, "new" can only mean *not seen in the window we can still read* — never "never seen before". The tooltip states the exact horizon it checked.
-
-### Bounce rate and session time
-
-A **bounce** is a visit of one page, under three seconds, with nothing else — someone who arrived and left without reading. It is a description, not a verdict; a reader who found their answer in one glance also bounces.
-
-**Session time** averages how long visits lasted. Both are computed per visit, so a reader who comes back three times in a week contributes three visits.
-
-If a period holds very few visits, the panel says so under the figures: percentages over a handful of visits swing by whole points per visit, and are a direction rather than a measurement.
-
-### Which Google queries is the site found by?
-
-The **Keyword** tab of the Sources card is the one list that does not come from
-your visitors: it comes from Google Search Console. An impression that never
-became a click cannot be seen by anything running on your docs site, so this tab
-shows what Google saw — the queries you rank for, with position, impressions,
-clicks and click-through rate.
-
-Connect Search Console in the SEO tab first. The numbers lag about two days
-(Google's own schedule) and the tab states the day they run through. Revenue
-here is an **estimate** — clicks multiplied by your site-wide revenue per
-visitor — and is labelled and drawn as one, because a modelled figure should
-never look like a measured one.
-
-### Which AI crawlers are reading the docs?
-
-The **AI Views** card opens on the **Pages** grouping — which pages assistants read most — and can be switched to **Crawlers**, which charts one line per AI crawler instead, so you can tell which assistants are reading your docs and how that changes over time. The twelve busiest bots are charted, each labelled with the provider behind it, above the per-bot totals.
-
-### Channels
-
-The **Channels** tab groups visits by the *kind* of source — organic search,
-social, referral, AI assistant, direct — when the question is which channel
-works rather than which site. Hovering a channel names the three sites it
-actually consists of, with their shares: "organic search" that is 96% Google and
-one spread across five engines are different situations.
-
-### Did readers reach the page that sells?
-
-The **CTA Clicks** card of the Docsbook analytics panel ranks every destination readers left your documentation for — your signup page, pricing, the repo, anything external — so you can see which call to action readers actually follow and from which page they follow it.
-
-### Which pages did readers vote down?
-
-The **Feedback** tab of the same card ranks your pages by the thumbs readers gave them. Both vote widgets are counted together — the "was this helpful" rating at the foot of a page, and the thumbs on an AI answer given on that page — because the question it answers is which page readers approve of, not which button they pressed.
-
-Rows are sorted by dislikes first: the page people voted down is the one to rewrite, while an upvoted page only confirms what already works. Both counts are always shown, zeros included.
-
-### What are readers searching for that isn't there?
-
-The **Searches** tab of the same card ranks what readers typed into your on-page search box, one row per query, with how often it found something and how often it came back empty. A query can carry both counts at once — the same words sometimes resolve and sometimes come back with nothing.
-
-A query with no results is the reader telling you, in their own words, what the docs should cover: check whether a page answering it already exists under a different name, and if not, that is the next page to write. Unlike the other cards, Searches has no metric menu to re-rank by — these rows are counted per search event rather than per visit, so there is no revenue figure to sort on the way Pages and Sources offer.
-
-## A report you have no data for yet
-
-A report with nothing in it teaches nothing, so a tab that has none of your own
-rows yet does not render empty. It renders over **sample figures**, faded, with
-its own icon in the middle of it and **Enable <em>Tab</em>** under it — Enable
-Headings, Enable Channels, Enable Feedback — and one line saying what that
-particular list answers.
-
-The whole card is the button. Pressing anywhere on it runs a short guide inside
-that card, over those same sample figures: each step names something on the card
-by the label printed on it, says how to read it — including what the figure is
-*not* evidence of — and names the move it leads to. Finishing or skipping the
-guide switches that tab to your own numbers.
-
-Four things worth knowing about it:
-
-- **It is per tab, not per card and not per page.** Pages, Headings, Entry and
-  Exit are four switches, not one, and so are Referrers, Channels, UTM and
-  Keyword, Devices, Browsers, Countries and Languages, and CTA Clicks, Feedback
-  and Searches. They answer different questions with different caveats — Entry names
-  one page per visit while Pages credits every page a visit touched — and each
-  gets the explanation that is actually about it. A site with plenty of
-  referrers and no tagged campaign meets the guide on **UTM** and nowhere else.
-- **The tab strip stays live under it.** Switching tabs on a covered card moves
-  to that tab's own switch and its own description — and off the switch
-  entirely if that tab has rows of yours. Looking through the tabs before
-  turning any of them on is the expected first move.
-- **It gates nothing.** Every figure on this page was collected the whole time
-  regardless — the switch only decides which of two presentations of the same
-  report you are looking at, and it is remembered in your browser, per
-  workspace. A teammate's view is unaffected, and clearing site data offers
-  the guide again.
-- **A tab that already has your rows in it is never covered.** It explains
-  itself, so there is nothing for a panel over it to add.
-
-Four readouts are switched on whole rather than per tab: the seven figures at
-the top, which have no tabs; **AI Views**, whose three tabs are one crawl stream
-split by why the crawler came; and the two chat cards, which drop a tab entirely
-when the window has no rows for it.
-
-The sample figures are the ones the product tour uses, so what you see before
-switching a tab on is the same thing you saw while trying Docsbook out.
-
-## How to open the analytics panel
-
-1. Open any page of your documentation site.
-2. Click the **Analytics** tab in the floating toolbar at the bottom.
-3. The overview loads automatically with **Today** selected — or whichever range you picked last, which the panel remembers across visits.
-
-## Time ranges
-
-Use the interval switcher (next to the Online badge) to change the window:
+# Analytics overview
+
+A documentation dashboard is easy to make impressive and hard to make usable.
+The difference is whether each number states what it cannot see. This page goes
+through the panel tile by tile and tab by tab, and for each one says what it
+counts, where it comes from, and the reading it does **not** support. The
+definitions underneath all of it — who counts as a visitor, how bots and your
+own team are excluded, how long data is kept — are in
+[how measurement works](../how-measurement-works.md) and are not repeated here.
+
+## What you get
+
+One page that answers the questions an owner actually has, from one source.
+Six of the seven headline tiles are properties of a **visit**, and all six are
+derived from the same reconstructed event stream rather than from six
+independent counters — so bounce rate here and bounce rate in the outcome split
+are the same computation, not two numbers with one name. Reading any of it
+costs nothing against your project's balance, and none of it is gated by plan.
+
+## How it is built
+
+### The seven tiles
+
+| Tile | Definition | Chartable |
+|---|---|---|
+| Visitors | Distinct visitors with at least one human visit in the window, split new / returning | yes |
+| Revenue | Conversions × your average product price | **no** |
+| Spend | What left this project's balance — AI calls plus MCP calls | yes |
+| Conversion rate | Conversions ÷ visitors | yes |
+| Revenue/visitor | Revenue ÷ visitors | yes |
+| Bounce rate | Visits classified as a bounce ÷ visits | yes |
+| Session time | Mean visit duration | yes |
+
+**Revenue is a tile but never a chart.** It is conversions multiplied by a
+constant, so its line would be the conversion line with a different axis label:
+one fact drawn twice. Its shape over time is read off Conversion rate.
+
+**A conversion is a click out of your documentation to the host of your Call To
+Action URL.** Matched by host, with `www.` folded in and other subdomains
+deliberately *not* folded — your docs usually live on a subdomain, and folding
+would count "went back to the docs" as a sale. A visitor who clicks through
+five times is one conversion.
+
+**Both money tiles stay off until two settings exist**: the Call To Action URL
+decides *which* click is a conversion, the Average Product Price decides what
+it is *worth*. Until both are set they report a dash and name the missing one —
+never `$0`. A missing price is not a price of zero, and revenue is the figure
+an owner acts on without checking how it was produced. Both live in
+[Branding](../../design/style/branding.md). A stored price of `0` is refused by
+the validator for the same reason.
+
+**Spend is the exception on every count.** It is money leaving rather than a
+property of a visit, it comes from the billing ledger rather than the event
+stream, and it is the one figure here whose `0` is a real reading. Consequences
+worth knowing:
+
+- **It is not netted.** A top-up does not make it dip; Spend answers "what did
+  this project cost me", and that question has one direction.
+- **It ignores your filters.** A filter cuts *visits*, and a translation run is
+  not a visit — "United States" has nothing to say about an embedding job.
+- **It survives an empty window.** A translation run at 3am is a real bill with
+  no reader behind it, and that is often the most useful thing this tile has to
+  show. Every other tile prints "no visits to measure" over such a window.
+- **Its arrow has no colour.** Spend rising because readers are asking more is
+  the product working; spend rising because a job is stuck is a fire. Every
+  other delta is green for good news — bounce rate going *down* is green — and
+  this one stays grey, because the panel has no evidence for which case it is.
+- **An unreadable ledger disables the tile** and says so, rather than showing
+  `$0`. What it counts is in [AI usage and cost](./ai-usage.md).
+
+Each tile also shows the change against the immediately preceding window of the
+same length. Growth from a previous value of zero draws **no arrow at all**: it
+is undefined, not `+100%`.
+
+### The four breakdown cards
+
+Each card is a scrolling strip of tabs; ten of the tabs are ranked dimensions
+cut from the same visit stream as the tiles, and four come from elsewhere.
+
+| Card | Tabs | One value per visit? |
+|---|---|---|
+| Pages | Pages, Headings, Entry, Exit | Entry and Exit yes; Pages and Headings no |
+| Sources | Referrers, Channels, UTM, Keyword | Referrers and Channels yes |
+| Audience | Devices, Browsers, Countries, Languages | yes |
+| Conversions | CTA Clicks, Feedback, Searches | counted per event |
+
+**Single-valued dimensions partition the window** — their visitor counts sum to
+the total. **Pages and Headings do not**: a visit's conversion is credited to
+every page it touched, so those rows are assisted credit and deliberately add
+up to more than the headline. The card says so on screen.
+
+Every row on a ranked tab carries **both** figures — how many visitors it
+brought and what they were worth — with two bars behind it: one for whatever
+the list is ranked by, one always for the money. Rows are ordered server-side
+by visitors and re-sorted in the browser, because a server returning "the top
+rows by revenue" would hand back a *different* set depending on a toggle, and
+rows would appear and disappear as you switched.
+
+**Pages and Headings offer two extra rankings**, `Views` and `Reading time`.
+They mean something for a row that names a place in your documentation and
+nothing for a row that names a country, so they are offered there and nowhere
+else. A page with no read-time measurements shows a dash, never `0`.
+
+### Filtering
+
+Filtering by a row narrows **everything** — the other cards and the tiles above
+the chart — so a country, a device or a referrer can be read end to end.
+Filters stack and are removed by clicking their chip. Cards and tiles apply the
+same predicate to the same reconstructed visits, which is what stops "United
+States" meaning one thing in a card and another in the chart above it.
+
+Tabs counted per **event** rather than per visit — Headings, UTM, AI Views, CTA
+Clicks, Feedback and Searches — cannot be cut this way. They say so above their
+rows while a filter is on, instead of showing unfiltered numbers under a
+filtered heading.
+
+### The four tabs that do not come from your visitors
+
+- **Keyword** comes from Google Search Console. An impression that never became
+  a click is invisible to anything running on your site, so this is Google's
+  data: queries, position, impressions, clicks and CTR. Connect Search Console
+  first. Its revenue column is explicitly an **estimate** — clicks × your
+  site-wide revenue per visitor — labelled and drawn as one, because a modelled
+  figure sitting next to measured ones must not look like one.
+- **CTA Clicks** ranks every destination readers left your documentation for,
+  and from which page.
+- **Feedback** ranks pages by the thumbs they were given, dislikes first: the
+  page people voted down is the one to rewrite. Both vote widgets count
+  together — the rating at the foot of a page and the thumbs on an AI answer
+  given there — because the question is which page readers approve of, not
+  which button they pressed. Zeros are always shown.
+- **Searches** ranks what readers typed into your on-page search box, with how
+  often it found something and how often it came back empty — the same words
+  can carry both counts. A query with no results is a reader telling you in
+  their own words what the docs should cover. It has no metric menu: these rows
+  are per search, not per visit, so there is no revenue to sort on.
+
+### Channels, and why a channel row is not enough
+
+The Channels tab groups visits by the *kind* of source — organic search, paid
+search, social, AI assistant, referral, direct, internal — classified when the
+event is written rather than when it is read. That matters twice: AI referrals
+arrive with an empty referrer, so grouping by referrer alone buries them in
+Direct; and a paid Google click and an organic Google result share the same
+referrer, so a paid `utm_medium` has to win over it. Hovering a channel names
+the three sites it actually consists of, with their shares — an organic-search
+row that is almost entirely Google and one spread across five engines are
+different situations.
+
+### AI Views
+
+Three tabs, one for each reason a crawler came, because the three support
+completely different decisions:
+
+| Tab | What it is | The decision it supports |
+|---|---|---|
+| Answers | A live fetch made while someone was being answered | Your page was quoted at a person. Worth a link and a current price on it |
+| Indexing | Building the corpus an assistant later retrieves from | The precondition for ever being cited |
+| Training | Bulk collection for model training | Only one: whether to allow it |
+
+Within each tab you can group by **Pages** (which pages assistants read) or by
+**Crawlers** (one line per bot, labelled with its provider). Classification is
+by User-Agent against a table of 23 named bots, first match wins — so
+`Applebot-Extended` is never swallowed by `Applebot` — and an unrecognised AI
+bot is treated as training, the claim that promises you the least.
+
+### Time ranges
 
 | Range | What it covers |
 |---|---|
-| Now (live) | The last hour, per minute, refreshed while you watch |
-| Today | The current calendar day, from midnight |
-| Yesterday | The previous calendar day, whole |
+| Now | A rolling **hour**, bucketed per minute, refreshing live |
+| Today | The current **UTC** calendar day so far |
+| Yesterday | The previous UTC calendar day, whole |
 | Last 24 hours | A rolling day back from now |
-| Last 7 days | A rolling week back from now |
-| Last 30 days | A rolling month back from now |
+| Last 7 days | A rolling week |
+| Last 30 days | A rolling month — the longest window there is |
 
-Thirty days is the longest window there is, because events are kept for 30 days and nothing older survives to be charted.
+Today and Yesterday are calendar days in **UTC**, not in your local timezone,
+and not a rolling 24 hours: early in the UTC day, Today covers less than Last
+24 hours does. Thirty days is where the data ends.
 
-Today and Yesterday are calendar days, not a rolling 24 hours — Today starts at midnight, so early in the day it covers less than Last 24 hours does.
+**Now** is its own window rather than a relabelled day — a live view is only
+readable at minute resolution, and a whole day bucketed by the minute is 1,440
+points. In Now the tiles and chart refresh every 5 seconds and the cards every
+30; switch to any other range and refreshing stops, so a historical range you
+are not watching is never silently refetched under you.
 
-**Now** puts the chart in live mode: the switcher shows a pulsing dot, and the chart and top figures refresh every 5 seconds with a per-minute view of the last hour. The rest of the page (the four cards below) shares a 30-second baseline refresh, but only while **Now** is selected — switch to any other range and refreshing stops until you interact with the page again, so a historical range you're not watching live is not silently refetched behind you.
+**Online now** — readers active in the last 5 minutes — is not one of the seven
+tiles. It is a right-now gauge rather than a total over the window you picked,
+so it sits as its own chip beside the panel title; putting it in the strip
+would invite comparing it against a period it does not belong to.
 
-## Reading referrers
+### A report you have no data for yet
 
-Referrers are grouped by hostname. **Direct / None** means the visitor typed your
-URL, came from a bookmark, or arrived from a link that stripped its referrer — on
-most documentation sites it is the largest single row, which is why it is listed
-rather than dropped.
+A tab with none of your own rows renders over **faded sample figures** with
+"Enable *Tab*" over them, and pressing it runs a short guide over those same
+figures. It is **per tab**, not per card — Entry names one page per visit while
+Pages credits every page a visit touched, and each caveat belongs to the tab it
+is about. The switch gates nothing: every figure was collected the whole time,
+and the choice is remembered in your browser per workspace.
 
-Rows show the subdomain in grey and the domain in black, so a column of hosts
-reads by the site behind them.
+## Why this is the right way
 
-A spike in a specific referrer usually means someone shared your docs, which tells you which page was worth sharing.
+| Rule | Why it works | Source |
+|---|---|---|
+| Measure whether the visit succeeded, not how many pages it touched | "if users can't accomplish their target task, all else is irrelevant. User success is the bottom line of usability" — Nielsen & Budiu, 2001, reviewed 2021 | [NN/g: Success Rate](https://www.nngroup.com/articles/success-rate-the-simplest-usability-metric/) |
+| Classify crawlers by purpose, not into one "bots" bucket | The vendors themselves draw the line: GPTBot may "crawl content that may be used in training", OAI-SearchBot exists "to surface websites in search results", and "ChatGPT-User is not used for crawling the web in an automatic fashion" | [OpenAI bots](https://developers.openai.com/api/docs/bots) |
+| A User-Agent is a claim, not an identity | Google publishes crawler verification because owners are "concerned that spammers or other troublemakers are accessing your site while claiming to be from Google" | [Google Search Central: verifying Googlebot](https://developers.google.com/search/docs/crawling-indexing/verifying-googlebot) |
+| Search Console figures are Google's, and provisional | Google states "The newest data can be preliminary, meaning it's still being collected and might change in the next few hours", and defines impressions as "How many times your site appeared in Search results" — a number no on-site tracker can see | [Google: Performance report](https://support.google.com/webmasters/answer/7576553) |
+| A modelled figure must not look like a measured one | The Keyword tab's revenue is clicks × site-wide revenue per visitor; it is labelled `(est.)` and drawn with a dashed bar for exactly this reason | Mechanism, this page |
+
+## Limits and open questions
+
+- **Every visitor figure is an estimate and the product says so.** A visitor is
+  a hashed IP: one corporate network merges into a single reader, one commuter
+  splits across several. Read them as a trend, never as a headcount.
+- **Percentages over few visits are a direction, not a measurement.** Below 30
+  visits the panel says so under the figures rather than quoting a confident
+  rate.
+- **A very large window is read from a sample and admits it.** Session
+  reconstruction reads at most 50,000 events; hitting that cap sets a
+  `truncated` flag the card states in words, because rates computed off a
+  truncated window are wrong.
+- **Deltas vanish rather than lie.** If the previous window's read failed, no
+  deltas are shown at all. **Pages and Headings rows over-attribute on
+  purpose** — they are assisted credit; do not add them up.
+- **Bounce is a description, not a verdict.** One page, under three seconds,
+  nothing else — which is also what a reader who found their answer in one
+  glance looks like.
+- **Under question: "Session time" is not attention.** What is verifiable is
+  the mechanism — segments, a three-second floor, a 300-second clip per
+  segment, averaged over visits. What is not verifiable from any web analytics
+  data is whether a person was looking at the screen, and this panel does not
+  imply it. See [read time](../reports/read-time.md).
+- **Thirty days is the whole history.** No year-over-year, no seasonality, no
+  cohort longer than four weeks.
+
+## How to open it
+
+Open any page of your documentation site and click the **Analytics** tab in the
+floating toolbar at the bottom. The overview loads with the range you picked
+last, which it remembers across visits.
 
 ## Related
 
-- [Tracked events reference](./events.md) — every event behind these figures, and what each one means
-- [AI usage & cost statistics](./ai-usage.md) — the chat conversations behind the Spend figure
-- [Read time report](../reports/read-time.md) — how the Reading time ranking is measured
-- [Visitor countries report](../reports/countries.md) — the Countries tab as its own report, with the reader map
-- [Branding](../../design/style/branding.md) — the Call To Action URL and Average Product Price that switch Revenue on
+- [How measurement works](../how-measurement-works.md) — visitor identity, bot and owner filtering, retention, privacy
+- [Tracked events](./events.md) — every event behind these figures
+- [AI usage and cost](./ai-usage.md) — what the Spend tile is counting
+- [Read time](../reports/read-time.md) — the Reading time ranking, in full
+- [Countries](../reports/countries.md) — the Countries and Languages tabs as their own report
+- [Goals and funnels](../reports/goals-and-funnels.md) — measuring an outcome you declared rather than a default
+- [Branding](../../design/style/branding.md) — the two settings that switch Revenue on

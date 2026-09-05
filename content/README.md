@@ -22,7 +22,7 @@ Looking for SEO, GEO, AEO, full-text search or page feedback? Those moved — se
 
 ## Related
 
-- [Get cited by AI and found by search](../ai-visibility/README.md) — SEO, GEO, AEO, llms.txt, MCP server
+- [Get cited by AI and found by search](../seo/README.md) — SEO, GEO, AEO, llms.txt, MCP server
 - [Answer readers with AI chat](../ai-chat/README.md) — AI chat, full-text search, page feedback
 - [Guides](../guides/README.md) — the walkthroughs that use these settings.
 - [Design and branding](../design/README.md) — the look of the site these features sit on.

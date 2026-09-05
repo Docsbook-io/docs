@@ -3,42 +3,42 @@
   "redirects": [
     {
       "from": "ai",
-      "to": "ai-visibility",
+      "to": "seo",
       "at": "2026-09-05T00:00:00.000Z"
     },
     {
       "from": "ai/llms-txt",
-      "to": "ai-visibility/llms-txt",
+      "to": "geo/llms-txt",
       "at": "2026-09-05T00:00:00.000Z"
     },
     {
       "from": "ai/mcp",
-      "to": "ai-visibility/mcp",
+      "to": "agent-ready/mcp",
       "at": "2026-09-05T00:00:00.000Z"
     },
     {
       "from": "ai/mcp-security",
-      "to": "ai-visibility/mcp-security",
+      "to": "agent-ready/mcp-security",
       "at": "2026-09-05T00:00:00.000Z"
     },
     {
       "from": "ai/source-of-truth",
-      "to": "ai-visibility/source-of-truth",
+      "to": "agent-ready/source-of-truth",
       "at": "2026-09-05T00:00:00.000Z"
     },
     {
       "from": "content/features/seo",
-      "to": "ai-visibility/seo",
+      "to": "seo",
       "at": "2026-09-05T00:00:00.000Z"
     },
     {
       "from": "content/features/geo",
-      "to": "ai-visibility/geo",
+      "to": "geo",
       "at": "2026-09-05T00:00:00.000Z"
     },
     {
       "from": "content/features/aeo",
-      "to": "ai-visibility/aeo",
+      "to": "aeo",
       "at": "2026-09-05T00:00:00.000Z"
     },
     {
@@ -58,7 +58,7 @@
     },
     {
       "from": "ai/skills",
-      "to": "ai-chat/skills",
+      "to": "agent-ready/skills",
       "at": "2026-09-05T00:00:00.000Z"
     },
     {
@@ -80,6 +80,51 @@
       "from": "webhooks",
       "to": "reference/webhooks",
       "at": "2026-09-05T10:33:43.553Z"
+    },
+    {
+      "from": "ai-visibility",
+      "to": "seo",
+      "at": "2026-09-05T12:00:00.000Z"
+    },
+    {
+      "from": "ai-visibility/seo",
+      "to": "seo",
+      "at": "2026-09-05T12:00:00.000Z"
+    },
+    {
+      "from": "ai-visibility/geo",
+      "to": "geo",
+      "at": "2026-09-05T12:00:00.000Z"
+    },
+    {
+      "from": "ai-visibility/llms-txt",
+      "to": "geo/llms-txt",
+      "at": "2026-09-05T12:00:00.000Z"
+    },
+    {
+      "from": "ai-visibility/aeo",
+      "to": "aeo",
+      "at": "2026-09-05T12:00:00.000Z"
+    },
+    {
+      "from": "ai-visibility/mcp",
+      "to": "agent-ready/mcp",
+      "at": "2026-09-05T12:00:00.000Z"
+    },
+    {
+      "from": "ai-visibility/mcp-security",
+      "to": "agent-ready/mcp-security",
+      "at": "2026-09-05T12:00:00.000Z"
+    },
+    {
+      "from": "ai-visibility/source-of-truth",
+      "to": "agent-ready/source-of-truth",
+      "at": "2026-09-05T12:00:00.000Z"
+    },
+    {
+      "from": "ai-chat/skills",
+      "to": "agent-ready/skills",
+      "at": "2026-09-05T12:00:00.000Z"
     }
   ]
 }

@@ -15,7 +15,7 @@ Prices change, and a price copied into a documentation page goes stale silently.
 |---|---|---|
 | GitHub sync | Your markdown publishes as a site; a push updates it | [Manage your docs](../getting-started/managing-docs.md) |
 | Branding and themes | Your colours, logo, light/dark, navigation | [Branding](../../design/style/branding.md) |
-| SEO / GEO / AEO | Meta tags, sitemap, OpenGraph, JSON-LD, canonical URLs, one indexed page set per language | [SEO](../../ai-visibility/seo.md) |
+| SEO / GEO / AEO | Meta tags, sitemap, OpenGraph, JSON-LD, canonical URLs, one indexed page set per language | [SEO](../../seo/README.md) |
 | Full-text search | Keyword search over every published page | [Search](../../ai-chat/search.md) |
 | Live auto translations | 15 languages, re-translated when you edit a page | [Translations](../../translation/README.md) |
 | Custom domain | `docs.yourcompany.com` with an automatic SSL certificate | [Custom domain](./custom-domain.md) |

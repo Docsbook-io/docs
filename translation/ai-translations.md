@@ -1,136 +1,139 @@
 ---
-title: "How Docsbook translates your documentation with AI"
-description: "What the translation pipeline does to a page: which parts it sends to the model, what it leaves alone, how runs resume, and why re-translating a typo is cheap."
+title: "What a Docsbook translation pass does to a page"
+description: "What triggers a pass, how a page is chunked, exactly what is protected from the model and by which mechanism, how a stale translation is detected, and what happens when a run fails halfway."
+tldr: "Docsbook renders your Markdown to HTML, splits it at heading boundaries into chunks capped at 9,000 characters, extracts code blocks and inline code into placeholders restored byte-for-byte, and translates the rest at temperature 0. Chunks are cached by content hash, so editing one section re-translates only that section. A page where any chunk failed is served for that request but never stored."
 ---
 
-# AI Translations
+# AI translations
 
-Docsbook translates your documentation with Claude, page by page, straight from the Markdown in your repository. There are no translation files, no keys and no export step: you switch a language on, and translated pages appear on their own URLs. Each translation run spends your project's balance; serving a translated page afterwards does not.
+A translation pass takes the Markdown already in your repository, renders it exactly as the live page renders it, splits it, translates the human-readable parts, and stores the result per page per language. There are no translation files, no message keys and no export step. This page is the mechanism, at the level of what the code actually does.
 
-## How AI translation works
+## What starts a pass
 
-1. You enable a language in [Translation Settings](./settings.md).
-2. Docsbook fetches your markdown files from GitHub.
-3. Each file is sent to **Claude** (by Anthropic) for translation.
-4. Translated pages are cached for fast delivery.
-5. When you edit a page and re-translate it, only the sections you changed are sent to Claude — the rest are reused from cache.
+Five things, and every run records which one it was — so the panel can say *Triggered by commit a1b2c3d* rather than attributing a push to you.
 
-No manual work. No translation files to maintain. No YAML keys.
-
-Enabling a language translates your whole site once. After that, on the **Auto** mode Docsbook follows your repository: a push that changes a documented page puts that page back in the queue for every enabled language, checked for roughly every 15 minutes. On **Manual** and **External webhook** nothing starts by itself. To correct a specific translation by hand, ask your AI agent to re-translate a page or use the MCP translation tools — see [Translation Settings](./settings.md).
-
-## Long runs resume where they stopped
-
-A large site takes more than one pass to translate. Docsbook runs the job in chunks and keeps a cursor, so a run that hits a time limit picks up from the next untranslated page instead of starting over or stalling.
-
-- **Changed pages go first.** When a re-translation is scoped to the pages a commit touched, those are translated ahead of the rest of the site — the pages you just edited come back first.
-- **A run continues on its own.** Every couple of minutes a background runner resumes any job that still has pages left.
-- **Interrupted runs are recovered.** If a run dies mid-way, it is picked up automatically rather than sitting unfinished.
-
-You do not need to re-click anything to keep a long translation moving.
-
-## Watching progress
-
-The **Languages** card in the Translation tab shows what a running job is doing:
-
-- A progress bar and a **35/80** counter — pages handled out of pages in the run.
-- **Stopped** on a language whose last run did not finish. Hover it to see why: the project's balance ran out, a provider quota was hit, or the run failed.
-
-When a run stops on balance, the remaining pages are translated on a later run once the balance allows — nothing you already paid for is lost.
-
-## What gets translated, and what does not
-
-| Translated | Not translated |
+| Trigger | What causes it |
 |---|---|
-| Body text | Code blocks |
-| Headings | Inline code (`like this`) |
-| Tables | URLs and links |
-| Image alt text | File paths |
-| Sidebar navigation labels | Technical identifiers |
-| Page titles and meta descriptions | — |
+| `language_enabled` | You switched a language on. |
+| `commit` | Auto mode's scanner found the repository head has moved. |
+| `manual` | You pressed **Translate now**, or someone else did from the dashboard. |
+| `agent` | An agent called `run_translation_pass`. The agent's key and run id are written on the job row. |
+| The resume runner | Every 2 minutes a cron tick reaps runs whose heartbeat has been silent for 15 minutes, frees their locks, and drives up to three live jobs that have been idle for 90 seconds. |
 
-Code is intentionally left in the original language — it should stay consistent regardless of the reader's locale.
+The scanner only looks at a workspace it has not looked at for 15 minutes, and only four workspaces per tick, ordered by whoever has gone longest without a scan. It short-circuits when the repository head is unchanged — and the watermark it compares against is only advanced when *every* enabled language was found in sync at that commit, so a run that halted on budget cannot freeze a workspace at a partial translation and never be looked at again.
 
-## Translation cache
+A pass never starts more than **three languages at once**, worst first: each run is minutes of billed model work, and an agent step that opened ten of them would spend a month's budget on one trigger. The rest are reported as `over_language_cap` and picked up next time, which is the honest version of "not now".
 
-Translations are cached per page per language, keyed to the file's content hash on GitHub.
+## How a page is chunked
 
-- Every visit serves the cached translation instantly.
-- After you change a page, readers keep getting the previous translation until you re-translate it — they are never dropped back to the original language.
-- Cached translations persist even if you temporarily disable a language.
+The unit of translation is not the page. It is a section.
 
-This means re-enabling a language that was previously active is instant — no re-translation needed.
+1. Your Markdown is preprocessed and rendered through the **same pipeline the live page uses**, including your widget blocklist. Translation therefore sees the page a reader sees, not a second interpretation of the source.
+2. The rendered HTML is split at `<h2>` and `<h3>` boundaries. Content before the first heading becomes its own leading chunk.
+3. A chunk longer than **9,000 characters** is split again — but only at top-level block boundaries (`</p>`, `</li>`, `</table>`, `</pre>`, `</figure>`, `</h1>`…`</h6>`), so a fragment is never cut mid-tag.
+4. Each chunk is hashed by its own content. The hash plus the language is the cache key.
+5. Chunks are translated at most **3 at a time**, each with a 30-second upstream timeout, and concatenated back in order.
 
-Because the cache is keyed by content, re-translating is cheap: a page is split into sections, and only the sections whose text actually changed are sent to Claude. Fixing a typo costs one section, not a whole page.
+Two things fall out of that design, and they are the whole reason it is built this way:
 
-## Translation quality
+- **Editing one paragraph re-translates one section.** Every other chunk's hash is untouched, so it is served from cache. A typo fix costs a section, not a page. The split — how many chunks were reused against how many were sent to the model — is recorded once per page on the spend ledger, so the saving is a measured number rather than a claim.
+- **Terminology cannot drift on text you did not touch.** An unedited section is byte-identical to the last time it was translated, because it is literally the same cached string.
 
-Docsbook translates with Claude, the same model family behind Claude.ai. What that buys over a general-purpose translator is context: the surrounding page, the code around a sentence, and the terms your docs already use.
+Requests are sent at **temperature 0**, and the output-token budget is computed from the input length rather than reserved flat — with a multiplier of 2.6, chosen because Cyrillic and CJK cost far more tokens per character than the English source and a 1.5× budget returned truncated pages.
 
-### How Claude differs from generic machine translation
+## What is protected from the model
 
-Generic machine translation (Google Translate, DeepL) is built for general-purpose text. Developer documentation has a different structure: imperative commands, technical terms, code-adjacent prose, and precision-critical instructions where a mistranslation causes a broken setup.
+There are two different kinds of protection here, and conflating them is how documentation ends up promising more than the code delivers.
 
-Claude understands context. It knows that "run the command" means `ejecuta el comando`, not `corre el comando`, and that a parameter name should stay in English even when the surrounding sentence is in French. It preserves meaning across sentence restructuring — not just word-for-word substitution.
+### Protected structurally — the model never sees it
 
-**Works best for:**
-- Step-by-step guides
-- API documentation
-- FAQs
-- Configuration references
+| Element | Mechanism |
+|---|---|
+| Fenced code blocks | Extracted before the request and replaced with `__CODE_BLOCK_N__`; restored byte-for-byte afterwards. |
+| Inline code (`` `like this` ``) | Same extraction, same byte-for-byte restore. |
+| Frontmatter keys and values | Never reach the model at all: translation runs on rendered HTML, and frontmatter was consumed at render time. |
+| Widget markers (`<!-- widget:name -->`) | Also never reach the model: widgets are expanded into HTML by the render pipeline before chunking. There is no marker left to corrupt. The visible text *inside* a widget — a card's title, for example — is prose, and is translated. |
 
-**May need manual review for:**
-- Brand-specific terminology
-- Cultural references or idioms
-- Highly domain-specific jargon
+These are guarantees. A model cannot alter, reflow or "translate" a code sample it was never given.
 
-### How the "Saved" figure is calculated
+### Protected by instruction — verify these, do not assume them
 
-Human translation agencies typically bill per word, which breaks down as a measure the moment a language has no whitespace-delimited words to count — Chinese and Japanese, most notably. Docsbook prices the counterfactual per 1,000 characters instead, a measure that works the same way in every language, and that rate is printed beside the "Saved" figure on your Translations dashboard. It is a comparison against a price list, not money you had and kept: nobody was paid either amount.
+The prompt tells the model, as absolute rules, not to translate or modify HTML tags, attributes, class names, ids, `href` values or data attributes, not to change the HTML structure, not to translate code identifiers and variable names, not to add commentary, and to reproduce `__CODE_BLOCK_N__` placeholders exactly. That is a strong instruction to a model running at temperature 0, and it holds in practice — but it is an instruction, not a mechanism, and the honest word for that is *usually*.
 
-What a Docsbook run actually costs comes off your project's balance, and only the sections that changed are sent to the model. Re-translating an updated page is a click, with no invoice, no turnaround time and no coordination.
+Three consequences worth knowing:
 
-## What translation does to search
+- **Links keep their targets.** `href` is an attribute, and attributes are on the do-not-touch list. Link *text* is prose and is translated.
+- **Heading anchors stay in the source language.** Heading `id` attributes are set before translation and instructed to be left alone, so a deep link into an English heading anchor keeps working on the translated page.
+- **Image `alt` text is not translated.** It is an HTML attribute, and the rule that protects `href` protects `alt` with it. If accessible alt text in the reader's language matters to you, that is a gap, not a feature.
 
-Every translated language version of your Docsbook site is a fully separate set of URLs, indexed independently by Google.
+### Translated as sets, not one at a time
 
-```text
-docsbook.io/{user}/{repo}        → English pages
-docsbook.io/{user}/{repo}/es     → Spanish pages
-docsbook.io/{user}/{repo}/de     → German pages
-```
+Navigation labels are translated as one group in a single request that must return the same number of labels in the same order; a malformed or mismatched response keeps the originals rather than guessing. If every returned label is identical to the original — the signature of a translation that did not happen — the result is discarded rather than cached, so the next attempt can try again instead of locking in English labels forever. A page's title and description are translated together as a pair, so the two can never drift out of sync.
 
-Docsbook automatically adds `hreflang` tags to every page, which tells Google which language version to show to which audience. Without these tags, Google may show the wrong language to international visitors — or ignore translated pages entirely.
+## How an outdated translation is detected
 
-**What this means in practice:** enabling Spanish translation does not only serve your existing Spanish-speaking readers. It creates a separate set of pages, in Spanish, that a Spanish-language query can match at all — something an English-only page cannot do however well it ranks. Whether those pages are found is decided by the same things that decide it for your English pages; translation only makes them eligible.
+By comparison against git, not by a status flag.
 
-Which regions arrive without a translation waiting for them is a question the [visitor countries report](../analytics/reports/countries.md) answers directly.
+Every stored translation row keeps `source_hash` — the **git blob SHA of the source file at the moment it was translated**. Coverage is computed by reading the repository tree at HEAD and comparing, per path:
 
-## Review and override a translation
+| State | Meaning |
+|---|---|
+| `current` | A machine translation exists and its stored SHA equals the file's SHA at HEAD. |
+| `behind` | A machine translation exists, but of an older version of that page. |
+| `missing` | The page exists in the repository and has never been translated into this language. |
+| `manual` | Hand-written or uploaded. Freshness is the author's call, so it is never counted as behind. |
+| `orphaned` | A translation whose source file no longer exists at HEAD. |
 
-The AI translation is a starting point, not a final draft. Idioms, product-specific jargon and cultural references are where it is weakest.
+Coverage is `(current + manual) / total`, and a language is *in sync* when `behind` and `missing` are both zero. When the repository cannot be read, coverage is **null — never a confident zero**, and every surface reports "unknown" rather than painting a healthy language red.
 
-To override a page:
+The `status = 'outdated'` column in the database is deliberately not used for this. Nothing in the product writes it automatically, so it reads zero on every workspace; a freshness check built on it would report perfect health forever.
 
-1. Open the **Translation** tab.
-2. Download the translation for the language you want to correct.
-3. Edit the markdown.
-4. Upload it back.
+A pass ordered by this comparison translates **behind before missing**. A stale translation is actively telling a reader something your docs no longer say; a missing one falls back to the original and merely fails to help.
 
-Docsbook serves your version from then on and does not overwrite it on the next automatic pass.
+## The review and approve flow
 
-## Writing tips for better AI translation
+There are three origins a stored translation can have, and they are treated differently on purpose.
 
-Clear source content produces better translations. Follow these guidelines:
+| Origin | Written by | Served to readers | Overwritten by a later pass |
+|---|---|---|---|
+| `docsbook_ai` | A translation pass | Yes | Yes |
+| `manual_upload` | You, through the panel editor or `upload_translation` | [Read this first](./quality.md#can-i-correct-a-translation-and-will-the-correction-survive) | **No** — an automatic pass will not replace it |
+| `external_api` | Your own pipeline in `external` mode | [Read this first](./quality.md#can-i-correct-a-translation-and-will-the-correction-survive) | **No** |
 
-- **Use short, direct sentences.** Long compound sentences lose nuance in translation.
-- **Avoid idioms.** "It's a piece of cake" doesn't translate literally. Say "It's simple."
-- **Use ISO date format.** Write `2024-03-25`, not "March 25th" — dates are interpreted differently across locales.
-- **Keep code comments in English.** They're excluded from translation but should be readable by all developers.
-- **Use consistent terminology.** If you call something a "workspace" in one place, don't call it a "project" in another.
+Uploads land as **draft** by default. `list_pending_translations` returns the drafts, `approve_translation` moves one to published, and editing a translation's content marks the row as a manual upload so a later pass leaves it alone. In `external` mode the loop is: Docsbook emits `translation.needed` when a page is about to be translated, your pipeline does the work, and `upload_translation` posts the result back.
+
+**Machine translations do not enter this queue.** A pass writes rows with status `auto`, not `draft`, so `list_pending_translations` never lists them. The approve flow is a gate on translations coming *in* from outside, not a human review step in front of the AI output. If you want AI output reviewed before readers see it, `external` mode is the shape that does that; the default `auto` mode publishes as it goes.
+
+## What happens when a run fails
+
+Every failure mode below is a deliberate decision to serve the original rather than store something broken.
+
+| Failure | What happens |
+|---|---|
+| The model hits its output-token ceiling (`finish_reason: length`) | Treated as a hard failure and **refused**, not stored. A truncated chunk once meant half a page cached as the translation forever. |
+| The model returns empty content | Also a hard failure. An empty string that propagated as success is how 808 blank translation rows once accumulated on one project. |
+| One chunk fails | The page is assembled with the original text for that chunk and served **for that request only**. It is not written to Redis, not written to Postgres, and not indexed. |
+| The assembled page is blank while the source is not | Not stored; the source is served instead. |
+| A chunk failed recently | A 10-minute negative cache prevents a retry stampede. The next visit after it expires re-translates only the missing chunks. |
+| The provider returns 402/403 on Docsbook's shared key | A global halt is set for **4 hours** and every pending run stops immediately rather than hammering an exhausted account. Workspaces with their own key are unaffected. |
+| Your own key's quota is exhausted | Only your project's run fails. Somebody else's exhausted quota never halts you, and yours never halts them. |
+| The project's spend budget is exhausted | The run is halted with that reason in words, and the remaining pages are translated on a later run once the balance allows. Nothing already paid for is lost. |
+| The invocation is killed mid-run | The job keeps a cursor and a heartbeat. The 2-minute runner reaps a job silent for 15 minutes, frees its lock, and restarts it from the next untranslated page. |
+
+A partially completed run is normal, not an error state: a large site takes more than one invocation, each invocation walks as far as its wall clock allows, and the next tick continues. What you should never see is a page half in English and half in another language, because that assembly is exactly what the code refuses to persist.
+
+While a page has no translation yet, the reader is served the original — with no spinner, no error, and no banner promising a translation this request is not producing. Where only an older translation exists, the reader gets that older translation immediately rather than being dropped back to the original: readable content in the right language beats waiting.
+
+## Limits
+
+- **Terminology consistency has no glossary behind it.** There is no term base, no do-not-translate list you can supply, and no cross-page consistency check. What consistency exists comes from temperature 0, from unedited sections being served verbatim from cache, and from labels and title/description being translated as sets. Two different pages using the same term were translated independently, and may not agree.
+- **"Do not translate identifiers" is an instruction, not a guarantee.** Code inside fences and backticks is mechanically safe. A bare identifier written as ordinary prose — a parameter name in a sentence, with no backticks — is protected only by the prompt. Writing identifiers in backticks is the single highest-value thing you can do for your own translations.
+- **Image `alt` text stays in the source language.** See above; this is a consequence of protecting HTML attributes wholesale.
+- **A cached translation was rendered under the widget blocklist in force when it was written.** Switching a widget off does not rewrite pages already translated; they pick it up on their next pass. Re-keying the cache on the blocklist would re-translate every page of every language for a presentation toggle.
+- **Auto mode reacts to a poll, not to your push.** See [Translation settings](./settings.md#choose-when-translations-run).
 
 ## Related
 
-- [Translation settings](./settings.md) — switching a language on, the cost quote before a run, and per-language results
-- [Visitor countries report](../analytics/reports/countries.md) — which countries read a translation and which do not
-- [Sidebar layout and configuration](../design/layout/sidebar.md) — showing the language switcher to readers
+- [Translation settings](./settings.md) — enabling a language, the model, the mode, and locale URLs
+- [Translation quality and SEO](./quality.md) — what is measured, how to correct a translation, `hreflang`, and what search engines do with translated pages
+- [Visitor countries report](../analytics/reports/countries.md) — which regions arrive that you do not translate for yet
