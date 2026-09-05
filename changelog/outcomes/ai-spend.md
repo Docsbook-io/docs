@@ -11,6 +11,10 @@ Sees where the model budget actually goes before the invoice does. This is the A
 
 ## NEW - 05.09.2026
 
+### Changed
+
+- A merged pull request now tells you on its own page whether it worked: a score out of 100, four bars for readers served, reach, cost to run and edit quality, and the movements behind them — page reads, dead ends, search rank and AI spend, each coloured by whether it moved the way that is good for it. Checking whether an agent's change actually helped no longer means remembering to go and look on a second screen. `Changes`
+
 ### Fixed
 
 - Enabling a language, or changing your project's default one, can no longer end with your docs "translating" themselves into their own source language. The coverage engine, the commit-follow scanner, and Settings all refuse it now, so no run — and no AI spend — is ever opened for a language your docs are already written in. `Translations`

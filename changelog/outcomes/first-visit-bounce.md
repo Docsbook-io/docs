@@ -11,6 +11,10 @@ Docs that look like the product, rather than like a template someone forgot. Thi
 
 ## NEW - 05.09.2026
 
+### Changed
+
+- A merged pull request now tells you on its own page whether it worked: a score out of 100, four bars for readers served, reach, cost to run and edit quality, and the movements behind them — page reads, dead ends, search rank and AI spend, each coloured by whether it moved the way that is good for it. Checking whether an agent's change actually helped no longer means remembering to go and look on a second screen. `Changes`
+
 ### Fixed
 
 - A dark or monochrome project icon in dark mode no longer sits inside an oversized white halo — it now gets a thin white border on a transparent background instead. `Branding`

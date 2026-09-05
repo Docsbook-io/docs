@@ -15,6 +15,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Changed
 
+- A merged pull request now tells you on its own page whether it worked: a score out of 100, four bars for readers served, reach, cost to run and edit quality, and the movements behind them — page reads, dead ends, search rank and AI spend, each coloured by whether it moved the way that is good for it. Checking whether an agent's change actually helped no longer means remembering to go and look on a second screen. `Changes`
+- A pull request still waiting for your decision shows the same block as a forecast read from the diff alone, and it stays grey until something measured stands behind it, so an unreviewed change can never be mistaken for a proven one. `Changes`
+- The right-hand column of a pull request replaced its file-count line with a footprint bar: added against removed lines as a proportion, plus how many documentation pages, links and headings the change actually touched. `Changes`
 - The Pages, Referrers, Devices and CTA breakdown cards now default their ranking to Revenue the moment your workspace can measure it (an Average Product Price and a CTA URL set), instead of Visitors — and both that pick and the analytics period switcher now remember your last choice across visits. `Analytics`
 
 ### Fixed
@@ -25,6 +28,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Loading states across the admin panel — Overview, Chat, Translations, Search Console, MCP tools, budget, widgets, folder visibility and more — now render a skeleton shaped and sized like what's actually loading, with a shimmer sweep instead of a spinner in a box the wrong height or a flat pulsing block, so the panel stops visibly jumping while a page loads. `Panel`
 - Feeds ▸ Usage now opens on the full 30-day window instead of 7, so you see all the spend history available by default. `Feeds`
 - A dark or monochrome project icon in dark mode no longer sits inside an oversized white halo — it now gets a thin white border on a transparent background instead. `Branding`
+
+### Removed
+
+- The **Merged & impact** view and its commit picker. What shipped and what it then did are now read on the pull request that shipped it, so the diff you approved and the result it produced are one page instead of two joined by a commit hash. `Changes`
 
 ## NEW - 04.09.2026
 

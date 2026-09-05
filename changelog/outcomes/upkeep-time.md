@@ -15,6 +15,10 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 
 - Agents now leads with a **Last Runs** shelf — the six most recently invoked agents, including ones you started by hand without arming them — so "what just ran" is answered before you go looking through the list. `Agents`
 
+### Changed
+
+- A merged pull request now tells you on its own page whether it worked: a score out of 100, four bars for readers served, reach, cost to run and edit quality, and the movements behind them — page reads, dead ends, search rank and AI spend, each coloured by whether it moved the way that is good for it. Checking whether an agent's change actually helped no longer means remembering to go and look on a second screen. `Changes`
+
 ### Fixed
 
 - Loading states across the admin panel — Overview, Chat, Translations, Search Console, MCP tools, budget, widgets, folder visibility and more — now render a skeleton shaped and sized like what's actually loading, with a shimmer sweep instead of a spinner in a box the wrong height or a flat pulsing block, so the panel stops visibly jumping while a page loads. `Panel`
