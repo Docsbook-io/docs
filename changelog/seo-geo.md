@@ -7,6 +7,12 @@ description: "Every release that touched SEO and GEO: how your pages rank in sea
 
 Everything that shipped in **SEO & GEO**. This is the SEO & GEO slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 05.09.2026
+
+### Added
+
+- A **Mentions in AI** card beside Sources answers whether Google's AI Overview and AI Mode actually name your docs for the questions you care about: save up to five queries and a daily check reports, per query, whether you were mentioned and whether you were cited. Search Console tells you where you rank, and this tells you whether the answer above the ranking is yours. `AEO`
+
 ## NEW - 03.09.2026
 
 ### Fixed

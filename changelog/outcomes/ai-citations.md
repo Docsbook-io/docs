@@ -14,6 +14,8 @@ Whether ChatGPT, Claude and Perplexity can read you — and quote you. This is t
 ### Added
 
 - Any coding agent can now search your documentation through your project's public MCP endpoint without signing in — it asks a question in plain words and gets back the pages that answer it, so a machine reading your docs lands on the right page instead of the nearest word match. `MCP`
+- A **Mentions in AI** card beside Sources answers whether Google's AI Overview and AI Mode actually name your docs for the questions you care about: save up to five queries and a daily check reports, per query, whether you were mentioned and whether you were cited. Search Console tells you where you rank, and this tells you whether the answer above the ranking is yours. `AEO`
+- Clicking a page in the Graph now shows the numbers behind the colours instead of only the shading: indexed impressions, search clicks, crawler hits, AI training hits and exit clicks in one tile group, plus how long readers actually spend on the page. `Doc Graph`
 
 ### Changed
 

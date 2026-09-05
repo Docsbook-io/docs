@@ -15,11 +15,14 @@ Docs that look like the product, rather than like a template someone forgot. Thi
 
 - The Graph now colours sections by how far down readers actually get: every heading carries its own read count, so the outline of a page shows where attention stops instead of every section painting the same grey. `Doc Graph`
 - The header's Search and Ask AI buttons each get their own **Background color** field, so either can be styled to match your brand instead of sharing the default muted background. `Branding`
+- The `update_navigation` MCP tool can now rename what the sidebar shows for any page or folder, so an agent can tell eight sections apart whose files are all called `README.md` and all render as "Introduction". The override changes the sidebar text only, never the page's address or its place in the tree, so no inbound link breaks and nothing is reordered, and the new label is still translated into every enabled language. `MCP`
+- Clicking a page in the Graph now shows the numbers behind the colours instead of only the shading: indexed impressions, search clicks, crawler hits, AI training hits and exit clicks in one tile group, plus how long readers actually spend on the page. `Doc Graph`
 
 ### Changed
 
 - Enterprise now promises full branding customization and content rewritten for SEO/GEO and sales as part of the engagement, alongside the existing turnkey setup and migration commitments already on the pricing page. `Pricing`
 - A merged pull request now tells you on its own page whether it worked: a score out of 100, four bars for readers served, reach, cost to run and edit quality, and the movements behind them — page reads, dead ends, search rank and AI spend, each coloured by whether it moved the way that is good for it. Checking whether an agent's change actually helped no longer means remembering to go and look on a second screen. `Changes`
+- Graph category colours now spread across the whole hue wheel rather than a narrow arc of the brand colour, and heading levels in the Type overlay get distinct hues instead of a near-black grey ramp, so neighbouring sections stop reading as the same colour. `Doc Graph`
 
 ### Fixed
 

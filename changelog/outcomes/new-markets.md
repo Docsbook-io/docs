@@ -15,6 +15,7 @@ The readers who bounced because the docs were not in their language. This is the
 
 - Settings now shows whether your project's default language was auto-detected from your README, a safe guess made when the README was too short to read, or one you set yourself — so a new project shows what Docsbook picked for it before you'd think to check. `Translations`
 - Live analytics gets a spinning globe view beside the flat map: drag to throw it, click a country to see its readers there, open one straight into their Feeds profile. `Analytics`
+- The `update_navigation` MCP tool can now rename what the sidebar shows for any page or folder, so an agent can tell eight sections apart whose files are all called `README.md` and all render as "Introduction". The override changes the sidebar text only, never the page's address or its place in the tree, so no inbound link breaks and nothing is reordered, and the new label is still translated into every enabled language. `MCP`
 
 ### Fixed
 

@@ -20,6 +20,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - A **Run a full product audit** agent checks whether your docs can be found, believed and stand up against competitors' — fetchability, proof signals, the objection a reader stalls on, and whether the numbers on the page are still true — in one pass, and files what needs fixing as issues on your own repo instead of a report somebody has to run by hand. `Agents`
 - Each MCP tool's own page now shows what a successful call answers with, right below its Arguments — every field named and typed, so wiring up an integration no longer means calling the tool blind to find its shape. `MCP`
 - The header's Search and Ask AI buttons each get their own **Background color** field, so either can be styled to match your brand instead of sharing the default muted background. `Branding`
+- The `update_navigation` MCP tool can now rename what the sidebar shows for any page or folder, so an agent can tell eight sections apart whose files are all called `README.md` and all render as "Introduction". The override changes the sidebar text only, never the page's address or its place in the tree, so no inbound link breaks and nothing is reordered, and the new label is still translated into every enabled language. `MCP`
+- A **Mentions in AI** card beside Sources answers whether Google's AI Overview and AI Mode actually name your docs for the questions you care about: save up to five queries and a daily check reports, per query, whether you were mentioned and whether you were cited. Search Console tells you where you rank, and this tells you whether the answer above the ranking is yours. `AEO`
+- Clicking a page in the Graph now shows the numbers behind the colours instead of only the shading: indexed impressions, search clicks, crawler hits, AI training hits and exit clicks in one tile group, plus how long readers actually spend on the page. `Doc Graph`
 
 ### Changed
 
@@ -31,6 +34,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Searching your docs by meaning is no longer behind a plan or a built index: `search` is on every project, and a project with no semantic index has the same question answered by full-text search rather than refused. A question someone's assistant asks of your docs now comes back answered instead of erroring, so it never has to reach your support inbox. `MCP`
 - The Graph draws immediately and fills in afterwards: the map of pages and sections comes back from cache in milliseconds, and the readership numbers, then the open pull requests and issues, land on it as they arrive. It used to wait for all three before drawing a single dot. `Doc Graph`
 - `Live` is the spinning globe now, full stop — the flat, pannable map and its Map/Globe switch are gone. The live feed and the full reader card that used to live only on the map are on the globe too, opened from a marker or a line in the feed. `Analytics`
+- Graph category colours now spread across the whole hue wheel rather than a narrow arc of the brand colour, and heading levels in the Type overlay get distinct hues instead of a near-black grey ramp, so neighbouring sections stop reading as the same colour. `Doc Graph`
 
 ### Fixed
 

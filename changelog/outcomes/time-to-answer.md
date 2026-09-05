@@ -14,6 +14,7 @@ How long a reader hunts before the page they needed is in front of them. This is
 ### Added
 
 - The Graph now colours sections by how far down readers actually get: every heading carries its own read count, so the outline of a page shows where attention stops instead of every section painting the same grey. `Doc Graph`
+- The `update_navigation` MCP tool can now rename what the sidebar shows for any page or folder, so an agent can tell eight sections apart whose files are all called `README.md` and all render as "Introduction". The override changes the sidebar text only, never the page's address or its place in the tree, so no inbound link breaks and nothing is reordered, and the new label is still translated into every enabled language. `MCP`
 
 ## NEW - 02.09.2026
 

@@ -14,6 +14,7 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 - Any coding agent can now search your documentation through your project's public MCP endpoint without signing in — it asks a question in plain words and gets back the pages that answer it, so a machine reading your docs lands on the right page instead of the nearest word match. `MCP`
 - Four new MCP tools put the whole drift-loop setup within reach of a coding agent instead of the panel only: `connect_source` and `configure_source` connect a repository or website as a source of truth and manage it, `find_agent` and `enable_agent` search this project's standing agents by outcome and arm one on a schedule, an event, or a connected repository's commits — so an agent asked to keep the docs in step with the code can now reach every step of that itself. `MCP`
 - Each MCP tool's own page now shows what a successful call answers with, right below its Arguments — every field named and typed, so wiring up an integration no longer means calling the tool blind to find its shape. `MCP`
+- The `update_navigation` MCP tool can now rename what the sidebar shows for any page or folder, so an agent can tell eight sections apart whose files are all called `README.md` and all render as "Introduction". The override changes the sidebar text only, never the page's address or its place in the tree, so no inbound link breaks and nothing is reordered, and the new label is still translated into every enabled language. `MCP`
 
 ### Changed
 

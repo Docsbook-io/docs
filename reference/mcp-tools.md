@@ -38,7 +38,7 @@ mcp add --transport http https://docsbook.io/api/mcp/server
 | `create_workspace` | Included | Create a workspace from a GitHub repository |
 | `update_branding` | Write | Colors, fonts, logo, icon, default theme, call-to-action URL, site source URL, average product price |
 | `update_ui_settings` | Write | Toggle header, search, feedback, copy button, breadcrumbs |
-| `update_navigation` | Write | Header links, social links, subheader folder tabs (with optional icons), left-sidebar page/folder icons |
+| `update_navigation` | Write | Header links, social links, subheader folder tabs (with optional icons), left-sidebar page/folder icons, and sidebar label overrides — renaming what a page or folder shows in the sidebar without moving its address or its place in the tree |
 | `update_ai_settings` | Write | Enable AI chat, set provider and API key, model selection — including bringing your own provider key |
 | `update_seo` | Write | SEO meta tags, sitemap, OpenGraph |
 | `update_access` | Write | Make a workspace private; set a password and/or bring-your-own SSO/OIDC identity provider |

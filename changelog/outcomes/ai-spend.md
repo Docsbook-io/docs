@@ -11,6 +11,10 @@ Sees where the model budget actually goes before the invoice does. This is the A
 
 ## NEW - 05.09.2026
 
+### Added
+
+- Clicking a page in the Graph now shows the numbers behind the colours instead of only the shading: indexed impressions, search clicks, crawler hits, AI training hits and exit clicks in one tile group, plus how long readers actually spend on the page. `Doc Graph`
+
 ### Changed
 
 - A merged pull request now tells you on its own page whether it worked: a score out of 100, four bars for readers served, reach, cost to run and edit quality, and the movements behind them — page reads, dead ends, search rank and AI spend, each coloured by whether it moved the way that is good for it. Checking whether an agent's change actually helped no longer means remembering to go and look on a second screen. `Changes`

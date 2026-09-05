@@ -11,6 +11,11 @@ Pages that already rank 5–20 are the cheapest traffic you will ever buy. This 
 
 ## NEW - 05.09.2026
 
+### Added
+
+- A **Mentions in AI** card beside Sources answers whether Google's AI Overview and AI Mode actually name your docs for the questions you care about: save up to five queries and a daily check reports, per query, whether you were mentioned and whether you were cited. Search Console tells you where you rank, and this tells you whether the answer above the ranking is yours. `AEO`
+- Clicking a page in the Graph now shows the numbers behind the colours instead of only the shading: indexed impressions, search clicks, crawler hits, AI training hits and exit clicks in one tile group, plus how long readers actually spend on the page. `Doc Graph`
+
 ### Changed
 
 - Enterprise now promises full branding customization and content rewritten for SEO/GEO and sales as part of the engagement, alongside the existing turnkey setup and migration commitments already on the pricing page. `Pricing`
