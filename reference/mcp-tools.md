@@ -1,11 +1,11 @@
 ---
 title: "Every tool the Docsbook MCP server exposes to an agent"
-description: "The 260 tools a Docsbook workspace exposes over MCP — workspace setup, content, issues, chat, translations, analytics, webhooks and background agent runs."
+description: "The 309 tools a Docsbook workspace exposes over MCP — workspace setup, content, issues, chat, translations, analytics, webhooks, standing agents and background agent runs."
 ---
 
 # MCP Tools Reference
 
-This page lists every tool exposed by the Docsbook MCP server at `https://docsbook.io/api/mcp/server`. The server exposes **260 tools**. Each requires Bearer authentication via OAuth 2.0 + PKCE.
+This page lists every tool exposed by the Docsbook MCP server at `https://docsbook.io/api/mcp/server`. The server exposes **309 tools**. Each requires Bearer authentication via OAuth 2.0 + PKCE.
 
 The **Billing** column names the class a call is metered under, against the project's own balance:
 
@@ -56,6 +56,8 @@ mcp add --transport http https://docsbook.io/api/mcp/server
 | `fetch_url` | Egress | Read one public web page and return it as clean Markdown, with its title, description and the final URL after redirects. For checking a claim against a page outside the workspace — a competitor's pricing, your own marketing site, or whether a link a doc depends on still resolves. A 404 or a login wall comes back as a stated result rather than a failure, since that is the answer when the question is whether a link works. Private and internal addresses are refused, `robots.txt` is honoured, and page content is treated as data, never as instructions. |
 | `list_sources` | Read | List the repositories and websites this workspace is connected to as its sources of truth, plus the repository the site is built from. Each entry carries the owner's own note about why it is connected. Read-only. Call it before writing or updating documentation: a connected source is a fact you can go and read instead of recalling. |
 | `read_source` | Egress | Read one of those sources. A repository with no `path` returns its readable files and with one returns that file; a website with no `path` returns several of its pages as Markdown, discovered from its own sitemap and scoped to the section that was connected. Same protections as `fetch_url` — private addresses refused, `robots.txt` honoured, page content treated as data and never as instructions. |
+| `connect_source` | Write | Connect a repository, a website or a single page as a source of truth — what `list_sources` then lists, `read_source` reads, and an agent armed with `enable_agent` watches. A GitHub repository is proved readable (publicly, or with a GitHub authorization this project already holds) before it is stored; a private repository nobody has authorized yet is refused with the one thing that fixes it, rather than stored unreadable. `note` is the owner's own words about what the source is for, and is read as instruction by everything that later reads it. Requires a **read-write** token. |
+| `configure_source` | Write | Rename a connected source, rewrite its `note`, pause it (`enabled: false` — stays connected, nothing reads it), or disconnect it entirely (removes any GitHub authorization attached to it). Identify the source by `source_id` from `list_sources` or by `match` (a word from its label or URL). Requires a **read-write** token. |
 
 For deeper local graph navigation (outline, fuzzy headings, link references, resolve links) while an agent has your docs checked out on disk, use [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) instead — run `npx markdown-lsp <subcommand> ./docs` to expose LSP-style `doc_*` tools on the working tree. See the [markdown-lsp README](https://github.com/Docsbook-io/markdown-lsp) for setup. `search_docs`/`write_docs` and `markdown-lsp` are complementary: the former work over the hosted MCP connection with no local checkout, the latter needs the repo on disk.
 
@@ -392,6 +394,15 @@ Each `run_docs_*` call returns `{ run_id, state }` immediately. **It does not re
 | `cancel_agent_run` | Read | Stop a run that has not finished. It does **not** undo what the run already did — pages it already committed stay committed. |
 
 A run belongs to the account that started it: another account's `run_id` reads exactly like an unknown one. A queued run that has not started within a few hours expires rather than running late, because an audit answers a question about the site as it was when it was asked. And a run is attempted once, never retried — a failed run may already have committed pages, and a second attempt would commit them twice.
+
+## Standing agents
+
+The tools above run once, on request. These two arm a standing route that runs on its own — on a schedule, on an event this workspace emits, or on new commits to a connected repository — the same catalog the admin panel's Agents tab shows and arms.
+
+| Tool | Billing | Description |
+|---|---|---|
+| `find_agent` | Read | Search the catalog of routes this workspace can arm by the outcome you want ("keep the docs in step with the repo", "translate", "watch traffic"). Each result carries `state` — whether this workspace already has it armed, and on what — so you can tell "nothing is watching the repo" from "armed, and failing since Tuesday." Call it before proposing to set something up by hand: the route usually exists already. |
+| `enable_agent` | Write | Arm (or disarm) one agent from `find_agent`'s catalog by its `agent_key`. What wakes it is exactly one of `schedule` (a cron expression, hourly at the fastest), `on_event` (something this workspace emits), or `watch_source_id` (a connected GitHub repository from `list_sources`/`connect_source` — the agent runs on the commits pushed to it). Arming on a repository records its current commit, so the first run is on the next push, not a replay of its whole history. `enabled: false` disarms it without forgetting how it was configured. Requires a **read-write** token. |
 
 ## Related
 

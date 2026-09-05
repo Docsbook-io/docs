@@ -35,7 +35,7 @@ New to Docsbook? Read [the overview](./overview.md) first, then [publish a site]
 - [GEO](./content/features/geo.md) — Be citable by Perplexity, ChatGPT Search and AI Overviews {sparkles}
 - [AEO](./content/features/aeo.md) — FAQPage, HowTo and speakable markup for answer boxes {message-square-quote}
 - [llms.txt](./ai/llms-txt.md) — A plain-text index of your docs for AI agents {file-text}
-- [MCP server](./ai/mcp.md) — 260 tools that let an agent read and edit your docs {plug}
+- [MCP server](./ai/mcp.md) — 309 tools that let an agent read and edit your docs {plug}
 - [Source of truth](./ai/source-of-truth.md) — The document graph an agent navigates {network}
 
 ## Measure what your docs earn

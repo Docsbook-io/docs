@@ -16,7 +16,7 @@ Most companies with a product, customers and an ad budget still cannot be recomm
 | 1. Connect a source | Reads a GitHub repository, scans a website, or drafts from a sentence about your product | A draft site you can open before you sign in |
 | 2. Index | Parses Markdown and frontmatter, extracts headings, links and metadata, builds a navigable graph | Full-text search, a per-page outline, links between files resolved |
 | 3. Publish | Serves the site at `docsbook.io/{owner}/{repo}`, rendered on the server | A public URL with sitemap, OpenGraph and JSON-LD |
-| 4. Expose to machines | Serves `llms.txt` and an MCP server with 260 tools | Assistants and agents can read your docs, and agents can edit them |
+| 4. Expose to machines | Serves `llms.txt` and an MCP server with 309 tools | Assistants and agents can read your docs, and agents can edit them |
 | 5. Sync | Re-checks GitHub when the site is visited and re-indexes what changed | Pages match the repository with no build step and no CI pipeline |
 | 6. Measure | Records page views, searches, events, feedback and AI usage | Reports on which pages are read and where readers stop |
 
@@ -33,7 +33,7 @@ An AI assistant recommending a product quotes what it can read and verify cheapl
 Three surfaces do this work:
 
 - **`llms.txt`** — a plain-text index of your documentation at the site root, for AI agents that look for one. See [llms.txt](./ai/llms-txt.md).
-- **MCP server** — 260 tools over the Model Context Protocol, so Claude Code, Cursor or ChatGPT can read your pages, search them, and commit changes back. See [MCP server](./ai/mcp.md).
+- **MCP server** — 309 tools over the Model Context Protocol, so Claude Code, Cursor or ChatGPT can read your pages, search them, and commit changes back. See [MCP server](./ai/mcp.md).
 - **AEO markup** — FAQPage, HowTo and speakable JSON-LD generated from your Markdown, for answer boxes and voice assistants. See [AEO](./content/features/aeo.md).
 
 ## Analytics: which pages are read and where readers stop

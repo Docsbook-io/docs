@@ -16,9 +16,11 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The Graph now colours sections by how far down readers actually get: every heading carries its own read count, so the outline of a page shows where attention stops instead of every section painting the same grey. `Doc Graph`
 - A **Dead ends** overlay on the Graph paints each page by the share of its visitor journeys that ended there — the pages readers land on and leave from, ranked as a proportion rather than a raw count, so a small page that stops everybody is not hidden behind a big one that stops a few. `Doc Graph`
 - Clicking a page or a section in the Graph now lists the pull requests and issues already open on it — pull requests matched by the lines their diff actually changed, issues by the pages they name — so you can see somebody is already on it before starting the same work twice. `Doc Graph`
+- Four new MCP tools put the whole drift-loop setup within reach of a coding agent instead of the panel only: `connect_source` and `configure_source` connect a repository or website as a source of truth and manage it, `find_agent` and `enable_agent` search this project's standing agents by outcome and arm one on a schedule, an event, or a connected repository's commits — so an agent asked to keep the docs in step with the code can now reach every step of that itself. `MCP`
 
 ### Changed
 
+- Enterprise now promises full branding customization and content rewritten for SEO/GEO and sales as part of the engagement, alongside the existing turnkey setup and migration commitments already on the pricing page. `Pricing`
 - A merged pull request now tells you on its own page whether it worked: a score out of 100, four bars for readers served, reach, cost to run and edit quality, and the movements behind them — page reads, dead ends, search rank and AI spend, each coloured by whether it moved the way that is good for it. Checking whether an agent's change actually helped no longer means remembering to go and look on a second screen. `Changes`
 - A pull request still waiting for your decision shows the same block as a forecast read from the diff alone, and it stays grey until something measured stands behind it, so an unreviewed change can never be mistaken for a proven one. `Changes`
 - The right-hand column of a pull request replaced its file-count line with a footprint bar: added against removed lines as a proportion, plus how many documentation pages, links and headings the change actually touched. `Changes`
@@ -35,6 +37,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Feeds ▸ Usage now opens on the full 30-day window instead of 7, so you see all the spend history available by default. `Feeds`
 - A dark or monochrome project icon in dark mode no longer sits inside an oversized white halo — it now gets a thin white border on a transparent background instead. `Branding`
 - The scheduled **Fix SEO issues** and **Check whether the last changes helped** agents now pull today's Google Search rankings before deciding what to rewrite, instead of silently reading whatever position data a human last refreshed by hand in the panel — possibly weeks old. `Agents`
+- The Sources picker's "private repositories are hidden" banner no longer throws you out of the New source dialog to grant GitHub access — it hands off through Settings ▸ Profile instead, which states plainly whether repository access is actually held and hands you back to a dialog that still remembers what you were typing. `Sources`
 
 ### Removed
 

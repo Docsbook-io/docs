@@ -11,7 +11,7 @@ This page is the reference for what the server serves and what a call draws on. 
 
 ## What is the Docsbook MCP server?
 
-The Docsbook MCP server exposes **260 tools** over the Model Context Protocol, an open standard for handing tools, resources and prompts to AI agents over a typed RPC interface. Of those tools, 18 are one-per-webhook-event registrations, 135 are action tools that each perform one step of documentation work on one subject and answer with a validated JSON payload, five are collectors that hand back the evidence those actions are built on with no judgement in it, four start and read background runs, and the rest are named tools covering workspace, content, chat, analytics and webhook operations.
+The Docsbook MCP server exposes **309 tools** over the Model Context Protocol, an open standard for handing tools, resources and prompts to AI agents over a typed RPC interface. Of those tools, 18 are one-per-webhook-event registrations, 136 are action tools that each perform one step of documentation work on one subject and answer with a validated JSON payload, five are collectors that hand back the evidence those actions are built on with no judgement in it, four start and read background runs, two connect and configure a repository or website as a source of truth, two find and arm a standing agent on a schedule, event or connected repository's commits, and the rest are named tools covering workspace, content, chat, analytics and webhook operations.
 
 ## Endpoint
 

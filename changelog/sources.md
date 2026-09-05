@@ -7,6 +7,12 @@ description: "Every release that touched Sources: the repositories and sites you
 
 Everything that shipped in **Sources**. This is the Sources slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 05.09.2026
+
+### Fixed
+
+- The Sources picker's "private repositories are hidden" banner no longer throws you out of the New source dialog to grant GitHub access — it hands off through Settings ▸ Profile instead, which states plainly whether repository access is actually held and hands you back to a dialog that still remembers what you were typing. `Sources`
+
 ## NEW - 01.09.2026
 
 ### Added
