@@ -16,7 +16,7 @@ Pick by what you are trying to make happen. Every surface below is part of the p
 | Surface | Who consumes it | What it draws on | Page |
 |---|---|---|---|
 | AI chat trained on your docs | Your readers, on your docs site | Project balance, per answer | [AI Chat](./chat.md) |
-| Translations into 15 languages | Readers in other markets, and search engines | Project balance, per translated page version | [Translations](./translations.md) |
+| Translations into 15 languages | Readers in other markets, and search engines | Project balance, per translated page version | [Translations](../translation/README.md) |
 | `llms.txt` and `llms-full.txt` | AI crawlers and assistants | Nothing — generated and served with the site | [llms.txt](./llms-txt.md) |
 | Source of Truth doc graph | An agent working on your checked-out repository | Nothing — the graph is built on the agent's machine | [Source of Truth](./source-of-truth.md) |
 | Connected sources | The admin assistant and your own MCP agents | Project balance when a source is fetched | [Sources](./sources.md) |
@@ -57,5 +57,5 @@ Create a workspace at [docsbook.io/start](https://docsbook.io/start) and connect
 - [Quick start](../quick-start.md)
 - [Sources](./sources.md)
 - [MCP tools reference](../reference/mcp-tools.md)
-- [Webhooks](../webhooks.md)
+- [Webhooks](../reference/webhooks.md)
 - [Translation settings](../translation/settings.md)

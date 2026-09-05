@@ -80,7 +80,7 @@ The streaming hook receives the same fields plus `event: "message"` and the `ref
 
 Docsbook chat hooks are **not** signed. Docsbook sends a plain `POST` with `Content-Type: application/json` and no HMAC header, so your endpoint must not treat the payload as proof of origin. Keep the URL secret, put it behind an allowlist or a token in the path or query string, and treat the body as untrusted input.
 
-Docsbook [webhooks](../webhooks.md) are different: those are signed with HMAC-SHA256 in `X-Docsbook-Signature-256`. Do not carry a webhook's verification code over to a chat hook and assume it verifies anything.
+Docsbook [webhooks](../reference/webhooks.md) are different: those are signed with HMAC-SHA256 in `X-Docsbook-Signature-256`. Do not carry a webhook's verification code over to a chat hook and assume it verifies anything.
 
 ## Managing hooks from an MCP client
 
@@ -98,5 +98,5 @@ Pass an empty string to `set_chat_hooks` to clear an individual hook. The same f
 
 - [AI Chat](./chat.md) — the pipeline the hooks plug into.
 - [Sources](./sources.md) — the other way to give the assistant facts it does not have.
-- [Webhooks](../webhooks.md) — signed, event-driven deliveries, and how to verify them.
+- [Webhooks](../reference/webhooks.md) — signed, event-driven deliveries, and how to verify them.
 - [MCP Server](./mcp.md) — configure hooks remotely from your editor.

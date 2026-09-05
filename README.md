@@ -51,7 +51,6 @@ New to Docsbook? Read [the overview](./overview.md) first, then [publish a site]
 
 - [Translation settings](./translation/settings.md) — Enable languages and place the switcher {sliders-horizontal}
 - [AI translations](./translation/ai-translations.md) — How automatic translation works, and how to correct it {languages}
-- [Translation guide](./guides/advanced/translation.md) — Turn on translation for a site, end to end {book-open}
 
 ## Automate with AI agents
 
@@ -59,7 +58,7 @@ New to Docsbook? Read [the overview](./overview.md) first, then [publish a site]
 - [Chat hooks](./ai/chat-hooks.md) — Run your own code before and after the model {webhook}
 - [Connected sources](./ai/sources.md) — Repositories and sites your agent may read as fact {link}
 - [Docs skills](./ai/skills.md) — SKILL.md files that teach an agent documentation work {graduation-cap}
-- [Webhooks](./webhooks.md) — Event catalogue, payload schemas, signature format {bell}
+- [Webhooks](./reference/webhooks.md) — Event catalogue, payload schemas, signature format {bell}
 
 ## Reference
 
@@ -67,7 +66,7 @@ New to Docsbook? Read [the overview](./overview.md) first, then [publish a site]
 - [FAQ](./faq.md) — Cost, cancellation, sync, privacy and data ownership {help-circle}
 - [Reference index](./reference/README.md) — Every reference page in one list {book-open}
 - [MCP tools reference](./reference/mcp-tools.md) — Every tool, its parameters and its price class {list}
-- [REST API](./api.md) — Call your docs chat from your own backend {code}
+- [REST API](./reference/api.md) — Call your docs chat from your own backend {code}
 - [Content widgets](./content/features/widgets.md) — Cards, accordions, steps and CTA blocks in Markdown {layout-grid}
 - [Changelog](./CHANGELOG.md) — What shipped, and what each change was meant to buy {history}
 - [Blog](./blog/README.md) — Longer pieces on AI search, docs SEO, analytics and platform comparisons {newspaper}

@@ -102,5 +102,5 @@ If your organisation has specific compliance requirements — a GDPR DPA, a HIPA
 
 - [MCP Server](./mcp.md) — tool reference, installation, and what a call draws on.
 - [AI Chat Hooks](./chat-hooks.md) — the unsigned pre/post/streaming hooks, and what each can actually change.
-- [Webhooks](../webhooks.md) — full event schema, payload examples and signature verification.
+- [Webhooks](../reference/webhooks.md) — full event schema, payload examples and signature verification.
 - [Sources](./sources.md) — what an agent is allowed to read on your behalf.

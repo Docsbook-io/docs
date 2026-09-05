@@ -410,7 +410,7 @@ The current amount for every class and every individual tool is on the tool's ow
 
 **A call that fails is still charged** — the work happened, and the answer says so. A call the server never managed to run is not charged.
 
-**You can read the calls line by line.** Every metered call appears in the project's [Feeds panel](../webhooks.md#mcp-tool-calls-in-the-feed) — which tool, whether it worked, how long it took and what it drew — filterable by billing class. Calls that were about no single project (describing the server, listing your projects, creating one) belong to your account and appear in no project's feed; discovery calls leave no row at all.
+**You can read the calls line by line.** Every metered call appears in the project's [Feeds panel](../reference/webhooks.md#mcp-tool-calls-in-the-feed) — which tool, whether it worked, how long it took and what it drew — filterable by billing class. Calls that were about no single project (describing the server, listing your projects, creating one) belong to your account and appear in no project's feed; discovery calls leave no row at all.
 
 Unauthenticated, repo-scoped access to a public documentation site is never metered.
 
@@ -429,5 +429,5 @@ When a call is refused, the server returns a structured error naming the reason 
 - [MCP tools reference](../reference/mcp-tools.md) — every tool with its parameters.
 - [Chat Hooks](./chat-hooks.md) — Configure pre/post-LLM hooks via MCP.
 - [Docs Skills](./skills.md) — Discover SKILL.md files through `find_skill`, or have one run for you with `run_docs_*`.
-- [Webhooks](../webhooks.md) — Register event handlers from MCP, and verify their signatures.
+- [Webhooks](../reference/webhooks.md) — Register event handlers from MCP, and verify their signatures.
 - [Pricing](https://docsbook.io/pricing) — what a metered call draws on, generated from the live billing constants.

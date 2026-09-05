@@ -157,6 +157,6 @@ To go back to the Docsbook address: clear the **Custom Domain** field and click 
 
 ## Next steps
 
-- [Enable AI translations](./translation.md) — each language is served under the same domain as its own indexed path.
+- [Enable AI translations](../../translation/settings.md) — each language is served under the same domain as its own indexed path.
 - [Restrict who can read your docs](./sso.md) — a custom domain and a password or SSO gate work together.
 - [Manage your documentation site](../getting-started/managing-docs.md) — the rest of the settings panel.

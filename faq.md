@@ -107,7 +107,7 @@ Yes. Relative links between Markdown files are resolved to the published URLs, s
 
 ```markdown
 [Concepts](./basics.md)
-[Custom domain](../guides/advanced/custom-domain.md)
+[Custom domain](./guides/advanced/custom-domain.md)
 ```
 
 Anchors to headings inside a page (`./basics.md#indexing`) resolve as well.
@@ -225,7 +225,7 @@ Usually 15 to 30 minutes, and up to 48 hours in the worst case. The delay is at 
 
 Open your workspace settings, select the target languages, and save. Docsbook translates the pages and serves each language on its own route. Translation is AI work, so it draws on the project balance.
 
-Full walkthrough: [Translation guide](./guides/advanced/translation.md).
+Full walkthrough: [Translation & i18n](./translation/README.md).
 
 ### Which languages does Docsbook support?
 

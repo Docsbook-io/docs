@@ -87,6 +87,31 @@ Docsbook supports 15 languages, listed below with the code that appears in the U
 | Polish | `pl` |
 | Dutch | `nl` |
 
+## Choose when translations update
+
+| Mode | What triggers a translation |
+|---|---|
+| **Auto** | A push that changes a documented page re-queues that page in every enabled language |
+| **Manual** | Nothing starts by itself; you re-run translation from the Translation tab |
+| **External webhook** | Nothing starts by itself; your own system decides when |
+
+On **Auto**, Docsbook checks your repository for new commits roughly every 15 minutes, so a catch-up starts within about that window rather than the instant you push. Pages that have fallen behind are translated before pages that were never translated at all.
+
+On any mode you can ask your AI agent to re-translate a specific page, or re-run a language from the Translation tab.
+
+Agents set the mode with the `set_translation_mode` MCP tool:
+
+```typescript
+// auto: Docsbook translates with its built-in AI provider, and follows new
+// commits — pages changed by a push are re-translated without being asked
+set_translation_mode({ workspace_id: 42, mode: "auto" })
+
+// external: drafts are posted to your webhook for human or pipeline review
+set_translation_mode({ workspace_id: 42, mode: "external" })
+```
+
+In `external` mode you receive a `translation.needed` webhook, run your own pipeline, and post the result back with `upload_translation`.
+
 ## Language switcher placement
 
 The language switcher can appear in the **sidebar**, the **header**, or both.

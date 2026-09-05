@@ -17,7 +17,7 @@ Prices change, and a price copied into a documentation page goes stale silently.
 | Branding and themes | Your colours, logo, light/dark, navigation | [Branding](../../design/style/branding.md) |
 | SEO / GEO / AEO | Meta tags, sitemap, OpenGraph, JSON-LD, canonical URLs, one indexed page set per language | [SEO](../../content/features/seo.md) |
 | Full-text search | Keyword search over every published page | [Search](../../content/features/search.md) |
-| Live auto translations | 15 languages, re-translated when you edit a page | [Translations](./translation.md) |
+| Live auto translations | 15 languages, re-translated when you edit a page | [Translations](../../translation/README.md) |
 | Custom domain | `docs.yourcompany.com` with an automatic SSL certificate | [Custom domain](./custom-domain.md) |
 | AI support assistant | An assistant that answers readers from your indexed pages | [AI chat](../../ai/chat.md) |
 | Assistant configuration | Custom system prompt, chat hooks, chat analysis | [Chat hooks](../../ai/chat-hooks.md) |
@@ -26,7 +26,7 @@ Prices change, and a price copied into a documentation page goes stale silently.
 | Semantic search | Every section embedded, so the assistant finds a passage by meaning | [AI chat](../../ai/chat.md) |
 | Hosted API reference | Renders your OpenAPI spec as an interactive page | [Content widgets](../../content/features/widgets.md) |
 | Bring your own AI key | Your provider bills you for usage directly; Docsbook bills you nothing for it | [AI chat](../../ai/chat.md) |
-| Webhooks and feed notifiers | Discord and webhook notifications on documentation events | [Webhooks](../../webhooks.md) |
+| Webhooks and feed notifiers | Discord and webhook notifications on documentation events | [Webhooks](../../reference/webhooks.md) |
 
 Migration onto Docsbook, full branding setup, agent configuration and Slack or pull-request integrations can be done for you rather than by you. Those are done-for-you services rather than capabilities you switch on; the [pricing page](https://docsbook.io/pricing) says which are included.
 
@@ -46,6 +46,6 @@ Current prices are published at [docsbook.io/pricing](https://docsbook.io/pricin
 ## Next steps
 
 - [Set up a custom domain](./custom-domain.md) — serve the docs from `docs.yourcompany.com`.
-- [Enable AI translations](./translation.md) — the capability that draws on the balance fastest.
+- [Enable AI translations](../../translation/settings.md) — the capability that draws on the balance fastest.
 - [Restrict who can read your docs](./sso.md) — password or your own identity provider.
 - [How Docsbook charges for AI usage](../../content/setup/pricing-spec.md) — the metering in detail.

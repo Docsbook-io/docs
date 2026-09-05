@@ -68,7 +68,7 @@ You have a published documentation site: a public URL, full-text search, a `site
 
 - [Manage your documentation](./guides/getting-started/managing-docs.md) — settings, reindexing, and who is allowed to read the site
 - [Point your own domain at it](./guides/advanced/custom-domain.md) — one CNAME, SSL provisioned automatically
-- [Turn on translation](./guides/advanced/translation.md) — publish the same pages in 15 languages
+- [Turn on translation](./translation/settings.md) — publish the same pages in 15 languages
 - [Connect an AI agent over MCP](./ai/mcp.md) — read and edit the docs from Claude Code or Cursor
 - [Pricing](./pricing.md) — what is metered, and what a project balance pays for
 

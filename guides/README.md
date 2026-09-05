@@ -15,7 +15,7 @@ Start with **Getting started** if you are publishing documentation for the first
 ## Advanced
 
 - [Set up a custom domain](./advanced/custom-domain.md) — point `docs.yourcompany.com` at your docs, with an automatic SSL certificate.
-- [Translate your documentation](./advanced/translation.md) — 15 languages, each served on its own indexed path.
+- [Translate your documentation](../translation/settings.md) — 15 languages, each served on its own indexed path.
 - [Restrict who can read your docs](./advanced/sso.md) — a shared password, or your own OIDC identity provider.
 - [What Docsbook includes and what costs money](./advanced/premium.md) — the capability list, and which actions draw on the project balance.
 

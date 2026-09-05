@@ -172,7 +172,7 @@ Everything that shipped in **Feeds**. This is the Feeds slice of the [full Docsb
 ## Related
 
 - [Full Docsbook changelog](../CHANGELOG.md) — every release, across every section
-- [Webhooks](../webhooks.md) — the event catalog and payload schemas
+- [Webhooks](../reference/webhooks.md) — the event catalog and payload schemas
 - [Changelogs by panel section](./README.md) — the same releases, cut by where they landed
 - [Changelogs by outcome](./outcomes/README.md) — the same releases, cut by the number they move
 

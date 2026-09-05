@@ -86,4 +86,4 @@ The trade-off is real and worth naming: an agent with no checkout of your reposi
 - [MCP Server](./mcp.md) — the hosted server for workspace, content, analytics and webhooks.
 - [Docs Skills](./skills.md) — the skills catalog that builds on top of the graph.
 - [llms.txt](./llms-txt.md) — the machine-readable index of the *published* site, for agents with no checkout.
-- [Webhooks](../webhooks.md) — subscribe to `content.indexed` and `content.outdated` on the hosted side.
+- [Webhooks](../reference/webhooks.md) — subscribe to `content.indexed` and `content.outdated` on the hosted side.

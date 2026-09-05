@@ -45,7 +45,7 @@ Six situations teams arrive with, and what Docsbook does about each. Every one e
 
 **What Docsbook does.** Docsbook translates your pages into 15 languages — English, Spanish, French, German, Portuguese, Italian, Russian, Chinese, Japanese, Korean, Arabic, Hindi, Turkish, Polish and Dutch. Each language is served on its own route with the right `hreflang` tags, so search engines index it separately, and readers land on their browser's language. Translation is AI work, so it draws on the project balance.
 
-**Start with:** [Turn on translation](./guides/advanced/translation.md), then [AI translations](./translation/ai-translations.md).
+**Start with:** [Turn on translation](./translation/settings.md), then [AI translations](./translation/ai-translations.md).
 
 ## "Support answers the same five questions every week"
 

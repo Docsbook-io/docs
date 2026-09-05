@@ -35,7 +35,7 @@ Readers never see this widget. Signed-out visitors get your documentation, your 
 | Basic settings | Workspace name and default site language | — |
 | Custom domain | Serve the docs from an address you own | [Custom domain](../advanced/custom-domain.md) |
 | Appearance | Light, dark or follow-system theme, and the default | [Branding](../../design/style/branding.md) |
-| Languages and translation | Which languages Docsbook translates into | [Translations](../advanced/translation.md) |
+| Languages and translation | Which languages Docsbook translates into | [Translations](../../translation/settings.md) |
 | Privacy and access | Public, or gated by password or your own identity provider | [Private docs](../advanced/sso.md) |
 | Usage | The project balance and per-source spend ceilings | [AI usage billing](../../content/setup/pricing-spec.md) |
 | Widgets | Which content widgets render on your site | [Content widgets](../../content/features/widgets.md) |
@@ -216,6 +216,6 @@ Your GitHub repository is untouched. The markdown stays where it always was, so 
 ## Next steps
 
 - [Set up a custom domain](../advanced/custom-domain.md) — serve the docs from an address you own.
-- [Translate your documentation](../advanced/translation.md) — 15 languages, each indexed separately.
+- [Translate your documentation](../../translation/README.md) — 15 languages, each indexed separately.
 - [What Docsbook includes and what costs money](../advanced/premium.md) — which actions draw on the project balance.
 - [Frequently asked questions](../../faq.md) — the questions readers ask before they commit.

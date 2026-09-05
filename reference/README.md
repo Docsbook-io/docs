@@ -10,8 +10,8 @@ Technical reference for developers integrating with Docsbook — programmatic co
 ## Pages
 
 - [MCP tools reference](./mcp-tools.md) — every tool exposed by the Docsbook MCP server, grouped by category, with the billing class of each
-- [Webhooks](../webhooks.md) — event catalog, payload schemas, HMAC signature format
-- [API reference](../api.md) — the REST endpoint that answers a question against your own documentation
+- [Webhooks](./webhooks.md) — event catalog, payload schemas, HMAC signature format
+- [API reference](./api.md) — the REST endpoint that answers a question against your own documentation
 - [MCP server overview](../ai/mcp.md) — OAuth flow, connection setup, conceptual model
 
 ## Related

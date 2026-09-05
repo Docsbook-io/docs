@@ -122,7 +122,7 @@ Registering a webhook costs nothing to keep; only the outbound deliveries and re
 | `replay_webhook_delivery` | Egress | Re-deliver a specific past delivery |
 | `test_webhook` | Egress | Send a synthetic payload to a URL |
 
-There are 18 typed events, among them `content.indexed`, `translation.completed`, `chat.no_answer`, `chat.negative_feedback` and `usage.limit_approaching` — see [Webhooks](../webhooks.md) for the full list and payload schemas.
+There are 18 typed events, among them `content.indexed`, `translation.completed`, `chat.no_answer`, `chat.negative_feedback` and `usage.limit_approaching` — see [Webhooks](./webhooks.md) for the full list and payload schemas.
 
 ## Skills discovery
 
@@ -407,7 +407,7 @@ The tools above run once, on request. These two arm a standing route that runs o
 ## Related
 
 - [MCP server overview](../ai/mcp.md) — connecting a client, the OAuth flow, and what the tools are for
-- [Webhooks reference](../webhooks.md) — the 18 typed events and their payload schemas
-- [API reference](../api.md) — the REST endpoint for asking your documentation a question
+- [Webhooks reference](./webhooks.md) — the 18 typed events and their payload schemas
+- [API reference](./api.md) — the REST endpoint for asking your documentation a question
 - [Chat hooks](../ai/chat-hooks.md) — what `set_chat_hooks` configures
 - [Analytics & insights](../analytics/README.md) — the reports the analytics tools read

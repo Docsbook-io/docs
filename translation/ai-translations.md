@@ -106,6 +106,19 @@ Docsbook automatically adds `hreflang` tags to every page, which tells Google wh
 
 Which regions arrive without a translation waiting for them is a question the [visitor countries report](../analytics/reports/countries.md) answers directly.
 
+## Review and override a translation
+
+The AI translation is a starting point, not a final draft. Idioms, product-specific jargon and cultural references are where it is weakest.
+
+To override a page:
+
+1. Open the **Translation** tab.
+2. Download the translation for the language you want to correct.
+3. Edit the markdown.
+4. Upload it back.
+
+Docsbook serves your version from then on and does not overwrite it on the next automatic pass.
+
 ## Writing tips for better AI translation
 
 Clear source content produces better translations. Follow these guidelines:

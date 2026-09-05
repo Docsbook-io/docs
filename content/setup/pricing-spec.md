@@ -66,5 +66,5 @@ Billing questions go to [support@docsbook.io](mailto:support@docsbook.io).
 
 - [Docsbook pricing](../../pricing.md) — the model in one page, and the link to the live figures.
 - [AI chat](../../ai/chat.md) — the reader-facing assistant, the largest single consumer of a project balance.
-- [Translations](../../ai/translations.md) — how a page is queued, translated and re-translated.
+- [Translations](../../translation/README.md) — how a page is queued, translated and re-translated.
 - [AI usage analytics](../../analytics/tracking/ai-usage.md) — where the balance actually went.

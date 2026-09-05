@@ -71,5 +71,5 @@ Only events that carry server-side IP (`docs.pageview`, `docs.page_feedback`, `l
 
 - [Analytics overview](./overview.md) — the cards and figures these events feed
 - [MCP tools reference](../../reference/mcp-tools.md) — `get_top_visitors`, `get_visitor_activity` and the rest of the analytics tools
-- [Webhooks](../../webhooks.md) — being told when an event fires instead of checking for it
+- [Webhooks](../../reference/webhooks.md) — being told when an event fires instead of checking for it
 - [AI usage & cost statistics](./ai-usage.md) — the conversations behind the AI chat events

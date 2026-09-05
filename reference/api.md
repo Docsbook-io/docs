@@ -78,7 +78,7 @@ curl -X POST https://docsbook.io/api/v1/chat \
 
 ## Related
 
-- [MCP tools reference](./reference/mcp-tools.md) — the tool surface an agent uses instead of this endpoint
-- [AI chat](./ai/chat.md) — the assistant this endpoint exposes, and how it is configured
+- [MCP tools reference](./mcp-tools.md) — the tool surface an agent uses instead of this endpoint
+- [AI chat](../ai/chat.md) — the assistant this endpoint exposes, and how it is configured
 - [Webhooks](./webhooks.md) — being told when a question goes unanswered, rather than polling for it
-- [AI usage & cost statistics](./analytics/tracking/ai-usage.md) — what these calls cost and what readers asked
+- [AI usage & cost statistics](../analytics/tracking/ai-usage.md) — what these calls cost and what readers asked
