@@ -218,4 +218,4 @@ For what decides the *order* of those pages, see [Manage your documentation site
 
 - [Manage your documentation site](./managing-docs.md) — update content, control access, and fix a site that has not refreshed.
 - [Set up a custom domain](../advanced/custom-domain.md) — serve the docs from `docs.yourcompany.com`.
-- [Turn on full-text search](../../content/features/search.md) — let readers find a page by keyword.
+- [Turn on full-text search](../../ai-chat/search.md) — let readers find a page by keyword.

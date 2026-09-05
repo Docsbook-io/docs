@@ -15,17 +15,17 @@ Prices change, and a price copied into a documentation page goes stale silently.
 |---|---|---|
 | GitHub sync | Your markdown publishes as a site; a push updates it | [Manage your docs](../getting-started/managing-docs.md) |
 | Branding and themes | Your colours, logo, light/dark, navigation | [Branding](../../design/style/branding.md) |
-| SEO / GEO / AEO | Meta tags, sitemap, OpenGraph, JSON-LD, canonical URLs, one indexed page set per language | [SEO](../../content/features/seo.md) |
-| Full-text search | Keyword search over every published page | [Search](../../content/features/search.md) |
+| SEO / GEO / AEO | Meta tags, sitemap, OpenGraph, JSON-LD, canonical URLs, one indexed page set per language | [SEO](../../ai-visibility/seo.md) |
+| Full-text search | Keyword search over every published page | [Search](../../ai-chat/search.md) |
 | Live auto translations | 15 languages, re-translated when you edit a page | [Translations](../../translation/README.md) |
 | Custom domain | `docs.yourcompany.com` with an automatic SSL certificate | [Custom domain](./custom-domain.md) |
-| AI support assistant | An assistant that answers readers from your indexed pages | [AI chat](../../ai/chat.md) |
-| Assistant configuration | Custom system prompt, chat hooks, chat analysis | [Chat hooks](../../ai/chat-hooks.md) |
+| AI support assistant | An assistant that answers readers from your indexed pages | [AI chat](../../ai-chat/chat.md) |
+| Assistant configuration | Custom system prompt, chat hooks, chat analysis | [Chat hooks](../../ai-chat/chat-hooks.md) |
 | Analytics | Views, visitors, top pages, referrers, search queries, goals and funnels | [Analytics](../../analytics/README.md) |
 | Privacy and access control | Switch a workspace to private behind a password or your own OIDC identity provider | [Private docs](./sso.md) |
-| Semantic search | Every section embedded, so the assistant finds a passage by meaning | [AI chat](../../ai/chat.md) |
+| Semantic search | Every section embedded, so the assistant finds a passage by meaning | [AI chat](../../ai-chat/chat.md) |
 | Hosted API reference | Renders your OpenAPI spec as an interactive page | [Content widgets](../../content/features/widgets.md) |
-| Bring your own AI key | Your provider bills you for usage directly; Docsbook bills you nothing for it | [AI chat](../../ai/chat.md) |
+| Bring your own AI key | Your provider bills you for usage directly; Docsbook bills you nothing for it | [AI chat](../../ai-chat/chat.md) |
 | Webhooks and feed notifiers | Discord and webhook notifications on documentation events | [Webhooks](../../reference/webhooks.md) |
 
 Migration onto Docsbook, full branding setup, agent configuration and Slack or pull-request integrations can be done for you rather than by you. Those are done-for-you services rather than capabilities you switch on; the [pricing page](https://docsbook.io/pricing) says which are included.

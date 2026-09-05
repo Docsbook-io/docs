@@ -87,5 +87,5 @@ Turn GEO on, then add a `tldr:` line to the five pages you most want quoted — 
 
 - [SEO](./seo.md) — ranking in classical search results.
 - [AEO](./aeo.md) — answer boxes, rich results and voice assistants.
-- [llms.txt](../../ai/llms-txt.md) — the site-level index for AI crawlers, and what its evidence is worth.
-- [AI Chat](../../ai/chat.md) — the assistant that answers on your own site.
+- [llms.txt](./llms-txt.md) — the site-level index for AI crawlers, and what its evidence is worth.
+- [AI Chat](../ai-chat/chat.md) — the assistant that answers on your own site.

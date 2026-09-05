@@ -139,7 +139,7 @@ If you have set your own API keys for OpenAI, Anthropic, or Gemini, the costs of
 - **Visible in your provider's billing dashboard** (OpenAI Platform, Anthropic Console, Google Cloud)
 - **Not deducted from the project balance** (you manage those costs with your provider)
 
-Learn more: [AI chat](../../ai/chat.md) — choosing a provider and a model
+Learn more: [AI chat](../../ai-chat/chat.md) — choosing a provider and a model
 
 ## Time ranges
 
@@ -149,5 +149,5 @@ Ask the in-product assistant for the Conversations card by name and it comes wit
 
 - [Analytics overview](./overview.md) — the Spend figure and the two chat cards at the bottom of that page
 - [Tracked events reference](./events.md) — the chat events behind these totals
-- [AI chat](../../ai/chat.md) — configuring the assistant these numbers describe
+- [AI chat](../../ai-chat/chat.md) — configuring the assistant these numbers describe
 - [How AI translations work](../../translation/ai-translations.md) — the other thing that spends the same balance

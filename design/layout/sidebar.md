@@ -64,7 +64,7 @@ Sidebar search is a search input box shown inside the left sidebar panel of your
 
 This is an alternative to the header search button. Some readers prefer sidebar search because it doesn't cover page content.
 
-[More about search options →](../../content/features/search.md)
+[More about search options →](../../ai-chat/search.md)
 
 ---
 
@@ -119,6 +119,6 @@ One folder is exempt: **Getting Started** always stays in the sidebar, and its t
 ## Related
 
 - [Header layout and navigation](./header.md) — the top bar, and the other place the language switcher can sit
-- [Search options](../../content/features/search.md) — what the sidebar search box searches
+- [Search options](../../ai-chat/search.md) — what the sidebar search box searches
 - [Translation settings](../../translation/settings.md) — the languages the switcher offers
 - [Theming — light, dark, system](../style/theming.md) — the other place the theme toggle can sit

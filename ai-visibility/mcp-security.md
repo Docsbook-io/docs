@@ -60,7 +60,7 @@ The secret is set by the workspace owner at registration time and never returned
 
 Delivery history, retry state, and the ability to replay a delivery are exposed through MCP tools (`list_webhook_deliveries`, `replay_webhook_delivery`) and the admin panel.
 
-**Chat hooks are not signed.** The pre-, post- and streaming hooks of the docs assistant are plain JSON POSTs with no HMAC header — see [Chat Hooks](./chat-hooks.md). Do not reuse webhook verification code there and assume it verifies anything.
+**Chat hooks are not signed.** The pre-, post- and streaming hooks of the docs assistant are plain JSON POSTs with no HMAC header — see [Chat Hooks](../ai-chat/chat-hooks.md). Do not reuse webhook verification code there and assume it verifies anything.
 
 ## Data residency and ownership
 
@@ -101,6 +101,6 @@ If your organisation has specific compliance requirements — a GDPR DPA, a HIPA
 ## Related
 
 - [MCP Server](./mcp.md) — tool reference, installation, and what a call draws on.
-- [AI Chat Hooks](./chat-hooks.md) — the unsigned pre/post/streaming hooks, and what each can actually change.
+- [AI Chat Hooks](../ai-chat/chat-hooks.md) — the unsigned pre/post/streaming hooks, and what each can actually change.
 - [Webhooks](../reference/webhooks.md) — full event schema, payload examples and signature verification.
-- [Sources](./sources.md) — what an agent is allowed to read on your behalf.
+- [Sources](../ai-chat/sources.md) — what an agent is allowed to read on your behalf.

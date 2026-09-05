@@ -15,7 +15,7 @@ Six situations teams arrive with, and what Docsbook does about each. Every one e
 
 **What Docsbook does.** Docsbook publishes your pages as server-rendered HTML, so a crawler sees the text without running JavaScript, and adds the surfaces assistants look for: `sitemap.xml`, canonical URLs, JSON-LD, a visible last-modified date, and `llms.txt` at the site root. Each page gets its own URL and its own title, so a page about one narrow question competes on that question.
 
-**Start with:** [GEO — generative engine optimization](./content/features/geo.md), then [llms.txt](./ai/llms-txt.md).
+**Start with:** [GEO — generative engine optimization](./ai-visibility/geo.md), then [llms.txt](./ai-visibility/llms-txt.md).
 
 ## "Our docs get traffic and I cannot tell if it sells anything"
 
@@ -55,7 +55,7 @@ Six situations teams arrive with, and what Docsbook does about each. Every one e
 
 **What Docsbook does.** Docsbook's AI assistant answers from your indexed pages and cites the page it answered from, so a reader who would have opened a ticket gets the answer where they are. What it could not answer is recorded: unanswered questions and searches that returned nothing are listed for you, which tells you which page to write next. Assistant answers are AI work and draw on the project balance.
 
-**Start with:** [AI chat](./ai/chat.md), then [Page feedback](./content/features/feedback.md).
+**Start with:** [AI chat](./ai-chat/chat.md), then [Page feedback](./ai-chat/feedback.md).
 
 ## "We have a README and nobody has time to build a docs site"
 

@@ -29,14 +29,24 @@ New to Docsbook? Read [the overview](./overview.md) first, then [publish a site]
 - [Brand it](./design/style/branding.md) — Name, icon, accent colour, fonts {palette}
 - [Set the theme and layout](./design/style/theming.md) — Light, dark and system defaults {sun-moon}
 
-## Get found by machines
+## Get cited by AI and found by search
 
-- [SEO](./content/features/seo.md) — Meta tags, sitemap.xml, OpenGraph, canonical URLs {search}
-- [GEO](./content/features/geo.md) — Be citable by Perplexity, ChatGPT Search and AI Overviews {sparkles}
-- [AEO](./content/features/aeo.md) — FAQPage, HowTo and speakable markup for answer boxes {message-square-quote}
-- [llms.txt](./ai/llms-txt.md) — A plain-text index of your docs for AI agents {file-text}
-- [MCP server](./ai/mcp.md) — 309 tools that let an agent read and edit your docs {plug}
-- [Source of truth](./ai/source-of-truth.md) — The document graph an agent navigates {network}
+- [SEO](./ai-visibility/seo.md) — Meta tags, sitemap.xml, OpenGraph, canonical URLs {search}
+- [GEO](./ai-visibility/geo.md) — Be citable by Perplexity, ChatGPT Search and AI Overviews {sparkles}
+- [AEO](./ai-visibility/aeo.md) — FAQPage, HowTo and speakable markup for answer boxes {message-square-quote}
+- [llms.txt](./ai-visibility/llms-txt.md) — A plain-text index of your docs for AI agents {file-text}
+- [MCP server](./ai-visibility/mcp.md) — 309 tools that let an agent read and edit your docs {plug}
+- [Source of truth](./ai-visibility/source-of-truth.md) — The document graph an agent navigates {network}
+- [MCP security](./ai-visibility/mcp-security.md) — Current compliance position, and what is not offered yet {shield}
+
+## Answer readers with AI chat
+
+- [AI chat](./ai-chat/chat.md) — An assistant that answers from your indexed pages {message-circle}
+- [Full-text search](./ai-chat/search.md) — A search box in the header, the sidebar, or both {search}
+- [Connected sources](./ai-chat/sources.md) — Repositories and sites your agent may read as fact {link}
+- [Chat hooks](./ai-chat/chat-hooks.md) — Run your own code before and after the model {webhook}
+- [Docs skills](./ai-chat/skills.md) — SKILL.md files that teach an agent documentation work {graduation-cap}
+- [Page feedback](./ai-chat/feedback.md) — Thumbs up and down, per page {thumbs-up}
 
 ## Measure what your docs earn
 
@@ -45,20 +55,11 @@ New to Docsbook? Read [the overview](./overview.md) first, then [publish a site]
 - [Read time](./analytics/reports/read-time.md) — How long readers spend on each page {timer}
 - [Countries and languages](./analytics/reports/countries.md) — Where readers are and what they read in {map}
 - [AI usage and cost](./analytics/tracking/ai-usage.md) — What AI work drew on the project balance {wallet}
-- [Page feedback](./content/features/feedback.md) — Thumbs up and down, per page {thumbs-up}
 
 ## Reach readers in other languages
 
 - [Translation settings](./translation/settings.md) — Enable languages and place the switcher {sliders-horizontal}
 - [AI translations](./translation/ai-translations.md) — How automatic translation works, and how to correct it {languages}
-
-## Automate with AI agents
-
-- [AI chat](./ai/chat.md) — An assistant that answers from your indexed pages {message-circle}
-- [Chat hooks](./ai/chat-hooks.md) — Run your own code before and after the model {webhook}
-- [Connected sources](./ai/sources.md) — Repositories and sites your agent may read as fact {link}
-- [Docs skills](./ai/skills.md) — SKILL.md files that teach an agent documentation work {graduation-cap}
-- [Webhooks](./reference/webhooks.md) — Event catalogue, payload schemas, signature format {bell}
 
 ## Reference
 
@@ -67,6 +68,7 @@ New to Docsbook? Read [the overview](./overview.md) first, then [publish a site]
 - [Reference index](./reference/README.md) — Every reference page in one list {book-open}
 - [MCP tools reference](./reference/mcp-tools.md) — Every tool, its parameters and its price class {list}
 - [REST API](./reference/api.md) — Call your docs chat from your own backend {code}
+- [Webhooks](./reference/webhooks.md) — Event catalogue, payload schemas, signature format {bell}
 - [Content widgets](./content/features/widgets.md) — Cards, accordions, steps and CTA blocks in Markdown {layout-grid}
 - [Changelog](./CHANGELOG.md) — What shipped, and what each change was meant to buy {history}
 - [Blog](./blog/README.md) — Longer pieces on AI search, docs SEO, analytics and platform comparisons {newspaper}

@@ -105,6 +105,6 @@ Turn `SEO` on in the admin **SEO / GEO** tab — it applies to every page on the
 
 - [AEO — answer engines and voice](./aeo.md) — FAQ, HowTo and speakable markup.
 - [GEO — citation by AI assistants](./geo.md) — TL;DR blocks, dates and attribution.
-- [llms.txt](../../ai/llms-txt.md) — the machine-readable index of your site.
-- [AI translations](../../translation/ai-translations.md) — one indexable URL per language.
-- [Search options](./search.md) — the on-site search readers use once they arrive.
+- [llms.txt](./llms-txt.md) — the machine-readable index of your site.
+- [AI translations](../translation/ai-translations.md) — one indexable URL per language.
+- [Search options](../ai-chat/search.md) — the on-site search readers use once they arrive.

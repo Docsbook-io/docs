@@ -63,7 +63,7 @@ Synced: new `.md` files, text edits, deletions, renames, new folders. Not synced
 
 A **source of truth** is a repository or website you have connected to a workspace so that an agent writing your documentation reads facts from it instead of recalling them. Each connected source carries the owner's own note about why it is connected.
 
-Sources are read-only inputs. They are separate from the repository the site is built from. See [Connected sources](./ai/sources.md).
+Sources are read-only inputs. They are separate from the repository the site is built from. See [Connected sources](./ai-chat/sources.md).
 
 ### Web editor
 
@@ -128,13 +128,13 @@ The `docsbook.io` address keeps working after a custom domain is attached. See [
 
 **`llms.txt`** is a plain-text index of a Docsbook site, served at the site root for AI agents that look for one. It lists the pages and what each one covers.
 
-Docsbook generates it from the indexed content, so it does not go stale separately from the site. See [llms.txt](./ai/llms-txt.md).
+Docsbook generates it from the indexed content, so it does not go stale separately from the site. See [llms.txt](./ai-visibility/llms-txt.md).
 
 ### MCP server
 
 The **MCP server** is Docsbook's Model Context Protocol endpoint at `https://docsbook.io/api/mcp/server`, exposing 309 tools that let an AI agent read your documentation, search it, change settings, and commit pages back. Authentication is Bearer over OAuth 2.0 with PKCE.
 
-Discovery calls are never metered; other calls draw on the project balance. See [MCP server](./ai/mcp.md) and the [MCP tools reference](./reference/mcp-tools.md).
+Discovery calls are never metered; other calls draw on the project balance. See [MCP server](./ai-visibility/mcp.md) and the [MCP tools reference](./reference/mcp-tools.md).
 
 ### Float widget
 

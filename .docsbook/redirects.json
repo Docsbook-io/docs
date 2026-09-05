@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "redirects": [
+    {
+      "from": "ai",
+      "to": "ai-visibility",
+      "at": "2026-09-05T00:00:00.000Z"
+    },
+    {
+      "from": "ai/llms-txt",
+      "to": "ai-visibility/llms-txt",
+      "at": "2026-09-05T00:00:00.000Z"
+    },
+    {
+      "from": "ai/mcp",
+      "to": "ai-visibility/mcp",
+      "at": "2026-09-05T00:00:00.000Z"
+    },
+    {
+      "from": "ai/mcp-security",
+      "to": "ai-visibility/mcp-security",
+      "at": "2026-09-05T00:00:00.000Z"
+    },
+    {
+      "from": "ai/source-of-truth",
+      "to": "ai-visibility/source-of-truth",
+      "at": "2026-09-05T00:00:00.000Z"
+    },
+    {
+      "from": "content/features/seo",
+      "to": "ai-visibility/seo",
+      "at": "2026-09-05T00:00:00.000Z"
+    },
+    {
+      "from": "content/features/geo",
+      "to": "ai-visibility/geo",
+      "at": "2026-09-05T00:00:00.000Z"
+    },
+    {
+      "from": "content/features/aeo",
+      "to": "ai-visibility/aeo",
+      "at": "2026-09-05T00:00:00.000Z"
+    },
+    {
+      "from": "ai/chat",
+      "to": "ai-chat/chat",
+      "at": "2026-09-05T00:00:00.000Z"
+    },
+    {
+      "from": "ai/chat-hooks",
+      "to": "ai-chat/chat-hooks",
+      "at": "2026-09-05T00:00:00.000Z"
+    },
+    {
+      "from": "ai/sources",
+      "to": "ai-chat/sources",
+      "at": "2026-09-05T00:00:00.000Z"
+    },
+    {
+      "from": "ai/skills",
+      "to": "ai-chat/skills",
+      "at": "2026-09-05T00:00:00.000Z"
+    },
+    {
+      "from": "content/features/feedback",
+      "to": "ai-chat/feedback",
+      "at": "2026-09-05T00:00:00.000Z"
+    },
+    {
+      "from": "content/features/search",
+      "to": "ai-chat/search",
+      "at": "2026-09-05T00:00:00.000Z"
+    },
+    {
+      "from": "api",
+      "to": "reference/api",
+      "at": "2026-09-05T10:33:43.552Z"
+    },
+    {
+      "from": "webhooks",
+      "to": "reference/webhooks",
+      "at": "2026-09-05T10:33:43.553Z"
+    }
+  ]
+}

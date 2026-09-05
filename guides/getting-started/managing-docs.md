@@ -205,7 +205,7 @@ If you need them now, keep versions in separate branches (`docs/v1`, `docs/v2`) 
 
 Open Float Widget → **Analytics**. Views, visitors, top pages, referrers and search queries are reported per page, so you can see which pages earn their traffic and which sit unread.
 
-Two reports answer most questions about a page: [Web analytics](../../analytics/tracking/overview.md) for traffic, and [page feedback](../../content/features/feedback.md) for whether readers who arrived got what they needed.
+Two reports answer most questions about a page: [Web analytics](../../analytics/tracking/overview.md) for traffic, and [page feedback](../../ai-chat/feedback.md) for whether readers who arrived got what they needed.
 
 ## Delete a workspace
 

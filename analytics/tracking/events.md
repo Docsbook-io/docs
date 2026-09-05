@@ -29,7 +29,7 @@ Events are shown as a breakdown with counts and percentages for the selected tim
 
 Each row below is a shape these events take on a real documentation site, and the move it points at.
 
-**High AI opens, low queries** → Readers open the assistant and then do not ask. The suggested questions are the thing they read first; see [AI chat](../../ai/chat.md) for setting them.
+**High AI opens, low queries** → Readers open the assistant and then do not ask. The suggested questions are the thing they read first; see [AI chat](../../ai-chat/chat.md) for setting them.
 
 **High code copies** → Your code examples are useful. Consider adding more.
 

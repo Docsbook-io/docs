@@ -24,7 +24,7 @@ Most companies with a product, customers and an ad budget still cannot be recomm
 
 A documentation page that answers one narrow question costs less to write than a landing page and keeps earning search traffic for years, because the question does not go out of fashion. Docsbook gives each page its own URL, its own title and description, its own entry in `sitemap.xml`, and its own JSON-LD — so a page about one question competes on that question rather than being buried inside a marketing site.
 
-Docsbook generates the machine-readable surfaces for this automatically: meta tags, `sitemap.xml`, OpenGraph, canonical URLs, and JSON-LD for FAQ and HowTo content. See [SEO](./content/features/seo.md) for the search-engine surface and [GEO](./content/features/geo.md) for the generative-engine one.
+Docsbook generates the machine-readable surfaces for this automatically: meta tags, `sitemap.xml`, OpenGraph, canonical URLs, and JSON-LD for FAQ and HowTo content. See [SEO](./ai-visibility/seo.md) for the search-engine surface and [GEO](./ai-visibility/geo.md) for the generative-engine one.
 
 ## Machine-readable facts: what an assistant quotes about you
 
@@ -32,9 +32,9 @@ An AI assistant recommending a product quotes what it can read and verify cheapl
 
 Three surfaces do this work:
 
-- **`llms.txt`** — a plain-text index of your documentation at the site root, for AI agents that look for one. See [llms.txt](./ai/llms-txt.md).
-- **MCP server** — 309 tools over the Model Context Protocol, so Claude Code, Cursor or ChatGPT can read your pages, search them, and commit changes back. See [MCP server](./ai/mcp.md).
-- **AEO markup** — FAQPage, HowTo and speakable JSON-LD generated from your Markdown, for answer boxes and voice assistants. See [AEO](./content/features/aeo.md).
+- **`llms.txt`** — a plain-text index of your documentation at the site root, for AI agents that look for one. See [llms.txt](./ai-visibility/llms-txt.md).
+- **MCP server** — 309 tools over the Model Context Protocol, so Claude Code, Cursor or ChatGPT can read your pages, search them, and commit changes back. See [MCP server](./ai-visibility/mcp.md).
+- **AEO markup** — FAQPage, HowTo and speakable JSON-LD generated from your Markdown, for answer boxes and voice assistants. See [AEO](./ai-visibility/aeo.md).
 
 ## Analytics: which pages are read and where readers stop
 
@@ -52,7 +52,7 @@ Events, goals and funnels let you mark a path through the docs and count how man
 
 ## What Docsbook does not do
 
-Docsbook does not offer SAML SSO, team accounts with role-based access control, a SOC 2 Type II report, or a Data Processing Agreement — all four are on the compliance roadmap, not shipped. There is no WYSIWYG editor aimed at a non-technical author: pages are Markdown files, edited in the web editor, in GitHub, or by an agent over MCP. See [MCP security](./ai/mcp-security.md) for the current compliance position.
+Docsbook does not offer SAML SSO, team accounts with role-based access control, a SOC 2 Type II report, or a Data Processing Agreement — all four are on the compliance roadmap, not shipped. There is no WYSIWYG editor aimed at a non-technical author: pages are Markdown files, edited in the web editor, in GitHub, or by an agent over MCP. See [MCP security](./ai-visibility/mcp-security.md) for the current compliance position.
 
 ## What Docsbook runs on
 

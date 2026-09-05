@@ -94,5 +94,5 @@ Turn AEO on, then check one page with a FAQ and one with a "How to" procedure �
 
 - [SEO](./seo.md) — meta tags, sitemap, canonical URLs and `noindex`.
 - [GEO](./geo.md) — the TL;DR block the speakable selector prefers, and citation by assistants.
-- [llms.txt](../../ai/llms-txt.md) — the site-level index for AI crawlers.
-- [Search options](./search.md) — on-site search for readers who are already on the page.
+- [llms.txt](./llms-txt.md) — the site-level index for AI crawlers.
+- [Search options](../ai-chat/search.md) — on-site search for readers who are already on the page.

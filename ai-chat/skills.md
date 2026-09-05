@@ -99,6 +99,6 @@ Ask a connected agent for `find_skill({ query: "audit my docs" })` and run what 
 ## Related
 
 - [MCP Server](./mcp.md) — how `find_skill` is exposed to agents, and how `run_docs_*` runs a skill for you.
-- [llms.txt](./llms-txt.md) — The other discovery surface for AI clients.
+- [llms.txt](../ai-visibility/llms-txt.md) — The other discovery surface for AI clients.
 - [docs-subagents](https://github.com/Docsbook-io/docs-subagents) — subagents for autonomous doc automation.
 - [markdown-lsp](https://github.com/Docsbook-io/markdown-lsp) — open-source LSP parser for Markdown that powers local doc-graph search.

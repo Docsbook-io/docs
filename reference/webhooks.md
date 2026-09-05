@@ -111,7 +111,7 @@ winning:
 
 The feed also shows **every MCP tool call an agent made against this workspace**, alongside the
 events your docs dispatched. One line per call: the tool it called, whether it worked, how long it
-took and what it cost at the list price on the [MCP rate card](../ai/mcp.md). Failed calls say so.
+took and what it cost at the list price on the [MCP rate card](../ai-visibility/mcp.md). Failed calls say so.
 Calls that were not about any one project — describing the server, listing your projects, creating
 one — belong to your account rather than to a project, so they appear in no project's feed.
 
@@ -325,6 +325,6 @@ Other MCP tools, with the billing class each call is metered under:
 ## Related
 
 - [MCP tools reference](./mcp-tools.md) — the `register_webhook_<event>` tools and every other tool on the server
-- [MCP server overview](../ai/mcp.md) — connecting a client, and the rate card the feed prices calls against
+- [MCP server overview](../ai-visibility/mcp.md) — connecting a client, and the rate card the feed prices calls against
 - [Tracked events reference](../analytics/tracking/events.md) — the reader actions behind several of these events
 - [Analytics overview](../analytics/tracking/overview.md) — reading the same activity as a report rather than as a stream

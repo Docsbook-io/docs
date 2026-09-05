@@ -5,7 +5,7 @@ description: "How Docsbook pulls documentation from a GitHub repository, and whi
 
 # Content and setup
 
-This section covers where your documentation comes from and what surrounds it on the page. **Setup** is the connection to GitHub and the controls around your content; **Features** are the things a reader can use on a published page.
+This section covers where your documentation comes from and what surrounds it on the page. **Setup** is the connection to GitHub and the controls around your content; **Features** are the things a reader can use on a published page that are not specific to one job elsewhere in these docs.
 
 ## Setup
 
@@ -15,16 +15,15 @@ This section covers where your documentation comes from and what surrounds it on
 
 ## Features
 
-- [Full-text search](./features/search.md) — a search box in the header, the sidebar, or both.
 - [Copy page and copy markdown buttons](./features/copy.md) — hand readers the raw markdown, or the page in their AI client.
-- [Page feedback](./features/feedback.md) — thumbs up and thumbs down on every page.
 - [Content widgets](./features/widgets.md) — cards, accordions, steppers and an API playground, written in markdown.
-- [SEO](./features/seo.md) — meta tags, sitemap, OpenGraph and JSON-LD.
-- [GEO](./features/geo.md) — being quotable by AI assistants.
-- [AEO](./features/aeo.md) — answering the question a reader actually typed.
+
+Looking for SEO, GEO, AEO, full-text search or page feedback? Those moved — see below.
 
 ## Related
 
+- [Get cited by AI and found by search](../ai-visibility/README.md) — SEO, GEO, AEO, llms.txt, MCP server
+- [Answer readers with AI chat](../ai-chat/README.md) — AI chat, full-text search, page feedback
 - [Guides](../guides/README.md) — the walkthroughs that use these settings.
 - [Design and branding](../design/README.md) — the look of the site these features sit on.
 - [Analytics and insights](../analytics/README.md) — what readers did with them.

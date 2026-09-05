@@ -427,7 +427,7 @@ When a call is refused, the server returns a structured error naming the reason 
 ## Related
 
 - [MCP tools reference](../reference/mcp-tools.md) — every tool with its parameters.
-- [Chat Hooks](./chat-hooks.md) — Configure pre/post-LLM hooks via MCP.
-- [Docs Skills](./skills.md) — Discover SKILL.md files through `find_skill`, or have one run for you with `run_docs_*`.
+- [Chat Hooks](../ai-chat/chat-hooks.md) — Configure pre/post-LLM hooks via MCP.
+- [Docs Skills](../ai-chat/skills.md) — Discover SKILL.md files through `find_skill`, or have one run for you with `run_docs_*`.
 - [Webhooks](../reference/webhooks.md) — Register event handlers from MCP, and verify their signatures.
 - [Pricing](https://docsbook.io/pricing) — what a metered call draws on, generated from the live billing constants.

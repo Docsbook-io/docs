@@ -75,12 +75,12 @@ Honestly: it is a **weak signal**, and Docsbook does not claim otherwise. Adopti
 
 It costs an hour to support and Docsbook generates it for you, so there is no reason not to have it — but attribute no outcome to it. If you want to know whether assistants read your docs at all, measure the thing that leaves a trace: crawler hits from assistant user agents in your analytics, and referral traffic arriving from assistant domains. Both are visible in your Docsbook analytics; a file at a URL is not evidence of anything on its own.
 
-The work that does move retrieval is on the page: self-contained sections, the answer in the first paragraph, the subject named in full, and a concrete number where you honestly have one. See [GEO](../content/features/geo.md) for what Docsbook adds to the page for citation, and [AEO](../content/features/aeo.md) for answer and voice markup.
+The work that does move retrieval is on the page: self-contained sections, the answer in the first paragraph, the subject named in full, and a concrete number where you honestly have one. See [GEO](./geo.md) for what Docsbook adds to the page for citation, and [AEO](./aeo.md) for answer and voice markup.
 
 ## Related
 
-- [GEO — citation by AI assistants](../content/features/geo.md) — TL;DR block, visible dates, author attribution.
-- [AEO — answer boxes and voice](../content/features/aeo.md) — FAQPage, HowTo and speakable JSON-LD.
-- [SEO — classical search](../content/features/seo.md) — sitemap, canonical URLs, `noindex`.
+- [GEO — citation by AI assistants](./geo.md) — TL;DR block, visible dates, author attribution.
+- [AEO — answer boxes and voice](./aeo.md) — FAQPage, HowTo and speakable JSON-LD.
+- [SEO — classical search](./seo.md) — sitemap, canonical URLs, `noindex`.
 - [MCP Server](./mcp.md) — the other machine surface, for agents that write as well as read.
 - [Source of Truth](./source-of-truth.md) — the local doc graph, for an agent with your repository on disk.
