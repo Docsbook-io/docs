@@ -15,6 +15,10 @@ Pages that already rank 5–20 are the cheapest traffic you will ever buy. This 
 
 - The Pages, Referrers, Devices and CTA breakdown cards now default their ranking to Revenue the moment your workspace can measure it (an Average Product Price and a CTA URL set), instead of Visitors — and both that pick and the analytics period switcher now remember your last choice across visits. `Analytics`
 
+### Fixed
+
+- The scheduled **Fix SEO issues** and **Check whether the last changes helped** agents now pull today's Google Search rankings before deciding what to rewrite, instead of silently reading whatever position data a human last refreshed by hand in the panel — possibly weeks old. `Agents`
+
 ## NEW - 04.09.2026
 
 ### Added

@@ -34,6 +34,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Loading states across the admin panel — Overview, Chat, Translations, Search Console, MCP tools, budget, widgets, folder visibility and more — now render a skeleton shaped and sized like what's actually loading, with a shimmer sweep instead of a spinner in a box the wrong height or a flat pulsing block, so the panel stops visibly jumping while a page loads. `Panel`
 - Feeds ▸ Usage now opens on the full 30-day window instead of 7, so you see all the spend history available by default. `Feeds`
 - A dark or monochrome project icon in dark mode no longer sits inside an oversized white halo — it now gets a thin white border on a transparent background instead. `Branding`
+- The scheduled **Fix SEO issues** and **Check whether the last changes helped** agents now pull today's Google Search rankings before deciding what to rewrite, instead of silently reading whatever position data a human last refreshed by hand in the panel — possibly weeks old. `Agents`
 
 ### Removed
 

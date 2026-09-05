@@ -13,6 +13,10 @@ Everything that shipped in **Agents**. This is the Agents slice of the [full Doc
 
 - Agents now leads with a **Last Runs** shelf — the six most recently invoked agents, including ones you started by hand without arming them — so "what just ran" is answered before you go looking through the list. `Agents`
 
+### Fixed
+
+- The scheduled **Fix SEO issues** and **Check whether the last changes helped** agents now pull today's Google Search rankings before deciding what to rewrite, instead of silently reading whatever position data a human last refreshed by hand in the panel — possibly weeks old. `Agents`
+
 ## NEW - 04.09.2026
 
 ### Added
