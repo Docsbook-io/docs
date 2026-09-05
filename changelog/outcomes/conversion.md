@@ -11,6 +11,10 @@ Readers who came to learn and left having started — the docs' real job. This i
 
 ## NEW - 05.09.2026
 
+### Added
+
+- A **Run a full product audit** agent checks whether your docs can be found, believed and stand up against competitors' — fetchability, proof signals, the objection a reader stalls on, and whether the numbers on the page are still true — in one pass, and files what needs fixing as issues on your own repo instead of a report somebody has to run by hand. `Agents`
+
 ### Changed
 
 - Enterprise now promises full branding customization and content rewritten for SEO/GEO and sales as part of the engagement, alongside the existing turnkey setup and migration commitments already on the pricing page. `Pricing`

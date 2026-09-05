@@ -12,6 +12,7 @@ Everything that shipped in **Agents**. This is the Agents slice of the [full Doc
 ### Added
 
 - Agents now leads with a **Last Runs** shelf — the six most recently invoked agents, including ones you started by hand without arming them — so "what just ran" is answered before you go looking through the list. `Agents`
+- A **Run a full product audit** agent checks whether your docs can be found, believed and stand up against competitors' — fetchability, proof signals, the objection a reader stalls on, and whether the numbers on the page are still true — in one pass, and files what needs fixing as issues on your own repo instead of a report somebody has to run by hand. `Agents`
 
 ### Fixed
 
