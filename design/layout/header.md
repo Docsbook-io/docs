@@ -18,6 +18,8 @@ The header is the top navigation bar of your Docsbook documentation site. It hol
 | Theme toggle in header | Show the light/dark switcher in the header |
 | Language selector in header | Show the language switcher in the header |
 | Search button in header | Show a search icon/button in the header |
+| Search button background color | Custom background color for the header search button — see below |
+| Ask AI button background color | Custom background color for the header Ask AI button — see below |
 
 ## How to configure the header
 
@@ -62,6 +64,14 @@ Click a preset to apply it — one click sets all six underlying placement field
 **Ask AI beside the search** only takes effect when the search bar is wide. With a compact search there is no centre cluster for the button to join, so it stays in the right-hand group.
 
 **Layout ≠ visibility.** A preset only controls *where* a block sits, never *whether* it's shown. If you turn off a block using its own toggle (for example, **Theme toggle in header**), that block disappears and the rest of the header keeps following the same preset — the remaining blocks don't shift into its place or change arrangement.
+
+---
+
+## Header button background color
+
+The **Search in Header** and **Ask AI in Header** cards each have their own **Background color** field, set as a hex code (e.g. `#5B47E0`). A color here overrides the button's default muted background; text switches to black or white automatically to stay readable against it.
+
+Leave the field blank to keep the default background — this does not require the site's [Accent color](../style/branding.md#accent-color) to be set, and setting one does not change the other.
 
 ---
 

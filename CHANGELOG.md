@@ -19,6 +19,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Four new MCP tools put the whole drift-loop setup within reach of a coding agent instead of the panel only: `connect_source` and `configure_source` connect a repository or website as a source of truth and manage it, `find_agent` and `enable_agent` search this project's standing agents by outcome and arm one on a schedule, an event, or a connected repository's commits — so an agent asked to keep the docs in step with the code can now reach every step of that itself. `MCP`
 - A **Run a full product audit** agent checks whether your docs can be found, believed and stand up against competitors' — fetchability, proof signals, the objection a reader stalls on, and whether the numbers on the page are still true — in one pass, and files what needs fixing as issues on your own repo instead of a report somebody has to run by hand. `Agents`
 - Each MCP tool's own page now shows what a successful call answers with, right below its Arguments — every field named and typed, so wiring up an integration no longer means calling the tool blind to find its shape. `MCP`
+- The header's Search and Ask AI buttons each get their own **Background color** field, so either can be styled to match your brand instead of sharing the default muted background. `Branding`
 
 ### Changed
 

@@ -14,6 +14,7 @@ Docs that look like the product, rather than like a template someone forgot. Thi
 ### Added
 
 - The Graph now colours sections by how far down readers actually get: every heading carries its own read count, so the outline of a page shows where attention stops instead of every section painting the same grey. `Doc Graph`
+- The header's Search and Ask AI buttons each get their own **Background color** field, so either can be styled to match your brand instead of sharing the default muted background. `Branding`
 
 ### Changed
 
