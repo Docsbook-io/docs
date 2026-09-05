@@ -25,7 +25,7 @@ New to Docsbook? Read [the overview](./overview.md) first, then [publish a site]
 
 - [Create your first site](./guides/getting-started/creating-docs.md) — Step-by-step, no prior GitHub experience assumed {file-plus}
 - [Manage an existing site](./guides/getting-started/managing-docs.md) — Settings, reindexing, and who can read the site {folder-cog}
-- [Connect a GitHub repository](./content/setup/github-integration.md) — Sync on push and an "Edit on GitHub" link per page {git-branch}
+- [Connect a GitHub repository](./content/setup/github-integration.md) — An "Edit on GitHub" link on every page, and where repository sync is set up {git-branch}
 - [Choose what gets indexed](./content/setup/content-options.md) — Which folders and files become pages {settings-2}
 - [Point your own domain at it](./guides/advanced/custom-domain.md) — One CNAME, SSL provisioned automatically {globe}
 - [Restrict who can read it](./guides/advanced/sso.md) — Shared password, or your own SSO identity provider {lock}

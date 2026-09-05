@@ -57,7 +57,7 @@ If any of those sentences made you sigh, you are the audience for this guide.
 
 ### Docsbook — the pick for teams that want it live today
 
-[**Docsbook**](https://docsbook.io) turns any public GitHub repository into a documentation site in 5 seconds. Paste `github.com/user/repo`, the site appears at `docsbook.io/user/repo`. Every push to `main` updates it automatically. No `docusaurus.config.js`, no MDX migration, no CI.
+[**Docsbook**](https://docsbook.io) turns any public GitHub repository into a documentation site in 5 seconds. Paste `github.com/user/repo`, the site appears at `docsbook.io/user/repo`. Every push to `main` updates it automatically, with no `docusaurus.config.js`, no MDX migration and no CI — though automatic here means picked up by a timer within 24 hours, not within seconds ([the freshness windows](../seo/indexing.md#how-fast-does-a-change-reach-an-engine)).
 
 **Who it is for**
 

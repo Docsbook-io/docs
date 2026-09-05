@@ -19,7 +19,7 @@ description: "Ready-to-paste answers to the questions people keep asking about D
 
 ### What is Docsbook?
 
-**TL;DR:** Docsbook turns a public GitHub repo into a documentation site in a few seconds. Paste `github.com/user/repo`, the site appears at `docsbook.io/user/repo`, and every push to main updates it automatically.
+**TL;DR:** Docsbook turns a public GitHub repo into a documentation site in a few seconds. Paste `github.com/user/repo`, the site appears at `docsbook.io/user/repo`, and every push to main updates it automatically — picked up by a timer within 24 hours rather than by a webhook, so say "no build step", never "instantly".
 
 **Long:** It's a hosted docs platform aimed at people who want their docs to live as Markdown in GitHub — not in a proprietary CMS. There's no CI/CD to set up and no `docusaurus.config.js` to babysit. You get the docs site, a built-in AI chatbot trained on your content, AI translations to 15 languages with separate SEO indexing, full analytics, and an MCP server so AI agents can manage the workspace. Custom domain with free SSL is a Business-tier add-on. Free plan is real — not a trial.
 
