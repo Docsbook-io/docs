@@ -29,6 +29,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The Pages, Referrers, Devices and CTA breakdown cards now default their ranking to Revenue the moment your workspace can measure it (an Average Product Price and a CTA URL set), instead of Visitors — and both that pick and the analytics period switcher now remember your last choice across visits. `Analytics`
 - Searching your docs by meaning is no longer behind a plan or a built index: `search` is on every project, and a project with no semantic index has the same question answered by full-text search rather than refused. A question someone's assistant asks of your docs now comes back answered instead of erroring, so it never has to reach your support inbox. `MCP`
 - The Graph draws immediately and fills in afterwards: the map of pages and sections comes back from cache in milliseconds, and the readership numbers, then the open pull requests and issues, land on it as they arrive. It used to wait for all three before drawing a single dot. `Doc Graph`
+- `Live` is the spinning globe now, full stop — the flat, pannable map and its Map/Globe switch are gone. The live feed and the full reader card that used to live only on the map are on the globe too, opened from a marker or a line in the feed. `Analytics`
 
 ### Fixed
 
@@ -40,6 +41,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - A dark or monochrome project icon in dark mode no longer sits inside an oversized white halo — it now gets a thin white border on a transparent background instead. `Branding`
 - The scheduled **Fix SEO issues** and **Check whether the last changes helped** agents now pull today's Google Search rankings before deciding what to rewrite, instead of silently reading whatever position data a human last refreshed by hand in the panel — possibly weeks old. `Agents`
 - The Sources picker's "private repositories are hidden" banner no longer throws you out of the New source dialog to grant GitHub access — it hands off through Settings ▸ Profile instead, which states plainly whether repository access is actually held and hands you back to a dialog that still remembers what you were typing. `Sources`
+- The `Live` globe's land was nearly invisible against the page — a handful of pale, sub-pixel dots on white. They now stand out at a glance, and dragging the globe follows your cursor instead of spinning the opposite way. `Analytics`
 
 ### Removed
 
