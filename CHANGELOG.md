@@ -53,6 +53,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The scheduled **Fix SEO issues** and **Check whether the last changes helped** agents now pull today's Google Search rankings before deciding what to rewrite, instead of silently reading whatever position data a human last refreshed by hand in the panel — possibly weeks old. `Agents`
 - The Sources picker's "private repositories are hidden" banner no longer throws you out of the New source dialog to grant GitHub access — it hands off through Settings ▸ Profile instead, which states plainly whether repository access is actually held and hands you back to a dialog that still remembers what you were typing. `Sources`
 - The `Live` globe's land was nearly invisible against the page — a handful of pale, sub-pixel dots on white. They now stand out at a glance, and dragging the globe follows your cursor instead of spinning the opposite way. `Analytics`
+- The Graph's per-section read-count overlay and its "jump to the matching heading" search now agree with the id the page itself renders — both were joining against an anchor an ASCII-only slugifier had already broken, so a Cyrillic or punctuated heading looked equally unread and unfindable across the whole page. `Doc Graph`
 
 ### Removed
 
