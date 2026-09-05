@@ -225,7 +225,7 @@ Diagnosis without a fix is a report. These close the loop inside one connection.
 | Tool | What it is worth |
 |---|---|
 | `search_docs` | Verbatim, citable sections — text, regex, heading or path modes. What an agent reads *before* editing so it changes the right lines. |
-| `search` | Semantic (embeddings-based) search — finds a page by what it *means*, not what it literally says, using a pre-built vector index. Catches the natural-language question that phrases nothing like the page title. Falls back cleanly to `search_docs` when no index is built yet. |
+| `search` | Semantic (embeddings-based) search — finds a page by what it *means*, not what it literally says, using a pre-built vector index. Catches the natural-language question that phrases nothing like the page title. On every plan, and it always answers: a project with no index yet gets the same question answered by full text instead, and the reply says which engine ran (`mode`: `semantic` or `lexical`). Served without a token on your project's public endpoint, so a reader's agent can search your docs too. |
 | `get_doc_outline` | Every page with title, heading count, size. Cheap orientation before a search or a write. |
 | `write_docs` | Commits one or many markdown files in **one atomic git commit**. Turns analysis into a shipped change. |
 | `fetch_url` | Reads one public web page as clean Markdown. The tool that lets an agent check a page against the world outside your workspace — a competitor's pricing, your own marketing site, or whether a link a doc depends on is still alive. |
@@ -420,7 +420,7 @@ Access to the Docsbook MCP server is decided by the token, not by a tier. A toke
 
 - **Read-only** — every reporting, search and outline tool answers. `write_docs`, `create_issue` and the three writing `run_docs_*` runs refuse, and say why.
 - **Read-write** — the same, plus committing pages, filing issues and changing settings.
-- **No token at all** — `get_info` and `find_skill` still answer, because they expose only public catalog information. Every other tool requires a valid Bearer token tied to a Docsbook account.
+- **No token at all** — on a repo-scoped endpoint (`docsbook.io/{owner}/{repo}/api/mcp/server`), `get_info`, `find_skill`, `find_widget` and `list_content_widgets` answer from the public catalog, and `search` answers over that site's own documentation — the one tool here that reads a project, because what it reads is the published site. It is refused on a private site, on a site whose plan has lapsed, on an endpoint not pinned to a site, and when the project has no AI balance left; it takes no project argument, so it can only ever read the site it is pinned to. Every other tool requires a valid Bearer token tied to a Docsbook account.
 
 When a call is refused, the server returns a structured error naming the reason rather than a bare 403, so the agent can tell a reader what to fix. See [MCP Server — Trust & Security](./mcp-security.md) for the authentication flow and what the server stores.
 
