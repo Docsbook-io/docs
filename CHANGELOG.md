@@ -55,6 +55,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The `Live` globe's land was nearly invisible against the page — a handful of pale, sub-pixel dots on white. They now stand out at a glance, and dragging the globe follows your cursor instead of spinning the opposite way. `Analytics`
 - The Graph's per-section read-count overlay and its "jump to the matching heading" search now agree with the id the page itself renders — both were joining against an anchor an ASCII-only slugifier had already broken, so a Cyrillic or punctuated heading looked equally unread and unfindable across the whole page. `Doc Graph`
 - `list_workspaces` now warns when two of your projects resolve to the exact same live URL — a leftover from before project names were matched by case — and names which one is actually serving it, instead of showing both as equally live and leaving you to guess. `MCP`
+- Citations in the AI chat's answers now link to the exact section they cite instead of a dead or wrong anchor — a hand-written heading-slug rule broke every citation on a non-English page and drifted on plain punctuation elsewhere, landing readers at the top of the page instead of the section the answer actually came from. `AI Chat`
 
 ### Removed
 

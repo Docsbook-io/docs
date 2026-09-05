@@ -15,6 +15,10 @@ Questions the docs answer are questions your inbox never sees. This is the Suppo
 
 - Searching your docs by meaning is no longer behind a plan or a built index: `search` is on every project, and a project with no semantic index has the same question answered by full-text search rather than refused. A question someone's assistant asks of your docs now comes back answered instead of erroring, so it never has to reach your support inbox. `MCP`
 
+### Fixed
+
+- Citations in the AI chat's answers now link to the exact section they cite instead of a dead or wrong anchor — a hand-written heading-slug rule broke every citation on a non-English page and drifted on plain punctuation elsewhere, landing readers at the top of the page instead of the section the answer actually came from. `AI Chat`
+
 ## NEW - 04.09.2026
 
 ### Fixed

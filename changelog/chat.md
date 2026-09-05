@@ -7,6 +7,12 @@ description: "Every release that touched AI Chat: the assistant on your docs sit
 
 Everything that shipped in **Chat**. This is the Chat slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 05.09.2026
+
+### Fixed
+
+- Citations in the AI chat's answers now link to the exact section they cite instead of a dead or wrong anchor — a hand-written heading-slug rule broke every citation on a non-English page and drifted on plain punctuation elsewhere, landing readers at the top of the page instead of the section the answer actually came from. `AI Chat`
+
 ## NEW - 04.09.2026
 
 ### Fixed

@@ -15,6 +15,7 @@ Claims and links that stopped being true — found before a reader finds them. T
 
 - Loading states across the admin panel — Overview, Chat, Translations, Search Console, MCP tools, budget, widgets, folder visibility and more — now render a skeleton shaped and sized like what's actually loading, with a shimmer sweep instead of a spinner in a box the wrong height or a flat pulsing block, so the panel stops visibly jumping while a page loads. `Panel`
 - The Graph's per-section read-count overlay and its "jump to the matching heading" search now agree with the id the page itself renders — both were joining against an anchor an ASCII-only slugifier had already broken, so a Cyrillic or punctuated heading looked equally unread and unfindable across the whole page. `Doc Graph`
+- Citations in the AI chat's answers now link to the exact section they cite instead of a dead or wrong anchor — a hand-written heading-slug rule broke every citation on a non-English page and drifted on plain punctuation elsewhere, landing readers at the top of the page instead of the section the answer actually came from. `AI Chat`
 
 ## NEW - 04.09.2026
 

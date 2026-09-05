@@ -24,6 +24,7 @@ Whether ChatGPT, Claude and Perplexity can read you — and quote you. This is t
 ### Fixed
 
 - Analytics no longer keeps auto-refreshing a historical range you're not watching live — the 30-second poll now only fires while `Now` is selected. The AI Views card opens on Pages instead of Crawlers by default, and its crawler and page rows get the same Improve button already on other analytics rows. `Analytics`
+- Citations in the AI chat's answers now link to the exact section they cite instead of a dead or wrong anchor — a hand-written heading-slug rule broke every citation on a non-English page and drifted on plain punctuation elsewhere, landing readers at the top of the page instead of the section the answer actually came from. `AI Chat`
 
 ## NEW - 04.09.2026
 
