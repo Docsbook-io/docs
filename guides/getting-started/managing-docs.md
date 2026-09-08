@@ -181,7 +181,7 @@ To close it, switch the workspace to **private** in **Settings** → **Privacy &
 
 **Through GitHub.** Add them as collaborators on the repository. They edit files or open pull requests, and the site updates when a change reaches your default branch. This is the path for anyone who already works in the repository.
 
-**Through the AI chat.** Press **Invite** in the chat toolbar and send an email invite or a link. Collaborators join the same live session, so they do not need a GitHub account. Their work draws on the same project balance yours does.
+**Through the AI chat.** Press **Invite** in the chat toolbar, or use **Collaborators** in Settings, and send an email invite. It is a one-time link — the invited teammate accepts it while signed in with that same email address, then shows up under **People with access**. No GitHub account needed.
 
 ## Fix a site that has not updated
 

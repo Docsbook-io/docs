@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Support load** — fewer qu
 
 Questions the docs answer are questions your inbox never sees. This is the Support load slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 08.09.2026
+
+### Fixed
+
+- Inviting a teammate to a project's AI chat now actually works — a one-time email link adds them under **People with access** instead of always answering "temporarily unavailable." `AI Chat`
+
 ## NEW - 05.09.2026
 
 ### Changed

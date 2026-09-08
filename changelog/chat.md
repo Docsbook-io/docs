@@ -7,6 +7,12 @@ description: "Every release that touched AI Chat: the assistant on your docs sit
 
 Everything that shipped in **Chat**. This is the Chat slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 08.09.2026
+
+### Fixed
+
+- Inviting a teammate to a project's AI chat now actually works — a one-time email link adds them under **People with access** instead of always answering "temporarily unavailable." `AI Chat`
+
 ## NEW - 05.09.2026
 
 ### Fixed
