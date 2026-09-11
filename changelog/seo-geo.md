@@ -7,6 +7,17 @@ description: "Every release that touched SEO and GEO: how your pages rank in sea
 
 Everything that shipped in **SEO & GEO**. This is the SEO & GEO slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 11.09.2026
+
+### Added
+
+- Ask Google's AI answer, Google's results page and Bing whether they name your docs for questions you choose, checked on a schedule instead of by you typing them in every week: **AI Mentions** now sits as a fourth tab beside the crawl views, and a new **Search Mentions** card reports where you sit on each results page, out of how many results, and which other sites on that page are talking about your product — the half your own analytics cannot see. `GEO`
+
+### Fixed
+
+- The Keyword list showed one line per page a keyword ranks on, so a term Google shows five of your pages for filled the list with the same word five times over, each line carrying a fifth of the clicks it actually earned. One line per keyword now, with everything it brought in on it, and a note when several of your pages compete for it. `SEO`
+- The daily AI Overview check never ran: it asked Google in a format the search vendor rejects, so every check since it shipped failed before reaching Google, and the answer it did read came from a field Google does not send — an AI answer citing your docs by name would still have read as "not mentioned". `GEO`
+
 ## NEW - 05.09.2026
 
 ### Added

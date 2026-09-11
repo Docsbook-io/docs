@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Organic traffic** — more 
 
 Pages that already rank 5–20 are the cheapest traffic you will ever buy. This is the Organic traffic slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 11.09.2026
+
+### Fixed
+
+- The Keyword list showed one line per page a keyword ranks on, so a term Google shows five of your pages for filled the list with the same word five times over, each line carrying a fifth of the clicks it actually earned. One line per keyword now, with everything it brought in on it, and a note when several of your pages compete for it. `SEO`
+
 ## NEW - 05.09.2026
 
 ### Added

@@ -9,6 +9,16 @@ Everything Docsbook shipped that moves one number: **AI citations** — more ans
 
 Whether ChatGPT, Claude and Perplexity can read you — and quote you. This is the AI citations slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 11.09.2026
+
+### Added
+
+- Ask Google's AI answer, Google's results page and Bing whether they name your docs for questions you choose, checked on a schedule instead of by you typing them in every week: **AI Mentions** now sits as a fourth tab beside the crawl views, and a new **Search Mentions** card reports where you sit on each results page, out of how many results, and which other sites on that page are talking about your product — the half your own analytics cannot see. `GEO`
+
+### Fixed
+
+- The daily AI Overview check never ran: it asked Google in a format the search vendor rejects, so every check since it shipped failed before reaching Google, and the answer it did read came from a field Google does not send — an AI answer citing your docs by name would still have read as "not mentioned". `GEO`
+
 ## NEW - 05.09.2026
 
 ### Added

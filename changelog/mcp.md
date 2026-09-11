@@ -13,6 +13,7 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 
 - Build a custom agent with your own allow-list of MCP tools and a plain-English pipeline prompt — it decides which tool to call next and in what order, so a new standing check doesn't wait on us shipping code for it. `MCP`
 - Every MCP tool's own page now carries its own subagent — what wakes it, what happens to what it writes, its sources and its prompt — from the first time you open it, so a check you were keeping by remembering to look becomes something that monitors that one thing on a schedule, without building a whole agent first. `MCP`
+- Read those checks from an agent, and choose what they watch, with `get_mentions` and `configure_mentions` — so a standing "are we still cited for this?" question stops being something anyone has to remember to look at. `MCP`
 
 ### Changed
 

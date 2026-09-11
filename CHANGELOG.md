@@ -14,6 +14,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Click a call in Feeds to open its own page: the output (a table when it's tabular), the raw log, the input it was called with, what it cost, and — when one of your agents made the call — which agent, what it did, and what else it called, so tracing an automation's spend no longer means reading raw ledger rows. `Feeds`
 - Every MCP tool's own page now carries its own subagent — what wakes it, what happens to what it writes, its sources and its prompt — from the first time you open it, so a check you were keeping by remembering to look becomes something that monitors that one thing on a schedule, without building a whole agent first. `MCP`
 - Feeds' Usage view splits MCP spend by who made the call: an **Agent calls** figure for a named agent's own route and a **Subagent calls** figure for a tool's own dedicated one, so tracing where automation spend actually comes from doesn't mean reading the per-tool table by hand. `Feeds`
+- Ask Google's AI answer, Google's results page and Bing whether they name your docs for questions you choose, checked on a schedule instead of by you typing them in every week: **AI Mentions** now sits as a fourth tab beside the crawl views, and a new **Search Mentions** card reports where you sit on each results page, out of how many results, and which other sites on that page are talking about your product — the half your own analytics cannot see. `GEO`
+- Read those checks from an agent, and choose what they watch, with `get_mentions` and `configure_mentions` — so a standing "are we still cited for this?" question stops being something anyone has to remember to look at. `MCP`
 
 ### Changed
 
@@ -28,6 +30,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 - AI spend stopped being recorded on 4 September: calls were answered normally but nothing reached the usage ledger, so spend charts, the per-model breakdown and per-call costs in Feeds all read empty for a week. Recording works again, and a charge that cannot be written now pauses metered AI instead of quietly serving on. `Feeds`
 - Cancelling a subscription no longer wipes AI credit the project was still carrying on its monthly balance. `Billing`
+- The Keyword list showed one line per page a keyword ranks on, so a term Google shows five of your pages for filled the list with the same word five times over, each line carrying a fifth of the clicks it actually earned. One line per keyword now, with everything it brought in on it, and a note when several of your pages compete for it. `SEO`
+- The daily AI Overview check never ran: it asked Google in a format the search vendor rejects, so every check since it shipped failed before reaching Google, and the answer it did read came from a field Google does not send — an AI answer citing your docs by name would still have read as "not mentioned". `GEO`
 
 ## NEW - 08.09.2026
 

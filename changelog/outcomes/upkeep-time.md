@@ -17,6 +17,7 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 - Click a call in Feeds to open its own page: the output (a table when it's tabular), the raw log, the input it was called with, what it cost, and — when one of your agents made the call — which agent, what it did, and what else it called, so tracing an automation's spend no longer means reading raw ledger rows. `Feeds`
 - Every MCP tool's own page now carries its own subagent — what wakes it, what happens to what it writes, its sources and its prompt — from the first time you open it, so a check you were keeping by remembering to look becomes something that monitors that one thing on a schedule, without building a whole agent first. `MCP`
 - Feeds' Usage view splits MCP spend by who made the call: an **Agent calls** figure for a named agent's own route and a **Subagent calls** figure for a tool's own dedicated one, so tracing where automation spend actually comes from doesn't mean reading the per-tool table by hand. `Feeds`
+- Read those checks from an agent, and choose what they watch, with `get_mentions` and `configure_mentions` — so a standing "are we still cited for this?" question stops being something anyone has to remember to look at. `MCP`
 
 ### Changed
 
