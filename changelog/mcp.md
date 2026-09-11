@@ -12,6 +12,7 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 ### Added
 
 - Build a custom agent with your own allow-list of MCP tools and a plain-English pipeline prompt — it decides which tool to call next and in what order, so a new standing check doesn't wait on us shipping code for it. `MCP`
+- Every MCP tool's own page now carries its own subagent — what wakes it, what happens to what it writes, its sources and its prompt — from the first time you open it, so putting a tool on a schedule with your own instructions no longer means building a whole agent first. `MCP`
 
 ### Changed
 
