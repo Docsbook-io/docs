@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Time to answer** — reader
 
 How long a reader hunts before the page they needed is in front of them. This is the Time to answer slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 11.09.2026
+
+### Added
+
+- The Graph now has a **Paths** overlay alongside Structure/Sections/Links/Meaning: turn it on and edges appear between pages readers actually moved between back-to-back, brighter and thicker for a more-travelled route — so the busiest routes through your docs are visible, not just the pages themselves. `Doc Graph`
+
 ## NEW - 05.09.2026
 
 ### Added
