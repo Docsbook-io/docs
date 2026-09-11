@@ -7,6 +7,12 @@ description: "Every release that touched Feeds: the live event stream from your 
 
 Everything that shipped in **Feeds**. This is the Feeds slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 11.09.2026
+
+### Added
+
+- Click a call in Feeds to open its own page: the output (a table when it's tabular), the raw log, the input it was called with, what it cost, and — when one of your agents made the call — which agent, what it did, and what else it called, so tracing an automation's spend no longer means reading raw ledger rows. `Feeds`
+
 ## NEW - 05.09.2026
 
 ### Added

@@ -10,6 +10,12 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Added
 
 - The Graph now has a **Paths** overlay alongside Structure/Sections/Links/Meaning: turn it on and edges appear between pages readers actually moved between back-to-back, brighter and thicker for a more-travelled route — so the busiest routes through your docs are visible, not just the pages themselves. `Doc Graph`
+- Build a custom agent with your own allow-list of MCP tools and a plain-English pipeline prompt — it decides which tool to call next and in what order, so a new standing check doesn't wait on us shipping code for it. `MCP`
+- Click a call in Feeds to open its own page: the output (a table when it's tabular), the raw log, the input it was called with, what it cost, and — when one of your agents made the call — which agent, what it did, and what else it called, so tracing an automation's spend no longer means reading raw ledger rows. `Feeds`
+
+### Changed
+
+- Agents — the built-in catalog and any you've built yourself — now live inside MCP instead of their own tab, each opening a full page with its trigger, review mode, sources and prompt rather than a modal. `MCP`
 
 ## NEW - 08.09.2026
 

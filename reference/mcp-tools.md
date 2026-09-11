@@ -397,7 +397,7 @@ A run belongs to the account that started it: another account's `run_id` reads e
 
 ## Standing agents
 
-The tools above run once, on request. These two arm a standing route that runs on its own — on a schedule, on an event this workspace emits, or on new commits to a connected repository — the same catalog the admin panel's Agents tab shows and arms.
+The tools above run once, on request. These two arm a standing route that runs on its own — on a schedule, on an event this workspace emits, or on new commits to a connected repository — the same catalog the admin panel's MCP section shows and arms, alongside any custom agent this workspace has built with its own tool allow-list.
 
 | Tool | Billing | Description |
 |---|---|---|

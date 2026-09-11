@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **AI spend** — less money b
 
 Sees where the model budget actually goes before the invoice does. This is the AI spend slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 11.09.2026
+
+### Added
+
+- Click a call in Feeds to open its own page: the output (a table when it's tabular), the raw log, the input it was called with, what it cost, and — when one of your agents made the call — which agent, what it did, and what else it called, so tracing an automation's spend no longer means reading raw ledger rows. `Feeds`
+
 ## NEW - 05.09.2026
 
 ### Added

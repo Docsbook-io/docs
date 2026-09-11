@@ -7,6 +7,16 @@ description: "Every release that touched the MCP server: the tools it serves, wh
 
 Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 11.09.2026
+
+### Added
+
+- Build a custom agent with your own allow-list of MCP tools and a plain-English pipeline prompt — it decides which tool to call next and in what order, so a new standing check doesn't wait on us shipping code for it. `MCP`
+
+### Changed
+
+- Agents — the built-in catalog and any you've built yourself — now live inside MCP instead of their own tab, each opening a full page with its trigger, review mode, sources and prompt rather than a modal. `MCP`
+
 ## NEW - 05.09.2026
 
 ### Added
