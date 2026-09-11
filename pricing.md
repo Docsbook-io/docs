@@ -28,19 +28,31 @@ The machine-readable version of the same page is at [docsbook.io/pricing.md](htt
 
 ## What a project balance is
 
-A **project balance** is the money attached to one Docsbook project, spent on the four kinds of AI work listed above. Every new project is created with **$1.00** of balance, and the owner tops it up from the billing screen. Balances are per project, not per account: one project running out does not stop another.
+A **project balance** is the money attached to one Docsbook project, spent on the four kinds of AI work listed above. It is filled by your top-ups, and on a Pro project by the AI usage the subscription credits each month. Balances are per project, not per account: one project running out does not stop another, and money you topped one up with is never moved to another or taken back.
 
 ## How much free credit a new project gets
 
-A new Docsbook project starts with **$1.00** of balance, and a further **$5.00** can be claimed once the project is **3 minutes old** — press **Claim** on the project's billing card. The $5.00 is claimed, not granted: nothing adds it on your behalf, and nothing else on the account is topped up automatically.
+Every new project starts on Pro for 14 days, with no card, and that trial has an AI wallet of its own. The amount is on [docsbook.io/pricing](https://docsbook.io/pricing) — one figure, generated from the billing constants, so it cannot go stale here.
 
-Those two amounts are the only credit Docsbook gives away. Everything after them is a top-up you pay for.
+Three things are worth knowing about that wallet, because they are what make it a trial rather than a balance:
+
+- **It is spent first**, ahead of anything you have topped the project up with. Free money goes before money you paid for.
+- **It ends with the trial.** Whatever is left on day fifteen simply stops being spendable — it is a sample, not credit you hold. Anything you topped up yourself is untouched and stays yours.
+- **There is no card behind it**, so it cannot overspend. When the wallet is empty the metered AI work pauses and nothing is charged to anybody.
+
+That wallet is the only credit Docsbook gives away. Everything after it is either a top-up you pay for or the monthly AI usage a Pro subscription includes.
+
+## What happens when the trial ends
+
+Subscribe and the project keeps Pro, with the month's AI usage credited to its balance — less whatever of the trial wallet you actually used, so the sample is not billed to you twice. A trial that never asked the AI anything is credited the full monthly amount.
+
+Let the trial lapse instead and the project moves to the free tier: the AI assistant, agents and translations switch off, and no AI allowance is granted. Nothing is deleted, your Markdown stays in your repository, and topping the project up or subscribing switches it back on.
 
 ## How top-ups work
 
-You name the amount when you top up a Docsbook project. The smallest single top-up is **$20.00** and the largest is **$5,000.00**; for more than $5,000.00, top up twice. The amount lands on the balance of the one project you chose, not on the account.
+You name the amount when you top up a Docsbook project — there is a minimum and a maximum per payment, both on [docsbook.io/pricing](https://docsbook.io/pricing); for more than the maximum, top up twice. The amount lands on the balance of the one project you chose, not on the account.
 
-Top-ups do not expire and nothing is refilled on a schedule. If you want a recurring amount, set up a monthly payment of your own on the billing screen — that tops the same balance up each month.
+Top-ups do not expire, and they are separate from the monthly AI usage a Pro subscription credits. If you want a recurring top-up on top of that, set up a monthly payment of your own on the billing screen — it tops the same balance up each month.
 
 ## What Docsbook charges for AI usage
 
@@ -62,7 +74,9 @@ Free discovery calls keep working too, so an agent connected over MCP can still 
 
 ## Does anything refill on a schedule?
 
-No. A Docsbook project balance is topped up, not granted on a schedule, and there is no monthly allowance to run out of. The only credit Docsbook gives away is the **$1.00** a project starts with and the **$5.00** claimed at 3 minutes old.
+On a Pro project, yes: each paid month credits that month's AI usage to the project's balance. Nothing refills on a project that is not paying for one — the trial wallet is granted once and expires with the trial, and the free tier is granted nothing.
+
+Top-ups never expire and are never part of a refill: they sit on the balance until you spend them, whatever happens to the plan.
 
 ## Can I leave, and what do I keep?
 
@@ -79,7 +93,7 @@ Your Markdown always stays in your own GitHub repository. Docsbook renders those
 
 ## See what a project costs you
 
-Create a project, publish it, and watch the balance while you use it. It starts with $1.00 on it, and $5.00 more is yours to claim three minutes later.
+Create a project, publish it, and watch the balance while you use it. It starts on Pro for 14 days with an AI wallet of its own, and no card is asked for.
 
 [Start free — no credit card](https://docsbook.io/start)
 

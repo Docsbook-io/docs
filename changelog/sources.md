@@ -7,6 +7,12 @@ description: "Every release that touched Sources: the repositories and sites you
 
 Everything that shipped in **Sources**. This is the Sources slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 11.09.2026
+
+### Changed
+
+- Sources moved from its own top-level section into Settings, between Access and Integrations; old links still open it. `Sources`
+
 ## NEW - 05.09.2026
 
 ### Fixed

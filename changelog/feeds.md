@@ -14,6 +14,10 @@ Everything that shipped in **Feeds**. This is the Feeds slice of the [full Docsb
 - Click a call in Feeds to open its own page: the output (a table when it's tabular), the raw log, the input it was called with, what it cost, and — when one of your agents made the call — which agent, what it did, and what else it called, so tracing an automation's spend no longer means reading raw ledger rows. `Feeds`
 - Feeds' Usage view splits MCP spend by who made the call: an **Agent calls** figure for a named agent's own route and a **Subagent calls** figure for a tool's own dedicated one, so tracing where automation spend actually comes from doesn't mean reading the per-tool table by hand. `Feeds`
 
+### Fixed
+
+- AI spend stopped being recorded on 4 September: calls were answered normally but nothing reached the usage ledger, so spend charts, the per-model breakdown and per-call costs in Feeds all read empty for a week. Recording works again, and a charge that cannot be written now pauses metered AI instead of quietly serving on. `Feeds`
+
 ## NEW - 05.09.2026
 
 ### Added

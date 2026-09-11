@@ -12,12 +12,22 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The Graph now has a **Paths** overlay alongside Structure/Sections/Links/Meaning: turn it on and edges appear between pages readers actually moved between back-to-back, brighter and thicker for a more-travelled route — so the busiest routes through your docs are visible, not just the pages themselves. `Doc Graph`
 - Build a custom agent with your own allow-list of MCP tools and a plain-English pipeline prompt — it decides which tool to call next and in what order, so a new standing check doesn't wait on us shipping code for it. `MCP`
 - Click a call in Feeds to open its own page: the output (a table when it's tabular), the raw log, the input it was called with, what it cost, and — when one of your agents made the call — which agent, what it did, and what else it called, so tracing an automation's spend no longer means reading raw ledger rows. `Feeds`
-- Every MCP tool's own page now carries its own subagent — what wakes it, what happens to what it writes, its sources and its prompt — from the first time you open it, so putting a tool on a schedule with your own instructions no longer means building a whole agent first. `MCP`
+- Every MCP tool's own page now carries its own subagent — what wakes it, what happens to what it writes, its sources and its prompt — from the first time you open it, so a check you were keeping by remembering to look becomes something that monitors that one thing on a schedule, without building a whole agent first. `MCP`
 - Feeds' Usage view splits MCP spend by who made the call: an **Agent calls** figure for a named agent's own route and a **Subagent calls** figure for a tool's own dedicated one, so tracing where automation spend actually comes from doesn't mean reading the per-tool table by hand. `Feeds`
 
 ### Changed
 
 - Agents — the built-in catalog and any you've built yourself — now live inside MCP instead of their own tab, each opening a full page with its trigger, review mode, sources and prompt rather than a modal. `MCP`
+- Sources moved from its own top-level section into Settings, between Access and Integrations; old links still open it. `Sources`
+- Every new project now starts on Pro for 14 days with an AI wallet of its own, and that wallet is the only credit we give away — the dollar a project used to be created with and the five dollars you could claim three minutes in are both gone. Whatever is left of the trial wallet ends with the trial; anything you topped up yourself is untouched. `Pricing`
+- The first month you pay for credits Pro's AI usage less whatever of the trial wallet you actually spent, so a trial you used is not charged to you twice and a trial you never touched is credited in full. `Pricing`
+- A card added during a trial no longer opens overage: overage now needs a subscription that has been successfully charged at least once, so nothing can run up a bill against a card that has never been billed, and the fortnight we told you was free cannot arrive as a line item later. `Billing`
+- A project whose trial ends without a subscription is now granted no AI usage at all rather than a small monthly amount, which is what "paused until you upgrade" always said. Topping the project up still works and that money stays yours. `Pricing`
+
+### Fixed
+
+- AI spend stopped being recorded on 4 September: calls were answered normally but nothing reached the usage ledger, so spend charts, the per-model breakdown and per-call costs in Feeds all read empty for a week. Recording works again, and a charge that cannot be written now pauses metered AI instead of quietly serving on. `Feeds`
+- Cancelling a subscription no longer wipes AI credit the project was still carrying on its monthly balance. `Billing`
 
 ## NEW - 08.09.2026
 

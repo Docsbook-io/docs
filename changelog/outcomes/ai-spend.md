@@ -16,6 +16,17 @@ Sees where the model budget actually goes before the invoice does. This is the A
 - Click a call in Feeds to open its own page: the output (a table when it's tabular), the raw log, the input it was called with, what it cost, and — when one of your agents made the call — which agent, what it did, and what else it called, so tracing an automation's spend no longer means reading raw ledger rows. `Feeds`
 - Feeds' Usage view splits MCP spend by who made the call: an **Agent calls** figure for a named agent's own route and a **Subagent calls** figure for a tool's own dedicated one, so tracing where automation spend actually comes from doesn't mean reading the per-tool table by hand. `Feeds`
 
+### Changed
+
+- The first month you pay for credits Pro's AI usage less whatever of the trial wallet you actually spent, so a trial you used is not charged to you twice and a trial you never touched is credited in full. `Pricing`
+- A card added during a trial no longer opens overage: overage now needs a subscription that has been successfully charged at least once, so nothing can run up a bill against a card that has never been billed, and the fortnight we told you was free cannot arrive as a line item later. `Billing`
+- A project whose trial ends without a subscription is now granted no AI usage at all rather than a small monthly amount, which is what "paused until you upgrade" always said. Topping the project up still works and that money stays yours. `Pricing`
+
+### Fixed
+
+- AI spend stopped being recorded on 4 September: calls were answered normally but nothing reached the usage ledger, so spend charts, the per-model breakdown and per-call costs in Feeds all read empty for a week. Recording works again, and a charge that cannot be written now pauses metered AI instead of quietly serving on. `Feeds`
+- Cancelling a subscription no longer wipes AI credit the project was still carrying on its monthly balance. `Billing`
+
 ## NEW - 05.09.2026
 
 ### Added

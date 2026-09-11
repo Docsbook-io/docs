@@ -13,9 +13,11 @@ For the short version of the model, read [Docsbook pricing](../../pricing.md). T
 
 ## What a project balance is
 
-A project balance is a single pot of money attached to one documentation project, not to your account. Projects do not share a balance: spending on one never drains another. When a project's balance is exhausted, AI usage on that project stops until it is topped up; nothing is charged beyond what was already paid, and there is no overage bill.
+A project balance is a single pot of money attached to one documentation project, not to your account. Projects do not share a balance: spending on one never drains another. When a project's balance is exhausted, AI usage on that project stops until it is topped up.
 
-[Docsbook pricing](../../pricing.md) covers the rest of that story — the credit a new project starts with, the welcome bonus, and the top-up limits. This page does not repeat it.
+What happens at zero depends on whether the project is paying. A trial or a free project simply stops: there is no card, so nothing can be charged beyond what was already paid. A Pro project keeps answering on overage up to the cap you set in Settings → Limits, and that is billed to the card on file — set the cap to $0 if you would rather it stopped instead.
+
+[Docsbook pricing](../../pricing.md) covers the rest of that story — the trial's own AI wallet, what the first paid month credits, and the top-up limits. This page does not repeat it.
 
 ## Which actions spend the balance
 

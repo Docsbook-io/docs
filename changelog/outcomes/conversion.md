@@ -9,6 +9,15 @@ Everything Docsbook shipped that moves one number: **Conversion** — more reade
 
 Readers who came to learn and left having started — the docs' real job. This is the Conversion slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 11.09.2026
+
+### Changed
+
+- Every new project now starts on Pro for 14 days with an AI wallet of its own, and that wallet is the only credit we give away — the dollar a project used to be created with and the five dollars you could claim three minutes in are both gone. Whatever is left of the trial wallet ends with the trial; anything you topped up yourself is untouched. `Pricing`
+- The first month you pay for credits Pro's AI usage less whatever of the trial wallet you actually spent, so a trial you used is not charged to you twice and a trial you never touched is credited in full. `Pricing`
+- A card added during a trial no longer opens overage: overage now needs a subscription that has been successfully charged at least once, so nothing can run up a bill against a card that has never been billed, and the fortnight we told you was free cannot arrive as a line item later. `Billing`
+- A project whose trial ends without a subscription is now granted no AI usage at all rather than a small monthly amount, which is what "paused until you upgrade" always said. Topping the project up still works and that money stays yours. `Pricing`
+
 ## NEW - 05.09.2026
 
 ### Added

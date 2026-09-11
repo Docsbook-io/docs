@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Manual checks** — fewer t
 
 A watch someone keeps by remembering to look, kept by a webhook instead. This is the Manual checks slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 11.09.2026
+
+### Added
+
+- Every MCP tool's own page now carries its own subagent — what wakes it, what happens to what it writes, its sources and its prompt — from the first time you open it, so a check you were keeping by remembering to look becomes something that monitors that one thing on a schedule, without building a whole agent first. `MCP`
+
 ## NEW - 05.09.2026
 
 ### Added
