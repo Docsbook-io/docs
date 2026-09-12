@@ -11,9 +11,18 @@ Pages that already rank 5–20 are the cheapest traffic you will ever buy. This 
 
 ## NEW - 12.09.2026
 
+### Added
+
+- Every read your agent makes is now kept with the answer it gave, which turns any of them into a snapshot: read a page's traffic today, read it again after the rewrite, and `compare_tool_calls` tells you what moved — so "did that change work" stops being a matter of opinion and nobody has to remember to write a number down beforehand. `MCP`
+- Two new cards on Overview, **Analytics snapshots** and **SEO snapshots**, show what has been measured on this project and how many of those readings have a second one to compare against — the figure that decides whether a change you make today can be measured at all. `MCP`
+
 ### Changed
 
 - Docsbook now knows what to do about requests that are not outcomes at all — what changed in the last week, add a page for this feature, we have no documentation, alert us when traffic falls, set the site up — each of which used to come back as a list of outcomes to choose from. `MCP`
+
+### Removed
+
+- `get_change_history` is gone. It could only measure a change that arrived as a commit, and only in traffic, so turning on a language, re-ranking the navigation or fixing an answer the assistant kept getting wrong were all unmeasurable. The snapshots above measure any of them; the commit case keeps `get_page_diff_impact`, which still judges an edit against the pages nobody touched. `MCP`
 
 ## NEW - 11.09.2026
 

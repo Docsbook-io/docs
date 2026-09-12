@@ -93,17 +93,20 @@ When a skill is preloaded, three things stop being requests to the model and bec
 
 All of it fails open. A parse miss degrades to model-driven behaviour, never to a broken turn.
 
-### Having Docsbook run the skill for you
+### Asking Docsbook how to run the skill
 
-Four MCP tools run one skill each on Docsbook's machines, against your workspace, on the project's own balance:
+Four MCP tools used to run one skill each on Docsbook's machines and hand back a run id to poll — `run_docs_analyze`, `run_docs_create`, `run_docs_manage`, `run_docs_automate`. They were removed on 12.09.2026, with the run screens that read them back. A run you cannot watch is a worse way to buy minutes of work your own agent is already holding the repository for.
+
+What is there instead is `docsbook`, the one agent on the server, and it advises:
 
 ```typescript
-run_docs_analyze({ request: "why is our quickstart getting impressions but no clicks?" })
-// → { run_id: "run_…", state: "queued" }
-get_agent_run({ run_id: "run_…" })   // poll ≈ every 30s; a run typically takes 1–15 minutes
+docsbook({ request: "why is our quickstart getting impressions but no clicks?" })
+// → how to think about it, the steps in order with the tool on each,
+//   who runs each one, what to carry between them, and what would make
+//   the answer wrong. Your agent then makes those calls itself.
 ```
 
-`run_docs_analyze` changes nothing and works with a read-only token — it runs an audit-mode skill, and the mutation guard above applies to the whole run. The other three commit pages or settings and need a read-write token. A job that waited more than six hours before a machine picked it up is answered as expired rather than run late: an audit answers a question about a site as it was when it was asked.
+It changes nothing, works with a read-only token, costs a read, and `workspace_id` is optional — so it is safe to ask before you know whether the answer will help. `find_skill` still hands over the whole SKILL.md when you want the rulebook rather than a route through it.
 
 ### Quality controls
 
@@ -131,13 +134,13 @@ The frontmatter fields Docsbook uses are a superset of the open Agent Skills sta
 - **The skills are not pinned by hash.** A skill's `raw_url` points at the catalog's `main` branch, not at a commit. So the SKILL.md an agent fetched last week and the one it fetches today can differ, and nothing verifies the content it received. What *is* pinned is `metadata.version` — an agent can record which revision it ran, but it cannot demand one. Content-addressed skill references are not implemented; treat a skill as a moving document with a version stamp, not a lockfile entry.
 - **`find_skill`'s `requires_plan` filter currently filters nothing.** The tool accepts `free`, `pro` or `business`, but no entry in the published index declares a `requires_plan`, so every skill matches every value. The filter is honest about what it will do once entries carry the field; today it is inert.
 - **`docs-analyze`'s description is 1 806 characters.** That is inside the catalog's own schema limit (2 000) and outside the open Agent Skills spec's limit of "Maximum 1024 characters" for `description` ([agentskills.io](https://agentskills.io/specification)), and above the 1 536-character budget Claude Code documents for the combined skill listing, where "Claude Code shortens descriptions to fit the listing's character budget" ([Claude Code skills](https://code.claude.com/docs/en/skills)). A client that truncates will cut the Russian trigger phrases at the end first. This is a known defect in the catalog, not a design choice.
-- **`orchestrator` is not one of the runtime-enforced modes.** All four published skills declare `mode: orchestrator`, and the server-side audit guard recognises `audit`, `refactor`, `authoring` and `platform`. The `run_docs_analyze` runner sets audit mode for its own run regardless, so the read-only guarantee there holds — but a `/docs-analyze` slash invocation resolves to no enforced mode. Treat "declared audit-mode" as true of the runner, not of the catalog entry.
+- **`orchestrator` is not one of the runtime-enforced modes.** All four published skills declare `mode: orchestrator`, and the server-side audit guard recognises `audit`, `refactor`, `authoring` and `platform`. A `/docs-analyze` slash invocation therefore resolves to no enforced mode. The runner that used to set audit mode for its own run is gone (see above), so there is no longer any path on which "declared audit-mode" is enforced for these four — the guard protects a turn that has preloaded an `audit` skill, and nothing else.
 - **Nothing here measures whether skills make agents better.** Docsbook runs an internal harness against its own admin chat and uses it to decide which descriptions to change. Those are our own measurements on our own probes, not a published benchmark, and this page states none of their numbers as fact.
-- **Running a skill with your own agent costs nothing here, and Docsbook cannot see it.** Only the MCP tools a skill calls and the `run_docs_*` jobs draw on a project's balance; the [pricing page](https://docsbook.io/pricing) carries the current amounts. Agent runs start at Pro.
+- **Running a skill with your own agent costs nothing here, and Docsbook cannot see it.** Only the MCP tools a skill calls draw on a project's balance; the [pricing page](https://docsbook.io/pricing) carries the current amounts.
 
 ## Related
 
-- [MCP Server](./mcp.md) — where `find_skill` and the four `run_docs_*` runners live, and what a call draws on
+- [MCP Server](./mcp.md) — where `find_skill` and the `docsbook` adviser live, and what a call draws on
 - [Source of Truth](./source-of-truth.md) — the document graph a skill's steps read before they write
 - [Agent-ready content](./README.md) — how the four machine surfaces fit together
 - [llms.txt](../geo/llms-txt.md) — the discovery surface for an agent with no MCP connection

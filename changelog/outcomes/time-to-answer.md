@@ -9,6 +9,16 @@ Everything Docsbook shipped that moves one number: **Time to answer** — reader
 
 How long a reader hunts before the page they needed is in front of them. This is the Time to answer slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 12.09.2026
+
+### Added
+
+- Docsbook now remembers what is true about your project between sessions: `list_memory`, `add_memory`, `edit_memory` and `remove_memory` hold the facts, rules and preferences every agent otherwise works out again on every run — where your real pricing page is, words your product never uses, a section nobody may restructure — so the same question is not answered from scratch, and wrongly, twice. `MCP`
+
+### Removed
+
+- `get_change_history` is gone. It could only measure a change that arrived as a commit, and only in traffic, so turning on a language, re-ranking the navigation or fixing an answer the assistant kept getting wrong were all unmeasurable. The snapshots above measure any of them; the commit case keeps `get_page_diff_impact`, which still judges an edit against the pages nobody touched. `MCP`
+
 ## NEW - 11.09.2026
 
 ### Added

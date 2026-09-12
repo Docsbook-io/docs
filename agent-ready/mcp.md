@@ -12,7 +12,7 @@ This page is the reference for what the server serves and what a call draws on. 
 
 ## What is the Docsbook MCP server?
 
-The Docsbook MCP server exposes **136 tools** over the Model Context Protocol, an open standard for handing tools, resources and prompts to AI agents over a typed RPC interface. Exactly one of them is an agent: `docsbook`, an expert that takes any documentation request in the user's own words and answers with how to do the work — the method, the steps, the tools to call on each, and what to remember — while doing none of it itself. Of the rest, 18 are one-per-webhook-event registrations; 13 are backed by an external scraping vendor for the things Docsbook's own crawler cannot reach; five are collectors that hand back evidence with the exact calls that produced every row, so you can re-run them and get the same answer; one (`audit_geo`) scores whether an answer engine can fetch and quote you; and four start and read background runs. The remaining 94 are the individually named tools covering workspace, content, chat, analytics and webhook operations — among them the two that connect and configure a repository or website as a source of truth.
+The Docsbook MCP server exposes **136 tools** over the Model Context Protocol, an open standard for handing tools, resources and prompts to AI agents over a typed RPC interface. Exactly one of them is an agent: `docsbook`, an expert that takes any documentation request in the user's own words and answers with how to do the work — the method, the steps, the tools to call on each, and what to remember — while doing none of it itself. Of the rest, 18 are one-per-webhook-event registrations; 13 are backed by an external scraping vendor for the things Docsbook's own crawler cannot reach; five are collectors that hand back evidence with the exact calls that produced every row, so you can re-run them and get the same answer; and one (`audit_geo`) scores whether an answer engine can fetch and quote you. The remaining 98 are the individually named tools covering workspace, content, chat, analytics, call history, project memory and webhook operations — among them the two that connect and configure a repository or website as a source of truth.
 
 ## Endpoint
 
@@ -230,8 +230,11 @@ Diagnosis without a fix is a report. These close the loop inside one connection.
 | `get_doc_outline` | Every page with title, heading count, size. Cheap orientation before a search or a write. |
 | `write_docs` | Commits one or many markdown files in **one atomic git commit**. Turns analysis into a shipped change. |
 | `fetch_url` | Reads one public web page as clean Markdown. The tool that lets an agent check a page against the world outside your workspace — a competitor's pricing, your own marketing site, or whether a link a doc depends on is still alive. |
-| `get_change_history` | **Call before editing.** What was changed before and how the affected pages' traffic moved after — with raw before/after visit counts, `low_sample` and `pending` flags, and **no verdict on purpose** (a commit and a traffic move in the same week are not cause and effect). Without it, the same recommendation gets made forever with the same confidence. |
-| `get_page_diff_impact` | **Call after shipping.** Did that edit actually help? Compares the pages a commit touched against the pages it did not, before and after — outcome mix, self-serve resolution, time to first value. The untouched pages are the control, and they are the point: docs traffic moves for reasons unrelated to your edit, so an improvement only counts if it beat the site trend. A change that merely matched it is reported as no effect, not as a win. Also breaks the visits down by country, reader language and device, each next to the same slice's move on the untouched pages — which is what turns "traffic went up" into a decision. Where you have set an average price and a call-to-action URL, it also prices the edit — conversions and revenue on the touched pages, before and after. |
+| `list_tool_calls` | **Call before editing.** Every read made here is kept with the answer it gave, so any read tool is a snapshot instrument. This groups them into series — one tool on one page, heading, host or the whole site — and says which already have a second reading to compare against. Without it the same recommendation gets made forever with the same confidence, and a rewrite ships with no baseline to judge it by. |
+| `compare_tool_calls` | **Call after shipping, for a change that was not a commit** — a setting, a language, the navigation, the assistant's prompt. Puts two readings of the same instrument side by side and reports every number that moved, what appeared, what went away, and how many fields did *not* move, which is the denominator. A percentage is `null` when the baseline was zero, never `∞`. **No verdict on purpose**: two readings a week apart are two facts, not cause and effect. |
+| `search_tool_calls` / `get_tool_call` | Find a past reading by what is inside it — a page it was about, a word in the answer, an error it returned — ranked so the calls actually *about* a page beat the ones that merely mention it; then read one whole. |
+| `list_memory` / `add_memory` / `edit_memory` / `remove_memory` | What Docsbook knows about this project between sessions: facts, rules and preferences every agent otherwise works out again on every run. Read it before deciding anything — an owner's rule outranks an agent's reading of the site — and write back anything the next session would re-derive. Visible and editable by the owner in the panel, so nothing here is an agent's private notes about somebody else's product. |
+| `get_page_diff_impact` | **Call after shipping, for a change that WAS a commit.** Did that edit actually help? Compares the pages a commit touched against the pages it did not, before and after — outcome mix, self-serve resolution, time to first value. The untouched pages are the control, and they are the point: docs traffic moves for reasons unrelated to your edit, so an improvement only counts if it beat the site trend. A change that merely matched it is reported as no effect, not as a win. Also breaks the visits down by country, reader language and device, each next to the same slice's move on the untouched pages — which is what turns "traffic went up" into a decision. Where you have set an average price and a call-to-action URL, it also prices the edit — conversions and revenue on the touched pages, before and after. Called with no commit, it lists the commits it can measure. |
 | `update_navigation` | The fix for a defect `get_route_patterns` or `get_reverse_funnel` found — often cheaper and more effective than rewriting a page. |
 | `find_skill` / `find_widget` | Discover a packaged capability — a workflow skill, an interactive widget — instead of writing one. |
 | `list_issues` / `get_issue` / `create_issue` | The project's own GitHub issue tracker. Not every finding is a change you make in the same breath — `create_issue` is how one that is not gets written down instead of ending with the conversation. `list_issues` first, so a finding does not duplicate an issue already open. Filing needs a read-write token; reading does not. |
@@ -270,12 +273,14 @@ No single tool above is the product. These loops are.
 get_visit_outcomes      → the rate: 31% of visits end with nothing
 get_dead_end_pages      → which pages those visits died on
 get_rage_signals        → what the reader was trying to do there
-get_change_history      → has this page been "fixed" before, and did it work?
+list_tool_calls         → has this page been "fixed" before, and did it work?
 search_docs → write_docs → ship the fix
 get_page_diff_impact    → did the edited pages beat the pages you did not touch?
+compare_tool_calls      → …and for a change that was not a commit, the same
+                          reading before and after
 ```
 
-The rate alone is unactionable, the page list alone lacks a cause, and a fix without `get_change_history` repeats a failed edit with full confidence. The last step is what closes the loop: a site-wide trend line moves for a dozen reasons, so "the rate improved after my commit" is only evidence when the pages you edited improved *more than the ones you left alone*. Only the sequence produces a change you can defend.
+The rate alone is unactionable, the page list alone lacks a cause, and a fix without `list_tool_calls` repeats a failed edit with full confidence. The last step is what closes the loop: a site-wide trend line moves for a dozen reasons, so "the rate improved after my commit" is only evidence when the pages you edited improved *more than the ones you left alone*. Only the sequence produces a change you can defend.
 
 ### Loop 2 — "Is my navigation lying to readers?"
 
@@ -317,31 +322,25 @@ The last step is the one everybody skips. Traffic from an AI answer that dead-en
 Run Loop 1 on a schedule from CI:
 
 ```text
-weekly:  get_content_health  → take the worst 3
-         get_change_history  → skip anything already tried and failed
+weekly:  get_content_health  → take the worst 3, and this reading is
+                                also the baseline for next week
+         list_tool_calls     → skip anything already tried and failed
          search_docs → write_docs → open a PR
          get_page_diff_impact → report on the PR whether the edited pages
                                 beat the untouched ones, or say they did not
+         compare_tool_calls  → next week, this week's reading against
+                                last week's, on the same pages
 ```
 
 Documentation that repairs itself and shows its work — "saw the problem" and "fixed the problem" without leaving the connection.
 
 ## Handing over the whole job
 
-Every tool above answers inside the call that asked for it. Four do not, and that is the point of them.
+Every tool here answers inside the call that asked for it. There is no job to start and no run to poll.
 
-Auditing a site, building one, restructuring it, or standing up the monitors that keep it honest is minutes of work — reading pages, reasoning over numbers, committing files. `find_skill` handles that by handing the SKILL.md to *your* agent, which only works if your agent is also connected here, has picked a workspace, and will spend twenty tool calls on it. These four run the skill on our side instead, against your workspace, with the full administrative toolset the skill was written for.
+There used to be four — `run_docs_analyze`, `run_docs_create`, `run_docs_manage`, `run_docs_automate` — which ran a skill on our side against your workspace and handed back a run id to poll. They are gone, along with `get_agent_run`, `list_agent_runs` and `cancel_agent_run`. Auditing a site, building one, restructuring it or standing up its monitors is still minutes of work, but it is minutes of work your own agent is already holding the repository for, and a run you cannot watch is a worse way to buy them.
 
-| Tool | What it is worth |
-|---|---|
-| `run_docs_analyze` | The full `docs-analyze` audit, run for you: what is wrong, judged from search positions, reader behaviour and your own goals — plus the gap no number shows, the audiences and use cases the docs never address. It is declared audit-mode, so it cannot change anything and works with a read-only token. |
-| `run_docs_create` | The full `docs-create` pipeline: audit the product, decide the structure, write the pages, publish. From your site, a repository, another platform you are leaving, or a product name alone. |
-| `run_docs_manage` | The `docs-manage` rulebook applied rather than quoted: pages rewritten, the site configured, goals and funnels declared. Use it when the request is a judgement ("make this good") rather than a value ("set the accent to #0f0"). |
-| `run_docs_automate` | `docs-automate`, so the checks keep happening: drift guards, webhooks, CI checks, alerts and standing monitors. |
-
-**Starting a job and reading its outcome are two separate calls.** A `run_docs_*` call returns `{ run_id, state: "queued" }` — never findings, never pages. `get_agent_run` returns the state, live progress while it runs, and once it has succeeded the report, every action the run took, and what changed. `list_agent_runs` finds a run id you lost; `cancel_agent_run` stops one that has not finished, without undoing what it already committed.
-
-The three that write require a **read-write** token. `run_docs_analyze` does not, because it cannot write.
+What replaced them is `docsbook`, the one agent on this server, and it advises rather than runs: ask it in your own words and it answers with how to think about the request, the steps in order with the tool on each, who runs each one, what to carry between them, what will make the answer wrong, and what is worth remembering. Then your agent does the work, on your token, at read prices. `find_skill` still hands over the long-form method when you want the whole rulebook rather than a route through it.
 
 ## Buying the evidence without the opinion
 
@@ -398,7 +397,7 @@ A call is charged a **flat amount, fixed before the call runs and independent of
 | Probe | Gathers and normalises one family of facts, with no model in it | `collect_*` |
 | AI | Calls a model to write, read or rank | `write_docs`, `search_docs`, `search`, `get_insights`, `get_chat_intent` |
 | Lens | One model pass over an evidence record it was handed, re-read from a single declared angle | Reserved (`lens_*`) — no tool is in this class today |
-| Agent | Runs a whole agent behind one call | `audit_geo`, `generate_issues` and `run_docs_*`. The 135 action tools and the 41 `agent_*` goals were also in this class until 2026-09-12; their historical calls still price and report under it |
+| Agent | Runs a whole agent behind one call | `audit_geo`. The 135 action tools, the 41 `agent_*` goals and the four `run_docs_*` runners were also in this class until 2026-09-12; their historical calls still price and report under it |
 
 ⚡ **Per-tool pricing inside the Agent class went with the action family.** While there were 135 of them, each was priced from the work it declared — how many families of evidence it read, how many model round trips it might take, whether it left your site — so a narrow observation drew a fraction of a deep draft. What remains in the class spans the band honestly, so it is priced at the band.
 
@@ -420,7 +419,7 @@ Unauthenticated, repo-scoped access to a public documentation site is never mete
 
 Access to the Docsbook MCP server is decided by the token, not by a tier. A token carries a **scope**, and the scope is the only thing that separates reading from writing:
 
-- **Read-only** — every reporting, search and outline tool answers. `write_docs`, `create_issue`, `connect_source`, `configure_source` and the three writing `run_docs_*` runs refuse, and say why. Those seven are the tools that currently check the scope; the settings, webhook, goal and translation writers are gated by project ownership alone, so read-only is not a "changes nothing" token — see [MCP server security](./mcp-security.md#what-each-scope-can-do).
+- **Read-only** — every reporting, search and outline tool answers. `write_docs`, `create_issue`, `connect_source` and `configure_source` refuse, and say why. Those four are the tools that currently check the scope; the settings, webhook, goal and translation writers are gated by project ownership alone, so read-only is not a "changes nothing" token — see [MCP server security](./mcp-security.md#what-each-scope-can-do).
 - **Read-write** — everything the account can do: committing pages, filing issues, connecting sources, arming agents and changing settings.
 - **No token at all** — on a repo-scoped endpoint (`docsbook.io/{owner}/{repo}/api/mcp/server`), `get_info`, `find_skill`, `find_widget` and `list_content_widgets` answer from the public catalog, and `search` answers over that site's own documentation — the one tool here that reads a project, because what it reads is the published site. It is refused on a private site, on a site whose plan has lapsed, on an endpoint not pinned to a site, and when the project has no AI balance left; it takes no project argument, so it can only ever read the site it is pinned to. Every other tool requires a valid Bearer token tied to a Docsbook account.
 
@@ -430,6 +429,6 @@ When a call is refused, the server returns a structured error naming the reason 
 
 - [MCP tools reference](../reference/mcp-tools.md) — every tool with its parameters.
 - [Chat Hooks](../ai-chat/chat-hooks.md) — Configure pre/post-LLM hooks via MCP.
-- [Docs Skills](./skills.md) — Discover SKILL.md files through `find_skill`, or have one run for you with `run_docs_*`.
+- [Docs Skills](./skills.md) — Discover SKILL.md files through `find_skill`, or ask `docsbook` for the route through one.
 - [Webhooks](../reference/webhooks.md) — Register event handlers from MCP, and verify their signatures.
 - [Pricing](https://docsbook.io/pricing) — what a metered call draws on, generated from the live billing constants.

@@ -1,11 +1,17 @@
 ---
 title: "What shipped in the Docsbook Changes tab, and when"
-description: "Every release that touched the Changes tab: the commit history of your docs, the traffic each change moved, and the before/after compare."
+description: "Every release that touched the Changes tab, later renamed Pull Requests: the review queue, the commit history of your docs and the traffic each change moved. The section was removed on 12.09.2026 in favour of a card on Overview; this page is its history."
 ---
 
 # What shipped in the Docsbook Changes tab, and when
 
 Everything that shipped in **Changes**. This is the Changes slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
+
+## NEW - 12.09.2026
+
+### Changed
+
+- `get_page_diff_impact` hands back the list of commits it can measure when you call it without one, so checking whether a rewrite helped is one call instead of hunting for a SHA first. `Changes`
 
 ## NEW - 05.09.2026
 

@@ -15,10 +15,14 @@ Readers who came to learn and left having started — the docs' real job. This i
 
 - Ask the new `docsbook` agent about anything in your documentation, in your own words, and it hands your coding agent a short set of instructions to carry out — what it found and what says so, the steps in order, what must not change, and how you know it worked — so the work happens in your own checkout in minutes instead of waiting on a run you cannot watch. `MCP`
 - Every instruction says where its work lands: your checkout, one named Docsbook call you make yourself, or a decision only a person can take, so no step is quietly assigned to nobody. `MCP`
+- `search_tool_calls` finds a past reading by what is inside it — a page it was about, a word in the answer, an error it returned — ranked so the calls actually about `/pricing` come above the fifty that merely mention it, and `get_tool_call` opens one whole. `MCP`
+- Docsbook now remembers what is true about your project between sessions: `list_memory`, `add_memory`, `edit_memory` and `remove_memory` hold the facts, rules and preferences every agent otherwise works out again on every run — where your real pricing page is, words your product never uses, a section nobody may restructure — so the same question is not answered from scratch, and wrongly, twice. `MCP`
+- `edit_goal` corrects a goal in place — its label, what one completion is worth, what it matches — where the only route before was deleting and recreating it, which broke every funnel that named it and reset the date you started measuring. `MCP`
 
 ### Changed
 
 - Every step says where its work lands: your own checkout, one named Docsbook call you make yourself, or a subagent worth handing it to. Steps in your checkout name the tools, so "look at what changed" arrives as `git log --since` rather than as a suggestion. `MCP`
+- Editing a goal from the panel and editing one from an agent now go through the same rules, so a conversion goal one of them accepts and the other refuses is no longer possible. `Analytics`
 
 ### Removed
 

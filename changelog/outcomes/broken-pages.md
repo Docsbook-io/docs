@@ -11,6 +11,10 @@ Claims and links that stopped being true — found before a reader finds them. T
 
 ## NEW - 12.09.2026
 
+### Added
+
+- Docsbook now remembers what is true about your project between sessions: `list_memory`, `add_memory`, `edit_memory` and `remove_memory` hold the facts, rules and preferences every agent otherwise works out again on every run — where your real pricing page is, words your product never uses, a section nobody may restructure — so the same question is not answered from scratch, and wrongly, twice. `MCP`
+
 ### Changed
 
 - The `docsbook` agent is now an expert rather than a planner: ask it anything about your documentation and it answers with how to think about the request, the steps in order with the exact tool on each, what to carry from one step into the next, what the content has to do, what will make the answer wrong, and the rules worth keeping — and then your own coding agent does all of it. `MCP`
@@ -19,6 +23,7 @@ Claims and links that stopped being true — found before a reader finds them. T
 ### Removed
 
 - **The 135 action tools are gone too** — `observe_*`, `explain_*`, `discover_*`, `decide_*`, `plan_*`, `draft_*`, `measure_*`, `verify_*`, `learn_*`, `handoff_*`. One of the 136 had ever been called. Each ran a model on our servers over ordinary reads you can make yourself, so what they charged for was applying a method, not reaching anything you could not. `MCP`
+- `get_change_history` is gone. It could only measure a change that arrived as a commit, and only in traffic, so turning on a language, re-ranking the navigation or fixing an answer the assistant kept getting wrong were all unmeasurable. The snapshots above measure any of them; the commit case keeps `get_page_diff_impact`, which still judges an edit against the pages nobody touched. `MCP`
 
 ## NEW - 05.09.2026
 

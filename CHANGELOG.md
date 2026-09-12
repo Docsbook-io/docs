@@ -13,6 +13,13 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Ask the new `docsbook` agent about anything in your documentation, in your own words, and it hands your coding agent a short set of instructions to carry out — what it found and what says so, the steps in order, what must not change, and how you know it worked — so the work happens in your own checkout in minutes instead of waiting on a run you cannot watch. `MCP`
 - Every instruction says where its work lands: your checkout, one named Docsbook call you make yourself, or a decision only a person can take, so no step is quietly assigned to nobody. `MCP`
 - Every answer also comes as markdown, ready to paste into an issue or another session, so the plan does not have to be retyped for whoever picks the work up. `MCP`
+- Every read your agent makes is now kept with the answer it gave, which turns any of them into a snapshot: read a page's traffic today, read it again after the rewrite, and `compare_tool_calls` tells you what moved — so "did that change work" stops being a matter of opinion and nobody has to remember to write a number down beforehand. `MCP`
+- `list_tool_calls` groups everything ever read here into series — one tool on one page, heading, host or the whole site — and says which already have a second reading to compare against, so you find out what is measurable BEFORE you rewrite a page rather than after, when the baseline can no longer be taken. `MCP`
+- `search_tool_calls` finds a past reading by what is inside it — a page it was about, a word in the answer, an error it returned — ranked so the calls actually about `/pricing` come above the fifty that merely mention it, and `get_tool_call` opens one whole. `MCP`
+- Docsbook now remembers what is true about your project between sessions: `list_memory`, `add_memory`, `edit_memory` and `remove_memory` hold the facts, rules and preferences every agent otherwise works out again on every run — where your real pricing page is, words your product never uses, a section nobody may restructure — so the same question is not answered from scratch, and wrongly, twice. `MCP`
+- Two new cards on Overview, **Analytics snapshots** and **SEO snapshots**, show what has been measured on this project and how many of those readings have a second one to compare against — the figure that decides whether a change you make today can be measured at all. `MCP`
+- A **What Docsbook knows** card puts that memory in front of you: every line with who wrote it, you or an agent, editable and retirable on the spot, so a recommendation built on something the system was told six weeks ago is something you can find rather than guess at. `MCP`
+- `edit_goal` corrects a goal in place — its label, what one completion is worth, what it matches — where the only route before was deleting and recreating it, which broke every funnel that named it and reset the date you started measuring. `MCP`
 
 ### Changed
 
@@ -26,6 +33,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - A request in Russian now reaches the same advice as its English twin. The outcome classifier reads English only, so anything else used to route nowhere; every workflow now carries the phrasings people actually use, in both languages. `MCP`
 - `workspace_id` is optional on the agent, so an assistant that has not picked a project can still ask how the work is done. Name a project and the answer also says what that project can and cannot see, so a step that comes back thin reads as expected rather than broken. `MCP`
 - Each answer names the published skill carrying the long-form method for that work, and the exact call that fetches it, instead of restating it. `Skills`
+- `get_page_diff_impact` hands back the list of commits it can measure when you call it without one, so checking whether a rewrite helped is one call instead of hunting for a SHA first. `Changes`
+- Editing a goal from the panel and editing one from an agent now go through the same rules, so a conversion goal one of them accepts and the other refuses is no longer possible. `Analytics`
 
 ### Removed
 
@@ -40,6 +49,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Tools that CHANGE something now say so in their own description: write a page, change a setting, file an issue or arm an alert, and the tool tells your agent to ask `docsbook` what the change should be first — because the useful answer is often "not yet, this is thin, go and read X". Reading tools deliberately say nothing of the kind: reading is the consultation. `MCP`
 - New workflow for the commonest request there is — changing a page that already exists. It starts by asking what readers were failing to get from it (searches that returned nothing, questions the assistant could not answer, pages voted down) rather than by editing, and it warns you when the page already ranks: change the body before the title, in separate commits, or you cannot tell which one moved it. `MCP`
 - `collect_*` and `audit_geo` are their own family on the tool list now — the evidence tools, which gather in code with no model in the path and hand back the exact calls behind every row, so you can re-run them and get the same answer. `MCP`
+- `get_change_history` is gone. It could only measure a change that arrived as a commit, and only in traffic, so turning on a language, re-ranking the navigation or fixing an answer the assistant kept getting wrong were all unmeasurable. The snapshots above measure any of them; the commit case keeps `get_page_diff_impact`, which still judges an edit against the pages nobody touched. `MCP`
 
 ## NEW - 11.09.2026
 

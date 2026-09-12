@@ -14,6 +14,8 @@ One visit is a look; a second is a product someone is actually adopting. This is
 ### Added
 
 - Every answer also comes as markdown, ready to paste into an issue or another session, so the plan does not have to be retyped for whoever picks the work up. `MCP`
+- `search_tool_calls` finds a past reading by what is inside it — a page it was about, a word in the answer, an error it returned — ranked so the calls actually about `/pricing` come above the fifty that merely mention it, and `get_tool_call` opens one whole. `MCP`
+- Docsbook now remembers what is true about your project between sessions: `list_memory`, `add_memory`, `edit_memory` and `remove_memory` hold the facts, rules and preferences every agent otherwise works out again on every run — where your real pricing page is, words your product never uses, a section nobody may restructure — so the same question is not answered from scratch, and wrongly, twice. `MCP`
 
 ### Removed
 

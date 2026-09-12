@@ -1,6 +1,6 @@
 ---
 title: "Every tool the Docsbook MCP server exposes to an agent"
-description: "The 136 tools a Docsbook workspace exposes over MCP — the one `docsbook` expert agent, workspace setup, content, issues, chat, translations, analytics, webhooks, standing automations and background agent runs."
+description: "The 136 tools a Docsbook workspace exposes over MCP — the one `docsbook` expert agent, workspace setup, content, issues, chat, translations, analytics, call history, project memory and webhooks."
 ---
 
 # MCP Tools Reference
@@ -129,6 +129,34 @@ A Docsbook-hosted site's issues live on the repository Docsbook hosts for it; a 
 | `get_page_journeys` | Analytics | Reader navigation paths between pages |
 | `query_events` | Analytics | Arbitrary query over the platform event warehouse |
 
+Every one of these is recorded with the answer it gave, which is what the next section is about.
+
+## Call history — every read is a snapshot
+
+Each metered call is kept with its arguments and its answer, so any read tool above doubles as a measuring instrument: read something today, read it again after the change, and the two are a before and an after nobody had to plan for. Free on every plan — this is the record of calls you already paid for once.
+
+| Tool | Billing | Description |
+|---|---|---|
+| `list_tool_calls` | Read | The history, grouped into **series** — one tool on one subject (a page, a heading, a host, a search query, or the whole site, normalised so `/Quick-Start/` and `quick-start` are one series). Each says how many readings exist, when the last two were, and whether it can be compared yet. |
+| `compare_tool_calls` | Read | Two readings of the same instrument, and every number that moved — with what appeared, what went away, and how many fields did *not* move, which is the denominator. A percentage is `null` when the baseline was zero, never `∞`. **No verdict**: two readings a week apart are two facts, not cause and effect. |
+| `search_tool_calls` | Read | Find a past reading by what is inside it, ranked by where the words landed — the calls *about* `/pricing` above the ones that merely mention it. Inline filters: `tool:`, `path:`, `since:`, `failed:`, `source:`. |
+| `get_tool_call` | Read | One recorded call, whole: the exact arguments and the exact answer, as stored (truncated with a marker, and redacted by key so no secret can be read back out). |
+
+🔴 **Take the reading before you change anything.** A baseline cannot be created afterwards, and `compare_tool_calls` runs nothing — it compares what is already recorded.
+
+`get_page_diff_impact` is the commit-shaped version: for a change that shipped as a commit, it judges the pages that commit touched against the pages it did not. Called with no `sha`, it lists the commits it can measure. It replaced `get_change_history`, which was removed on 2026-09-12 — that tool could only measure a change that arrived as a commit, and only in traffic.
+
+## What Docsbook knows about the project
+
+Facts, rules and preferences that outlive one session — what every agent otherwise works out again on every run. Free on every plan, and visible and editable by the owner in the admin panel, so nothing here is an agent's private notes about somebody else's product.
+
+| Tool | Billing | Description |
+|---|---|---|
+| `list_memory` | Read | Everything the project has been told, each line with its kind (`fact` — checkable; `rule` — an instruction that outranks an agent's own reading; `preference` — taste), who wrote it (`owner` or `agent`) and what it rests on. Read it before deciding anything. |
+| `add_memory` | Write | Record one claim the next session would otherwise re-derive. Not for findings that expire — a measurement records itself in the call history above. |
+| `edit_memory` | Write | Correct a line **in place**, so the date the project first learnt it survives the correction. |
+| `remove_memory` | Write | Retire a line that stopped being true. Archived, never destroyed: a rule that simply vanished gets re-derived. |
+
 ## Webhooks
 
 Registering a webhook costs nothing to keep; only the outbound deliveries and replays are metered, as egress.
@@ -174,23 +202,13 @@ Your own agent then makes those calls, on your own token, at read prices. The me
 
 Five tools sit under the family in a cheaper billing class of their own, **Probe**: `collect_page_text`, `collect_corpus_map`, `collect_assistant_questions`, `collect_traffic` and `collect_onsite_search`. They hand back normalised rows plus a `reproduce` block naming the exact calls behind every row — no model in the path, so there is nothing in them to disbelieve. Buy one when you want the numbers themselves rather than a reading of them. `audit_geo` sits beside them and is the one survivor of the action family: its evidence layer is code rather than a model, and it scores whether answer engines can fetch and quote your pages at all.
 
-## Background agent runs
+## Background agent runs were removed
 
-`find_skill` hands the SKILL.md to *your* agent to execute. These tools do the opposite: they run the skill on Docsbook's side, against your workspace, with the full administrative toolset the skill was written for — so an assistant with no other Docsbook tools connected can still get the job done.
+Until 2026-09-12 four tools ran a skill on Docsbook's side against your workspace — `run_docs_analyze`, `run_docs_create`, `run_docs_manage`, `run_docs_automate` — each returning a `run_id` to poll with `get_agent_run`, `list_agent_runs` and `cancel_agent_run`. All eight are gone, along with the engine behind them.
 
-Each `run_docs_*` call returns `{ run_id, state }` immediately. **It does not return the result** — the work takes minutes, and a caller that reports the start as the answer is reporting work that has not happened. Poll `get_agent_run` with the returned `run_id`.
+Every tool on this server now answers inside the call that asked for it. There is no job to start and no run to poll, which also removes the commonest way to misreport one: a caller that treated `{ run_id, state: "queued" }` as the answer was reporting work that had not happened.
 
-| Tool | Billing | Description |
-|---|---|---|
-| `run_docs_analyze` | Agent | Run the `docs-analyze` skill: audit the site from real numbers and report what is wrong and what it costs. Declared audit-mode — writes are refused for the whole run, so it works with a read-only token. |
-| `run_docs_create` | Agent | Run the `docs-create` skill: build documentation from your site, a repository, another docs platform, or nothing but a product name. Commits pages — needs a **read-write** token. |
-| `run_docs_manage` | Agent | Run the `docs-manage` skill: rewrite pages and configure the site against the writing and site-running rulebook. Needs a **read-write** token. |
-| `run_docs_automate` | Agent | Run the `docs-automate` skill: set up drift guards, event subscriptions, checks on incoming changes, alerts and standing monitors. Needs a **read-write** token. |
-| `get_agent_run` | Read | State of one run (`queued`, `running`, `succeeded`, `failed`, `canceled`, `expired`), live progress while it runs, and once it succeeds the full outcome: the report, every action it took, and what changed on the site. |
-| `list_agent_runs` | Read | Your recent runs, newest first. Use it to check whether the job is already running before starting a second one. |
-| `cancel_agent_run` | Read | Stop a run that has not finished. It does **not** undo what the run already did — pages it already committed stay committed. |
-
-A run belongs to the account that started it: another account's `run_id` reads exactly like an unknown one. A queued run that has not started within a few hours expires rather than running late, because an audit answers a question about the site as it was when it was asked. And a run is attempted once, never retried — a failed run may already have committed pages, and a second attempt would commit them twice.
+What the runs were for is served by `docsbook`, which advises instead of running — the method, the steps in order, the tool on each, and what would make the answer wrong — plus `find_skill`, which hands the whole SKILL.md to the agent already holding your repository.
 
 ## Standing agents were removed
 
@@ -199,7 +217,7 @@ Until 2026-09-12 two tools here — `find_agent` and `enable_agent` — armed a 
 What that engine was actually used for is served by tools that remain:
 
 - **"Tell me when something happens"** — `register_webhook_*` (the 18 typed events), which posts to your own endpoint. Your side decides what to do about it.
-- **"Do the work once"** — the `run_docs_*` runs above, which you start.
+- **"Do the work once"** — your own agent, holding your repository, told what to do by `docsbook`.
 - **"What should I do about this?"** — `docsbook`, which answers with the method, the steps and the tools, and leaves the running to you. That was the only part of a standing agent worth keeping: it knew which tools, in what order, and how the answer goes wrong.
 
 ## Related

@@ -1,6 +1,6 @@
 ---
 title: "What shipped in the Docsbook issue tracker, and when"
-description: "Every release that touched Issues: the GitHub tracker inside the panel, the Start, Audit and Verify actions, and issue generation across the ten stages."
+description: "Every release that touched Issues: the GitHub tracker inside the panel, the Start, Audit and Verify actions, and issue generation across the ten stages. The section was removed on 12.09.2026 in favour of a card on Overview; this page is its history."
 ---
 
 # What shipped in the Docsbook issue tracker, and when

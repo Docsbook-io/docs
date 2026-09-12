@@ -16,6 +16,10 @@ The readers who bounced because the docs were not in their language. This is the
 - A request Docsbook cannot place on an outcome — a narrow task like renaming a section, or a sentence in a language the outcome classifier does not read — no longer comes back as a list of outcomes and nothing else: it comes back with the writing rulebook Docsbook's own writers follow, what is actually published on your site, and the rules the edit must not break. `MCP`
 - A request in Russian now reaches the same advice as its English twin. The outcome classifier reads English only, so anything else used to route nowhere; every workflow now carries the phrasings people actually use, in both languages. `MCP`
 
+### Removed
+
+- `get_change_history` is gone. It could only measure a change that arrived as a commit, and only in traffic, so turning on a language, re-ranking the navigation or fixing an answer the assistant kept getting wrong were all unmeasurable. The snapshots above measure any of them; the commit case keeps `get_page_diff_impact`, which still judges an edit against the pages nobody touched. `MCP`
+
 ## NEW - 05.09.2026
 
 ### Added

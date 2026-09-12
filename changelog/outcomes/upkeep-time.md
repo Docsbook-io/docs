@@ -14,6 +14,10 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 ### Added
 
 - Ask the new `docsbook` agent about anything in your documentation, in your own words, and it hands your coding agent a short set of instructions to carry out — what it found and what says so, the steps in order, what must not change, and how you know it worked — so the work happens in your own checkout in minutes instead of waiting on a run you cannot watch. `MCP`
+- Every read your agent makes is now kept with the answer it gave, which turns any of them into a snapshot: read a page's traffic today, read it again after the rewrite, and `compare_tool_calls` tells you what moved — so "did that change work" stops being a matter of opinion and nobody has to remember to write a number down beforehand. `MCP`
+- `list_tool_calls` groups everything ever read here into series — one tool on one page, heading, host or the whole site — and says which already have a second reading to compare against, so you find out what is measurable BEFORE you rewrite a page rather than after, when the baseline can no longer be taken. `MCP`
+- Docsbook now remembers what is true about your project between sessions: `list_memory`, `add_memory`, `edit_memory` and `remove_memory` hold the facts, rules and preferences every agent otherwise works out again on every run — where your real pricing page is, words your product never uses, a section nobody may restructure — so the same question is not answered from scratch, and wrongly, twice. `MCP`
+- A **What Docsbook knows** card puts that memory in front of you: every line with who wrote it, you or an agent, editable and retirable on the spot, so a recommendation built on something the system was told six weeks ago is something you can find rather than guess at. `MCP`
 
 ### Changed
 
@@ -23,6 +27,8 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 - Every step says where its work lands: your own checkout, one named Docsbook call you make yourself, or a subagent worth handing it to. Steps in your checkout name the tools, so "look at what changed" arrives as `git log --since` rather than as a suggestion. `MCP`
 - `workspace_id` is optional on the agent, so an assistant that has not picked a project can still ask how the work is done. Name a project and the answer also says what that project can and cannot see, so a step that comes back thin reads as expected rather than broken. `MCP`
 - Each answer names the published skill carrying the long-form method for that work, and the exact call that fetches it, instead of restating it. `Skills`
+- `get_page_diff_impact` hands back the list of commits it can measure when you call it without one, so checking whether a rewrite helped is one call instead of hunting for a SHA first. `Changes`
+- Editing a goal from the panel and editing one from an agent now go through the same rules, so a conversion goal one of them accepts and the other refuses is no longer possible. `Analytics`
 
 ### Removed
 

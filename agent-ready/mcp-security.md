@@ -53,10 +53,10 @@ Scope is a single string compared exactly. Anything that is not the write scope 
 |---|---|
 | No token, unscoped endpoint | Nothing. `401` with the discovery header. |
 | No token, repo-scoped endpoint (`/{owner}/{repo}/api/mcp/server`) | Five tools: `get_info`, `find_skill`, `find_widget`, `list_content_widgets`, and `search` over that one published site. Never metered, never billed to anyone. |
-| Read-only token | Every reporting, search, outline and analytics tool, plus `run_docs_analyze`, which runs in audit mode — **and, today, the settings writers listed below** |
+| Read-only token | Every reporting, search, outline, analytics and call-history tool, plus `list_memory` — **and, today, the settings writers listed below** |
 | Read-write token | Everything the account can do |
 
-**The scope check does not cover every writer today, and you should plan around that.** It is enforced on exactly seven tools: `write_docs`, `create_issue`, `connect_source`, `configure_source`, and the three `run_docs_*` runs that write. Those refuse a read-only token before doing anything.
+**The scope check does not cover every writer today, and you should plan around that.** It is enforced on exactly four tools: `write_docs`, `create_issue`, `connect_source` and `configure_source`. Those refuse a read-only token before doing anything.
 
 Every other state-changing tool — the `update_*` and `set_*` settings writers, `update_access`, webhook registration and removal, goal and funnel creation, translation upload, approval and deletion, `create_workspace` — is gated only by project ownership, not by scope. A read-only token can therefore change a project's settings, arm a webhook or delete a translation on a project its account owns. It still cannot commit a page, file an issue, connect a source or arm an agent.
 
@@ -73,7 +73,7 @@ Every tool resolves its target workspace from the explicit `workspace_id`, the `
 Two further boundaries are worth stating because they surprise people:
 
 - **`write_docs` commits to the Docsbook-hosted repository using Docsbook's own GitHub credentials.** A site served from a repository in your own GitHub account is refused with `NO_GITHUB_ACCESS` rather than committed to. An MCP token is therefore not a way to push to your GitHub organisation.
-- **A skill running in audit mode cannot mutate.** While an `audit`-mode skill is active, an explicit list of writers plus every tool whose name begins `update_`, `set_`, `register_webhook_`, `enable_` or `disable_` is refused before it executes. `run_docs_analyze` sets that mode for its whole run, which is why it is safe on a read-only token.
+- **A skill running in audit mode cannot mutate.** While an `audit`-mode skill is active, an explicit list of writers plus every tool whose name begins `update_`, `set_`, `register_webhook_`, `enable_` or `disable_` is refused before it executes. The runner that used to set that mode for a whole server-side run was removed on 12.09.2026, so the guard now protects a turn that has preloaded an `audit` skill and nothing else.
 
 ## What is recorded
 
