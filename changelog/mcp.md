@@ -7,6 +7,21 @@ description: "Every release that touched the MCP server: the tools it serves, wh
 
 Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 12.09.2026
+
+### Added
+
+- Tell your agent what you want to achieve — "we need more organic traffic", "readers keep bouncing", "we are never cited by AI assistants" — and `pursue_goal` works out which of Docsbook's capabilities get you there, in what order, and hands back a plan, so nobody has to know three hundred tool names to start. `MCP`
+- Every step of that plan says who runs it: Docsbook, your coding agent in your own checkout, or you. Work handed to your agent is marked as yours and never marked safe to run unattended, so a rewrite of your pages cannot happen without the findings and the constraints that go with it. `MCP`
+- Ask `capabilities_for_goal` what Docsbook could do about an outcome and what it would need to know first, so you can see whether connecting a repository or Search Console is worth it before you connect it. `MCP`
+- A project with no GitHub repository is no longer turned away: Docsbook can work from your website, a single page, the docs already published here, or two sentences you type about your product, and it says which of those it used. `MCP`
+
+### Changed
+
+- When Docsbook cannot start yet it answers with what it is missing and every way you could supply it, instead of telling you to go and configure a source. `MCP`
+- When a goal is too vague to place, Docsbook asks which outcome you meant and lists them, rather than guessing at the nearest-sounding tool and quietly doing the wrong work. `MCP`
+- The instructions your agent reads at connect time are a third shorter and reordered, so the parts that decide where a request goes now survive the 2 KB a client keeps — previously the half explaining how to route was cut off mid-sentence and never reached Claude Code at all. `MCP`
+
 ## NEW - 11.09.2026
 
 ### Added

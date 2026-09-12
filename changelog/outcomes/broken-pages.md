@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Broken pages** — fewer pa
 
 Claims and links that stopped being true — found before a reader finds them. This is the Broken pages slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 12.09.2026
+
+### Changed
+
+- When a goal is too vague to place, Docsbook asks which outcome you meant and lists them, rather than guessing at the nearest-sounding tool and quietly doing the wrong work. `MCP`
+
 ## NEW - 05.09.2026
 
 ### Fixed

@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Organic traffic** — more 
 
 Pages that already rank 5–20 are the cheapest traffic you will ever buy. This is the Organic traffic slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 12.09.2026
+
+### Added
+
+- Tell your agent what you want to achieve — "we need more organic traffic", "readers keep bouncing", "we are never cited by AI assistants" — and `pursue_goal` works out which of Docsbook's capabilities get you there, in what order, and hands back a plan, so nobody has to know three hundred tool names to start. `MCP`
+
 ## NEW - 11.09.2026
 
 ### Fixed

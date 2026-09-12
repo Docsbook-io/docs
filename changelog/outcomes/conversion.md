@@ -9,6 +9,18 @@ Everything Docsbook shipped that moves one number: **Conversion** — more reade
 
 Readers who came to learn and left having started — the docs' real job. This is the Conversion slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 12.09.2026
+
+### Added
+
+- Tell your agent what you want to achieve — "we need more organic traffic", "readers keep bouncing", "we are never cited by AI assistants" — and `pursue_goal` works out which of Docsbook's capabilities get you there, in what order, and hands back a plan, so nobody has to know three hundred tool names to start. `MCP`
+- Every step of that plan says who runs it: Docsbook, your coding agent in your own checkout, or you. Work handed to your agent is marked as yours and never marked safe to run unattended, so a rewrite of your pages cannot happen without the findings and the constraints that go with it. `MCP`
+- Ask `capabilities_for_goal` what Docsbook could do about an outcome and what it would need to know first, so you can see whether connecting a repository or Search Console is worth it before you connect it. `MCP`
+
+### Changed
+
+- When a goal is too vague to place, Docsbook asks which outcome you meant and lists them, rather than guessing at the nearest-sounding tool and quietly doing the wrong work. `MCP`
+
 ## NEW - 11.09.2026
 
 ### Changed

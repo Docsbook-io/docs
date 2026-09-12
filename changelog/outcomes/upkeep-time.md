@@ -9,6 +9,17 @@ Everything Docsbook shipped that moves one number: **Upkeep time** — less time
 
 Work a person does by hand every week, handed to the agent instead. This is the Upkeep time slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 12.09.2026
+
+### Added
+
+- Tell your agent what you want to achieve — "we need more organic traffic", "readers keep bouncing", "we are never cited by AI assistants" — and `pursue_goal` works out which of Docsbook's capabilities get you there, in what order, and hands back a plan, so nobody has to know three hundred tool names to start. `MCP`
+- Every step of that plan says who runs it: Docsbook, your coding agent in your own checkout, or you. Work handed to your agent is marked as yours and never marked safe to run unattended, so a rewrite of your pages cannot happen without the findings and the constraints that go with it. `MCP`
+
+### Changed
+
+- The instructions your agent reads at connect time are a third shorter and reordered, so the parts that decide where a request goes now survive the 2 KB a client keeps — previously the half explaining how to route was cut off mid-sentence and never reached Claude Code at all. `MCP`
+
 ## NEW - 11.09.2026
 
 ### Added
