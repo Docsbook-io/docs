@@ -43,6 +43,7 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 - The **What Docsbook knows** card no longer prints the goal count as well — the Goals card owns it, so the same number cannot end up stated two different ways on one page. `MCP`
 - Goals, Questions and What Docsbook knows now read like the Analytics cards: tabs for open and closed work, every line editable in a dialog instead of a two-line box, the full list with its evidence and its author behind Details, and the actions on whichever row you are pointing at. `MCP`
 - Your snapshots are one card with a tab per group instead of two half-width lists, so the list of what has been measured here has room to grow as the project is worked on. `MCP`
+- The one agent on the MCP server is now called `docsbook_expert`, and the old name `docsbook` still resolves to it. A client reads the tool list once when it connects and holds those names until it connects again, so anything already connected when the rename shipped went on asking for `docsbook` and was answered "tool not found" on the very call the server tells every client to make first. Reconnect and you will see only the new name. `MCP`
 
 ### Fixed
 

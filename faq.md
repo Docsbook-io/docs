@@ -259,7 +259,7 @@ Install them with `npx skills add Docsbook-io/docs-skills --skill '*'`, or let a
 
 ### Can an AI agent edit my documentation?
 
-Yes. Docsbook's MCP server exposes 136 tools at `https://docsbook.io/api/mcp/server`, so Claude Code, Cursor or ChatGPT can ask the `docsbook` agent what to do and be handed instructions to carry out, read your pages, search them, change settings and commit new pages back. Writing requires a token authorised with read-write scope; a read-only token is refused.
+Yes. Docsbook's MCP server exposes 136 tools at `https://docsbook.io/api/mcp/server`, so Claude Code, Cursor or ChatGPT can ask the `docsbook_expert` agent what to do and be handed instructions to carry out, read your pages, search them, change settings and commit new pages back. Writing requires a token authorised with read-write scope; a read-only token is refused.
 
 See [MCP server](./agent-ready/mcp.md) and the [MCP tools reference](./reference/mcp-tools.md).
 

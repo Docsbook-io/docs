@@ -13,7 +13,7 @@ The four are not alternatives. They answer four different questions an agent ask
 <!-- widget:cards -->
 
 - [Docs Skills](./skills.md) — the SKILL.md catalog: four orchestrator skills that teach any agent how documentation work is actually done, plus how they are discovered, versioned and run
-- [MCP Server](./mcp.md) — 136 typed tools over the Model Context Protocol: ask the one `docsbook` agent and get instructions back, read pages, commit them, read analytics, change settings, start agent runs
+- [MCP Server](./mcp.md) — 136 typed tools over the Model Context Protocol: ask the one `docsbook_expert` agent and get instructions back, read pages, commit them, read analytics, change settings, start agent runs
 - [Source of Truth](./source-of-truth.md) — the document graph: pages, headings, links and anchors as nodes and edges an agent can traverse instead of grepping
 - [MCP security](./mcp-security.md) — the authentication model, token scopes, what the server stores, and the compliance gaps stated plainly
 - [llms.txt](../geo/llms-txt.md) — the machine-readable index of the published site, for an agent with no token and no checkout
@@ -25,7 +25,7 @@ The four are not alternatives. They answer four different questions an agent ask
 | Surface | The agent's question | What it gets | What it costs |
 |---|---|---|---|
 | SKILL.md catalog | "How is this job done properly?" | A workflow with guardrails, ordered steps and acceptance criteria, fetched from GitHub | Nothing — the catalog is public and `find_skill` is never metered |
-| MCP server | "What can I call, on which project?" | 136 tools behind one `docsbook` agent, an `instructions` block at connect time, structured errors that name the next move | Metered per call against the project's balance; discovery calls are free |
+| MCP server | "What can I call, on which project?" | 136 tools behind one `docsbook_expert` agent, an `instructions` block at connect time, structured errors that name the next move | Metered per call against the project's balance; discovery calls are free |
 | Document graph | "Where does this concept live, and what links to it?" | Pages and headings as separate node namespaces, four kinds of edge, broken links and anchor collisions | Free on every plan — it is built from your own markdown |
 | llms.txt | "What exists on this site at all?" | A flat, fetchable index of every published page, with no auth | Free, and readable without a Docsbook account |
 
@@ -34,7 +34,7 @@ The four are not alternatives. They answer four different questions an agent ask
 The handoffs are the design, not a coincidence.
 
 - **A skill names a need, the MCP server answers it.** Docsbook's skills state what evidence a step requires ("read the numbers before reading a page") and let the model pick the tool. That is deliberate: a skill that hard-codes tool names breaks the moment a tool is renamed, and the failure is silent — the agent picks something adjacent and improvises a different method behind an identical-looking report.
-- **The MCP server tells your agent how to run the skill.** Four tools used to execute one on Docsbook's machines and hand back a run id (`run_docs_*`); they were removed on 12.09.2026. `docsbook` answers with the method, the steps and the tool on each instead, and your own agent — already holding the repository — carries them out.
+- **The MCP server tells your agent how to run the skill.** Four tools used to execute one on Docsbook's machines and hand back a run id (`run_docs_*`); they were removed on 12.09.2026. `docsbook_expert` answers with the method, the steps and the tool on each instead, and your own agent — already holding the repository — carries them out.
 - **The graph is what the content tools read.** `search_docs`, `read_doc` and `get_doc_outline` do not grep files; they query a `RichDocGraph` built from your repository's markdown and cached server-side.
 - **llms.txt is the fallback for an agent with neither.** No token, no checkout, no MCP client — just an HTTP GET over the published site.
 

@@ -1,6 +1,6 @@
 ---
 title: "Every tool the Docsbook MCP server exposes to an agent"
-description: "The 136 tools a Docsbook workspace exposes over MCP — the one `docsbook` expert agent, workspace setup, content, issues, chat, translations, analytics, call history, project memory and webhooks."
+description: "The 136 tools a Docsbook workspace exposes over MCP — the one `docsbook_expert` agent, workspace setup, content, issues, chat, translations, analytics, call history, project memory and webhooks."
 ---
 
 # MCP Tools Reference
@@ -30,21 +30,23 @@ mcp add --transport http https://docsbook.io/api/mcp/server
 
 ## Start here: the agent
 
-`docsbook` is the one agent on this server, and the first call to make for any documentation request — however narrow, in any language. It is an **expert, not a runner**: it answers in one round trip with how to do the work, and does none of it.
+`docsbook_expert` is the one agent on this server, and the first call to make for any documentation request — however narrow, in any language. It is an **expert, not a runner**: it answers in one round trip with how to do the work, and does none of it.
 
 | Tool | Billing | Description |
 |---|---|---|
-| `docsbook` | Read | Any documentation request in the user's own words. Returns how to think about it, the steps in order with the tool on each and who runs it, what to carry between steps, what to write, what makes the answer wrong, and what to remember. Runs nothing. `workspace_id` optional |
+| `docsbook_expert` | Read | Any documentation request in the user's own words. Returns how to think about it, the steps in order with the tool on each and who runs it, what to carry between steps, what to write, what makes the answer wrong, and what to remember. Runs nothing. `workspace_id` optional |
 
 Every step in the answer says where its work lands:
 
 - **`you`** — your own checkout, with your editor, shell and tests. The step names the tools (`git log --since`, `Read`, `Edit`), because "use your own tools" is not advice and naming them is.
-- **`docsbook`** — one call to this server, which **you** make. Nothing runs on its own, so the call is gated, charged and logged exactly like any other.
+- **`docsbook_expert`** — one call to this server, which **you** make. Nothing runs on its own, so the call is gated, charged and logged exactly like any other.
 - **`subagent`** — work worth handing to a subagent of your own: a step that fans out over forty pages, or that wants a fresh context.
 
 Steps also carry `transform` — what to keep from one step's output and hand to the next — which is the half a tool list never has and a long route needs most.
 
-`docsbook` never guesses. A request it cannot place on a known workflow gets the general method (the writing rulebook, what is actually published, the constraints) and says out loud that it is the general method. It has no `findings` field, deliberately: nothing ran, so there is nothing measured, and the numbers arrive when you make the calls it names.
+⚡ **It was called `docsbook` until 12.09.2026, and that name still works.** An MCP client reads the tool list once, when it connects, and holds those names for the rest of the session — so a session that was already open when the name changed goes on saying `docsbook`. The server resolves the old name to this one rather than answering "tool not found", which is what it did for a day. Reconnect and you will see only `docsbook_expert`.
+
+`docsbook_expert` never guesses. A request it cannot place on a known workflow gets the general method (the writing rulebook, what is actually published, the constraints) and says out loud that it is the general method. It has no `findings` field, deliberately: nothing ran, so there is nothing measured, and the numbers arrive when you make the calls it names.
 
 **`workspace_id` is optional.** Most of what it knows is true of documentation work rather than of one project. Pass a project and the answer also says what that project can and cannot see, so a step that comes back thin reads as expected rather than broken.
 
@@ -196,7 +198,7 @@ Until 2026-09-12 this section listed 135 read-only tools — `observe_link_graph
 
 Nothing you could do became impossible. Each of them ran on ordinary reads you can make yourself — `get_search_rankings`, `search_docs`, `read_doc`, thirty in all — and what made them worth anything was never the running. It was knowing **which** reads, **in what order**, and **the trap in reading them**.
 
-That is what `docsbook` now hands you, for free, in one call. Ask it what you are trying to achieve and a step comes back as:
+That is what `docsbook_expert` now hands you, for free, in one call. Ask it what you are trying to achieve and a step comes back as:
 
 > **Read what people actually type before they arrive** — `get_search_rankings`, `get_popular_searches`, `get_failed_searches`, `get_search_zero_click`
 >
@@ -208,7 +210,7 @@ That is what `docsbook` now hands you, for free, in one call. Ask it what you ar
 
 Your own agent then makes those calls, on your own token, at read prices. The method is the same method the removed tool followed; you are no longer paying for a second model to apply it.
 
-**What you lose, stated plainly.** Those tools validated themselves: every digit in a claim had to appear in the evidence it cited, so an invented figure failed instead of shipping, and the scores were arithmetic rather than a model's opinion. Nothing validates your own run. What `docsbook` gives you instead is the shape a good answer has — the columns, the allowed values, the cap — so you can tell whether one was followed.
+**What you lose, stated plainly.** Those tools validated themselves: every digit in a claim had to appear in the evidence it cited, so an invented figure failed instead of shipping, and the scores were arithmetic rather than a model's opinion. Nothing validates your own run. What `docsbook_expert` gives you instead is the shape a good answer has — the columns, the allowed values, the cap — so you can tell whether one was followed.
 
 ## Collectors — the evidence, without the reading of it
 
@@ -220,7 +222,7 @@ Until 2026-09-12 four tools ran a skill on Docsbook's side against your workspac
 
 Every tool on this server now answers inside the call that asked for it. There is no job to start and no run to poll, which also removes the commonest way to misreport one: a caller that treated `{ run_id, state: "queued" }` as the answer was reporting work that had not happened.
 
-What the runs were for is served by `docsbook`, which advises instead of running — the method, the steps in order, the tool on each, and what would make the answer wrong — plus `find_skill`, which hands the whole SKILL.md to the agent already holding your repository.
+What the runs were for is served by `docsbook_expert`, which advises instead of running — the method, the steps in order, the tool on each, and what would make the answer wrong — plus `find_skill`, which hands the whole SKILL.md to the agent already holding your repository.
 
 ## Standing agents were removed
 
@@ -229,8 +231,8 @@ Until 2026-09-12 two tools here — `find_agent` and `enable_agent` — armed a 
 What that engine was actually used for is served by tools that remain:
 
 - **"Tell me when something happens"** — `register_webhook_*` (the 18 typed events), which posts to your own endpoint. Your side decides what to do about it.
-- **"Do the work once"** — your own agent, holding your repository, told what to do by `docsbook`.
-- **"What should I do about this?"** — `docsbook`, which answers with the method, the steps and the tools, and leaves the running to you. That was the only part of a standing agent worth keeping: it knew which tools, in what order, and how the answer goes wrong.
+- **"Do the work once"** — your own agent, holding your repository, told what to do by `docsbook_expert`.
+- **"What should I do about this?"** — `docsbook_expert`, which answers with the method, the steps and the tools, and leaves the running to you. That was the only part of a standing agent worth keeping: it knew which tools, in what order, and how the answer goes wrong.
 
 ## Related
 

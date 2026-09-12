@@ -34,6 +34,7 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 - Editing a goal from the panel and editing one from an agent now go through the same rules, so a conversion goal one of them accepts and the other refuses is no longer possible. `Analytics`
 - Ask the `docsbook` agent what counts as success and it now has a workflow for it — read what is already declared, find what readers are trying to do, put one sentence to you, and only then declare it — instead of handing back a list of outcomes to choose from. `MCP`
 - Every answer from the `docsbook` agent now opens with the two readings to take before recommending anything: what you declared counts as the docs working, and what your readers actually asked. Advice given without them is true about documentation and unfalsifiable about your site, and an empty answer to either is reported as a finding rather than skipped. `MCP`
+- The one agent on the MCP server is now called `docsbook_expert`, and the old name `docsbook` still resolves to it. A client reads the tool list once when it connects and holds those names until it connects again, so anything already connected when the rename shipped went on asking for `docsbook` and was answered "tool not found" on the very call the server tells every client to make first. Reconnect and you will see only the new name. `MCP`
 
 ### Removed
 

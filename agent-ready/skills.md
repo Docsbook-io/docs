@@ -97,7 +97,7 @@ All of it fails open. A parse miss degrades to model-driven behaviour, never to 
 
 Four MCP tools used to run one skill each on Docsbook's machines and hand back a run id to poll — `run_docs_analyze`, `run_docs_create`, `run_docs_manage`, `run_docs_automate`. They were removed on 12.09.2026, with the run screens that read them back. A run you cannot watch is a worse way to buy minutes of work your own agent is already holding the repository for.
 
-What is there instead is `docsbook`, the one agent on the server, and it advises:
+What is there instead is `docsbook_expert`, the one agent on the server, and it advises:
 
 ```typescript
 docsbook({ request: "why is our quickstart getting impressions but no clicks?" })
@@ -140,7 +140,7 @@ The frontmatter fields Docsbook uses are a superset of the open Agent Skills sta
 
 ## Related
 
-- [MCP Server](./mcp.md) — where `find_skill` and the `docsbook` adviser live, and what a call draws on
+- [MCP Server](./mcp.md) — where `find_skill` and the `docsbook_expert` adviser live, and what a call draws on
 - [Source of Truth](./source-of-truth.md) — the document graph a skill's steps read before they write
 - [Agent-ready content](./README.md) — how the four machine surfaces fit together
 - [llms.txt](../geo/llms-txt.md) — the discovery surface for an agent with no MCP connection

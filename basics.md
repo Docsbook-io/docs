@@ -132,7 +132,7 @@ Docsbook generates it from the indexed content, so it does not go stale separate
 
 ### MCP server
 
-The **MCP server** is Docsbook's Model Context Protocol endpoint at `https://docsbook.io/api/mcp/server`, exposing 136 tools that let an AI agent ask the `docsbook` agent what to do and get instructions back, read your documentation, search it, change settings, and commit pages back. Authentication is Bearer over OAuth 2.0 with PKCE.
+The **MCP server** is Docsbook's Model Context Protocol endpoint at `https://docsbook.io/api/mcp/server`, exposing 136 tools that let an AI agent ask the `docsbook_expert` agent what to do and get instructions back, read your documentation, search it, change settings, and commit pages back. Authentication is Bearer over OAuth 2.0 with PKCE.
 
 Discovery calls are never metered; other calls draw on the project balance. See [MCP server](./agent-ready/mcp.md) and the [MCP tools reference](./reference/mcp-tools.md).
 

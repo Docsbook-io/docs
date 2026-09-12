@@ -1,7 +1,7 @@
 ---
 title: "MCP server: run your documentation from a coding agent"
 description: "Connect Claude Code, Cursor, Codex or any MCP client to Docsbook and read, write, measure and configure your documentation from inside the editor."
-tldr: "Docsbook's remote MCP server exposes 136 typed tools over one OAuth-protected endpoint — ask the one `docsbook` expert agent how to do the work and carry it out yourself, read pages, commit them, read analytics, change settings, start background agent runs. Calls are billed per call against the project's balance by billing class; discovery is free."
+tldr: "Docsbook's remote MCP server exposes 136 typed tools over one OAuth-protected endpoint — ask the one `docsbook_expert` expert agent how to do the work and carry it out yourself, read pages, commit them, read analytics, change settings, start background agent runs. Calls are billed per call against the project's balance by billing class; discovery is free."
 ---
 
 # MCP Server
@@ -12,7 +12,7 @@ This page is the reference for what the server serves and what a call draws on. 
 
 ## What is the Docsbook MCP server?
 
-The Docsbook MCP server exposes **136 tools** over the Model Context Protocol, an open standard for handing tools, resources and prompts to AI agents over a typed RPC interface. Exactly one of them is an agent: `docsbook`, an expert that takes any documentation request in the user's own words and answers with how to do the work — the method, the steps, the tools to call on each, and what to remember — while doing none of it itself. Of the rest, 18 are one-per-webhook-event registrations; 13 are backed by an external scraping vendor for the things Docsbook's own crawler cannot reach; five are collectors that hand back evidence with the exact calls that produced every row, so you can re-run them and get the same answer; and one (`audit_geo`) scores whether an answer engine can fetch and quote you. The remaining 98 are the individually named tools covering workspace, content, chat, analytics, call history, project memory and webhook operations — among them the two that connect and configure a repository or website as a source of truth.
+The Docsbook MCP server exposes **136 tools** over the Model Context Protocol, an open standard for handing tools, resources and prompts to AI agents over a typed RPC interface. Exactly one of them is an agent: `docsbook_expert`, an expert that takes any documentation request in the user's own words and answers with how to do the work — the method, the steps, the tools to call on each, and what to remember — while doing none of it itself. Of the rest, 18 are one-per-webhook-event registrations; 13 are backed by an external scraping vendor for the things Docsbook's own crawler cannot reach; five are collectors that hand back evidence with the exact calls that produced every row, so you can re-run them and get the same answer; and one (`audit_geo`) scores whether an answer engine can fetch and quote you. The remaining 98 are the individually named tools covering workspace, content, chat, analytics, call history, project memory and webhook operations — among them the two that connect and configure a repository or website as a source of truth.
 
 ## Endpoint
 
@@ -340,7 +340,7 @@ Every tool here answers inside the call that asked for it. There is no job to st
 
 There used to be four — `run_docs_analyze`, `run_docs_create`, `run_docs_manage`, `run_docs_automate` — which ran a skill on our side against your workspace and handed back a run id to poll. They are gone, along with `get_agent_run`, `list_agent_runs` and `cancel_agent_run`. Auditing a site, building one, restructuring it or standing up its monitors is still minutes of work, but it is minutes of work your own agent is already holding the repository for, and a run you cannot watch is a worse way to buy them.
 
-What replaced them is `docsbook`, the one agent on this server, and it advises rather than runs: ask it in your own words and it answers with how to think about the request, the steps in order with the tool on each, who runs each one, what to carry between them, what will make the answer wrong, and what is worth remembering. It also names the two readings to take before any of it — what you declared counts as this documentation working, and what your readers actually asked — because advice given without them is true about documentation in general and unfalsifiable about your site. Then your agent does the work, on your token, at read prices. `find_skill` still hands over the long-form method when you want the whole rulebook rather than a route through it.
+What replaced them is `docsbook_expert`, the one agent on this server, and it advises rather than runs: ask it in your own words and it answers with how to think about the request, the steps in order with the tool on each, who runs each one, what to carry between them, what will make the answer wrong, and what is worth remembering. It also names the two readings to take before any of it — what you declared counts as this documentation working, and what your readers actually asked — because advice given without them is true about documentation in general and unfalsifiable about your site. Then your agent does the work, on your token, at read prices. `find_skill` still hands over the long-form method when you want the whole rulebook rather than a route through it.
 
 ## Buying the evidence without the opinion
 
@@ -358,7 +358,7 @@ Five **collectors** are the first half on its own, charged as a `probe` rather t
 
 There is no model in the path, so there is nothing in them to disbelieve — and the payload proves it rather than claiming it. Every answer carries a **`reproduce`** block: the exact MCP calls and the arguments they were made with, per row. Run them yourself and you get the same record back, apart from the timestamp. Nothing an audit returns can offer that, because an audit's answer passed through a model.
 
-What you do not get is a judgement. No findings, no scores, no ranking, no recommendation — a collector that quietly included one would be a model run at a fraction of the price. For the judgement, ask `docsbook` how to read the rows: it answers with the method and what would make the reading wrong.
+What you do not get is a judgement. No findings, no scores, no ranking, no recommendation — a collector that quietly included one would be a model run at a fraction of the price. For the judgement, ask `docsbook_expert` how to read the rows: it answers with the method and what would make the reading wrong.
 
 **When the cheap one is the right one.** `collect_corpus_map` needs no search data, no traffic and no history at all, and hands back real rows on a site that went up this morning — useful on exactly the projects where every analytics-shaped question answers "not enough data yet".
 
@@ -429,6 +429,6 @@ When a call is refused, the server returns a structured error naming the reason 
 
 - [MCP tools reference](../reference/mcp-tools.md) — every tool with its parameters.
 - [Chat Hooks](../ai-chat/chat-hooks.md) — Configure pre/post-LLM hooks via MCP.
-- [Docs Skills](./skills.md) — Discover SKILL.md files through `find_skill`, or ask `docsbook` for the route through one.
+- [Docs Skills](./skills.md) — Discover SKILL.md files through `find_skill`, or ask `docsbook_expert` for the route through one.
 - [Webhooks](../reference/webhooks.md) — Register event handlers from MCP, and verify their signatures.
 - [Pricing](https://docsbook.io/pricing) — what a metered call draws on, generated from the live billing constants.

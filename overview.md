@@ -33,7 +33,7 @@ An AI assistant recommending a product quotes what it can read and verify cheapl
 Three surfaces do this work:
 
 - **`llms.txt`** — a plain-text index of your documentation at the site root, for AI agents that look for one. See [llms.txt](./geo/llms-txt.md).
-- **MCP server** — 136 tools over the Model Context Protocol, so Claude Code, Cursor or ChatGPT can ask the `docsbook` agent what to do and get instructions back, read your pages, search them, and commit changes back. See [MCP server](./agent-ready/mcp.md).
+- **MCP server** — 136 tools over the Model Context Protocol, so Claude Code, Cursor or ChatGPT can ask the `docsbook_expert` agent what to do and get instructions back, read your pages, search them, and commit changes back. See [MCP server](./agent-ready/mcp.md).
 - **AEO markup** — FAQPage, HowTo and speakable JSON-LD generated from your Markdown, for answer boxes and voice assistants. See [AEO](./aeo/README.md).
 
 ## Analytics: which pages are read and where readers stop
