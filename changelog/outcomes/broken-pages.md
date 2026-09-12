@@ -14,6 +14,8 @@ Claims and links that stopped being true — found before a reader finds them. T
 ### Added
 
 - Docsbook now remembers what is true about your project between sessions: `list_memory`, `add_memory`, `edit_memory` and `remove_memory` hold what these docs are FOR, what nobody has answered yet, and the facts, rules and preferences every agent otherwise works out again on every run — where your real pricing page is, words your product never uses, a section nobody may restructure — so the same question is not answered from scratch, and wrongly, twice. `MCP`
+- `edit_reminder` closes one with what the reading actually showed, and "nothing moved" counts: a recorded non-result is what stops the same change being made again next quarter with the same confidence. Reminders can be rescheduled rather than quietly cleared, and an answer taken against the wrong baseline can be reopened. `MCP`
+- A fact with a known expiry — an API in beta until Q3, a price under review, a version being sunset — can be recorded the day you learn the date, so the page that will be wrong then gets found then instead of by a reader. `MCP`
 
 ### Changed
 

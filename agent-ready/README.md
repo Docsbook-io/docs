@@ -1,7 +1,7 @@
 ---
 title: "Agent-ready docs: documentation an AI agent can act on"
 description: "Four machine surfaces over one documentation set — a SKILL.md catalog, an MCP server, a document graph and llms.txt — and what each one buys an agent."
-tldr: "Docsbook publishes your documentation four ways a machine can consume it: SKILL.md files that teach an agent the method, an MCP server that gives it 136 typed tools, a document graph it can navigate by heading and link, and llms.txt for agents with no connection at all."
+tldr: "Docsbook publishes your documentation four ways a machine can consume it: SKILL.md files that teach an agent the method, an MCP server that gives it 140 typed tools, a document graph it can navigate by heading and link, and llms.txt for agents with no connection at all."
 ---
 
 # Agent-ready content
@@ -13,7 +13,7 @@ The four are not alternatives. They answer four different questions an agent ask
 <!-- widget:cards -->
 
 - [Docs Skills](./skills.md) — the SKILL.md catalog: four orchestrator skills that teach any agent how documentation work is actually done, plus how they are discovered, versioned and run
-- [MCP Server](./mcp.md) — 136 typed tools over the Model Context Protocol: ask the one `docsbook_expert` agent and get instructions back, read pages, commit them, read analytics, change settings, start agent runs
+- [MCP Server](./mcp.md) — 140 typed tools over the Model Context Protocol: ask the one `docsbook_expert` agent and get instructions back, read pages, commit them, read analytics, change settings, start agent runs
 - [Source of Truth](./source-of-truth.md) — the document graph: pages, headings, links and anchors as nodes and edges an agent can traverse instead of grepping
 - [MCP security](./mcp-security.md) — the authentication model, token scopes, what the server stores, and the compliance gaps stated plainly
 - [llms.txt](../geo/llms-txt.md) — the machine-readable index of the published site, for an agent with no token and no checkout
@@ -25,7 +25,7 @@ The four are not alternatives. They answer four different questions an agent ask
 | Surface | The agent's question | What it gets | What it costs |
 |---|---|---|---|
 | SKILL.md catalog | "How is this job done properly?" | A workflow with guardrails, ordered steps and acceptance criteria, fetched from GitHub | Nothing — the catalog is public and `find_skill` is never metered |
-| MCP server | "What can I call, on which project?" | 136 tools behind one `docsbook_expert` agent, an `instructions` block at connect time, structured errors that name the next move | Metered per call against the project's balance; discovery calls are free |
+| MCP server | "What can I call, on which project?" | 140 tools behind one `docsbook_expert` agent, an `instructions` block at connect time, structured errors that name the next move | Metered per call against the project's balance; discovery calls are free |
 | Document graph | "Where does this concept live, and what links to it?" | Pages and headings as separate node namespaces, four kinds of edge, broken links and anchor collisions | Free on every plan — it is built from your own markdown |
 | llms.txt | "What exists on this site at all?" | A flat, fetchable index of every published page, with no auth | Free, and readable without a Docsbook account |
 
@@ -54,7 +54,7 @@ Two of these deserve their measured form rather than a slogan. Retrieval over a 
 
 - **The four surfaces do not all cost the same.** The skills catalog, the graph and llms.txt are free on every plan. MCP tool calls are metered per call against the project's balance, and the reader-facing AI chat, which spends Docsbook's model budget, starts at Pro. Current amounts are on the [pricing page](https://docsbook.io/pricing); this documentation deliberately quotes none, because a price copied into a page goes stale silently.
 - **"Agent-ready" is a shape claim, not a ranking claim.** Docsbook can show you that a page is fetchable, that its sections stand alone and that its anchors resolve. Whether any particular assistant then cites it is not something this product measures for you, and no public source establishes a general rate. See [GEO](../geo/README.md) for what is measurable.
-- **The tool count moves.** 136 is the number of tool names this build registers. The authoritative count is whatever `tools/list` returns for your token, which the MCP section of your admin panel reads live rather than from a written-down copy.
+- **The tool count moves.** 140 is the number of tool names this build registers. The authoritative count is whatever `tools/list` returns for your token, which the MCP section of your admin panel reads live rather than from a written-down copy.
 - **The MCP specification moved under us.** Revision `2026-07-28` made MCP stateless and removed the `initialize` handshake entirely — "There is no negotiation handshake" ([Versioning and Compatibility](https://modelcontextprotocol.io/specification/2026-07-28/basic/lifecycle)). Docsbook's server is served over a stateless HTTP transport but still speaks the initialization-based revisions its SDK supports — latest `2025-11-25` — and carries its orientation text in `initialize`, which is a pre-`2026-07-28` placement. A client that speaks only `2026-07-28` will not connect. See [MCP server security](./mcp-security.md) for the rest of the gap list.
 - **No surface here is a substitute for the docs being right.** An agent that can navigate a corpus perfectly still reports what the corpus says.
 

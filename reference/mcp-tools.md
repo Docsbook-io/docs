@@ -1,11 +1,11 @@
 ---
 title: "Every tool the Docsbook MCP server exposes to an agent"
-description: "The 136 tools a Docsbook workspace exposes over MCP — the one `docsbook_expert` agent, workspace setup, content, issues, chat, translations, analytics, call history, project memory and webhooks."
+description: "The 140 tools a Docsbook workspace exposes over MCP — the one `docsbook_expert` agent, workspace setup, content, issues, chat, translations, analytics, call history, project memory, reminders and webhooks."
 ---
 
 # MCP Tools Reference
 
-This page lists every tool exposed by the Docsbook MCP server at `https://docsbook.io/api/mcp/server`. The server exposes **136 tools**. Each requires Bearer authentication via OAuth 2.0 + PKCE.
+This page lists every tool exposed by the Docsbook MCP server at `https://docsbook.io/api/mcp/server`. The server exposes **140 tools**. Each requires Bearer authentication via OAuth 2.0 + PKCE.
 
 The **Billing** column names the class a call is metered under, against the project's own balance:
 
@@ -170,6 +170,29 @@ What the docs are FOR, what nobody has answered yet, and what every agent otherw
 | `remove_memory` | Write | Retire a line that stopped being true. Archived, never destroyed: a rule that simply vanished gets re-derived. Writing the same handle again brings the retired line back rather than starting a fresh one. |
 
 ⚡ An answered question keeps its answer beside it rather than disappearing — *"we already asked this, and here is the answer"* is what stops the next run asking again.
+
+## Reminders: what the project promised to come back to
+
+The brief above holds what stays true. This holds what is only true **later** — the reading that shows whether last week's rewrite worked and does not exist for another fortnight, a price that is right until Q4, a question you said you would answer. Free on every plan, and on the admin panel's Overview beside the brief.
+
+The difference from the brief is *when it is read*, not what it holds: every memory line is read on every run, and a reminder is read **by its date**. It says nothing for the ninety days between being written and coming due.
+
+| Kind | What it holds |
+|---|---|
+| `measure` | A change was made and its effect is not visible yet. Name the baseline in `because` — the change, and the `call_id` of the reading taken before it. |
+| `recheck` | A fact with a known expiry: "beta until Q3", a price review, a version sunset. Written the day you learn the date, not the day it bites. |
+| `followup` | A promise — a question somebody said they would answer, a decision deferred. What separates it from an open `question` is that somebody named a date. |
+
+| Tool | Billing | Description |
+|---|---|---|
+| `list_reminders` | Read | What is **due now** by default — usually nothing, which is the cheap correct answer. Each row carries what to read (`check_with`), what it is judged against (`because`) and how late it is. `state: "all"` returns the whole schedule; `done` returns what past checks actually found. |
+| `add_reminder` | Write | Promise to come back to something on a date. Say when with `in_days` rather than a date: the server does the arithmetic and answers with the absolute instant, so an agent that is unsure what today is cannot file a reminder into the past. |
+| `edit_reminder` | Write | **Close** it with `outcome` — what the reading showed — or move its date rather than closing a check nobody ran. An empty `outcome` reopens one, because a reading taken against the wrong baseline has to be retractable. |
+| `remove_reminder` | Write | Retire one that should never have been written, or whose subject is gone. Archived, never destroyed. |
+
+🔴 **This is not a webhook.** Nothing fires and nobody is notified: a reminder is read when somebody asks what to do. For "tell us when something happens on the site", that is `register_webhook_*` below.
+
+⚡ **"Nothing moved" is an outcome**, and the valuable one — it is what stops the same change being made again with the same confidence. Closing a reminder with what you found is how it gets finished; retiring one you actually checked destroys the finding, because a retired row and a completed one look identical to the next session.
 
 ## Webhooks
 
