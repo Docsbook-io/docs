@@ -7,6 +7,12 @@ description: "Every release that touched Feeds: the live event stream from your 
 
 Everything that shipped in **Feeds**. This is the Feeds slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 12.09.2026
+
+### Removed
+
+- `Impact` on a pull request or issue no longer links to the run that wrote it — there is no run screen left to open. Which agent wrote it, and which step of its route, still reads on the record itself. `Feeds`
+
 ## NEW - 11.09.2026
 
 ### Added

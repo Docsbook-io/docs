@@ -13,10 +13,7 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 
 ### Added
 
-- Tell your agent what you want to achieve — "we need more organic traffic", "readers keep bouncing", "we are never cited by AI assistants" — and `pursue_goal` works out which of Docsbook's capabilities get you there, in what order, and hands back a plan, so nobody has to know three hundred tool names to start. `MCP`
-- Every step of that plan says who runs it: Docsbook, your coding agent in your own checkout, or you. Work handed to your agent is marked as yours and never marked safe to run unattended, so a rewrite of your pages cannot happen without the findings and the constraints that go with it. `MCP`
 - Ask the new `docsbook` agent about anything in your documentation, in your own words, and it hands your coding agent a short set of instructions to carry out — what it found and what says so, the steps in order, what must not change, and how you know it worked — so the work happens in your own checkout in minutes instead of waiting on a run you cannot watch. `MCP`
-- Each answer ends with the standing agents that would keep doing the same work on a schedule, and the exact call that arms one, so a check somebody keeps repeating by hand becomes a check nobody has to remember. `MCP`
 
 ### Changed
 
@@ -29,7 +26,10 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 
 ### Removed
 
-- The forty-one `agent_<goal>` tools are gone from the MCP tool list, replaced by the single `docsbook` agent — of the forty-one, two had ever been called, because a list that long is not something a model chooses from. The routes behind them are untouched: they still run on their schedules, `find_agent` still finds them and `enable_agent` still arms them, so nothing anyone had set up stopped working. `MCP`
+- The forty-one `agent_<goal>` tools are gone from the MCP tool list, replaced by the single `docsbook` agent — of the forty-one, two had ever been called, because a list that long is not something a model chooses from. `MCP`
+- **Standing agents are gone.** The Agents section, the catalog of forty-one routes, the runs behind them, and the `find_agent` and `enable_agent` tools that armed one on a schedule, an event or a repository's commits — all removed. If you had one armed, it has stopped; the runs it already made are still in your issues and pull requests. `MCP`
+- What a standing agent was for is still here in pieces you already own: `register_webhook_*` tells your own endpoint when something happens, the `run_docs_*` runs do a piece of work when you ask, and `docsbook` says what the work should be. The recurring part belongs to your own scheduler, which every agent connecting here already has. `MCP`
+- `Impact` on a pull request or issue no longer links to the run that wrote it — there is no run screen left to open. Which agent wrote it, and which step of its route, still reads on the record itself. `Feeds`
 
 ## NEW - 11.09.2026
 

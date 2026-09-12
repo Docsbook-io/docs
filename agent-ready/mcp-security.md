@@ -56,7 +56,7 @@ Scope is a single string compared exactly. Anything that is not the write scope 
 | Read-only token | Every reporting, search, outline and analytics tool, plus `run_docs_analyze`, which runs in audit mode — **and, today, the settings writers listed below** |
 | Read-write token | Everything the account can do |
 
-**The scope check does not cover every writer today, and you should plan around that.** It is enforced on exactly eight tools: `write_docs`, `create_issue`, `connect_source`, `configure_source`, `enable_agent`, and the three `run_docs_*` runs that write. Those refuse a read-only token before doing anything.
+**The scope check does not cover every writer today, and you should plan around that.** It is enforced on exactly seven tools: `write_docs`, `create_issue`, `connect_source`, `configure_source`, and the three `run_docs_*` runs that write. Those refuse a read-only token before doing anything.
 
 Every other state-changing tool — the `update_*` and `set_*` settings writers, `update_access`, webhook registration and removal, goal and funnel creation, translation upload, approval and deletion, `create_workspace` — is gated only by project ownership, not by scope. A read-only token can therefore change a project's settings, arm a webhook or delete a translation on a project its account owns. It still cannot commit a page, file an issue, connect a source or arm an agent.
 

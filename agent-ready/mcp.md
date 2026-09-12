@@ -1,7 +1,7 @@
 ---
 title: "MCP server: run your documentation from a coding agent"
 description: "Connect Claude Code, Cursor, Codex or any MCP client to Docsbook and read, write, measure and configure your documentation from inside the editor."
-tldr: "Docsbook's remote MCP server exposes 275 typed tools over one OAuth-protected endpoint — ask the one `docsbook` expert agent how to do the work and carry it out yourself, read pages, commit them, read analytics, change settings, start background agent runs. Calls are billed per call against the project's balance by billing class; discovery is free."
+tldr: "Docsbook's remote MCP server exposes 271 typed tools over one OAuth-protected endpoint — ask the one `docsbook` expert agent how to do the work and carry it out yourself, read pages, commit them, read analytics, change settings, start background agent runs. Calls are billed per call against the project's balance by billing class; discovery is free."
 ---
 
 # MCP Server
@@ -12,7 +12,7 @@ This page is the reference for what the server serves and what a call draws on. 
 
 ## What is the Docsbook MCP server?
 
-The Docsbook MCP server exposes **275 tools** over the Model Context Protocol, an open standard for handing tools, resources and prompts to AI agents over a typed RPC interface. Exactly one of them is an agent: `docsbook`, an expert that takes any documentation request in the user's own words and answers with how to do the work — the method, the steps, the tools to call on each, and what to remember — while doing none of it itself. Of the rest, 18 are one-per-webhook-event registrations; 136 are action tools that each perform one step of documentation work on one subject and answer with a validated JSON payload; 13 are backed by an external scraping vendor for the things Docsbook's own crawler cannot reach; five are collectors that hand back the evidence the actions are built on with no judgement in it; and four start and read background runs. The remaining 98 are the individually named tools covering workspace, content, chat, analytics and webhook operations — among them the two that connect and configure a repository or website as a source of truth, and the two that find and arm a standing agent on a schedule, an event or a connected repository's commits.
+The Docsbook MCP server exposes **271 tools** over the Model Context Protocol, an open standard for handing tools, resources and prompts to AI agents over a typed RPC interface. Exactly one of them is an agent: `docsbook`, an expert that takes any documentation request in the user's own words and answers with how to do the work — the method, the steps, the tools to call on each, and what to remember — while doing none of it itself. Of the rest, 18 are one-per-webhook-event registrations; 136 are action tools that each perform one step of documentation work on one subject and answer with a validated JSON payload; 13 are backed by an external scraping vendor for the things Docsbook's own crawler cannot reach; five are collectors that hand back the evidence the actions are built on with no judgement in it; and four start and read background runs. The remaining 94 are the individually named tools covering workspace, content, chat, analytics and webhook operations — among them the two that connect and configure a repository or website as a source of truth.
 
 ## Endpoint
 
@@ -420,7 +420,7 @@ Unauthenticated, repo-scoped access to a public documentation site is never mete
 
 Access to the Docsbook MCP server is decided by the token, not by a tier. A token carries a **scope**, and the scope is the only thing that separates reading from writing:
 
-- **Read-only** — every reporting, search and outline tool answers. `write_docs`, `create_issue`, `connect_source`, `configure_source`, `enable_agent` and the three writing `run_docs_*` runs refuse, and say why. Those eight are the tools that currently check the scope; the settings, webhook, goal and translation writers are gated by project ownership alone, so read-only is not a "changes nothing" token — see [MCP server security](./mcp-security.md#what-each-scope-can-do).
+- **Read-only** — every reporting, search and outline tool answers. `write_docs`, `create_issue`, `connect_source`, `configure_source` and the three writing `run_docs_*` runs refuse, and say why. Those seven are the tools that currently check the scope; the settings, webhook, goal and translation writers are gated by project ownership alone, so read-only is not a "changes nothing" token — see [MCP server security](./mcp-security.md#what-each-scope-can-do).
 - **Read-write** — everything the account can do: committing pages, filing issues, connecting sources, arming agents and changing settings.
 - **No token at all** — on a repo-scoped endpoint (`docsbook.io/{owner}/{repo}/api/mcp/server`), `get_info`, `find_skill`, `find_widget` and `list_content_widgets` answer from the public catalog, and `search` answers over that site's own documentation — the one tool here that reads a project, because what it reads is the published site. It is refused on a private site, on a site whose plan has lapsed, on an endpoint not pinned to a site, and when the project has no AI balance left; it takes no project argument, so it can only ever read the site it is pinned to. Every other tool requires a valid Bearer token tied to a Docsbook account.
 

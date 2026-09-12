@@ -15,6 +15,10 @@ A watch someone keeps by remembering to look, kept by a webhook instead. This is
 
 - Docsbook now knows what to do about requests that are not outcomes at all — what changed in the last week, add a page for this feature, we have no documentation, alert us when traffic falls, set the site up — each of which used to come back as a list of outcomes to choose from. `MCP`
 
+### Removed
+
+- What a standing agent was for is still here in pieces you already own: `register_webhook_*` tells your own endpoint when something happens, the `run_docs_*` runs do a piece of work when you ask, and `docsbook` says what the work should be. The recurring part belongs to your own scheduler, which every agent connecting here already has. `MCP`
+
 ## NEW - 11.09.2026
 
 ### Added

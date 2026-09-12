@@ -13,7 +13,6 @@ Claims and links that stopped being true — found before a reader finds them. T
 
 ### Changed
 
-- When a goal is too vague to place, Docsbook asks which outcome you meant and lists them, rather than guessing at the nearest-sounding tool and quietly doing the wrong work. `MCP`
 - The `docsbook` agent is now an expert rather than a planner: ask it anything about your documentation and it answers with how to think about the request, the steps in order with the exact tool on each, what to carry from one step into the next, what the content has to do, what will make the answer wrong, and the rules worth keeping — and then your own coding agent does all of it. `MCP`
 - `workspace_id` is optional on the agent, so an assistant that has not picked a project can still ask how the work is done. Name a project and the answer also says what that project can and cannot see, so a step that comes back thin reads as expected rather than broken. `MCP`
 
