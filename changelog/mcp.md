@@ -35,6 +35,9 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 - A request in Russian now reaches the same advice as its English twin. The outcome classifier reads English only, so anything else used to route nowhere; every workflow now carries the phrasings people actually use, in both languages. `MCP`
 - `workspace_id` is optional on the agent, so an assistant that has not picked a project can still ask how the work is done. Name a project and the answer also says what that project can and cannot see, so a step that comes back thin reads as expected rather than broken. `MCP`
 - Each answer names the published skill carrying the long-form method for that work, and the exact call that fetches it, instead of restating it. `Skills`
+- Ask the `docsbook` agent what counts as success and it now has a workflow for it — read what is already declared, find what readers are trying to do, put one sentence to you, and only then declare it — instead of handing back a list of outcomes to choose from. `MCP`
+- Every answer from the `docsbook` agent now opens with the two readings to take before recommending anything: what you declared counts as the docs working, and what your readers actually asked. Advice given without them is true about documentation and unfalsifiable about your site, and an empty answer to either is reported as a finding rather than skipped. `MCP`
+- The **What Docsbook knows** card no longer prints the goal count as well — the Goals card owns it, so the same number cannot end up stated two different ways on one page. `MCP`
 
 ### Removed
 

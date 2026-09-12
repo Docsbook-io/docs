@@ -18,6 +18,7 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 - `list_tool_calls` groups everything ever read here into series — one tool on one page, heading, host or the whole site — and says which already have a second reading to compare against, so you find out what is measurable BEFORE you rewrite a page rather than after, when the baseline can no longer be taken. `MCP`
 - Docsbook now remembers what is true about your project between sessions: `list_memory`, `add_memory`, `edit_memory` and `remove_memory` hold the facts, rules and preferences every agent otherwise works out again on every run — where your real pricing page is, words your product never uses, a section nobody may restructure — so the same question is not answered from scratch, and wrongly, twice. `MCP`
 - A **What Docsbook knows** card puts that memory in front of you: every line with who wrote it, you or an agent, editable and retirable on the spot, so a recommendation built on something the system was told six weeks ago is something you can find rather than guess at. `MCP`
+- A **Goals** card on Overview says what you declared counts as this documentation working and how many readers did it this week, so a rewrite can be judged rather than only described — and when nothing is declared the card says that instead, because that is the finding. `Analytics`
 
 ### Changed
 
@@ -29,6 +30,8 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 - Each answer names the published skill carrying the long-form method for that work, and the exact call that fetches it, instead of restating it. `Skills`
 - `get_page_diff_impact` hands back the list of commits it can measure when you call it without one, so checking whether a rewrite helped is one call instead of hunting for a SHA first. `Changes`
 - Editing a goal from the panel and editing one from an agent now go through the same rules, so a conversion goal one of them accepts and the other refuses is no longer possible. `Analytics`
+- Ask the `docsbook` agent what counts as success and it now has a workflow for it — read what is already declared, find what readers are trying to do, put one sentence to you, and only then declare it — instead of handing back a list of outcomes to choose from. `MCP`
+- Every answer from the `docsbook` agent now opens with the two readings to take before recommending anything: what you declared counts as the docs working, and what your readers actually asked. Advice given without them is true about documentation and unfalsifiable about your site, and an empty answer to either is reported as a finding rather than skipped. `MCP`
 
 ### Removed
 

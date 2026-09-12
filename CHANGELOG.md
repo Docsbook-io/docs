@@ -20,6 +20,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Two new cards on Overview, **Analytics snapshots** and **SEO snapshots**, show what has been measured on this project and how many of those readings have a second one to compare against — the figure that decides whether a change you make today can be measured at all. `MCP`
 - A **What Docsbook knows** card puts that memory in front of you: every line with who wrote it, you or an agent, editable and retirable on the spot, so a recommendation built on something the system was told six weeks ago is something you can find rather than guess at. `MCP`
 - `edit_goal` corrects a goal in place — its label, what one completion is worth, what it matches — where the only route before was deleting and recreating it, which broke every funnel that named it and reset the date you started measuring. `MCP`
+- A **Goals** card on Overview says what you declared counts as this documentation working and how many readers did it this week, so a rewrite can be judged rather than only described — and when nothing is declared the card says that instead, because that is the finding. `Analytics`
+- Declaring a goal is free on every plan and is matched retroactively, so a goal you name today already reports the weeks before today rather than starting a count from zero. `Analytics`
+- A **Questions** card on Overview shows what readers actually asked the assistant, grouped so a question asked eleven times is one row with an eleven on it, and which of them got no answer — each one a page that does not exist yet, written in the words of the person who wanted it, so you stop guessing what to write next and your support inbox stops answering it by hand. `AI Chat`
+- Questions in Russian, Chinese or any non-Latin script now group correctly instead of collapsing into one meaningless row, so a gap in those languages is visible rather than invented. `AI Chat`
 
 ### Changed
 
@@ -35,6 +39,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Each answer names the published skill carrying the long-form method for that work, and the exact call that fetches it, instead of restating it. `Skills`
 - `get_page_diff_impact` hands back the list of commits it can measure when you call it without one, so checking whether a rewrite helped is one call instead of hunting for a SHA first. `Changes`
 - Editing a goal from the panel and editing one from an agent now go through the same rules, so a conversion goal one of them accepts and the other refuses is no longer possible. `Analytics`
+- Ask the `docsbook` agent what counts as success and it now has a workflow for it — read what is already declared, find what readers are trying to do, put one sentence to you, and only then declare it — instead of handing back a list of outcomes to choose from. `MCP`
+- Every answer from the `docsbook` agent now opens with the two readings to take before recommending anything: what you declared counts as the docs working, and what your readers actually asked. Advice given without them is true about documentation and unfalsifiable about your site, and an empty answer to either is reported as a finding rather than skipped. `MCP`
+- The **What Docsbook knows** card no longer prints the goal count as well — the Goals card owns it, so the same number cannot end up stated two different ways on one page. `MCP`
 
 ### Removed
 
