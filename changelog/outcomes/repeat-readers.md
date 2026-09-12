@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Repeat readers** — more r
 
 One visit is a look; a second is a product someone is actually adopting. This is the Repeat readers slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 12.09.2026
+
+### Added
+
+- Every answer also comes as markdown, ready to paste into an issue or another session, so the plan does not have to be retyped for whoever picks the work up. `MCP`
+
 ## NEW - 05.09.2026
 
 ### Added

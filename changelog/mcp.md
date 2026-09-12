@@ -15,12 +15,22 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 - Every step of that plan says who runs it: Docsbook, your coding agent in your own checkout, or you. Work handed to your agent is marked as yours and never marked safe to run unattended, so a rewrite of your pages cannot happen without the findings and the constraints that go with it. `MCP`
 - Ask `capabilities_for_goal` what Docsbook could do about an outcome and what it would need to know first, so you can see whether connecting a repository or Search Console is worth it before you connect it. `MCP`
 - A project with no GitHub repository is no longer turned away: Docsbook can work from your website, a single page, the docs already published here, or two sentences you type about your product, and it says which of those it used. `MCP`
+- Ask the new `docsbook` agent about anything in your documentation, in your own words, and it hands your coding agent a short set of instructions to carry out — what it found and what says so, the steps in order, what must not change, and how you know it worked — so the work happens in your own checkout in minutes instead of waiting on a run you cannot watch. `MCP`
+- Every instruction says where its work lands: your checkout, one named Docsbook call you make yourself, or a decision only a person can take, so no step is quietly assigned to nobody. `MCP`
+- Each answer ends with the standing agents that would keep doing the same work on a schedule, and the exact call that arms one, so a check somebody keeps repeating by hand becomes a check nobody has to remember. `MCP`
+- Every answer also comes as markdown, ready to paste into an issue or another session, so the plan does not have to be retyped for whoever picks the work up. `MCP`
 
 ### Changed
 
 - When Docsbook cannot start yet it answers with what it is missing and every way you could supply it, instead of telling you to go and configure a source. `MCP`
 - When a goal is too vague to place, Docsbook asks which outcome you meant and lists them, rather than guessing at the nearest-sounding tool and quietly doing the wrong work. `MCP`
 - The instructions your agent reads at connect time are a third shorter and reordered, so the parts that decide where a request goes now survive the 2 KB a client keeps — previously the half explaining how to route was cut off mid-sentence and never reached Claude Code at all. `MCP`
+- A request Docsbook cannot place on an outcome — a narrow task like renaming a section, or a sentence in a language the outcome classifier does not read — no longer comes back as a list of outcomes and nothing else: it comes back with the writing rulebook Docsbook's own writers follow, what is actually published on your site, and the rules the edit must not break. `MCP`
+- Asking Docsbook what to do is now one of the cheapest calls on the server and changes nothing, so an agent can ask before it knows whether the answer will help, on a read-only token and with no approval to wait for. `MCP`
+
+### Removed
+
+- The forty-one `agent_<goal>` tools are gone from the MCP tool list, replaced by the single `docsbook` agent — of the forty-one, two had ever been called, because a list that long is not something a model chooses from. The routes behind them are untouched: they still run on their schedules, `find_agent` still finds them and `enable_agent` still arms them, so nothing anyone had set up stopped working. `MCP`
 
 ## NEW - 11.09.2026
 

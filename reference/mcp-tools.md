@@ -1,11 +1,11 @@
 ---
 title: "Every tool the Docsbook MCP server exposes to an agent"
-description: "The 315 tools a Docsbook workspace exposes over MCP — stating a goal, workspace setup, content, issues, chat, translations, analytics, webhooks, standing agents and background agent runs."
+description: "The 275 tools a Docsbook workspace exposes over MCP — the one `docsbook` agent, workspace setup, content, issues, chat, translations, analytics, webhooks, standing agents and background agent runs."
 ---
 
 # MCP Tools Reference
 
-This page lists every tool exposed by the Docsbook MCP server at `https://docsbook.io/api/mcp/server`. The server exposes **315 tools**. Each requires Bearer authentication via OAuth 2.0 + PKCE.
+This page lists every tool exposed by the Docsbook MCP server at `https://docsbook.io/api/mcp/server`. The server exposes **275 tools**. Each requires Bearer authentication via OAuth 2.0 + PKCE.
 
 The **Billing** column names the class a call is metered under, against the project's own balance:
 
@@ -28,16 +28,21 @@ To connect from Claude Code:
 mcp add --transport http https://docsbook.io/api/mcp/server
 ```
 
-## Start from a goal
+## Start here: the agent
 
-Two tools take an OUTCOME instead of a tool name, and they are where to begin when you know what the owner wants but not which of the other 313 gets there.
+`docsbook` is the one agent on this server, and the first call to make for any documentation request — however narrow. It answers in one round trip with **instructions your own agent carries out**, not with work it did itself.
 
 | Tool | Billing | Description |
 |---|---|---|
-| `pursue_goal` | Read | Say what you want to achieve — "more organic traffic", "readers keep bouncing", "we are never cited by AI" — and get back a plan: which capabilities serve it, in what order, what each needs to know, and who runs each step. Plans only; writes nothing |
+| `docsbook` | Read | Any documentation request in the user's own words. Returns what Docsbook established and what says so, the steps in order with an owner on each, the reads worth making, what must not change, and how you know you are done. Runs nothing and writes nothing |
+| `pursue_goal` | Read | The same plan as a raw object, for a caller that wants to consume the structure rather than the instructions written from it |
 | `capabilities_for_goal` | Read | What Docsbook could do about an outcome and what it would need to know first, without planning or running anything. Omit the goal to list everything |
 
-A plan marks each step with who performs it — Docsbook, your coding agent, or you — and a step marked `via: "brief"` is yours to do in your own checkout; the tool named beside it is only what Docsbook would run instead. When something is missing, the answer is the gap and the ways to close it, not an error. When a goal names no outcome Docsbook measures, it asks which one you meant rather than guessing at the nearest-sounding tool.
+Every step carries who performs it: `you` is work in your checkout, `docsbook` is one call to this server that **you** make (the tool is named beside it), and `owner` needs a human. A step marked `you` deliberately names no tool — the planner's fallback name there is what Docsbook would run instead if you were not holding the files, not an instruction to call it.
+
+`docsbook` never guesses. When something is missing, the answer is the gap and the ways to close it, not an error. When a request names no outcome Docsbook measures — a narrow task, or a sentence the English outcome classifier cannot place — it still hands back the writing rulebook, what is actually published, the constraints, and the outcome list to name, then asks which one you meant.
+
+It also names the **standing agents** that would keep doing the work on a schedule instead of on request. Those forty-one routes are not tools of their own: `find_agent` searches them and `enable_agent` arms them.
 
 ## Workspace and branding
 

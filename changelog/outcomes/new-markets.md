@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **New markets** — audiences
 
 The readers who bounced because the docs were not in their language. This is the New markets slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 12.09.2026
+
+### Changed
+
+- A request Docsbook cannot place on an outcome — a narrow task like renaming a section, or a sentence in a language the outcome classifier does not read — no longer comes back as a list of outcomes and nothing else: it comes back with the writing rulebook Docsbook's own writers follow, what is actually published on your site, and the rules the edit must not break. `MCP`
+
 ## NEW - 05.09.2026
 
 ### Added
