@@ -16,16 +16,18 @@ Readers who came to learn and left having started — the docs' real job. This i
 - Ask the new `docsbook` agent about anything in your documentation, in your own words, and it hands your coding agent a short set of instructions to carry out — what it found and what says so, the steps in order, what must not change, and how you know it worked — so the work happens in your own checkout in minutes instead of waiting on a run you cannot watch. `MCP`
 - Every instruction says where its work lands: your checkout, one named Docsbook call you make yourself, or a decision only a person can take, so no step is quietly assigned to nobody. `MCP`
 - `search_tool_calls` finds a past reading by what is inside it — a page it was about, a word in the answer, an error it returned — ranked so the calls actually about `/pricing` come above the fifty that merely mention it, and `get_tool_call` opens one whole. `MCP`
-- Docsbook now remembers what is true about your project between sessions: `list_memory`, `add_memory`, `edit_memory` and `remove_memory` hold the facts, rules and preferences every agent otherwise works out again on every run — where your real pricing page is, words your product never uses, a section nobody may restructure — so the same question is not answered from scratch, and wrongly, twice. `MCP`
+- Docsbook now remembers what is true about your project between sessions: `list_memory`, `add_memory`, `edit_memory` and `remove_memory` hold what these docs are FOR, what nobody has answered yet, and the facts, rules and preferences every agent otherwise works out again on every run — where your real pricing page is, words your product never uses, a section nobody may restructure — so the same question is not answered from scratch, and wrongly, twice. `MCP`
 - `edit_goal` corrects a goal in place — its label, what one completion is worth, what it matches — where the only route before was deleting and recreating it, which broke every funnel that named it and reset the date you started measuring. `MCP`
-- A **Goals** card on Overview says what you declared counts as this documentation working and how many readers did it this week, so a rewrite can be judged rather than only described — and when nothing is declared the card says that instead, because that is the finding. `Analytics`
-- Declaring a goal is free on every plan and is matched retroactively, so a goal you name today already reports the weeks before today rather than starting a count from zero. `Analytics`
+- A **Goals** card on Overview holds what these docs are FOR, in your own words — the sentence every recommendation an agent makes about your documentation gets argued against, so a rewrite can be judged rather than only described. Declare nothing and the card says so, because an agent working on docs with no stated purpose is the finding. `MCP`
+- Goals and questions can be closed: mark a goal met with the reading that showed it, answer a question and it keeps the answer, so an agent stops re-proposing work that is already done. An answer you later disagree with can be taken back. `MCP`
+- Declaring a conversion goal is free on every plan and is matched retroactively, so a goal you name today already reports the weeks before today rather than starting a count from zero. `Analytics`
 
 ### Changed
 
 - Every step says where its work lands: your own checkout, one named Docsbook call you make yourself, or a subagent worth handing it to. Steps in your checkout name the tools, so "look at what changed" arrives as `git log --since` rather than as a suggestion. `MCP`
 - Editing a goal from the panel and editing one from an agent now go through the same rules, so a conversion goal one of them accepts and the other refuses is no longer possible. `Analytics`
 - The **What Docsbook knows** card no longer prints the goal count as well — the Goals card owns it, so the same number cannot end up stated two different ways on one page. `MCP`
+- Goals, Questions and What Docsbook knows now read like the Analytics cards: tabs for open and closed work, every line editable in a dialog instead of a two-line box, the full list with its evidence and its author behind Details, and the actions on whichever row you are pointing at. `MCP`
 
 ### Removed
 

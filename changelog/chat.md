@@ -11,7 +11,7 @@ Everything that shipped in **Chat**. This is the Chat slice of the [full Docsboo
 
 ### Added
 
-- A **Questions** card on Overview shows what readers actually asked the assistant, grouped so a question asked eleven times is one row with an eleven on it, and which of them got no answer — each one a page that does not exist yet, written in the words of the person who wanted it, so you stop guessing what to write next and your support inbox stops answering it by hand. `AI Chat`
+- What readers actually asked the assistant now sits on a **From readers** tab of the Questions card, grouped so a question asked eleven times is one row with an eleven on it, and one press records any of them as a question of your own — each is a page that does not exist yet, written in the words of the person who wanted it, so you stop guessing what to write next and your support inbox stops answering it by hand. `AI Chat`
 - Questions in Russian, Chinese or any non-Latin script now group correctly instead of collapsing into one meaningless row, so a gap in those languages is visible rather than invented. `AI Chat`
 
 ## NEW - 08.09.2026

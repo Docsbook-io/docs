@@ -14,7 +14,6 @@ Pages that already rank 5–20 are the cheapest traffic you will ever buy. This 
 ### Added
 
 - Every read your agent makes is now kept with the answer it gave, which turns any of them into a snapshot: read a page's traffic today, read it again after the rewrite, and `compare_tool_calls` tells you what moved — so "did that change work" stops being a matter of opinion and nobody has to remember to write a number down beforehand. `MCP`
-- Two new cards on Overview, **Analytics snapshots** and **SEO snapshots**, show what has been measured on this project and how many of those readings have a second one to compare against — the figure that decides whether a change you make today can be measured at all. `MCP`
 
 ### Changed
 

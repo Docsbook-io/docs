@@ -146,16 +146,28 @@ Each metered call is kept with its arguments and its answer, so any read tool ab
 
 `get_page_diff_impact` is the commit-shaped version: for a change that shipped as a commit, it judges the pages that commit touched against the pages it did not. Called with no `sha`, it lists the commits it can measure. It replaced `get_change_history`, which was removed on 2026-09-12 — that tool could only measure a change that arrived as a commit, and only in traffic.
 
-## What Docsbook knows about the project
+## The project's brief: what it aims at, asks, and knows
 
-Facts, rules and preferences that outlive one session — what every agent otherwise works out again on every run. Free on every plan, and visible and editable by the owner in the admin panel, so nothing here is an agent's private notes about somebody else's product.
+What the docs are FOR, what nobody has answered yet, and what every agent otherwise works out again on every run. Free on every plan, and visible and editable by the owner on the admin panel's Overview, so nothing here is an agent's private notes about somebody else's product.
+
+| Kind | What it holds | How a later run weighs it |
+|---|---|---|
+| `goal` | What these docs are for, in your words | The sentence a recommendation is argued against. Can be marked met |
+| `question` | Something nobody here has answered yet | A thing to answer this run rather than guess. Can be answered |
+| `fact` | True of the project and checkable | Will be re-checked; can go stale |
+| `rule` | What to do or never do here | Outranks an agent's own reading of your site |
+| `preference` | Taste — wording, tone, structure | Arguable; yields to a rule |
+
+🔴 **A `goal` here is not an analytics goal.** `create_goal` records a thing a *reader* does that counts as a conversion, measured in visits and reported in Analytics ▸ Conversions. This one is the outcome your documentation exists for, and nothing counts it.
 
 | Tool | Billing | Description |
 |---|---|---|
-| `list_memory` | Read | Everything the project has been told, each line with its kind (`fact` — checkable; `rule` — an instruction that outranks an agent's own reading; `preference` — taste), who wrote it (`owner` or `agent`) and what it rests on. Read it before deciding anything. |
-| `add_memory` | Write | Record one claim the next session would otherwise re-derive. Not for findings that expire — a measurement records itself in the call history above. |
-| `edit_memory` | Write | Correct a line **in place**, so the date the project first learnt it survives the correction. |
-| `remove_memory` | Write | Retire a line that stopped being true. Archived, never destroyed: a rule that simply vanished gets re-derived. |
+| `list_memory` | Read | The whole brief, each line with its kind, who wrote it (`owner` or `agent`), what it rests on, and — for a goal or a question — whether it is still open. Comes with a one-line `gap` naming what is missing from the brief. Read it before deciding anything. |
+| `add_memory` | Write | Record a goal, a question you would otherwise guess the answer to, or one claim the next session would re-derive. Not for findings that expire — a measurement records itself in the call history above. |
+| `edit_memory` | Write | Correct a line **in place**, so the date the project first learnt it survives the correction — and **answer** a question or mark a goal met, with `resolution`. An empty `resolution` reopens one. |
+| `remove_memory` | Write | Retire a line that stopped being true. Archived, never destroyed: a rule that simply vanished gets re-derived. Writing the same handle again brings the retired line back rather than starting a fresh one. |
+
+⚡ An answered question keeps its answer beside it rather than disappearing — *"we already asked this, and here is the answer"* is what stops the next run asking again.
 
 ## Webhooks
 
