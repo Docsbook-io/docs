@@ -22,6 +22,7 @@ Readers who came to learn and left having started — the docs' real job. This i
 ### Changed
 
 - When a goal is too vague to place, Docsbook asks which outcome you meant and lists them, rather than guessing at the nearest-sounding tool and quietly doing the wrong work. `MCP`
+- Every step says where its work lands: your own checkout, one named Docsbook call you make yourself, or a subagent worth handing it to. Steps in your checkout name the tools, so "look at what changed" arrives as `git log --since` rather than as a suggestion. `MCP`
 
 ### Removed
 

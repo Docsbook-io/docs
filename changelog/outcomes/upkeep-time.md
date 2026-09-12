@@ -22,6 +22,10 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 
 - The instructions your agent reads at connect time are a third shorter and reordered, so the parts that decide where a request goes now survive the 2 KB a client keeps — previously the half explaining how to route was cut off mid-sentence and never reached Claude Code at all. `MCP`
 - Asking Docsbook what to do is now one of the cheapest calls on the server and changes nothing, so an agent can ask before it knows whether the answer will help, on a read-only token and with no approval to wait for. `MCP`
+- The `docsbook` agent is now an expert rather than a planner: ask it anything about your documentation and it answers with how to think about the request, the steps in order with the exact tool on each, what to carry from one step into the next, what the content has to do, what will make the answer wrong, and the rules worth keeping — and then your own coding agent does all of it. `MCP`
+- Every step says where its work lands: your own checkout, one named Docsbook call you make yourself, or a subagent worth handing it to. Steps in your checkout name the tools, so "look at what changed" arrives as `git log --since` rather than as a suggestion. `MCP`
+- `workspace_id` is optional on the agent, so an assistant that has not picked a project can still ask how the work is done. Name a project and the answer also says what that project can and cannot see, so a step that comes back thin reads as expected rather than broken. `MCP`
+- Each answer names the published skill carrying the long-form method for that work, and the exact call that fetches it, instead of restating it. `Skills`
 
 ### Removed
 

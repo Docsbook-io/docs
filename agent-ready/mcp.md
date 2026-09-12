@@ -1,7 +1,7 @@
 ---
 title: "MCP server: run your documentation from a coding agent"
 description: "Connect Claude Code, Cursor, Codex or any MCP client to Docsbook and read, write, measure and configure your documentation from inside the editor."
-tldr: "Docsbook's remote MCP server exposes 275 typed tools over one OAuth-protected endpoint — ask the one `docsbook` agent and get instructions your own agent carries out, read pages, commit them, read analytics, change settings, start background agent runs. Calls are billed per call against the project's balance by billing class; discovery is free."
+tldr: "Docsbook's remote MCP server exposes 275 typed tools over one OAuth-protected endpoint — ask the one `docsbook` expert agent how to do the work and carry it out yourself, read pages, commit them, read analytics, change settings, start background agent runs. Calls are billed per call against the project's balance by billing class; discovery is free."
 ---
 
 # MCP Server
@@ -12,7 +12,7 @@ This page is the reference for what the server serves and what a call draws on. 
 
 ## What is the Docsbook MCP server?
 
-The Docsbook MCP server exposes **275 tools** over the Model Context Protocol, an open standard for handing tools, resources and prompts to AI agents over a typed RPC interface. Exactly one of them is an agent: `docsbook`, which takes any documentation request in the user's own words and answers with instructions your own agent carries out. Of the rest, 18 are one-per-webhook-event registrations; 136 are action tools that each perform one step of documentation work on one subject and answer with a validated JSON payload; 13 are backed by an external scraping vendor for the things Docsbook's own crawler cannot reach; five are collectors that hand back the evidence the actions are built on with no judgement in it; and four start and read background runs. The remaining 98 are the individually named tools covering workspace, content, chat, analytics and webhook operations — among them the two that connect and configure a repository or website as a source of truth, and the two that find and arm a standing agent on a schedule, an event or a connected repository's commits.
+The Docsbook MCP server exposes **275 tools** over the Model Context Protocol, an open standard for handing tools, resources and prompts to AI agents over a typed RPC interface. Exactly one of them is an agent: `docsbook`, an expert that takes any documentation request in the user's own words and answers with how to do the work — the method, the steps, the tools to call on each, and what to remember — while doing none of it itself. Of the rest, 18 are one-per-webhook-event registrations; 136 are action tools that each perform one step of documentation work on one subject and answer with a validated JSON payload; 13 are backed by an external scraping vendor for the things Docsbook's own crawler cannot reach; five are collectors that hand back the evidence the actions are built on with no judgement in it; and four start and read background runs. The remaining 98 are the individually named tools covering workspace, content, chat, analytics and webhook operations — among them the two that connect and configure a repository or website as a source of truth, and the two that find and arm a standing agent on a schedule, an event or a connected repository's commits.
 
 ## Endpoint
 

@@ -1,6 +1,6 @@
 ---
 title: "Every tool the Docsbook MCP server exposes to an agent"
-description: "The 275 tools a Docsbook workspace exposes over MCP — the one `docsbook` agent, workspace setup, content, issues, chat, translations, analytics, webhooks, standing agents and background agent runs."
+description: "The 275 tools a Docsbook workspace exposes over MCP — the one `docsbook` expert agent, workspace setup, content, issues, chat, translations, analytics, webhooks, standing automations and background agent runs."
 ---
 
 # MCP Tools Reference
@@ -30,19 +30,25 @@ mcp add --transport http https://docsbook.io/api/mcp/server
 
 ## Start here: the agent
 
-`docsbook` is the one agent on this server, and the first call to make for any documentation request — however narrow. It answers in one round trip with **instructions your own agent carries out**, not with work it did itself.
+`docsbook` is the one agent on this server, and the first call to make for any documentation request — however narrow, in any language. It is an **expert, not a runner**: it answers in one round trip with how to do the work, and does none of it.
 
 | Tool | Billing | Description |
 |---|---|---|
-| `docsbook` | Read | Any documentation request in the user's own words. Returns what Docsbook established and what says so, the steps in order with an owner on each, the reads worth making, what must not change, and how you know you are done. Runs nothing and writes nothing |
-| `pursue_goal` | Read | The same plan as a raw object, for a caller that wants to consume the structure rather than the instructions written from it |
-| `capabilities_for_goal` | Read | What Docsbook could do about an outcome and what it would need to know first, without planning or running anything. Omit the goal to list everything |
+| `docsbook` | Read | Any documentation request in the user's own words. Returns how to think about it, the steps in order with the tool on each and who runs it, what to carry between steps, what to write, what makes the answer wrong, and what to remember. Runs nothing. `workspace_id` optional |
+| `pursue_goal` | Read | A different question: which outcome axis a sentence is about, as a raw plan object, for prioritising and forecasting |
+| `capabilities_for_goal` | Read | What Docsbook could do about an outcome and what it would need to know first. Omit the goal to list everything |
 
-Every step carries who performs it: `you` is work in your checkout, `docsbook` is one call to this server that **you** make (the tool is named beside it), and `owner` needs a human. A step marked `you` deliberately names no tool — the planner's fallback name there is what Docsbook would run instead if you were not holding the files, not an instruction to call it.
+Every step in the answer says where its work lands:
 
-`docsbook` never guesses. When something is missing, the answer is the gap and the ways to close it, not an error. When a request names no outcome Docsbook measures — a narrow task, or a sentence the English outcome classifier cannot place — it still hands back the writing rulebook, what is actually published, the constraints, and the outcome list to name, then asks which one you meant.
+- **`you`** — your own checkout, with your editor, shell and tests. The step names the tools (`git log --since`, `Read`, `Edit`), because "use your own tools" is not advice and naming them is.
+- **`docsbook`** — one call to this server, which **you** make. Nothing runs on its own, so the call is gated, charged and logged exactly like any other.
+- **`subagent`** — work worth handing to a subagent of your own: a step that fans out over forty pages, or that wants a fresh context.
 
-It also names the **standing agents** that would keep doing the work on a schedule instead of on request. Those forty-one routes are not tools of their own: `find_agent` searches them and `enable_agent` arms them.
+Steps also carry `transform` — what to keep from one step's output and hand to the next — which is the half a tool list never has and a long route needs most.
+
+`docsbook` never guesses. A request it cannot place on a known workflow gets the general method (the writing rulebook, what is actually published, the constraints) and says out loud that it is the general method. It has no `findings` field, deliberately: nothing ran, so there is nothing measured, and the numbers arrive when you make the calls it names.
+
+**`workspace_id` is optional.** Most of what it knows is true of documentation work rather than of one project. Pass a project and the answer also says what that project can and cannot see, so a step that comes back thin reads as expected rather than broken.
 
 ## Workspace and branding
 

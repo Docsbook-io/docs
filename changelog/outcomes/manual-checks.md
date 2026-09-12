@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Manual checks** — fewer t
 
 A watch someone keeps by remembering to look, kept by a webhook instead. This is the Manual checks slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 12.09.2026
+
+### Changed
+
+- Docsbook now knows what to do about requests that are not outcomes at all — what changed in the last week, add a page for this feature, we have no documentation, alert us when traffic falls, set the site up — each of which used to come back as a list of outcomes to choose from. `MCP`
+
 ## NEW - 11.09.2026
 
 ### Added
