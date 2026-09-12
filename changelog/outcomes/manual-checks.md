@@ -18,6 +18,7 @@ A watch someone keeps by remembering to look, kept by a webhook instead. This is
 ### Removed
 
 - What a standing agent was for is still here in pieces you already own: `register_webhook_*` tells your own endpoint when something happens, the `run_docs_*` runs do a piece of work when you ask, and `docsbook` says what the work should be. The recurring part belongs to your own scheduler, which every agent connecting here already has. `MCP`
+- Tools that CHANGE something now say so in their own description: write a page, change a setting, file an issue or arm an alert, and the tool tells your agent to ask `docsbook` what the change should be first — because the useful answer is often "not yet, this is thin, go and read X". Reading tools deliberately say nothing of the kind: reading is the consultation. `MCP`
 
 ## NEW - 11.09.2026
 

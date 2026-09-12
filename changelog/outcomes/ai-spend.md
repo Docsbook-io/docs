@@ -15,6 +15,10 @@ Sees where the model budget actually goes before the invoice does. This is the A
 
 - Asking Docsbook what to do is now one of the cheapest calls on the server and changes nothing, so an agent can ask before it knows whether the answer will help, on a read-only token and with no approval to wait for. `MCP`
 
+### Removed
+
+- Ask the `docsbook` agent instead and the method comes back as part of the answer: which reads to make, in what order, what to carry from one into the next, and the trap in each — "classify each query by its wording, not by the page it landed on, because using the landing page here makes the analysis circular". Your own agent then makes those calls on your own token, at read prices. `MCP`
+
 ## NEW - 11.09.2026
 
 ### Added

@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **First-visit bounce** — fe
 
 Docs that look like the product, rather than like a template someone forgot. This is the First-visit bounce slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 12.09.2026
+
+### Removed
+
+- Every step now also says what a good answer looks like — the columns each row must carry, the values a field is allowed to take, how many rows are worth having — so you can tell whether the method was followed. `MCP`
+
 ## NEW - 05.09.2026
 
 ### Added

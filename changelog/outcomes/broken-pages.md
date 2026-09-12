@@ -16,6 +16,10 @@ Claims and links that stopped being true — found before a reader finds them. T
 - The `docsbook` agent is now an expert rather than a planner: ask it anything about your documentation and it answers with how to think about the request, the steps in order with the exact tool on each, what to carry from one step into the next, what the content has to do, what will make the answer wrong, and the rules worth keeping — and then your own coding agent does all of it. `MCP`
 - `workspace_id` is optional on the agent, so an assistant that has not picked a project can still ask how the work is done. Name a project and the answer also says what that project can and cannot see, so a step that comes back thin reads as expected rather than broken. `MCP`
 
+### Removed
+
+- **The 135 action tools are gone too** — `observe_*`, `explain_*`, `discover_*`, `decide_*`, `plan_*`, `draft_*`, `measure_*`, `verify_*`, `learn_*`, `handoff_*`. One of the 136 had ever been called. Each ran a model on our servers over ordinary reads you can make yourself, so what they charged for was applying a method, not reaching anything you could not. `MCP`
+
 ## NEW - 05.09.2026
 
 ### Fixed

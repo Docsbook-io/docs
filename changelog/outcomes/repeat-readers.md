@@ -15,6 +15,10 @@ One visit is a look; a second is a product someone is actually adopting. This is
 
 - Every answer also comes as markdown, ready to paste into an issue or another session, so the plan does not have to be retyped for whoever picks the work up. `MCP`
 
+### Removed
+
+- New workflow for the commonest request there is — changing a page that already exists. It starts by asking what readers were failing to get from it (searches that returned nothing, questions the assistant could not answer, pages voted down) rather than by editing, and it warns you when the page already ranks: change the body before the title, in separate commits, or you cannot tell which one moved it. `MCP`
+
 ## NEW - 05.09.2026
 
 ### Added

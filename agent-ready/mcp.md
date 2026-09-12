@@ -1,7 +1,7 @@
 ---
 title: "MCP server: run your documentation from a coding agent"
 description: "Connect Claude Code, Cursor, Codex or any MCP client to Docsbook and read, write, measure and configure your documentation from inside the editor."
-tldr: "Docsbook's remote MCP server exposes 271 typed tools over one OAuth-protected endpoint — ask the one `docsbook` expert agent how to do the work and carry it out yourself, read pages, commit them, read analytics, change settings, start background agent runs. Calls are billed per call against the project's balance by billing class; discovery is free."
+tldr: "Docsbook's remote MCP server exposes 136 typed tools over one OAuth-protected endpoint — ask the one `docsbook` expert agent how to do the work and carry it out yourself, read pages, commit them, read analytics, change settings, start background agent runs. Calls are billed per call against the project's balance by billing class; discovery is free."
 ---
 
 # MCP Server
@@ -12,7 +12,7 @@ This page is the reference for what the server serves and what a call draws on. 
 
 ## What is the Docsbook MCP server?
 
-The Docsbook MCP server exposes **271 tools** over the Model Context Protocol, an open standard for handing tools, resources and prompts to AI agents over a typed RPC interface. Exactly one of them is an agent: `docsbook`, an expert that takes any documentation request in the user's own words and answers with how to do the work — the method, the steps, the tools to call on each, and what to remember — while doing none of it itself. Of the rest, 18 are one-per-webhook-event registrations; 136 are action tools that each perform one step of documentation work on one subject and answer with a validated JSON payload; 13 are backed by an external scraping vendor for the things Docsbook's own crawler cannot reach; five are collectors that hand back the evidence the actions are built on with no judgement in it; and four start and read background runs. The remaining 94 are the individually named tools covering workspace, content, chat, analytics and webhook operations — among them the two that connect and configure a repository or website as a source of truth.
+The Docsbook MCP server exposes **136 tools** over the Model Context Protocol, an open standard for handing tools, resources and prompts to AI agents over a typed RPC interface. Exactly one of them is an agent: `docsbook`, an expert that takes any documentation request in the user's own words and answers with how to do the work — the method, the steps, the tools to call on each, and what to remember — while doing none of it itself. Of the rest, 18 are one-per-webhook-event registrations; 13 are backed by an external scraping vendor for the things Docsbook's own crawler cannot reach; five are collectors that hand back evidence with the exact calls that produced every row, so you can re-run them and get the same answer; one (`audit_geo`) scores whether an answer engine can fetch and quote you; and four start and read background runs. The remaining 94 are the individually named tools covering workspace, content, chat, analytics and webhook operations — among them the two that connect and configure a repository or website as a source of truth.
 
 ## Endpoint
 
@@ -359,9 +359,9 @@ Five **collectors** are the first half on its own, charged as a `probe` rather t
 
 There is no model in the path, so there is nothing in them to disbelieve — and the payload proves it rather than claiming it. Every answer carries a **`reproduce`** block: the exact MCP calls and the arguments they were made with, per row. Run them yourself and you get the same record back, apart from the timestamp. Nothing an audit returns can offer that, because an audit's answer passed through a model.
 
-What you do not get is a judgement. No findings, no scores, no ranking, no recommendation — those are what an action tool's price buys, and a collector that quietly included one would be an agent run at a fraction of the price.
+What you do not get is a judgement. No findings, no scores, no ranking, no recommendation — a collector that quietly included one would be a model run at a fraction of the price. For the judgement, ask `docsbook` how to read the rows: it answers with the method and what would make the reading wrong.
 
-**When the cheap one is the right one.** With no Search Console connected, `measure_intent_match` scores its ranking axes as unmeasured and still charges for the run; `collect_corpus_map` needs no search data, no traffic and no history at all, and hands back real rows on a site that went up this morning. The same applies when you want the numbers an action was built on before you decide whether to buy the reading of them.
+**When the cheap one is the right one.** `collect_corpus_map` needs no search data, no traffic and no history at all, and hands back real rows on a site that went up this morning — useful on exactly the projects where every analytics-shaped question answers "not enough data yet".
 
 **What is missing is said out loud.** A source that could not be read appears three times — in `skipped`, in `unavailable` with what having it would have added, and in its own `reproduce` row with the reason it failed. A rate with nothing to divide by comes back as `null` with the reason, never as a zero, and every rate carries its denominator.
 
@@ -398,9 +398,9 @@ A call is charged a **flat amount, fixed before the call runs and independent of
 | Probe | Gathers and normalises one family of facts, with no model in it | `collect_*` |
 | AI | Calls a model to write, read or rank | `write_docs`, `search_docs`, `search`, `get_insights`, `get_chat_intent` |
 | Lens | One model pass over an evidence record it was handed, re-read from a single declared angle | Reserved (`lens_*`) — no tool is in this class today |
-| Agent | Runs a whole agent behind one call | The 135 action tools (`observe_*`, `explain_*`, `discover_*`, `decide_*`, `plan_*`, `draft_*`, `measure_*`, `verify_*`, `learn_*`, `handoff_*`), the 41 `agent_*` goals, plus `audit_geo`, `generate_issues` and `run_docs_*` |
+| Agent | Runs a whole agent behind one call | `audit_geo`, `generate_issues` and `run_docs_*`. The 135 action tools and the 41 `agent_*` goals were also in this class until 2026-09-12; their historical calls still price and report under it |
 
-**An action tool is priced from the work it declares** — how many families of evidence it reads, how many model round trips it may take, whether it leaves your site, whether it writes an artifact — rather than one flat figure for the whole class. So a narrow observation draws a fraction of what a deep draft does, and its published wait (roughly 20 s to 70 s) differs the same way.
+⚡ **Per-tool pricing inside the Agent class went with the action family.** While there were 135 of them, each was priced from the work it declared — how many families of evidence it read, how many model round trips it might take, whether it left your site — so a narrow observation drew a fraction of a deep draft. What remains in the class spans the band honestly, so it is priced at the band.
 
 The current amount for every class and every individual tool is on the tool's own row in the **MCP** section of your admin panel, read live from the server rather than from a written-down copy, and on the [Docsbook pricing page](https://docsbook.io/pricing). This page deliberately quotes neither: a price copied into documentation is a price that goes stale without anyone noticing.
 
