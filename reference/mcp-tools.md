@@ -242,47 +242,19 @@ There are 18 typed events, among them `content.indexed`, `translation.completed`
 |---|---|---|
 | `find_skill` | Included | Search the `docs-skills` catalog by `query` with optional `category` and `requires_plan` filters. Returns `raw_url` for the agent to fetch the SKILL.md directly. |
 
-## The 135 action tools were removed
-
-Until 2026-09-12 this section listed 135 read-only tools — `observe_link_graph`, `decide_next_market`, `draft_comparison_page`, one per (verb × subject) — each running a model on our servers and answering with a validated payload. They are gone, and the reason is the same one that took the forty-one standing agents the same morning: **one of the 136 had ever been called.**
-
-Nothing you could do became impossible. Each of them ran on ordinary reads you can make yourself — `get_search_rankings`, `search_docs`, `read_doc`, thirty in all — and what made them worth anything was never the running. It was knowing **which** reads, **in what order**, and **the trap in reading them**.
-
-That is what `docsbook_expert` now hands you, for free, in one call. Ask it what you are trying to achieve and a step comes back as:
-
-> **Read what people actually type before they arrive** — `get_search_rankings`, `get_popular_searches`, `get_failed_searches`, `get_search_zero_click`
->
-> - Read the demand from both sides: what search shows you for, and what readers type once they are here.
-> - Classify each query by intent from its **wording**, not from the page it landed on — the landing page is what you are testing later, and using it here makes the analysis circular.
-> - Answer with `queries`: one row per query, at most 30, each carrying `query`, `intent`, `volume`, `current_page`. `intent` is one of how_to / definition / comparison / error / price / reference / unclear.
->
-> *Then carry forward only the queries with impressions and a position between 5 and 20 — those are the ones a rewrite can move.*
-
-Your own agent then makes those calls, on your own token, at read prices. The method is the same method the removed tool followed; you are no longer paying for a second model to apply it.
-
-**What you lose, stated plainly.** Those tools validated themselves: every digit in a claim had to appear in the evidence it cited, so an invented figure failed instead of shipping, and the scores were arithmetic rather than a model's opinion. Nothing validates your own run. What `docsbook_expert` gives you instead is the shape a good answer has — the columns, the allowed values, the cap — so you can tell whether one was followed.
-
 ## Collectors — the evidence, without the reading of it
 
-Five tools sit under the family in a cheaper billing class of their own, **Probe**: `collect_page_text`, `collect_corpus_map`, `collect_assistant_questions`, `collect_traffic` and `collect_onsite_search`. They hand back normalised rows plus a `reproduce` block naming the exact calls behind every row — no model in the path, so there is nothing in them to disbelieve. Buy one when you want the numbers themselves rather than a reading of them. `audit_geo` sits beside them and is the one survivor of the action family: its evidence layer is code rather than a model, and it scores whether answer engines can fetch and quote your pages at all.
+Five tools sit in a cheaper billing class of their own, **Probe**: `collect_page_text`, `collect_corpus_map`, `collect_assistant_questions`, `collect_traffic` and `collect_onsite_search`. They hand back normalised rows plus a `reproduce` block naming the exact calls behind every row — no model in the path, so there is nothing in them to disbelieve. Buy one when you want the numbers themselves rather than a reading of them.
 
-## Background agent runs were removed
+`collect_ai_citability` sits beside them: it scores whether answer engines can fetch and quote your pages at all. Its evidence layer is code rather than a model — it crawls and does arithmetic — which is also why it bills as Probe rather than Agent. It was named `audit_geo` until 2026-09-12; the rename marks that it never ran a model, unlike the tools retired that day below.
 
-Until 2026-09-12 four tools ran a skill on Docsbook's side against your workspace — `run_docs_analyze`, `run_docs_create`, `run_docs_manage`, `run_docs_automate` — each returning a `run_id` to poll with `get_agent_run`, `list_agent_runs` and `cancel_agent_run`. All eight are gone, along with the engine behind them.
+## What used to run a model on Docsbook's own side
 
-Every tool on this server now answers inside the call that asked for it. There is no job to start and no run to poll, which also removes the commonest way to misreport one: a caller that treated `{ run_id, state: "queued" }` as the answer was reporting work that had not happened.
+Until 2026-09-12, three kinds of tool ran work here instead of just answering a call, and all three are gone along with the engine behind them:
 
-What the runs were for is served by `docsbook_expert`, which advises instead of running — the method, the steps in order, the tool on each, and what would make the answer wrong — plus `find_skill`, which hands the whole SKILL.md to the agent already holding your repository.
-
-## Standing agents were removed
-
-Until 2026-09-12 two tools here — `find_agent` and `enable_agent` — armed a route that ran on its own, on a schedule, an event or a repository's commits. They are gone with the engine behind them. Nothing on this server starts work by itself any more.
-
-What that engine was actually used for is served by tools that remain:
-
-- **"Tell me when something happens"** — `register_webhook_*` (the 18 typed events), which posts to your own endpoint. Your side decides what to do about it.
-- **"Do the work once"** — your own agent, holding your repository, told what to do by `docsbook_expert`.
-- **"What should I do about this?"** — `docsbook_expert`, which answers with the method, the steps and the tools, and leaves the running to you. That was the only part of a standing agent worth keeping: it knew which tools, in what order, and how the answer goes wrong.
+- **135 action tools** (`observe_link_graph`, `decide_next_market`, `draft_comparison_page`, one per verb × subject) each ran a model on our servers and answered with a validated payload. Nothing you could do with them became impossible — each ran on ordinary reads you can make yourself (`get_search_rankings`, `search_docs`, `read_doc`, thirty in all) — and what made them worth anything was never the running. It was knowing **which** reads, **in what order**, and **the trap in reading them**, which `docsbook_expert` now hands you directly, for free, in one call: ask it what you are trying to achieve and a step comes back naming the reads, the order, and the shape a good answer has. What you lose: those tools validated themselves — every digit in a claim had to appear in the evidence cited, so an invented figure failed instead of shipping. Nothing validates your own run; `docsbook_expert` gives you the shape of a good answer so you can tell whether one was followed.
+- **Four background runners** (`run_docs_analyze`, `run_docs_create`, `run_docs_manage`, `run_docs_automate`) ran a skill on Docsbook's side against your workspace and handed back a `run_id` to poll with `get_agent_run`, `list_agent_runs` and `cancel_agent_run` — all seven gone. Every tool on this server now answers inside the call that asked for it: there is no job to start and no run to poll, which also removes the commonest way to misreport one (treating `{ run_id, state: "queued" }` as the answer).
+- **Two standing-agent tools** (`find_agent`, `enable_agent`) armed a route that ran on its own, on a schedule, an event or a repository's commits — also gone, with the engine behind them. Nothing on this server starts work by itself. What that engine was for is served by what remains: `register_webhook_*` for "tell me when something happens" (your side decides what to do about it), your own agent holding your repository for "do the work once", and `docsbook_expert` for "what should I do about this" — which was the only part of a standing agent worth keeping, since it knew which tools, in what order, and how the answer goes wrong.
 
 ## Related
 
