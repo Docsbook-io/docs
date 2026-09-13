@@ -1,11 +1,11 @@
 ---
 title: "Every tool the Docsbook MCP server exposes to an agent"
-description: "The 140 tools a Docsbook workspace exposes over MCP — the one `docsbook_expert` agent, workspace setup, content, issues, chat, translations, analytics, call history, project memory, reminders and webhooks."
+description: "The 151 tools a Docsbook workspace exposes over MCP — the one `docsbook_expert` agent, workspace setup, content, issues, chat, translations, analytics, call history, project memory, reminders, hypotheses, the work board and webhooks."
 ---
 
 # MCP Tools Reference
 
-This page lists every tool exposed by the Docsbook MCP server at `https://docsbook.io/api/mcp/server`. The server exposes **140 tools**. Each requires Bearer authentication via OAuth 2.0 + PKCE.
+This page lists every tool exposed by the Docsbook MCP server at `https://docsbook.io/api/mcp/server`. The server exposes **151 tools**. Each requires Bearer authentication via OAuth 2.0 + PKCE.
 
 The **Billing** column names the class a call is metered under, against the project's own balance:
 
@@ -193,6 +193,29 @@ The difference from the brief is *when it is read*, not what it holds: every mem
 🔴 **This is not a webhook.** Nothing fires and nobody is notified: a reminder is read when somebody asks what to do. For "tell us when something happens on the site", that is `register_webhook_*` below.
 
 ⚡ **"Nothing moved" is an outcome**, and the valuable one — it is what stops the same change being made again with the same confidence. Closing a reminder with what you found is how it gets finished; retiring one you actually checked destroys the finding, because a retired row and a completed one look identical to the next session.
+
+## Hypotheses and the work board: whether the change worked
+
+The brief holds what stays true and reminders hold what is true later. This holds the one thing neither did: **a claim that could turn out false**. Free on every plan, and on Overview as a Hypotheses tab beside the brief plus a four-column board.
+
+It only works in one order — the claim first, the change second. `expected_effect` is written before the change and `result` after the reading, and once they are two columns of two different ages, a forecast can be told apart from a description written afterwards from the result. Nothing downstream can tell them apart otherwise, which is how a loop rots while every change still looks like it worked.
+
+| Tool | Billing | Description |
+|---|---|---|
+| `list_hypotheses` | Read | What this project believed and what it found out. `state: "due"` is the one to read first: a prediction, a change that shipped, and a date that has arrived with nobody having judged it. A `rejected` row is this project having already tried your idea and measured nothing. |
+| `add_hypothesis` | Write | Record the claim **before** making the change: `evidence` is the observation on this project it rests on, `source_url` where the idea came from, `expected_effect` what should move and by when, `metric` the reading that will decide it. A row with no change attached stays `untested`. |
+| `edit_hypothesis` | Write | Judge it — `result` is what was measured, with the denominator, and `verdict` is `confirmed` or `rejected`. Too early is not a verdict: move the date with `check_in_days` instead. An empty `verdict` retracts one. |
+| `remove_hypothesis` | Write | Retire a claim that should never have been written, or whose subject is gone. Not how a tested one is finished — that is a verdict. |
+| `link_work` | Read | Tie an issue, a pull request, a hypothesis, a memory line and a reminder together. Undirected and idempotent: linking A to B is the same fact as B to A, and writing it twice is one row. `write_docs` does the issue↔pull-request half for you when you pass `closes_issues`. |
+| `unlink_work` | Read | Disconnect two things linked in error. A link to finished work is not stale — removing it makes a merged change unmeasurable again. |
+| `get_work_board` | Egress | Every issue and pull request in the column its state earns: `planned`, `in_review`, `measuring`, `done`. Reads GitHub on request, so it is metered as egress rather than as a read. |
+| `search_brief` | Read | One query over everything written down — memory, hypotheses and reminders, closed ones included. The pair of `search_prior_work`, which searches the repository instead. |
+
+🔴 **"Nothing distinguishable" is `rejected`, not a missing verdict.** The claim predicted an effect and none appeared, and that is the most valuable row the store produces, because it is what stops the same change being made again with the same confidence.
+
+🔴 **A merged change with nothing linked to it shows on the board as `unmeasured`** — the honest word for work nobody can say anything about afterwards. It looks like progress and is not, which is why the board names it rather than filing it under Done. Paying that debt (a claim written late, linked, with a reading dated) outranks starting anything new.
+
+⚡ **`review_mode` says what happens to the next change you write**: `auto` merges it in the same call, `manual` opens the pull request and stops. Either way a pull request is opened; the mode decides only whether it lands. The owner sets it on the board.
 
 ## Webhooks
 

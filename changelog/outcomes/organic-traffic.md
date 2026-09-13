@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Organic traffic** — more 
 
 Pages that already rank 5–20 are the cheapest traffic you will ever buy. This is the Organic traffic slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 13.09.2026
+
+### Added
+
+- Three new readings tell "nobody searches for this" apart from "we do not rank for it" — `read_keyword_demand`, `read_search_suggestions` and `read_search_trends` — so a page is written for demand that exists rather than for a keyword somebody liked. `SEO`
+
 ## NEW - 12.09.2026
 
 ### Added

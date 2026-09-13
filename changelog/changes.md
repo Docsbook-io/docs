@@ -12,6 +12,7 @@ Everything that shipped in **Changes**. This is the Changes slice of the [full D
 ### Improved
 
 - Pull Requests and Issues are one card now too, with an icon on each tab instead of a stat row — how many are waiting and the longest wait, or how many are open and how many were filed this week — so the front page answers "is anything waiting on me" with the list itself rather than a number beside it. `Changes`
+- Overview carries a four-column work board — Planned, In review, Measuring, Done — with a switch between auto-merge and human review, and a change that merged with no claim attached is marked `unmeasured` instead of done, so work nobody can judge stops reading as progress. `Changes`
 
 ## NEW - 12.09.2026
 

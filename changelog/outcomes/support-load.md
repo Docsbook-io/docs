@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Support load** — fewer qu
 
 Questions the docs answer are questions your inbox never sees. This is the Support load slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 13.09.2026
+
+### Improved
+
+- The admin assistant can now read and write that same loop — record a claim, judge it, link work to it, and check whether something was tried before — so a rewrite it makes for you arrives with the forecast that makes it judgeable rather than needing one bolted on afterwards. `AI Chat`
+
 ## NEW - 12.09.2026
 
 ### Added

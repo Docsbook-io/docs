@@ -7,6 +7,12 @@ description: "Every release that touched SEO and GEO: how your pages rank in sea
 
 Everything that shipped in **SEO & GEO**. This is the SEO & GEO slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 13.09.2026
+
+### Added
+
+- Three new readings tell "nobody searches for this" apart from "we do not rank for it" — `read_keyword_demand`, `read_search_suggestions` and `read_search_trends` — so a page is written for demand that exists rather than for a keyword somebody liked. `SEO`
+
 ## NEW - 11.09.2026
 
 ### Added

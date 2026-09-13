@@ -14,6 +14,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Added
 
 - A commit-by-commit coverage card on Overview shows which languages each recent commit is translated into, so a translator that quietly stopped answering shows up as stale German instead of failing invisibly with nothing on screen to notice it by. `Translations`
+- Write down what you expect a docs change to do BEFORE you make it, and Docsbook keeps the claim until its date: `add_hypothesis` records the forecast, `write_docs` attaches it to the change that tests it, and the verdict is recorded against it, so nobody has to reconstruct months later from memory whether a rewrite actually worked. `MCP`
+- `link_work` ties an issue, a pull request, a claim, a goal and a reminder into one thread, so the question "did this change work" is answered by the record itself instead of by somebody matching them up by hand. `MCP`
+- `search_brief` answers "have we already tried this" across everything written down about a project, rejected claims and their figures included, so the same rewrite is not shipped twice with the same confidence. `MCP`
+- Three new readings tell "nobody searches for this" apart from "we do not rank for it" — `read_keyword_demand`, `read_search_suggestions` and `read_search_trends` — so a page is written for demand that exists rather than for a keyword somebody liked. `SEO`
 
 ### Improved
 
@@ -22,6 +26,13 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The Reminders tab no longer names the MCP methods it reads and writes with in a footer of its own; the card already says so once, for the tabs that share it.
 - Pull Requests and Issues are one card now too, with an icon on each tab instead of a stat row — how many are waiting and the longest wait, or how many are open and how many were filed this week — so the front page answers "is anything waiting on me" with the list itself rather than a number beside it. `Changes`
 - The Issues tab keeps the same move: no more open/filed-this-week figures, just its own icon and the list, sharing the card with Pull Requests. `Issues`
+- Overview carries a four-column work board — Planned, In review, Measuring, Done — with a switch between auto-merge and human review, and a change that merged with no claim attached is marked `unmeasured` instead of done, so work nobody can judge stops reading as progress. `Changes`
+- The project brief gains a Hypotheses tab beside Questions, Memory, Goals and Reminders, carrying the claim, its expected effect while it is open and its result once judged, with an overdue verdict flagged amber. `MCP`
+- The admin assistant can now read and write that same loop — record a claim, judge it, link work to it, and check whether something was tried before — so a rewrite it makes for you arrives with the forecast that makes it judgeable rather than needing one bolted on afterwards. `AI Chat`
+
+### Fixed
+
+- A claim written before its change no longer reports itself as already being tested: giving it a check date alone used to mark it `testing`, which made both the board and the due list say a change had shipped when nothing had. `MCP`
 
 ## NEW - 12.09.2026
 

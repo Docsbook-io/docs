@@ -14,10 +14,13 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 ### Added
 
 - A commit-by-commit coverage card on Overview shows which languages each recent commit is translated into, so a translator that quietly stopped answering shows up as stale German instead of failing invisibly with nothing on screen to notice it by. `Translations`
+- Write down what you expect a docs change to do BEFORE you make it, and Docsbook keeps the claim until its date: `add_hypothesis` records the forecast, `write_docs` attaches it to the change that tests it, and the verdict is recorded against it, so nobody has to reconstruct months later from memory whether a rewrite actually worked. `MCP`
+- `search_brief` answers "have we already tried this" across everything written down about a project, rejected claims and their figures included, so the same rewrite is not shipped twice with the same confidence. `MCP`
 
 ### Improved
 
 - Goals, Questions, What Docsbook knows and Reminders are now one card with four tabs — Questions, Memory, Goals and Reminders — each shown as an icon you hover for what it holds, so the two stores an agent reads through `list_memory` and `list_reminders` read on screen as one place instead of four, and an open question, a fact or an overdue reminder stands apart from a closed one by its own icon rather than a tab you had to pick first. `MCP`
+- The admin assistant can now read and write that same loop — record a claim, judge it, link work to it, and check whether something was tried before — so a rewrite it makes for you arrives with the forecast that makes it judgeable rather than needing one bolted on afterwards. `AI Chat`
 
 ## NEW - 12.09.2026
 

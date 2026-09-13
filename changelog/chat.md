@@ -7,6 +7,12 @@ description: "Every release that touched AI Chat: the assistant on your docs sit
 
 Everything that shipped in **Chat**. This is the Chat slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 13.09.2026
+
+### Improved
+
+- The admin assistant can now read and write that same loop — record a claim, judge it, link work to it, and check whether something was tried before — so a rewrite it makes for you arrives with the forecast that makes it judgeable rather than needing one bolted on afterwards. `AI Chat`
+
 ## NEW - 12.09.2026
 
 ### Added
