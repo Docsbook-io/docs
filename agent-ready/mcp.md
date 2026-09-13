@@ -429,6 +429,16 @@ Access to the Docsbook MCP server is decided by the token, not by a tier. A toke
 
 When a call is refused, the server returns a structured error naming the reason rather than a bare 403, so the agent can tell a reader what to fix. See [MCP Server — Trust & Security](./mcp-security.md) for the authentication flow and what the server stores.
 
+## Troubleshooting / FAQ
+
+**Is the agents/MCP tooling still working?** Yes. On 2026-09-12 the standing-agent engine described in older material — a scheduled agent that ran on its own, plus the 135 action tools and 4 `run_docs_*` runners that only ever ran inside one — was retired. One agent remains: `docsbook_expert`, which advises in one round trip rather than running unattended. Every connection and every other tool on this page works exactly as documented above.
+
+**My client still lists the tool as `docsbook`, not `docsbook_expert` — did the connection break?** No. An MCP client reads the tool list once, when it connects, and keeps those names for the rest of that session. The server resolves the old name rather than refusing it, so nothing is broken — reconnect the client to see the current name.
+
+**A call was refused for an empty balance — what happened?** The refusal names the project, what the call draws, and what is left. Reconnecting or retrying will not fix it; top up the project's balance from the panel. Discovery calls (`get_info`, `find_skill`, listing and creating workspaces) are never metered and keep working regardless.
+
+**Where do I go if a call is refused for a reason other than balance?** The server returns a structured error naming the reason — a missing scope on a read-only token, `NO_GITHUB_ACCESS` when Docsbook's own credential cannot reach a repository in your own GitHub account, or a private site. See [MCP server security](./mcp-security.md) for what each token scope can and cannot do.
+
 ## Related
 
 - [MCP tools reference](../reference/mcp-tools.md) — every tool with its parameters.

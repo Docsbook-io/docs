@@ -282,6 +282,16 @@ Until 2026-09-12, three kinds of tool ran work here instead of just answering a 
 - **Four background runners** (`run_docs_analyze`, `run_docs_create`, `run_docs_manage`, `run_docs_automate`) ran a skill on Docsbook's side against your workspace and handed back a `run_id` to poll with `get_agent_run`, `list_agent_runs` and `cancel_agent_run` — all seven gone. Every tool on this server now answers inside the call that asked for it: there is no job to start and no run to poll, which also removes the commonest way to misreport one (treating `{ run_id, state: "queued" }` as the answer).
 - **Two standing-agent tools** (`find_agent`, `enable_agent`) armed a route that ran on its own, on a schedule, an event or a repository's commits — also gone, with the engine behind them. Nothing on this server starts work by itself. What that engine was for is served by what remains: `register_webhook_*` for "tell me when something happens" (your side decides what to do about it), your own agent holding your repository for "do the work once", and `docsbook_expert` for "what should I do about this" — which was the only part of a standing agent worth keeping, since it knew which tools, in what order, and how the answer goes wrong.
 
+## Troubleshooting / FAQ
+
+**Is the agents/MCP tooling still working?** Yes. On 2026-09-12 the standing-agent engine was retired — the 41 `agent_*` tools, the 135 action tools and the 4 `run_docs_*` runners are gone — and one agent remains: `docsbook_expert`, which advises rather than runs. Every other tool on this page still works exactly as documented.
+
+**My client still shows the tool named `docsbook` instead of `docsbook_expert` — is that a problem?** No. An MCP client reads the tool list once, at connection time, and holds those names for the rest of that session. The server resolves the old name to the new one rather than refusing it. Reconnect your client to see `docsbook_expert`.
+
+**A call was refused for an empty balance — what do I do?** The refusal names the project that ran out, what the call draws, what is left, and where to top up. Discovery calls (`get_info`, `list_workspaces`, `find_skill`, and the rest of the Included class above) keep working regardless, so your agent can still find out what happened and report it.
+
+**Why does the tool count keep changing?** It reflects what actually runs. The server exposed more tools before 2026-09-12, when the 135 narrow action tools and the standing-agent tools were retired in favor of `docsbook_expert`; it currently exposes 156. `get_info` always reports the live count.
+
 ## Related
 
 - [MCP server overview](../agent-ready/mcp.md) — connecting a client, the OAuth flow, and what the tools are for
