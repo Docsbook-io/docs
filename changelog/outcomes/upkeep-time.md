@@ -29,6 +29,7 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 ### Fixed
 
 - "Have we already tried this" no longer answers "your search could not be parsed" when the real reason is that Docsbook cannot see the repository: GitHub returns the same code for a broken query and for one it will not run, and the two now read differently, so an agent stops rewording a question that was never the problem. `MCP`
+- The readings that look outside your own docs — a search result, a competitor's page, a public profile — no longer fail with a supplier's product name and one of our own environment variables in the message. They answer in the same words as every other tool here (unavailable, timed out, rate limited, refused), so an agent can act on the answer instead of retrying a configuration problem it has no way to see, and the underlying diagnosis now goes to the operator who can actually fix it. `MCP`
 
 ## NEW - 12.09.2026
 

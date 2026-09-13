@@ -15,7 +15,7 @@ Readers who came to learn and left having started — the docs' real job. This i
 
 - `link_work` ties an issue, a pull request, a claim, a goal and a reminder into one thread, so the question "did this change work" is answered by the record itself instead of by somebody matching them up by hand. `MCP`
 - A forecast about your docs now has to name which of the goals you declared it serves and quote the published finding its predicted size comes from, and an assistant that cannot is refused rather than warned, so the hour it spends goes on something you actually asked for instead of on whatever the first reading turned up. `MCP`
-- A new **Audits** section answers the question a goal cannot: how much organic traffic is actually on the table, and how much of it you have taken. An audit names one goal you declared, states the number that would count as reaching it, and lists the searches people make that your docs do not answer — each row with how many look for it, the reading that figure came from, and who ranks for it today. `Audits`
+- A new **Audits** tab on the Overview brief card answers the question a goal cannot: how much organic traffic is actually on the table, and how much of it you have taken. An audit names one goal you declared, states the number that would count as reaching it, and lists the searches people make that your docs do not answer — each row with how many look for it, the reading that figure came from, and who ranks for it today. One line per audit beside your goals and claims, with the full opportunity table one click away, so how much of a goal is left is answered on the front page instead of on a screen of its own. `Audits`
 
 ### Improved
 
@@ -23,6 +23,10 @@ Readers who came to learn and left having started — the docs' real job. This i
 - The project brief gains a Hypotheses tab beside Questions, Memory, Goals and Reminders, carrying the claim, its expected effect while it is open and its result once judged, with an overdue verdict flagged amber. `MCP`
 - An agent working on your docs is now told to read the goals you declared before it reads a single number, and to go and find published work on the problem before it proposes a fix, so the change it brings you argues for something you asked for and cites where the idea came from instead of reading as a hunch. `MCP`
 - The Hypotheses tab marks a claim that argues for no declared goal or quotes no source at all, so a forecast nobody could ever settle is visible at a glance rather than only after opening the row. `MCP`
+
+### Fixed
+
+- The readings that look outside your own docs — a search result, a competitor's page, a public profile — no longer fail with a supplier's product name and one of our own environment variables in the message. They answer in the same words as every other tool here (unavailable, timed out, rate limited, refused), so an agent can act on the answer instead of retrying a configuration problem it has no way to see, and the underlying diagnosis now goes to the operator who can actually fix it. `MCP`
 
 ## NEW - 12.09.2026
 
