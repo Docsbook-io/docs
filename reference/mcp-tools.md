@@ -203,7 +203,7 @@ It only works in one order — the claim first, the change second. `expected_eff
 | Tool | Billing | Description |
 |---|---|---|
 | `list_hypotheses` | Read | What this project believed and what it found out. `state: "due"` is the one to read first: a prediction, a change that shipped, and a date that has arrived with nobody having judged it. A `rejected` row is this project having already tried your idea and measured nothing. |
-| `add_hypothesis` | Write | Record the claim **before** making the change: `evidence` is the observation on this project it rests on, `source_url` where the idea came from, `expected_effect` what should move and by when, `metric` the reading that will decide it. A row with no change attached stays `untested`. |
+| `add_hypothesis` | Write | Record the claim **before** making the change: `evidence` is the observation on this project it rests on, `source_url` where the idea came from — an article, a thread, a results page, and never this project's own pull request or commit, which is the change rather than its origin — `expected_effect` what should move and by when, `metric` the reading that will decide it. A row with no change attached stays `untested`. |
 | `edit_hypothesis` | Write | Judge it — `result` is what was measured, with the denominator, and `verdict` is `confirmed` or `rejected`. Too early is not a verdict: move the date with `check_in_days` instead. An empty `verdict` retracts one. |
 | `remove_hypothesis` | Write | Retire a claim that should never have been written, or whose subject is gone. Not how a tested one is finished — that is a verdict. |
 | `link_work` | Read | Tie an issue, a pull request, a hypothesis, a memory line and a reminder together. Undirected and idempotent: linking A to B is the same fact as B to A, and writing it twice is one row. `write_docs` does the issue↔pull-request half for you when you pass `closes_issues`. |
@@ -214,6 +214,10 @@ It only works in one order — the claim first, the change second. `expected_eff
 🔴 **"Nothing distinguishable" is `rejected`, not a missing verdict.** The claim predicted an effect and none appeared, and that is the most valuable row the store produces, because it is what stops the same change being made again with the same confidence.
 
 🔴 **A merged change with nothing linked to it shows on the board as `unmeasured`** — the honest word for work nobody can say anything about afterwards. It looks like progress and is not, which is why the board names it rather than filing it under Done. Paying that debt (a claim written late, linked, with a reading dated) outranks starting anything new.
+
+🔴 **A merged change with a claim and no reminder carries `needs_reminder`.** It is the quieter half of the same failure: the column says Measuring, the claim says it is being tested, and nobody is dated to come back and take the reading, so the check simply never happens. One `add_reminder` and one `link_work` pays it.
+
+⚡ **A question can hold a merge.** Write it with `add_memory` as a `question` with `waiting_on: "owner_blocking"` and link it to the work, and a pull request that depends on it is opened and **not merged** until you answer — on a project set to merge automatically as well. The card shows as `blocked`, and the agent that wrote the change may not answer the question to unblock itself. Use it when a wrong answer would make the change wrong (which of two pages is real, whether a version is still supported); `waiting_on: "owner"` is the ordinary case, where the question is worth asking and the work goes ahead.
 
 ⚡ **`review_mode` says what happens to the next change you write**: `auto` merges it in the same call, `manual` opens the pull request and stops. Either way a pull request is opened; the mode decides only whether it lands. The owner sets it on the board.
 

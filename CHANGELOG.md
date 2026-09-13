@@ -18,6 +18,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - `link_work` ties an issue, a pull request, a claim, a goal and a reminder into one thread, so the question "did this change work" is answered by the record itself instead of by somebody matching them up by hand. `MCP`
 - `search_brief` answers "have we already tried this" across everything written down about a project, rejected claims and their figures included, so the same rewrite is not shipped twice with the same confidence. `MCP`
 - Three new readings tell "nobody searches for this" apart from "we do not rank for it" — `read_keyword_demand`, `read_search_suggestions` and `read_search_trends` — so a page is written for demand that exists rather than for a keyword somebody liked. `SEO`
+- A question can now hold a merge: mark one `waiting_on: "owner_blocking"` and the change that depends on your answer is opened as a pull request and left unmerged until you give it, on projects that publish automatically too, so a page written on a wrong guess is caught before it is published rather than after a reader quotes it back to you. `MCP`
+- The work board flags a merged change that nobody dated a reading for, so a rewrite whose verdict would simply never have been taken is caught the same week instead of sitting under "measuring" for a month. `Changes`
 
 ### Improved
 
@@ -29,6 +31,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Overview carries a four-column work board — Planned, In review, Measuring, Done — with a switch between auto-merge and human review, and a change that merged with no claim attached is marked `unmeasured` instead of done, so work nobody can judge stops reading as progress. `Changes`
 - The project brief gains a Hypotheses tab beside Questions, Memory, Goals and Reminders, carrying the claim, its expected effect while it is open and its result once judged, with an overdue verdict flagged amber. `MCP`
 - The admin assistant can now read and write that same loop — record a claim, judge it, link work to it, and check whether something was tried before — so a rewrite it makes for you arrives with the forecast that makes it judgeable rather than needing one bolted on afterwards. `AI Chat`
+- An agent working on your docs is now told to read the goals you declared before it reads a single number, and to go and find published work on the problem before it proposes a fix, so the change it brings you argues for something you asked for and cites where the idea came from instead of reading as a hunch. `MCP`
 
 ### Fixed
 

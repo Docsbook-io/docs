@@ -9,6 +9,10 @@ Everything that shipped in **Changes**. This is the Changes slice of the [full D
 
 ## NEW - 13.09.2026
 
+### Added
+
+- The work board flags a merged change that nobody dated a reading for, so a rewrite whose verdict would simply never have been taken is caught the same week instead of sitting under "measuring" for a month. `Changes`
+
 ### Improved
 
 - Pull Requests and Issues are one card now too, with an icon on each tab instead of a stat row — how many are waiting and the longest wait, or how many are open and how many were filed this week — so the front page answers "is anything waiting on me" with the list itself rather than a number beside it. `Changes`
