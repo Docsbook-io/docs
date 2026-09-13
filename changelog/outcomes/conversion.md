@@ -13,7 +13,7 @@ Readers who came to learn and left having started — the docs' real job. This i
 
 ### Improved
 
-- Goals, Questions and What Docsbook knows are now one card with three tabs — Questions, Memory and Goals — each shown as an icon you hover for what it holds, so the one store an agent reads through `list_memory` reads on screen as one place instead of three, and an open question or a fact stands apart from an answered one by its own icon rather than a tab you had to pick first. `MCP`
+- Goals, Questions, What Docsbook knows and Reminders are now one card with four tabs — Questions, Memory, Goals and Reminders — each shown as an icon you hover for what it holds, so the two stores an agent reads through `list_memory` and `list_reminders` read on screen as one place instead of four, and an open question, a fact or an overdue reminder stands apart from a closed one by its own icon rather than a tab you had to pick first. `MCP`
 
 ## NEW - 12.09.2026
 

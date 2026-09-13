@@ -7,6 +7,12 @@ description: "Every release that touched the Changes tab, later renamed Pull Req
 
 Everything that shipped in **Changes**. This is the Changes slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 13.09.2026
+
+### Improved
+
+- Pull Requests and Issues are one card now too, with an icon on each tab instead of a stat row — how many are waiting and the longest wait, or how many are open and how many were filed this week — so the front page answers "is anything waiting on me" with the list itself rather than a number beside it. `Changes`
+
 ## NEW - 12.09.2026
 
 ### Changed

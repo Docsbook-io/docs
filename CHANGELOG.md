@@ -17,9 +17,11 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Improved
 
-- Goals, Questions and What Docsbook knows are now one card with three tabs — Questions, Memory and Goals — each shown as an icon you hover for what it holds, so the one store an agent reads through `list_memory` reads on screen as one place instead of three, and an open question or a fact stands apart from an answered one by its own icon rather than a tab you had to pick first. `MCP`
-- Reminders drops its four tabs for one, sorted so whatever is overdue already leads without a click, and now sits beside the brief card instead of stacked underneath it. `MCP`
-- An empty tab on either card now shows the shape of what would fill it, the same ghost-row treatment already used on empty Analytics tabs, instead of a bare sentence.
+- Goals, Questions, What Docsbook knows and Reminders are now one card with four tabs — Questions, Memory, Goals and Reminders — each shown as an icon you hover for what it holds, so the two stores an agent reads through `list_memory` and `list_reminders` read on screen as one place instead of four, and an open question, a fact or an overdue reminder stands apart from a closed one by its own icon rather than a tab you had to pick first. `MCP`
+- An empty tab on any of the four now shows the shape of what would fill it, the same ghost-row treatment already used on empty Analytics tabs, instead of a bare sentence — and the Reminders tab drops the paragraph explaining what an empty list means plus a near-identical advisory line repeating the same point, down to the one short centered line the other three tabs already had.
+- The Reminders tab no longer names the MCP methods it reads and writes with in a footer of its own; the card already says so once, for the tabs that share it.
+- Pull Requests and Issues are one card now too, with an icon on each tab instead of a stat row — how many are waiting and the longest wait, or how many are open and how many were filed this week — so the front page answers "is anything waiting on me" with the list itself rather than a number beside it. `Changes`
+- The Issues tab keeps the same move: no more open/filed-this-week figures, just its own icon and the list, sharing the card with Pull Requests. `Issues`
 
 ## NEW - 12.09.2026
 

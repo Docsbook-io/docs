@@ -7,6 +7,12 @@ description: "Every release that touched Issues: the GitHub tracker inside the p
 
 Everything that shipped in **Issues**. This is the Issues slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 13.09.2026
+
+### Improved
+
+- The Issues tab keeps the same move: no more open/filed-this-week figures, just its own icon and the list, sharing the card with Pull Requests. `Issues`
+
 ## NEW - 04.09.2026
 
 ### Added
