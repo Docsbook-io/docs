@@ -111,6 +111,8 @@ A Docsbook-hosted site's issues live on the repository Docsbook hosts for it; a 
 | Tool | Billing | Description |
 |---|---|---|
 | `set_translation_mode` | Write | `auto` (built-in AI) or `external` (webhook flow) |
+| `get_translation_status` | Read | How each enabled language stands against the source right now — pages current/behind/missing/manual, the percentage, whether a run is in flight, and what the last run did. Call before `run_translation_pass`: a language already level with the source costs money to re-translate and changes nothing |
+| `run_translation_pass` | Write | Start a real translation catch-up run for one or more languages — the same batch the panel's "Translate now" starts. Brings pages that are behind current before pages that are missing, skips a language already level with the source unless `force`, and never discards existing translations |
 | `list_pending_translations` | Read | Translations awaiting approval |
 | `get_translation` | Read | Fetch one translation by language and path |
 | `upload_translation` | Write | Upload an externally-produced translation |
