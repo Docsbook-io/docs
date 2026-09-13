@@ -13,6 +13,10 @@ Everything that shipped in **Issues**. This is the Issues slice of the [full Doc
 
 - The Issues tab keeps the same move: no more open/filed-this-week figures, just its own icon and the list, sharing the card with Pull Requests. `Issues`
 
+### Fixed
+
+- Filing an issue on a Docsbook-hosted site works again where the tracker had been switched off: Docsbook switches its own repository's tracker back on and files the issue, rather than sending you to a settings page on a repository you have no account on. Every new hosted repository is created with issues on so it cannot happen again, and a repository Docsbook does not own is never changed. `Issues`
+
 ## NEW - 04.09.2026
 
 ### Added
