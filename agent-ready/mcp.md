@@ -338,6 +338,17 @@ weekly:  get_content_health  → take the worst 3, and this reading is
 
 Documentation that repairs itself and shows its work — "saw the problem" and "fixed the problem" without leaving the connection.
 
+## Prompt library
+
+One request per lever above, in the words you would actually type — paste any of these into Claude Code, Cursor or another connected client once OAuth is done:
+
+- **Acquisition:** "Are AI assistants actually reading our docs, and where do we rank in Google for our own quickstart?" → `get_analytics` (AI-bot breakdown), `get_search_rankings`
+- **Conversion:** "Which page is losing readers, and why?" → `get_visit_outcomes`, `get_dead_end_pages`, `get_rage_signals`
+- **Sales:** "Pull every chat conversation where someone was comparing us to a competitor." → `get_chat_intent`
+- **Cost avoided:** "What are people asking the docs assistant that it can't answer?" → `get_ai_unanswered`, `get_failed_searches`
+
+`docsbook_expert` answers each of these first with the full route in order; the tools named above are what it ends up calling.
+
 ## Handing over the whole job
 
 Every tool here answers inside the call that asked for it. There is no job to start and no run to poll.
