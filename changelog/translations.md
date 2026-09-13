@@ -7,6 +7,16 @@ description: "Every release that touched Translations: automatic translation of 
 
 Everything that shipped in **Translations**. This is the Translations slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 13.09.2026
+
+### Changed
+
+- Docsbook no longer translates your docs with its own AI budget by default: it watches the source repository for pages that fall behind in each language and hands the actual translating to whatever you register — a Claude routine, your own endpoint — over a `translation.needed` webhook you would otherwise have to remember to poll for, then serves back whatever comes through `upload_translation`. `Translations`
+
+### Added
+
+- A commit-by-commit coverage card on Overview shows which languages each recent commit is translated into, so a translator that quietly stopped answering shows up as stale German instead of failing invisibly with nothing on screen to notice it by. `Translations`
+
 ## NEW - 05.09.2026
 
 ### Added

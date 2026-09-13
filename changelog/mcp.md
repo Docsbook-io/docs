@@ -7,6 +7,13 @@ description: "Every release that touched the MCP server: the tools it serves, wh
 
 Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 13.09.2026
+
+### Improved
+
+- Goals, Questions and What Docsbook knows are now one card with three tabs — Questions, Memory and Goals — each shown as an icon you hover for what it holds, so the one store an agent reads through `list_memory` reads on screen as one place instead of three, and an open question or a fact stands apart from an answered one by its own icon rather than a tab you had to pick first. `MCP`
+- Reminders drops its four tabs for one, sorted so whatever is overdue already leads without a click, and now sits beside the brief card instead of stacked underneath it. `MCP`
+
 ## NEW - 12.09.2026
 
 ### Added

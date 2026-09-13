@@ -5,6 +5,22 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 13.09.2026
+
+### Changed
+
+- Docsbook no longer translates your docs with its own AI budget by default: it watches the source repository for pages that fall behind in each language and hands the actual translating to whatever you register — a Claude routine, your own endpoint — over a `translation.needed` webhook you would otherwise have to remember to poll for, then serves back whatever comes through `upload_translation`. `Translations`
+
+### Added
+
+- A commit-by-commit coverage card on Overview shows which languages each recent commit is translated into, so a translator that quietly stopped answering shows up as stale German instead of failing invisibly with nothing on screen to notice it by. `Translations`
+
+### Improved
+
+- Goals, Questions and What Docsbook knows are now one card with three tabs — Questions, Memory and Goals — each shown as an icon you hover for what it holds, so the one store an agent reads through `list_memory` reads on screen as one place instead of three, and an open question or a fact stands apart from an answered one by its own icon rather than a tab you had to pick first. `MCP`
+- Reminders drops its four tabs for one, sorted so whatever is overdue already leads without a click, and now sits beside the brief card instead of stacked underneath it. `MCP`
+- An empty tab on either card now shows the shape of what would fill it, the same ghost-row treatment already used on empty Analytics tabs, instead of a bare sentence.
+
 ## NEW - 12.09.2026
 
 ### Added

@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Conversion** — more reade
 
 Readers who came to learn and left having started — the docs' real job. This is the Conversion slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 13.09.2026
+
+### Improved
+
+- Goals, Questions and What Docsbook knows are now one card with three tabs — Questions, Memory and Goals — each shown as an icon you hover for what it holds, so the one store an agent reads through `list_memory` reads on screen as one place instead of three, and an open question or a fact stands apart from an answered one by its own icon rather than a tab you had to pick first. `MCP`
+
 ## NEW - 12.09.2026
 
 ### Added

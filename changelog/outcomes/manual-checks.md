@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Manual checks** — fewer t
 
 A watch someone keeps by remembering to look, kept by a webhook instead. This is the Manual checks slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 13.09.2026
+
+### Changed
+
+- Docsbook no longer translates your docs with its own AI budget by default: it watches the source repository for pages that fall behind in each language and hands the actual translating to whatever you register — a Claude routine, your own endpoint — over a `translation.needed` webhook you would otherwise have to remember to poll for, then serves back whatever comes through `upload_translation`. `Translations`
+
 ## NEW - 12.09.2026
 
 ### Changed
