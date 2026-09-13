@@ -262,7 +262,7 @@ A dashboard only works if someone opens it. A webhook works always. Registering 
 | Tool | What it is worth |
 |---|---|
 | `update_languages` | Enable a target language. Read alongside the country/language breakdown in `get_analytics`: **translate where the readers already are**, not where you hope they will be. |
-| `set_translation_mode`, `upload_translation`, `approve_translation`, `list_pending_translations`, `get_translation`, `delete_translation` | The translation pipeline — automatic, or externally supplied with human approval. |
+| `set_translation_mode`, `run_translation_pass`, `get_translation_status`, `upload_translation`, `approve_translation`, `list_pending_translations`, `get_translation`, `delete_translation` | The translation pipeline — `run_translation_pass` starts a real automatic catch-up run and `get_translation_status` reports each language's coverage before you spend on one, or bring translations in externally with human approval. |
 | `update_access` | Private workspace, password, or your own SSO/OIDC. Unblocks selling to companies whose procurement requires it. |
 | `update_domain` | Docs on your own domain — the SEO authority accrues to **you**, not to a vendor subdomain. |
 | `update_branding`, `update_ui_settings` | Your product, not a platform's. |
