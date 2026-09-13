@@ -18,6 +18,7 @@ Sees where the model budget actually goes before the invoice does. This is the A
 ### Added
 
 - A commit-by-commit coverage card on Overview shows which languages each recent commit is translated into, so a translator that quietly stopped answering shows up as stale German instead of failing invisibly with nothing on screen to notice it by. `Translations`
+- A forecast about your docs now has to name which of the goals you declared it serves and quote the published finding its predicted size comes from, and an assistant that cannot is refused rather than warned, so the hour it spends goes on something you actually asked for instead of on whatever the first reading turned up. `MCP`
 
 ## NEW - 12.09.2026
 

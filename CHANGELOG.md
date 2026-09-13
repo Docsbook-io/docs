@@ -20,6 +20,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Three new readings tell "nobody searches for this" apart from "we do not rank for it" — `read_keyword_demand`, `read_search_suggestions` and `read_search_trends` — so a page is written for demand that exists rather than for a keyword somebody liked. `SEO`
 - A question can now hold a merge: mark one `waiting_on: "owner_blocking"` and the change that depends on your answer is opened as a pull request and left unmerged until you give it, on projects that publish automatically too, so a page written on a wrong guess is caught before it is published rather than after a reader quotes it back to you. `MCP`
 - The work board flags a merged change that nobody dated a reading for, so a rewrite whose verdict would simply never have been taken is caught the same week instead of sitting under "measuring" for a month. `Changes`
+- A forecast about your docs now has to name which of the goals you declared it serves and quote the published finding its predicted size comes from, and an assistant that cannot is refused rather than warned, so the hour it spends goes on something you actually asked for instead of on whatever the first reading turned up. `MCP`
+- A claim written after its change already shipped is marked as a reconstruction instead of counted as a prediction, so a project that has never once forecast a result stops reading as one whose every change worked. `MCP`
 
 ### Improved
 
@@ -32,6 +34,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The project brief gains a Hypotheses tab beside Questions, Memory, Goals and Reminders, carrying the claim, its expected effect while it is open and its result once judged, with an overdue verdict flagged amber. `MCP`
 - The admin assistant can now read and write that same loop — record a claim, judge it, link work to it, and check whether something was tried before — so a rewrite it makes for you arrives with the forecast that makes it judgeable rather than needing one bolted on afterwards. `AI Chat`
 - An agent working on your docs is now told to read the goals you declared before it reads a single number, and to go and find published work on the problem before it proposes a fix, so the change it brings you argues for something you asked for and cites where the idea came from instead of reading as a hunch. `MCP`
+- The Hypotheses tab marks a claim that argues for no declared goal or quotes no source at all, so a forecast nobody could ever settle is visible at a glance rather than only after opening the row. `MCP`
 
 ### Fixed
 
