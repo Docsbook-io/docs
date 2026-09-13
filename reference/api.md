@@ -70,9 +70,17 @@ curl -X POST https://docsbook.io/api/v1/chat \
 
 | Status | Meaning |
 |---|---|
+| `400` | The request body is missing `question` |
 | `401` | Missing or invalid API key |
-| `403` | AI chat is not enabled for this workspace |
-| `429` | The project's balance is exhausted |
+| `502` | The chat engine failed to produce an answer |
+
+⚠️ **A refused question can also come back as a normal-looking `200`.** When AI
+chat isn't enabled for the workspace's plan, its AI balance is exhausted, or the
+request is flagged as automated, the endpoint currently answers with `200` and
+an **empty** `answer` (`refs` and `follow_up_questions` empty too) rather than a
+distinct error status. Treat an empty `answer` as a failure case in addition to
+the statuses above — do not assume `200` means the question was actually
+answered.
 
 <!-- /widget -->
 
