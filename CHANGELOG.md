@@ -26,6 +26,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Every claim can now name the search it is trying to win, so a rewrite that works is reported as the share of the demand it took rather than as a page that got better — and an audit can come back short while every change under it was confirmed, which is the answer that used to be unsayable. `Audits`
 - `list_audits`, `add_audit`, `add_audit_finding`, `edit_audit` and `edit_audit_finding` let an agent build that opportunity table itself and rank what to write next by measured demand instead of by whichever reading came up first, so a week of unattended work goes on the keywords worth having. `MCP`
 - A demand figure is refused unless it carries the call or the URL it came from, and a search nobody could measure is recorded as unmeasured rather than as zero, so a keyword written off as "nobody looks for this" is one somebody actually checked. `Audits`
+- `get_mentions` now carries each watched query's earlier checks beside today's, so whether a keyword moved up Google's results page or won a citation in its AI answer is read off the pair instead of remembered, and a ranking claim can be judged on its due date against the reading it started from. `MCP`
 
 ### Improved
 
@@ -43,6 +44,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Fixed
 
+- A keyword or search-results reading taken for a project now lands in that project's own history, so the demand figure behind an audit row can be cited by the call it came from. The rule that a figure needs a source was already enforced and, for these readings, nothing could satisfy it: the number came back correct and had to be thrown away. `Audits`
 - A claim written before its change no longer reports itself as already being tested: giving it a check date alone used to mark it `testing`, which made both the board and the due list say a change had shipped when nothing had. `MCP`
 - "Have we already tried this" no longer answers "your search could not be parsed" when the real reason is that Docsbook cannot see the repository: GitHub returns the same code for a broken query and for one it will not run, and the two now read differently, so an agent stops rewording a question that was never the problem. `MCP`
 - The readings that look outside your own docs — a search result, a competitor's page, a public profile — no longer fail with a supplier's product name and one of our own environment variables in the message. They answer in the same words as every other tool here (unavailable, timed out, rate limited, refused), so an agent can act on the answer instead of retrying a configuration problem it has no way to see, and the underlying diagnosis now goes to the operator who can actually fix it. `MCP`

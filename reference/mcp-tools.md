@@ -212,6 +212,8 @@ One audit names one goal you declared, states in numbers what reaching it would 
 
 🔴 **A demand figure is refused without a source you can open** — the `call_id` of the reading it came from, or a URL. A plausible number leaves no trace at all when it is invented, which a plausible link at least does.
 
+⚡ **So pass `workspace_id` to the reading that produced the figure.** The market readings — `read_keyword_demand`, `read_search_suggestions`, `read_search_trends`, `read_serp_snapshot`, `read_bing_results` — look at somebody else's search results rather than at your project, so naming the project is what files the call in your own history and gives it the `call_id` a row can cite. Leave it out and the reading still comes back, uncited and uncitable; each answer says which of the two it was, and `list_tool_calls { tool: "read_keyword_demand" }` reads the id back.
+
 🔴 **A search nobody could measure is left empty, never written as zero.** A zero reads as "nobody looks for this", travels into the decision to skip the row and is never revisited. `demand_note` is where "we tried and found no figure" goes, and `progress` reports how many rows are in that state beside every total, so a share computed over the rest is read as the upper bound it is.
 
 ⚡ **Nothing on a row says whether it was won.** That is the verdict on the claims pointing at it, and a second copy would disagree with the first inside a week. A rejection that named what to try next keeps the row in play rather than closing it as a loss.

@@ -18,6 +18,7 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 - A forecast about your docs now has to name which of the goals you declared it serves and quote the published finding its predicted size comes from, and an assistant that cannot is refused rather than warned, so the hour it spends goes on something you actually asked for instead of on whatever the first reading turned up. `MCP`
 - A claim written after its change already shipped is marked as a reconstruction instead of counted as a prediction, so a project that has never once forecast a result stops reading as one whose every change worked. `MCP`
 - `list_audits`, `add_audit`, `add_audit_finding`, `edit_audit` and `edit_audit_finding` let an agent build that opportunity table itself and rank what to write next by measured demand instead of by whichever reading came up first, so a week of unattended work goes on the keywords worth having. `MCP`
+- `get_mentions` now carries each watched query's earlier checks beside today's, so whether a keyword moved up Google's results page or won a citation in its AI answer is read off the pair instead of remembered, and a ranking claim can be judged on its due date against the reading it started from. `MCP`
 
 ### Improved
 
