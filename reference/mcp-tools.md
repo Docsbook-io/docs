@@ -282,6 +282,19 @@ Until 2026-09-12, three kinds of tool ran work here instead of just answering a 
 - **Four background runners** (`run_docs_analyze`, `run_docs_create`, `run_docs_manage`, `run_docs_automate`) ran a skill on Docsbook's side against your workspace and handed back a `run_id` to poll with `get_agent_run`, `list_agent_runs` and `cancel_agent_run` — all seven gone. Every tool on this server now answers inside the call that asked for it: there is no job to start and no run to poll, which also removes the commonest way to misreport one (treating `{ run_id, state: "queued" }` as the answer).
 - **Two standing-agent tools** (`find_agent`, `enable_agent`) armed a route that ran on its own, on a schedule, an event or a repository's commits — also gone, with the engine behind them. Nothing on this server starts work by itself. What that engine was for is served by what remains: `register_webhook_*` for "tell me when something happens" (your side decides what to do about it), your own agent holding your repository for "do the work once", and `docsbook_expert` for "what should I do about this" — which was the only part of a standing agent worth keeping, since it knew which tools, in what order, and how the answer goes wrong.
 
+## Example prompts
+
+What you would actually type to a connected client, and the tools it ends up calling. `docsbook_expert` answers each of these first, with the exact order to call things in — the tools named below are what it names.
+
+- "Improve the docs — find what's costing us readers and fix it." → `docsbook_expert`, then `get_analytics`, `search_docs`, `write_docs`
+- "Why did nobody finish the quickstart last week?" → `get_page_journeys`, `get_failed_searches`, `get_ai_unanswered`
+- "Document the new `traffic_drop` webhook, and check nobody already asked for this." → `list_issues`, `read_source`, `write_docs`, `register_webhook_traffic_drop`
+- "What questions is the AI chat failing to answer?" → `get_ai_unanswered`, `get_negative_feedback`
+- "File an issue for the broken link on the API reference page." → `list_issues`, `create_issue`
+- "Did last week's rewrite of the pricing page actually help?" → `get_page_diff_impact`
+- "Turn on German for the docs." → `update_languages`, `set_translation_mode`
+- "What's still open that I should be looking at?" → `get_work_board`, `list_reminders`
+
 ## Troubleshooting / FAQ
 
 **Is the agents/MCP tooling still working?** Yes. On 2026-09-12 the standing-agent engine was retired — the 41 `agent_*` tools, the 135 action tools and the 4 `run_docs_*` runners are gone — and one agent remains: `docsbook_expert`, which advises rather than runs. Every other tool on this page still works exactly as documented.
