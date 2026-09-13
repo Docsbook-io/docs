@@ -1,7 +1,7 @@
 ---
 title: "MCP server: run your documentation from a coding agent"
 description: "Connect Claude Code, Cursor, Codex or any MCP client to Docsbook and read, write, measure and configure your documentation from inside the editor."
-tldr: "Docsbook's remote MCP server exposes 151 typed tools over one OAuth-protected endpoint — ask the one `docsbook_expert` expert agent how to do the work, then carry it out yourself: read pages, commit them, read analytics, change settings. Calls are billed per call against the project's balance by billing class; discovery is free."
+tldr: "Docsbook's remote MCP server exposes 156 typed tools over one OAuth-protected endpoint — ask the one `docsbook_expert` expert agent how to do the work, then carry it out yourself: read pages, commit them, read analytics, change settings. Calls are billed per call against the project's balance by billing class; discovery is free."
 ---
 
 # MCP Server
@@ -12,7 +12,7 @@ This page is the reference for what the server serves and what a call draws on. 
 
 ## What is the Docsbook MCP server?
 
-The Docsbook MCP server exposes **151 tools** over the Model Context Protocol, an open standard for handing tools, resources and prompts to AI agents over a typed RPC interface.
+The Docsbook MCP server exposes **156 tools** over the Model Context Protocol, an open standard for handing tools, resources and prompts to AI agents over a typed RPC interface.
 
 **Exactly one of them is an agent.** `docsbook_expert` takes any documentation request in your own words — "improve the docs", "document this API", "why are readers not converting" — and answers in one round trip with how to do the work: the steps in order, the tool to call on each, what to carry from one step to the next, what would make the answer wrong, and what to remember afterwards. It runs nothing itself and needs no approval; you make the calls it names, on your own token, at read prices. Call it first, before reaching for anything below.
 

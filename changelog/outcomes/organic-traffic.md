@@ -14,6 +14,9 @@ Pages that already rank 5–20 are the cheapest traffic you will ever buy. This 
 ### Added
 
 - Three new readings tell "nobody searches for this" apart from "we do not rank for it" — `read_keyword_demand`, `read_search_suggestions` and `read_search_trends` — so a page is written for demand that exists rather than for a keyword somebody liked. `SEO`
+- A new **Audits** section answers the question a goal cannot: how much organic traffic is actually on the table, and how much of it you have taken. An audit names one goal you declared, states the number that would count as reaching it, and lists the searches people make that your docs do not answer — each row with how many look for it, the reading that figure came from, and who ranks for it today. `Audits`
+- `list_audits`, `add_audit`, `add_audit_finding`, `edit_audit` and `edit_audit_finding` let an agent build that opportunity table itself and rank what to write next by measured demand instead of by whichever reading came up first, so a week of unattended work goes on the keywords worth having. `MCP`
+- A demand figure is refused unless it carries the call or the URL it came from, and a search nobody could measure is recorded as unmeasured rather than as zero, so a keyword written off as "nobody looks for this" is one somebody actually checked. `Audits`
 
 ## NEW - 12.09.2026
 

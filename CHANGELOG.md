@@ -22,6 +22,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The work board flags a merged change that nobody dated a reading for, so a rewrite whose verdict would simply never have been taken is caught the same week instead of sitting under "measuring" for a month. `Changes`
 - A forecast about your docs now has to name which of the goals you declared it serves and quote the published finding its predicted size comes from, and an assistant that cannot is refused rather than warned, so the hour it spends goes on something you actually asked for instead of on whatever the first reading turned up. `MCP`
 - A claim written after its change already shipped is marked as a reconstruction instead of counted as a prediction, so a project that has never once forecast a result stops reading as one whose every change worked. `MCP`
+- A new **Audits** section answers the question a goal cannot: how much organic traffic is actually on the table, and how much of it you have taken. An audit names one goal you declared, states the number that would count as reaching it, and lists the searches people make that your docs do not answer — each row with how many look for it, the reading that figure came from, and who ranks for it today. `Audits`
+- Every claim can now name the search it is trying to win, so a rewrite that works is reported as the share of the demand it took rather than as a page that got better — and an audit can come back short while every change under it was confirmed, which is the answer that used to be unsayable. `Audits`
+- `list_audits`, `add_audit`, `add_audit_finding`, `edit_audit` and `edit_audit_finding` let an agent build that opportunity table itself and rank what to write next by measured demand instead of by whichever reading came up first, so a week of unattended work goes on the keywords worth having. `MCP`
+- A demand figure is refused unless it carries the call or the URL it came from, and a search nobody could measure is recorded as unmeasured rather than as zero, so a keyword written off as "nobody looks for this" is one somebody actually checked. `Audits`
 
 ### Improved
 
@@ -39,6 +43,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Fixed
 
 - A claim written before its change no longer reports itself as already being tested: giving it a check date alone used to mark it `testing`, which made both the board and the due list say a change had shipped when nothing had. `MCP`
+- "Have we already tried this" no longer answers "your search could not be parsed" when the real reason is that Docsbook cannot see the repository: GitHub returns the same code for a broken query and for one it will not run, and the two now read differently, so an agent stops rewording a question that was never the problem. `MCP`
 
 ## NEW - 12.09.2026
 

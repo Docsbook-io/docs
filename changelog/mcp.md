@@ -17,6 +17,7 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 - A question can now hold a merge: mark one `waiting_on: "owner_blocking"` and the change that depends on your answer is opened as a pull request and left unmerged until you give it, on projects that publish automatically too, so a page written on a wrong guess is caught before it is published rather than after a reader quotes it back to you. `MCP`
 - A forecast about your docs now has to name which of the goals you declared it serves and quote the published finding its predicted size comes from, and an assistant that cannot is refused rather than warned, so the hour it spends goes on something you actually asked for instead of on whatever the first reading turned up. `MCP`
 - A claim written after its change already shipped is marked as a reconstruction instead of counted as a prediction, so a project that has never once forecast a result stops reading as one whose every change worked. `MCP`
+- `list_audits`, `add_audit`, `add_audit_finding`, `edit_audit` and `edit_audit_finding` let an agent build that opportunity table itself and rank what to write next by measured demand instead of by whichever reading came up first, so a week of unattended work goes on the keywords worth having. `MCP`
 
 ### Improved
 
@@ -28,6 +29,7 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 ### Fixed
 
 - A claim written before its change no longer reports itself as already being tested: giving it a check date alone used to mark it `testing`, which made both the board and the due list say a change had shipped when nothing had. `MCP`
+- "Have we already tried this" no longer answers "your search could not be parsed" when the real reason is that Docsbook cannot see the repository: GitHub returns the same code for a broken query and for one it will not run, and the two now read differently, so an agent stops rewording a question that was never the problem. `MCP`
 
 ## NEW - 12.09.2026
 

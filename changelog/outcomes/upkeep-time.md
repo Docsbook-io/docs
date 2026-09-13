@@ -17,12 +17,18 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 - Write down what you expect a docs change to do BEFORE you make it, and Docsbook keeps the claim until its date: `add_hypothesis` records the forecast, `write_docs` attaches it to the change that tests it, and the verdict is recorded against it, so nobody has to reconstruct months later from memory whether a rewrite actually worked. `MCP`
 - `search_brief` answers "have we already tried this" across everything written down about a project, rejected claims and their figures included, so the same rewrite is not shipped twice with the same confidence. `MCP`
 - The work board flags a merged change that nobody dated a reading for, so a rewrite whose verdict would simply never have been taken is caught the same week instead of sitting under "measuring" for a month. `Changes`
+- Every claim can now name the search it is trying to win, so a rewrite that works is reported as the share of the demand it took rather than as a page that got better — and an audit can come back short while every change under it was confirmed, which is the answer that used to be unsayable. `Audits`
+- `list_audits`, `add_audit`, `add_audit_finding`, `edit_audit` and `edit_audit_finding` let an agent build that opportunity table itself and rank what to write next by measured demand instead of by whichever reading came up first, so a week of unattended work goes on the keywords worth having. `MCP`
 
 ### Improved
 
 - Goals, Questions, What Docsbook knows and Reminders are now one card with four tabs — Questions, Memory, Goals and Reminders — each shown as an icon you hover for what it holds, so the two stores an agent reads through `list_memory` and `list_reminders` read on screen as one place instead of four, and an open question, a fact or an overdue reminder stands apart from a closed one by its own icon rather than a tab you had to pick first. `MCP`
 - The admin assistant can now read and write that same loop — record a claim, judge it, link work to it, and check whether something was tried before — so a rewrite it makes for you arrives with the forecast that makes it judgeable rather than needing one bolted on afterwards. `AI Chat`
 - An agent working on your docs is now told to read the goals you declared before it reads a single number, and to go and find published work on the problem before it proposes a fix, so the change it brings you argues for something you asked for and cites where the idea came from instead of reading as a hunch. `MCP`
+
+### Fixed
+
+- "Have we already tried this" no longer answers "your search could not be parsed" when the real reason is that Docsbook cannot see the repository: GitHub returns the same code for a broken query and for one it will not run, and the two now read differently, so an agent stops rewording a question that was never the problem. `MCP`
 
 ## NEW - 12.09.2026
 

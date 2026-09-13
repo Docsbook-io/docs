@@ -15,6 +15,10 @@ Claims and links that stopped being true — found before a reader finds them. T
 
 - A question can now hold a merge: mark one `waiting_on: "owner_blocking"` and the change that depends on your answer is opened as a pull request and left unmerged until you give it, on projects that publish automatically too, so a page written on a wrong guess is caught before it is published rather than after a reader quotes it back to you. `MCP`
 
+### Fixed
+
+- "Have we already tried this" no longer answers "your search could not be parsed" when the real reason is that Docsbook cannot see the repository: GitHub returns the same code for a broken query and for one it will not run, and the two now read differently, so an agent stops rewording a question that was never the problem. `MCP`
+
 ## NEW - 12.09.2026
 
 ### Added

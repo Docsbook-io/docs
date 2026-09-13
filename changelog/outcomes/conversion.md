@@ -15,6 +15,7 @@ Readers who came to learn and left having started — the docs' real job. This i
 
 - `link_work` ties an issue, a pull request, a claim, a goal and a reminder into one thread, so the question "did this change work" is answered by the record itself instead of by somebody matching them up by hand. `MCP`
 - A forecast about your docs now has to name which of the goals you declared it serves and quote the published finding its predicted size comes from, and an assistant that cannot is refused rather than warned, so the hour it spends goes on something you actually asked for instead of on whatever the first reading turned up. `MCP`
+- A new **Audits** section answers the question a goal cannot: how much organic traffic is actually on the table, and how much of it you have taken. An audit names one goal you declared, states the number that would count as reaching it, and lists the searches people make that your docs do not answer — each row with how many look for it, the reading that figure came from, and who ranks for it today. `Audits`
 
 ### Improved
 

@@ -1,11 +1,11 @@
 ---
 title: "Every tool the Docsbook MCP server exposes to an agent"
-description: "The 151 tools a Docsbook workspace exposes over MCP — the one `docsbook_expert` agent, workspace setup, content, issues, chat, translations, analytics, call history, project memory, reminders, hypotheses, the work board and webhooks."
+description: "The 156 tools a Docsbook workspace exposes over MCP — the one `docsbook_expert` agent, workspace setup, content, issues, chat, translations, analytics, call history, project memory, reminders, audits, hypotheses, the work board and webhooks."
 ---
 
 # MCP Tools Reference
 
-This page lists every tool exposed by the Docsbook MCP server at `https://docsbook.io/api/mcp/server`. The server exposes **151 tools**. Each requires Bearer authentication via OAuth 2.0 + PKCE.
+This page lists every tool exposed by the Docsbook MCP server at `https://docsbook.io/api/mcp/server`. The server exposes **156 tools**. Each requires Bearer authentication via OAuth 2.0 + PKCE.
 
 The **Billing** column names the class a call is metered under, against the project's own balance:
 
@@ -193,6 +193,28 @@ The difference from the brief is *when it is read*, not what it holds: every mem
 🔴 **This is not a webhook.** Nothing fires and nobody is notified: a reminder is read when somebody asks what to do. For "tell us when something happens on the site", that is `register_webhook_*` below.
 
 ⚡ **"Nothing moved" is an outcome**, and the valuable one — it is what stops the same change being made again with the same confidence. Closing a reminder with what you found is how it gets finished; retiring one you actually checked destroys the finding, because a retired row and a completed one look identical to the next session.
+
+## Audits: what there is to win, and how much of it is won
+
+A goal says what counts as your documentation working. It does not say how much of it is on the table — so a change that works can still only be reported as a page that got better, never as a share of something. An audit is that missing number. Free on every plan, and its own **Audits** section in the panel.
+
+One audit names one goal you declared, states in numbers what reaching it would take, and lists the searches, questions and jobs people actually have — one row each, with how many look for it, the reading that figure came from, what your docs have against it today and who ranks for it now. Claims are then drawn from that list rather than from whichever reading came up first, so a confirmed change reports the demand it took.
+
+🔴 **An audit and the changes under it are judged separately, and they are allowed to disagree.** `edit_hypothesis` says whether one change did what it predicted; `edit_audit` says whether the goal moved. The sentence this exists to make sayable is the awkward one: every claim confirmed, and the target still short — which means the rows addressed a smaller share of the demand than anybody thought.
+
+| Tool | Billing | Description |
+|---|---|---|
+| `list_audits` | Read | Every audit with its goal, its target and its rows, plus `progress`: how much demand is listed, how much of it anything is even pointed at, and how much has been won. Read it before writing a claim. |
+| `add_audit` | Write | Open one. Needs `goal_key` — a goal you declared, checked against the ones that exist — and, for an assistant, `target` and `target_metric`. An audit with no target cannot come out short, and coming out short is the finding. |
+| `add_audit_finding` | Write | Add one opportunity: `intent` in the words somebody types, `demand_value` with the `demand_source` it came from, `current` for what you have today, `competitor` for who holds it, and `action` from a closed list — create, rewrite, expand, structure, authority or none. |
+| `edit_audit` | Write | Judge the audit with the target reading, move its review date, or correct it. `reached` means the goal moved, not that the changes under it were confirmed. |
+| `edit_audit_finding` | Write | Correct a row, or drop one with the reason, so the next run reading the same demand does not re-propose it. |
+
+🔴 **A demand figure is refused without a source you can open** — the `call_id` of the reading it came from, or a URL. A plausible number leaves no trace at all when it is invented, which a plausible link at least does.
+
+🔴 **A search nobody could measure is left empty, never written as zero.** A zero reads as "nobody looks for this", travels into the decision to skip the row and is never revisited. `demand_note` is where "we tried and found no figure" goes, and `progress` reports how many rows are in that state beside every total, so a share computed over the rest is read as the upper bound it is.
+
+⚡ **Nothing on a row says whether it was won.** That is the verdict on the claims pointing at it, and a second copy would disagree with the first inside a week. A rejection that named what to try next keeps the row in play rather than closing it as a loss.
 
 ## Hypotheses and the work board: whether the change worked
 
