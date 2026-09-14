@@ -1,11 +1,11 @@
 ---
 title: "Every tool the Docsbook MCP server exposes to an agent"
-description: "The 156 tools a Docsbook workspace exposes over MCP — the one `docsbook_expert` agent, workspace setup, content, issues, chat, translations, analytics, call history, project memory, reminders, opportunities, hypotheses, the work board and webhooks."
+description: "The 149 tools a Docsbook workspace exposes over MCP — the one `docsbook_expert` agent, workspace setup, content, issues, chat, translations, analytics, call history, project memory, opportunities, hypotheses, the work board and webhooks."
 ---
 
 # MCP Tools Reference
 
-This page lists every tool exposed by the Docsbook MCP server at `https://docsbook.io/api/mcp/server`. The server exposes **156 tools**. Each requires Bearer authentication via OAuth 2.0 + PKCE.
+This page lists every tool exposed by the Docsbook MCP server at `https://docsbook.io/api/mcp/server`. The server exposes **149 tools**. Each requires Bearer authentication via OAuth 2.0 + PKCE.
 
 The **Billing** column names the class a call is metered under, against the project's own balance:
 
@@ -172,29 +172,6 @@ What the docs are FOR, what nobody has answered yet, and what every agent otherw
 
 ⚡ An answered question keeps its answer beside it rather than disappearing — *"we already asked this, and here is the answer"* is what stops the next run asking again.
 
-## Reminders: what the project promised to come back to
-
-The brief above holds what stays true. This holds what is only true **later** — the reading that shows whether last week's rewrite worked and does not exist for another fortnight, a price that is right until Q4, a question you said you would answer. Free on every plan, and on the admin panel's Overview beside the brief.
-
-The difference from the brief is *when it is read*, not what it holds: every memory line is read on every run, and a reminder is read **by its date**. It says nothing for the ninety days between being written and coming due.
-
-| Kind | What it holds |
-|---|---|
-| `measure` | A change was made and its effect is not visible yet. Name the baseline in `because` — the change, and the `call_id` of the reading taken before it. |
-| `recheck` | A fact with a known expiry: "beta until Q3", a price review, a version sunset. Written the day you learn the date, not the day it bites. |
-| `followup` | A promise — a question somebody said they would answer, a decision deferred. What separates it from an open `question` is that somebody named a date. |
-
-| Tool | Billing | Description |
-|---|---|---|
-| `list_reminders` | Read | What is **due now** by default — usually nothing, which is the cheap correct answer. Each row carries what to read (`check_with`), what it is judged against (`because`) and how late it is. `state: "all"` returns the whole schedule; `done` returns what past checks actually found. |
-| `add_reminder` | Write | Promise to come back to something on a date. Say when with `in_days` rather than a date: the server does the arithmetic and answers with the absolute instant, so an agent that is unsure what today is cannot file a reminder into the past. |
-| `edit_reminder` | Write | **Close** it with `outcome` — what the reading showed — or move its date rather than closing a check nobody ran. An empty `outcome` reopens one, because a reading taken against the wrong baseline has to be retractable. |
-| `remove_reminder` | Write | Retire one that should never have been written, or whose subject is gone. Archived, never destroyed. |
-
-🔴 **This is not a webhook.** Nothing fires and nobody is notified: a reminder is read when somebody asks what to do. For "tell us when something happens on the site", that is `register_webhook_*` below.
-
-⚡ **"Nothing moved" is an outcome**, and the valuable one — it is what stops the same change being made again with the same confidence. Closing a reminder with what you found is how it gets finished; retiring one you actually checked destroys the finding, because a retired row and a completed one look identical to the next session.
-
 ## Opportunities: what there is to win, and how much of it is won
 
 Every project shares one **standing goal** — be found, on Google and in AI answers — so nothing here waits on you to declare what the docs are for. It splits into two branches, `found_in_search` and `cited_by_ai`, and an agent decomposes it into **directions** (one audience and the searches it makes) and, under each direction, **opportunities**: the searches, questions and jobs that audience actually has. Free on every plan, and its own **Opportunities** section in the panel.
@@ -223,7 +200,7 @@ One direction names the goal it decomposes, states in numbers what reaching it w
 
 ## Hypotheses and the work board: whether the change worked
 
-The brief holds what stays true and reminders hold what is true later. This holds the one thing neither did: **a claim that could turn out false**. Free on every plan, and on Overview as a Hypotheses tab beside the brief plus a four-column board.
+The brief holds what stays true. This holds the one thing it didn't: **a claim that could turn out false, with a date to come back and judge it** — `check_at`/`check_in_days` on the row itself is what used to need a separate reminder. Free on every plan, and on Overview as a Hypotheses tab beside the brief plus a four-column board.
 
 It only works in one order — the claim first, the change second. `expected_effect` is written before the change and `result` after the reading, and once they are two columns of two different ages, a forecast can be told apart from a description written afterwards from the result. Nothing downstream can tell them apart otherwise, which is how a loop rots while every change still looks like it worked.
 
@@ -235,16 +212,14 @@ A claim also has to say what it is FOR and where it came FROM, so a change you m
 | `add_hypothesis` | Write | Record the claim **before** making the change. A `forecast` takes the whole chain and is refused without it: `direction_key` and `opportunity_key` the opportunity it argues for (`goal_key` follows from the direction, or defaults to the standing goal `be_found`), `because` why that opportunity is short and what the cause is, `source_url` the page outside your product the idea came from — never this project's own pull request or commit, which is the change rather than its origin — `source_claim` the one fact that page reports, which is what `expected_effect` is sized from, and `baseline` the deciding reading as it stands right now — the figure, the tool, the call id and the date, taken **before** the change, because it is the one part of the claim that stops being obtainable once the change ships. Then `evidence` (the observation on this project), `expected_effect` (what that same reading should say afterwards, and by when) and `metric` (the reading that will decide it, the same tool and subject that produced the baseline). `baseline` and `expected_effect` are both refused without a number in them: "should help" agrees with any reading anybody later takes. Pass `kind: "reconstruction"` for a change that already shipped: it needs `because` and no source, because nobody read one. A row with no change attached stays `untested`. |
 | `edit_hypothesis` | Write | Judge it — `result` is what was measured, with the denominator, and `verdict` is `confirmed` or `rejected`. Too early is not a verdict: move the date with `check_in_days` instead. An empty `verdict` retracts one. |
 | `remove_hypothesis` | Write | Retire a claim that should never have been written, or whose subject is gone. Not how a tested one is finished — that is a verdict. |
-| `link_work` | Read | Tie an issue, a pull request, a hypothesis, a memory line and a reminder together. Undirected and idempotent: linking A to B is the same fact as B to A, and writing it twice is one row. `write_docs` does the issue↔pull-request half for you when you pass `closes_issues`. |
+| `link_work` | Read | Tie an issue, a pull request, a hypothesis and a memory line together. Undirected and idempotent: linking A to B is the same fact as B to A, and writing it twice is one row. `write_docs` does the issue↔pull-request half for you when you pass `closes_issues`. |
 | `unlink_work` | Read | Disconnect two things linked in error. A link to finished work is not stale — removing it makes a merged change unmeasurable again. |
 | `get_work_board` | Egress | Every issue and pull request in the column its state earns: `planned`, `in_review`, `measuring`, `done`. Reads GitHub on request, so it is metered as egress rather than as a read. |
-| `search_brief` | Read | One query over everything written down — memory, hypotheses and reminders, closed ones included. The pair of `search_prior_work`, which searches the repository instead. |
+| `search_brief` | Read | One query over everything written down — memory and hypotheses, closed ones included. The pair of `search_prior_work`, which searches the repository instead. |
 
 🔴 **"Nothing distinguishable" is `rejected`, not a missing verdict.** The claim predicted an effect and none appeared, and that is the most valuable row the store produces, because it is what stops the same change being made again with the same confidence.
 
-🔴 **A merged change with nothing linked to it shows on the board as `unmeasured`** — the honest word for work nobody can say anything about afterwards. It looks like progress and is not, which is why the board names it rather than filing it under Done. Paying that debt (a claim written late, linked, with a reading dated) outranks starting anything new.
-
-🔴 **A merged change with a claim and no reminder carries `needs_reminder`.** It is the quieter half of the same failure: the column says Measuring, the claim says it is being tested, and nobody is dated to come back and take the reading, so the check simply never happens. One `add_reminder` and one `link_work` pays it.
+🔴 **A merged change with nothing linked to it shows on the board as `unmeasured`** — the honest word for work nobody can say anything about afterwards. It looks like progress and is not, which is why the board names it rather than filing it under Done. Paying that debt (a claim written late, linked, with a reading dated) outranks starting anything new. Because the check date now lives on the hypothesis itself (`check_at`/`check_in_days`), writing the claim with `add_hypothesis` and linking it with `link_work` is the whole fix — there is no separate reminder to remember to write.
 
 ⚡ **A question can hold a merge.** Write it with `add_memory` as a `question` with `waiting_on: "owner_blocking"` and link it to the work, and a pull request that depends on it is opened and **not merged** until you answer — on a project set to merge automatically as well. The card shows as `blocked`, and the agent that wrote the change may not answer the question to unblock itself. Use it when a wrong answer would make the change wrong (which of two pages is real, whether a version is still supported); `waiting_on: "owner"` is the ordinary case, where the question is worth asking and the work goes ahead.
 
@@ -296,7 +271,7 @@ What you would actually type to a connected client, and the tools it ends up cal
 - "File an issue for the broken link on the API reference page." → `list_issues`, `create_issue`
 - "Did last week's rewrite of the pricing page actually help?" → `get_page_diff_impact`
 - "Turn on German for the docs." → `update_languages`, `set_translation_mode`
-- "What's still open that I should be looking at?" → `get_work_board`, `list_reminders`
+- "What's still open that I should be looking at?" → `get_work_board`, `list_hypotheses` with `state: "due"`
 
 ## Troubleshooting / FAQ
 
@@ -306,7 +281,7 @@ What you would actually type to a connected client, and the tools it ends up cal
 
 **A call was refused for an empty balance — what do I do?** The refusal names the project that ran out, what the call draws, what is left, and where to top up. Discovery calls (`get_info`, `list_workspaces`, `find_skill`, and the rest of the Included class above) keep working regardless, so your agent can still find out what happened and report it.
 
-**Why does the tool count keep changing?** It reflects what actually runs. The server exposed more tools before 2026-09-12, when the 135 narrow action tools and the standing-agent tools were retired in favor of `docsbook_expert`; it currently exposes 156. `get_info` always reports the live count.
+**Why does the tool count keep changing?** It reflects what actually runs. The server exposed more tools before 2026-09-12, when the 135 narrow action tools and the standing-agent tools were retired in favor of `docsbook_expert`; the 4 Reminders tools were retired on top of that on 2026-09-14, superseded by `check_at`/`check_in_days` on a hypothesis; it currently exposes 149. `get_info` always reports the live count.
 
 ## Related
 

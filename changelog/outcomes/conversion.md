@@ -11,11 +11,16 @@ Readers who came to learn and left having started — the docs' real job. This i
 
 ## NEW - 14.09.2026
 
+### Added
+
+- Opening a question, hypothesis, fact or goal on the Overview brief card now shows the GitHub issues and pull requests linked to it, right there in the read view, instead of leaving you to go dig through GitHub to see what work a line is actually attached to. `Overview`
+
 ### Changed
 
 - A run that finds no declared goal on a project now states the default — be found through search engines and AI assistants — and gets on with the demand-ranked work, instead of filing a question and waiting for an answer that is the same on nearly every project. It still asks when a project gives a concrete reason to differ. `Agents`
 - Every project now decomposes that one standing goal into directions and opportunities on its own, so an agent never has to ask what the docs are for and never invents a placeholder goal just to get started. `Agents`
 - The Audits tab is now Opportunities: every row states the search, the competitor holding it today and what would beat them, and what winning it is worth — all in plain business words, with the call ids and readings that back each claim moved to a trace field the owner never has to open. `Overview`
+- Every row on the Overview brief card — Questions, Hypotheses, Memory, Goals, Opportunities — now shows a short, plain-language label instead of its full raw text, so the whole list reads at a glance instead of forcing you to scan wrapped paragraphs to tell rows apart; opening a row still shows it in full. `Overview`
 
 ### Improved
 
