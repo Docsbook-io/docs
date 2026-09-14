@@ -56,7 +56,7 @@ Docsbook's MCP server exposes tools in these categories. The full list is return
 | Content and documentation | `search_docs`, `get_doc_outline`, `write_docs` |
 | Branding | `update_branding`, `update_ui_settings`, `update_navigation` |
 | AI settings | `update_ai_settings`, `set_chat_system_prompt`, `set_chat_hooks` |
-| SEO and domain | `update_seo`, `update_domain` |
+| Domain | `update_domain` |
 | Translation | `update_languages`, `set_translation_mode`, `approve_translation` |
 | Analytics | `get_analytics`, `get_ai_questions`, `get_failed_searches`, `get_negative_feedback`, `get_top_visitors`, `get_visitor_activity` |
 | Webhooks | `register_webhook_*`, `list_webhook_deliveries`, `test_webhook` |

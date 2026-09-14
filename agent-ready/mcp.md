@@ -161,7 +161,7 @@ There are only four ways a docs tool makes money, and every tool below serves on
 
 | Lever | Mechanism | Core tools |
 |---|---|---|
-| **Acquisition** | More qualified readers arrive, from search and from AI answers | `update_seo`, `update_geo`, `update_aeo`, `get_search_rankings` |
+| **Acquisition** | More qualified readers arrive, from search and from AI answers | `get_search_rankings`, `collect_ai_citability`, `write_docs` |
 | **Conversion** | More arriving readers leave with what they came for | `get_visit_outcomes`, `get_dead_end_pages`, `get_content_health`, `get_route_patterns` |
 | **Sales** | The assistant carries buying-intent readers forward instead of just answering | `get_chat_intent`, `get_chat_conversations`, `set_chat_system_prompt`, `set_chat_hooks` |
 | **Cost avoided** | Questions answered by the docs are questions not answered by a person | `get_ai_unanswered`, `get_failed_searches`, `get_search_zero_click`, `get_insights` |
@@ -172,9 +172,8 @@ A tool that serves none of these returns **context**, not a decision. `Pageviews
 
 | Tool | What it is worth |
 |---|---|
-| `update_seo` | Meta tags, sitemap, OpenGraph. Table stakes: without it, pages that deserve to rank cannot. |
-| `update_geo` | Generative Engine Optimization — structures the page so an LLM can quote it *and attribute it to you*. The difference between being the source of an AI answer and being invisible inside one. |
-| `update_aeo` | Answer Engine Optimization — shapes content into the direct-answer form AI assistants lift verbatim. |
+| *(no tool)* | Meta tags, sitemap, OpenGraph, TL;DR, author markup and FAQ/HowTo/speakable JSON-LD are emitted for every project automatically. There were `update_seo`, `update_geo` and `update_aeo` tools until 14 September 2026; they set flags that are now permanently on, so they were removed rather than left reporting changes they no longer make. |
+| `collect_ai_citability` | Whether that markup is actually reaching the live pages, and whether an assistant can fetch and quote them at all — the question the three removed tools could never answer. |
 | `get_search_rankings` | Real Google Search Console positions, plus the **"worth improving" set at position 5–20** — pages Google already shows that are not yet winning the click. Turns "we should do SEO" into a named page and a named query. Lags Google by ~2 days. |
 | `get_analytics` (AI-bot breakdown) | Whether ChatGPT, Perplexity and Claude crawlers read you at all. A zero here means the GEO work is not landing — no crawl, no citation, no referral. |
 
@@ -312,7 +311,8 @@ The only loop in any docs product that starts at a stated objection and ends at 
 ### Loop 4 — "Am I visible to AI, and did it bring anyone?"
 
 ```text
-update_geo + update_aeo   → structure content for citation
+write_docs                → shape the passage an engine can lift
+collect_ai_citability     → confirm the markup is really on the live page
 get_analytics (ai_bots)   → confirm crawlers are actually reading it
 get_search_rankings       → track classic-search position alongside
 get_analytics (referrers) → referrals arriving from AI assistants

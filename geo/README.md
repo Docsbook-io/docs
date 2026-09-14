@@ -1,12 +1,12 @@
 ---
 title: "GEO: what Docsbook adds so an AI assistant can quote you"
-description: "The page-level signals Docsbook injects when GEO is on — TL;DR block, visible last-modified time, Person author JSON-LD — and the honest size of the effect."
-tldr: "Turn GEO on in the admin SEO / GEO tab; it is not gated by plan. Docsbook injects a TL;DR block after the H1 (from `tldr:` frontmatter or the lede, capped at 280 characters), a visible Updated date inside a real time element, and switches the JSON-LD author from your organisation to a Person."
+description: "The page-level signals Docsbook injects on every page — TL;DR block, visible last-modified time, Person author JSON-LD — and the honest size of the effect."
+tldr: "GEO is on for every project, on every plan — there is no setting. Docsbook injects a TL;DR block after the H1 (from `tldr:` frontmatter or the lede, capped at 280 characters), a visible Updated date inside a real time element, and makes the JSON-LD author a Person rather than your organisation."
 ---
 
 # GEO — Generative Engine Optimization
 
-Docsbook GEO is the set of page-level signals that help a generative engine — Perplexity, ChatGPT search, Google AI Overviews, Claude — quote your documentation **and attribute the quote to you**. Toggle **GEO** on in the admin **SEO / GEO** tab, or call `update_geo` over MCP, and every page in the workspace carries them on the next render. It is not gated by plan — every plan has it.
+Docsbook GEO is the set of page-level signals that help a generative engine — Perplexity, ChatGPT search, Google AI Overviews, Claude — quote your documentation **and attribute the quote to you**. Every page of every workspace carries them: there is nothing to turn on and no plan that withholds them. (Until 14 September 2026 this was a toggle in an admin **SEO & GEO** tab, alongside an `update_geo` MCP tool. Both are gone — the signals are unconditional now.)
 
 GEO is about being cited inside a generated answer. Its two neighbours cover different surfaces: [SEO](../seo/README.md) is about ranking in a list of blue links, and [AEO](../aeo/README.md) is about answer boxes and voice assistants, which are built from explicit `FAQPage` and `HowTo` markup.
 
@@ -16,9 +16,9 @@ Not one thing — a pipeline, and each stage can drop you. A crawler fetches the
 
 Two consequences follow, and everything below is downstream of them. Anything that stops you being fetched or retrieved makes the writing irrelevant. Anything that makes a *retrieved* passage easier to lift and attribute is what GEO can actually change.
 
-## What does Docsbook add to a page when GEO is on?
+## What does Docsbook add to a page?
 
-Three things, all visible in the page's HTML, plus the semantic wrappers around them.
+Three things, on every page, all visible in the page's HTML, plus the semantic wrappers around them.
 
 ### A TL;DR block after the H1
 
@@ -92,15 +92,17 @@ A probe that times out or hits a 404 is recorded as **null with a reason**, neve
 
 **Version-dependent details.** The visible date renders in US English (*May 25, 2026*) whatever language the page is in. `datePublished` is derived from at most the 100 most recent commits touching the file, so on a very long-lived page it is the oldest commit *in that window*, not the true first. An author taken from git is whoever last touched the file, which may be someone who fixed a typo — set `author:` explicitly when the byline matters.
 
-**The GEO switch does not reach a custom domain.** All three signals on this page are emitted by the Docsbook-hosted render path. A page served on your own domain gets **no TL;DR block, no visible Updated line**, and a single `TechArticle` node whose author is always a `Person` named after the repository owner's GitHub login — whether GEO is on or off, and regardless of `author:` frontmatter. Turning GEO on changes nothing a reader or a crawler sees on a custom domain today. See [SEO limits](../seo/how-it-works.md#limits-and-open-questions) for the rest of what differs there.
+**GEO does not reach a custom domain.** All three signals on this page are emitted by the Docsbook-hosted render path. A page served on your own domain gets **no TL;DR block, no visible Updated line**, and a single `TechArticle` node whose author is always a `Person` named after the repository owner's GitHub login — regardless of `author:` frontmatter. None of these signals reach a custom domain today. See [SEO limits](../seo/how-it-works.md#limits-and-open-questions) for the rest of what differs there.
 
 **What GEO cannot do.** It does not get an unindexed page indexed, does not unblock a crawler your `robots.txt` disallows, and does not make a client-side-rendered page readable. Those are [SEO](../seo/README.md) problems, and `audit_geo` reports them as critical for exactly that reason.
 
-## Turning it on
+## What you actually do
 
-1. Open your workspace admin panel (FloatWidget) → **SEO / GEO** tab.
-2. Toggle **GEO** on. No plan gate, no per-page setup ([pricing](https://docsbook.io/pricing)).
-3. Add a `tldr:` line to the five pages you most want quoted. Those two edits are the whole first pass.
+Nothing, to switch it on — every page already carries all three signals, on every
+plan ([pricing](https://docsbook.io/pricing)). The one edit worth making is to
+**add a `tldr:` line to the five pages you most want quoted**, so the block an engine
+lifts is a sentence you wrote rather than whichever paragraph happened to open the
+page. That is the whole first pass.
 
 ## Related
 

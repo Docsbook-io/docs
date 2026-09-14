@@ -1,7 +1,7 @@
 ---
-title: "SEO for docs: every signal generated, one switch to flip"
-description: "Docsbook writes the title, description, canonical URL, hreflang set, cards, JSON-LD, robots.txt and sitemap for every page. You flip one switch and write good headings."
-tldr: "Docsbook generates every classical search signal for every documentation page — title, meta description, canonical URL, hreflang, OpenGraph and X cards, JSON-LD, robots.txt and sitemap.xml — with no configuration. The one thing you must do is turn the site-wide SEO switch on in the admin panel: it is off by default, and until it is on every page ships noindex, nofollow."
+title: "SEO for docs: every signal generated, nothing to switch on"
+description: "Docsbook writes the title, description, canonical URL, hreflang set, cards, JSON-LD, robots.txt and sitemap for every page, on every project. You write good headings."
+tldr: "Docsbook generates every classical search signal for every documentation page — title, meta description, canonical URL, hreflang, OpenGraph and X cards, JSON-LD, robots.txt and sitemap.xml — with no configuration and no setting to turn on. Every project is indexable by default. To keep one page out of the index, put noindex: true in that page's frontmatter; to keep a whole project unread, make it private."
 ---
 
 # SEO
@@ -20,17 +20,20 @@ neighbours cover the other machine surfaces and do not overlap with it:
 
 ## What it costs you
 
-Three things, and one of them is not optional.
+One thing.
 
-1. **Turn the SEO switch on.** In the admin panel, **Settings ▸ SEO & GEO**, the
-   `SEO` toggle. It is **off on a new project**, and while it is off every page is
-   served `noindex, nofollow` — the markup is all generated, and all of it says "do
-   not index me". This is the single most common reason a Docsbook site is not in
-   Google. It is free on every plan.
-2. **Write one clear `# H1` and an opening paragraph that answers the page's
+1. **Write one clear `# H1` and an opening paragraph that answers the page's
    question.** They become the title and the description unless you override them.
-3. **Nothing else.** Canonical URLs, the sitemap, `robots.txt`, cards, JSON-LD and
+2. **Nothing else.** Canonical URLs, the sitemap, `robots.txt`, cards, JSON-LD and
    the language cluster are managed, and there is no configuration surface for them.
+
+> **There used to be a switch here, and turning it on was step one.** SEO was a
+> per-project toggle in **Settings ▸ SEO & GEO**, off on a new project, and while it
+> was off every page was served `noindex, nofollow` — every signal generated, all of
+> them saying "do not index me". It was the single most common reason a Docsbook site
+> was not in Google: on 14 September 2026, two thirds of all projects had it off. The
+> switch is gone and the tab with it. Every project is indexable, and the only
+> opt-outs are per page (`noindex: true`, below) or the whole project going private.
 
 To override the generated line for one page, put it in frontmatter:
 
@@ -51,8 +54,9 @@ noindex: true
 
 `robots: noindex`, `noindex: yes` and `noindex: 1` are accepted too. Use it on pages
 that spend crawl budget without ever earning a click — a 90,000-character changelog,
-internal working notes, an unfinished placeholder. The site-wide switch is the wrong
-instrument for that: turning it off hides everything.
+internal working notes, an unfinished placeholder. This is the only index opt-out
+there is now — there is no site-wide switch to reach for, and the whole-project
+equivalent is making the project private, which stops it being readable at all.
 
 ## The signals, and where each one is decided
 
@@ -63,7 +67,7 @@ instrument for that: turning it off hides everything.
 | Canonical URL | Custom domain → product path → apex short path → owner subdomain; never a URL that redirects | [How it works](./how-it-works.md#which-url-does-the-page-call-canonical) |
 | `hreflang` | Only locales this page is genuinely translated into, plus `x-default` | [How it works](./how-it-works.md#which-languages-are-advertised-as-alternates) |
 | OpenGraph / X card | `summary_large_image` with a generated 1200×630 image per page | [How it works](./how-it-works.md#what-do-the-social-cards-contain) |
-| Robots directives | Preview → site switch → page `noindex`, in that precedence | [How it works](./how-it-works.md#what-robots-directives-does-a-page-carry) |
+| Robots directives | Preview build → page `noindex`, in that precedence | [How it works](./how-it-works.md#what-robots-directives-does-a-page-carry) |
 | `sitemap.xml` | Every page plus real translations, `lastmod` from the source commit | [How it works](./how-it-works.md#what-goes-into-sitemapxml) |
 | JSON-LD | `Organization` + `TechArticle` + `BreadcrumbList` on every page | [How it works](./how-it-works.md#what-structured-data-is-emitted) |
 | Discovery and re-crawl | Sitemap, `robots.txt`, IndexNow push, cache timers | [Indexing](./indexing.md) |
@@ -108,9 +112,10 @@ instrument for that: turning it off hides everything.
 
 ## Limits
 
-- **The site-wide switch defaults to off**, and it is workspace-wide. There is no
-  "index this section, not that one" control above the per-page `noindex` flag.
-- **On a custom domain, the SEO switch and per-page `noindex` are not honoured** —
+- **There is no "index this section, not that one" control.** The granularity is the
+  whole project (private, i.e. unreadable) or one page (`noindex: true`) — nothing in
+  between.
+- **On a custom domain, per-page `noindex` is not honoured** —
   pages are served `index, follow` unconditionally — and there is no `hreflang`
   cluster, no `BreadcrumbList`, no sitemap, no moved-page redirect and none of the
   [GEO](../geo/README.md) page-level signals. The canonical URL, title, description,
@@ -124,7 +129,6 @@ instrument for that: turning it off hides everything.
 
 ## Checklist
 
-- [ ] The `SEO` toggle is on in **Settings ▸ SEO & GEO**.
 - [ ] Every page has one clear `# H1`, or a frontmatter `title`.
 - [ ] The opening paragraph answers the page's question in one or two sentences.
 - [ ] Every page is reachable from the sidebar; no orphans.
