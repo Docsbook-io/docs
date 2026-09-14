@@ -7,6 +7,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ## NEW - 14.09.2026
 
+### Added
+
+- A Results card opens the Overview: one sentence and five figures — found in search, named by AI, opportunities won, updates shipped, readers — so an owner who reads nothing else can see the docs' search ranking and AI citations moving, not just that the agent has been busy. `Overview`
+
 ### Changed
 
 - Every project is now indexed by search engines and citable by AI assistants by default, with nothing to switch on. Canonical URLs, OpenGraph, a sitemap and JSON-LD go out for search engines; a TL;DR, a visible last-modified date and author attribution go out for AI answer engines; FAQ, HowTo and speakable markup go out for featured snippets and voice assistants. Two thirds of projects had SEO switched off and were serving documentation that told Google not to index it, because the switch that changed that was one nobody found. `SEO`
@@ -14,6 +18,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Search rankings opens straight onto your Google positions instead of first asking you to switch SEO on, so the readout that tells you whether the docs are being found is not itself gated behind the thing it measures. `SEO`
 - The "Get found by Google and AI" step on the setup checklist no longer ticks itself off the moment two settings are on, because those settings no longer exist. It stays on the list until you close it, and what it now asks for is the work actually left: the pages most likely to be asked about answering directly enough to be quoted. `Onboarding`
 - A run that finds no declared goal on a project now states the default — be found through search engines and AI assistants — and gets on with the demand-ranked work, instead of filing a question and waiting for an answer that is the same on nearly every project. It still asks when a project gives a concrete reason to differ. `Agents`
+- Every project now decomposes that one standing goal into directions and opportunities on its own, so an agent never has to ask what the docs are for and never invents a placeholder goal just to get started. `Agents`
+- The Audits tab is now Opportunities: every row states the search, the competitor holding it today and what would beat them, and what winning it is worth — all in plain business words, with the call ids and readings that back each claim moved to a trace field the owner never has to open. `Overview`
+- `list_audits`, `add_audit`, `edit_audit`, `add_audit_finding` and `edit_audit_finding` are now `list_opportunities`, `add_direction`, `edit_direction`, `add_opportunity` and `edit_opportunity` — the old names still work. An assistant writing a technical sentence into a field the owner reads is now refused rather than let through. `MCP`
 
 
 ### Improved

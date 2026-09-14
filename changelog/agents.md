@@ -12,6 +12,7 @@ Everything that shipped in **Agents**. This is the Agents slice of the [full Doc
 ### Changed
 
 - A run that finds no declared goal on a project now states the default — be found through search engines and AI assistants — and gets on with the demand-ranked work, instead of filing a question and waiting for an answer that is the same on nearly every project. It still asks when a project gives a concrete reason to differ. `Agents`
+- Every project now decomposes that one standing goal into directions and opportunities on its own, so an agent never has to ask what the docs are for and never invents a placeholder goal just to get started. `Agents`
 
 ## NEW - 05.09.2026
 

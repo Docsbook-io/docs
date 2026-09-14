@@ -9,6 +9,10 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 
 ## NEW - 14.09.2026
 
+### Changed
+
+- `list_audits`, `add_audit`, `edit_audit`, `add_audit_finding` and `edit_audit_finding` are now `list_opportunities`, `add_direction`, `edit_direction`, `add_opportunity` and `edit_opportunity` — the old names still work. An assistant writing a technical sentence into a field the owner reads is now refused rather than let through. `MCP`
+
 ### Fixed
 
 - `search_prior_work` answers again: GitHub's search API started rejecting queries that name neither issues nor pull requests, so every default call failed and told the caller to rephrase, which could never help. An assistant asking "have we already tried this" was getting nothing back and proposing work already done. `MCP`

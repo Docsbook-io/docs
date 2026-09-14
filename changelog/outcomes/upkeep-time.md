@@ -11,9 +11,14 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 
 ## NEW - 14.09.2026
 
+### Added
+
+- A Results card opens the Overview: one sentence and five figures — found in search, named by AI, opportunities won, updates shipped, readers — so an owner who reads nothing else can see the docs' search ranking and AI citations moving, not just that the agent has been busy. `Overview`
+
 ### Changed
 
 - A run that finds no declared goal on a project now states the default — be found through search engines and AI assistants — and gets on with the demand-ranked work, instead of filing a question and waiting for an answer that is the same on nearly every project. It still asks when a project gives a concrete reason to differ. `Agents`
+- Every project now decomposes that one standing goal into directions and opportunities on its own, so an agent never has to ask what the docs are for and never invents a placeholder goal just to get started. `Agents`
 
 ### Improved
 

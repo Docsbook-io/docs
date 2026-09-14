@@ -11,6 +11,10 @@ Whether ChatGPT, Claude and Perplexity can read you — and quote you. This is t
 
 ## NEW - 14.09.2026
 
+### Added
+
+- A Results card opens the Overview: one sentence and five figures — found in search, named by AI, opportunities won, updates shipped, readers — so an owner who reads nothing else can see the docs' search ranking and AI citations moving, not just that the agent has been busy. `Overview`
+
 ### Changed
 
 - Every project is now indexed by search engines and citable by AI assistants by default, with nothing to switch on. Canonical URLs, OpenGraph, a sitemap and JSON-LD go out for search engines; a TL;DR, a visible last-modified date and author attribution go out for AI answer engines; FAQ, HowTo and speakable markup go out for featured snippets and voice assistants. Two thirds of projects had SEO switched off and were serving documentation that told Google not to index it, because the switch that changed that was one nobody found. `SEO`
