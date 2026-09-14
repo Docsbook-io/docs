@@ -9,6 +9,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Added
 
+- A new **Agent** section shows every call your AI agent has made against a project, read as the conversation it was: one stream broken only by the day, each line saying what the call was for and what came back, so you can see whether the agent is actually changing anything without opening a single row or reading a call log. `Agents`
+- Set an agent running on a schedule from that same screen: pick every hour, every 4 hours, every 12 hours or once a day, and copy one prompt that already carries the cron line and how much a single run should attempt — so nobody has to remember which cadence they meant by the time they reach the terminal. `Agents`
 - A Results card opens the Overview: one sentence and five figures — found in search, named by AI, opportunities won, updates shipped, readers — so an owner who reads nothing else can see the docs' search ranking and AI citations moving, not just that the agent has been busy. `Overview`
 
 ### Changed

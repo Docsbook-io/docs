@@ -426,7 +426,9 @@ The current amount for every class and every individual tool is on the tool's ow
 
 **A call that fails is still charged** — the work happened, and the answer says so. A call the server never managed to run is not charged.
 
-**You can read the calls line by line.** Every metered call appears in the project's [Feeds panel](../reference/webhooks.md#mcp-tool-calls-in-the-feed) — which tool, whether it worked, how long it took and what it drew — filterable by billing class. Calls that were about no single project (describing the server, listing your projects, creating one) belong to your account and appear in no project's feed; discovery calls leave no row at all.
+**You can read the calls line by line.** The project's **Agent** section reads them as the conversation they were: one continuous stream, broken only by the day, with each call on its own line saying what it was for, what it was called with and what came back — so you can tell whether an agent is changing anything without opening a single row. Clicking one unfolds the full result, the arguments it was given and who made the call. The same calls also appear in the [Feeds panel](../reference/webhooks.md#mcp-tool-calls-in-the-feed) when you want them as a filterable table instead, narrowed by billing class. Calls that were about no single project (describing the server, listing your projects, creating one) belong to your account and appear in neither; discovery calls leave no row at all.
+
+**The Agent section is also where you set one running.** It offers a single prompt to paste into whichever AI agent you already work in, with a cadence to pick first — every hour, every four hours, every twelve, or once a day. The choice is written into the prompt itself, cron line included, so what you copy is complete on its own.
 
 Unauthenticated, repo-scoped access to a public documentation site is never metered.
 
