@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **AI spend** — less money b
 
 Sees where the model budget actually goes before the invoice does. This is the AI spend slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 14.09.2026
+
+### Improved
+
+- The write tools now state their own length limits up front, so an unattended run stops spending model calls on refusals it had no way to predict and rewriting the same line twice. `MCP`
+
 ## NEW - 13.09.2026
 
 ### Changed

@@ -5,6 +5,13 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 14.09.2026
+
+### Improved
+
+- An agent improving a project too new to have its own traffic now works from what people actually search for, what assistants already answer about it and what its competitors document, instead of standing down until the site's analytics have a sample — so a new docs site is worked on from its first day instead of waiting out its first month. `MCP`
+- The write tools now state their own length limits up front, so an unattended run stops spending model calls on refusals it had no way to predict and rewriting the same line twice. `MCP`
+
 ## NEW - 13.09.2026
 
 ### Changed
