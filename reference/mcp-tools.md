@@ -111,6 +111,8 @@ A Docsbook-hosted site's issues live on the repository Docsbook hosts for it; a 
 | Tool | Billing | Description |
 |---|---|---|
 | `set_translation_mode` | Write | `auto` (built-in AI) or `external` (webhook flow) |
+| `get_translation_status` | Read | How each enabled language stands against the source right now — pages current/behind/missing/manual, the percentage, whether a run is in flight, and what the last run did. Call before `run_translation_pass`: a language already level with the source costs money to re-translate and changes nothing |
+| `run_translation_pass` | Write | Start a real translation catch-up run for one or more languages — the same batch the panel's "Translate now" starts. Brings pages that are behind current before pages that are missing, skips a language already level with the source unless `force`, and never discards existing translations |
 | `list_pending_translations` | Read | Translations awaiting approval |
 | `get_translation` | Read | Fetch one translation by language and path |
 | `upload_translation` | Write | Upload an externally-produced translation |
@@ -281,6 +283,29 @@ Until 2026-09-12, three kinds of tool ran work here instead of just answering a 
 - **135 action tools** (`observe_link_graph`, `decide_next_market`, `draft_comparison_page`, one per verb × subject) each ran a model on our servers and answered with a validated payload. Nothing you could do with them became impossible — each ran on ordinary reads you can make yourself (`get_search_rankings`, `search_docs`, `read_doc`, thirty in all) — and what made them worth anything was never the running. It was knowing **which** reads, **in what order**, and **the trap in reading them**, which `docsbook_expert` now hands you directly, for free, in one call: ask it what you are trying to achieve and a step comes back naming the reads, the order, and the shape a good answer has. What you lose: those tools validated themselves — every digit in a claim had to appear in the evidence cited, so an invented figure failed instead of shipping. Nothing validates your own run; `docsbook_expert` gives you the shape of a good answer so you can tell whether one was followed.
 - **Four background runners** (`run_docs_analyze`, `run_docs_create`, `run_docs_manage`, `run_docs_automate`) ran a skill on Docsbook's side against your workspace and handed back a `run_id` to poll with `get_agent_run`, `list_agent_runs` and `cancel_agent_run` — all seven gone. Every tool on this server now answers inside the call that asked for it: there is no job to start and no run to poll, which also removes the commonest way to misreport one (treating `{ run_id, state: "queued" }` as the answer).
 - **Two standing-agent tools** (`find_agent`, `enable_agent`) armed a route that ran on its own, on a schedule, an event or a repository's commits — also gone, with the engine behind them. Nothing on this server starts work by itself. What that engine was for is served by what remains: `register_webhook_*` for "tell me when something happens" (your side decides what to do about it), your own agent holding your repository for "do the work once", and `docsbook_expert` for "what should I do about this" — which was the only part of a standing agent worth keeping, since it knew which tools, in what order, and how the answer goes wrong.
+
+## Example prompts
+
+What you would actually type to a connected client, and the tools it ends up calling. `docsbook_expert` answers each of these first, with the exact order to call things in — the tools named below are what it names.
+
+- "Improve the docs — find what's costing us readers and fix it." → `docsbook_expert`, then `get_analytics`, `search_docs`, `write_docs`
+- "Why did nobody finish the quickstart last week?" → `get_page_journeys`, `get_failed_searches`, `get_ai_unanswered`
+- "Document the new `traffic_drop` webhook, and check nobody already asked for this." → `list_issues`, `read_source`, `write_docs`, `register_webhook_traffic_drop`
+- "What questions is the AI chat failing to answer?" → `get_ai_unanswered`, `get_negative_feedback`
+- "File an issue for the broken link on the API reference page." → `list_issues`, `create_issue`
+- "Did last week's rewrite of the pricing page actually help?" → `get_page_diff_impact`
+- "Turn on German for the docs." → `update_languages`, `set_translation_mode`
+- "What's still open that I should be looking at?" → `get_work_board`, `list_reminders`
+
+## Troubleshooting / FAQ
+
+**Is the agents/MCP tooling still working?** Yes. On 2026-09-12 the standing-agent engine was retired — the 41 `agent_*` tools, the 135 action tools and the 4 `run_docs_*` runners are gone — and one agent remains: `docsbook_expert`, which advises rather than runs. Every other tool on this page still works exactly as documented.
+
+**My client still shows the tool named `docsbook` instead of `docsbook_expert` — is that a problem?** No. An MCP client reads the tool list once, at connection time, and holds those names for the rest of that session. The server resolves the old name to the new one rather than refusing it. Reconnect your client to see `docsbook_expert`.
+
+**A call was refused for an empty balance — what do I do?** The refusal names the project that ran out, what the call draws, what is left, and where to top up. Discovery calls (`get_info`, `list_workspaces`, `find_skill`, and the rest of the Included class above) keep working regardless, so your agent can still find out what happened and report it.
+
+**Why does the tool count keep changing?** It reflects what actually runs. The server exposed more tools before 2026-09-12, when the 135 narrow action tools and the standing-agent tools were retired in favor of `docsbook_expert`; it currently exposes 156. `get_info` always reports the live count.
 
 ## Related
 

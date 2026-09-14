@@ -9,7 +9,7 @@ Docsbook publishes Markdown from a GitHub repository, a website scan, or a writt
 
 Every capability page here follows one rule: it states **what you get**, **how it is built** in enough mechanical detail to predict the output, **the evidence** with a link to a primary source, and **what is not proven**. If we cannot source a claim, the page says so rather than dropping it — see [how we prove it](./evidence.md).
 
-New to Docsbook? Read [the overview](./overview.md) first, then [publish a site](./quick-start.md).
+**New to Docsbook? [Publish your first site in the quick start →](./quick-start.md)** — takes about 5 minutes, no prior GitHub experience needed. Want the model first? Read [the overview](./overview.md).
 
 <!-- widget:cards -->
 

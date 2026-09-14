@@ -262,7 +262,7 @@ A dashboard only works if someone opens it. A webhook works always. Registering 
 | Tool | What it is worth |
 |---|---|
 | `update_languages` | Enable a target language. Read alongside the country/language breakdown in `get_analytics`: **translate where the readers already are**, not where you hope they will be. |
-| `set_translation_mode`, `upload_translation`, `approve_translation`, `list_pending_translations`, `get_translation`, `delete_translation` | The translation pipeline — automatic, or externally supplied with human approval. |
+| `set_translation_mode`, `run_translation_pass`, `get_translation_status`, `upload_translation`, `approve_translation`, `list_pending_translations`, `get_translation`, `delete_translation` | The translation pipeline — `run_translation_pass` starts a real automatic catch-up run and `get_translation_status` reports each language's coverage before you spend on one, or bring translations in externally with human approval. |
 | `update_access` | Private workspace, password, or your own SSO/OIDC. Unblocks selling to companies whose procurement requires it. |
 | `update_domain` | Docs on your own domain — the SEO authority accrues to **you**, not to a vendor subdomain. |
 | `update_branding`, `update_ui_settings` | Your product, not a platform's. |
@@ -337,6 +337,17 @@ weekly:  get_content_health  → take the worst 3, and this reading is
 ```
 
 Documentation that repairs itself and shows its work — "saw the problem" and "fixed the problem" without leaving the connection.
+
+## Prompt library
+
+One request per lever above, in the words you would actually type — paste any of these into Claude Code, Cursor or another connected client once OAuth is done:
+
+- **Acquisition:** "Are AI assistants actually reading our docs, and where do we rank in Google for our own quickstart?" → `get_analytics` (AI-bot breakdown), `get_search_rankings`
+- **Conversion:** "Which page is losing readers, and why?" → `get_visit_outcomes`, `get_dead_end_pages`, `get_rage_signals`
+- **Sales:** "Pull every chat conversation where someone was comparing us to a competitor." → `get_chat_intent`
+- **Cost avoided:** "What are people asking the docs assistant that it can't answer?" → `get_ai_unanswered`, `get_failed_searches`
+
+`docsbook_expert` answers each of these first with the full route in order; the tools named above are what it ends up calling.
 
 ## Handing over the whole job
 
@@ -428,6 +439,16 @@ Access to the Docsbook MCP server is decided by the token, not by a tier. A toke
 - **No token at all** — on a repo-scoped endpoint (`docsbook.io/{owner}/{repo}/api/mcp/server`), `get_info`, `find_skill`, `find_widget` and `list_content_widgets` answer from the public catalog, and `search` answers over that site's own documentation — the one tool here that reads a project, because what it reads is the published site. It is refused on a private site, on a site whose plan has lapsed, on an endpoint not pinned to a site, and when the project has no AI balance left; it takes no project argument, so it can only ever read the site it is pinned to. Every other tool requires a valid Bearer token tied to a Docsbook account.
 
 When a call is refused, the server returns a structured error naming the reason rather than a bare 403, so the agent can tell a reader what to fix. See [MCP Server — Trust & Security](./mcp-security.md) for the authentication flow and what the server stores.
+
+## Troubleshooting / FAQ
+
+**Is the agents/MCP tooling still working?** Yes. On 2026-09-12 the standing-agent engine described in older material — a scheduled agent that ran on its own, plus the 135 action tools and 4 `run_docs_*` runners that only ever ran inside one — was retired. One agent remains: `docsbook_expert`, which advises in one round trip rather than running unattended. Every connection and every other tool on this page works exactly as documented above.
+
+**My client still lists the tool as `docsbook`, not `docsbook_expert` — did the connection break?** No. An MCP client reads the tool list once, when it connects, and keeps those names for the rest of that session. The server resolves the old name rather than refusing it, so nothing is broken — reconnect the client to see the current name.
+
+**A call was refused for an empty balance — what happened?** The refusal names the project, what the call draws, and what is left. Reconnecting or retrying will not fix it; top up the project's balance from the panel. Discovery calls (`get_info`, `find_skill`, listing and creating workspaces) are never metered and keep working regardless.
+
+**Where do I go if a call is refused for a reason other than balance?** The server returns a structured error naming the reason — a missing scope on a read-only token, `NO_GITHUB_ACCESS` when Docsbook's own credential cannot reach a repository in your own GitHub account, or a private site. See [MCP server security](./mcp-security.md) for what each token scope can and cannot do.
 
 ## Related
 
