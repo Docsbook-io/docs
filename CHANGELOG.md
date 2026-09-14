@@ -13,6 +13,17 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Settings ▸ SEO & GEO keeps its three cards but no longer asks you to turn anything on: each states what its surface actually emits, and the two questions worth asking about it are now one click away — whether that markup is really reaching your live pages, and what to change in the pages so it earns a citation. `GEO`
 - Search rankings opens straight onto your Google positions instead of first asking you to switch SEO on, so the readout that tells you whether the docs are being found is not itself gated behind the thing it measures. `SEO`
 - The "Get found by Google and AI" step on the setup checklist no longer ticks itself off the moment two settings are on, because those settings no longer exist. It stays on the list until you close it, and what it now asks for is the work actually left: the pages most likely to be asked about answering directly enough to be quoted. `Onboarding`
+- A run that finds no declared goal on a project now states the default — be found through search engines and AI assistants — and gets on with the demand-ranked work, instead of filing a question and waiting for an answer that is the same on nearly every project. It still asks when a project gives a concrete reason to differ. `Agents`
+
+
+### Improved
+
+- Opening a line on the Overview brief card — a question, a hypothesis, a fact, a goal or a reminder — now shows what it SAYS, wrapped and in full, instead of dropping you into a form where a three-sentence goal arrives as one clipped line you scroll sideways with the caret. Editing is a click in that view's footer, so reading what an agent has been told no longer costs a trip through the editor. `Overview`
+- An open question can be answered in that same view, under the question itself, so the hand-holding an unattended run is blocked on costs a minute of your time rather than a trip through the editor. `Overview`
+
+### Fixed
+
+- `search_prior_work` answers again: GitHub's search API started rejecting queries that name neither issues nor pull requests, so every default call failed and told the caller to rephrase, which could never help. An assistant asking "have we already tried this" was getting nothing back and proposing work already done. `MCP`
 
 ### Removed
 

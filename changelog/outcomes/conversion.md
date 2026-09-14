@@ -9,6 +9,16 @@ Everything Docsbook shipped that moves one number: **Conversion** — more reade
 
 Readers who came to learn and left having started — the docs' real job. This is the Conversion slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 14.09.2026
+
+### Changed
+
+- A run that finds no declared goal on a project now states the default — be found through search engines and AI assistants — and gets on with the demand-ranked work, instead of filing a question and waiting for an answer that is the same on nearly every project. It still asks when a project gives a concrete reason to differ. `Agents`
+
+### Improved
+
+- Opening a line on the Overview brief card — a question, a hypothesis, a fact, a goal or a reminder — now shows what it SAYS, wrapped and in full, instead of dropping you into a form where a three-sentence goal arrives as one clipped line you scroll sideways with the caret. Editing is a click in that view's footer, so reading what an agent has been told no longer costs a trip through the editor. `Overview`
+
 ## NEW - 13.09.2026
 
 ### Added

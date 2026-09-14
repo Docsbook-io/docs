@@ -7,6 +7,12 @@ description: "Every release that touched Agents: the goals your project pursues 
 
 Everything that shipped in **Agents**. This is the Agents slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 14.09.2026
+
+### Changed
+
+- A run that finds no declared goal on a project now states the default — be found through search engines and AI assistants — and gets on with the demand-ranked work, instead of filing a question and waiting for an answer that is the same on nearly every project. It still asks when a project gives a concrete reason to differ. `Agents`
+
 ## NEW - 05.09.2026
 
 ### Added
