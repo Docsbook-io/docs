@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Time to answer** — reader
 
 How long a reader hunts before the page they needed is in front of them. This is the Time to answer slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 14.09.2026
+
+### Changed
+
+- The "Get found by Google and AI" step on the setup checklist no longer ticks itself off the moment two settings are on, because those settings no longer exist. It stays on the list until you close it, and what it now asks for is the work actually left: the pages most likely to be asked about answering directly enough to be quoted. `Onboarding`
+
 ## NEW - 12.09.2026
 
 ### Added
