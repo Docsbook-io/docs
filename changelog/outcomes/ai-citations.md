@@ -9,6 +9,17 @@ Everything Docsbook shipped that moves one number: **AI citations** — more ans
 
 Whether ChatGPT, Claude and Perplexity can read you — and quote you. This is the AI citations slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 14.09.2026
+
+### Changed
+
+- Every project is now indexed by search engines and citable by AI assistants by default, with nothing to switch on. Canonical URLs, OpenGraph, a sitemap and JSON-LD go out for search engines; a TL;DR, a visible last-modified date and author attribution go out for AI answer engines; FAQ, HowTo and speakable markup go out for featured snippets and voice assistants. Two thirds of projects had SEO switched off and were serving documentation that told Google not to index it, because the switch that changed that was one nobody found. `SEO`
+- Settings ▸ SEO & GEO keeps its three cards but no longer asks you to turn anything on: each states what its surface actually emits, and the two questions worth asking about it are now one click away — whether that markup is really reaching your live pages, and what to change in the pages so it earns a citation. `GEO`
+
+### Removed
+
+- The `update_seo`, `update_geo` and `update_aeo` tools are gone: with all three surfaces permanently on there is nothing for them to change, and an agent told "enabled" by a tool that did nothing would keep reporting work it never did. `MCP`
+
 ## NEW - 13.09.2026
 
 ### Added

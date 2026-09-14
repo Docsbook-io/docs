@@ -7,6 +7,12 @@ description: "Every release that touched the MCP server: the tools it serves, wh
 
 Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 14.09.2026
+
+### Removed
+
+- The `update_seo`, `update_geo` and `update_aeo` tools are gone: with all three surfaces permanently on there is nothing for them to change, and an agent told "enabled" by a tool that did nothing would keep reporting work it never did. `MCP`
+
 ## NEW - 13.09.2026
 
 ### Added

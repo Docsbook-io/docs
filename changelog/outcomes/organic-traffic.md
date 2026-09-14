@@ -9,6 +9,19 @@ Everything Docsbook shipped that moves one number: **Organic traffic** — more 
 
 Pages that already rank 5–20 are the cheapest traffic you will ever buy. This is the Organic traffic slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 14.09.2026
+
+### Changed
+
+- Every project is now indexed by search engines and citable by AI assistants by default, with nothing to switch on. Canonical URLs, OpenGraph, a sitemap and JSON-LD go out for search engines; a TL;DR, a visible last-modified date and author attribution go out for AI answer engines; FAQ, HowTo and speakable markup go out for featured snippets and voice assistants. Two thirds of projects had SEO switched off and were serving documentation that told Google not to index it, because the switch that changed that was one nobody found. `SEO`
+- Settings ▸ SEO & GEO keeps its three cards but no longer asks you to turn anything on: each states what its surface actually emits, and the two questions worth asking about it are now one click away — whether that markup is really reaching your live pages, and what to change in the pages so it earns a citation. `GEO`
+- Search rankings opens straight onto your Google positions instead of first asking you to switch SEO on, so the readout that tells you whether the docs are being found is not itself gated behind the thing it measures. `SEO`
+
+### Removed
+
+- The `update_seo`, `update_geo` and `update_aeo` tools are gone: with all three surfaces permanently on there is nothing for them to change, and an agent told "enabled" by a tool that did nothing would keep reporting work it never did. `MCP`
+- Keeping documentation out of search results is now a per-page decision, not a per-project one. A page that should never rank says `noindex: true` in its own front matter and the rest of the project stays indexed; a project that should not be read at all is made private, which is a stronger guarantee than an unindexed but public site ever was. `SEO`
+
 ## NEW - 13.09.2026
 
 ### Added

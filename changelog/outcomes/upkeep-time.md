@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Upkeep time** — less time
 
 Work a person does by hand every week, handed to the agent instead. This is the Upkeep time slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 14.09.2026
+
+### Removed
+
+- The `update_seo`, `update_geo` and `update_aeo` tools are gone: with all three surfaces permanently on there is nothing for them to change, and an agent told "enabled" by a tool that did nothing would keep reporting work it never did. `MCP`
+
 ## NEW - 13.09.2026
 
 ### Added
