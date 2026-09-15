@@ -85,7 +85,7 @@ Codex, Cursor, Windsurf, Cline and any other MCP client use the same endpoint �
 ## Run the loop from your agent
 
 - [MCP server](./agent-ready/mcp.md) — Connect the agent you already use {plug}
-- [MCP tools reference](./reference/mcp-tools.md) — Every tool and its price class {list}
+- [MCP tools reference](./mcp/README.md) — Every tool and its price class {list}
 - [Docs skills](./agent-ready/skills.md) — SKILL.md files any agent can load {graduation-cap}
 - [Source of truth](./agent-ready/source-of-truth.md) — The graph an agent navigates {network}
 - [MCP security](./agent-ready/mcp-security.md) — Auth model and token scopes {shield}
@@ -117,7 +117,7 @@ Codex, Cursor, Windsurf, Cline and any other MCP client use the same endpoint �
 
 - [Pricing](./pricing.md) — What is metered, and what is not {credit-card}
 - [FAQ](./faq.md) — Cost, sync, privacy, data ownership {help-circle}
-- [REST API](./reference/api.md) — Call your docs chat from your backend {code}
+- [REST API](./api/README.md) — Call your docs chat from your backend {code}
 - [Webhooks](./reference/webhooks.md) — Event catalogue and payload schemas {bell}
 - [Content widgets](./content/features/widgets.md) — Cards, steps and callouts in Markdown {layout-grid}
 - [Changelog](./CHANGELOG.md) — What shipped, and what it was meant to buy {history}

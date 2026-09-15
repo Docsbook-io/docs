@@ -233,7 +233,7 @@ and rates are on the [pricing page](https://docsbook.io/pricing).
    admin sidebar; open a conversation for its transcript and its own
    cost breakdown.
 4. **From an agent** — `get_ai_usage` over
-   [MCP](../../reference/mcp-tools.md).
+   [MCP](../../mcp/README.md).
 
 ## Related
 

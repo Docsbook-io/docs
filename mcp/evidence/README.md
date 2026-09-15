@@ -1,0 +1,19 @@
+---
+title: "Evidence"
+description: "The rows behind a judgement, gathered in code — no model, nothing to disbelieve."
+---
+
+# Evidence
+
+The rows behind a judgement, gathered in code — no model, nothing to disbelieve.
+
+<!-- widget:cards cols=2 -->
+
+- [`collect_ai_citability`](./collect-ai-citability.md) — Measure whether answer engines and AI assistants can FETCH this documentation at all, and whether there is anything in…
+- [`collect_assistant_questions`](./collect-assistant-questions.md) — Return what readers asked your docs assistant, verbatim, with which of it produced no answer — plus the answer rate…
+- [`collect_corpus_map`](./collect-corpus-map.md) — Map the whole corpus in one call: every page with its size, heading count and depth, the top-level sections, the…
+- [`collect_onsite_search`](./collect-onsite-search.md) — What readers typed into YOUR search box, in three tables that must never be merged: what they looked for, what…
+- [`collect_page_text`](./collect-page-text.md) — Fetch your live pages and report what actually arrives on the wire — status, title, meta description, how many words…
+- [`collect_traffic`](./collect-traffic.md) — One call for the four traffic facts every analysis starts from: who arrived (pageviews, visitors, top pages,…
+
+<!-- /widget -->

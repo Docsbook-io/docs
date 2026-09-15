@@ -1,0 +1,633 @@
+{
+  "version": 1,
+  "sections": [
+    {
+      "root": "api",
+      "kind": "api",
+      "label": "API Reference",
+      "source": "https://docsbook.io/openapi.json",
+      "icon": "terminal"
+    },
+    {
+      "root": "mcp",
+      "kind": "mcp",
+      "label": "MCP Tools",
+      "source": "https://docsbook.io/api/mcp/tools",
+      "icon": "plug"
+    }
+  ],
+  "badges": {
+    "api/chat/ask-docs": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "api/tools/call-tool": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "mcp/agent/docsbook-expert": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/alerts/list-webhook-deliveries": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/alerts/list-webhooks": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/alerts/register-webhook-chat-negative-feedback": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/alerts/register-webhook-chat-no-answer": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/alerts/register-webhook-chat-question-asked": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/alerts/register-webhook-content-indexed": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/alerts/register-webhook-content-outdated": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/alerts/register-webhook-feedback-received": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/alerts/register-webhook-mcp-tool-called": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/alerts/register-webhook-plan-downgraded": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/alerts/register-webhook-plan-upgraded": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/alerts/register-webhook-search-no-results": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/alerts/register-webhook-search-popular": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/alerts/register-webhook-traffic-drop": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/alerts/register-webhook-traffic-spike": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/alerts/register-webhook-translation-completed": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/alerts/register-webhook-translation-needed": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/alerts/register-webhook-translation-outdated": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/alerts/register-webhook-usage-limit-approaching": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/alerts/register-webhook-usage-overage-limit-reached": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/alerts/replay-webhook-delivery": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/alerts/test-webhook": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/alerts/unregister-webhook": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-ai-questions": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-ai-unanswered": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-ai-usage": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-analytics": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-chat-conversations": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-chat-intent": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-chat-outbound-hosts": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-content-health": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-dead-end-pages": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-failed-searches": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-forward-funnel": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-funnel": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-goal-journeys": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-goal-visitors": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-goals": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-insights": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-mentions": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-metric-timeseries": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-negative-feedback": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-page-diff-impact": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-page-journeys": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-popular-searches": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-rage-signals": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-retention": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-reverse-funnel": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-route-patterns": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-search-rankings": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-search-zero-click": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-top-visitors": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-visit-outcomes": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-visitor-activity": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-visits": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/list-analytics-patterns": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/analytics/query-events": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/content/configure-source": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/content/connect-source": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/content/fetch-url": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/content/find-skill": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/content/find-widget": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/content/get-doc-outline": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/content/grant-repo-access": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/content/list-content-widgets": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/content/list-sources": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/content/read-doc": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/content/read-source": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/content/search": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/content/search-docs": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/content/write-docs": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/create/create-workspace": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/evidence/collect-ai-citability": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/evidence/collect-assistant-questions": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/evidence/collect-corpus-map": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/evidence/collect-onsite-search": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/evidence/collect-page-text": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/evidence/collect-traffic": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/goals/create-funnel": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/goals/create-goal": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/goals/delete-goal": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/goals/edit-goal": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/goals/list-goals": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/goals/mark-path-as-funnel-step": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/history/compare-tool-calls": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/history/get-tool-call": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/history/list-tool-calls": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/history/search-tool-calls": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/hypotheses/add-hypothesis": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/hypotheses/edit-hypothesis": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/hypotheses/list-hypotheses": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/hypotheses/remove-hypothesis": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/issues/create-issue": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/issues/get-issue": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/issues/get-pull-request": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/issues/list-issues": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/issues/search-prior-work": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/memory/add-memory": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/memory/edit-memory": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/memory/list-memory": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/memory/remove-memory": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/opportunities/add-direction": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/opportunities/add-opportunity": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/opportunities/edit-direction": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/opportunities/edit-opportunity": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/opportunities/list-opportunities": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/orientation/get-info": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/orientation/get-workspace": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/orientation/list-workspaces": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/product-help/ask-docsbook": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/research/crawl-competitor-docs": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/research/read-app-reviews": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/research/read-backlinks": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/research/read-bing-results": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/research/read-keyword-demand": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/research/read-linkedin-company": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/research/read-rendered-page": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/research/read-search-suggestions": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/research/read-search-trends": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/research/read-serp-snapshot": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/research/read-x-profile": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/research/search-discourse-threads": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/research/search-hackernews-threads": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/research/search-job-postings": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/research/search-reddit-threads": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/research/search-stackoverflow-threads": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/settings/approve-translation": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/settings/configure-mentions": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/settings/delete-translation": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/settings/get-chat-system-prompt": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/settings/get-translation": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/settings/get-translation-status": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/settings/list-pending-translations": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/settings/run-translation-pass": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/settings/set-chat-hooks": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/settings/set-chat-system-prompt": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/settings/set-translation-mode": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/settings/test-chat-hook": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/settings/update-access": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/settings/update-ai-settings": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/settings/update-branding": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/settings/update-domain": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/settings/update-languages": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/settings/update-navigation": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/settings/update-ui-settings": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/settings/upload-translation": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/work/get-work-board": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/work/link-work": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/work/search-brief": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/work/unlink-work": {
+      "label": "WRITE",
+      "kind": "tool"
+    }
+  }
+}
