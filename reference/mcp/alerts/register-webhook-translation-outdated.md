@@ -5,7 +5,7 @@ description: "Register a webhook for the 'translation_outdated' event (BUSINESS)
 
 # Register webhook translation outdated
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## register_webhook_translation_outdated
 

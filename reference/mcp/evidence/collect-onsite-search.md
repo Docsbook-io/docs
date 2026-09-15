@@ -5,7 +5,7 @@ description: "What readers typed into YOUR search box, in three tables that must
 
 # Collect onsite search
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=12000 -->
 
 ## collect_onsite_search
 

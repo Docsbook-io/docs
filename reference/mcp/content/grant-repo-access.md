@@ -5,7 +5,7 @@ description: "Whether Docsbook can COMMIT to a GitHub repository — and, when i
 
 # Grant repo access
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=800 -->
 
 ## grant_repo_access
 

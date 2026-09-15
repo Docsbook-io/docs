@@ -5,7 +5,7 @@ description: "File a GitHub issue on this project's repository."
 
 # Create issue
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## create_issue
 

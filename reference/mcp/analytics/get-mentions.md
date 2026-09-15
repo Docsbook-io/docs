@@ -5,7 +5,7 @@ description: "Read the mention checks for the docs: for each query the owner wat
 
 # Get mentions
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=800 -->
 
 ## get_mentions
 

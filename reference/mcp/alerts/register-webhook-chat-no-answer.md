@@ -5,7 +5,7 @@ description: "Register a webhook for the 'chat_no_answer' event (BUSINESS) — t
 
 # Register webhook chat no answer
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## register_webhook_chat_no_answer
 

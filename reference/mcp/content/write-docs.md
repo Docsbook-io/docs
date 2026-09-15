@@ -5,7 +5,7 @@ description: "Write, delete, move and rename markdown documentation files — th
 
 # Write docs
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=30000 -->
 
 ## write_docs
 

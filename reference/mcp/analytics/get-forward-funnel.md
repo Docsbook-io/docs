@@ -5,7 +5,7 @@ description: "Step-by-step completion of the route the OWNER declared (PRO), and
 
 # Get forward funnel
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_forward_funnel
 

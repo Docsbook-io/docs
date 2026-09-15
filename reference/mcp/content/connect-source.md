@@ -5,7 +5,7 @@ description: "Connect a repository, a website or a single page as a SOURCE OF TR
 
 # Connect source
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=800 -->
 
 ## connect_source
 

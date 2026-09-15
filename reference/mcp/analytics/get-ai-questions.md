@@ -5,7 +5,7 @@ description: "List AI chatbot questions with timestamp, country, language, and w
 
 # Get ai questions
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_ai_questions
 

@@ -5,7 +5,7 @@ description: "Register a webhook for the 'plan_upgraded' event (BUSINESS) — th
 
 # Register webhook plan upgraded
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## register_webhook_plan_upgraded
 

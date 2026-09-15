@@ -5,7 +5,7 @@ description: "Map the whole corpus in one call: every page with its size, headin
 
 # Collect corpus map
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=12000 -->
 
 ## collect_corpus_map
 

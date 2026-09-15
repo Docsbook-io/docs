@@ -5,7 +5,7 @@ description: "HAS THIS BEEN TRIED HERE?"
 
 # Search brief
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=800 -->
 
 ## search_brief
 

@@ -5,7 +5,7 @@ description: "Register a webhook for the 'mcp_tool_called' event (BUSINESS, adva
 
 # Register webhook mcp tool called
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## register_webhook_mcp_tool_called
 

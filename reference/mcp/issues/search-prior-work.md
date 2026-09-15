@@ -5,7 +5,7 @@ description: "Has this already been tried on this project?"
 
 # Search prior work
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=6000 -->
 
 ## search_prior_work
 

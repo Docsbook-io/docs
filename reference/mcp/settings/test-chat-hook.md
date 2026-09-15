@@ -5,7 +5,7 @@ description: "Send a test ping to one of the configured AI chat hooks and return
 
 # Test chat hook
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=6000 -->
 
 ## test_chat_hook
 

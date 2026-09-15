@@ -5,7 +5,7 @@ description: "THE HISTORY OF WHAT THIS SERVER WAS ASKED about this project — e
 
 # List tool calls
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=800 -->
 
 ## list_tool_calls
 

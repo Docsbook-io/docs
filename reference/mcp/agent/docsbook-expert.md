@@ -5,7 +5,7 @@ description: "🔴 CALL THIS FIRST for ANY documentation work, before you plan a
 
 # Docsbook expert
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=40000 -->
 
 ## docsbook_expert
 

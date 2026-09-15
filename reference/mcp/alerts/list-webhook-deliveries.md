@@ -5,7 +5,7 @@ description: "List delivery attempts for a webhook with status and response code
 
 # List webhook deliveries
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## list_webhook_deliveries
 

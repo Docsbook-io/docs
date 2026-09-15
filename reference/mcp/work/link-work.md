@@ -5,7 +5,7 @@ description: "CONNECT TWO PIECES OF WORK — an issue, a pull request, a hypothe
 
 # Link work
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## link_work
 

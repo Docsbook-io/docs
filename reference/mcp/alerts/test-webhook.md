@@ -5,7 +5,7 @@ description: "Send a test ping to a registered webhook and run the delivery work
 
 # Test webhook
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=6000 -->
 
 ## test_webhook
 

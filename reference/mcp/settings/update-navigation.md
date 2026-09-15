@@ -5,7 +5,7 @@ description: "Update every curated link on the docs site: header links, social l
 
 # Update navigation
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## update_navigation
 

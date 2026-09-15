@@ -5,7 +5,7 @@ description: "Up to 50 pages of a rival's documentation, JavaScript-rendered and
 
 # Crawl competitor docs
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=25000 -->
 
 ## crawl_competitor_docs
 

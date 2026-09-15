@@ -5,7 +5,7 @@ description: "Remove a webhook by its id (Free)."
 
 # Unregister webhook
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## unregister_webhook
 

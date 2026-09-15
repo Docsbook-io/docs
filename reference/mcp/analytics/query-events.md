@@ -5,7 +5,7 @@ description: "Generic Axiom event query scoped to this workspace (PRO)."
 
 # Query events
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## query_events
 

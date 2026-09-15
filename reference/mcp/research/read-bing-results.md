@@ -5,7 +5,7 @@ description: "Bing's actual results page for up to 5 queries — the ranked orga
 
 # Read bing results
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=22500 -->
 
 ## read_bing_results
 

@@ -5,7 +5,7 @@ description: "Show or hide one interface element of the docs site — the header
 
 # Update ui settings
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## update_ui_settings
 

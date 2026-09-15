@@ -5,7 +5,7 @@ description: "Did a documentation edit actually work?"
 
 # Get page diff impact
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_page_diff_impact
 

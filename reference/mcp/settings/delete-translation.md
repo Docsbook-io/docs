@@ -5,7 +5,7 @@ description: "Delete a translation row."
 
 # Delete translation
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## delete_translation
 

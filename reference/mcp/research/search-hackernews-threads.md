@@ -5,7 +5,7 @@ description: "Up to 50 Hacker News stories and comments mentioning a product or 
 
 # Search hackernews threads
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=140 -->
 
 ## search_hackernews_threads
 

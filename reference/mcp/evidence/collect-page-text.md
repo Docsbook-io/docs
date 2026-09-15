@@ -5,7 +5,7 @@ description: "Fetch your live pages and report what actually arrives on the wire
 
 # Collect page text
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=12000 -->
 
 ## collect_page_text
 

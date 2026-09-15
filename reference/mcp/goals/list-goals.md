@@ -5,7 +5,7 @@ description: "The goals and funnels defined for this workspace, with what each o
 
 # List goals
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=800 -->
 
 ## list_goals
 

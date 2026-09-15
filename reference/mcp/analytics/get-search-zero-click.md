@@ -5,7 +5,7 @@ description: "Searches that returned results and got NO click (PRO)."
 
 # Get search zero click
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_search_zero_click
 

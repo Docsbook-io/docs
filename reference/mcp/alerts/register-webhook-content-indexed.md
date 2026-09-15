@@ -5,7 +5,7 @@ description: "Register a webhook for the 'content_indexed' event (BUSINESS) — 
 
 # Register webhook content indexed
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## register_webhook_content_indexed
 

@@ -5,7 +5,7 @@ description: "Upload or replace a translation for a workspace document."
 
 # Upload translation
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## upload_translation
 

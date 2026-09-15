@@ -5,7 +5,7 @@ description: "Catalog of ready-made analytics patterns (visit outcomes, dead-end
 
 # List analytics patterns
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## list_analytics_patterns
 

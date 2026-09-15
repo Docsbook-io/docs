@@ -5,7 +5,7 @@ description: "Set pre-, post-, and streaming webhook URLs for the AI chatbot."
 
 # Set chat hooks
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## set_chat_hooks
 

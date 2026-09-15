@@ -5,7 +5,7 @@ description: "Set the languages the site is served in — the call for 'we need 
 
 # Update languages
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## update_languages
 

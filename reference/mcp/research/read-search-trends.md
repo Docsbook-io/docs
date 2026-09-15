@@ -5,7 +5,7 @@ description: "The last three months of relative search interest for up to 5 term
 
 # Read search trends
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=6000 -->
 
 ## read_search_trends
 

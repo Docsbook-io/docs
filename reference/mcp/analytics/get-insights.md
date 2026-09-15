@@ -5,7 +5,7 @@ description: "Prioritized 'what to fix' digest for this workspace (PRO): a ranke
 
 # Get insights
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=30000 -->
 
 ## get_insights
 

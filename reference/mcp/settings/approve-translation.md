@@ -5,7 +5,7 @@ description: "Approve a draft translation, moving it to status 'published'."
 
 # Approve translation
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## approve_translation
 

@@ -5,7 +5,7 @@ description: "FIND a recorded call by what is inside it — a page it was about,
 
 # Search tool calls
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=800 -->
 
 ## search_tool_calls
 

@@ -5,7 +5,7 @@ description: "Register a webhook for the 'traffic_spike' event (BUSINESS, advanc
 
 # Register webhook traffic spike
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## register_webhook_traffic_spike
 

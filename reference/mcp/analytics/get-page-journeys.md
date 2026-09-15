@@ -5,7 +5,7 @@ description: "Visitor session journeys — ordered page sequences per pseudo-ses
 
 # Get page journeys
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_page_journeys
 

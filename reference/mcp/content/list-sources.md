@@ -5,7 +5,7 @@ description: "List the sources this documentation is connected to — the reposi
 
 # List sources
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=800 -->
 
 ## list_sources
 

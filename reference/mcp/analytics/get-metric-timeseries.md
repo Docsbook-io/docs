@@ -5,7 +5,7 @@ description: "One headline metric BY DAY (PRO) — the trend, not the snapshot e
 
 # Get metric timeseries
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_metric_timeseries
 

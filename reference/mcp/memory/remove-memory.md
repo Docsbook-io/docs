@@ -5,7 +5,7 @@ description: "RETIRE a line this project remembers."
 
 # Remove memory
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## remove_memory
 

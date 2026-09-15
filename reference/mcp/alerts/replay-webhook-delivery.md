@@ -5,7 +5,7 @@ description: "Replay a webhook delivery by creating a new pending row with the s
 
 # Replay webhook delivery
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=6000 -->
 
 ## replay_webhook_delivery
 

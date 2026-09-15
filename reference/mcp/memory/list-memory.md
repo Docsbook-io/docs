@@ -5,7 +5,7 @@ description: "THE BRIEF FOR THIS PROJECT — the owner's own goals beside the st
 
 # List memory
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=800 -->
 
 ## list_memory
 

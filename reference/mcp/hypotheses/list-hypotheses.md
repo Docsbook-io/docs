@@ -5,7 +5,7 @@ description: "WHAT THIS PROJECT BELIEVES WILL WORK, AND WHAT IT FOUND OUT — ev
 
 # List hypotheses
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=800 -->
 
 ## list_hypotheses
 

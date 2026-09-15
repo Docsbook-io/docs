@@ -5,7 +5,7 @@ description: "What Google autocompletes after a phrase — including the who/wha
 
 # Read search suggestions
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=11000 -->
 
 ## read_search_suggestions
 

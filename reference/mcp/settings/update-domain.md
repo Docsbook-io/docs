@@ -5,7 +5,7 @@ description: "Set or remove a custom domain (e.g."
 
 # Update domain
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## update_domain
 

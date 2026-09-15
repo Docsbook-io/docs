@@ -5,7 +5,7 @@ description: "Define a goal — one thing you want a reader to do."
 
 # Create goal
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## create_goal
 

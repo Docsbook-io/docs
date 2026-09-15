@@ -5,7 +5,7 @@ description: "ADD ONE OPPORTUNITY to a direction — one search, question or job
 
 # Add opportunity
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## add_opportunity
 

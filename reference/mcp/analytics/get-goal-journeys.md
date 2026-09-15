@@ -5,7 +5,7 @@ description: "Everyone who completed one goal, with how long they took from firs
 
 # Get goal journeys
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_goal_journeys
 

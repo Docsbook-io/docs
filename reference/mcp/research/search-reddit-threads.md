@@ -5,7 +5,7 @@ description: "Up to 30 Reddit posts and comments mentioning a product, with the 
 
 # Search reddit threads
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=6000 -->
 
 ## search_reddit_threads
 

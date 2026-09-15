@@ -5,7 +5,7 @@ description: "Change or disconnect one of this project's connected sources (see 
 
 # Configure source
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=800 -->
 
 ## configure_source
 

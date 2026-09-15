@@ -5,7 +5,7 @@ description: "Get real Google Search Console positions for the docs (PRO): avera
 
 # Get search rankings
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_search_rankings
 

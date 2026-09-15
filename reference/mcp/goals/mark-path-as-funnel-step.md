@@ -5,7 +5,7 @@ description: "Add a documentation PAGE to a funnel as its next step, creating th
 
 # Mark path as funnel step
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## mark_path_as_funnel_step
 

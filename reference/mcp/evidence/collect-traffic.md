@@ -5,7 +5,7 @@ description: "One call for the four traffic facts every analysis starts from: wh
 
 # Collect traffic
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=12000 -->
 
 ## collect_traffic
 

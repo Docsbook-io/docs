@@ -5,7 +5,7 @@ description: "DISCONNECT two pieces of work that were linked in error."
 
 # Unlink work
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## unlink_work
 

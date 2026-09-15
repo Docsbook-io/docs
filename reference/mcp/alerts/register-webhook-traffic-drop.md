@@ -5,7 +5,7 @@ description: "Register a webhook for the 'traffic_drop' event (BUSINESS, advance
 
 # Register webhook traffic drop
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## register_webhook_traffic_drop
 

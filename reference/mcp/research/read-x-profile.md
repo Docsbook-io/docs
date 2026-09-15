@@ -5,7 +5,7 @@ description: "Follower count, bio and verification status for up to 5 X/Twitter 
 
 # Read x profile
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=2400 -->
 
 ## read_x_profile
 

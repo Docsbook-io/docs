@@ -5,7 +5,7 @@ description: "HOW THE WORK ON THIS PROJECT IS GOING — every issue and pull req
 
 # Get work board
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=6000 -->
 
 ## get_work_board
 

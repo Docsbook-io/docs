@@ -5,7 +5,7 @@ description: "Read one of this workspace's connected sources (see `list_sources`
 
 # Read source
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=6000 -->
 
 ## read_source
 

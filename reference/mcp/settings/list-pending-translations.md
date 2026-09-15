@@ -5,7 +5,7 @@ description: "List draft translations awaiting approval for a workspace."
 
 # List pending translations
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=800 -->
 
 ## list_pending_translations
 

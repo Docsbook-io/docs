@@ -5,7 +5,7 @@ description: "Up to 30 current LinkedIn job postings matching a keyword and loca
 
 # Search job postings
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=3000 -->
 
 ## search_job_postings
 

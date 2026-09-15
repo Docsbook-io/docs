@@ -5,7 +5,7 @@ description: "Pages with thumbs-down feedback or AI dislikes, ranked by count (P
 
 # Get negative feedback
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_negative_feedback
 

@@ -5,7 +5,7 @@ description: "What readers asked the AI assistant, grouped by TOPIC and by wheth
 
 # Get chat conversations
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_chat_conversations
 

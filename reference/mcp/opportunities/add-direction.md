@@ -5,7 +5,7 @@ description: "OPEN A DIRECTION: decompose the standing goal — be found, on Goo
 
 # Add direction
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## add_direction
 

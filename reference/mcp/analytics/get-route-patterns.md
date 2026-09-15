@@ -5,7 +5,7 @@ description: "The 2-4 page SEQUENCES readers actually walk (PRO), with how often
 
 # Get route patterns
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_route_patterns
 

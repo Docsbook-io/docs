@@ -5,7 +5,7 @@ description: "The rendered text of one page that fetch_url returned empty — th
 
 # Read rendered page
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=10 -->
 
 ## read_rendered_page
 

@@ -5,7 +5,7 @@ description: "Register a webhook for the 'search_popular' event (BUSINESS) — t
 
 # Register webhook search popular
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## register_webhook_search_popular
 

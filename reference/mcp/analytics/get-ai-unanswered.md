@@ -5,7 +5,7 @@ description: "AI questions that produced no answer or got negative feedback — 
 
 # Get ai unanswered
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_ai_unanswered
 

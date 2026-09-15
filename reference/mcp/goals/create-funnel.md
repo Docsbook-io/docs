@@ -5,7 +5,7 @@ description: "Define an ORDERED route through the docs, as a list of goal names.
 
 # Create funnel
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## create_funnel
 

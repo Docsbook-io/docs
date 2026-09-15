@@ -5,7 +5,7 @@ description: "Works BACKWARDS from visits that ended well (PRO): which entry pag
 
 # Get reverse funnel
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_reverse_funnel
 

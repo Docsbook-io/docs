@@ -5,7 +5,7 @@ description: "Measure whether answer engines and AI assistants can FETCH this do
 
 # Collect ai citability
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=12000 -->
 
 ## collect_ai_citability
 

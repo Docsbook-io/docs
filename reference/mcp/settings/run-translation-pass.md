@@ -5,7 +5,7 @@ description: "Start a REAL translation catch-up run for one or more languages: t
 
 # Run translation pass
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## run_translation_pass
 

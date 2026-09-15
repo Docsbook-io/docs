@@ -5,7 +5,7 @@ description: "JUDGE a hypothesis with what the reading showed, move its date, or
 
 # Edit hypothesis
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## edit_hypothesis
 

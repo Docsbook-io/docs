@@ -5,7 +5,7 @@ description: "How a declared route holds up, step by step (PRO)."
 
 # Get funnel
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_funnel
 

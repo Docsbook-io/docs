@@ -5,7 +5,7 @@ description: "Read one public web page and get it back as clean Markdown, with i
 
 # Fetch url
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=6000 -->
 
 ## fetch_url
 

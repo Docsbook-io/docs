@@ -5,7 +5,7 @@ description: "Set the translation workflow mode for a workspace: 'auto' (Docsboo
 
 # Set translation mode
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## set_translation_mode
 

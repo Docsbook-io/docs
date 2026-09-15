@@ -5,7 +5,7 @@ description: "Read ONE GitHub issue on this project's repository in full — its
 
 # Get issue
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=6000 -->
 
 ## get_issue
 

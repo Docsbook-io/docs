@@ -5,7 +5,7 @@ description: "ONE recorded call, whole: the exact arguments it was given and the
 
 # Get tool call
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=800 -->
 
 ## get_tool_call
 

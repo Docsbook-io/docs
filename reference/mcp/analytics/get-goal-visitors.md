@@ -5,7 +5,7 @@ description: "Visitors in the window, newest activity first, with which goals ea
 
 # Get goal visitors
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_goal_visitors
 

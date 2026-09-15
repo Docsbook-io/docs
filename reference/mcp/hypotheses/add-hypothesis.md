@@ -5,7 +5,7 @@ description: "WRITE DOWN A WAY TO WIN AN OPPORTUNITY, BEFORE YOU MAKE THE CHANGE
 
 # Add hypothesis
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## add_hypothesis
 

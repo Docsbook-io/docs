@@ -5,7 +5,7 @@ description: "Individual reconstructed visits (PRO): the ordered page journey, r
 
 # Get visits
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_visits
 

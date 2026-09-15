@@ -5,7 +5,7 @@ description: "Pages where readers gave up, ranked (PRO)."
 
 # Get dead end pages
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_dead_end_pages
 

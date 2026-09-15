@@ -5,7 +5,7 @@ description: "RETIRE a hypothesis that should never have been written."
 
 # Remove hypothesis
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## remove_hypothesis
 

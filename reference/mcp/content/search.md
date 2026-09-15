@@ -5,7 +5,7 @@ description: "FIND A DOCUMENTATION PAGE — start here."
 
 # Search
 
-<!-- widget:mcp access=read anonymous -->
+<!-- widget:mcp access=read anonymous price-millicents=30000 -->
 
 ## search
 

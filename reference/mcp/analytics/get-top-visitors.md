@@ -5,7 +5,7 @@ description: "Most active anonymous visitors in the period, ranked by pageview c
 
 # Get top visitors
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_top_visitors
 

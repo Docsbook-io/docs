@@ -5,7 +5,7 @@ description: "Register a webhook for the 'usage_overage_limit_reached' event (BU
 
 # Register webhook usage overage limit reached
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## register_webhook_usage_overage_limit_reached
 

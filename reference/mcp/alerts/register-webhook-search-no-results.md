@@ -5,7 +5,7 @@ description: "Register a webhook for the 'search_no_results' event (BUSINESS) â€
 
 # Register webhook search no results
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## register_webhook_search_no_results
 

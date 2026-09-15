@@ -5,7 +5,7 @@ description: "List all registered webhooks for a workspace (Free)."
 
 # List webhooks
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=800 -->
 
 ## list_webhooks
 

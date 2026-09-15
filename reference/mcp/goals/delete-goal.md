@@ -5,7 +5,7 @@ description: "Archive a goal by name."
 
 # Delete goal
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## delete_goal
 

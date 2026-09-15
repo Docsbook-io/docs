@@ -5,7 +5,7 @@ description: "Get the current custom AI chat system prompt for a workspace."
 
 # Get chat system prompt
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=800 -->
 
 ## get_chat_system_prompt
 

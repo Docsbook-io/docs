@@ -5,7 +5,7 @@ description: "Per-page health score 0-100 (PRO), combining dead-end exits and ne
 
 # Get content health
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_content_health
 

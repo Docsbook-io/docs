@@ -5,7 +5,7 @@ description: "Up to 50 recent reviews for one app, with star rating, the review 
 
 # Read app reviews
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=2500 -->
 
 ## read_app_reviews
 

@@ -5,7 +5,7 @@ description: "Company size (as the source's own STRING field, never its unreliab
 
 # Read linkedin company
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=3000 -->
 
 ## read_linkedin_company
 

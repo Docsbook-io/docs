@@ -5,7 +5,7 @@ description: "Register a webhook for the 'feedback_received' event (BUSINESS) â€
 
 # Register webhook feedback received
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## register_webhook_feedback_received
 

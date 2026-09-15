@@ -5,7 +5,7 @@ description: "Chronological activity timeline of a single anonymous visitor (PRO
 
 # Get visitor activity
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_visitor_activity
 

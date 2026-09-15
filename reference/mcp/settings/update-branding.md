@@ -5,7 +5,7 @@ description: "Update visual branding: colors, fonts, logo, theme, the site's cal
 
 # Update branding
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## update_branding
 

@@ -5,7 +5,7 @@ description: "The actual Google results page for up to 5 queries — organic res
 
 # Read serp snapshot
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=900 -->
 
 ## read_serp_snapshot
 

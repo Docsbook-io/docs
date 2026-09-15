@@ -5,7 +5,7 @@ description: "Google's own monthly search volume, cost-per-click, competition le
 
 # Read keyword demand
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=30000 -->
 
 ## read_keyword_demand
 

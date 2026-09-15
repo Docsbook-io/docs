@@ -5,7 +5,7 @@ description: "Get the translation for a specific source path and language."
 
 # Get translation
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=800 -->
 
 ## get_translation
 

@@ -5,7 +5,7 @@ description: "Where the assistant's answers actually SEND people — destination
 
 # Get chat outbound hosts
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=800 -->
 
 ## get_chat_outbound_hosts
 

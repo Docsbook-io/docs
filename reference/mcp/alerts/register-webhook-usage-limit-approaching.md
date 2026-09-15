@@ -5,7 +5,7 @@ description: "Register a webhook for the 'usage_limit_approaching' event (BUSINE
 
 # Register webhook usage limit approaching
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## register_webhook_usage_limit_approaching
 

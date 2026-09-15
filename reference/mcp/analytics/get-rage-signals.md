@@ -5,7 +5,7 @@ description: "Where readers circle in frustration (PRO): pages re-entered 3+ tim
 
 # Get rage signals
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_rage_signals
 

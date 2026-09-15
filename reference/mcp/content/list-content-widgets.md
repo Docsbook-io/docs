@@ -5,7 +5,7 @@ description: "List the widgets that can be embedded directly in documentation ma
 
 # List content widgets
 
-<!-- widget:mcp access=read anonymous -->
+<!-- widget:mcp access=read anonymous price-millicents=800 -->
 
 ## list_content_widgets
 

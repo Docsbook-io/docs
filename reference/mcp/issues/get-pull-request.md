@@ -5,7 +5,7 @@ description: "Read ONE pull request on this project's repository in full — and
 
 # Get pull request
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=6000 -->
 
 ## get_pull_request
 

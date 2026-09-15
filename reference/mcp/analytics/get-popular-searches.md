@@ -5,7 +5,7 @@ description: "Top search queries from the docs search bar with counts (PRO) — 
 
 # Get popular searches
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_popular_searches
 

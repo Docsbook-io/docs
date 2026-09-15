@@ -5,7 +5,7 @@ description: "How each enabled language stands against the source RIGHT NOW: pag
 
 # Get translation status
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=800 -->
 
 ## get_translation_status
 

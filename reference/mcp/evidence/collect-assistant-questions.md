@@ -5,7 +5,7 @@ description: "Return what readers asked your docs assistant, verbatim, with whic
 
 # Collect assistant questions
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=12000 -->
 
 ## collect_assistant_questions
 

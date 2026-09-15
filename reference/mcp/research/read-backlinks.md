@@ -5,7 +5,7 @@ description: "How many distinct domains currently link to a site, and the actual
 
 # Read backlinks
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=1500 -->
 
 ## read_backlinks
 

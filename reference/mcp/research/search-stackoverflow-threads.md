@@ -5,7 +5,7 @@ description: "Up to 15 Stack Overflow questions naming a product or library, wit
 
 # Search stackoverflow threads
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=15000 -->
 
 ## search_stackoverflow_threads
 

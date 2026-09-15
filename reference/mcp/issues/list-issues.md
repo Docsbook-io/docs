@@ -5,7 +5,7 @@ description: "List the GitHub issues on this project's repository — the work t
 
 # List issues
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=6000 -->
 
 ## list_issues
 

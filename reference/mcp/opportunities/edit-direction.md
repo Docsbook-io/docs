@@ -5,7 +5,7 @@ description: "JUDGE a direction with the target reading, move its review date, o
 
 # Edit direction
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## edit_direction
 

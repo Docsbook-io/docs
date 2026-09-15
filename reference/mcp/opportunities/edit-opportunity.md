@@ -5,7 +5,7 @@ description: "CORRECT one opportunity — a figure that was re-measured, a compe
 
 # Edit opportunity
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## edit_opportunity
 

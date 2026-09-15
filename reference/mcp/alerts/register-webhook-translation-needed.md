@@ -5,7 +5,7 @@ description: "Register a webhook for the 'translation_needed' event (BUSINESS) â
 
 # Register webhook translation needed
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## register_webhook_translation_needed
 

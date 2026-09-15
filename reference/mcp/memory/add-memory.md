@@ -5,7 +5,7 @@ description: "WRITE ONE LINE INTO THIS PROJECT'S BRIEF — an aim, an open quest
 
 # Add memory
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## add_memory
 

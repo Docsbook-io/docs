@@ -5,7 +5,7 @@ description: "Conversations split by the reader's BUYING STAGE — evaluation, p
 
 # Get chat intent
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=30000 -->
 
 ## get_chat_intent
 

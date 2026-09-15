@@ -5,7 +5,7 @@ description: "Get AI chatbot and translation usage stats: token budget, credits 
 
 # Get ai usage
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_ai_usage
 

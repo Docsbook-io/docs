@@ -5,7 +5,7 @@ description: "Search the workspace's documentation content and return verbatim, 
 
 # Search docs
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=30000 -->
 
 ## search_docs
 

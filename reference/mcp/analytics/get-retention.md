@@ -5,7 +5,7 @@ description: "W1/W4 return rate by weekly cohort (BUSINESS) — the only cohort 
 
 # Get retention
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_retention
 

@@ -5,7 +5,7 @@ description: "Up to 40 threads from a named Discourse forum matching a search te
 
 # Search discourse threads
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## search_discourse_threads
 

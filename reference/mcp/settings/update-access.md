@@ -5,7 +5,7 @@ description: "Make a workspace private and configure its unlock method (password
 
 # Update access
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## update_access
 

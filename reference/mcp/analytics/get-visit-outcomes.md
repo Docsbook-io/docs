@@ -5,7 +5,7 @@ description: "How visits to these docs END (PRO): success / dead end / bounce / 
 
 # Get visit outcomes
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_visit_outcomes
 

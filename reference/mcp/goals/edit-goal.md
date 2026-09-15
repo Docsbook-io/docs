@@ -5,7 +5,7 @@ description: "CORRECT a goal that already exists — its label, what one complet
 
 # Edit goal
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## edit_goal
 

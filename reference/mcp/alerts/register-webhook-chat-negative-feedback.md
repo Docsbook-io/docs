@@ -5,7 +5,7 @@ description: "Register a webhook for the 'chat_negative_feedback' event (BUSINES
 
 # Register webhook chat negative feedback
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## register_webhook_chat_negative_feedback
 

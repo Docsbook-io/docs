@@ -5,7 +5,7 @@ description: "WHAT THERE IS TO WIN HERE, AND HOW MUCH OF IT IS WON — the stand
 
 # List opportunities
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=800 -->
 
 ## list_opportunities
 

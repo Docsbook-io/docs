@@ -5,7 +5,7 @@ description: "TWO READINGS OF THE SAME INSTRUMENT, and what moved between them."
 
 # Compare tool calls
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=800 -->
 
 ## compare_tool_calls
 

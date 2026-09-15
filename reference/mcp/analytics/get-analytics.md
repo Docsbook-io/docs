@@ -5,7 +5,7 @@ description: "Get page view analytics, visitor counts, top pages, referrers, and
 
 # Get analytics
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_analytics
 

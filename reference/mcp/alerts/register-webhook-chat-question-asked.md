@@ -5,7 +5,7 @@ description: "Register a webhook for the 'chat_question_asked' event (BUSINESS) 
 
 # Register webhook chat question asked
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## register_webhook_chat_question_asked
 

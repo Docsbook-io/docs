@@ -5,7 +5,7 @@ description: "Completions per goal over the window, plus the daily series behind
 
 # Get goals
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=800 -->
 
 ## get_goals
 

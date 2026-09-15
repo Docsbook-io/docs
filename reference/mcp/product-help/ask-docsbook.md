@@ -5,7 +5,7 @@ description: "Ask a question about USING DOCSBOOK ITSELF — how a feature works
 
 # Ask docsbook
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=30000 -->
 
 ## ask_docsbook
 

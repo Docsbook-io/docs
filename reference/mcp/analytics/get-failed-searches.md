@@ -5,7 +5,7 @@ description: "List search queries that returned no results (PRO) — what reader
 
 # Get failed searches
 
-<!-- widget:mcp access=read -->
+<!-- widget:mcp access=read price-millicents=4000 -->
 
 ## get_failed_searches
 

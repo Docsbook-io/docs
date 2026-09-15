@@ -5,7 +5,7 @@ description: "CORRECT a line in this project's brief, or CLOSE it."
 
 # Edit memory
 
-<!-- widget:mcp access=write -->
+<!-- widget:mcp access=write price-millicents=2000 -->
 
 ## edit_memory
 
