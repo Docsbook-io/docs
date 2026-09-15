@@ -7,6 +7,16 @@ description: "Every release that touched SEO and GEO: how your pages rank in sea
 
 Everything that shipped in **SEO & GEO**. This is the SEO & GEO slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 15.09.2026
+
+### Changed
+
+- Documentation is no longer rendered under language prefixes a project never generated: those URLs redirect to the page itself, so search engines index one copy of each page instead of a dozen translations that were never made. `SEO`
+
+### Fixed
+
+- A documentation URL with no page behind it now answers 404 straight away instead of rendering an empty page under it, so a crawler walking guessed paths stops filling your site's index with pages that were never there. `SEO`
+
 ## NEW - 14.09.2026
 
 ### Changed

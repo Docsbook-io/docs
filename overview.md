@@ -60,14 +60,14 @@ Docsbook is a Next.js 16 and React 19 application on Vercel, with Postgres (Neon
 
 ## What it costs
 
-Docsbook meters four things against each project's own balance, and nothing else:
+Docsbook meters four kinds of AI work against each project's own balance:
 
 - **Readers (AI Chat)** — an AI answer given to a reader of your documentation.
 - **Admin & AI Agent** — an agent run you or a connected agent started.
 - **AI Translations** — translating a page into another language.
 - **Semantic Index** — building the embeddings the AI chat retrieves from.
 
-Hosting, a custom domain and its TLS certificate, readers, editors, GitHub sync, full-text search, branding and analytics are unmetered. Every new project starts with **$1.00** of balance and can claim **$5.00** more once it is 3 minutes old; top-ups after that run from $20.00 to $5,000.00. See [Pricing](./pricing.md) for the mechanism and [docsbook.io/pricing](https://docsbook.io/pricing) for current figures.
+It also meters **machine crawling** — the pages AI and search bots read from your published site, past the monthly allowance every plan includes. Hosting, a custom domain and its TLS certificate, people reading, editors, GitHub sync, full-text search, branding and analytics are unmetered. Every new project starts with **$1.00** of balance and can claim **$5.00** more once it is 3 minutes old; top-ups after that run from $20.00 to $5,000.00. See [Pricing](./pricing.md) for the mechanism and [docsbook.io/pricing](https://docsbook.io/pricing) for current figures.
 
 ## Next steps
 

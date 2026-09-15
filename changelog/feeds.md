@@ -7,6 +7,13 @@ description: "Every release that touched Feeds: the live event stream from your 
 
 Everything that shipped in **Feeds**. This is the Feeds slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 15.09.2026
+
+### Added
+
+- The Usage view now says how many pages bots crawled this month, what that crawling cost, and whether any crawls were refused, so a project quietly dropping out of Google and ChatGPT because its budget ran out is visible on the same screen as the spend rather than discovered weeks later in the analytics. `Feeds`
+- A `usage.limit_approaching` webhook now fires as the crawl budget fills, at the same steps as the AI budget, so nobody has to watch a usage figure to learn that the next crawler will be turned away. `Webhooks`
+
 ## NEW - 12.09.2026
 
 ### Removed

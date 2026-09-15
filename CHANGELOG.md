@@ -5,6 +5,24 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 15.09.2026
+
+### Added
+
+- AI and search crawlers now draw on a monthly crawl budget instead of being served for free: every plan includes crawls at no cost (5,000 on Free, 100,000 on Pro, 500,000 on Enterprise), and anything past that is billed at $0.30 per 1,000 pages, so what a bot costs you when it walks every page in every language is a figure you can read and cap rather than an unexplained line on someone else's hosting bill. A reader that ChatGPT or Perplexity sends you is never counted as a crawl. `Pricing`
+- The Usage view now says how many pages bots crawled this month, what that crawling cost, and whether any crawls were refused, so a project quietly dropping out of Google and ChatGPT because its budget ran out is visible on the same screen as the spend rather than discovered weeks later in the analytics. `Feeds`
+- A `usage.limit_approaching` webhook now fires as the crawl budget fills, at the same steps as the AI budget, so nobody has to watch a usage figure to learn that the next crawler will be turned away. `Webhooks`
+
+### Changed
+
+- The MCP rate card is re-priced against a measured day of real agent use: Read $8, Write $20, Analytics $40, Egress $60, Probe $120, AI $300, Expert $400 per 1,000 calls, with discovery calls still free. The old card billed a project making 363 calls in a working day 56 cents, which said nothing true about what those calls cost to serve. `MCP`
+- Documentation is no longer rendered under language prefixes a project never generated: those URLs redirect to the page itself, so search engines index one copy of each page instead of a dozen translations that were never made. `SEO`
+
+### Fixed
+
+- A documentation URL with no page behind it now answers 404 straight away instead of rendering an empty page under it, so a crawler walking guessed paths stops filling your site's index with pages that were never there. `SEO`
+- `write_docs` no longer reports that it closed an issue when it published straight to the branch without opening a pull request: the closing line only exists in a pull request body, so on that path nothing closed and the issues stayed open while every answer said otherwise. `MCP`
+
 ## NEW - 14.09.2026
 
 ### Added

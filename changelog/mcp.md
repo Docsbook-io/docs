@@ -7,6 +7,16 @@ description: "Every release that touched the MCP server: the tools it serves, wh
 
 Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 15.09.2026
+
+### Changed
+
+- The MCP rate card is re-priced against a measured day of real agent use: Read $8, Write $20, Analytics $40, Egress $60, Probe $120, AI $300, Expert $400 per 1,000 calls, with discovery calls still free. The old card billed a project making 363 calls in a working day 56 cents, which said nothing true about what those calls cost to serve. `MCP`
+
+### Fixed
+
+- `write_docs` no longer reports that it closed an issue when it published straight to the branch without opening a pull request: the closing line only exists in a pull request body, so on that path nothing closed and the issues stayed open while every answer said otherwise. `MCP`
+
 ## NEW - 14.09.2026
 
 ### Changed

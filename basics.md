@@ -87,14 +87,16 @@ Top-ups do not expire, and no balance is refilled on a schedule. A recurring mon
 
 ### Metered work
 
-**Metered work** is the work that draws on a project balance. There are exactly four kinds, and each is a row in **Spend by source** on the project's Limits card:
+**Metered work** is the work that draws on a project balance. Four kinds are AI work, and each is a row in **Spend by source** on the project's Limits card:
 
 - **Readers (AI Chat)** — an AI answer given to a reader of the published documentation.
 - **Admin & AI Agent** — an agent run, including metered MCP tool calls.
 - **AI Translations** — translating a page into another language.
 - **Semantic Index** — building the embeddings the AI chat retrieves from.
 
-Nothing else is metered: hosting, a custom domain and its TLS certificate, readers, editors, GitHub sync, full-text search, branding, analytics and MCP read calls all cost nothing per use. Any one of the four sources can be capped for the cycle from the Limits card, and a cap of $0 switches that source off.
+A fifth kind is not AI work: **machine crawling** of the published site. Every plan includes a monthly allowance of pages served to AI and search bots, and crawling past it draws on the balance — see [What crawling costs](./pricing.md#what-crawling-costs).
+
+Nothing else is metered: hosting, a custom domain and its TLS certificate, people reading, editors, GitHub sync, full-text search, branding and analytics all cost nothing per use. Any one of the four AI sources can be capped for the cycle from the Limits card, and a cap of $0 switches that source off.
 
 ### Markup
 

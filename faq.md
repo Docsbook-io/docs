@@ -11,14 +11,14 @@ Questions are ordered by how early they block a decision: money first, then gett
 
 ### How much does Docsbook cost?
 
-Docsbook meters four things, all of them AI work, charged against the balance of the project that asked for them:
+Docsbook meters four kinds of AI work, charged against the balance of the project that asked for them:
 
 - **Readers (AI Chat)** — an AI answer given to a reader of your documentation.
 - **Admin & AI Agent** — an agent run you or a connected agent started.
 - **AI Translations** — translating a page into another language.
 - **Semantic Index** — building the embeddings the AI chat retrieves from.
 
-Everything else is unmetered: hosting the site, a custom domain and its TLS certificate, readers browsing, editors writing, GitHub sync, full-text search, branding, analytics and MCP read calls. Current figures are on [docsbook.io/pricing](https://docsbook.io/pricing), which is generated from Docsbook's billing constants on every request — read prices there, not from a documentation page that can go stale. See [Pricing](./pricing.md) for the mechanism.
+It also meters one thing that is not AI work: **machine crawling** of your published site, past the monthly allowance every plan includes — see [What crawling costs](./pricing.md#what-crawling-costs). A reader an AI assistant sends you is not a crawl. Everything else is unmetered: hosting the site, a custom domain and its TLS certificate, people browsing, editors writing, GitHub sync, full-text search, branding and analytics. Current figures are on [docsbook.io/pricing](https://docsbook.io/pricing), which is generated from Docsbook's billing constants on every request — read prices there, not from a documentation page that can go stale. See [Pricing](./pricing.md) for the mechanism.
 
 ### Is there a free way to try Docsbook?
 

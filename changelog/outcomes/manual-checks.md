@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Manual checks** — fewer t
 
 A watch someone keeps by remembering to look, kept by a webhook instead. This is the Manual checks slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 15.09.2026
+
+### Added
+
+- A `usage.limit_approaching` webhook now fires as the crawl budget fills, at the same steps as the AI budget, so nobody has to watch a usage figure to learn that the next crawler will be turned away. `Webhooks`
+
 ## NEW - 13.09.2026
 
 ### Changed

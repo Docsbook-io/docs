@@ -9,6 +9,18 @@ Everything Docsbook shipped that moves one number: **AI spend** — less money b
 
 Sees where the model budget actually goes before the invoice does. This is the AI spend slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 15.09.2026
+
+### Added
+
+- AI and search crawlers now draw on a monthly crawl budget instead of being served for free: every plan includes crawls at no cost (5,000 on Free, 100,000 on Pro, 500,000 on Enterprise), and anything past that is billed at $0.30 per 1,000 pages, so what a bot costs you when it walks every page in every language is a figure you can read and cap rather than an unexplained line on someone else's hosting bill. A reader that ChatGPT or Perplexity sends you is never counted as a crawl. `Pricing`
+- The Usage view now says how many pages bots crawled this month, what that crawling cost, and whether any crawls were refused, so a project quietly dropping out of Google and ChatGPT because its budget ran out is visible on the same screen as the spend rather than discovered weeks later in the analytics. `Feeds`
+- A `usage.limit_approaching` webhook now fires as the crawl budget fills, at the same steps as the AI budget, so nobody has to watch a usage figure to learn that the next crawler will be turned away. `Webhooks`
+
+### Changed
+
+- The MCP rate card is re-priced against a measured day of real agent use: Read $8, Write $20, Analytics $40, Egress $60, Probe $120, AI $300, Expert $400 per 1,000 calls, with discovery calls still free. The old card billed a project making 363 calls in a working day 56 cents, which said nothing true about what those calls cost to serve. `MCP`
+
 ## NEW - 14.09.2026
 
 ### Improved
