@@ -62,6 +62,6 @@ Two of these deserve their measured form rather than a slogan. Retrieval over a 
 
 - [GEO](../geo/README.md) — being quoted by an assistant that never connects to anything
 - [llms.txt](../geo/llms-txt.md) — the fourth surface, documented with the SEO and GEO family
-- [MCP tools reference](../reference/mcp/README.md) — every tool with its parameters and billing class
+- [MCP tools reference](../mcp/README.md) — every tool with its parameters and billing class
 - [Webhooks](../reference/webhooks.md) — the push half: being told when something happened, rather than asking
 - [AI Chat](../ai-chat/README.md) — the assistant your readers talk to, which reads the same graph

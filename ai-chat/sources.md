@@ -149,6 +149,6 @@ Both come off the balance of the project the call is about. Amounts are on the [
 - [Answer quality](./answer-quality.md) — the retrieval and grounding pipeline, in full.
 - [Chat hooks](./chat-hooks.md) — the other way to hand a model a fact it cannot read.
 - [MCP server](../agent-ready/mcp.md) — the same tools, for your own agents.
-- [MCP tools reference](../reference/mcp/README.md) — `list_sources`, `read_source`, `connect_source`, `configure_source` in full.
+- [MCP tools reference](../mcp/README.md) — `list_sources`, `read_source`, `connect_source`, `configure_source` in full.
 - [Source of Truth](../agent-ready/source-of-truth.md) — a different feature with a similar name: a local graph of *your own* pages, built on the agent's machine.
 - [Pricing](https://docsbook.io/pricing) — what a source read draws on.

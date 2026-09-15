@@ -73,7 +73,7 @@ than `$0`.
 ### What the validator refuses, and what it only warns about
 
 These are enforced identically whether you create a goal in the panel, over
-[MCP](../../reference/mcp/README.md), or through the assistant — one rule, so no
+[MCP](../../mcp/README.md), or through the assistant — one rule, so no
 surface accepts what another rejects.
 
 | Rule | Level | Reasoning it gives you |
@@ -158,4 +158,4 @@ discriminating paths.
 - [How measurement works](../how-measurement-works.md) — the visit definition, the bot filters and the sample floors every number here inherits
 - [Analytics overview](../tracking/overview.md) — conversion rate and revenue in the headline strip
 - [Tracked events reference](../tracking/events.md) — the event names an `event` goal can match
-- [MCP tools reference](../../reference/mcp/README.md) — `create_goal`, `create_funnel`, `get_funnel`, `get_retention` and the rest
+- [MCP tools reference](../../mcp/README.md) — `create_goal`, `create_funnel`, `get_funnel`, `get_retention` and the rest

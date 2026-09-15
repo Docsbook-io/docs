@@ -324,7 +324,7 @@ Other MCP tools, with the billing class each call is metered under:
 
 ## Related
 
-- [MCP tools reference](./mcp/README.md) — the `register_webhook_<event>` tools and every other tool on the server
+- [MCP tools reference](../mcp/README.md) — the `register_webhook_<event>` tools and every other tool on the server
 - [MCP server overview](../agent-ready/mcp.md) — connecting a client, and the rate card the feed prices calls against
 - [Tracked events reference](../analytics/tracking/events.md) — the reader actions behind several of these events
 - [Analytics overview](../analytics/tracking/overview.md) — reading the same activity as a report rather than as a stream

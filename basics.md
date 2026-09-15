@@ -136,7 +136,7 @@ Docsbook generates it from the indexed content, so it does not go stale separate
 
 The **MCP server** is Docsbook's Model Context Protocol endpoint at `https://docsbook.io/api/mcp/server`, exposing 140 tools that let an AI agent ask the `docsbook_expert` agent what to do and get instructions back, read your documentation, search it, change settings, and commit pages back. Authentication is Bearer over OAuth 2.0 with PKCE.
 
-Discovery calls are never metered; other calls draw on the project balance. See [MCP server](./agent-ready/mcp.md) and the [MCP tools reference](./reference/mcp/README.md).
+Discovery calls are never metered; other calls draw on the project balance. See [MCP server](./agent-ready/mcp.md) and the [MCP tools reference](./mcp/README.md).
 
 ### Float widget
 
@@ -148,5 +148,5 @@ It switches chat, repository and mode, opens settings, and signs you out.
 
 - [Overview](./overview.md) — how these pieces fit together, end to end
 - [Quick start](./quick-start.md) — the tutorial that uses these terms in order
-- [MCP tools reference](./reference/mcp/README.md) — every tool, its parameters and its price class
+- [MCP tools reference](./mcp/README.md) — every tool, its parameters and its price class
 - [Pricing](./pricing.md) — what is metered and what a project balance pays for

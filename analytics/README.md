@@ -55,4 +55,4 @@ See [visitor countries report](./reports/countries.md), and [translation setting
 
 - [Branding](../design/style/branding.md) — the Call To Action URL and Average Product Price that switch on conversion and revenue reporting
 - [Webhooks](../reference/webhooks.md) — get told about a traffic drop or an unanswered question instead of checking for one
-- [MCP tools reference](../reference/mcp/README.md) — reading the same numbers from an agent
+- [MCP tools reference](../mcp/README.md) — reading the same numbers from an agent
