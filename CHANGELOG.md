@@ -17,6 +17,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - A code group labels its tabs from the code itself: a fence tagged `python` becomes a "Python" tab with nothing to configure, and every variant stays in the page source, so the answer an AI assistant quotes from your docs is the one for the reader's language rather than whichever snippet happened to be on top. `Content`
 - Cards can now carry a **New**/**Beta** pill beside the title and a row of short tags under it, and their arrow can be set to appear only on hover — so a reader evaluating your models, plans or editions picks the right one straight off the grid instead of opening three pages to tell them apart. `Content`
 - Your documentation's **home page can now be shown as a landing page**: hide the left sidebar, hide the right "On this page" outline, and let the content run the full width, so a first-time visitor lands on a page that looks like your product rather than on the table of contents of a manual. It applies to the front page and nowhere else — every page they work through keeps its sidebar, and the phone menu stays either way. `Content`
+- A floating **Ask Docs** button can now sit in the corner of every page, so a reader who never noticed the header's Ask AI pill still has an obvious way into a conversation. The rest of the page dims behind it while the question box is open, and a click on the dimmed area closes it again. Off by default — turn it on from Customize. `AI Chat`
 
 ### Changed
 

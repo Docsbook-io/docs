@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Support load** — fewer qu
 
 Questions the docs answer are questions your inbox never sees. This is the Support load slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 15.09.2026
+
+### Added
+
+- A floating **Ask Docs** button can now sit in the corner of every page, so a reader who never noticed the header's Ask AI pill still has an obvious way into a conversation. The rest of the page dims behind it while the question box is open, and a click on the dimmed area closes it again. Off by default — turn it on from Customize. `AI Chat`
+
 ## NEW - 14.09.2026
 
 ### Added
