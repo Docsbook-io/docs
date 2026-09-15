@@ -15,6 +15,7 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 
 ### Changed
 
+- `write_docs` now reads back the page it just wrote and says what it left as plain prose — a set of snippets stacked in three languages, a bare list of links closing the page, numbered step headings, a bolded `Note:` — naming the region and the exact block to wrap it in, plus any marker that will not render. An assistant connected to Docsbook and nothing else now writes pages with the right blocks in them without anyone teaching it the catalogue first, which is the difference between docs that look written and docs that look made. `MCP`
 - The MCP rate card is re-priced against a measured day of real agent use: Read $8, Write $20, Analytics $40, Egress $60, Probe $120, AI $300, Expert $400 per 1,000 calls, with discovery calls still free. The old card billed a project making 363 calls in a working day 56 cents, which said nothing true about what those calls cost to serve. `MCP`
 
 ### Fixed

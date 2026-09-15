@@ -14,6 +14,7 @@ Readers who came to learn and left having started — the docs' real job. This i
 ### Added
 
 - AI and search crawlers now draw on a monthly crawl budget instead of being served for free: every plan includes crawls at no cost (5,000 on Free, 100,000 on Pro, 500,000 on Enterprise), and anything past that is billed at $0.30 per 1,000 pages, so what a bot costs you when it walks every page in every language is a figure you can read and cap rather than an unexplained line on someone else's hosting bill. A reader that ChatGPT or Perplexity sends you is never counted as a crawl. `Pricing`
+- Cards can now carry a **New**/**Beta** pill beside the title and a row of short tags under it, and their arrow can be set to appear only on hover — so a reader evaluating your models, plans or editions picks the right one straight off the grid instead of opening three pages to tell them apart. `Content`
 
 ## NEW - 14.09.2026
 

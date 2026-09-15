@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **First-visit bounce** — fe
 
 Docs that look like the product, rather than like a template someone forgot. This is the First-visit bounce slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 15.09.2026
+
+### Added
+
+- Your documentation's **home page can now be shown as a landing page**: hide the left sidebar, hide the right "On this page" outline, and let the content run the full width, so a first-time visitor lands on a page that looks like your product rather than on the table of contents of a manual. It applies to the front page and nowhere else — every page they work through keeps its sidebar, and the phone menu stays either way. `Content`
+
 ## NEW - 12.09.2026
 
 ### Removed

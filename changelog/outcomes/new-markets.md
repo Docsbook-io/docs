@@ -14,9 +14,12 @@ The readers who bounced because the docs were not in their language. This is the
 ### Added
 
 - AI and search crawlers now draw on a monthly crawl budget instead of being served for free: every plan includes crawls at no cost (5,000 on Free, 100,000 on Pro, 500,000 on Enterprise), and anything past that is billed at $0.30 per 1,000 pages, so what a bot costs you when it walks every page in every language is a figure you can read and cap rather than an unexplained line on someone else's hosting bill. A reader that ChatGPT or Perplexity sends you is never counted as a crawl. `Pricing`
+- Two new blocks you can put in a page: a **callout** for the sentence a reader must not miss — a prerequisite, a version cutoff, a destructive command — in six kinds from note to danger, and a **code group** that shows one call per language behind a tab strip instead of four stacked snippets a reader has to scroll past to find their own. Both are written as ordinary markdown between two invisible comments, so the same file still reads correctly on GitHub. `Content`
+- A code group labels its tabs from the code itself: a fence tagged `python` becomes a "Python" tab with nothing to configure, and every variant stays in the page source, so the answer an AI assistant quotes from your docs is the one for the reader's language rather than whichever snippet happened to be on top. `Content`
 
 ### Changed
 
+- `write_docs` now reads back the page it just wrote and says what it left as plain prose — a set of snippets stacked in three languages, a bare list of links closing the page, numbered step headings, a bolded `Note:` — naming the region and the exact block to wrap it in, plus any marker that will not render. An assistant connected to Docsbook and nothing else now writes pages with the right blocks in them without anyone teaching it the catalogue first, which is the difference between docs that look written and docs that look made. `MCP`
 - Documentation is no longer rendered under language prefixes a project never generated: those URLs redirect to the page itself, so search engines index one copy of each page instead of a dozen translations that were never made. `SEO`
 
 ## NEW - 14.09.2026
