@@ -19,6 +19,8 @@ Sees where the model budget actually goes before the invoice does. This is the A
 
 ### Changed
 
+- **A project that spends its free credit is now paused rather than left running.** When the wallet reaches zero with no subscription, the site goes private until it is topped up or subscribed — and you are warned at half the wallet, at three quarters and again near the end, so nobody meets the pause without having seen it coming. Nothing is deleted, and a top-up or a subscription publishes it again exactly as it was. `Pricing`
+- **Enterprise now has a price and a checkout: $100/month for a repository.** No more contacting sales to find out what it costs. What it buys is the part worth knowing: the balance belongs to the PROJECT rather than to you, so everyone you invite spends that one balance without needing a plan of their own, and a team stops paying per person to work on one documentation site. Pro is unchanged at $20/month and is still bought by a person. `Pricing`
 - The MCP rate card is re-priced against a measured day of real agent use: Read $8, Write $20, Analytics $40, Egress $60, Probe $120, AI $300, Expert $400 per 1,000 calls, with discovery calls still free. The old card billed a project making 363 calls in a working day 56 cents, which said nothing true about what those calls cost to serve. `MCP`
 
 ## NEW - 14.09.2026

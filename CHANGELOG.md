@@ -26,6 +26,11 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Changed
 
+- **The free trial no longer expires.** Every new project still starts on Pro with a free AI wallet, but there is no fourteen-day clock on it any more: the project runs until that wallet is spent, however long it takes, so an evaluation you put down for three weeks is still there when you pick it up instead of having gone dark while nobody was using it. `Pricing`
+- **A project that spends its free credit is now paused rather than left running.** When the wallet reaches zero with no subscription, the site goes private until it is topped up or subscribed — and you are warned at half the wallet, at three quarters and again near the end, so nobody meets the pause without having seen it coming. Nothing is deleted, and a top-up or a subscription publishes it again exactly as it was. `Pricing`
+- **Enterprise now has a price and a checkout: $100/month for a repository.** No more contacting sales to find out what it costs. What it buys is the part worth knowing: the balance belongs to the PROJECT rather than to you, so everyone you invite spends that one balance without needing a plan of their own, and a team stops paying per person to work on one documentation site. Pro is unchanged at $20/month and is still bought by a person. `Pricing`
+- The plans screen now lets you pick which repository Enterprise is bought for, and says in one line which balance each plan tops up, so nobody buys the wrong plan and finds out when a teammate is refused. `Pricing`
+
 - `write_docs` now reads back the page it just wrote and says what it left as plain prose — a set of snippets stacked in three languages, a bare list of links closing the page, numbered step headings, a bolded `Note:` — naming the region and the exact block to wrap it in, plus any marker that will not render. An assistant connected to Docsbook and nothing else now writes pages with the right blocks in them without anyone teaching it the catalogue first, which is the difference between docs that look written and docs that look made. `MCP`
 - The MCP rate card is re-priced against a measured day of real agent use: Read $8, Write $20, Analytics $40, Egress $60, Probe $120, AI $300, Expert $400 per 1,000 calls, with discovery calls still free. The old card billed a project making 363 calls in a working day 56 cents, which said nothing true about what those calls cost to serve. `MCP`
 - Documentation is no longer rendered under language prefixes a project never generated: those URLs redirect to the page itself, so search engines index one copy of each page instead of a dozen translations that were never made. `SEO`
@@ -35,6 +40,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The content-widgets reference now documents every block that ships, including the five that had shipped without reaching it — **callout**, **code group**, the **MCP tool** block, and the card **New**/**Beta** pill and tag chips — so a writer building a model-family grid or a warning box finds the markers in one page instead of learning they exist from a release note. `Content`
 
 ### Fixed
+
+- **Connecting the MCP server for the first time led to a 404 instead of a sign-in page**, so a new user could neither sign in nor create an account through it — the one route the product asks people to take. Registering and authorising an AI assistant from Claude, Cursor or a CLI now works from a standing start, with no website visit first. `MCP`
+- Ask the connected assistant about a site you have not added to Docsbook yet — "here is my site, why are we not in Google, what do the AI assistants say about us" — and it now runs the whole audit before asking you to create anything: what people search for, who holds those results today, and what the competitors' docs cover that yours do not. The search, keyword and competitor tools need no project, so the answer arrives before the sign-up rather than after it. `MCP`
+
 
 - A documentation URL with no page behind it now answers 404 straight away instead of rendering an empty page under it, so a crawler walking guessed paths stops filling your site's index with pages that were never there. `SEO`
 - `write_docs` no longer reports that it closed an issue when it published straight to the branch without opening a pull request: the closing line only exists in a pull request body, so on that path nothing closed and the issues stayed open while every answer said otherwise. `MCP`

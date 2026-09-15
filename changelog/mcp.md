@@ -22,6 +22,8 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 
 ### Fixed
 
+- **Connecting the MCP server for the first time led to a 404 instead of a sign-in page**, so a new user could neither sign in nor create an account through it — the one route the product asks people to take. Registering and authorising an AI assistant from Claude, Cursor or a CLI now works from a standing start, with no website visit first. `MCP`
+- Ask the connected assistant about a site you have not added to Docsbook yet — "here is my site, why are we not in Google, what do the AI assistants say about us" — and it now runs the whole audit before asking you to create anything: what people search for, who holds those results today, and what the competitors' docs cover that yours do not. The search, keyword and competitor tools need no project, so the answer arrives before the sign-up rather than after it. `MCP`
 - `write_docs` no longer reports that it closed an issue when it published straight to the branch without opening a pull request: the closing line only exists in a pull request body, so on that path nothing closed and the issues stayed open while every answer said otherwise. `MCP`
 - The OAuth discovery document an MCP client reads before it can authenticate now answers on your project's own address instead of 404ing, so an agent can connect to your documentation without a human handing it the endpoint. `MCP`
 

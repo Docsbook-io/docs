@@ -17,6 +17,7 @@ Pages that already rank 5–20 are the cheapest traffic you will ever buy. This 
 
 ### Fixed
 
+- Ask the connected assistant about a site you have not added to Docsbook yet — "here is my site, why are we not in Google, what do the AI assistants say about us" — and it now runs the whole audit before asking you to create anything: what people search for, who holds those results today, and what the competitors' docs cover that yours do not. The search, keyword and competitor tools need no project, so the answer arrives before the sign-up rather than after it. `MCP`
 - A documentation URL with no page behind it now answers 404 straight away instead of rendering an empty page under it, so a crawler walking guessed paths stops filling your site's index with pages that were never there. `SEO`
 
 ## NEW - 14.09.2026

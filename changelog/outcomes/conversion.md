@@ -17,6 +17,17 @@ Readers who came to learn and left having started — the docs' real job. This i
 - Cards can now carry a **New**/**Beta** pill beside the title and a row of short tags under it, and their arrow can be set to appear only on hover — so a reader evaluating your models, plans or editions picks the right one straight off the grid instead of opening three pages to tell them apart. `Content`
 - Three more blocks for a page that has to OPEN a site rather than continue one. A **hero** leads with the page's own heading, a lead line, a row of quick links and one prompt a reader can hand straight to their AI agent, so a first-time visitor either finds the three doors that matter or delegates the whole setup without reading a guide. A **showcase** gallery makes a screenshot the tile, so the customers and examples a landing page has to SHOW stop being described in a bullet list. And a **journey** lays a product's stages out side by side, so a reader can see which one they are in instead of scanning an index sorted by subsystem to guess. Between them a front page finally looks like your product rather than like the table of contents of a manual, and a reader evaluating you sees the customers you have instead of a bullet list claiming them. All three are ordinary markdown between two invisible comments, so the same file still reads correctly on GitHub. `Content`
 
+### Changed
+
+- **The free trial no longer expires.** Every new project still starts on Pro with a free AI wallet, but there is no fourteen-day clock on it any more: the project runs until that wallet is spent, however long it takes, so an evaluation you put down for three weeks is still there when you pick it up instead of having gone dark while nobody was using it. `Pricing`
+- **A project that spends its free credit is now paused rather than left running.** When the wallet reaches zero with no subscription, the site goes private until it is topped up or subscribed — and you are warned at half the wallet, at three quarters and again near the end, so nobody meets the pause without having seen it coming. Nothing is deleted, and a top-up or a subscription publishes it again exactly as it was. `Pricing`
+- **Enterprise now has a price and a checkout: $100/month for a repository.** No more contacting sales to find out what it costs. What it buys is the part worth knowing: the balance belongs to the PROJECT rather than to you, so everyone you invite spends that one balance without needing a plan of their own, and a team stops paying per person to work on one documentation site. Pro is unchanged at $20/month and is still bought by a person. `Pricing`
+- The plans screen now lets you pick which repository Enterprise is bought for, and says in one line which balance each plan tops up, so nobody buys the wrong plan and finds out when a teammate is refused. `Pricing`
+
+### Fixed
+
+- Ask the connected assistant about a site you have not added to Docsbook yet — "here is my site, why are we not in Google, what do the AI assistants say about us" — and it now runs the whole audit before asking you to create anything: what people search for, who holds those results today, and what the competitors' docs cover that yours do not. The search, keyword and competitor tools need no project, so the answer arrives before the sign-up rather than after it. `MCP`
+
 ## NEW - 14.09.2026
 
 ### Added

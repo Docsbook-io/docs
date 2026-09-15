@@ -11,8 +11,13 @@ Claims and links that stopped being true — found before a reader finds them. T
 
 ## NEW - 15.09.2026
 
+### Changed
+
+- The plans screen now lets you pick which repository Enterprise is bought for, and says in one line which balance each plan tops up, so nobody buys the wrong plan and finds out when a teammate is refused. `Pricing`
+
 ### Fixed
 
+- **Connecting the MCP server for the first time led to a 404 instead of a sign-in page**, so a new user could neither sign in nor create an account through it — the one route the product asks people to take. Registering and authorising an AI assistant from Claude, Cursor or a CLI now works from a standing start, with no website visit first. `MCP`
 - A documentation URL with no page behind it now answers 404 straight away instead of rendering an empty page under it, so a crawler walking guessed paths stops filling your site's index with pages that were never there. `SEO`
 - A documentation section whose folder is called `api` now serves every page under it. The section index resolved while every page below it answered 404, so a published API reference looked finished and was empty one click in. `Content`
 - Your project's interactive API reference page now opens for readers who are not signed in, instead of answering 404 to everyone except you. `Content`

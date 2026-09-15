@@ -34,21 +34,30 @@ A **project balance** is the money attached to one Docsbook project, spent on th
 
 ## How much free credit a new project gets
 
-Every new project starts on Pro for 14 days, with no card, and that trial has an AI wallet of its own. The amount is on [docsbook.io/pricing](https://docsbook.io/pricing) — one figure, generated from the billing constants, so it cannot go stale here.
+Every new project starts on Pro, with no card and **no time limit**, and that trial has an AI wallet of its own. The amount is on [docsbook.io/pricing](https://docsbook.io/pricing) — one figure, generated from the billing constants, so it cannot go stale here.
 
 Three things are worth knowing about that wallet, because they are what make it a trial rather than a balance:
 
 - **It is spent first**, ahead of anything you have topped the project up with. Free money goes before money you paid for.
-- **It ends with the trial.** Whatever is left on day fifteen simply stops being spendable — it is a sample, not credit you hold. Anything you topped up yourself is untouched and stays yours.
-- **There is no card behind it**, so it cannot overspend. When the wallet is empty the metered AI work pauses and nothing is charged to anybody.
+- **It is what the trial IS.** There is no expiry date to miss: the trial runs until the wallet is empty, however long that takes. Subscribing does not forfeit the rest of it either — it is still spent before the month you paid for.
+- **There is no card behind it**, so it cannot overspend. When the wallet is empty the project pauses and nothing is charged to anybody.
 
 That wallet is the only credit Docsbook gives away. Everything after it is either a top-up you pay for or the monthly AI usage a Pro subscription includes.
 
-## What happens when the trial ends
+## What happens when the free credit runs out
 
 Subscribe and the project keeps Pro, with the month's AI usage credited to its balance — less whatever of the trial wallet you actually used, so the sample is not billed to you twice. A trial that never asked the AI anything is credited the full monthly amount.
 
-Let the trial lapse instead and the project moves to the free tier: the AI assistant, agents and translations switch off, and no AI allowance is granted. Nothing is deleted, your Markdown stays in your repository, and topping the project up or subscribing switches it back on.
+Spend the wallet out without subscribing and **the project is paused**: it goes private, and the published docs stop being readable until it has a balance again. You are warned on the way there — at half the wallet, at three quarters, and again near the end — so the pause is never the first you hear of it. Nothing is deleted, your Markdown stays in your repository, and topping the project up or subscribing publishes it again exactly as it was.
+
+## The two plans, and which balance they fill
+
+Both plans switch on the same things. What differs is **whose balance is topped up**, and it is the only question worth asking when choosing between them:
+
+- **Pro is bought by a person.** It credits you, and covers a project you own.
+- **Enterprise is bought for a repository.** It credits **the project**, and everyone with access to that project spends that one balance — invite whoever you like, none of them needs a plan of their own. Buying it for a second repository means buying it again, one repository at a time, so each keeps its own balance and a quiet project never pays for a busy one.
+
+Both prices are on [docsbook.io/pricing](https://docsbook.io/pricing).
 
 ## How top-ups work
 
@@ -110,7 +119,7 @@ Your Markdown always stays in your own GitHub repository. Docsbook renders those
 
 ## See what a project costs you
 
-Create a project, publish it, and watch the balance while you use it. It starts on Pro for 14 days with an AI wallet of its own, and no card is asked for.
+Create a project, publish it, and watch the balance while you use it. It starts on Pro with an AI wallet of its own and no time limit, and no card is asked for.
 
 [Start free — no credit card](https://docsbook.io/start)
 
