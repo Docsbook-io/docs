@@ -14,6 +14,7 @@ One visit is a look; a second is a product someone is actually adopting. This is
 ### Added
 
 - Your documentation's **home page can now be shown as a landing page**: hide the left sidebar, hide the right "On this page" outline, and let the content run the full width, so a first-time visitor lands on a page that looks like your product rather than on the table of contents of a manual. It applies to the front page and nowhere else — every page they work through keeps its sidebar, and the phone menu stays either way. `Content`
+- A new MCP tool, `ask_docsbook`, answers a question about using Docsbook itself with the same AI-generated, cited reply as the public Ask AI chat on docsbook.io/docs, so an agent already connected to Docsbook doesn't have to leave the session to look something up. `MCP`
 
 ## NEW - 13.09.2026
 

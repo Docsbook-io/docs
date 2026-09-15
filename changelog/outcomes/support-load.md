@@ -15,6 +15,7 @@ Questions the docs answer are questions your inbox never sees. This is the Suppo
 
 - A floating **Ask Docs** button can now sit in the corner of every page, so a reader who never noticed the header's Ask AI pill still has an obvious way into a conversation. The rest of the page dims behind it while the question box is open, and a click on the dimmed area closes it again. Off by default — turn it on from Customize. `AI Chat`
 - Your documentation can now carry a **footer**: columns of links, a copyright and legal-entity block, an optional call-to-action button, your social icons and a light/dark/system picker, in one of three layouts. The terms, privacy, status and contact links a reader hunts for at the end of a page are finally somewhere to put, so nobody has to email support to ask where your terms are, and a reader who finished the page has somewhere to go next instead of stopping. Off until you turn it on, and your social accounts are the ones you already set, not a second list to keep in sync. `Content`
+- A new MCP tool, `ask_docsbook`, answers a question about using Docsbook itself with the same AI-generated, cited reply as the public Ask AI chat on docsbook.io/docs, so an agent already connected to Docsbook doesn't have to leave the session to look something up. `MCP`
 
 ## NEW - 14.09.2026
 

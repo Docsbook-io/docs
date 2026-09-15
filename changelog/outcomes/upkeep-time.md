@@ -14,6 +14,7 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 ### Added
 
 - Install the Docsbook GitHub App on a repository and unattended runs can publish to it: an agent writing docs on a schedule no longer depends on somebody being signed in, which is why scheduled runs against repositories Docsbook does not host were refused outright. `MCP`
+- A new MCP tool, `ask_docsbook`, answers a question about using Docsbook itself with the same AI-generated, cited reply as the public Ask AI chat on docsbook.io/docs, so an agent already connected to Docsbook doesn't have to leave the session to look something up. `MCP`
 
 ### Changed
 

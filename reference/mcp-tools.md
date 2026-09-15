@@ -1,11 +1,11 @@
 ---
 title: "Every tool the Docsbook MCP server exposes to an agent"
-description: "The 149 tools a Docsbook workspace exposes over MCP — the one `docsbook_expert` agent, workspace setup, content, issues, chat, translations, analytics, call history, project memory, opportunities, hypotheses, the work board and webhooks."
+description: "The 150 tools a Docsbook workspace exposes over MCP — the one `docsbook_expert` agent, `ask_docsbook`, workspace setup, content, issues, chat, translations, analytics, call history, project memory, opportunities, hypotheses, the work board and webhooks."
 ---
 
 # MCP Tools Reference
 
-This page lists every tool exposed by the Docsbook MCP server at `https://docsbook.io/api/mcp/server`. The server exposes **149 tools**. Each requires Bearer authentication via OAuth 2.0 + PKCE.
+This page lists every tool exposed by the Docsbook MCP server at `https://docsbook.io/api/mcp/server`. The server exposes **150 tools**. Each requires Bearer authentication via OAuth 2.0 + PKCE. Every one of them is also callable as plain REST — see the [API reference](./api.md#post-apiv1toolstool).
 
 The **Billing** column names the class a call is metered under, against the project's own balance:
 
@@ -104,6 +104,7 @@ A Docsbook-hosted site's issues live on the repository Docsbook hosts for it; a 
 | `set_chat_system_prompt` | Write | Replace the chat system prompt |
 | `set_chat_hooks` | Write | Configure pre/post LLM hooks |
 | `test_chat_hook` | Egress | Run a hook against a synthetic payload |
+| `ask_docsbook` | AI | Ask a question about USING DOCSBOOK ITSELF — a feature, a setup step, what a plan includes — and get back the same AI-generated, cited answer a reader gets from the public "Ask AI" chat on docsbook.io/docs. Different from `docsbook_expert`, which advises on planning documentation work and runs no model: this one asks the question and answers it, against Docsbook's own manual. Not for a customer's own documentation — that is `search`/`search_docs`/`read_doc`. Optional `session_id` groups multiple calls as one conversation in this project's own chat analytics. |
 
 ## Translations
 
@@ -281,7 +282,7 @@ What you would actually type to a connected client, and the tools it ends up cal
 
 **A call was refused for an empty balance — what do I do?** The refusal names the project that ran out, what the call draws, what is left, and where to top up. Discovery calls (`get_info`, `list_workspaces`, `find_skill`, and the rest of the Included class above) keep working regardless, so your agent can still find out what happened and report it.
 
-**Why does the tool count keep changing?** It reflects what actually runs. The server exposed more tools before 2026-09-12, when the 135 narrow action tools and the standing-agent tools were retired in favor of `docsbook_expert`; the 4 Reminders tools were retired on top of that on 2026-09-14, superseded by `check_at`/`check_in_days` on a hypothesis; it currently exposes 149. `get_info` always reports the live count.
+**Why does the tool count keep changing?** It reflects what actually runs. The server exposed more tools before 2026-09-12, when the 135 narrow action tools and the standing-agent tools were retired in favor of `docsbook_expert`; the 4 Reminders tools were retired on top of that on 2026-09-14, superseded by `check_at`/`check_in_days` on a hypothesis; `ask_docsbook` was added on 2026-09-15; it currently exposes 150. `get_info` always reports the live count.
 
 ## Related
 
