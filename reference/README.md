@@ -12,7 +12,7 @@ The API and MCP sections are generated from the running server — the OpenAPI d
 ## Pages
 
 - [MCP tools](../mcp/README.md) — every tool on the Docsbook MCP server, one page each: its arguments, the JSON-RPC envelope a client sends, the REST equivalent you can try from the page, and what the call costs
-- [API reference](../api/README.md) — the REST surface: ask your documentation a question, or dispatch any tool by name
+- [API reference](../rest-api/README.md) — the REST surface: ask your documentation a question, or dispatch any tool by name
 - [Webhooks](./webhooks.md) — event catalog, payload schemas, HMAC signature format
 - [MCP server overview](../agent-ready/mcp.md) — OAuth flow, connection setup, conceptual model
 

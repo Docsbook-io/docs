@@ -117,7 +117,7 @@ Codex, Cursor, Windsurf, Cline and any other MCP client use the same endpoint �
 
 - [Pricing](./pricing.md) — What is metered, and what is not {credit-card}
 - [FAQ](./faq.md) — Cost, sync, privacy, data ownership {help-circle}
-- [REST API](./api/README.md) — Call your docs chat from your backend {code}
+- [REST API](./rest-api/README.md) — Call your docs chat from your backend {code}
 - [Webhooks](./reference/webhooks.md) — Event catalogue and payload schemas {bell}
 - [Content widgets](./content/features/widgets.md) — Cards, steps and callouts in Markdown {layout-grid}
 - [Changelog](./CHANGELOG.md) — What shipped, and what it was meant to buy {history}
