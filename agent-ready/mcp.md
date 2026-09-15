@@ -18,7 +18,7 @@ The Docsbook MCP server exposes **151 tools** over the Model Context Protocol, a
 
 **A second tool answers a question rather than planning the work.** `ask_docsbook` asks a real question about USING DOCSBOOK ITSELF — "how does X work", "does Docsbook do Y" — and returns the same AI-generated, cited answer a reader gets from the public "Ask AI" chat on [docsbook.io/docs](https://docsbook.io/docs). It runs the same retrieval and model call the public widget runs, and the question is logged in your own project's chat analytics exactly the way a real reader's question would be — not a lookalike, the same call.
 
-Every other tool is a plain, individually named call — workspace and branding, content, the issue tracker, AI chat, translations, analytics, call history, project memory, opportunities, hypotheses, the work board and webhooks — among them the two that connect and configure a repository or website as a source of truth, and `collect_ai_citability`, which scores whether an answer engine can fetch and quote you. None of them run unattended: a standing agent that fired on its own schedule or on a repository's commits, and the 135 narrower tools that only ever ran inside one, were retired on 2026-09-12 for the reason `docsbook_expert` replaced them — the value in them was never the running, it was knowing which reads, in what order, and what makes the answer wrong, which is a thing to be told rather than a thing to be run. See the [MCP tools reference](../reference/mcp-tools.md) for the full list.
+Every other tool is a plain, individually named call — workspace and branding, content, the issue tracker, AI chat, translations, analytics, call history, project memory, opportunities, hypotheses, the work board and webhooks — among them the two that connect and configure a repository or website as a source of truth, and `collect_ai_citability`, which scores whether an answer engine can fetch and quote you. None of them run unattended: a standing agent that fired on its own schedule or on a repository's commits, and the 135 narrower tools that only ever ran inside one, were retired on 2026-09-12 for the reason `docsbook_expert` replaced them — the value in them was never the running, it was knowing which reads, in what order, and what makes the answer wrong, which is a thing to be told rather than a thing to be run. See the [MCP tools reference](../reference/mcp/README.md) for the full list.
 
 ## Endpoint
 
@@ -456,7 +456,7 @@ When a call is refused, the server returns a structured error naming the reason 
 
 ## Related
 
-- [MCP tools reference](../reference/mcp-tools.md) — every tool with its parameters.
+- [MCP tools reference](../reference/mcp/README.md) — every tool with its parameters.
 - [Chat Hooks](../ai-chat/chat-hooks.md) — Configure pre/post-LLM hooks via MCP.
 - [Docs Skills](./skills.md) — Discover SKILL.md files through `find_skill`, or ask `docsbook_expert` for the route through one.
 - [Webhooks](../reference/webhooks.md) — Register event handlers from MCP, and verify their signatures.

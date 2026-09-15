@@ -125,6 +125,11 @@
       "from": "ai-chat/skills",
       "to": "agent-ready/skills",
       "at": "2026-09-05T12:00:00.000Z"
+    },
+    {
+      "from": "reference/mcp-tools",
+      "to": "reference/mcp",
+      "at": "2026-09-15T00:00:00.000Z"
     }
   ]
 }

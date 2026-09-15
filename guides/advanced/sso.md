@@ -128,4 +128,4 @@ generic placeholders.
 
 - [Manage your documentation site](../getting-started/managing-docs.md) — where the Privacy & Access panel sits among the other settings.
 - [What Docsbook includes and what costs money](./premium.md) — the capabilities around this one, and what draws on the project balance.
-- [MCP tools reference](../../reference/mcp-tools.md) — the full argument list for `update_access`.
+- [MCP tools reference](../../reference/mcp/README.md) — the full argument list for `update_access`.

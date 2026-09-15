@@ -66,7 +66,7 @@ Bringing your own provider API key is supported. When you do, you pay the provid
 
 Docsbook MCP tool calls are charged a flat price fixed before the call runs, independent of the size of the answer. Discovery calls — describing the server, finding a skill or a widget, listing your projects, creating one — are never metered. Reads, writes, analytics scans, and full agent runs each sit in their own price class.
 
-The class and price of every tool is on its row in the **MCP** section of your admin panel and in the [MCP tools reference](./reference/mcp-tools.md). Every metered call also appears line by line in the project's Feeds panel — which tool, whether it worked, how long it took and what it cost.
+The class and price of every tool is on its row in the **MCP** section of your admin panel and in the [MCP tools reference](./reference/mcp/README.md). Every metered call also appears line by line in the project's Feeds panel — which tool, whether it worked, how long it took and what it cost.
 
 ## What crawling costs
 
@@ -103,7 +103,7 @@ Your Markdown always stays in your own GitHub repository. Docsbook renders those
 
 - [Docsbook FAQ](./faq.md) — cancellation, payment, data ownership and sync questions
 - [Use cases](./use-cases.md) — what teams publish documentation to change
-- [MCP tools reference](./reference/mcp-tools.md) — every tool, its parameters and its price class
+- [MCP tools reference](./reference/mcp/README.md) — every tool, its parameters and its price class
 - [AI usage and costs](./analytics/tracking/ai-usage.md) — where spend shows up in your analytics
 
 <!-- widget:cta -->
