@@ -31,6 +31,10 @@ Pages that already rank 5–20 are the cheapest traffic you will ever buy. This 
 - Settings ▸ SEO & GEO keeps its three cards but no longer asks you to turn anything on: each states what its surface actually emits, and the two questions worth asking about it are now one click away — whether that markup is really reaching your live pages, and what to change in the pages so it earns a citation. `GEO`
 - Search rankings opens straight onto your Google positions instead of first asking you to switch SEO on, so the readout that tells you whether the docs are being found is not itself gated behind the thing it measures. `SEO`
 
+### Improved
+
+- An agent improving a project too new to have its own traffic now works from what people actually search for, what assistants already answer about it and what its competitors document, instead of standing down until the site's analytics have a sample — so a new docs site is worked on from its first day instead of waiting out its first month. `MCP`
+
 ### Removed
 
 - The `update_seo`, `update_geo` and `update_aeo` tools are gone: with all three surfaces permanently on there is nothing for them to change, and an agent told "enabled" by a tool that did nothing would keep reporting work it never did. `MCP`

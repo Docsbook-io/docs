@@ -59,6 +59,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 - Opening a line on the Overview brief card — a question, a hypothesis, a fact, a goal or a reminder — now shows what it SAYS, wrapped and in full, instead of dropping you into a form where a three-sentence goal arrives as one clipped line you scroll sideways with the caret. Editing is a click in that view's footer, so reading what an agent has been told no longer costs a trip through the editor. `Overview`
 - An open question can be answered in that same view, under the question itself, so the hand-holding an unattended run is blocked on costs a minute of your time rather than a trip through the editor. `Overview`
+- An agent improving a project too new to have its own traffic now works from what people actually search for, what assistants already answer about it and what its competitors document, instead of standing down until the site's analytics have a sample — so a new docs site is worked on from its first day instead of waiting out its first month. `MCP`
+- The write tools now state their own length limits up front, so an unattended run stops spending model calls on refusals it had no way to predict and rewriting the same line twice. `MCP`
 
 ### Fixed
 

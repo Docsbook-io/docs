@@ -30,6 +30,11 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 
 - `list_audits`, `add_audit`, `edit_audit`, `add_audit_finding` and `edit_audit_finding` are now `list_opportunities`, `add_direction`, `edit_direction`, `add_opportunity` and `edit_opportunity` — the old names still work. An assistant writing a technical sentence into a field the owner reads is now refused rather than let through. `MCP`
 
+### Improved
+
+- An agent improving a project too new to have its own traffic now works from what people actually search for, what assistants already answer about it and what its competitors document, instead of standing down until the site's analytics have a sample — so a new docs site is worked on from its first day instead of waiting out its first month. `MCP`
+- The write tools now state their own length limits up front, so an unattended run stops spending model calls on refusals it had no way to predict and rewriting the same line twice. `MCP`
+
 ### Fixed
 
 - `search_prior_work` answers again: GitHub's search API started rejecting queries that name neither issues nor pull requests, so every default call failed and told the caller to rephrase, which could never help. An assistant asking "have we already tried this" was getting nothing back and proposing work already done. `MCP`
