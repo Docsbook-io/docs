@@ -49,6 +49,53 @@ This is the only reading in the catalogue that spans both vocabularies, and mixi
 
 **The access and machine-surface halves are `measured` and belong beside the traffic findings. The citation half is `hypothesis` and must never be reported at the same weight.** A spot-check that found you cited once does not license "we are cited".
 
+## Where does a citation actually come from? The reported funnel
+
+Everything in this section is `hypothesis`, and it is grouped here rather than scattered through the audit so that it cannot be mistaken for a fetch. It comes from two recorded practitioner talks of 14 September 2026 — a [GEO/AEO teardown](../evidence/sources.md#how-ai-search-actually-works--a-geoaeo-teardown) and a [GEO overview](../evidence/sources.md#geo-overview--three-mechanisms-and-an-audit-checklist), both private working notes recorded by title and date rather than by link. It is here because it explains the **mechanism** the rest of this audit checks against, and a mechanism you can explain is worth more than a figure you cannot defend. None of its percentages goes into a proposal.
+
+The funnel, as the teardown describes it: **a prompt is fanned out into sub-queries, a web search returns on the order of sixty URLs, candidates are selected from those, and a far smaller set is cited.** Two consequences follow, and they are the part worth carrying:
+
+- **The work happens on the search layer, not on the model.** Retrieval is the step a documentation team can affect this quarter. The model's own memory of you moves on the timescale of being talked about for years, which is a reputation problem rather than a documentation one.
+- **This manages probabilities, not positions.** The same question, asked by two people in two regions on two days, returns different sources. That is the mechanical reason nothing in [section 7](#7-presence-measurement-honestly) may be trended, and why "we are cited" is not a state a site can be in.
+
+### Three ways an engine can produce an answer about you
+
+The second talk separates them, and they respond to different work on different timescales ([three mechanisms](../evidence/claims.md#there-are-three-ways-an-engine-can-produce-an-answer-about-you)):
+
+| Mechanism | What moves it | What this audit can see |
+|---|---|---|
+| Real-time retrieval over the top of the index | Being indexed, ranked and liftable now | Everything in sections 1 to 6 |
+| The AI layer inside the search engine itself | The same, plus the format that currently ranks for the query | Sections 1 to 6, and [Search intent](./search-intent.md) for the format |
+| The model's own memory of having seen you mentioned | Years of being written about elsewhere | Nothing. Say so rather than proposing work against it |
+
+This is why "why does an assistant say that about us" has no single answer, and why a fix that works in one engine can do nothing in another. When a spot-check disagrees with itself across engines, the first hypothesis is that two different mechanisms produced the two answers.
+
+### Where do the sixty URLs come from?
+
+The teardown reports that ChatGPT draws roughly half its sources from Google and Bing and roughly a third from direct site search, with commercial queries leaning on Google ([borrowed index](../evidence/claims.md#being-visible-to-google-is-most-of-being-visible-to-chatgpt)). The percentages are one account's; the experiment behind them is worth more than they are — a section closed to everything except Google was reported to appear in ChatGPT exactly as it did in Google.
+
+Take the consequence and leave the numbers: for most documentation sites, AI visibility is mostly the same work as being indexed and ranked, not a separate programme with its own budget. Note also that it sits oddly beside OpenAI's own documentation of a dedicated search crawler ([OpenAI, crawlers and user agents](https://developers.openai.com/api/docs/bots)), which would not be needed if everything arrived through another engine's index. Both can be true at once and this audit cannot settle which is operating on your site — section 7 gives you the check that can.
+
+### Most cited URLs answer the neighbouring question, not yours
+
+Roughly **70% of the URLs cited in a generated answer are reported to come from the fan-out sub-topics rather than from the query that was asked.** This is the most actionable line in this section and it is one practitioner's measurement with no published method behind it ([the neighbouring question](../evidence/claims.md#most-citations-come-from-the-neighbouring-question-not-from-yours)). The worked example was "how to brew coffee", where what got cited was water chemistry, extraction and taster protocols — not the brewing guides.
+
+The mechanism underneath the number is published and is not in dispute: Google describes AI Mode as "breaking down your question into subtopics and issuing a multitude of queries simultaneously on your behalf" ([Google, AI in Search](https://blog.google/products/search/google-search-ai-mode-update/)). Quote that; quote the 70% as one account's figure or not at all.
+
+For this audit the consequence is narrow and immediate: **when a page you expected to be cited is not, check what answers the four questions around it before concluding the page is badly written.** It may be well written and simply not the page the fan asked for. The planning version of that consequence — which page is then worth writing — belongs to [the page set](../planning/page-set.md); the cluster version belongs to [Semantic SEO](./semantic-seo.md). Neither is decided here.
+
+### What is contested: position against trust signals
+
+The teardown's central claim is that ranking position accounts for roughly 80% of the citation outcome, with a cliff past position 10, and that schema, E-E-A-T, expertise signals and tables are secondary to textual relevance. A second field report and Google's own published guidance put trust signals inside the work of becoming citable. **The disagreement is recorded as a [contested claim](../evidence/claims.md#what-actually-drives-whether-you-are-cited) and is not resolved here** — including by this audit, which has an obvious interest in the answer.
+
+What it changes about running the pass is only this: do not let a citability finding on a page that does not rank read as the reason it is not cited. [Indexing](../../seo/indexing.md) and the ranking picture come first in the report for a reason that may be larger than this page has ever claimed.
+
+### Where is placing content elsewhere worth anything?
+
+An engine presents a product as the solution when the URLs it retrieved describe it as the solution; consensus across the cited sources is reported to matter more than the raw volume of mentions, and **links are not the mechanism** — the model will find your own site once your name is in what it read ([an assistant names you when the pages it cites name you](../evidence/claims.md#an-assistant-names-you-when-the-pages-it-cites-name-you)).
+
+The operational consequence is unusually sharp for a `hypothesis`: placing content is only worth doing on sites **already cited in the results for your target queries**. Everything else has no path into the answer. The list of such sites is an output of the ten-query audit in section 7, and it is usually shorter and duller than a media plan. Where no such site exists for your category, the reported move is to create one — a comparison, a ranking, a round-up — and get that ranking; that is a commissioning decision, and it leaves this audit for [the page set](../planning/page-set.md) and [External checks](../auditing/external-checks.md).
+
 ## 1. Access — can a fetcher get the bytes at all?
 
 Four failure modes, each with a different fix, and all four look identical from inside the repository: the Markdown is perfect.
@@ -68,6 +115,8 @@ One asymmetry is worth knowing before you promise an owner their content is wall
 **Auth and access control.** Any page behind a login is removed from retrieval entirely. That is a legitimate trade and [site capabilities](../automation/site-capabilities.md) states it; it is only a finding when the gating was not a decision.
 
 **Edge and CDN bot rules.** A `403` or a challenge page returned to a named assistant agent while a browser gets `200` is invisible in the repository and invisible in the platform. Compare a fetch with the assistant's user agent against a fetch with a browser's — same URL, same minute.
+
+**Whose fetch was it, really?** A user-agent string is self-declared and can say anything, so the name in the log is a claim rather than an identification. Practitioners recommend confirming the requester **by address as well as by name**, and the full availability check they describe is four readings taken together: the robots rules, the sitemap, the HTTP response served to each of several user agents, and the rendered page compared against its text-only version ([identify crawlers by address](../evidence/claims.md#identify-crawlers-by-address-not-by-the-name-they-give)). The recommendation is one practitioner's and graded `hypothesis`; what it produces is not — an address confirmed or not confirmed against a vendor's published ranges is `measured` like any other fetch, and the effort only earns its place once a finding depends on who the requester was. Without it, two failures look identical to a log: assistant traffic that was never an assistant, and an edge rule blocking the real agent while letting the impostor through.
 
 ### Severity
 
@@ -136,6 +185,8 @@ The question a reader asks an assistant is a full sentence with context in it; t
 
 One question also becomes many. Google describes its own AI Mode as using "query fan-out… breaking down your question into subtopics and issuing a multitude of queries simultaneously on your behalf" ([Google, AI in Search](https://blog.google/products/search/google-search-ai-mode-update/)), so the page that gets used is the one covering the whole fan rather than the one matching the typed words.
 
+That fan is also where most of the citations are reported to land rather than on the question itself, which turns this section from a phrasing audit into a coverage one: the [reported funnel](#most-cited-urls-answer-the-neighbouring-question-not-yours) above carries the figure and the warning attached to it. The practical addition to the audit below is one line — for each conversational form, write down the four or five sub-questions a reader must have answered to act on it, and mark which of them the corpus answers anywhere at all. Answering one of five is the usual starting score, and a form whose neighbours are all unanswered is a coverage finding for [the page set](../planning/page-set.md), not a rewrite for the page you were looking at.
+
 You have the real strings, and that is what keeps this section out of guesswork: the platform's own [assistant questions](../../mcp/analytics/get-ai-questions.md) are full sentences people wrote. Pull them, keep the verbatim wording, and audit in this order.
 
 1. Take the questions the assistant [could **not** answer](../../mcp/analytics/get-ai-unanswered.md), cluster them, and check the corpus for a passage that answers each one alone. A cluster with no such passage is either a content gap or a retrieval failure — [Behavioural detectors](../auditing/behaviour.md) already carries that split; use its table rather than reinventing it.
@@ -145,7 +196,7 @@ You have the real strings, and that is what keeps this section out of guesswork:
 
 ## 6. Freshness and version collision
 
-Models cite what they can date. An undated page stating the correct answer loses to a dated competitor page stating the same thing, because one of them carries a reason to be trusted this year.
+Whether a visible date makes an assistant more likely to cite you is **not established**, and this handbook does not claim it. What this reading looks for is narrower and entirely measurable: whether your corpus can be dated at all, and whether it dates the same fact two different ways.
 
 - **Undated important pages** — no visible update date, no version reference, no release anchor. This is `measured` by reading the rendered page, not the file modification time.
 - **Version collision inside your own corpus** — two of your pages stating different values for the same limit, version or default. Grep the corpus for each key number and compare. The model picks one and you cannot know which; this is strictly worse than one page being wrong, because a single wrong page can be corrected against.
@@ -153,7 +204,7 @@ Models cite what they can date. An undated page stating the correct answer loses
 
 Outward verification of prices and third-party facts belongs to [external checks](../auditing/external-checks.md). This section is confined to what your own corpus says about itself, and to whether a date is legible at all.
 
-Whether a visible date raises how often an assistant cites you is not established, and Docsbook does not claim it. [GEO](../../geo/README.md) sets out what is verifiable here and treats the date as hygiene rather than a lever.
+[GEO](../../geo/README.md) sets out what is verifiable here and treats the date as hygiene rather than a lever. A version collision is a defect on its own terms — two of your own pages disagreeing about a limit is wrong whoever reads it — so this reading earns its place without needing the citation argument at all.
 
 ## 7. Presence measurement, honestly
 
@@ -167,21 +218,32 @@ If the platform reports bot traffic without breaking it down by agent, you have 
 
 The one honest proxy for the reader in the title of this page is **fetches by assistant agents per human visit, per page**. A short factual page — a limit, a default, a port number — with heavy assistant fetches and few human visits is the profile of content being consumed upstream. Report it as that ratio, with both raw counts, and call it a profile. It is not a citation count, it is not a lost-visits number, and converting it into either is fabrication.
 
+**That proxy has a hole, and the hole is worth stating in the report.** If the [borrowed-index path](#where-do-the-sixty-urls-come-from) is what is happening to your site, you can be cited with no assistant crawler ever fetching the page — the sources arrived through another engine's index. So a low fetch ratio is not evidence of not being cited, only evidence of not being fetched by an agent that names itself. Read the ratio against your ordinary search impressions rather than alone: assistant agents absent from the logs while the spot-check below still finds you cited is the signature of that path, and it is one of the few things a documentation team can actually observe about which mechanism is operating on them.
+
 ### The hypothesis layer
 
 Whether an assistant cites you. The procedure:
 
-1. Write 5–10 questions from the real strings above, verbatim. Never questions written to be flattering.
+1. Write about ten questions, verbatim, from the real strings above. Where the site has no assistant history, the practitioner method is to take **ten real queries from Search Console** — or the equivalent [search-rankings report](../../mcp/analytics/get-search-rankings.md) — and ask each one in plain conversational language, as a person would type it into an assistant rather than into a search box. Real queries, never questions written to be flattering: a question phrased to be answered by your own page measures your phrasing, not your visibility.
 2. Name the engine and the date. Run each question. Record the sources returned, verbatim, with URLs.
 3. Report as a fraction of named runs on a named engine on a named date — "3 of 8 runs on engine E on 14 May cited our page" — never as a percentage of anything, never averaged across engines.
 4. Attach this caveat to every such line, in the report, not in a footnote: *"Assistant answers are not reproducible run to run and engines do not agree with each other. This is an observation on one engine on one date, not a rate; it cannot be trended, and a change in it cannot be attributed to a change we made."* [Writing for retrieval](../writing/retrieval.md) and [GEO](../../geo/README.md) carry the measured instability behind that sentence; cite them rather than restating their figures.
 5. If you cannot run repetitions, you have an anecdote. Say "anecdote", record it, and rank it below every `measured` line in the report.
+6. Keep the **sources** column as a deliverable in its own right, not as supporting detail for step 3 — see below.
+
+### The sources column is the second output, and often the better one
+
+Whether you were named is one line of the table. The list of URLs the engines kept citing is the other, and it survives longer: it is the set of pages that are currently the de facto answer for your own queries, and the same audit produces it at no extra cost ([an assistant names you when the pages it cites name you](../evidence/claims.md#an-assistant-names-you-when-the-pages-it-cites-name-you)).
+
+Two things fall out of it. The sites that recur are the only places where [placing content](#where-is-placing-content-elsewhere-worth-anything) has a reported path into an answer. And each cited page is an external claim about you or your category that somebody else is making, which is an [external check](../auditing/external-checks.md) rather than anything this pass settles — hand it over with the query, the engine and the date attached, and do not grade another company's page here.
+
+Record, per query: the engine, the date, who was named instead of you, every source URL cited, and which brands those articles name. Nothing in that table is a rate, and none of it may be averaged.
 
 ### Grade what was said, not whether you were named
 
 Presence is a rate; wording is a finding you can act on. Assistants mostly paraphrase your own site, including the parts that are out of date. Measured live across Perplexity, GPT and Gemini with web search on a real audit, the brand's site was found in 9 of 9 answers — a perfect presence score — and those same answers repeated "the API is coming soon" in 5 of 9 and "no pricing published" in 3 of 3, while the API was live with 96 operations and a price sat on the landing page (Docsbook, GEO audit of a real product, 3 September 2026).
 
-So grade the answers by **content**: accurate, outdated, partly wrong, absent — plus the page each should have come from. The outdated bucket is usually a sentence still sitting on your own site, and deleting it is free.
+So grade the answers by **content**: accurate, outdated, partly wrong, absent — plus the page each should have come from ([measure what was said](../evidence/claims.md#measure-what-was-said-not-whether-you-were-named)). The outdated bucket is usually a sentence still sitting on your own site, and deleting it is free.
 
 ### What the one study actually found
 
@@ -212,6 +274,7 @@ Name the owner of every item: page rewrites and atom insertion to [Writing for r
 ## Traps
 
 - **Never report a citation rate.** No percentage, no share of voice, no month-on-month trend of AI citations. There is no instrument in this handbook that produces one, and inventing it is the single most damaging output this reading can generate.
+- **Never quote a reported percentage as a forecast.** The 70% fan-out share, the 80% position share and the split of where ChatGPT's sources come from are all one practitioner's unpublished measurements, however precisely they are stated. Quote the mechanism, link the [claim](../evidence/claims.md#most-citations-come-from-the-neighbouring-question-not-from-yours) for its standing, and let the owner's own before-and-after produce the only number that goes in a report.
 - **Never present a spot-check as a measurement.** It is one engine, one date, one sample, and it carries its caveat sentence in the report body every time it appears.
 - **Never claim a crawler was blocked from memory of an agent name.** Read the vendor's published list in this run and quote the `robots.txt` line verbatim. A misremembered agent name produces a confident finding about a block that does not exist.
 - **Never convert crawler fetches into lost visits, deflected tickets or money.** The ratio above is a profile, not an attribution, and [business translation](../auditing/business-translation.md) already refuses this class of conversion on the owner's behalf.
@@ -234,12 +297,14 @@ Name the owner of every item: page rewrites and atom insertion to [Writing for r
 - Conversational question forms come from real assistant questions where the platform has them; where this pass wrote them, they are labelled `inferred` and carry no volumes.
 - Version collisions are reported only within your own corpus; outward verification was handed to [external checks](../auditing/external-checks.md).
 - Measured presence and spot-check presence appear in separate blocks, are never summed, and the spot-check caveat sentence appears with every spot-check line.
+- Where a spot-check was run, the sources column was collected as its own deliverable and handed to [external checks](../auditing/external-checks.md), rather than being left as supporting detail for whether you were named.
 - No citation rate, share or trend appears anywhere in the output.
 - Every finding names its owner, and the queue is cut to five with the remainder as one counted line.
 
 ## Related
 
 - [Writing for retrieval](../writing/retrieval.md) — the rules this reading only ever detects the absence of.
+- [Claims](../evidence/claims.md) and [Sources](../evidence/sources.md) — the standing of every reported figure on this page, the test attached to each, and the talks the funnel section comes from.
 - [Choosing a lens](../auditing/choosing-a-lens.md) — when this pass is the right one to run.
 - [E-E-A-T and trust](./eeat-trust.md) — the other half of why an engine prefers one source over another.
 - [GEO](../../geo/README.md), [llms.txt](../../geo/llms-txt.md), [Citation signals](../../geo/citation-signals.md) — what Docsbook already emits, and what the evidence for each is worth.

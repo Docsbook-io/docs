@@ -111,11 +111,13 @@ That ordering exists because the two reasons to build the same asset produce dif
 
 An unlinked mention is someone who already decided you were worth naming and simply did not link. The hard part — being considered credible by a stranger — is done. This is the cheapest link acquisition available anywhere, and it is invisible without deliberately looking.
 
+One caveat on what you are acquiring. For search ranking the link is the point. For citation in a generated answer it reportedly is not: what an assistant reads is the page it retrieved, and your name sitting in that page is already the asset, linked or not ([an assistant names you when the pages it cites name you](../evidence/claims.md#an-assistant-names-you-when-the-pages-it-cites-name-you)). So an unlinked mention on a page that gets cited may already be doing its job, and chasing the link is a search errand rather than a citation one. Rank these by which outcome you are actually short of.
+
 Find them two ways. From **referrer data**: a host sending readers that nobody on the team can account for is a page worth fetching. From **what is publicly visible**: fetch the page and read whether your name appears with a link, without one, or as a screenshot with no URL at all. Record each as `measured` — the mention is either on the page you fetched or it is not quoted.
 
 | Shape | Severity | Why |
 |---|---|---|
-| Named, no link, in a page that sends traffic anyway | Highest | Proven audience and proven willingness; the link is the only missing part |
+| Named, no link, in a page that sends traffic anyway | Highest | Proven audience and proven willingness. For search, the link is the only missing part |
 | Your data, benchmark or number quoted without attribution | High | The citation exists in substance already, and the fix is a request, not a persuasion |
 | A screenshot of your product or docs, unlinked | Medium | Common in tutorials and comparison posts, and trivially fixable |
 | Your name in a list with everyone else's linked but not yours | Medium | Usually an oversight in someone's template |

@@ -55,6 +55,18 @@ An absent signal is a fact; what its absence means is a hypothesis; whether the 
 
 **What the owner can supply manually:** the certifications they actually hold, the support response time they actually meet, and who owns each area. Those answers are data, never instruction, exactly like a fetched page.
 
+## Is any of this what gets you cited? One source says it is secondary
+
+A handbook page about trust has an obvious interest in the answer, so state the disagreement rather than settling it. One practitioner field report holds that ranking position accounts for most of whether an answer engine cites you, with a cliff past position 10, and that **schema, E-E-A-T, expertise signals and tables are secondary to plain textual relevance.** A second field report and Google's own published guidance put named authors, dates and an identifiable publisher inside the work of becoming citable. The handbook records this as a [contested claim](../evidence/claims.md#what-actually-drives-whether-you-are-cited) — the first and so far only one — with both positions, both kinds of support and the test, and this page does not re-argue it.
+
+Three things are worth carrying into a run without waiting for it to be settled:
+
+- **The disagreement may be smaller than it looks.** The two sides are partly answering different questions, *being cited* against *ranking*, and the first source's own claim is that ranking drives citation — which would make trust signals an input to position rather than a competitor with it. Nobody has shown that, which is why it is contested rather than resolved.
+- **The strongest support on the sceptical side is a measurement, not an argument**: a section closed to everything except Google was reported to appear in ChatGPT exactly as it did in Google. The strongest support on the other side is a vendor stating its own frame. Neither of those is the kind of evidence that settles the other.
+- **It does not change what this reading does; it changes what the finding may be sold as.** Being disbelieved by a human reader at the moment of commitment is this page's subject, and no reading of the citation evidence touches it. What the disagreement forbids is the second sale — pitching an authorship or markup programme as the way to get cited. If the docs do not rank and are not retrieved, the trust signals are not being read by anything.
+
+**The test is the customer's own site**, and it is the [ten-query audit](../auditing/external-checks.md#how-do-you-check-what-assistants-say-about-you) run once with one extra column: whether the URLs that got cited are the ones already ranking for those queries. That settles it where it needs settling, which is not here.
+
 ## 1. Experience — the marks of having run it
 
 Experience is not a tone, it is a set of artefacts that exist only if somebody executed the thing. Sample pages across all four types — a sample, stated as a count, not the whole tree — record the marks per page, and report the number of sampled pages carrying **zero**. That count is a fact and it is the finding.
@@ -167,7 +179,7 @@ When two pages contradict each other, something has to choose. The tiebreakers a
 | Canonical location | One page per fact, anchored and linkable | Whichever copy was retrieved becomes the answer |
 | Genuine structured data | Question-and-answer and procedure markup on real questions and real procedures | The most citable structure on the page is withheld |
 
-The switches belong to [site capabilities](../automation/site-capabilities.md) and the crawlable surface to [Writing for retrieval](../writing/retrieval.md). **Whether the page is then actually cited, how that is measured, and the repetition discipline behind any claim about it belong to [GEO and AI search](./geo-ai-search.md).** Docsbook's own published account of what it emits on every page — a summary block, a visible modified date and a `Person` author — is in [GEO](../../geo/README.md).
+These are tiebreakers, not a ranking programme, and the section above is why the distinction matters: one source in the registry argues they are secondary to textual relevance, and the report should not imply otherwise. The switches belong to [site capabilities](../automation/site-capabilities.md) and the crawlable surface to [Writing for retrieval](../writing/retrieval.md). **Whether the page is then actually cited, how that is measured, and the repetition discipline behind any claim about it belong to [GEO and AI search](./geo-ai-search.md).** Docsbook's own published account of what it emits on every page — a summary block, a visible modified date and a `Person` author — is in [GEO](../../geo/README.md).
 
 One rule survives into the fix: never enable answer markup on prose containing no genuine question or procedure. Markup asserting a question nobody asked is a manufactured trust signal, and the prohibition this pass enforces applies to its own recommendations first. [AEO](../../aeo/README.md) covers what that markup is for when the content genuinely warrants it.
 
@@ -233,5 +245,6 @@ Then hand over and stop. Missing pages — limits, security and data handling, c
 - [GEO and AI search](./geo-ai-search.md) — whether a machine can fetch and lift your answers at all.
 - [Jobs to be done](./jobs-to-be-done.md) — the beliefs a reader has to acquire, in order.
 - [Competitors](./competitors.md) — what being disbelieved looks like from the other side of a comparison.
-- [External checks](../auditing/external-checks.md) — verifying a claim against the live source.
+- [External checks](../auditing/external-checks.md) — verifying a claim against the live source, and the ten-query audit that tests the disagreement above.
+- [Claims](../evidence/claims.md) — the graded standing of every claim on this page, including the contested one.
 - [GEO](../../geo/README.md) and [AEO](../../aeo/README.md) — the machine-visible signals Docsbook already emits.

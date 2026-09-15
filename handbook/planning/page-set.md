@@ -52,6 +52,19 @@ An educational cluster is worth more than its page count suggests because an eng
 
 If comparison or migration pages are chosen, confirm the competitor list — auto-detected from the source, with the reader free to add or remove names. **Never fabricate a competitor or a glossary term**: no evidence means skip the section and record the reason. Enrichment failing never blocks the publish; the core documentation still ships.
 
+## Which page is worth writing most? Often not the one about your topic
+
+The fan-out above has a planning consequence that is easy to miss, because it inverts the obvious order of work. If an engine answers one question by issuing many, then the URLs it cites are mostly answering the neighbouring questions rather than the one asked — roughly 70% of them, on one practitioner's account, with no published method behind the figure ([the neighbouring question](../evidence/claims.md#most-citations-come-from-the-neighbouring-question-not-from-yours)). The worked example was "how to brew coffee", where what got cited was water chemistry, extraction and taster protocols rather than any brewing guide.
+
+**If that holds even roughly, the highest-value page in a plan is frequently not the page about your topic. It is the page about the thing a reader has to understand first.** The concept page that explains the model your product assumes, the page naming the constraint that makes the feature necessary, the comparison a reader needs before your feature means anything — these are the pages nobody writes, because they are not about the product and they do not look like documentation of it.
+
+Two moves put it into a page set without waiting for the figure to be settled:
+
+- **Write down the four or five sub-questions a reader must have answered to act on each page you planned, and mark which of them anything in the plan answers.** Answering one of five is the usual starting score. A sub-question nothing answers is a candidate row, and it is better evidenced than most rows on the list because your own plan implied it.
+- **Prefer the prerequisite over another page on the same subject.** Where the choice is between a fifth feature page and the concept page the other four assume, the concept page covers more of the fan. This is the same argument the educational cluster is worth its page count for, and the corpus-level version of it — pillar and cluster completeness — is [Semantic SEO](../lenses/semantic-seo.md).
+
+The figure is one account and must not be quoted to anybody as a forecast; the mechanism under it is Google's own published description of AI Mode. Plan against the mechanism.
+
 ## What must each kind of page be?
 
 Four of these map onto the four needs Diátaxis names — "tutorials (learning), how-to guides (a task), reference (information), explanation (understanding)" ([Diátaxis](https://diataxis.fr/)) — and the reason to keep them apart is that a page mixing two of them serves neither. The full rulebook is in [writing rules](../writing/writing-rules.md); this is the shape each section commits to.
@@ -101,3 +114,4 @@ What remains true is the part that was always doing the work: the switch and the
 - [Know the reader before you write the page](./know-the-reader.md) — the audit that tells you which of these pages the product actually needs.
 - [Writing rules](../writing/writing-rules.md) — the per-page rulebook this plan hands over to.
 - [Publishing what you wrote](./publishing.md) — turning the folder tree into navigation on a live site.
+- [Claims](../evidence/claims.md) — the standing of the fan-out figure above, and the test that settles it for one site.

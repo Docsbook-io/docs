@@ -1,6 +1,6 @@
 ---
 title: "External checks: the claims in your docs that rot without a commit"
-description: "Verify prices against the live pricing page, third-party facts against their sources, and coverage against one named competitor — wrong versus unverifiable."
+description: "Verify prices against the live pricing page, third-party facts against their sources, what AI assistants say about you, and coverage against one named competitor."
 tldr: "Documentation about your own product goes stale when you change something and you usually know. Documentation about the outside world goes stale when somebody else changes something and nobody tells you. Every verdict here rests on a page fetched in this run, with its URL and the date, and 'could not verify' is a real verdict that must never be blended into 'wrong'."
 ---
 
@@ -73,6 +73,22 @@ If external pages cannot be fetched at all, **say so in the first line and stop*
 
 Quote other companies sparingly and attribute always: a short line with a URL is evidence; reproducing their page is copying. And do not rewrite claims about other companies — propose the corrected sentence and let a human decide what to assert about a partner or a rival.
 
+## How do you check what assistants say about you?
+
+Everything above verifies a sentence in your documentation against somebody else's page. This check runs in the other direction: it reads what the outside world is currently saying about you, and it produces a list of the pages saying it. The method is one practitioners describe, it costs an afternoon, and it needs no product you do not already have ([the audit checklist](../evidence/sources.md#geo-overview--three-mechanisms-and-an-audit-checklist)).
+
+1. **Take ten real queries** — from Search Console, or from the [search-rankings report](../../mcp/analytics/get-search-rankings.md). Real ones, the queries the site is already shown for. A question written to be answered by your own page measures your phrasing and nothing else.
+2. **Ask each in plain conversational language**, in several assistants. Not the three-word query: the full sentence with the condition in it, as a person actually types it.
+3. **Record the answer verbatim**, with the engine and the date beside it. Paraphrasing an assistant's answer destroys the only evidence the exercise produces.
+4. **Grade each answer by content** — accurate, outdated, partly wrong, absent — and name the page it should have come from. The outdated bucket is usually a sentence still sitting on your own site, which makes it the cheapest finding in this whole page.
+5. **Collect the sources column**, which is the part most people skip and the part this check exists for: every URL cited, who was named instead of you, and which brands those articles name.
+
+**The sources column is the deliverable.** It is the set of pages that currently function as the answer for your own queries, and every one of them is an external claim about you or your category that somebody else is making — exactly the kind of claim the verdicts above were written for. Run them: **holds**, **contradicted**, **gone**, **moved**, **unverifiable**. A comparison article giving your old price, a round-up listing a plan you no longer sell, a tutorial built on a removed endpoint — each is a stale external claim with your name on it, and none of them will ever produce a ticket.
+
+The recurring sites in that column are also the only placement list with a reported path into an answer: an assistant presents a product as the solution when the URLs it retrieved describe it as the solution, and **links are not the mechanism** — the model finds your own site once your name is in what it read ([an assistant names you when the pages it cites name you](../evidence/claims.md#an-assistant-names-you-when-the-pages-it-cites-name-you)). That is a `hypothesis` from one practitioner account, so treat the list as a shortlist to investigate rather than a media plan to fund. It is normally shorter and duller than one.
+
+Two boundaries, because this check sits on a seam. **How far the answers themselves may be reported** — never as a rate, never averaged across engines, always with the engine and the date attached — belongs to [AI search and citability](../lenses/geo-ai-search.md), which owns presence measurement and the caveat sentence that goes with every line of it. And the same audit answers the [contested question](../evidence/claims.md#what-actually-drives-whether-you-are-cited) of what drives citation at all, for your site only, if you add one column: were the cited URLs the ones already ranking for those queries?
+
 ## How do you compare coverage against a named competitor?
 
 A competitor's documentation is the most honest artefact they publish. Marketing says what they wish were true; documentation says what the product does and which questions their customers actually ask. Reading it is not espionage — it is the same page their prospects and yours read before deciding.
@@ -100,4 +116,6 @@ Two rules about when to run it at all. Do not run it as your first content exerc
 - [Reader behaviour](./behaviour.md) — where the demand evidence for a coverage gap comes from
 - [Drift](../automation/drift.md) — catching your own product's claims going stale, automatically
 - [Monitoring](../automation/monitoring.md) — turning a check you keep re-running into one that runs itself
+- [AI search and citability](../lenses/geo-ai-search.md) — how far a spot-check of assistant answers may be reported
+- [Claims](../evidence/claims.md) — the standing of each claim behind the assistant audit, and the test attached to it
 - [Sources](../planning/sources.md) — choosing what a page rests on in the first place
