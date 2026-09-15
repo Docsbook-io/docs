@@ -1,7 +1,7 @@
 ---
 title: "Sources: the references behind the documentation handbook"
-description: "Every reference this handbook cites — vendor documentation, one peer-reviewed study, the llms.txt specification, Diátaxis, three practitioner field reports and four of our own measurements — with what each one actually says and when we last read it."
-tldr: "Twenty references, each with the line we quote from it verbatim and the date we last opened it. Vendor documentation and the KDD 2024 GEO study can settle a claim on their own; practitioner field reports never can, and are recorded here so a hypothesis has a traceable origin instead of being something somebody once said."
+description: "Every reference this handbook cites — vendor documentation, one peer-reviewed study, the llms.txt specification, Diátaxis, five practitioner field reports and four of our own measurements — with what each one actually says and when we last read it."
+tldr: "Twenty-two references, each with the line we quote from it verbatim and the date we last opened it. Vendor documentation and the KDD 2024 GEO study can settle a claim on their own; practitioner field reports never can, and are recorded here so a hypothesis has a traceable origin instead of being something somebody once said."
 ---
 
 # Sources
@@ -108,15 +108,59 @@ A framework is not evidence that something works. It is evidence that it has a d
 
 ## The field, as practitioners report it
 
-Three practitioner accounts, recorded September 2026. They are the origin of several of the sharpest working hypotheses in this handbook, and **none of them can settle a claim on its own.** They are private working notes rather than published write-ups, so they are recorded here by title, author and date rather than by link — an unverifiable citation is provenance, not proof, and that is exactly why the claims resting on them are graded `hypothesis`.
+Five recorded practitioner talks, September 2026. They are the origin of several of the sharpest working hypotheses in this handbook, and **none of them can settle a claim on its own.** They are private working notes rather than published write-ups, so they are recorded here by title, speaker and date rather than by link — an unverifiable citation is provenance, not proof, and that is exactly why the claims resting on them are graded `hypothesis` or `contested`.
 
-| Report | Recorded | What it contributes |
-|---|---|---|
-| Generative Engine Optimization overview — query fan-out, the three answer mechanisms, and a brand-presence audit checklist | 14 September 2026 | A query is split into a fan of sub-queries and the page has to close the whole fan at once; engines lift a paragraph, a table or a list rather than a page. Three mechanisms produce an answer: real-time retrieval over the index, the AI layer in the search engine, and the model's own memory of being mentioned. Audit method: take ten real queries from Search Console, ask them conversationally in several assistants, and record who was named instead of you and which sources were cited. |
-| How search changed in 2026 and how to rebuild SEO for AI answers — Oleg Shestakov, Rush Agency | 14 September 2026 | From agency practice: sites cited in Google's AI answers see about 35% more click-throughs; after the March 2026 update 24% of top-10 pages fell out of the top 100, mostly compilations and AI text with no named expert; thematic clusters gave +46% traffic over six months and 3.2× more mentions in AI answers; a page slower than 3 seconds loses 23% of its traffic. A page's format has to match the format currently ranking for the query, and the first two paragraphs have to answer with facts and figures or nothing is quoted. |
-| What the May 2026 core update and AI Mode changed, and what to do during a rollout — Oleg Shestakov | 14 September 2026 | Informational pages, affiliate round-ups, bulk AI content and simple calculators are the ones being replaced by the answer itself; brands, real expertise and pages that close a commercial intent hold. During a rollout: do not rewrite the site, do not bulk-delete pages, do not buy links. Diagnose by separating impressions, positions and CTR before and after the date. |
+Where two of them disagree, the disagreement is recorded as a [contested claim](./claims.md#what-actually-drives-whether-you-are-cited) rather than resolved by picking the more recent speaker.
 
-Every number in that table is reported, not verified. The mechanisms behind them are well supported and safe to explain; the figures are not safe to put in a proposal. Each claim that rests on one of these says so and gives you a test to run instead.
+### How AI search actually works — a GEO/AEO teardown
+
+Practitioner talk · recorded 14 September 2026 · the most contrarian source in the registry
+
+The funnel, as this source describes it: a prompt is fanned out into sub-queries, a web search returns on the order of sixty URLs, candidates are selected, and a much smaller set is cited. GEO therefore manages **probabilities, not positions** — answers differ by user, region, model and day — and the work happens on the search layer rather than on the model's weights, which move only on a slow reputation timescale.
+
+Its central and most disputed figure:
+
+> SERP position accounts for roughly 80% of the citation outcome, and past position 10 there is a cliff. Schemas, E-E-A-T, expertise signals and tables are secondary; textual relevance matters more.
+
+Attributed to the speaker's own research and an independent study by Georgy Shilov, neither published. Three further claims from it, each carried into this handbook:
+
+- Roughly **70% of cited URLs come from fan-out sub-topics, not from the main query**. Worked example, "how to brew coffee": what got cited was water chemistry, extraction and taster protocols — not the brewing guides.
+- ChatGPT draws roughly 50% from Google and Bing and roughly 30% from direct site search; for commercial queries it is Google. Supported by an experiment worth more than the percentages: **a section closed to everything except Google was indexed in ChatGPT exactly as it was in Google.**
+- An assistant names a brand as the solution when **the cited URLs describe it as the solution**. Consensus across sources beats volume of mentions, and links are not the mechanism — the model will find the brand's own site.
+
+### SEO fundamentals in 2026, in six blocks
+
+Igor Burdukov · recorded 14 September 2026
+
+Demand and the semantic core (one query, one intent, one page) · structure derived from demand · technical health · content of substance, with models used as a skeleton rather than a keyword generator · trust and commercial signals · the link profile, where a spike is more often a competitor's spam than a win.
+
+Its most useful contribution is the negative one — **when search is the wrong instrument at all**: no demand, heavy seasonality, impulse purchases, or no resource for a twelve-month horizon.
+
+### How search changed in 2026, and how to rebuild for AI answers
+
+Oleg Shestakov, Rush Agency · recorded 14 September 2026
+
+Reported from agency practice: sites cited in Google's AI answers see about 35% more click-throughs (attributed to Stackmatics); after the March 2026 update 24% of top-10 pages fell out of the top 100, mostly compilations and AI text with no named expert; thematic clusters gave +46% traffic over six months and 3.2× more mentions in AI answers; a page slower than three seconds loses 23% of its traffic. A page's format has to match the format currently ranking for the query, and the first two paragraphs have to answer with facts and figures or nothing is quoted.
+
+Its worked example is the clearest illustration of the format rule in the registry: GetAccept out-ranked DocuSign for "Electronic Signature Software" with a comparative review rather than a product page.
+
+### What the May 2026 core update changed, and what to do during a rollout
+
+Oleg Shestakov · recorded 14 September 2026
+
+Informational pages, affiliate round-ups, bulk AI content and simple calculators are the ones being replaced by the answer itself; brands, real expertise and pages that close a commercial intent hold. During a rollout: do not rewrite the site, do not bulk-delete pages, do not buy links. Diagnose by separating impressions, positions and click-through rate before and after the date, then move informational pages toward action and rewrite the first two paragraphs of the key pages so they are a fragment an engine can lift.
+
+### GEO overview — three mechanisms and an audit checklist
+
+Practitioner talk · recorded 14 September 2026
+
+GEO does not replace search optimisation, it sits on top of it. Queries have become conversational sentences with conditions, and what gets cited is the page with the direct answer in the first paragraph. The model takes a specific paragraph, table or list, never the whole page.
+
+**Three mechanisms produce an answer:** real-time retrieval over the top of the index, the AI layer inside the search engine, and the model's own memory of having seen the brand mentioned. The third is why the target is not the top three but *being among the model's sources* — reviews, industry media, forums, encyclopaedias, and mentions that carry no link at all.
+
+Its audit checklist is the method this handbook recommends for measuring citation: take ten real queries from Search Console, ask them in plain conversational language in several assistants, and record who was named instead of you, which sources were cited, and what those articles say about competitors.
+
+Every number in this section is reported, not verified. The mechanisms behind them are well supported and safe to explain; the figures are not safe to put in a proposal. Each claim that rests on one of them says so and gives you a test to run instead.
 
 ## What we measured ourselves
 

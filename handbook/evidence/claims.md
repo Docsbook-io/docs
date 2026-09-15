@@ -1,7 +1,7 @@
 ---
 title: "Claims: what is established about documentation, what is contested, and what is just repeated"
-description: "Twenty-four graded claims about AI search, trust, page shape, speed and reading a traffic drop — each with its mechanism, its sources, a test you can run on your own site, and what being wrong about it costs."
-tldr: "Each claim carries a standing. Established means you may state it to a customer with the source after it. Hypothesis means quote the mechanism and never the number — run the test on the customer's own site instead. The three claims most likely to save a wasted quarter are that no markup makes a page eligible for AI Overviews, that FAQ markup buys nothing since May 2026, and that blocking AI training is a different robots line from blocking AI search."
+description: "Thirty-two graded claims about AI search, citation, trust, page shape, speed and reading a traffic drop — each with its mechanism, its sources, a test you can run on your own site, and what being wrong about it costs."
+tldr: "Each claim carries a standing. Established means you may state it to a customer with the source after it. Contested means the evidence points both ways and the disagreement is the finding. Hypothesis means quote the mechanism and never the number — run the test on the customer's own site instead."
 ---
 
 # Claims
@@ -131,6 +131,91 @@ Measure what the engines say, verbatim and dated, not whether your brand appeare
 **Test it** Ten real queries from Search Console, asked conversationally, answers pasted in verbatim with engine and date, each graded accurate / outdated / partly wrong / absent, plus the page it should have come from.
 
 **Cost of being wrong** A citation-rate dashboard that goes up while the thing being cited is wrong.
+
+### What actually drives whether you are cited
+
+**Contested** · [GEO/AEO teardown](./sources.md#how-ai-search-actually-works--a-geoaeo-teardown), [Shestakov on search in 2026](./sources.md#how-search-changed-in-2026-and-how-to-rebuild-for-ai-answers), [Google — helpful, reliable, people-first content](./sources.md#creating-helpful-reliable-people-first-content)
+
+Two practitioner sources and one vendor document disagree about what most determines whether an engine cites you, and the disagreement is worth more than either answer.
+
+| Position | Held by | Support |
+|---|---|---|
+| **Ranking position is roughly 80% of it.** Schema, E-E-A-T, expertise signals and tables are secondary; textual relevance dominates. Past position 10 there is a cliff. | The GEO/AEO teardown | The speaker's own unpublished research, an unpublished independent study, and one measured experiment: a section closed to everything except Google appeared in ChatGPT exactly as it did in Google |
+| **Trust signals are part of the rebuild.** Named authors, dates and an "about us" belong in the work of becoming citable. | Shestakov, and Google's own guidance | Google publishes E-E-A-T as its frame and asks plainly whether a reader can tell who wrote the page |
+
+**Why it may be a false disagreement.** They are partly answering different questions — *being cited* against *ranking* — and the first source's own claim is that ranking drives citation, which would collapse the two into one question and make trust signals an input to position rather than a competitor with it.
+
+**Test it** Ask ten of your own real queries, record the answers verbatim with engine and date, and check whether the URLs that got cited are the ones ranking for those queries on the ordinary results page. That settles it for your site, which is the only place it needs settling.
+
+**Cost of being wrong** In one direction, a quarter spent on authorship and markup for a corpus that does not rank and therefore is never retrieved. In the other, a page that ranks and is never quoted because nothing on it is liftable or attributable. Both are expensive; neither is what the argument is usually about.
+
+### Most citations come from the neighbouring question, not from yours
+
+**Hypothesis** · [GEO/AEO teardown](./sources.md#how-ai-search-actually-works--a-geoaeo-teardown), [Google — AI in Search](./sources.md#google--ai-in-search-going-beyond-information-to-intelligence)
+
+Roughly 70% of URLs cited in a generated answer are reported to come from the fan-out sub-topics rather than from the main query. The worked example is "how to brew coffee", where what got cited was water chemistry, extraction and taster protocols — not the brewing guides.
+
+**Why it is only a hypothesis** The mechanism is documented by Google: AI Mode fans a question out into subtopics and issues many queries at once. The 70% share is one practitioner's measurement with no published method.
+
+**Test it** Take a question your documentation is meant to own, ask it of an assistant, and list which of the cited URLs answer the question itself and which answer a neighbouring one. Then check which of those neighbouring questions you have a page for.
+
+**Cost of being wrong** You keep improving the page that answers the question, and the citations keep going to whoever wrote the four pages around it.
+
+> If this holds even roughly, the highest-value page you can write is usually not about your topic — it is about the thing somebody has to understand first.
+
+### Being visible to Google is most of being visible to ChatGPT
+
+**Hypothesis** · [GEO/AEO teardown](./sources.md#how-ai-search-actually-works--a-geoaeo-teardown), [OpenAI — crawlers and user agents](./sources.md#openai--crawlers-and-user-agents)
+
+ChatGPT is reported to take roughly half its sources from Google and Bing and roughly a third from direct site search, with commercial queries leaning on Google. The supporting experiment is stronger than the percentages: a section closed to everything except Google was indexed in ChatGPT exactly as it was in Google.
+
+**Why it is only a hypothesis** One unpublished experiment on one site, and vendor behaviour that can change with a single deployment. Note that it sits oddly beside OpenAI's own documentation of a dedicated crawler, which would not be needed if everything came through another engine's index.
+
+**Test it** Check your own logs for the assistant user agents against your ordinary search impressions. If the assistant crawlers are absent and you are cited anyway, the borrowed-index path is what is happening to you.
+
+**Cost of being wrong** Treating AI visibility as a separate programme with its own budget, when for most documentation sites it is mostly the same work as being indexed and ranked.
+
+### Identify crawlers by address, not by the name they give
+
+**Hypothesis** · [GEO/AEO teardown](./sources.md#how-ai-search-actually-works--a-geoaeo-teardown), [Google — crawlers overview](./sources.md#google--crawlers-user-agents-overview)
+
+A user-agent string is self-declared and can be anything. An availability audit should confirm the requester by address as well as by name, and should compare what several agents are served: robots rules, the sitemap, the HTTP response to each user agent, and the rendered page against its text-only version.
+
+**Cost of being wrong** A log analysis that reports assistant traffic which was never an assistant, or a bot rule at the edge that blocks the real one while the impostor is let through.
+
+### An assistant names you when the pages it cites name you
+
+**Hypothesis** · [GEO/AEO teardown](./sources.md#how-ai-search-actually-works--a-geoaeo-teardown), [GEO overview](./sources.md#geo-overview--three-mechanisms-and-an-audit-checklist)
+
+An engine presents a product as the solution when the URLs it retrieved describe it as the solution. Consensus across the cited sources matters more than the raw volume of mentions, and links are not the mechanism — the model will find your own site once your name is in what it read.
+
+The practical consequence is a sharp one: placing content is only worth doing on sites that are **already cited in the results for your target queries**. Everything else is budget with no path to the answer. Where no such site exists for your category, the reported move is to create one — a comparison, a ranking, a round-up — and get that ranking.
+
+**Test it** Run the ten-query audit and collect the *sources* column rather than the answers. The list of sites that keep appearing is your placement list, and it is usually much shorter and much more boring than a media plan.
+
+### There are three ways an engine can produce an answer about you
+
+**Hypothesis** · [GEO overview](./sources.md#geo-overview--three-mechanisms-and-an-audit-checklist), [Google — AI in Search](./sources.md#google--ai-in-search-going-beyond-information-to-intelligence)
+
+Real-time retrieval over the top of the index; the AI layer inside the search engine itself; and the model's own memory of having seen you mentioned. They respond to different work on different timescales — the first two to content and crawlability now, the third to years of being talked about.
+
+**Why it matters more than it sounds** It is the reason "why does ChatGPT say that about us" has no single answer, and the reason a fix that works in one engine may do nothing in another.
+
+### One query, one intent, one page
+
+**Hypothesis** · [SEO fundamentals in 2026](./sources.md#seo-fundamentals-in-2026-in-six-blocks), [Diátaxis](./sources.md#diátaxis--a-systematic-framework-for-technical-documentation)
+
+A page should serve one intent. Where two queries express different intents, they want two pages — and where one page is being stretched to serve both, it usually serves neither.
+
+This is the same rule [the four page kinds](#there-are-four-kinds-of-documentation-page-and-mixing-them-serves-none) states from the other direction: Diátaxis splits by what the reader is doing, this splits by what they asked.
+
+### Search is sometimes the wrong instrument entirely
+
+**Hypothesis** · [SEO fundamentals in 2026](./sources.md#seo-fundamentals-in-2026-in-six-blocks)
+
+Organic search is a poor investment when there is no existing demand to capture, when demand is heavily seasonal, when the purchase is impulsive, or when nobody can commit to a twelve-month horizon.
+
+**Why this is in a documentation handbook** Because documentation is often sold internally as a traffic channel, and for some products it is not one. Saying so early is cheaper than discovering it in month eight — and it does not argue against writing the documentation, only against measuring it by search.
 
 ## Trust and authorship
 
