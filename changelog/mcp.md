@@ -9,6 +9,10 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 
 ## NEW - 15.09.2026
 
+### Added
+
+- Install the Docsbook GitHub App on a repository and unattended runs can publish to it: an agent writing docs on a schedule no longer depends on somebody being signed in, which is why scheduled runs against repositories Docsbook does not host were refused outright. `MCP`
+
 ### Changed
 
 - The MCP rate card is re-priced against a measured day of real agent use: Read $8, Write $20, Analytics $40, Egress $60, Probe $120, AI $300, Expert $400 per 1,000 calls, with discovery calls still free. The old card billed a project making 363 calls in a working day 56 cents, which said nothing true about what those calls cost to serve. `MCP`
