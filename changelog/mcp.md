@@ -12,6 +12,7 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 ### Added
 
 - Install the Docsbook GitHub App on a repository and unattended runs can publish to it: an agent writing docs on a schedule no longer depends on somebody being signed in, which is why scheduled runs against repositories Docsbook does not host were refused outright. `MCP`
+- A connected MCP client can now ask `ask_docsbook` a real question about using Docsbook itself and get back the same cited answer the public Ask AI chat gives a reader — so a support question gets answered without ever reaching a human, and shows up in your own chat analytics exactly like a reader's question would. `MCP`
 
 ### Changed
 

@@ -1,7 +1,7 @@
 ---
 title: "MCP server: run your documentation from a coding agent"
 description: "Connect Claude Code, Cursor, Codex or any MCP client to Docsbook and read, write, measure and configure your documentation from inside the editor."
-tldr: "Docsbook's remote MCP server exposes 149 typed tools over one OAuth-protected endpoint — ask the one `docsbook_expert` expert agent how to do the work, then carry it out yourself: read pages, commit them, read analytics, change settings. Calls are billed per call against the project's balance by billing class; discovery is free."
+tldr: "Docsbook's remote MCP server exposes 151 typed tools over one OAuth-protected endpoint — ask the one `docsbook_expert` expert agent how to do the work, then carry it out yourself: read pages, commit them, read analytics, change settings, or ask `ask_docsbook` a real question about the product itself. Calls are billed per call against the project's balance by billing class; discovery is free."
 ---
 
 # MCP Server
@@ -12,9 +12,11 @@ This page is the reference for what the server serves and what a call draws on. 
 
 ## What is the Docsbook MCP server?
 
-The Docsbook MCP server exposes **149 tools** over the Model Context Protocol, an open standard for handing tools, resources and prompts to AI agents over a typed RPC interface.
+The Docsbook MCP server exposes **151 tools** over the Model Context Protocol, an open standard for handing tools, resources and prompts to AI agents over a typed RPC interface.
 
 **Exactly one of them is an agent.** `docsbook_expert` takes any documentation request in your own words — "improve the docs", "document this API", "why are readers not converting" — and answers in one round trip with how to do the work: the steps in order, the tool to call on each, what to carry from one step to the next, what would make the answer wrong, and what to remember afterwards. It runs nothing itself and needs no approval; you make the calls it names, on your own token, at read prices. Call it first, before reaching for anything below.
+
+**A second tool answers a question rather than planning the work.** `ask_docsbook` asks a real question about USING DOCSBOOK ITSELF — "how does X work", "does Docsbook do Y" — and returns the same AI-generated, cited answer a reader gets from the public "Ask AI" chat on [docsbook.io/docs](https://docsbook.io/docs). It runs the same retrieval and model call the public widget runs, and the question is logged in your own project's chat analytics exactly the way a real reader's question would be — not a lookalike, the same call.
 
 Every other tool is a plain, individually named call — workspace and branding, content, the issue tracker, AI chat, translations, analytics, call history, project memory, opportunities, hypotheses, the work board and webhooks — among them the two that connect and configure a repository or website as a source of truth, and `collect_ai_citability`, which scores whether an answer engine can fetch and quote you. None of them run unattended: a standing agent that fired on its own schedule or on a repository's commits, and the 135 narrower tools that only ever ran inside one, were retired on 2026-09-12 for the reason `docsbook_expert` replaced them — the value in them was never the running, it was knowing which reads, in what order, and what makes the answer wrong, which is a thing to be told rather than a thing to be run. See the [MCP tools reference](../reference/mcp-tools.md) for the full list.
 

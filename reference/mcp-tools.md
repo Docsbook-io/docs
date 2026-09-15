@@ -1,11 +1,11 @@
 ---
 title: "Every tool the Docsbook MCP server exposes to an agent"
-description: "The 149 tools a Docsbook workspace exposes over MCP — the one `docsbook_expert` agent, workspace setup, content, issues, chat, translations, analytics, call history, project memory, opportunities, hypotheses, the work board and webhooks."
+description: "The 151 tools a Docsbook workspace exposes over MCP — the one `docsbook_expert` agent, `ask_docsbook`, workspace setup, content, issues, chat, translations, analytics, call history, project memory, opportunities, hypotheses, the work board and webhooks."
 ---
 
 # MCP Tools Reference
 
-This page lists every tool exposed by the Docsbook MCP server at `https://docsbook.io/api/mcp/server`. The server exposes **149 tools**. Each requires Bearer authentication via OAuth 2.0 + PKCE.
+This page lists every tool exposed by the Docsbook MCP server at `https://docsbook.io/api/mcp/server`. The server exposes **151 tools**. Each requires Bearer authentication via OAuth 2.0 + PKCE.
 
 The **Billing** column names the class a call is metered under, against the project's own balance:
 
@@ -49,6 +49,18 @@ Steps also carry `transform` — what to keep from one step's output and hand to
 `docsbook_expert` never guesses. A request it cannot place on a known workflow gets the general method (the writing rulebook, what is actually published, the constraints) and says out loud that it is the general method. It has no `findings` field, deliberately: nothing ran, so there is nothing measured, and the numbers arrive when you make the calls it names.
 
 **`workspace_id` is optional.** Most of what it knows is true of documentation work rather than of one project. Pass a project and the answer also says what that project can and cannot see, so a step that comes back thin reads as expected rather than broken.
+
+## Ask Docsbook: the same answer a reader gets
+
+`docsbook_expert` above advises — it tells you how to plan documentation work and runs no model. `ask_docsbook` is the opposite shape: it actually asks a question about **using Docsbook itself** and answers it, against Docsbook's own manual.
+
+| Tool | Billing | Description |
+|---|---|---|
+| `ask_docsbook` | AI | Ask a question about using Docsbook itself — how a feature works, how to set something up, what a plan includes — and get back the same AI-generated, cited answer a reader gets from the public "Ask AI" chat on [docsbook.io/docs](https://docsbook.io/docs). Optional `session_id` groups several calls as one visitor's conversation in your own chat analytics; omit it and each call reads as a separate visitor. |
+
+It runs the **same retrieval and model call** the public widget runs, and books it the same way: `spendCategory: "users"`, never `"admin"`, whoever is calling. A question asked through this tool shows up in your project's own chat analytics (`get_chat_conversations`, `get_ai_usage`, the Feeds panel) indistinguishably from a real reader's question — not a lookalike, the same code path.
+
+Not for a customer's own documentation — that is `search`/`search_docs`/`read_doc` against their workspace.
 
 ## Workspace and branding
 
@@ -281,7 +293,7 @@ What you would actually type to a connected client, and the tools it ends up cal
 
 **A call was refused for an empty balance — what do I do?** The refusal names the project that ran out, what the call draws, what is left, and where to top up. Discovery calls (`get_info`, `list_workspaces`, `find_skill`, and the rest of the Included class above) keep working regardless, so your agent can still find out what happened and report it.
 
-**Why does the tool count keep changing?** It reflects what actually runs. The server exposed more tools before 2026-09-12, when the 135 narrow action tools and the standing-agent tools were retired in favor of `docsbook_expert`; the 4 Reminders tools were retired on top of that on 2026-09-14, superseded by `check_at`/`check_in_days` on a hypothesis; it currently exposes 149. `get_info` always reports the live count.
+**Why does the tool count keep changing?** It reflects what actually runs. The server exposed more tools before 2026-09-12, when the 135 narrow action tools and the standing-agent tools were retired in favor of `docsbook_expert`; the 4 Reminders tools were retired on top of that on 2026-09-14, superseded by `check_at`/`check_in_days` on a hypothesis; `ask_docsbook` was added on 2026-09-15; it currently exposes 151. `get_info` always reports the live count.
 
 ## Related
 
