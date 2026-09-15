@@ -348,7 +348,7 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 
 - [Full Docsbook changelog](../CHANGELOG.md) — every release, across every section
 - [MCP server](../agent-ready/mcp.md) — connecting an agent to your docs
-- [MCP tools reference](../reference/mcp-tools.md) — every tool, its price and its wait
+- [MCP tools reference](../mcp/README.md) — every tool, its price and its wait
 - [Changelogs by panel section](./README.md) — the same releases, cut by where they landed
 - [Changelogs by outcome](./outcomes/README.md) — the same releases, cut by the number they move
 

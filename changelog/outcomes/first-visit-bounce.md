@@ -14,6 +14,7 @@ Docs that look like the product, rather than like a template someone forgot. Thi
 ### Added
 
 - Your documentation's **home page can now be shown as a landing page**: hide the left sidebar, hide the right "On this page" outline, and let the content run the full width, so a first-time visitor lands on a page that looks like your product rather than on the table of contents of a manual. It applies to the front page and nowhere else — every page they work through keeps its sidebar, and the phone menu stays either way. `Content`
+- Three more blocks for a page that has to OPEN a site rather than continue one. A **hero** leads with the page's own heading, a lead line, a row of quick links and one prompt a reader can hand straight to their AI agent, so a first-time visitor either finds the three doors that matter or delegates the whole setup without reading a guide. A **showcase** gallery makes a screenshot the tile, so the customers and examples a landing page has to SHOW stop being described in a bullet list. And a **journey** lays a product's stages out side by side, so a reader can see which one they are in instead of scanning an index sorted by subsystem to guess. Between them a front page finally looks like your product rather than like the table of contents of a manual, and a reader evaluating you sees the customers you have instead of a bullet list claiming them. All three are ordinary markdown between two invisible comments, so the same file still reads correctly on GitHub. `Content`
 
 ## NEW - 12.09.2026
 

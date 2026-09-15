@@ -1,6 +1,6 @@
 ---
 title: "Content widgets: rich blocks written in plain markdown"
-description: "Reference for every Docsbook content widget — hero, cards, showcase, journey, tabs, accordion, stepper, pricing, api, cta, cta-form and recommendations — and the markers each reads."
+description: "Reference for every Docsbook content widget — hero, cards, showcase, journey, tabs, code-group, callout, accordion, stepper, pricing, api, mcp, cta, cta-form and recommendations — and the markers each reads."
 ---
 
 # Content widgets
@@ -123,6 +123,62 @@ Turns headed sections into a tab strip with one visible panel. Use it when the s
 
 Do not use it to hide content the reader needs all of. That is `accordion` on scanned reference material, and plain headings for a sequence.
 
+### callout — the sentence a reader must not miss
+
+Renders a paragraph or short list as an aside with a coloured rail, a glyph and an optional title. Six kinds — `note`, `info`, `tip`, `success`, `warning`, `danger` — each with its own colour and icon.
+
+Use it when one sentence on the page is not part of the flow and must not be missed: a prerequisite before the reader starts, a version cutoff, a destructive command, a shortcut most readers want, a pointer to the page they probably meant. If the reader can skip it and still succeed, it is prose, not a callout.
+
+- `<!-- widget:callout type=note -->` — `type` is one of `note` (default), `info`, `tip`, `success`, `warning`, `danger`. An unrecognised type falls back to `note` rather than breaking the block.
+- Choosing the type is the whole decision. `warning` and `danger` are for things that cost the reader something — data loss, a broken deploy, a bill. `note` and `info` are a pointer, `tip` is a shortcut, `success` confirms a state the reader should now be in. A `danger` box on a stylistic preference is how readers learn to skip every coloured box on your site.
+- An optional leading heading becomes the title: `### Before you start`. Omit it when the sentence speaks for itself.
+- `icon=<lucide-name>` overrides the glyph without changing the colour. Use it when the kind is right but the default picture is not — never to make a warning look like a tip.
+- Keep it to one or two sentences. A callout the length of a section is a section.
+- Do not put a code fence inside one: a fence in an aside reads as the main example and steals the eye from the real one.
+- Two per page at most. A page of coloured boxes has no emphasis left to spend.
+
+```markdown
+<!-- widget:callout type=warning -->
+
+### Before you upgrade
+
+Running `migrate --reset` drops every table in the target database. Take a backup
+first — there is no undo, and the command does not ask.
+
+<!-- /widget -->
+```
+
+### code-group — one command, one tab per language
+
+Renders consecutive code fences as one block with a language tab strip on it. Labels come from the fence language, so a `python` fence labels itself.
+
+This is the most commonly missed widget on a reference page: four stacked fences read as four steps when they are one step done four ways. Use `tabs` instead when the variants are whole sections — prose plus code plus a table — rather than just the snippet.
+
+- Put two or more fenced code blocks between the markers. Each becomes one tab.
+- **Tag every fence with its language.** An untagged fence gets a tab called "Snippet 2", which tells the reader nothing and is the only way this widget comes out looking broken.
+- To label tabs yourself — two `bash` fences that are npm and pnpm, not both "Bash" — put a heading above each fence. The heading text becomes the label and the fence keeps its syntax highlighting.
+- The first fence is the tab that opens. Put the language most of your readers use first.
+- Text before the first fence renders above the strip as an intro.
+- A single fence is left exactly as written: one snippet is a snippet, not a group.
+- Up to 8 tabs switch; further fences render below the strip as ordinary code blocks, so nothing is hidden.
+- CSS-only, so every variant is in the page source — which is what lets an AI assistant quote the snippet for the reader's language rather than whichever one happened to be on top.
+
+````markdown
+<!-- widget:code-group -->
+
+Every variant sends the same request; the response shape is identical.
+
+```python
+client.messages.create(model="claude-opus-5", max_tokens=1024)
+```
+
+```typescript
+await client.messages.create({ model: "claude-opus-5", max_tokens: 1024 })
+```
+
+<!-- /widget -->
+````
+
 ### accordion — collapsible rows
 
 Turns headed sections into rows the reader expands. Best for material people scan rather than read: FAQs, troubleshooting, per-option details.
@@ -169,6 +225,34 @@ Turns REST endpoint sections into a form the reader can send a real request from
 - An Authorization input is always added. The reader's key is sent from their own browser and never reaches Docsbook.
 - Documenting `Authorization` as a row in the table is fine: that row is claimed by the header input above, keeping your description, instead of rendering a second time as a field that would put the key in the URL.
 - A `###` subsection containing a code block — `### Example`, `### Response` — moves into a samples pane beside the form, keeping its title. Any other subsection, such as an `### Errors` table, stays in the document flow below.
+
+### mcp — one tool on an MCP server
+
+Renders an MCP tool as a signature bar — tool name, a read/write badge, whether a token is needed — above its argument list.
+
+Documentation only. Unlike `api` it has no Send button, because an MCP call is JSON-RPC to one shared endpoint and a flat-body form cannot make one. Follow it with a `code-group` holding the JSON-RPC envelope, and — if the server also exposes the tool over HTTP — an `api` widget for the REST equivalent, which is where the reader gets a real try-it.
+
+- Each heading whose text is a bare tool name — `## get_analytics` — becomes one tool block. A heading with spaces in it passes through as ordinary content.
+- The first table under that heading with a `Field` (or `Name`/`Parameter`) column becomes the argument list, read exactly the way `api` reads its parameter table.
+- A tool with no argument table is rendered as taking none — stated, rather than left blank.
+- `access=read` or `access=write` on the marker paints the badge beside the name; omit it and no badge is drawn.
+- `anonymous` on the marker marks the tool as callable without a token.
+- `price-millicents=4000` shows what one call costs, as `$0.04`. It is an integer because a marker option's value cannot contain a dot — a decimal there makes the whole marker fail to parse.
+- Prose before the first sub-heading becomes the tool's description. Sub-headings and everything under them stay in the document flow below the arguments.
+
+```markdown
+<!-- widget:mcp access=read -->
+
+## get_analytics
+
+Traffic, top pages and referrers for a workspace over a period.
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `period` | string | no | `7d`, `30d` or `90d`. Defaults to `30d`. |
+
+<!-- /widget -->
+```
 
 ### cta — a compact call to action
 
