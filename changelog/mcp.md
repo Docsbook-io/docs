@@ -23,6 +23,7 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 ### Fixed
 
 - `write_docs` no longer reports that it closed an issue when it published straight to the branch without opening a pull request: the closing line only exists in a pull request body, so on that path nothing closed and the issues stayed open while every answer said otherwise. `MCP`
+- The OAuth discovery document an MCP client reads before it can authenticate now answers on your project's own address instead of 404ing, so an agent can connect to your documentation without a human handing it the endpoint. `MCP`
 
 ## NEW - 14.09.2026
 

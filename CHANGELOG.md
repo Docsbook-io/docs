@@ -38,6 +38,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 - A documentation URL with no page behind it now answers 404 straight away instead of rendering an empty page under it, so a crawler walking guessed paths stops filling your site's index with pages that were never there. `SEO`
 - `write_docs` no longer reports that it closed an issue when it published straight to the branch without opening a pull request: the closing line only exists in a pull request body, so on that path nothing closed and the issues stayed open while every answer said otherwise. `MCP`
+- A documentation section whose folder is called `api` now serves every page under it. The section index resolved while every page below it answered 404, so a published API reference looked finished and was empty one click in. `Content`
+- Your project's interactive API reference page now opens for readers who are not signed in, instead of answering 404 to everyone except you. `Content`
+- The OAuth discovery document an MCP client reads before it can authenticate now answers on your project's own address instead of 404ing, so an agent can connect to your documentation without a human handing it the endpoint. `MCP`
+- Pages on a site with an active subheader folder are no longer broken by a server error, a fault that reached 173 readers before it was caught. `Content`
 
 ## NEW - 14.09.2026
 
