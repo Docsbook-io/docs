@@ -1,6 +1,6 @@
 ---
 title: "Content widgets: rich blocks written in plain markdown"
-description: "Reference for every Docsbook content widget — cards, tabs, accordion, stepper, pricing, api, cta, cta-form and recommendations — and the markers each reads."
+description: "Reference for every Docsbook content widget — hero, cards, showcase, journey, tabs, accordion, stepper, pricing, api, cta, cta-form and recommendations — and the markers each reads."
 ---
 
 # Content widgets
@@ -58,7 +58,35 @@ Turns link lists into a responsive grid. Best on index and hub pages that send r
 
 **Give a card its own action.** If the last indented line contains nothing but links, it becomes the card's call-to-action row. A sentence that merely *contains* a link stays ordinary text.
 
-**Choose the layout.** `cols=1`, `cols=2`, `cols=3` or `cols=4` fixes the number of columns; `horizontal` puts the icon beside the text instead of above it, for a compact row. Both go on the opening marker and can be combined. Without `cols` the grid fits as many cards per row as the page width allows, which is usually what you want. Narrow screens always get fewer columns.
+**Choose the layout.** `cols=1`, `cols=2`, `cols=3` or `cols=4` fixes the number of columns; `horizontal` puts the icon beside the text instead of above it, for a compact row; `plain` drops the illustration band and puts a small accent-coloured icon above the title; `arrow=hover` hides the affordance arrow until the pointer is on the card. They go on the opening marker and can be combined. Without `cols` the grid fits as many cards per row as the page width allows, which is usually what you want. Narrow screens always get fewer columns.
+
+**Full-weight or `plain`?** The default card leads with an illustration band — right when the grid *is* the page, on a documentation home or a section index. `plain` is right when the grid is the page's edge: a "Next steps" close, a "Related topics" block, the two or three links an introduction hands off to. A full-weight grid there makes the footer the loudest thing on the screen.
+
+**Label a card.** `{badge:New}`, `{badge:Beta}`, `{badge:Deprecated}` at the end of an item puts a short pill beside the title — up to 32 characters. Use it for status a reader scans for; a badge on every card in a grid labels nothing.
+
+**Turn a nested list into chips.** With `tags` on the marker, a card's first nested bullet list renders as a row of chips under the title instead of body prose — the shape a model-family or plan grid wants. Keep each chip to one or two words. Without the switch a nested list stays ordinary body text, so no existing grid changes shape.
+
+```markdown
+<!-- widget:cards tags cols=2 -->
+
+- [Fable 5.1](./models/fable.md) — For demanding reasoning and long-horizon work {badge:New}
+
+  ![Fable](https://example.com/fable.png)
+
+  - Most capable
+  - Research
+  - Multi-day tasks
+
+- [Haiku 4.5](./models/haiku.md) — The fastest model with near-frontier intelligence
+
+  ![Haiku](https://example.com/haiku.png)
+
+  - Fastest
+  - Lowest cost
+  - High volume
+
+<!-- /widget -->
+```
 
 ```markdown
 <!-- widget:cards cols=2 -->
@@ -175,6 +203,101 @@ The same block, with the primary action rendered as a one-field form. What the r
 - A target that cannot take a form, such as `mailto:` or an in-page anchor, degrades to a plain button.
 
 Point it only at a URL that actually reads the parameter. A page that ignores it silently drops what the reader typed, which is worse than a plain button.
+
+### hero — the opener of a landing page
+
+Renders a small eyebrow label, the page's own heading, a lead paragraph, a row of quick-link pills and one copyable prompt for the reader's AI agent. Use it as the first block of a documentation home or a section landing page. Not on an ordinary article — a hero on a how-to page pushes the instructions below the fold to decorate a heading that was already doing its job.
+
+- A leading paragraph that is only `**bold**` becomes the eyebrow. Optional.
+- The first heading becomes the title. Write it as the page's real `#` heading: the element is re-used, not rebuilt, so the page keeps its H1, its anchor and its place in the outline.
+- Paragraphs after the heading become the lead. One or two sentences — a hero that explains everything leaves the links below it unread.
+- A bullet list of links becomes the pill row: `- [Quick start](./quick-start.md) {rocket}`. Give every pill an icon or none of them.
+- A **blockquote** becomes the agent pill. The bold run is the button's label; everything after it is the text the button copies.
+- Put images at the front of that blockquote to show which agents the prompt is for — they render as an overlapping avatar stack. With no images the pill shows a neutral glyph.
+- A second paragraph inside the blockquote becomes the hint line under the pill.
+- `align=center` on the marker centres the block. The default is left-aligned, which is what sits correctly next to a sidebar.
+- Everything except the heading is optional. A hero with no blockquote is simply a titled opener.
+
+```markdown
+<!-- widget:hero -->
+
+**Documentation**
+
+# Publish docs machines can cite
+
+Take Markdown from a repository to a site search engines index and assistants quote.
+
+- [Quick start](./quick-start.md) {rocket}
+- [MCP server](./mcp.md) {terminal}
+
+> ![Claude](https://example.com/claude.svg) **Onboard your agent** — Set up Docsbook for me. Fetch https://docsbook.io/get-started.md and follow it.
+>
+> Paste one prompt into your agent and it connects itself.
+
+<!-- /widget -->
+```
+
+The copied text is also in the page as text, hidden from sight but not from a screen reader, a crawler or an assistant — so do not repeat the prompt in prose above it.
+
+### showcase — a gallery led by screenshots
+
+A gallery where the picture *is* the tile: a 16/9 frame anchored to the top of the image, with the name, a brand-coloured dot and a one-line tagline underneath. Use it for real things you have a picture of — customer sites, template starters, example projects, case studies.
+
+Use `cards` instead when the items are destinations inside your own documentation. A card's job is to label a door; a showcase tile's job is to show what is behind it. In practice the difference is the picture: `cards` crops one into a small band beside an icon, which turns a screenshot into a grey smear.
+
+- Each list item becomes one tile: `- [Name](https://example.com) — One line about it.`
+- Every item needs one `![alt](url)` image, on an indented line under the item or inline at the end. A tile without one renders an empty frame.
+- Write the image as a full `https://` URL or as a path relative to this page. A path starting with `/` resolves against your **source repository**, not against your site.
+- Use a wide screenshot, 16/10 or wider. The frame crops the bottom, never the sides, so a full page keeps its sidebar and content and loses only its tail.
+- `{color:#5865F2}` at the end of an item sets the brand dot and the tile's hover edge. Hex or a plain CSS colour word; anything else is dropped.
+- `{badge:Infrastructure}` puts a small chip at the right of the name row.
+- Headings above a list become group labels, the same way `cards` groups a grid.
+- `cols=1` to `cols=4` on the marker; without it the gallery fits as many tiles as the page width allows.
+
+```markdown
+<!-- widget:showcase cols=3 -->
+
+- [Cursor](https://example.com/cursor) — Documentation for the AI code editor {color:#1a1a1a}
+
+  ![Cursor docs](https://example.com/shots/cursor.png)
+
+- [ClickHouse](https://example.com/clickhouse) — Column-oriented database for analytics {color:#faff69}
+
+  ![ClickHouse docs](https://example.com/shots/clickhouse.png)
+
+<!-- /widget -->
+```
+
+### journey — lifecycle stages side by side
+
+Ordered stages laid out as columns on one rail, each with a numbered head and a short list of links. A pipeline the reader reads left to right, rather than a sequence they follow top to bottom.
+
+`stepper` is the close relative, and the two are not interchangeable. Use a stepper when skipping a step breaks the next one; use a journey when the reader is choosing which stage they are in and each stage holds several destinations.
+
+- Each heading becomes one stage, numbered in document order. One or two words — the stages sit side by side and a sentence-long label pushes the others off the row.
+- The bullet list under a heading becomes that stage's links: `- [Quickstart](./quick-start.md) {rocket}`.
+- A paragraph under a heading, before the list, becomes a one-line note under the stage title.
+- Content before the first heading renders above the rail as an intro.
+- `cols=1` to `cols=4` fixes the number of lanes per row; without it the rail fits as many as the page width allows and wraps the rest.
+- Three to five stages is the working range. Two is a pair of lists and wanted `cards`; seven turns each lane into a column two words wide.
+
+```markdown
+<!-- widget:journey cols=2 -->
+
+### Publish
+
+Source to a public URL.
+
+- [Quick start](./quick-start.md) {rocket}
+- [Custom domain](./domain.md) {globe}
+
+### Measure
+
+- [Tracking](./tracking.md) {chart-line}
+- [Goals and funnels](./goals.md) {target}
+
+<!-- /widget -->
+```
 
 ### recommendations — a ranked list of things to fix
 
