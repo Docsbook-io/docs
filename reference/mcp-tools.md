@@ -5,7 +5,7 @@ description: "The 151 tools a Docsbook workspace exposes over MCP — the one `d
 
 # MCP Tools Reference
 
-This page lists every tool exposed by the Docsbook MCP server at `https://docsbook.io/api/mcp/server`. The server exposes **151 tools**. Each requires Bearer authentication via OAuth 2.0 + PKCE.
+This page lists every tool exposed by the Docsbook MCP server at `https://docsbook.io/api/mcp/server`. The server exposes **151 tools**. Each requires Bearer authentication via OAuth 2.0 + PKCE. Every one of them is also callable as plain REST — see the [API reference](./api.md#post-apiv1toolstool).
 
 The **Billing** column names the class a call is metered under, against the project's own balance:
 
@@ -116,6 +116,8 @@ A Docsbook-hosted site's issues live on the repository Docsbook hosts for it; a 
 | `set_chat_system_prompt` | Write | Replace the chat system prompt |
 | `set_chat_hooks` | Write | Configure pre/post LLM hooks |
 | `test_chat_hook` | Egress | Run a hook against a synthetic payload |
+
+`ask_docsbook` — asking a real product question and getting the public Ask AI chat's own answer — has its own section above, right after `docsbook_expert`.
 
 ## Translations
 
