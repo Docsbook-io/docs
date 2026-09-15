@@ -199,7 +199,7 @@ If some pages updated and others did not, it is almost always the browser cache 
 
 Docsbook serves one version of your documentation: the current state of your branch. Multiple published versions side by side are not supported today.
 
-If you need them now, keep versions in separate branches (`docs/v1`, `docs/v2`) or in separate repositories, and connect the one you want published.
+If you need them now, keep versions in separate branches (`docs/v1`, `docs/v2`) or in separate repositories, and connect the one you want published. See [Documentation versioning](../advanced/documentation-versioning.md) for the common versioning patterns and a full walkthrough of this workaround.
 
 ## See who is reading
 

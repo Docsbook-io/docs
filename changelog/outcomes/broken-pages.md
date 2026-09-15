@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Broken pages** — fewer pa
 
 Claims and links that stopped being true — found before a reader finds them. This is the Broken pages slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 14.09.2026
+
+### Added
+
+- A new **Agent** section shows every call your AI agent has made against a project, read as the conversation it was: one stream broken only by the day, each line saying what the call was for and what came back, so you can see whether the agent is actually changing anything without opening a single row or reading a call log. `Agents`
+
 ## NEW - 13.09.2026
 
 ### Added

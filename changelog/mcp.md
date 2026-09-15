@@ -9,6 +9,10 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 
 ## NEW - 14.09.2026
 
+### Changed
+
+- `list_audits`, `add_audit`, `edit_audit`, `add_audit_finding` and `edit_audit_finding` are now `list_opportunities`, `add_direction`, `edit_direction`, `add_opportunity` and `edit_opportunity` — the old names still work. An assistant writing a technical sentence into a field the owner reads is now refused rather than let through. `MCP`
+
 ### Improved
 
 - An agent improving a project too new to have its own traffic now works from what people actually search for, what assistants already answer about it and what its competitors document, instead of standing down until the site's analytics have a sample — so a new docs site is worked on from its first day instead of waiting out its first month. `MCP`
@@ -21,6 +25,7 @@ Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook 
 ### Removed
 
 - The `update_seo`, `update_geo` and `update_aeo` tools are gone: with all three surfaces permanently on there is nothing for them to change, and an agent told "enabled" by a tool that did nothing would keep reporting work it never did. `MCP`
+- Reminders — the `list_reminders`, `add_reminder`, `edit_reminder` and `remove_reminder` tools and their Overview tab — are gone. A hypothesis already carries `check_at`/`check_in_days`, its own date to come back and judge it, so a second, separate promise to remember was one more thing to write and one more place to check; writing the claim is now the whole fix. `MCP`
 
 ## NEW - 13.09.2026
 

@@ -1,7 +1,7 @@
 ---
 title: "MCP server: run your documentation from a coding agent"
 description: "Connect Claude Code, Cursor, Codex or any MCP client to Docsbook and read, write, measure and configure your documentation from inside the editor."
-tldr: "Docsbook's remote MCP server exposes 156 typed tools over one OAuth-protected endpoint — ask the one `docsbook_expert` expert agent how to do the work, then carry it out yourself: read pages, commit them, read analytics, change settings. Calls are billed per call against the project's balance by billing class; discovery is free."
+tldr: "Docsbook's remote MCP server exposes 149 typed tools over one OAuth-protected endpoint — ask the one `docsbook_expert` expert agent how to do the work, then carry it out yourself: read pages, commit them, read analytics, change settings. Calls are billed per call against the project's balance by billing class; discovery is free."
 ---
 
 # MCP Server
@@ -12,11 +12,11 @@ This page is the reference for what the server serves and what a call draws on. 
 
 ## What is the Docsbook MCP server?
 
-The Docsbook MCP server exposes **156 tools** over the Model Context Protocol, an open standard for handing tools, resources and prompts to AI agents over a typed RPC interface.
+The Docsbook MCP server exposes **149 tools** over the Model Context Protocol, an open standard for handing tools, resources and prompts to AI agents over a typed RPC interface.
 
 **Exactly one of them is an agent.** `docsbook_expert` takes any documentation request in your own words — "improve the docs", "document this API", "why are readers not converting" — and answers in one round trip with how to do the work: the steps in order, the tool to call on each, what to carry from one step to the next, what would make the answer wrong, and what to remember afterwards. It runs nothing itself and needs no approval; you make the calls it names, on your own token, at read prices. Call it first, before reaching for anything below.
 
-Every other tool is a plain, individually named call — workspace and branding, content, the issue tracker, AI chat, translations, analytics, call history, project memory, reminders, hypotheses, the work board and webhooks — among them the two that connect and configure a repository or website as a source of truth, and `collect_ai_citability`, which scores whether an answer engine can fetch and quote you. None of them run unattended: a standing agent that fired on its own schedule or on a repository's commits, and the 135 narrower tools that only ever ran inside one, were retired on 2026-09-12 for the reason `docsbook_expert` replaced them — the value in them was never the running, it was knowing which reads, in what order, and what makes the answer wrong, which is a thing to be told rather than a thing to be run. See the [MCP tools reference](../reference/mcp-tools.md) for the full list.
+Every other tool is a plain, individually named call — workspace and branding, content, the issue tracker, AI chat, translations, analytics, call history, project memory, opportunities, hypotheses, the work board and webhooks — among them the two that connect and configure a repository or website as a source of truth, and `collect_ai_citability`, which scores whether an answer engine can fetch and quote you. None of them run unattended: a standing agent that fired on its own schedule or on a repository's commits, and the 135 narrower tools that only ever ran inside one, were retired on 2026-09-12 for the reason `docsbook_expert` replaced them — the value in them was never the running, it was knowing which reads, in what order, and what makes the answer wrong, which is a thing to be told rather than a thing to be run. See the [MCP tools reference](../reference/mcp-tools.md) for the full list.
 
 ## Endpoint
 
@@ -161,7 +161,7 @@ There are only four ways a docs tool makes money, and every tool below serves on
 
 | Lever | Mechanism | Core tools |
 |---|---|---|
-| **Acquisition** | More qualified readers arrive, from search and from AI answers | `update_seo`, `update_geo`, `update_aeo`, `get_search_rankings` |
+| **Acquisition** | More qualified readers arrive, from search and from AI answers | `get_search_rankings`, `collect_ai_citability`, `write_docs` |
 | **Conversion** | More arriving readers leave with what they came for | `get_visit_outcomes`, `get_dead_end_pages`, `get_content_health`, `get_route_patterns` |
 | **Sales** | The assistant carries buying-intent readers forward instead of just answering | `get_chat_intent`, `get_chat_conversations`, `set_chat_system_prompt`, `set_chat_hooks` |
 | **Cost avoided** | Questions answered by the docs are questions not answered by a person | `get_ai_unanswered`, `get_failed_searches`, `get_search_zero_click`, `get_insights` |
@@ -172,9 +172,8 @@ A tool that serves none of these returns **context**, not a decision. `Pageviews
 
 | Tool | What it is worth |
 |---|---|
-| `update_seo` | Meta tags, sitemap, OpenGraph. Table stakes: without it, pages that deserve to rank cannot. |
-| `update_geo` | Generative Engine Optimization — structures the page so an LLM can quote it *and attribute it to you*. The difference between being the source of an AI answer and being invisible inside one. |
-| `update_aeo` | Answer Engine Optimization — shapes content into the direct-answer form AI assistants lift verbatim. |
+| *(no tool)* | Meta tags, sitemap, OpenGraph, TL;DR, author markup and FAQ/HowTo/speakable JSON-LD are emitted for every project automatically. There were `update_seo`, `update_geo` and `update_aeo` tools until 14 September 2026; they set flags that are now permanently on, so they were removed rather than left reporting changes they no longer make. |
+| `collect_ai_citability` | Whether that markup is actually reaching the live pages, and whether an assistant can fetch and quote them at all — the question the three removed tools could never answer. |
 | `get_search_rankings` | Real Google Search Console positions, plus the **"worth improving" set at position 5–20** — pages Google already shows that are not yet winning the click. Turns "we should do SEO" into a named page and a named query. Lags Google by ~2 days. |
 | `get_analytics` (AI-bot breakdown) | Whether ChatGPT, Perplexity and Claude crawlers read you at all. A zero here means the GEO work is not landing — no crawl, no citation, no referral. |
 
@@ -312,7 +311,8 @@ The only loop in any docs product that starts at a stated objection and ends at 
 ### Loop 4 — "Am I visible to AI, and did it bring anyone?"
 
 ```text
-update_geo + update_aeo   → structure content for citation
+write_docs                → shape the passage an engine can lift
+collect_ai_citability     → confirm the markup is really on the live page
 get_analytics (ai_bots)   → confirm crawlers are actually reading it
 get_search_rankings       → track classic-search position alongside
 get_analytics (referrers) → referrals arriving from AI assistants
@@ -426,7 +426,9 @@ The current amount for every class and every individual tool is on the tool's ow
 
 **A call that fails is still charged** — the work happened, and the answer says so. A call the server never managed to run is not charged.
 
-**You can read the calls line by line.** Every metered call appears in the project's [Feeds panel](../reference/webhooks.md#mcp-tool-calls-in-the-feed) — which tool, whether it worked, how long it took and what it drew — filterable by billing class. Calls that were about no single project (describing the server, listing your projects, creating one) belong to your account and appear in no project's feed; discovery calls leave no row at all.
+**You can read the calls line by line.** The project's **Agent** section reads them as the conversation they were: one continuous stream, broken only by the day, with each call on its own line saying what it was for, what it was called with and what came back — so you can tell whether an agent is changing anything without opening a single row. Clicking one unfolds the full result, the arguments it was given and who made the call. The same calls also appear in the [Feeds panel](../reference/webhooks.md#mcp-tool-calls-in-the-feed) when you want them as a filterable table instead, narrowed by billing class. Calls that were about no single project (describing the server, listing your projects, creating one) belong to your account and appear in neither; discovery calls leave no row at all.
+
+**The Agent section is also where you set one running.** It offers a single prompt to paste into whichever AI agent you already work in, with a cadence to pick first — every hour, every four hours, every twelve, or once a day. The choice is written into the prompt itself, cron line included, so what you copy is complete on its own.
 
 Unauthenticated, repo-scoped access to a public documentation site is never metered.
 

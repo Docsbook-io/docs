@@ -7,6 +7,13 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ## NEW - 14.09.2026
 
+### Added
+
+- A new **Agent** section shows every call your AI agent has made against a project, read as the conversation it was: one stream broken only by the day, each line saying what the call was for and what came back, so you can see whether the agent is actually changing anything without opening a single row or reading a call log. `Agents`
+- Set an agent running on a schedule from that same screen: pick every hour, every 4 hours, every 12 hours or once a day, and copy one prompt that already carries the cron line and how much a single run should attempt — so nobody has to remember which cadence they meant by the time they reach the terminal. `Agents`
+- A Results card opens the Overview: one sentence and five figures — found in search, named by AI, opportunities won, updates shipped, readers — so an owner who reads nothing else can see the docs' search ranking and AI citations moving, not just that the agent has been busy. `Overview`
+- Opening a question, hypothesis, fact or goal on the Overview brief card now shows the GitHub issues and pull requests linked to it, right there in the read view, instead of leaving you to go dig through GitHub to see what work a line is actually attached to. `Overview`
+
 ### Changed
 
 - Every project is now indexed by search engines and citable by AI assistants by default, with nothing to switch on. Canonical URLs, OpenGraph, a sitemap and JSON-LD go out for search engines; a TL;DR, a visible last-modified date and author attribution go out for AI answer engines; FAQ, HowTo and speakable markup go out for featured snippets and voice assistants. Two thirds of projects had SEO switched off and were serving documentation that told Google not to index it, because the switch that changed that was one nobody found. `SEO`
@@ -14,7 +21,11 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Search rankings opens straight onto your Google positions instead of first asking you to switch SEO on, so the readout that tells you whether the docs are being found is not itself gated behind the thing it measures. `SEO`
 - The "Get found by Google and AI" step on the setup checklist no longer ticks itself off the moment two settings are on, because those settings no longer exist. It stays on the list until you close it, and what it now asks for is the work actually left: the pages most likely to be asked about answering directly enough to be quoted. `Onboarding`
 - A run that finds no declared goal on a project now states the default — be found through search engines and AI assistants — and gets on with the demand-ranked work, instead of filing a question and waiting for an answer that is the same on nearly every project. It still asks when a project gives a concrete reason to differ. `Agents`
-
+- Every project now decomposes that one standing goal into directions and opportunities on its own, so an agent never has to ask what the docs are for and never invents a placeholder goal just to get started. `Agents`
+- The Audits tab is now Opportunities: every row states the search, the competitor holding it today and what would beat them, and what winning it is worth — all in plain business words, with the call ids and readings that back each claim moved to a trace field the owner never has to open. `Overview`
+- `list_audits`, `add_audit`, `edit_audit`, `add_audit_finding` and `edit_audit_finding` are now `list_opportunities`, `add_direction`, `edit_direction`, `add_opportunity` and `edit_opportunity` — the old names still work. An assistant writing a technical sentence into a field the owner reads is now refused rather than let through. `MCP`
+- Opportunities on the Overview tab are now one flat list ranked by audience size instead of grouped under a direction heading with a wide table behind every group — open any opportunity on its own to read it in full, so getting to the one search worth acting on no longer means opening a group first. `Overview`
+- Every row on the Overview brief card — Questions, Hypotheses, Memory, Goals, Opportunities — now shows a short, plain-language label instead of its full raw text, so the whole list reads at a glance instead of forcing you to scan wrapped paragraphs to tell rows apart; opening a row still shows it in full. `Overview`
 
 ### Improved
 
@@ -31,6 +42,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 - The `update_seo`, `update_geo` and `update_aeo` tools are gone: with all three surfaces permanently on there is nothing for them to change, and an agent told "enabled" by a tool that did nothing would keep reporting work it never did. `MCP`
 - Keeping documentation out of search results is now a per-page decision, not a per-project one. A page that should never rank says `noindex: true` in its own front matter and the rest of the project stays indexed; a project that should not be read at all is made private, which is a stronger guarantee than an unindexed but public site ever was. `SEO`
+- Reminders — the `list_reminders`, `add_reminder`, `edit_reminder` and `remove_reminder` tools and their Overview tab — are gone. A hypothesis already carries `check_at`/`check_in_days`, its own date to come back and judge it, so a second, separate promise to remember was one more thing to write and one more place to check; writing the claim is now the whole fix. `MCP`
 
 ## NEW - 13.09.2026
 

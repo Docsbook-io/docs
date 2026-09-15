@@ -9,9 +9,15 @@ Everything that shipped in **Agents**. This is the Agents slice of the [full Doc
 
 ## NEW - 14.09.2026
 
+### Added
+
+- A new **Agent** section shows every call your AI agent has made against a project, read as the conversation it was: one stream broken only by the day, each line saying what the call was for and what came back, so you can see whether the agent is actually changing anything without opening a single row or reading a call log. `Agents`
+- Set an agent running on a schedule from that same screen: pick every hour, every 4 hours, every 12 hours or once a day, and copy one prompt that already carries the cron line and how much a single run should attempt — so nobody has to remember which cadence they meant by the time they reach the terminal. `Agents`
+
 ### Changed
 
 - A run that finds no declared goal on a project now states the default — be found through search engines and AI assistants — and gets on with the demand-ranked work, instead of filing a question and waiting for an answer that is the same on nearly every project. It still asks when a project gives a concrete reason to differ. `Agents`
+- Every project now decomposes that one standing goal into directions and opportunities on its own, so an agent never has to ask what the docs are for and never invents a placeholder goal just to get started. `Agents`
 
 ## NEW - 05.09.2026
 

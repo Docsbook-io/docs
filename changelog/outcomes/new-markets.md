@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **New markets** — audiences
 
 The readers who bounced because the docs were not in their language. This is the New markets slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 14.09.2026
+
+### Changed
+
+- Every row on the Overview brief card — Questions, Hypotheses, Memory, Goals, Opportunities — now shows a short, plain-language label instead of its full raw text, so the whole list reads at a glance instead of forcing you to scan wrapped paragraphs to tell rows apart; opening a row still shows it in full. `Overview`
+
 ## NEW - 13.09.2026
 
 ### Changed
