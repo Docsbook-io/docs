@@ -13,7 +13,7 @@ It is the knowledge a documentation team accumulates over years — how a page h
 Two things make it usable rather than merely long:
 
 - **Every strong claim names its source.** Where Google publishes something, we quote Google and link the page. Where a number comes from one practitioner's account, it is marked as one practitioner's account and you are told not to put it in a proposal. The whole registry is in [Evidence](./evidence/README.md).
-- **You can ask it instead of reading it.** This corpus is what Docsbook's own assistant answers from. Ask it a question in the **Ask AI** box on any page of this site, or call `ask_docsbook` from an agent, and the answer comes back cited from the pages below.
+- **You can ask it instead of reading it.** This corpus is what Docsbook's own assistant answers from. Ask it a question in the **Ask AI** box on any page of this site, or call `docsbook_assistant` from an agent, and the answer comes back cited from the pages below. From an agent, pass `context` alongside the question — your product, your audience, the intent the page has to answer — or you get this handbook's general answer rather than the one about your page.
 
 ## The six sections
 

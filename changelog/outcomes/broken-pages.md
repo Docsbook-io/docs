@@ -11,6 +11,10 @@ Claims and links that stopped being true — found before a reader finds them. T
 
 ## NEW - 15.09.2026
 
+### Added
+
+- `docsbook_expert` now hands you the question to ask it. Its answer carries a ready-written consultation for the step before anything gets written, so the page is built the way somebody who has done it a hundred times would build it instead of needing a rewrite next month once somebody notices the shape was wrong. The guidance travels into the issue too, so whoever executes the work can be checked against it afterwards rather than only asked for it. `MCP`
+
 ### Changed
 
 - The plans screen now lets you pick which repository Enterprise is bought for, and says in one line which balance each plan tops up, so nobody buys the wrong plan and finds out when a teammate is refused. `Pricing`

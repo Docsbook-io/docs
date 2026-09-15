@@ -14,6 +14,7 @@ How long a reader hunts before the page they needed is in front of them. This is
 ### Added
 
 - Your documentation's **home page can now be shown as a landing page**: hide the left sidebar, hide the right "On this page" outline, and let the content run the full width, so a first-time visitor lands on a page that looks like your product rather than on the table of contents of a manual. It applies to the front page and nowhere else — every page they work through keeps its sidebar, and the phone menu stays either way. `Content`
+- **The same tool now answers how the WORK is done, not only how the product works.** Ask `docsbook_assistant` how a page for a given search intent should be structured, what a quickstart owes its first screen, or what a passage needs before ChatGPT or Perplexity will quote it whole, and the answer comes back from Docsbook's own documentation handbook with the pages it drew on — so the shape of your page is something you can defend to whoever asks, instead of whatever your agent happened to believe about documentation. `MCP`
 
 ## NEW - 14.09.2026
 

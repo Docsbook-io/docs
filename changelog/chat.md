@@ -15,6 +15,7 @@ Everything that shipped in **Chat**. This is the Chat slice of the [full Docsboo
 
 ### Fixed
 
+- A question the assistant cannot answer now says WHY — a rate limit at the model provider, an exhausted balance, or an answer that came back malformed — instead of a bare "the answer could not be produced". An agent that knows which of the three it hit retries the one worth retrying and stops asking the same question again, and the reader gets an answer in the first minute rather than the fourth attempt. `AI Chat`
 - Opening the Ask AI question box now dims the header along with the rest of the page: the search button's icon, label and `⌘K` badge used to keep showing through the dark overlay instead of being covered by it. `AI Chat`
 
 ## NEW - 13.09.2026
