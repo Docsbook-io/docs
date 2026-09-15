@@ -1,112 +1,140 @@
 ---
-title: "Docsbook documentation: publish, get cited, measure"
-description: "Find the Docsbook guide for the job you are doing — publishing from GitHub, getting cited by AI assistants, measuring readers, translating, or automating."
+title: "Docsbook documentation: goals, experiments, and what they measured"
+description: "Docsbook turns a business goal into researched opportunities and experiments that each carry an expected number and a date. Start here, then pick the guide for the job you are doing."
 ---
 
-# Docsbook documentation: publish, get cited, measure
+# Give your agent a goal. Get back an opportunity, a number, and a verdict.
 
-Docsbook publishes Markdown from a GitHub repository, a website scan, or a written brief as a documentation site people and AI assistants can read. This index is organised by the job you are doing, not by the menu the admin panel uses — pick the job, then the guide.
+Say where you want the business to get to. Docsbook researches what is actually there, sizes the opportunity from evidence, and turns it into experiments that each carry a number they are expected to hit — then reads, on the date, whether they hit it.
 
-Every capability page here follows one rule: it states **what you get**, **how it is built** in enough mechanical detail to predict the output, **the evidence** with a link to a primary source, and **what is not proven**. If we cannot source a claim, the page says so rather than dropping it — see [how we prove it](./evidence.md).
+It runs inside the agent you already use, and everything it writes lands in your own repository as a commit you review.
 
-**New to Docsbook? [Publish your first site in the quick start →](./quick-start.md)** — takes about 5 minutes, no prior GitHub experience needed. Want the model first? Read [the overview](./overview.md).
+<!-- widget:cards cols=2 -->
 
-<!-- widget:cards -->
+## What people bring it
 
-## Start here
-
-- [Overview](./overview.md) — What Docsbook does with your repository, and what it costs {compass}
-- [Quick start](./quick-start.md) — Publish a documentation site, from source to public URL {rocket}
-- [Concepts](./basics.md) — Workspace, project balance, indexing and the other terms {box}
-- [Use cases](./use-cases.md) — The jobs teams hire documentation for {target}
-- [How we prove it](./evidence.md) — The evidence rule every capability page here follows {scale}
-
-## Publish your documentation
-
-- [Create your first site](./guides/getting-started/creating-docs.md) — Step-by-step, no prior GitHub experience assumed {file-plus}
-- [Manage an existing site](./guides/getting-started/managing-docs.md) — Settings, reindexing, and who can read the site {folder-cog}
-- [Connect a GitHub repository](./content/setup/github-integration.md) — An "Edit on GitHub" link on every page, and where repository sync is set up {git-branch}
-- [Choose what gets indexed](./content/setup/content-options.md) — Which folders and files become pages {settings-2}
-- [Point your own domain at it](./guides/advanced/custom-domain.md) — One CNAME, SSL provisioned automatically {globe}
-- [Restrict who can read it](./guides/advanced/sso.md) — Shared password, or your own SSO identity provider {lock}
-- [Brand it](./design/style/branding.md) — Name, icon, accent colour, fonts {palette}
-- [Set the theme and layout](./design/style/theming.md) — Light, dark and system defaults {sun-moon}
-
-## Get found by search engines
-
-- [SEO overview](./seo/README.md) — What Docsbook emits for search engines without you configuring anything {search}
-- [How the head is built](./seo/how-it-works.md) — Title, description, canonical, hreflang, cards, robots and sitemap, in resolution order {file-code}
-- [Indexing](./seo/indexing.md) — How a change reaches the index, and what actually gates that {refresh-cw}
-
-## Get quoted by AI assistants
-
-- [GEO overview](./geo/README.md) — What Docsbook adds so Perplexity, ChatGPT Search and AI Overviews can quote you {sparkles}
-- [Citation signals](./geo/citation-signals.md) — The rules that make a passage quotable, and what has been measured not to work {quote}
-- [llms.txt](./geo/llms-txt.md) — A plain-text index of your docs for AI clients, and who really reads it {file-text}
-
-## Win the answer box
-
-- [AEO overview](./aeo/README.md) — What an answer engine needs from a page, and what Docsbook emits {message-square-quote}
-- [Structured answers](./aeo/structured-answers.md) — The JSON-LD Docsbook emits, what triggers it, and what Google still shows {braces}
-- [Content rules](./aeo/content-rules.md) — The rules Docsbook writes by, each with what it does to an answering agent {list-checks}
-
-## Make your docs agent-ready
-
-- [Agent-ready overview](./agent-ready/README.md) — Documentation an agent can navigate and act on, not just read {bot}
-- [Docs skills](./agent-ready/skills.md) — SKILL.md files that teach any agent documentation work {graduation-cap}
-- [MCP server](./agent-ready/mcp.md) — The tools that let an agent read and edit your docs {plug}
-- [Source of truth](./agent-ready/source-of-truth.md) — The document graph an agent navigates {network}
-- [MCP security](./agent-ready/mcp-security.md) — Auth model, what a read-only token cannot do, and what is not offered yet {shield}
-
-## Answer readers with AI chat
-
-- [AI chat](./ai-chat/chat.md) — An assistant that answers from your indexed pages {message-circle}
-- [Answer quality](./ai-chat/answer-quality.md) — The retrieval and grounding pipeline, and what happens when nothing matches {target}
-- [Full-text search](./ai-chat/search.md) — A search box in the header, the sidebar, or both {search}
-- [Connected sources](./ai-chat/sources.md) — Repositories and sites your agent may read as fact {link}
-- [Chat hooks](./ai-chat/chat-hooks.md) — Run your own code before and after the model {webhook}
-- [Page feedback](./ai-chat/feedback.md) — Thumbs up and down, per page {thumbs-up}
-
-## Measure what your docs earn
-
-- [Tracking overview](./analytics/tracking/overview.md) — What Docsbook measures and where it comes from {bar-chart-3}
-- [How measurement works](./analytics/how-measurement-works.md) — Visitor identity, bot filtering, read time, and what is never collected {microscope}
-- [Goals and funnels](./analytics/reports/goals-and-funnels.md) — Whether readers reach the page that sells {git-fork}
-- [Events](./analytics/tracking/events.md) — AI opens, code copies, link clicks, goals {mouse-pointer-click}
-- [Read time](./analytics/reports/read-time.md) — How long readers spend on each page {timer}
-- [Countries and languages](./analytics/reports/countries.md) — Where readers are and what they read in {map}
-- [AI usage and cost](./analytics/tracking/ai-usage.md) — What AI work drew on the project balance {wallet}
-
-## Reach readers in other languages
-
-- [Translation settings](./translation/settings.md) — Enable languages and place the switcher {sliders-horizontal}
-- [AI translations](./translation/ai-translations.md) — How automatic translation works, and how to correct it {languages}
-- [Translation quality](./translation/quality.md) — What is protected from translation, how drift is caught, and the hreflang side {badge-check}
-
-## Reference
-
-- [Pricing](./pricing.md) — What is metered, and what a project balance pays for {credit-card}
-- [FAQ](./faq.md) — Cost, cancellation, sync, privacy and data ownership {help-circle}
-- [Reference index](./reference/README.md) — Every reference page in one list {book-open}
-- [MCP tools reference](./reference/mcp-tools.md) — Every tool, its parameters and its price class {list}
-- [REST API](./reference/api.md) — Call your docs chat from your own backend {code}
-- [Webhooks](./reference/webhooks.md) — Event catalogue, payload schemas, signature format {bell}
-- [Content widgets](./content/features/widgets.md) — Cards, accordions, steps and CTA blocks in Markdown {layout-grid}
-- [Changelog](./CHANGELOG.md) — What shipped, and what each change was meant to buy {history}
-- [Blog](./blog/README.md) — Longer pieces on AI search, docs SEO, analytics and platform comparisons {newspaper}
+- [Be found](./seo/README.md) — "More qualified organic traffic." Read as clicks and impressions per intent. {search}
+- [Be recommended](./geo/README.md) — "Be named when assistants answer my category." Read as citations across a fixed question set. {sparkles}
+- [Turn readers into customers](./analytics/reports/goals-and-funnels.md) — "Make more readers reach the product." Read as goal completions per page. {git-fork}
+- [Open a new market](./translation/README.md) — "Reach people in another language." Read as traffic and rank per locale. {languages}
 
 <!-- /widget -->
 
-## Support
+## The loop, in eight stages
 
-Email [support@docsbook.io](mailto:support@docsbook.io), or ask in the [Docsbook Discord](https://discord.gg/baqUCdwrag).
+The stage most tools skip is the fifth: writing down what should change, and by when, **before** doing the work. Without it the seventh stage has nothing to compare against.
+
+<!-- widget:stepper -->
+
+### Goal
+
+One sentence from you — the outcome you want, not a brief or a backlog.
+
+### Research
+
+Six classes of evidence: what your product does, the demand around it, who ranks for it, what assistants answer, what your readers searched for and did not find.
+
+### Opportunity
+
+One row per thing people look for: how many of them, what your docs show them today, who gets the click instead, and what winning it is worth.
+
+### Hypothesis
+
+Competing ways to take the same opportunity, each argued from the readings rather than from a checklist.
+
+### Expected effect
+
+The number it is expected to hit and the date it will be read on — written down before any page exists.
+
+### Experiment
+
+The change is written into your repository as a commit or a pull request you review like any other.
+
+### Actual result
+
+On the date, the reading is taken and compared with the number written beforehand. Confirmed or rejected.
+
+### Learning
+
+A rejection counts: what it eliminated is kept, so the next bet does not repeat it.
+
+<!-- /widget -->
+
+The experiments run on documentation because it is the surface an agent can change without asking anyone for access, and the one whose effect is readable from outside — search indexes it, assistants quote it, buyers decide on it, and every page reports its own traffic, referrals and failed searches.
+
+## Start in one conversation
+
+There is no signup flow in front of it. Point the agent you already work in at one endpoint and say where you want to go.
+
+```bash
+claude mcp add --transport http docsbook https://docsbook.io/api/mcp/server
+```
+
+Codex, Cursor, Windsurf, Cline and any other MCP client use the same endpoint — see [MCP server](./agent-ready/mcp.md) for each. Would rather see the surface first? [Publish a site in about five minutes](./quick-start.md).
+
+<!-- widget:cards cols=3 plain -->
+
+## Start here
+
+- [Overview](./overview.md) — What Docsbook does, and what it costs {compass}
+- [Quick start](./quick-start.md) — Source to public URL {rocket}
+- [Concepts](./basics.md) — Workspace, balance, indexing {box}
+- [Use cases](./use-cases.md) — The jobs teams hire docs for {target}
+- [How we prove it](./evidence.md) — The evidence rule every page follows {scale}
+
+## Run the loop from your agent
+
+- [MCP server](./agent-ready/mcp.md) — Connect the agent you already use {plug}
+- [MCP tools reference](./reference/mcp-tools.md) — Every tool and its price class {list}
+- [Docs skills](./agent-ready/skills.md) — SKILL.md files any agent can load {graduation-cap}
+- [Source of truth](./agent-ready/source-of-truth.md) — The graph an agent navigates {network}
+- [MCP security](./agent-ready/mcp-security.md) — Auth model and token scopes {shield}
+
+## Get found and get quoted
+
+- [SEO](./seo/README.md) — What ships for search engines by default {search}
+- [GEO](./geo/README.md) — What makes a passage quotable {sparkles}
+- [AEO](./aeo/README.md) — What an answer engine needs from a page {message-square-quote}
+- [llms.txt](./geo/llms-txt.md) — A plain-text index for AI clients {file-text}
+
+## Answer readers, then measure them
+
+- [AI chat](./ai-chat/README.md) — An assistant grounded in your pages {message-circle}
+- [Analytics](./analytics/README.md) — What your docs earn, per page {bar-chart-3}
+- [Goals and funnels](./analytics/reports/goals-and-funnels.md) — Whether readers reach the page that sells {target}
+- [Page feedback](./ai-chat/feedback.md) — Thumbs up and down, per page {thumbs-up}
+
+## Publish, brand and translate
+
+- [Guides](./guides/README.md) — Create and manage a site {book-open}
+- [Content and setup](./content/README.md) — Sources, indexing, GitHub link {settings-2}
+- [Design and branding](./design/README.md) — Name, colour, fonts, layout {palette}
+- [Custom domain](./guides/advanced/custom-domain.md) — One CNAME, SSL automatic {globe}
+- [Private docs](./guides/advanced/sso.md) — Shared password or your own SSO {lock}
+- [Translation](./translation/README.md) — 15 languages, indexed separately {languages}
+
+## Reference
+
+- [Pricing](./pricing.md) — What is metered, and what is not {credit-card}
+- [FAQ](./faq.md) — Cost, sync, privacy, data ownership {help-circle}
+- [REST API](./reference/api.md) — Call your docs chat from your backend {code}
+- [Webhooks](./reference/webhooks.md) — Event catalogue and payload schemas {bell}
+- [Content widgets](./content/features/widgets.md) — Cards, steps and callouts in Markdown {layout-grid}
+- [Changelog](./CHANGELOG.md) — What shipped, and what it was meant to buy {history}
+- [Blog](./blog/README.md) — AI search, docs SEO, comparisons {newspaper}
+
+<!-- /widget -->
+
+Support: [support@docsbook.io](mailto:support@docsbook.io) or the [Docsbook Discord](https://discord.gg/baqUCdwrag).
 
 <!-- widget:cta -->
 
-## Publish your first site
+**Ready when you are**
 
-Paste a repository, a website URL, or a sentence about your product. The draft is generated before you sign in.
+## Give your agent a goal
 
-[Start free — no credit card](https://docsbook.io/start)
+Ask one question and you get a researched answer about your own market — whether or not you ever run anything it suggests.
+
+[Start free — no credit card](https://docsbook.io/start) · [Connect your agent](./agent-ready/mcp.md)
 
 <!-- /widget -->
