@@ -17,6 +17,10 @@ Questions the docs answer are questions your inbox never sees. This is the Suppo
 - Your documentation can now carry a **footer**: columns of links, a copyright and legal-entity block, an optional call-to-action button, your social icons and a light/dark/system picker, in one of three layouts. The terms, privacy, status and contact links a reader hunts for at the end of a page are finally somewhere to put, so nobody has to email support to ask where your terms are, and a reader who finished the page has somewhere to go next instead of stopping. Off until you turn it on, and your social accounts are the ones you already set, not a second list to keep in sync. `Content`
 - A connected MCP client can now ask `ask_docsbook` a real question about using Docsbook itself and get back the same cited answer the public Ask AI chat gives a reader — so a support question gets answered without ever reaching a human, and shows up in your own chat analytics exactly like a reader's question would. `MCP`
 
+### Fixed
+
+- Opening the Ask AI question box now dims the header along with the rest of the page: the search button's icon, label and `⌘K` badge used to keep showing through the dark overlay instead of being covered by it. `AI Chat`
+
 ## NEW - 14.09.2026
 
 ### Added

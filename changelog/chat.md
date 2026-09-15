@@ -13,6 +13,10 @@ Everything that shipped in **Chat**. This is the Chat slice of the [full Docsboo
 
 - A floating **Ask Docs** button can now sit in the corner of every page, so a reader who never noticed the header's Ask AI pill still has an obvious way into a conversation. The rest of the page dims behind it while the question box is open, and a click on the dimmed area closes it again. Off by default — turn it on from Customize. `AI Chat`
 
+### Fixed
+
+- Opening the Ask AI question box now dims the header along with the rest of the page: the search button's icon, label and `⌘K` badge used to keep showing through the dark overlay instead of being covered by it. `AI Chat`
+
 ## NEW - 13.09.2026
 
 ### Improved

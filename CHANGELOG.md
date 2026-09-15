@@ -51,6 +51,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Your project's interactive API reference page now opens for readers who are not signed in, instead of answering 404 to everyone except you. `Content`
 - The OAuth discovery document an MCP client reads before it can authenticate now answers on your project's own address instead of 404ing, so an agent can connect to your documentation without a human handing it the endpoint. `MCP`
 - Pages on a site with an active subheader folder are no longer broken by a server error, a fault that reached 173 readers before it was caught. `Content`
+- The docs site's top tab strip (Overview / sections) no longer shows a native scrollbar while you drag it horizontally, so switching sections reads as part of the page instead of a stray scrollbar cutting across it. `Content`
+- Opening the Ask AI question box now dims the header along with the rest of the page: the search button's icon, label and `⌘K` badge used to keep showing through the dark overlay instead of being covered by it. `AI Chat`
 
 ## NEW - 14.09.2026
 
