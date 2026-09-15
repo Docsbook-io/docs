@@ -14,6 +14,13 @@
       "label": "MCP Tools",
       "source": "https://docsbook.io/api/mcp/tools",
       "icon": "plug"
+    },
+    {
+      "root": "rest-api",
+      "kind": "api",
+      "label": "API Reference",
+      "source": "https://docsbook.io/openapi.json",
+      "icon": "terminal"
     }
   ],
   "badges": {
@@ -628,6 +635,14 @@
     "mcp/work/unlink-work": {
       "label": "WRITE",
       "kind": "tool"
+    },
+    "rest-api/chat/ask-docs": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/tools/call-tool": {
+      "label": "POST",
+      "kind": "method"
     }
   }
 }
