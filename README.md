@@ -3,11 +3,24 @@ title: "Docsbook documentation: goals, experiments, and what they measured"
 description: "Docsbook turns a business goal into researched opportunities and experiments that each carry an expected number and a date. Start here, then pick the guide for the job you are doing."
 ---
 
+<!-- widget:hero -->
+
+**Docsbook documentation**
+
 # Give your agent a goal. Get back an opportunity, a number, and a verdict.
 
-Say where you want the business to get to. Docsbook researches what is actually there, sizes the opportunity from evidence, and turns it into experiments that each carry a number they are expected to hit — then reads, on the date, whether they hit it.
+Say where you want the business to get to. Docsbook researches what is actually there, sizes the opportunity from evidence, and turns it into experiments that each carry a number they are expected to hit — then reads, on the date, whether they hit it. It runs inside the agent you already use, and everything it writes lands in your own repository as a commit you review.
 
-It runs inside the agent you already use, and everything it writes lands in your own repository as a commit you review.
+- [Quick start](./quick-start.md) {rocket}
+- [How it works](./overview.md) {compass}
+- [MCP server](./agent-ready/mcp.md) {terminal}
+- [Pricing](./pricing.md) {credit-card}
+
+> ![Claude](https://docsbook.io/agents/claude.svg) ![OpenAI](https://docsbook.io/agents/openai.svg) ![Cursor](https://docsbook.io/agents/cursor.svg) **Onboard your agent** — Set up Docsbook for me. Fetch https://docsbook.io/get-started.md and follow it.
+>
+> Paste one prompt into Claude Code, Cursor, Codex or any client that speaks MCP. It connects the server itself, writes a Docsbook rule into its own memory file, and takes a first project live.
+
+<!-- /widget -->
 
 <!-- widget:cards cols=2 -->
 
@@ -62,6 +75,45 @@ A rejection counts: what it eliminated is kept, so the next bet does not repeat 
 
 The experiments run on documentation because it is the surface an agent can change without asking anyone for access, and the one whose effect is readable from outside — search indexes it, assistants quote it, buyers decide on it, and every page reports its own traffic, referrals and failed searches.
 
+## The surface they run on
+
+Four stages, and an experiment can be read at any of them. Pick the one you are asking about.
+
+<!-- widget:journey cols=2 -->
+
+### Publish
+
+Source to a public URL, in about five minutes.
+
+- [Quick start](./quick-start.md) {rocket}
+- [Guides](./guides/README.md) {book-open}
+- [Custom domain](./guides/advanced/custom-domain.md) {globe}
+
+### Get found
+
+What ships for search engines without configuring anything.
+
+- [SEO](./seo/README.md) {search}
+- [llms.txt](./geo/llms-txt.md) {file-text}
+
+### Get quoted
+
+What makes a passage an assistant can cite.
+
+- [GEO](./geo/README.md) {sparkles}
+- [AEO](./aeo/README.md) {message-square-quote}
+- [AI chat](./ai-chat/README.md) {message-circle}
+
+### Measure
+
+Which pages were read, and where readers stopped.
+
+- [Analytics](./analytics/README.md) {bar-chart-3}
+- [Goals and funnels](./analytics/reports/goals-and-funnels.md) {target}
+- [Page feedback](./ai-chat/feedback.md) {thumbs-up}
+
+<!-- /widget -->
+
 ## Start in one conversation
 
 There is no signup flow in front of it. Point the agent you already work in at one endpoint and say where you want to go.
@@ -90,20 +142,6 @@ Codex, Cursor, Windsurf, Cline and any other MCP client use the same endpoint �
 - [Source of truth](./agent-ready/source-of-truth.md) — The graph an agent navigates {network}
 - [MCP security](./agent-ready/mcp-security.md) — Auth model and token scopes {shield}
 
-## Get found and get quoted
-
-- [SEO](./seo/README.md) — What ships for search engines by default {search}
-- [GEO](./geo/README.md) — What makes a passage quotable {sparkles}
-- [AEO](./aeo/README.md) — What an answer engine needs from a page {message-square-quote}
-- [llms.txt](./geo/llms-txt.md) — A plain-text index for AI clients {file-text}
-
-## Answer readers, then measure them
-
-- [AI chat](./ai-chat/README.md) — An assistant grounded in your pages {message-circle}
-- [Analytics](./analytics/README.md) — What your docs earn, per page {bar-chart-3}
-- [Goals and funnels](./analytics/reports/goals-and-funnels.md) — Whether readers reach the page that sells {target}
-- [Page feedback](./ai-chat/feedback.md) — Thumbs up and down, per page {thumbs-up}
-
 ## Publish, brand and translate
 
 - [Guides](./guides/README.md) — Create and manage a site {book-open}
@@ -124,6 +162,40 @@ Codex, Cursor, Windsurf, Cline and any other MCP client use the same endpoint �
 - [Blog](./blog/README.md) — AI search, docs SEO, comparisons {newspaper}
 
 <!-- /widget -->
+
+## Documentation running on Docsbook
+
+Every site below is live and readable without signing in.
+
+<!-- widget:showcase cols=3 -->
+
+- [Cursor](https://docsbook-websites.docsbook.io/cursor) — Documentation for the AI code editor {color:#1a1a1a}
+
+  ![Cursor documentation built with Docsbook](https://docsbook.io/gallery-cursor-light.png)
+
+- [ClickHouse](https://docsbook-websites.docsbook.io/clickhouse) — Column-oriented database for real-time analytics {color:#faff69}
+
+  ![ClickHouse documentation built with Docsbook](https://docsbook.io/gallery-clickhouse-light.png)
+
+- [Discord Developers](https://docsbook-websites.docsbook.io/discord-developers/) — Build bots, Activities, and apps on Discord {color:#5865F2}
+
+  ![Discord Developers documentation built with Docsbook](https://docsbook.io/gallery-discord-developers-light.png)
+
+- [Ramp](https://docsbook-websites.docsbook.io/ramp) — Developer API for the finance platform 70,000+ businesses run on {color:#d7f942}
+
+  ![Ramp documentation built with Docsbook](https://docsbook.io/gallery-ramp-light.png)
+
+- [n8n](https://docsbook-websites.docsbook.io/n8n) — Workflow automation platform for technical teams {color:#ea4b71}
+
+  ![n8n documentation built with Docsbook](https://docsbook.io/gallery-n8n-light.png)
+
+- [Runway API](https://docsbook-websites.docsbook.io/runway-api) — Generative video, image, and audio behind one HTTP API {color:#0e0e0e}
+
+  ![Runway API documentation built with Docsbook](https://docsbook.io/gallery-runway-api-light.png)
+
+<!-- /widget -->
+
+[See every site in the showcase →](https://docsbook.io/showcase)
 
 Support: [support@docsbook.io](mailto:support@docsbook.io) or the [Docsbook Discord](https://discord.gg/baqUCdwrag).
 
