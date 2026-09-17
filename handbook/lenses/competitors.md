@@ -214,8 +214,12 @@ Then hand over and stop: missing assets that passed the gate go to [the page set
 
 ## Related
 
-- [External checks](../auditing/external-checks.md) — the coverage subtraction and the only honest route to a claim about someone else's product.
-- [Market expansion](./market-expansion.md) — audiences outside the segment you already fight in.
-- [Jobs to be done](./jobs-to-be-done.md) — why a reader switches, and what they have to believe first.
-- [E-E-A-T and trust](./eeat-trust.md) — why a comparison page that finds no case for the alternative is discounted whole.
-- [Demand gaps](../auditing/demand-gaps.md) — the capability-to-job chain this pass reads from and never restates.
+<!-- widget:cards plain cols=2 -->
+
+- [External checks](../auditing/external-checks.md) — the coverage subtraction and the only honest route to a claim about someone else's product. {search}
+- [Market expansion](./market-expansion.md) — audiences outside the segment you already fight in. {languages}
+- [Jobs to be done](./jobs-to-be-done.md) — why a reader switches, and what they have to believe first. {target}
+- [E-E-A-T and trust](./eeat-trust.md) — why a comparison page that finds no case for the alternative is discounted whole. {shield}
+- [Demand gaps](../auditing/demand-gaps.md) — the capability-to-job chain this pass reads from and never restates. {compass}
+
+<!-- /widget -->

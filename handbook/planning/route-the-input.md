@@ -41,6 +41,8 @@ If none of the three is readable, ask. **A placeholder name is not an acceptable
 
 Four stages, in this order, and the order is load-bearing: each one produces the input the next one cannot work without.
 
+<!-- widget:stepper -->
+
 ### 1. Understand the product and the source
 
 Before deciding a single page, establish who the documentation is for and what the product actually claims. This is the stage most generation skips, and it is why generated documentation reads like a file dump. You are after four things: who enters and how, who the product is measured against, how it makes money, and where its call to action points.
@@ -68,6 +70,8 @@ Non-negotiable on every page: frontmatter `title` (50–60 characters, matching 
 ### 4. Preview, publish, configure
 
 Print the tree and excerpts from up to three representative pages plus the FAQ, then ask before publishing. Publish every page in one atomic commit, configure the live site, and declare the goals and funnel the stage-1 audit already named. Full method: [Publishing what you wrote](./publishing.md).
+
+<!-- /widget -->
 
 ## What is each stage allowed to change?
 
@@ -115,9 +119,13 @@ The same pipeline pauses at six checkpoints: source detection, structure, enrich
 
 ## Related
 
-- [The four routes into creation](./sources.md) — detection, platform markers, and the method for site, code, migration and idea.
-- [Know the reader before you write the page](./know-the-reader.md) — segments, entry paths, competitors, monetisation, brand signals.
-- [Deciding the page set](./page-set.md) — which pages exist, what each type must contain, and the link graph.
-- [Publishing what you wrote](./publishing.md) — preview, transports, site configuration, the final report.
-- [Writing rules](../writing/writing-rules.md) — the rulebook the generation stage writes to.
-- [Automation](../automation/setting-it-up.md) — the drift guards and monitors to wire once the documentation is live.
+<!-- widget:cards plain cols=2 -->
+
+- [The four routes into creation](./sources.md) — detection, platform markers, and the method for site, code, migration and idea. {plug}
+- [Know the reader before you write the page](./know-the-reader.md) — segments, entry paths, competitors, monetisation, brand signals. {search}
+- [Deciding the page set](./page-set.md) — which pages exist, what each type must contain, and the link graph. {list}
+- [Publishing what you wrote](./publishing.md) — preview, transports, site configuration, the final report. {rocket}
+- [Writing rules](../writing/writing-rules.md) — the rulebook the generation stage writes to. {file-text}
+- [Automation](../automation/setting-it-up.md) — the drift guards and monitors to wire once the documentation is live. {settings}
+
+<!-- /widget -->

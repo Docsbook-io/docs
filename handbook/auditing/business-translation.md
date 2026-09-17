@@ -157,13 +157,17 @@ format stays under it.
 
 ## Related
 
+<!-- widget:cards plain cols=2 -->
+
 - [From finding to change](../writing/from-finding-to-change.md) — what happens
-  to a line of this report once someone accepts it.
+  to a line of this report once someone accepts it. {pen-line}
 - [Did it work?](./did-it-work.md) — the run that comes back and checks the
-  effect line you promised.
+  effect line you promised. {history}
 - [Choosing a lens](./choosing-a-lens.md) — deciding which reading produces the
-  findings in the first place.
+  findings in the first place. {compass}
 - [Analytics](../../analytics/README.md) — where the numbers on the left-hand
-  side of the translation table come from.
+  side of the translation table come from. {bar-chart-3}
 - [Evidence](../evidence/README.md) — the same measured-or-hypothesis
-  distinction, graded across the whole handbook.
+  distinction, graded across the whole handbook. {shield-check}
+
+<!-- /widget -->

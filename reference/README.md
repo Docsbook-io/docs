@@ -1,6 +1,7 @@
 ---
 title: "Reference for the Docsbook MCP tools, API and webhooks"
 description: "Where to find the exact tool names, endpoints, payload fields and event types for driving a Docsbook workspace from an agent, a script or your own backend."
+tldr: "Docsbook exposes three integration surfaces that are not interchangeable: MCP for agents, webhooks for being told when something happened, and the REST API for calling Docsbook from your own backend — all generated from the running server, not hand-written."
 ---
 
 # API & Tools Reference
@@ -9,15 +10,23 @@ Technical reference for developers integrating with Docsbook — programmatic co
 
 The API and MCP sections are generated from the running server — the OpenAPI document at [docsbook.io/openapi.json](https://docsbook.io/openapi.json) and the live tool catalog — so every call listed is a call that exists, with the arguments it actually takes.
 
+<!-- widget:cards -->
+
 ## Pages
 
-- [MCP tools](../mcp/README.md) — every tool on the Docsbook MCP server, one page each: its arguments, the JSON-RPC envelope a client sends, the REST equivalent you can try from the page, and what the call costs
-- [API reference](../rest-api/README.md) — the REST surface: ask your documentation a question, or dispatch any tool by name
-- [Webhooks](./webhooks.md) — event catalog, payload schemas, HMAC signature format
-- [MCP server overview](../agent-ready/mcp.md) — OAuth flow, connection setup, conceptual model
+- [MCP tools](../mcp/README.md) — every tool on the Docsbook MCP server, one page each: its arguments, the JSON-RPC envelope a client sends, the REST equivalent you can try from the page, and what the call costs {plug}
+- [API reference](../rest-api/README.md) — the REST surface: ask your documentation a question, or dispatch any tool by name {terminal}
+- [Webhooks](./webhooks.md) — event catalog, payload schemas, HMAC signature format {webhook}
+- [MCP server overview](../agent-ready/mcp.md) — OAuth flow, connection setup, conceptual model {server}
+
+<!-- /widget -->
+
+<!-- widget:cards plain cols=2 -->
 
 ## Related
 
-- [Get cited by AI and found by search](../seo/README.md)
-- [Answer readers with AI chat](../ai-chat/README.md)
-- [Analytics & insights](../analytics/README.md) — the reports the analytics tools read
+- [Get cited by AI and found by search](../seo/README.md) {search}
+- [Answer readers with AI chat](../ai-chat/README.md) {message-circle}
+- [Analytics & insights](../analytics/README.md) — the reports the analytics tools read {chart-line}
+
+<!-- /widget -->

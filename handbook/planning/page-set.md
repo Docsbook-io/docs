@@ -109,9 +109,13 @@ What remains true is the part that was always doing the work: the switch and the
 
 ## Related
 
-- [Routing the input](./route-the-input.md) — what you are starting from, and the stage this decision sits in.
-- [The four routes into creation](./sources.md) — the starting page set implied by each route.
-- [Know the reader before you write the page](./know-the-reader.md) — the audit that tells you which of these pages the product actually needs.
-- [Writing rules](../writing/writing-rules.md) — the per-page rulebook this plan hands over to.
-- [Publishing what you wrote](./publishing.md) — turning the folder tree into navigation on a live site.
-- [Claims](../evidence/claims.md) — the standing of the fan-out figure above, and the test that settles it for one site.
+<!-- widget:cards plain cols=2 -->
+
+- [Routing the input](./route-the-input.md) — what you are starting from, and the stage this decision sits in. {compass}
+- [The four routes into creation](./sources.md) — the starting page set implied by each route. {plug}
+- [Know the reader before you write the page](./know-the-reader.md) — the audit that tells you which of these pages the product actually needs. {search}
+- [Writing rules](../writing/writing-rules.md) — the per-page rulebook this plan hands over to. {file-text}
+- [Publishing what you wrote](./publishing.md) — turning the folder tree into navigation on a live site. {rocket}
+- [Claims](../evidence/claims.md) — the standing of the fan-out figure above, and the test that settles it for one site. {scale}
+
+<!-- /widget -->

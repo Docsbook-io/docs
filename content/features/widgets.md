@@ -1,6 +1,7 @@
 ---
 title: "Content widgets: rich blocks written in plain markdown"
 description: "Reference for every Docsbook content widget — hero, cards, showcase, journey, tabs, code-group, callout, accordion, stepper, pricing, api, mcp, cta, cta-form and recommendations — and the markers each reads."
+tldr: "A Docsbook content widget turns a marked region of plain markdown into a rich UI block — cards, tabs, an accordion, steps — using two invisible HTML comments, so the same file still reads correctly on GitHub."
 ---
 
 # Content widgets

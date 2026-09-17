@@ -142,10 +142,14 @@ Docsbook also runs two internal suites — a 40-case golden set that scores whic
 - **Model behaviour is version-dependent.** The default reader model, its context window and its refusal behaviour are the provider's to change. The mechanism on this page is ours; the model's compliance with it is not.
 - **Semantic retrieval needs vectors.** Until an index run has completed, retrieval falls to full-text and the doc graph. That is a working chat, not a broken one — but it is not the one described in stage 4.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
-- [AI chat](./chat.md) — the contract: what the assistant can and cannot do.
-- [Search](./search.md) — the lexical index this pipeline shares.
-- [Sources](./sources.md) — what the assistant is allowed to read beyond your pages.
-- [Chat hooks](./chat-hooks.md) — block a question, or hand the model a fact only your systems know.
-- [How Docsbook proves what it claims](../evidence.md) — the rule this page is written to.
+- [AI chat](./chat.md) — the contract: what the assistant can and cannot do. {message-circle}
+- [Search](./search.md) — the lexical index this pipeline shares. {search}
+- [Sources](./sources.md) — what the assistant is allowed to read beyond your pages. {plug}
+- [Chat hooks](./chat-hooks.md) — block a question, or hand the model a fact only your systems know. {webhook}
+- [How Docsbook proves what it claims](../evidence.md) — the rule this page is written to. {scale}
+
+<!-- /widget -->

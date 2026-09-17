@@ -105,7 +105,11 @@ Evidence a model can lift without rewriting. Once a passage is in context, these
 - **Comparison tables** — structured, self-labelling rows survive chunking well and answer "X vs Y" sub-queries directly. Every row must be readable without the surrounding prose.
 - **Sourced claims** — link the authoritative source when stating a standard, a specification, or third-party behaviour.
 
+<!-- widget:callout type=warning -->
+
 Hard constraint: **never invent a statistic, a limit, a price or a quotation to satisfy this step.** Fabricated evidence is the documented failure mode of this whole field. If a number is not known, omit it and say so — a wrong limit inside an assistant's answer is worse than no answer.
+
+<!-- /widget -->
 
 ## How do I avoid wrecking retrieval while polishing for citation?
 
@@ -172,8 +176,12 @@ A report presenting a weak-tier suggestion with the same confidence as a strong-
 
 ## Related
 
-- [Citation signals](../../geo/citation-signals.md) — the same rules paired with the verbatim source line behind each one.
-- [GEO in Docsbook](../../geo/README.md) — the page-level signals Docsbook injects for you, and the honest size of the effect.
-- [Writing rules](./writing-rules.md) — the minimum version of this, inside the rules for writing any page.
-- [Presentation](./presentation.md) — rendered blocks that keep the underlying markdown plain, which is what a crawler reads.
-- [From a finding to a change](./from-finding-to-change.md) — what to do when an audit reports that an assistant cannot answer from a page that covers the topic.
+<!-- widget:cards plain cols=2 -->
+
+- [Citation signals](../../geo/citation-signals.md) — the same rules paired with the verbatim source line behind each one. {sparkles}
+- [GEO in Docsbook](../../geo/README.md) — the page-level signals Docsbook injects for you, and the honest size of the effect. {globe}
+- [Writing rules](./writing-rules.md) — the minimum version of this, inside the rules for writing any page. {file-text}
+- [Presentation](./presentation.md) — rendered blocks that keep the underlying markdown plain, which is what a crawler reads. {layout-grid}
+- [From a finding to a change](./from-finding-to-change.md) — what to do when an audit reports that an assistant cannot answer from a page that covers the topic. {wrench}
+
+<!-- /widget -->

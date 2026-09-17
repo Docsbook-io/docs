@@ -1,6 +1,7 @@
 ---
 title: "Restrict who can read your Docsbook documentation site"
 description: "Switch a workspace to private, then gate it with a shared password or your own Google Workspace, Microsoft Entra ID or Okta OIDC provider."
+tldr: "Docsbook can gate a documentation site behind a shared password or your own Google Workspace, Microsoft Entra ID or Okta OIDC provider — the owner always keeps access regardless of the gate."
 ---
 
 # Private docs: password and SSO
@@ -57,6 +58,8 @@ You'll need, from your identity provider's app registration:
 | JWKS URI | Where Docsbook verifies the identity token's signature |
 | Allowed domain *(optional)* | Restrict sign-in to one email domain, e.g. `acme.com` — anyone outside it is rejected even with valid IdP credentials |
 
+<!-- widget:tabs -->
+
 ### Set up Google Workspace
 
 1. In the [Google Cloud Console](https://console.cloud.google.com), create an **OAuth 2.0 Client ID** (type: Web application)
@@ -89,6 +92,8 @@ You'll need, from your identity provider's app registration:
    - Token endpoint: `https://<your-org>.okta.com/oauth2/v1/token`
    - JWKS URI: `https://<your-org>.okta.com/oauth2/v1/keys`
 
+<!-- /widget -->
+
 ### Save your SSO settings
 
 1. Open the Float Widget → **Settings** → **Privacy & Access**
@@ -107,6 +112,8 @@ details with the `update_access` tool — same fields as above, passed as `visib
 
 ## Troubleshooting
 
+<!-- widget:accordion -->
+
 ### A reader gets "Incorrect password"
 
 Passwords are case-sensitive. Set a new one if you're unsure what was configured — the current
@@ -124,8 +131,14 @@ Double-check the client secret and the three endpoint URLs — a typo in any of 
 handshake. Endpoints must be the exact ones your identity provider issues for your tenant/org, not
 generic placeholders.
 
+<!-- /widget -->
+
+<!-- widget:cards plain cols=2 -->
+
 ## Next steps
 
-- [Manage your documentation site](../getting-started/managing-docs.md) — where the Privacy & Access panel sits among the other settings.
-- [What Docsbook includes and what costs money](./premium.md) — the capabilities around this one, and what draws on the project balance.
-- [MCP tools reference](../../mcp/README.md) — the full argument list for `update_access`.
+- [Manage your documentation site](../getting-started/managing-docs.md) — where the Privacy & Access panel sits among the other settings. {settings}
+- [What Docsbook includes and what costs money](./premium.md) — the capabilities around this one, and what draws on the project balance. {credit-card}
+- [MCP tools reference](../../mcp/README.md) — the full argument list for `update_access`. {plug}
+
+<!-- /widget -->

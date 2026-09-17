@@ -1,6 +1,7 @@
 ---
 title: "Why we stopped using Notion for product documentation"
 description: "A first-person account of where Notion stops working as product docs — search, versioning, hreflang, AI crawling, performance — and what replaced it."
+tldr: "Docsbook's own team moved off Notion for customer-facing docs because Notion pages render client-side with no sitemap or llms.txt, its page history isn't diff-able version control, and translating it meant five workspaces drifting out of sync."
 ---
 
 # Why we stopped using Notion for product documentation
@@ -113,9 +114,13 @@ That is the lesson. Everything else is implementation detail.
 
 [Start free — no credit card](https://docsbook.io/start)
 
+<!-- widget:cards plain cols=2 -->
+
 ## Next steps
 
 - [How to host documentation from a GitHub repository](./how-to-host-docs-from-github.md) — the three paths out of a wiki
 - [Documentation SEO guide](./documentation-seo-guide.md) — the search problem section 1 describes, in full
 - [Multi-language documentation SEO](./multi-language-documentation-seo.md) — the architecture point from section 3
 - [How to get your documentation cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — the crawler problem from section 4
+
+<!-- /widget -->

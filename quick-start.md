@@ -1,6 +1,7 @@
 ---
 title: "Quick start: publish a documentation site with Docsbook"
 description: "Generate a Docsbook draft from a repository, a website or an idea, review it before signing in, and publish it to a public URL you can share."
+tldr: "Docsbook publishes a documentation site from one source — a GitHub repository, a website URL, or a sentence about your product — in four steps: generate a draft, review it, sign in, and get a public URL with search built in."
 ---
 
 # Quick start: publish a documentation site with Docsbook

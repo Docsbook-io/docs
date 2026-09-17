@@ -1,6 +1,7 @@
 ---
 title: "Documentation versioning: patterns, and how Docsbook handles it"
 description: "The common ways teams version their docs — URL-path versions, a version switcher, branch-per-version — and which one to use with Docsbook, which publishes one version per branch."
+tldr: "Docsbook publishes one version of your documentation — the current state of the connected branch — with no built-in switcher; run several versions by creating one workspace per branch or repository."
 ---
 
 # Documentation versioning
@@ -34,8 +35,12 @@ This reproduces the "separate sites per version" pattern above. It does not give
 
 If your real need is smaller — a handful of "changed in vX" callouts rather than a fully separate historical copy of the docs — the inline-note pattern above usually costs less to maintain than standing up a second workspace, and works today with no extra setup: just write the note directly on the current page.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Next steps
 
-- [Manage your documentation site](../getting-started/managing-docs.md) — everyday publishing, once your site is live.
-- [Set up a custom domain](../advanced/custom-domain.md) — needed if you are running one workspace per version.
-- [Create your first documentation site](../getting-started/creating-docs.md) — for setting up the second workspace.
+- [Manage your documentation site](../getting-started/managing-docs.md) — everyday publishing, once your site is live. {settings}
+- [Set up a custom domain](../advanced/custom-domain.md) — needed if you are running one workspace per version. {globe}
+- [Create your first documentation site](../getting-started/creating-docs.md) — for setting up the second workspace. {rocket}
+
+<!-- /widget -->

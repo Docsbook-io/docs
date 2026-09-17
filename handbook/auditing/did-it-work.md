@@ -132,10 +132,13 @@ writing anything:
 | **Approve in chat** | Show the before and after per change; apply only what is approved | A handful of changes, a person present, no review process worth the ceremony |
 | **Direct update** | Write straight to the source | The owner explicitly asked, the changes are mechanical, and they are reversible |
 
-Do not guess. A direct write into a repository somebody reviews is not a small
-mistake, and a pull request nobody wanted adds a week of latency to a one-line
-fix. [Publishing](../planning/publishing.md) covers the mechanics of each
-route.
+<!-- widget:callout type=warning -->
+
+Do not guess. A direct write into a repository somebody reviews is not a small mistake, and a pull request nobody wanted adds a week of latency to a one-line fix.
+
+<!-- /widget -->
+
+[Publishing](../planning/publishing.md) covers the mechanics of each route.
 
 If the answer is a pull request, **one PR per coherent group of findings, not
 one per line**. The description says which number is expected to move and by
@@ -213,10 +216,14 @@ mid-run.
 
 ## Related
 
+<!-- widget:cards plain cols=2 -->
+
 - [Business translation](./business-translation.md) — the effect line you
-  promised in the report is the number this page comes back to check.
+  promised in the report is the number this page comes back to check. {scale}
 - [Goals and funnels](./goals-and-funnels.md) — a pre-declared success
-  criterion is the only kind that cannot be chosen after the fact.
+  criterion is the only kind that cannot be chosen after the fact. {target}
 - [Monitoring](../automation/monitoring.md) — making the recheck recur without
-  anyone remembering.
-- [Metrics](./metrics.md) — what the before and after are actually made of.
+  anyone remembering. {bell}
+- [Metrics](./metrics.md) — what the before and after are actually made of. {chart-line}
+
+<!-- /widget -->

@@ -173,9 +173,13 @@ Cut to five actionable items; everything below the cut is one line with a count.
 
 ## Related
 
-- [Internal linking](./internal-linking.md) — the same corpus read as a graph: what is reachable, and from where.
-- [Semantic SEO](./semantic-seo.md) — whether the concepts under the tree are covered, as opposed to where they sit.
-- [Search intent](./search-intent.md) — the page-type question asked one query at a time.
-- [Jobs to be done](./jobs-to-be-done.md) — why a persona-shaped tree produces pages nobody searches for.
-- [Content detectors](../auditing/content-detectors.md) — the per-page type rules this reading deliberately does not repeat.
-- [Deciding the page set](../planning/page-set.md) — the structure a new site gets, before any of this applies.
+<!-- widget:cards plain cols=2 -->
+
+- [Internal linking](./internal-linking.md) — the same corpus read as a graph: what is reachable, and from where. {git-fork}
+- [Semantic SEO](./semantic-seo.md) — whether the concepts under the tree are covered, as opposed to where they sit. {network}
+- [Search intent](./search-intent.md) — the page-type question asked one query at a time. {search}
+- [Jobs to be done](./jobs-to-be-done.md) — why a persona-shaped tree produces pages nobody searches for. {target}
+- [Content detectors](../auditing/content-detectors.md) — the per-page type rules this reading deliberately does not repeat. {list-checks}
+- [Deciding the page set](../planning/page-set.md) — the structure a new site gets, before any of this applies. {layout-grid}
+
+<!-- /widget -->

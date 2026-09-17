@@ -96,6 +96,8 @@ seconds over `fetch`, which does not survive a tab close — read time, heading
 views and exits are the events that must survive it, so they take the beacon
 path instead.
 
+<!-- widget:callout type=note -->
+
 **Then every segment is clipped at 300 seconds before anything sums it.** This
 is the single most important number on this page. The emitter keeps counting
 while a desktop tab sits in the background, and on a sweep of 11,176 real
@@ -104,6 +106,8 @@ sessions across 7 workspaces, 40 individual segments exceeded two hours, the
 time roughly thirtyfold — 1,268,422 seconds against 42,160 once clipped. The
 same clip is applied by every surface that quotes a time figure, so the panel,
 the per-page column, the goals layer and the MCP tools cannot disagree.
+
+<!-- /widget -->
 
 Per-page average read time divides the clipped total by **segment count**, not
 by visit count: a reader who tabbed away and back contributes two segments to
@@ -230,10 +234,14 @@ your own counsel has to decide:
 - **Thirty days is a hard ceiling.** No year-over-year, no seasonal read, and no
   cohort longer than four weeks is possible from this data at all.
 
+<!-- widget:cards plain horizontal -->
+
 ## Related
 
-- [Tracked events reference](./tracking/events.md) — the 36 events this page describes
-- [Analytics overview](./tracking/overview.md) — the panel these definitions produce
-- [Read time](./reports/read-time.md) — the clip, applied to one report
-- [Goals and funnels](./reports/goals-and-funnels.md) — what a visit is judged to have achieved
-- [Countries](./reports/countries.md) — geo resolution and its limits in practice
+- [Tracked events reference](./tracking/events.md) — the 36 events this page describes {list}
+- [Analytics overview](./tracking/overview.md) — the panel these definitions produce {chart-line}
+- [Read time](./reports/read-time.md) — the clip, applied to one report {gauge}
+- [Goals and funnels](./reports/goals-and-funnels.md) — what a visit is judged to have achieved {target}
+- [Countries](./reports/countries.md) — geo resolution and its limits in practice {globe}
+
+<!-- /widget -->

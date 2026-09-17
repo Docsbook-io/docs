@@ -13,7 +13,7 @@ The four are not alternatives. They answer four different questions an agent ask
 <!-- widget:cards -->
 
 - [Docs Skills](./skills.md) — the SKILL.md catalog: four orchestrator skills that teach any agent how documentation work is actually done, plus how they are discovered, versioned and run
-- [MCP Server](./mcp.md) — 140 typed tools over the Model Context Protocol: ask the one `docsbook_expert` agent and get instructions back, read pages, commit them, read analytics, change settings, start agent runs
+- [MCP Server](./mcp.md) — every tool the server publishes, over the Model Context Protocol: ask the one `docsbook_expert` agent and get instructions back, read pages, commit them, read analytics, change settings
 - [Source of Truth](./source-of-truth.md) — the document graph: pages, headings, links and anchors as nodes and edges an agent can traverse instead of grepping
 - [MCP security](./mcp-security.md) — the authentication model, token scopes, what the server stores, and the compliance gaps stated plainly
 - [llms.txt](../geo/llms-txt.md) — the machine-readable index of the published site, for an agent with no token and no checkout

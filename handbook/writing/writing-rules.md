@@ -138,9 +138,13 @@ A rewrite is the riskier half of this job, because the page already works for so
 
 Any unchecked box is a defect being born. Fixing it here is an order of magnitude cheaper than fixing it in a queue three months from now.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Next steps
 
-- [Writing for retrieval](./retrieval.md) — the passage-level rules, what the evidence supports, and the popular tactic that backfires.
-- [Asking for the sale](./conversion.md) — which closing action a page gets, derived from the product's monetisation model.
-- [Presentation](./presentation.md) — turning a flat section into a rendered block, and the rules for images and diagrams.
-- [From a finding to a change](./from-finding-to-change.md) — what to do when an audit has already told you what is wrong.
+- [Writing for retrieval](./retrieval.md) — the passage-level rules, what the evidence supports, and the popular tactic that backfires. {search}
+- [Asking for the sale](./conversion.md) — which closing action a page gets, derived from the product's monetisation model. {credit-card}
+- [Presentation](./presentation.md) — turning a flat section into a rendered block, and the rules for images and diagrams. {image}
+- [From a finding to a change](./from-finding-to-change.md) — what to do when an audit has already told you what is wrong. {wrench}
+
+<!-- /widget -->

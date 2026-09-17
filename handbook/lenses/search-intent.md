@@ -204,9 +204,13 @@ Restructures, splits, merges, redirects and every rewrite of a title, descriptio
 
 ## Related
 
-- [Semantic SEO](./semantic-seo.md) — whether the corpus names the concepts at all, before asking what shape the page is.
-- [User language](./user-language.md) — the words readers use for the thing, which is upstream of what they type.
-- [Content architecture](./content-architecture.md) — the type mix across the whole corpus, when one page being the wrong type turns out to be the site's shape.
-- [Internal linking](./internal-linking.md) — when the right-shaped page exists and nothing points at it.
-- [How SEO works in Docsbook](../../seo/how-it-works.md) — what gets a page indexed and ranked in the first place.
-- [Writing for retrieval](../writing/retrieval.md) — answer-first structure and standalone chunks, which is what the format findings here turn into.
+<!-- widget:cards plain cols=2 -->
+
+- [Semantic SEO](./semantic-seo.md) — whether the corpus names the concepts at all, before asking what shape the page is. {network}
+- [User language](./user-language.md) — the words readers use for the thing, which is upstream of what they type. {message-circle}
+- [Content architecture](./content-architecture.md) — the type mix across the whole corpus, when one page being the wrong type turns out to be the site's shape. {list}
+- [Internal linking](./internal-linking.md) — when the right-shaped page exists and nothing points at it. {git-fork}
+- [How SEO works in Docsbook](../../seo/how-it-works.md) — what gets a page indexed and ranked in the first place. {search}
+- [Writing for retrieval](../writing/retrieval.md) — answer-first structure and standalone chunks, which is what the format findings here turn into. {sparkles}
+
+<!-- /widget -->

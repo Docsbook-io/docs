@@ -386,3 +386,14 @@ Any link built by generating an anchor from a heading will drift from the anchor
 **Test it** Generate the anchor for every heading with your own code, render the same corpus, and diff the two sets. If you have never done it, assume single-digit percent and check the most-used page first.
 
 **Cost of being wrong** Deep links in search results and AI answers that land at the top of the page instead of the section — invisible to every test, visible to every reader.
+
+## Next steps
+
+<!-- widget:cards plain cols=2 -->
+
+- [Sources](./sources.md) — the references each claim above stands on, with the line quoted verbatim. {book-open}
+- [Evidence](./README.md) — how a claim earns `established`, `contested` or `hypothesis`. {scale}
+- [GEO and AI search](../lenses/geo-ai-search.md) — the audit that applies most of the AI-search claims above to a real corpus. {sparkles}
+- [E-E-A-T and trust](../lenses/eeat-trust.md) — the trust and authorship claims above, turned into a page-by-page audit. {shield}
+
+<!-- /widget -->

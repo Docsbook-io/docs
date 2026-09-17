@@ -197,9 +197,13 @@ Then hand over: edges to add, anchors to rewrite and navigation changes to [Writ
 
 ## Related
 
-- [Content architecture](./content-architecture.md) — the intended tree, as opposed to the graph the links actually make.
-- [Semantic SEO](./semantic-seo.md) — whether the cluster's concepts are all present before asking whether they are joined.
-- [Programmatic SEO](./programmatic-seo.md) — hub-and-member families, and what happens to one with no inbound body links.
-- [Backlinks and digital PR](./backlinks-digital-pr.md) — the other direction: links pointing in from other sites.
-- [Writing for retrieval](../writing/retrieval.md) — what a passage has to do once an edge has brought it into an answer.
-- [CI checks](../automation/ci-checks.md) — running a broken-link and orphan scan on every pull request.
+<!-- widget:cards plain cols=2 -->
+
+- [Content architecture](./content-architecture.md) — the intended tree, as opposed to the graph the links actually make. {list}
+- [Semantic SEO](./semantic-seo.md) — whether the cluster's concepts are all present before asking whether they are joined. {network}
+- [Programmatic SEO](./programmatic-seo.md) — hub-and-member families, and what happens to one with no inbound body links. {layout-grid}
+- [Backlinks and digital PR](./backlinks-digital-pr.md) — the other direction: links pointing in from other sites. {globe}
+- [Writing for retrieval](../writing/retrieval.md) — what a passage has to do once an edge has brought it into an answer. {search}
+- [CI checks](../automation/ci-checks.md) — running a broken-link and orphan scan on every pull request. {code}
+
+<!-- /widget -->

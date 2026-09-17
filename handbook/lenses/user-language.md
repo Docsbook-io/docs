@@ -195,9 +195,13 @@ Then hand over: synonyms, retitles and glossary entries to [Writing rules](../wr
 
 ## Related
 
-- [Jobs to be done](./jobs-to-be-done.md) — the situation behind the words, once you have collected them.
-- [Semantic SEO](./semantic-seo.md) — the concepts themselves, as opposed to what they are called.
-- [Search intent](./search-intent.md) — what shape of answer the query wants, once it matches anything at all.
-- [Reader behaviour](../auditing/behaviour.md) — failed and rejected searches as counts, and the per-query verdict.
-- [Writing for retrieval](../writing/retrieval.md) — where in a page a word has to appear for retrieval to read it.
-- [AI chat](../../ai-chat/README.md) — the assistant whose unanswered questions are the strongest source on this list.
+<!-- widget:cards plain cols=2 -->
+
+- [Jobs to be done](./jobs-to-be-done.md) — the situation behind the words, once you have collected them. {target}
+- [Semantic SEO](./semantic-seo.md) — the concepts themselves, as opposed to what they are called. {network}
+- [Search intent](./search-intent.md) — what shape of answer the query wants, once it matches anything at all. {search}
+- [Reader behaviour](../auditing/behaviour.md) — failed and rejected searches as counts, and the per-query verdict. {search}
+- [Writing for retrieval](../writing/retrieval.md) — where in a page a word has to appear for retrieval to read it. {sparkles}
+- [AI chat](../../ai-chat/README.md) — the assistant whose unanswered questions are the strongest source on this list. {message-circle}
+
+<!-- /widget -->

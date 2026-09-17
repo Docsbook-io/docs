@@ -1,6 +1,7 @@
 ---
 title: "AI documentation platforms compared: four managed tools"
 description: "What AI is actually implemented in Docsbook, Mintlify, GitBook and ReadMe — chat, translation, MCP and llms.txt — and where each of the four falls short."
+tldr: "Docsbook, Mintlify, GitBook and ReadMe all ship an AI chatbot, but only Docsbook lets you bring your own AI provider, exposes pre/post-LLM hooks, and ships MCP plus 15-language translation together."
 ---
 
 # AI documentation platforms compared: four managed tools
@@ -92,10 +93,14 @@ Because prices copied into a comparison page are the sentences that outlive thei
 
 [Start free — no credit card](https://docsbook.io/start)
 
+<!-- widget:cards plain cols=2 -->
+
 ## Next steps
 
-- [Mintlify vs Docsbook](./mintlify-vs-docsbook.md) — the one-on-one, if Mintlify is your other candidate
-- [GitBook vs Docsbook](./gitbook-vs-docsbook.md) — the one-on-one, if GitBook is
-- [Docusaurus alternatives in 2026: 9 platforms compared](./docusaurus-vs-docsbook.md) — including the self-hosted options
-- [MCP server for documentation](./mcp-server-for-documentation.md) — what an agent does with your docs once it can read them
-- [llms.txt: the complete guide](./llms-txt-guide.md) — the file two of these four generate for you
+- [Mintlify vs Docsbook](./mintlify-vs-docsbook.md) — the one-on-one, if Mintlify is your other candidate {scale}
+- [GitBook vs Docsbook](./gitbook-vs-docsbook.md) — the one-on-one, if GitBook is {scale}
+- [Docusaurus alternatives in 2026: 9 platforms compared](./docusaurus-vs-docsbook.md) — including the self-hosted options {scale}
+- [MCP server for documentation](./mcp-server-for-documentation.md) — what an agent does with your docs once it can read them {plug}
+- [llms.txt: the complete guide](./llms-txt-guide.md) — the file two of these four generate for you {file-text}
+
+<!-- /widget -->

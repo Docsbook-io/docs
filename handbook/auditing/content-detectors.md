@@ -16,6 +16,8 @@ Three rules govern all of them.
 
 None of these detectors edits a file. They report. What the replacement text says is a separate decision with its own rules — see [writing rules](../writing/writing-rules.md).
 
+<!-- widget:accordion -->
+
 ## Which kind of page is this? Page type
 
 Classify first, then check. Never flag a page for violating the rules of a type it is not: a reference page is supposed to be a flat list of entries, and "improving" it into a tutorial breaks it for everyone who arrived to look one thing up. Confirm any naming convention the project uses — `/guides/` meaning how-to, `/concepts/` meaning explanation — before flagging navigation.
@@ -215,11 +217,17 @@ Skip this entirely when one language is in scope. Confirm which language is the 
 
 [Translations](../../translation/README.md) covers how they are produced and kept in step.
 
+<!-- /widget -->
+
 ## Related
 
-- [Reading the numbers](./metrics.md) — what put this page in front of you, and how far the number can be trusted
-- [Reader behaviour](./behaviour.md) — the readings that answer unfindable rather than unhelpful
-- [Choosing a lens](./choosing-a-lens.md) — when detectors are the right instrument and when they are not
-- [Writing rules](../writing/writing-rules.md) — what the replacement text says once a detector has fired
-- [Presentation](../writing/presentation.md) — tables, callouts, code blocks and media as the reader sees them
-- [External checks](./external-checks.md) — the claims that rot without anyone touching the page
+<!-- widget:cards plain cols=2 -->
+
+- [Reading the numbers](./metrics.md) — what put this page in front of you, and how far the number can be trusted {chart-line}
+- [Reader behaviour](./behaviour.md) — the readings that answer unfindable rather than unhelpful {search}
+- [Choosing a lens](./choosing-a-lens.md) — when detectors are the right instrument and when they are not {compass}
+- [Writing rules](../writing/writing-rules.md) — what the replacement text says once a detector has fired {pen-line}
+- [Presentation](../writing/presentation.md) — tables, callouts, code blocks and media as the reader sees them {layout}
+- [External checks](./external-checks.md) — the claims that rot without anyone touching the page {globe}
+
+<!-- /widget -->

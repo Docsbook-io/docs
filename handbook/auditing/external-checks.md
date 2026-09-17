@@ -111,11 +111,15 @@ Two rules about when to run it at all. Do not run it as your first content exerc
 
 ## Related
 
-- [Choosing a lens](./choosing-a-lens.md) — when an external check is the right instrument
-- [Content detectors](./content-detectors.md) — the freshness detector, for claims about your own product
-- [Reader behaviour](./behaviour.md) — where the demand evidence for a coverage gap comes from
-- [Drift](../automation/drift.md) — catching your own product's claims going stale, automatically
-- [Monitoring](../automation/monitoring.md) — turning a check you keep re-running into one that runs itself
-- [AI search and citability](../lenses/geo-ai-search.md) — how far a spot-check of assistant answers may be reported
-- [Claims](../evidence/claims.md) — the standing of each claim behind the assistant audit, and the test attached to it
-- [Sources](../planning/sources.md) — choosing what a page rests on in the first place
+<!-- widget:cards plain cols=2 -->
+
+- [Choosing a lens](./choosing-a-lens.md) — when an external check is the right instrument {compass}
+- [Content detectors](./content-detectors.md) — the freshness detector, for claims about your own product {file-text}
+- [Reader behaviour](./behaviour.md) — where the demand evidence for a coverage gap comes from {search}
+- [Drift](../automation/drift.md) — catching your own product's claims going stale, automatically {git-compare}
+- [Monitoring](../automation/monitoring.md) — turning a check you keep re-running into one that runs itself {bell}
+- [AI search and citability](../lenses/geo-ai-search.md) — how far a spot-check of assistant answers may be reported {bot}
+- [Claims](../evidence/claims.md) — the standing of each claim behind the assistant audit, and the test attached to it {shield-check}
+- [Sources](../planning/sources.md) — choosing what a page rests on in the first place {book-open}
+
+<!-- /widget -->

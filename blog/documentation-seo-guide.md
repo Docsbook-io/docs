@@ -1,6 +1,7 @@
 ---
 title: "Documentation SEO: how to rank developer documentation"
 description: "How developer documentation earns high-intent search traffic — page structure, targeting, speed, and the content patterns that win the queries buyers type."
+tldr: "Docsbook argues documentation ranks on trust and completeness rather than recency, and automates the mechanical SEO prerequisites — fast static pages, structured data, meta tags, llms.txt — leaving the writing to you."
 ---
 
 # Documentation SEO: how to rank developer documentation
@@ -98,9 +99,13 @@ None of the above promises a ranking, and nothing can. What the technical work d
 
 [Start free — no credit card](https://docsbook.io/start)
 
+<!-- widget:cards plain cols=2 -->
+
 ## Next steps
 
-- [JSON-LD for documentation](./json-ld-for-documentation.md) — the structured-data section in full, including which rich results no longer exist
-- [Multi-language documentation SEO](./multi-language-documentation-seo.md) — per-locale URLs and hreflang, done properly
-- [How to get your documentation cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — the assistant-facing half of discovery
-- [Documentation analytics: the metrics worth tracking](./documentation-analytics-what-to-track.md) — how to tell whether any of this worked
+- [JSON-LD for documentation](./json-ld-for-documentation.md) — the structured-data section in full, including which rich results no longer exist {code}
+- [Multi-language documentation SEO](./multi-language-documentation-seo.md) — per-locale URLs and hreflang, done properly {languages}
+- [How to get your documentation cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — the assistant-facing half of discovery {message-square}
+- [Documentation analytics: the metrics worth tracking](./documentation-analytics-what-to-track.md) — how to tell whether any of this worked {chart-line}
+
+<!-- /widget -->

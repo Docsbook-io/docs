@@ -131,9 +131,13 @@ Route them as filed issues rather than messages: they are not urgent, and they n
 
 ## Related
 
-- [Setting up automation](./setting-it-up.md) — the interview that decides which of these routes you actually want.
-- [CI checks and repository hooks](./ci-checks.md) — where the diff-triggered guards run.
-- [Monitors and alerts](./monitoring.md) — thresholds and volume floors for the scheduled half.
-- [Events and handlers](./events.md) — what the platform emits, and how a handler should react.
-- [External checks](../auditing/external-checks.md) — the comparison method behind the site and third-party routes.
-- [Goals and funnels](../auditing/goals-and-funnels.md) — what a matcher is, and who owns the declaration.
+<!-- widget:cards plain cols=2 -->
+
+- [Setting up automation](./setting-it-up.md) — the interview that decides which of these routes you actually want. {settings}
+- [CI checks and repository hooks](./ci-checks.md) — where the diff-triggered guards run. {git-branch}
+- [Monitors and alerts](./monitoring.md) — thresholds and volume floors for the scheduled half. {bell}
+- [Events and handlers](./events.md) — what the platform emits, and how a handler should react. {zap}
+- [External checks](../auditing/external-checks.md) — the comparison method behind the site and third-party routes. {globe}
+- [Goals and funnels](../auditing/goals-and-funnels.md) — what a matcher is, and who owns the declaration. {target}
+
+<!-- /widget -->

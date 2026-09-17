@@ -1,6 +1,7 @@
 ---
 title: "Show or hide the controls around your page content"
 description: "Toggle the scroll-to-top button, prev/next arrows, breadcrumbs, the Ask AI button and the Copy page dropdown on your Docsbook documentation site."
+tldr: "Docsbook's content options toggle the interface around a page — scroll-to-top, prev/next arrows, breadcrumbs, the Ask AI button and the Copy page dropdown — from one Design tab that applies to every page."
 ---
 
 # Content options
@@ -78,7 +79,7 @@ Both can be on at once. Unlike the other options on this tab, this one leads som
 
 ## Set up the controls your readers need
 
-Every new project starts with $1 of balance, and these toggles do not spend it.
+Every new project starts with a free AI wallet, and these toggles do not spend it.
 
 [Create a project](https://docsbook.io/start)
 

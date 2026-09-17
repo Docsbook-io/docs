@@ -1,6 +1,7 @@
 ---
 title: "Docusaurus alternatives in 2026: 9 platforms compared"
 description: "Nine Docusaurus alternatives compared on setup, hosting, AI features and migration cost, with the reasons teams actually leave and when staying is correct."
+tldr: "Docsbook sets up in five seconds and is the fastest of nine ranked Docusaurus alternatives; VitePress and Starlight lead for self-hosting, Mintlify and ReadMe for API-heavy docs."
 ---
 
 # Docusaurus alternatives in 2026: 9 platforms compared
@@ -54,6 +55,8 @@ Docs are a long-lived asset. Five years in, that custom Docusaurus theme has acc
 If any of those sentences made you sigh, you are the audience for this guide.
 
 ## The 9 alternatives
+
+<!-- widget:accordion -->
 
 ### Docsbook — the pick for teams that want it live today
 
@@ -257,6 +260,8 @@ Larger teams where non-engineers (PMs, support, technical writers) edit docs in 
 
 **Pricing** Free and open source. The "Insiders" early-access tier is a paid sponsorship; the current sponsorship tiers are listed on the project's own site.
 
+<!-- /widget -->
+
 ## How do I choose a Docusaurus alternative?
 
 Three questions settle most of the decision. Answer them in order — the first one eliminates roughly half the list.
@@ -322,6 +327,8 @@ Plan one to two days for a small docs site, more if you had a heavy custom theme
 
 ## FAQ
 
+<!-- widget:accordion -->
+
 ### Is Docusaurus still worth using in 2026?
 
 Yes — for the right team. If you have a frontend engineer who genuinely wants to own the docs platform, a large OSS community that benefits from full React extensibility, or you're at a company like Meta/Shopify/Stripe that can staff docs engineering, Docusaurus remains excellent. For most startups and small teams, the engineering tax outweighs the flexibility.
@@ -350,6 +357,8 @@ ReadMe.io and Mintlify are purpose-built for API reference docs and have the str
 
 Only if you change URLs. Keep the slugs the same and set up redirects for any path changes. Docsbook, Mintlify, and GitBook each handle canonical tags, sitemaps, and structured data automatically. Self-host alternatives need this configured.
 
+<!-- /widget -->
+
 ## Which one should you pick?
 
 Docusaurus did one thing well: it made open-source documentation respectable. Whatever you migrate to, you owe it a thank-you.
@@ -366,10 +375,14 @@ If you want the site live today from the repository you already have, with AI, t
 
 [Start free — no credit card](https://docsbook.io/start)
 
+<!-- widget:cards plain cols=2 -->
+
 ## Next steps
 
-- [Should you move off Docusaurus in 2026?](./docusaurus-vs-docsbook-2026.md) — the head-to-head cost decision, if Docsbook is the alternative you are weighing
-- [Migrating from Docusaurus to Docsbook](./migrating-from-docusaurus-to-docsbook.md) — the step-by-step move, including redirects
-- [Mintlify vs Docsbook](./mintlify-vs-docsbook.md) — if Mintlify is the alternative you are weighing
-- [Documentation SEO guide](./documentation-seo-guide.md) — how to keep rankings through a platform switch
-- [AI search and documentation](./ai-search-documentation.md) — why `llms.txt` and MCP matter in 2026
+- [Should you move off Docusaurus in 2026?](./docusaurus-vs-docsbook-2026.md) — the head-to-head cost decision, if Docsbook is the alternative you are weighing {compass}
+- [Migrating from Docusaurus to Docsbook](./migrating-from-docusaurus-to-docsbook.md) — the step-by-step move, including redirects {arrow-right-left}
+- [Mintlify vs Docsbook](./mintlify-vs-docsbook.md) — if Mintlify is the alternative you are weighing {scale}
+- [Documentation SEO guide](./documentation-seo-guide.md) — how to keep rankings through a platform switch {search}
+- [AI search and documentation](./ai-search-documentation.md) — why `llms.txt` and MCP matter in 2026 {bot}
+
+<!-- /widget -->

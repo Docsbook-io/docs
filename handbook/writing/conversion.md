@@ -53,6 +53,8 @@ If the classification is sales-led but the source clearly shows a self-serve sig
 
 ## What does each model's pattern look like?
 
+<!-- widget:accordion -->
+
 ### paid — the price must be findable in one click
 
 - A **pricing page** with a plan comparison table (plan, price, who it is for, key limits), built **only** from prices found on the source. A plan whose price was not found says "contact sales" — never a guessed number.
@@ -86,6 +88,8 @@ Name the free tier's real limits where the source states them. **A limit is the 
 - Use-cases carry the weight: each job story ends with the demo action framed for that segment.
 - The FAQ answers the procurement questions the source supports — security, single sign-on, data residency, onboarding, support commitments. Never invent an answer; omit the question instead.
 - **Never state or approximate a price.** "Pricing depends on team size — talk to sales" is the honest answer.
+
+<!-- /widget -->
 
 ## Rules that hold for every model
 
@@ -137,7 +141,11 @@ An action nobody measured is an assumption. Declaring what a reader was supposed
 
 ## Related
 
-- [Writing rules](./writing-rules.md) — the dead-end rule and the one-action rule, in the context of writing any page.
-- [Goals and funnels](../auditing/goals-and-funnels.md) — measuring whether readers do the thing the page asks.
-- [From a finding to a change](./from-finding-to-change.md) — what to do when an audit reports that the documentation supports but does not sell.
-- [Reading the source](../planning/sources.md) — where the prices and limits on this page have to come from.
+<!-- widget:cards plain cols=2 -->
+
+- [Writing rules](./writing-rules.md) — the dead-end rule and the one-action rule, in the context of writing any page. {file-text}
+- [Goals and funnels](../auditing/goals-and-funnels.md) — measuring whether readers do the thing the page asks. {target}
+- [From a finding to a change](./from-finding-to-change.md) — what to do when an audit reports that the documentation supports but does not sell. {wrench}
+- [Reading the source](../planning/sources.md) — where the prices and limits on this page have to come from. {plug}
+
+<!-- /widget -->

@@ -303,10 +303,17 @@ Name the owner of every item: page rewrites and atom insertion to [Writing for r
 
 ## Related
 
-- [Writing for retrieval](../writing/retrieval.md) — the rules this reading only ever detects the absence of.
-- [Claims](../evidence/claims.md) and [Sources](../evidence/sources.md) — the standing of every reported figure on this page, the test attached to each, and the talks the funnel section comes from.
-- [Choosing a lens](../auditing/choosing-a-lens.md) — when this pass is the right one to run.
-- [E-E-A-T and trust](./eeat-trust.md) — the other half of why an engine prefers one source over another.
-- [GEO](../../geo/README.md), [llms.txt](../../geo/llms-txt.md), [Citation signals](../../geo/citation-signals.md) — what Docsbook already emits, and what the evidence for each is worth.
-- [AEO](../../aeo/README.md) — answer markup, and when it is genuinely warranted.
-- [Indexing](../../seo/indexing.md) — the stage before any of this matters.
+<!-- widget:cards plain cols=2 -->
+
+- [Writing for retrieval](../writing/retrieval.md) — the rules this reading only ever detects the absence of. {file-text}
+- [Claims](../evidence/claims.md) — the standing of every reported figure on this page, and the test attached to each. {scale}
+- [Sources](../evidence/sources.md) — the talks the funnel section comes from. {book-open}
+- [Choosing a lens](../auditing/choosing-a-lens.md) — when this pass is the right one to run. {compass}
+- [E-E-A-T and trust](./eeat-trust.md) — the other half of why an engine prefers one source over another. {shield}
+- [GEO](../../geo/README.md) — what Docsbook already emits, and what the evidence for each is worth. {sparkles}
+- [llms.txt](../../geo/llms-txt.md) — what Docsbook already emits, and what the evidence for each is worth. {file-text}
+- [Citation signals](../../geo/citation-signals.md) — what Docsbook already emits, and what the evidence for each is worth. {quote}
+- [AEO](../../aeo/README.md) — answer markup, and when it is genuinely warranted. {list-checks}
+- [Indexing](../../seo/indexing.md) — the stage before any of this matters. {search}
+
+<!-- /widget -->

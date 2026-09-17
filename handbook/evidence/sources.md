@@ -176,3 +176,13 @@ Four measurements, each taken on a stated date against a stated subject. They ar
 ## Using this registry
 
 A source is worth adding when somebody needed a citation and could not find one. That is a signal. A registry does not grow by being filled in advance — a hundred references nobody cites makes the handbook look researched and makes the fifteen that matter unreadable.
+
+## Next steps
+
+<!-- widget:cards plain cols=2 -->
+
+- [Claims](./claims.md) — the graded claims each of these references stands under. {scale}
+- [Evidence](./README.md) — how a source's kind decides what it can settle. {info}
+- [GEO and AI search](../lenses/geo-ai-search.md) — the audit that leans most heavily on the AI-search sources above. {sparkles}
+
+<!-- /widget -->

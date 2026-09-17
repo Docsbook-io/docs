@@ -1,6 +1,7 @@
 ---
 title: "How Docsbook publishes documentation machines can cite"
 description: "Docsbook publishes the documentation you already have to a site people and AI assistants can read, and reports what those readers did next."
+tldr: "Docsbook publishes your existing Markdown as a public site machines can read, then does three jobs with it: get it found in search, get it quoted by AI assistants, and report which pages readers actually used."
 ---
 
 # How Docsbook publishes documentation machines can cite
@@ -16,7 +17,7 @@ Most companies with a product, customers and an ad budget still cannot be recomm
 | 1. Connect a source | Reads a GitHub repository, scans a website, or drafts from a sentence about your product | A draft site you can open before you sign in |
 | 2. Index | Parses Markdown and frontmatter, extracts headings, links and metadata, builds a navigable graph | Full-text search, a per-page outline, links between files resolved |
 | 3. Publish | Serves the site at `docsbook.io/{owner}/{repo}`, rendered on the server | A public URL with sitemap, OpenGraph and JSON-LD |
-| 4. Expose to machines | Serves `llms.txt` and an MCP server with 140 tools | Assistants and agents can read your docs, and agents can edit them |
+| 4. Expose to machines | Serves `llms.txt` and an MCP server exposing the tool list your token returns | Assistants and agents can read your docs, and agents can edit them |
 | 5. Sync | Re-checks GitHub when the site is visited and re-indexes what changed | Pages match the repository with no build step and no CI pipeline |
 | 6. Measure | Records page views, searches, events, feedback and AI usage | Reports on which pages are read and where readers stop |
 
@@ -33,7 +34,7 @@ An AI assistant recommending a product quotes what it can read and verify cheapl
 Three surfaces do this work:
 
 - **`llms.txt`** — a plain-text index of your documentation at the site root, for AI agents that look for one. See [llms.txt](./geo/llms-txt.md).
-- **MCP server** — 140 tools over the Model Context Protocol, so Claude Code, Cursor or ChatGPT can ask the `docsbook_expert` agent what to do and get instructions back, read your pages, search them, and commit changes back. See [MCP server](./agent-ready/mcp.md).
+- **MCP server** — the tool list your token returns over the Model Context Protocol (the MCP section of your admin panel reads the live count), so Claude Code, Cursor or ChatGPT can ask the `docsbook_expert` agent what to do and get instructions back, read your pages, search them, and commit changes back. See [MCP server](./agent-ready/mcp.md).
 - **AEO markup** — FAQPage, HowTo and speakable JSON-LD generated from your Markdown, for answer boxes and voice assistants. See [AEO](./aeo/README.md).
 
 ## Analytics: which pages are read and where readers stop
@@ -67,7 +68,7 @@ Docsbook meters four kinds of AI work against each project's own balance:
 - **AI Translations** — translating a page into another language.
 - **Semantic Index** — building the embeddings the AI chat retrieves from.
 
-It also meters **machine crawling** — the pages AI and search bots read from your published site, past the monthly allowance every plan includes. Hosting, a custom domain and its TLS certificate, people reading, editors, GitHub sync, full-text search, branding and analytics are unmetered. Every new project starts with **$1.00** of balance and can claim **$5.00** more once it is 3 minutes old; top-ups after that run from $20.00 to $5,000.00. See [Pricing](./pricing.md) for the mechanism and [docsbook.io/pricing](https://docsbook.io/pricing) for current figures.
+It also meters **machine crawling** — the pages AI and search bots read from your published site, past the monthly allowance every plan includes. Hosting, a custom domain and its TLS certificate, people reading, editors, GitHub sync, full-text search, branding and analytics are unmetered. Every new project starts on Pro with an AI wallet of its own — spent first, with no time limit on it — then tops up at whatever amount you choose. See [Pricing](./pricing.md) for the mechanism and [docsbook.io/pricing](https://docsbook.io/pricing) for current figures.
 
 ## Next steps
 

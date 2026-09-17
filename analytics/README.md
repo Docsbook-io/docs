@@ -6,7 +6,7 @@ tldr: "Docsbook analytics answer four owner questions — where readers come fro
 
 # Analytics & Insights
 
-Docsbook records every page view, search, AI question and feedback vote on your documentation, and reports them as answers to questions an owner actually asks — not as a wall of counters. Reading these reports costs nothing against your project's balance; only AI answers, translations, agent runs and the semantic index spend it.
+Docsbook records every page view, search, AI question and feedback vote on your documentation, and reports them as answers to questions an owner actually asks — not as a wall of counters. Reading these reports costs nothing against your project's balance; only AI answers, translations, metered MCP tool calls and the semantic index spend it.
 
 Four questions the reports below are built to answer, with the report that answers each:
 

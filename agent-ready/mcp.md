@@ -40,6 +40,8 @@ Point your client at `https://docsbook.io/api/mcp/server` and complete the OAuth
 
 You can also browse the catalog inside your own project: open the admin panel and pick `MCP` in the sidebar. The first time you open it the section offers a **Turn on** panel carrying the install command for your client, so you can connect before you read the catalog, and pressing it runs a short guide over the table itself. Behind it is a table of every tool the server serves right now, read live from the server rather than from a written-down copy, with each tool's billing class, price per call, how long a call typically stays open, and whether readers can call it without a token. Search it, narrow it with **Filters** — the billing classes, each printed with its own price — or sort by any column. Hovering a row opens a card with the rest of what there is to know about that tool: what it does, what a call costs and how long it typically stays open, how many arguments it takes and how many of them are required, how many worked examples call it, and — in your own project — what it has cost you so far and when you last called it, with the callable id in it ready to copy. Clicking a row opens that tool's own page, and the page has an address: the URL carries the tool, so you can refresh it, bookmark it, or send it to a colleague and land them on the same tool instead of back at a table of three hundred rows. Everything on it is about that one tool. Its arguments are a form with a **Run** button that makes a real call against this project, and the button carries the price before the money moves. Under that is its **call history**, drawn by the same **Feeds** table you read everywhere else, narrowed to this one tool: one line per call, and expanding a row shows the call in full — what went in, what came back, who asked (your own client, an outside agent, a webhook delivery), how long it took, what it was priced at, and what actually left your balance. Under that sits one worked example to copy into your own client; what runs from inside Docsbook is the call, made by you or your agent — nothing here calls itself.
 
+<!-- widget:tabs -->
+
 ### Claude Code
 
 ```bash
@@ -156,6 +158,8 @@ ChatGPT supports remote MCP through **Connectors**, on ChatGPT's own paid plans.
 1. Open **ChatGPT → Settings → Connectors → Advanced → Developer mode**.
 2. Click **Create** and paste the URL: `https://docsbook.io/api/mcp/server`.
 3. Authorize in the browser when prompted.
+
+<!-- /widget -->
 
 ## What are the Docsbook MCP tools for?
 
@@ -458,6 +462,8 @@ When a call is refused, the server returns a structured error naming the reason 
 
 **Where do I go if a call is refused for a reason other than balance?** The server returns a structured error naming the reason — a missing scope on a read-only token, `NO_GITHUB_ACCESS` when Docsbook's own credential cannot reach a repository in your own GitHub account, or a private site. See [MCP server security](./mcp-security.md) for what each token scope can and cannot do.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
 - [MCP tools reference](../mcp/README.md) — every tool with its parameters.
@@ -465,3 +471,5 @@ When a call is refused, the server returns a structured error naming the reason 
 - [Docs Skills](./skills.md) — Discover SKILL.md files through `find_skill`, or ask `docsbook_expert` for the route through one.
 - [Webhooks](../reference/webhooks.md) — Register event handlers from MCP, and verify their signatures.
 - [Pricing](https://docsbook.io/pricing) — what a metered call draws on, generated from the live billing constants.
+
+<!-- /widget -->

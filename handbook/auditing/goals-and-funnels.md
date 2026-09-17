@@ -398,6 +398,8 @@ second signal, and these are the pairs that carry it.
 
 ### Worked readings
 
+<!-- widget:accordion -->
+
 Each of these is the same class of number producing a different conclusion
 depending on what sits beside it. They are the shapes worth recognising; the
 numbers are illustrative.
@@ -578,6 +580,8 @@ open cohort against closed ones and is guaranteed to look worse.
 **Do:** exclude the trailing period equal to the window before reading a trend,
 and say that you did.
 
+<!-- /widget -->
+
 ### Traps
 
 - **Never report a zero as reader behaviour** until the matcher has been
@@ -689,14 +693,18 @@ schedule — is covered in [drift](../automation/drift.md).
 
 ## Related
 
+<!-- widget:cards plain cols=2 -->
+
 - [Goals and funnels](../../analytics/reports/goals-and-funnels.md) — the
   product mechanics: how a step is counted, what is suppressed, what the
-  validator enforces.
+  validator enforces. {target}
 - [Behaviour](./behaviour.md) — the readings that describe what every reader
-  did, not only the ones on the declared route.
+  did, not only the ones on the declared route. {search}
 - [Did it work?](./did-it-work.md) — judging a change against a control, which
-  is the only way a goal movement becomes evidence.
+  is the only way a goal movement becomes evidence. {history}
 - [Business translation](./business-translation.md) — saying a funnel number in
-  terms an owner can act on.
+  terms an owner can act on. {scale}
 - [Conversion](../writing/conversion.md) — writing the page that the macro step
-  is asking a reader to act on.
+  is asking a reader to act on. {trending-up}
+
+<!-- /widget -->

@@ -205,8 +205,12 @@ Then: the page to [the page set](../planning/page-set.md); its shape, register a
 
 ## Related
 
-- [Backlinks and digital PR](./backlinks-digital-pr.md) — why a dataset is the most durable citable asset there is.
-- [Free tools](./free-tools.md) — the same dataset's second life as something people use rather than read.
-- [External checks](../auditing/external-checks.md) — the opposite direction: outside claims already inside your docs.
-- [Demand gaps](../auditing/demand-gaps.md) — whether anyone was asking for the number at all.
-- [Citation signals](../../geo/citation-signals.md) — the writing rules that decide whether a retrieved passage gets quoted.
+<!-- widget:cards plain cols=2 -->
+
+- [Backlinks and digital PR](./backlinks-digital-pr.md) — why a dataset is the most durable citable asset there is. {globe}
+- [Free tools](./free-tools.md) — the same dataset's second life as something people use rather than read. {toolbox}
+- [External checks](../auditing/external-checks.md) — the opposite direction: outside claims already inside your docs. {search}
+- [Demand gaps](../auditing/demand-gaps.md) — whether anyone was asking for the number at all. {compass}
+- [Citation signals](../../geo/citation-signals.md) — the writing rules that decide whether a retrieved passage gets quoted. {sparkles}
+
+<!-- /widget -->

@@ -1,6 +1,7 @@
 ---
 title: "Multi-language documentation SEO: hreflang and URLs"
 description: "How translated documentation earns traffic per locale — separate URLs, hreflang, when machine translation is good enough, and what breaks if you skip steps."
+tldr: "Docsbook indexes each translated language at its own URL with hreflang tags, since a search engine can only rank the one language it sees at a shared URL — AI translation is strong enough for reference docs, weaker for marketing copy and brand voice."
 ---
 
 # Multi-language documentation SEO: hreflang and URLs
@@ -93,6 +94,8 @@ Google then ranks each language in its respective locale's search results. A use
 
 ## What AI search engines do with translations
 
+<!-- widget:accordion -->
+
 Three behaviors observed:
 
 ### ChatGPT
@@ -106,6 +109,8 @@ Same as ChatGPT — Perplexity strictly matches query language to source languag
 ### Gemini
 
 Google Gemini uses Google's underlying index. The same hreflang and locale signals that help Google AI Overviews help Gemini.
+
+<!-- /widget -->
 
 ## How Docsbook ships multi-language
 
@@ -153,9 +158,13 @@ Machine translation is not strictly better. It is better at the thing that kills
 
 [Start free — no credit card](https://docsbook.io/start)
 
+<!-- widget:cards plain cols=2 -->
+
 ## Next steps
 
 - [Documentation SEO guide](./documentation-seo-guide.md) — the single-locale foundation this page extends
 - [AI search for documentation](./ai-search-documentation.md) — on-site search across locales
 - [How to get your documentation cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — assistants ask in many languages too
 - [JSON-LD for documentation](./json-ld-for-documentation.md) — the structured data that goes on each translated page
+
+<!-- /widget -->

@@ -84,9 +84,13 @@ The same index is one of the two retrievers behind [AI chat](./answer-quality.md
 - **Search is per project.** The index is scoped to one workspace; there is no cross-project search.
 - **The failed-search signal is coalesced, not exact.** The first miss of a typing chain is what gets delivered to a live webhook, so the delivered query can be a shorter prefix of the one the reader settled on. The historical report recovers the settled query.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
-- [AI chat](./chat.md) — the assistant that uses this index as one of its retrievers.
-- [Answer quality](./answer-quality.md) — how lexical and vector retrieval are merged.
-- [Analytics: what readers searched for](../analytics/tracking/overview.md) — the queries that returned nothing.
-- [Page feedback](./feedback.md) — the other signal that a page is missing or misnamed.
+- [AI chat](./chat.md) — the assistant that uses this index as one of its retrievers. {message-circle}
+- [Answer quality](./answer-quality.md) — how lexical and vector retrieval are merged. {layers}
+- [Analytics: what readers searched for](../analytics/tracking/overview.md) — the queries that returned nothing. {chart-line}
+- [Page feedback](./feedback.md) — the other signal that a page is missing or misnamed. {thumbs-up}
+
+<!-- /widget -->

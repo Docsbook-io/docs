@@ -150,9 +150,13 @@ Report only competitors readers actually named, never the ones the team worries 
 
 ## Related
 
-- [Reading the numbers](./metrics.md) — windows, sample floors and the confounders every reading above inherits
-- [Content detectors](./content-detectors.md) — what is wrong with the page a number pointed at
-- [Choosing a lens](./choosing-a-lens.md) — which of these readings this question and this evidence call for
-- [Goals and funnels](./goals-and-funnels.md) — the owner's declared outcome, and why a zero there is ambiguous
-- [From finding to change](../writing/from-finding-to-change.md) — turning one of these findings into an edit somebody ships
-- [Analytics](../../analytics/README.md) — the reports behind these readings
+<!-- widget:cards plain cols=2 -->
+
+- [Reading the numbers](./metrics.md) — windows, sample floors and the confounders every reading above inherits {chart-line}
+- [Content detectors](./content-detectors.md) — what is wrong with the page a number pointed at {file-text}
+- [Choosing a lens](./choosing-a-lens.md) — which of these readings this question and this evidence call for {compass}
+- [Goals and funnels](./goals-and-funnels.md) — the owner's declared outcome, and why a zero there is ambiguous {target}
+- [From finding to change](../writing/from-finding-to-change.md) — turning one of these findings into an edit somebody ships {pen-line}
+- [Analytics](../../analytics/README.md) — the reports behind these readings {bar-chart-3}
+
+<!-- /widget -->

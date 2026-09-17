@@ -1,6 +1,7 @@
 ---
 title: "Configure the header of your Docsbook documentation site"
 description: "Choose what the top navigation bar of your documentation site shows: header links, social icons, the search button, Ask AI, theme toggle and language switcher."
+tldr: "Docsbook's header is the top bar of your docs site — logo, custom links, social icons, and search/Ask AI/theme/language controls, arranged by one of five layout presets, all free to change."
 ---
 
 # Header Options
@@ -119,15 +120,23 @@ For finer control over *where in the header* the theme toggle and search sit rel
 
 ---
 
+<!-- widget:callout type=note -->
+
 ## Hiding the header
 
 Setting **Show header** to off removes the entire top navigation bar.
 
 Only do this for embed or kiosk use cases where your docs are framed inside another product. For standalone documentation sites, always keep the header visible.
 
+<!-- /widget -->
+
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
-- [Sidebar layout and configuration](./sidebar.md) — the other half of your navigation
-- [Theming — light, dark, system](../style/theming.md) — what the theme toggle in the header switches
-- [Branding — name, logo, colors, fonts](../style/branding.md) — the name and logo the header shows
-- [Translation settings](../../translation/settings.md) — what the language switcher in the header offers
+- [Sidebar layout and configuration](./sidebar.md) — the other half of your navigation {panel-left}
+- [Theming — light, dark, system](../style/theming.md) — what the theme toggle in the header switches {moon}
+- [Branding — name, logo, colors, fonts](../style/branding.md) — the name and logo the header shows {palette}
+- [Translation settings](../../translation/settings.md) — what the language switcher in the header offers {languages}
+
+<!-- /widget -->

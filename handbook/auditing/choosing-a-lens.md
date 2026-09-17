@@ -143,7 +143,13 @@ Findings that survive the diagnosis and the prior-change check become edits. **B
 | **Approve in chat** | The before and after shown per change, applied only on approval | A handful of changes, a person present, and no review process worth the ceremony |
 | **Direct update** | Written straight to the source | The owner explicitly asked for it, the changes are mechanical, and they are reversible |
 
-Do not guess this. A direct write into a repository somebody reviews is not a small mistake, and a pull request nobody wanted is a week of latency on a one-line fix. [Publishing](../planning/publishing.md) covers the mechanics of each route; [from finding to change](../writing/from-finding-to-change.md) covers what a good change carries with it.
+<!-- widget:callout type=warning -->
+
+Do not guess this. A direct write into a repository somebody reviews is not a small mistake, and a pull request nobody wanted is a week of latency on a one-line fix.
+
+<!-- /widget -->
+
+[Publishing](../planning/publishing.md) covers the mechanics of each route; [from finding to change](../writing/from-finding-to-change.md) covers what a good change carries with it.
 
 Then: one recommendation per page per run. Bundled changes make the next run unable to say which one worked.
 
@@ -167,11 +173,15 @@ Then: one recommendation per page per run. Bundled changes make the next run una
 
 ## Related
 
-- [Reading the numbers](./metrics.md) — pass 1, and the honesty tiers this procedure depends on
-- [Reader behaviour](./behaviour.md) — the behavioural readings a shortlist points at
-- [Content detectors](./content-detectors.md) — the instrument for the unhelpful mode
-- [External checks](./external-checks.md) — the claims that decay with no commit behind them
-- [Goals and funnels](./goals-and-funnels.md) — the owner's declared signal, and its own failure modes
-- [Demand gaps](./demand-gaps.md) — the reading for what has no page at all
-- [The lenses](../lenses/README.md) — all fourteen readings in full
-- [Routing the input](../planning/route-the-input.md) — the same question one level up: what kind of work was asked for
+<!-- widget:cards plain cols=2 -->
+
+- [Reading the numbers](./metrics.md) — pass 1, and the honesty tiers this procedure depends on {chart-line}
+- [Reader behaviour](./behaviour.md) — the behavioural readings a shortlist points at {search}
+- [Content detectors](./content-detectors.md) — the instrument for the unhelpful mode {file-text}
+- [External checks](./external-checks.md) — the claims that decay with no commit behind them {globe}
+- [Goals and funnels](./goals-and-funnels.md) — the owner's declared signal, and its own failure modes {target}
+- [Demand gaps](./demand-gaps.md) — the reading for what has no page at all {network}
+- [The lenses](../lenses/README.md) — all fourteen readings in full {book-open}
+- [Routing the input](../planning/route-the-input.md) — the same question one level up: what kind of work was asked for {route}
+
+<!-- /widget -->

@@ -1,6 +1,7 @@
 ---
 title: "Docsbook documentation: goals, experiments, and what they measured"
 description: "Docsbook turns a business goal into researched opportunities and experiments that each carry an expected number and a date. Start here, then pick the guide for the job you are doing."
+tldr: "Docsbook takes one stated business goal, researches the evidence behind it, and turns it into an experiment with a predicted number and date, then reports on that date whether the experiment hit that number."
 ---
 
 <!-- widget:hero -->

@@ -197,9 +197,13 @@ Then hand over: the specification and the hub page to [Deciding the page set](..
 
 ## Related
 
-- [Semantic SEO](./semantic-seo.md) — whether the concepts behind the dimension are covered at all.
-- [Search intent](./search-intent.md) — what shape each member page has to be.
-- [Content architecture](./content-architecture.md) — where the hub and its members belong in the tree, and what the sibling count does to a reader.
-- [Internal linking](./internal-linking.md) — the hub-and-member edges, and what happens to a family with no inbound body links.
-- [How indexing works](../../seo/indexing.md) — canonical URLs, the sitemap and what actually gets a page into an index.
-- [Drift](../automation/drift.md) — keeping a generated family honest when the source list changes.
+<!-- widget:cards plain cols=2 -->
+
+- [Semantic SEO](./semantic-seo.md) — whether the concepts behind the dimension are covered at all. {network}
+- [Search intent](./search-intent.md) — what shape each member page has to be. {search}
+- [Content architecture](./content-architecture.md) — where the hub and its members belong in the tree, and what the sibling count does to a reader. {list}
+- [Internal linking](./internal-linking.md) — the hub-and-member edges, and what happens to a family with no inbound body links. {git-fork}
+- [How indexing works](../../seo/indexing.md) — canonical URLs, the sitemap and what actually gets a page into an index. {radar}
+- [Drift](../automation/drift.md) — keeping a generated family honest when the source list changes. {git-compare}
+
+<!-- /widget -->

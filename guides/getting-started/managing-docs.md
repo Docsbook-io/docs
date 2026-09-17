@@ -1,6 +1,7 @@
 ---
 title: "Manage and update a published Docsbook documentation site"
 description: "Update pages, undo a publish, control who can read the docs, fix a site that has not refreshed, and work with other people on the same repository."
+tldr: "Docsbook picks up a published site from a GitHub commit automatically — edit a page on GitHub, from your computer with git, or right in the AI chat — with nothing to redeploy."
 ---
 
 # Manage your documentation site
@@ -213,9 +214,13 @@ Two reports answer most questions about a page: [Web analytics](../../analytics/
 
 Your GitHub repository is untouched. The markdown stays where it always was, so deleting a workspace loses configuration, not content.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Next steps
 
-- [Set up a custom domain](../advanced/custom-domain.md) — serve the docs from an address you own.
-- [Translate your documentation](../../translation/README.md) — 15 languages, each indexed separately.
-- [What Docsbook includes and what costs money](../advanced/premium.md) — which actions draw on the project balance.
-- [Frequently asked questions](../../faq.md) — the questions readers ask before they commit.
+- [Set up a custom domain](../advanced/custom-domain.md) — serve the docs from an address you own. {globe}
+- [Translate your documentation](../../translation/README.md) — 15 languages, each indexed separately. {languages}
+- [What Docsbook includes and what costs money](../advanced/premium.md) — which actions draw on the project balance. {credit-card}
+- [Frequently asked questions](../../faq.md) — the questions readers ask before they commit. {circle-help}
+
+<!-- /widget -->

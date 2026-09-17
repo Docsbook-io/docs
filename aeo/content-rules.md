@@ -144,13 +144,17 @@ Every page should be reachable from at least one other page, and every link on i
 - **Rules 3 and 6 describe two different pipelines, and passing one says nothing about the other.** Rule 3 is Docsbook's own semantic index over your Markdown; Rule 6 is what an external assistant gets when it fetches your URL. A page can be perfectly chunked for your on-site search and invisible to ChatGPT, or the reverse. They share no code.
 - **None of this is measured against outcomes for you.** Docsbook can tell you a page is orphaned, that a section matched no detector's shape, or that a fetch returned no prose. It cannot tell you that following these rules got you cited, and it does not claim to — see [Citation signals](../geo/citation-signals.md) on why one run proves nothing, and [How Docsbook proves what it claims](../evidence.md) for the standard these pages are held to.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
-- [AEO](./README.md) — what an answer engine needs from a page, and what the markup can still buy
-- [Structured answers](./structured-answers.md) — the detectors these rules feed, and what a failure looks like
-- [Citation signals](../geo/citation-signals.md) — the measured effect sizes, and the things not to do
-- [GEO](../geo/README.md) — the TL;DR block, the visible date and the author line
-- [SEO](../seo/README.md) — indexing, canonical URLs and crawlability, the stage before any of this
-- [Search](../ai-chat/search.md) — the on-site retrieval the chunking rule feeds
-- [Content widgets](../content/features/widgets.md) — the stepper and accordion regions the detectors understand
-- [How Docsbook proves what it claims](../evidence.md) — the evidence rule these pages follow
+- [AEO](./README.md) — what an answer engine needs from a page, and what the markup can still buy {help-circle}
+- [Structured answers](./structured-answers.md) — the detectors these rules feed, and what a failure looks like {braces}
+- [Citation signals](../geo/citation-signals.md) — the measured effect sizes, and the things not to do {quote}
+- [GEO](../geo/README.md) — the TL;DR block, the visible date and the author line {sparkles}
+- [SEO](../seo/README.md) — indexing, canonical URLs and crawlability, the stage before any of this {trending-up}
+- [Search](../ai-chat/search.md) — the on-site retrieval the chunking rule feeds {search}
+- [Content widgets](../content/features/widgets.md) — the stepper and accordion regions the detectors understand {layout-grid}
+- [How Docsbook proves what it claims](../evidence.md) — the evidence rule these pages follow {shield-check}
+
+<!-- /widget -->

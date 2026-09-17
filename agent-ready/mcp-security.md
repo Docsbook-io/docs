@@ -58,7 +58,7 @@ Scope is a single string compared exactly. Anything that is not the write scope 
 
 **The scope check does not cover every writer today, and you should plan around that.** It is enforced on exactly four tools: `write_docs`, `create_issue`, `connect_source` and `configure_source`. Those refuse a read-only token before doing anything.
 
-Every other state-changing tool — the `update_*` and `set_*` settings writers, `update_access`, webhook registration and removal, goal and funnel creation, translation upload, approval and deletion, `create_workspace` — is gated only by project ownership, not by scope. A read-only token can therefore change a project's settings, arm a webhook or delete a translation on a project its account owns. It still cannot commit a page, file an issue, connect a source or arm an agent.
+Every other state-changing tool — the `update_*` and `set_*` settings writers, `update_access`, webhook registration and removal, goal and funnel creation, translation upload, approval and deletion, `create_workspace` — is gated only by project ownership, not by scope. A read-only token can therefore change a project's settings, arm a webhook or delete a translation on a project its account owns. It still cannot commit a page, file an issue or connect a source.
 
 Treat the read-only scope as "cannot publish or wire up new capabilities", not as "cannot change anything". If containment matters more than that, use a separate Docsbook account that owns only the project you are willing to expose. This is a defect, listed again under [limits](#limits-and-open-questions), not a design.
 
@@ -111,7 +111,11 @@ Two claims the security page of a documentation vendor usually makes, corrected:
 
 Outbound webhook deliveries are signed. The signature is HMAC-SHA256 over **the exact bytes sent**, in `X-Docsbook-Signature-256: sha256=<hex>`, alongside `X-Docsbook-Event`. A Discord or Slack incoming-webhook URL is reshaped for that platform before signing, so the signature always covers what your endpoint actually receives. The secret is set at registration, is at least 16 characters, and is never returned in plaintext afterwards. Delivery attempts time out at 15 seconds and the response is stored truncated.
 
+<!-- widget:callout type=warning -->
+
 **Chat hooks carry no signature.** The pre-, post- and streaming hooks of the docs assistant are plain JSON `POST`s with a 5-second timeout and no HMAC header. Do not reuse your webhook verification code there and assume it verified something. The pre-hook can also return `inject_context`, whose text enters the assistant's prompt — an endpoint you point a chat hook at can therefore influence what the assistant says, so treat it as trusted infrastructure, authenticate it by some other means, and do not point one at a URL you do not control.
+
+<!-- /widget -->
 
 ## Why this is the right way (evidence)
 
@@ -168,6 +172,8 @@ If your organisation needs a specific artefact — a GDPR DPA, a BAA, a complete
 - **Nothing here is independently attested.** Every statement above is checkable in Docsbook's behaviour — issue a read-only token and watch a writer refuse; connect a project you do not own and watch it not resolve — but no third party has audited it. Treat this page as a specification you can test, not as a certification.
 - **Availability and price are on the [pricing page](https://docsbook.io/pricing).** No figure is quoted here, because a price copied into documentation goes stale in silence.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
 - [MCP Server](./mcp.md) — the tools themselves, and what a call draws on
@@ -176,3 +182,5 @@ If your organisation needs a specific artefact — a GDPR DPA, a BAA, a complete
 - [Webhooks](../reference/webhooks.md) — the full event schema and signature verification
 - [AI Chat Hooks](../ai-chat/chat-hooks.md) — the unsigned pre/post/streaming hooks
 - [Sources](../ai-chat/sources.md) — what an agent is allowed to read on your behalf
+
+<!-- /widget -->

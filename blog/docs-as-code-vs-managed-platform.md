@@ -1,6 +1,7 @@
 ---
 title: "Docs as code vs a managed platform: the 2026 tradeoff"
 description: "When docs-as-code is the right pattern and when a managed platform wins — who owns the build, what breaks, and how to price the difference."
+tldr: "Docsbook argues docs-as-code suits engineering-led teams needing deep customization, a managed platform suits teams wanting AI, search and translation without a build pipeline — and Docsbook is built as both."
 ---
 
 # Docs as code vs a managed platform: the 2026 tradeoff
@@ -132,14 +133,22 @@ GitBook scores poorly on the first (content in their DB), well on the others. Mi
 - **Enterprise with 30+ editors** → managed enterprise (GitBook)
 - **Want the hybrid** → Docsbook (Git source, managed everything else)
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related reading
 
-- [Best documentation platforms for startups in 2026](./best-docs-platforms-for-startups-2026.md)
-- [Docusaurus vs Docsbook in 2026](./docusaurus-vs-docsbook-2026.md)
-- [Free documentation hosting comparison](./free-docs-hosting-comparison.md)
+- [Best documentation platforms for startups in 2026](./best-docs-platforms-for-startups-2026.md) {list-checks}
+- [Docusaurus vs Docsbook in 2026](./docusaurus-vs-docsbook-2026.md) {scale}
+- [Free documentation hosting comparison](./free-docs-hosting-comparison.md) {gift}
+
+<!-- /widget -->
 
 ---
+
+<!-- widget:cta -->
 
 Docsbook is the hybrid: the source stays in Git, while AI, SEO, translations and MCP are managed. Pricing is metered on AI usage rather than sold as a tier — current numbers on [docsbook.io/pricing](https://docsbook.io/pricing).
 
 [Start free — no credit card](https://docsbook.io/start)
+
+<!-- /widget -->

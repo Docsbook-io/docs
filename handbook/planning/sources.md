@@ -32,6 +32,8 @@ Platform markers, and only these, are conclusive:
 
 A single ambiguous signal is not a detection. Inconclusive input defaults to **site**.
 
+<!-- widget:tabs -->
+
 ## Route: site
 
 ### Why the naive crawl fails
@@ -93,10 +95,16 @@ Never invent competitor names or real-world facts. If a comparison or migration 
 
 This route does not hand off to a planning interview. It generates.
 
+<!-- /widget -->
+
 ## Related
 
-- [Routing the input](./route-the-input.md) — the decision that picks between these four, and the pipeline they all feed.
-- [Deciding the page set](./page-set.md) — the starting page set each route implies.
-- [Know the reader before you write the page](./know-the-reader.md) — what to establish about the product once the source is readable.
-- [Publishing what you wrote](./publishing.md) — where the files go afterwards.
-- [Sources of evidence](../evidence/sources.md) — the other meaning of "sources": what you are allowed to cite.
+<!-- widget:cards plain cols=2 -->
+
+- [Routing the input](./route-the-input.md) — the decision that picks between these four, and the pipeline they all feed. {compass}
+- [Deciding the page set](./page-set.md) — the starting page set each route implies. {list}
+- [Know the reader before you write the page](./know-the-reader.md) — what to establish about the product once the source is readable. {search}
+- [Publishing what you wrote](./publishing.md) — where the files go afterwards. {rocket}
+- [Sources of evidence](../evidence/sources.md) — the other meaning of "sources": what you are allowed to cite. {book-open}
+
+<!-- /widget -->

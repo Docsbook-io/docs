@@ -184,9 +184,13 @@ Then hand over and stop: missing pages go to [Deciding the page set](../planning
 
 ## Related
 
-- [Demand gaps](../auditing/demand-gaps.md) — which jobs, audiences and markets exist at all, swept as a coverage matrix.
-- [User language](./user-language.md) — what the reader calls the thing, once you know what they were trying to do.
-- [Search intent](./search-intent.md) — the shape of answer a query wants, on a page that already ranks.
-- [Content architecture](./content-architecture.md) — whether the page set is cut on an axis a reader can navigate.
-- [Goals and funnels](../auditing/goals-and-funnels.md) — the owner's declared intent, and the step where readers stop.
-- [Conversion](../writing/conversion.md) — what a page says when it asks the reader to act.
+<!-- widget:cards plain cols=2 -->
+
+- [Demand gaps](../auditing/demand-gaps.md) — which jobs, audiences and markets exist at all, swept as a coverage matrix. {compass}
+- [User language](./user-language.md) — what the reader calls the thing, once you know what they were trying to do. {message-circle}
+- [Search intent](./search-intent.md) — the shape of answer a query wants, on a page that already ranks. {search}
+- [Content architecture](./content-architecture.md) — whether the page set is cut on an axis a reader can navigate. {list}
+- [Goals and funnels](../auditing/goals-and-funnels.md) — the owner's declared intent, and the step where readers stop. {target}
+- [Conversion](../writing/conversion.md) — what a page says when it asks the reader to act. {credit-card}
+
+<!-- /widget -->

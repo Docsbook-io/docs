@@ -174,8 +174,12 @@ When the product keeps its own knowledge base — a README plus a specs tree, a 
 
 ## Related
 
-- [Routing the input](./route-the-input.md) — the stage before this one, and the pipeline it belongs to.
-- [Deciding the page set](./page-set.md) — what this audit's answers turn into.
-- [Jobs to be done](../lenses/jobs-to-be-done.md) and [demand gaps](../auditing/demand-gaps.md) — the deeper readings behind segments and capabilities.
-- [Conversion](../writing/conversion.md) — the on-page pattern the monetisation model selects.
-- [Goals and funnels](../auditing/goals-and-funnels.md) — where the goals written here get declared and measured.
+<!-- widget:cards plain cols=2 -->
+
+- [Routing the input](./route-the-input.md) — the stage before this one, and the pipeline it belongs to. {compass}
+- [Deciding the page set](./page-set.md) — what this audit's answers turn into. {list}
+- [Jobs to be done](../lenses/jobs-to-be-done.md) and [demand gaps](../auditing/demand-gaps.md) — the deeper readings behind segments and capabilities. {target}
+- [Conversion](../writing/conversion.md) — the on-page pattern the monetisation model selects. {credit-card}
+- [Goals and funnels](../auditing/goals-and-funnels.md) — where the goals written here get declared and measured. {target}
+
+<!-- /widget -->

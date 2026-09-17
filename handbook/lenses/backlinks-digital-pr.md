@@ -210,9 +210,13 @@ Then hand over and stop: redirects, canonical and configuration to [site capabil
 
 ## Related
 
-- [Original research](./original-research.md) — how to specify the dataset or benchmark this reading keeps recommending.
-- [Free tools](./free-tools.md) — the same, for a tool.
-- [Content architecture](./content-architecture.md) — the URL-stability policy that prevents earned links becoming 404s.
-- [Internal linking](./internal-linking.md) — the graph inside the site, which this reading never touches.
-- [Competitors](./competitors.md) — everything about a named rival.
-- [Analytics](../../analytics/README.md) — where referring hosts come from.
+<!-- widget:cards plain cols=2 -->
+
+- [Original research](./original-research.md) — how to specify the dataset or benchmark this reading keeps recommending. {chart-line}
+- [Free tools](./free-tools.md) — the same, for a tool. {toolbox}
+- [Content architecture](./content-architecture.md) — the URL-stability policy that prevents earned links becoming 404s. {list}
+- [Internal linking](./internal-linking.md) — the graph inside the site, which this reading never touches. {git-fork}
+- [Competitors](./competitors.md) — everything about a named rival. {scale}
+- [Analytics](../../analytics/README.md) — where referring hosts come from. {chart-line}
+
+<!-- /widget -->

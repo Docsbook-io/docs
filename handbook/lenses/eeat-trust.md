@@ -242,9 +242,14 @@ Then hand over and stop. Missing pages — limits, security and data handling, c
 
 ## Related
 
-- [GEO and AI search](./geo-ai-search.md) — whether a machine can fetch and lift your answers at all.
-- [Jobs to be done](./jobs-to-be-done.md) — the beliefs a reader has to acquire, in order.
-- [Competitors](./competitors.md) — what being disbelieved looks like from the other side of a comparison.
-- [External checks](../auditing/external-checks.md) — verifying a claim against the live source, and the ten-query audit that tests the disagreement above.
-- [Claims](../evidence/claims.md) — the graded standing of every claim on this page, including the contested one.
-- [GEO](../../geo/README.md) and [AEO](../../aeo/README.md) — the machine-visible signals Docsbook already emits.
+<!-- widget:cards plain cols=2 -->
+
+- [GEO and AI search](./geo-ai-search.md) — whether a machine can fetch and lift your answers at all. {sparkles}
+- [Jobs to be done](./jobs-to-be-done.md) — the beliefs a reader has to acquire, in order. {target}
+- [Competitors](./competitors.md) — what being disbelieved looks like from the other side of a comparison. {scale}
+- [External checks](../auditing/external-checks.md) — verifying a claim against the live source, and the ten-query audit that tests the disagreement above. {search}
+- [Claims](../evidence/claims.md) — the graded standing of every claim on this page, including the contested one. {book-open}
+- [GEO](../../geo/README.md) — the machine-visible signals Docsbook already emits. {globe}
+- [AEO](../../aeo/README.md) — the machine-visible signals Docsbook already emits. {list-checks}
+
+<!-- /widget -->

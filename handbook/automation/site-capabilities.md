@@ -119,7 +119,11 @@ They look interchangeable and are not, and getting it wrong quietly breaks the h
 - The **logo** is the horizontal wordmark in the header, usually a mark plus the product name as text.
 - The **icon** is the square favicon for the browser tab and the small header glyph.
 
+<!-- widget:callout type=warning -->
+
 **Never put a square favicon into the logo slot.** The square image takes the logo's place and the product name disappears from the header, so the site reads as *less* branded than if no logo had been set at all. When the source has only a square mark: leave the logo empty, set the icon, set the display name — the header then renders the name as text beside the small icon, which is the correct look.
+
+<!-- /widget -->
 
 Two checks before writing any image URL. **Verify it is publicly fetchable and actually an image**: a path behind a framework's on-the-fly optimiser, or one returning an HTML shell, renders as nothing. And **match the theme to the source**: a light product site whose docs open dark reads as someone else's site.
 
@@ -196,9 +200,14 @@ Say which capabilities were applied, which were gated and what enabling them wou
 
 ## Related
 
-- [Setting up automation](./setting-it-up.md) — keeping a configuration correct once it is set, and the consent rules for changing anything readers see.
-- [Monitors and alerts](./monitoring.md) — watching for an indexing or answer-markup switch turning off.
-- [Conversion](../writing/conversion.md) — deciding what the one conversion destination should be.
-- [AEO](../../aeo/README.md) and [GEO](../../geo/README.md) — what Docsbook emits for answer engines without being asked.
-- [How a page gets discovered](../../seo/indexing.md) — sitemaps, push notifications and the caches in between.
-- [Translations](../../translation/README.md) — what enabling a language actually commits you to.
+<!-- widget:cards plain cols=2 -->
+
+- [Setting up automation](./setting-it-up.md) — keeping a configuration correct once it is set, and the consent rules for changing anything readers see. {compass}
+- [Monitors and alerts](./monitoring.md) — watching for an indexing or answer-markup switch turning off. {chart-line}
+- [Conversion](../writing/conversion.md) — deciding what the one conversion destination should be. {credit-card}
+- [AEO](../../aeo/README.md) — what Docsbook emits for answer engines without being asked. {list-checks}
+- [GEO](../../geo/README.md) — what Docsbook emits for answer engines without being asked. {sparkles}
+- [How a page gets discovered](../../seo/indexing.md) — sitemaps, push notifications and the caches in between. {search}
+- [Translations](../../translation/README.md) — what enabling a language actually commits you to. {languages}
+
+<!-- /widget -->

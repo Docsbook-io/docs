@@ -124,10 +124,14 @@ So switch the answer layer on where the page genuinely carries questions and ans
 
 ## Related
 
-- [Choosing a lens](./choosing-a-lens.md) — which readings this evidence actually supports, and which to skip loudly
-- [Behavioural readings](./behaviour.md) — dead ends, routes, rejected searches, the striking-distance band
-- [Content detectors](./content-detectors.md) — what is wrong with a page once a number has pointed at it
-- [Goals and funnels](./goals-and-funnels.md) — the declared signal, and the four checks before quoting it
-- [Saying it in business terms](./business-translation.md) — which conversions are honest, and the ones to refuse
-- [How measurement works](../../analytics/how-measurement-works.md) — the definitions every figure above inherits
-- [Analytics](../../analytics/README.md) — the reports these numbers come from
+<!-- widget:cards plain cols=2 -->
+
+- [Choosing a lens](./choosing-a-lens.md) — which readings this evidence actually supports, and which to skip loudly {compass}
+- [Behavioural readings](./behaviour.md) — dead ends, routes, rejected searches, the striking-distance band {search}
+- [Content detectors](./content-detectors.md) — what is wrong with a page once a number has pointed at it {file-text}
+- [Goals and funnels](./goals-and-funnels.md) — the declared signal, and the four checks before quoting it {target}
+- [Saying it in business terms](./business-translation.md) — which conversions are honest, and the ones to refuse {scale}
+- [How measurement works](../../analytics/how-measurement-works.md) — the definitions every figure above inherits {gauge}
+- [Analytics](../../analytics/README.md) — the reports these numbers come from {bar-chart-3}
+
+<!-- /widget -->

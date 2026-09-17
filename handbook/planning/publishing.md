@@ -104,8 +104,12 @@ A freshly published site is the start of a loop, not the end of one. Wire the dr
 
 ## Related
 
-- [Routing the input](./route-the-input.md) — the four stages this one closes.
-- [Deciding the page set](./page-set.md) — the folders that become this site's navigation.
-- [Know the reader before you write the page](./know-the-reader.md) — where the branding, the call-to-action destination and the goals came from.
-- [Goals and funnels](../auditing/goals-and-funnels.md) — declaring success while it is still cheap.
-- [MCP server](../../mcp/README.md) — the full tool surface behind route A.
+<!-- widget:cards plain cols=2 -->
+
+- [Routing the input](./route-the-input.md) — the four stages this one closes. {compass}
+- [Deciding the page set](./page-set.md) — the folders that become this site's navigation. {list}
+- [Know the reader before you write the page](./know-the-reader.md) — where the branding, the call-to-action destination and the goals came from. {search}
+- [Goals and funnels](../auditing/goals-and-funnels.md) — declaring success while it is still cheap. {target}
+- [MCP server](../../mcp/README.md) — the full tool surface behind route A. {plug}
+
+<!-- /widget -->

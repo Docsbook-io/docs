@@ -61,7 +61,11 @@ A workflow triggered by an external dispatch — the shape behind [events and ha
 
 ## Related
 
-- [Drift](./drift.md) — what the diff-triggered checks are looking for, and the pipeline behind them.
-- [Events and handlers](./events.md) — the platform side of a dispatch-driven workflow.
-- [Setting up automation](./setting-it-up.md) — why blocking is almost never what was actually wanted.
-- [Monitors and alerts](./monitoring.md) — the standing watches that catch what never goes through a pull request.
+<!-- widget:cards plain cols=2 -->
+
+- [Drift](./drift.md) — what the diff-triggered checks are looking for, and the pipeline behind them. {git-compare}
+- [Events and handlers](./events.md) — the platform side of a dispatch-driven workflow. {zap}
+- [Setting up automation](./setting-it-up.md) — why blocking is almost never what was actually wanted. {settings}
+- [Monitors and alerts](./monitoring.md) — the standing watches that catch what never goes through a pull request. {bell}
+
+<!-- /widget -->

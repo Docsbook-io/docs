@@ -24,6 +24,8 @@ The mode decides who acts, and mislabelling it is expensive in one direction spe
 
 ## Playbooks
 
+<!-- widget:accordion -->
+
 ### A title ranks for a query it shares no words with
 
 The page already earns impressions; only the click is missing. Rewrite the title into the query's own phrasing, write a real description, and open the first paragraph with a one-sentence direct answer. Ship all three verbatim and paste-ready — never "improve the title".
@@ -96,13 +98,19 @@ These are mechanical and safe to batch, and they are the one exception to "one c
 
 Broken internal links and orphan pages are the exception's exception: a link added to fix an orphan changes the graph, so say which page it was added from and why that page is the right parent.
 
+<!-- /widget -->
+
 ## After the change
 
 Record the baseline the audit asked for — the numbers today, the window, the date, and the one number expected to move, with a horizon. Then stop. Measuring it is the next run's job, and the loop only closes if this run wrote the baseline down. [Did it work?](../auditing/did-it-work.md) is that next run.
 
 ## Related
 
-- [Writing rules](./writing-rules.md) — the rules a rewrite has to satisfy once you know which rewrite it is.
-- [Writing for retrieval](./retrieval.md) — the fix for every finding that is really about passages rather than pages.
-- [Conversion](./conversion.md) — the fix for documentation that explains and never asks.
-- [Auditing](../auditing/README.md) — where the findings come from, and how they are graded before they reach this page.
+<!-- widget:cards plain cols=2 -->
+
+- [Writing rules](./writing-rules.md) — the rules a rewrite has to satisfy once you know which rewrite it is. {file-text}
+- [Writing for retrieval](./retrieval.md) — the fix for every finding that is really about passages rather than pages. {sparkles}
+- [Conversion](./conversion.md) — the fix for documentation that explains and never asks. {target}
+- [Auditing](../auditing/README.md) — where the findings come from, and how they are graded before they reach this page. {chart-line}
+
+<!-- /widget -->

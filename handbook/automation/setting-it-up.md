@@ -30,6 +30,8 @@ The interview costs three minutes and it is the difference between an automation
 
 ## The five questions
 
+<!-- widget:stepper -->
+
 ### What went wrong that made you ask?
 
 The most useful question and the one most often skipped. A concrete incident — "we shipped a rename and the docs said the old name for a month", "a customer quoted a price we changed in March", "our chat kept saying it didn't know about SSO" — names the trigger better than any menu.
@@ -80,6 +82,8 @@ Ask this as its own question rather than inferring it, and name the candidates o
 - Touching prices, plans, limits, or claims about other companies.
 
 Whatever comes back is a hard constraint on everything installed in this run, and it belongs in the handover so the next person knows.
+
+<!-- /widget -->
 
 ## Offer options, not a recommendation
 
@@ -174,9 +178,13 @@ Recommending against a setup is a real outcome of the interview, not a failure o
 
 ## Related
 
-- [Drift](./drift.md) — the guards for documentation falling behind its source of truth.
-- [Monitors and alerts](./monitoring.md) — thresholds, volume floors, and when to remove a monitor.
-- [Events and handlers](./events.md) — what the platform emits and how to react to it.
-- [CI checks and repository hooks](./ci-checks.md) — the checks that run before a reader sees anything.
-- [Site capabilities](./site-capabilities.md) — what each setting gives a reader, and when it is worth turning on.
-- [Auditing](../auditing/README.md) — finding what is wrong now. A monitor is worth creating once you have found the same thing twice.
+<!-- widget:cards plain cols=2 -->
+
+- [Drift](./drift.md) — the guards for documentation falling behind its source of truth. {history}
+- [Monitors and alerts](./monitoring.md) — thresholds, volume floors, and when to remove a monitor. {chart-line}
+- [Events and handlers](./events.md) — what the platform emits and how to react to it. {plug}
+- [CI checks and repository hooks](./ci-checks.md) — the checks that run before a reader sees anything. {code}
+- [Site capabilities](./site-capabilities.md) — what each setting gives a reader, and when it is worth turning on. {settings-2}
+- [Auditing](../auditing/README.md) — finding what is wrong now. A monitor is worth creating once you have found the same thing twice. {chart-line}
+
+<!-- /widget -->

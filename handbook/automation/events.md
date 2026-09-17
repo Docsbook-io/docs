@@ -80,8 +80,12 @@ Some platforms let you take over a built-in behaviour entirely by pointing it at
 
 ## Related
 
-- [Webhooks](../../reference/webhooks.md) — request format, signature verification, retry schedule, delivery statuses and the Feeds panel.
-- [Alerts](../../mcp/alerts/README.md) — the reference page for every subscribable event.
-- [Monitors and alerts](./monitoring.md) — the thresholds that decide whether an event is worth a person's attention.
-- [Setting up automation](./setting-it-up.md) — the interview, the consent rules, and the handover.
-- [CI checks and repository hooks](./ci-checks.md) — turning an event into a workflow run in your own repository.
+<!-- widget:cards plain cols=2 -->
+
+- [Webhooks](../../reference/webhooks.md) — request format, signature verification, retry schedule, delivery statuses and the Feeds panel. {webhook}
+- [Alerts](../../mcp/alerts/README.md) — the reference page for every subscribable event. {bell}
+- [Monitors and alerts](./monitoring.md) — the thresholds that decide whether an event is worth a person's attention. {radar}
+- [Setting up automation](./setting-it-up.md) — the interview, the consent rules, and the handover. {settings}
+- [CI checks and repository hooks](./ci-checks.md) — turning an event into a workflow run in your own repository. {git-branch}
+
+<!-- /widget -->

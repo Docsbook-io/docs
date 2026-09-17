@@ -66,8 +66,12 @@ A claim on these pages that does not match what the product does is a defect, an
 - Email [support@docsbook.io](mailto:support@docsbook.io) with the page and the sentence.
 - Or say it in the [Docsbook Discord](https://discord.gg/baqUCdwrag).
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
 - [Overview](./overview.md) — what Docsbook does, end to end.
 - [Pricing](./pricing.md) — what is metered and what a project balance pays for.
 - [FAQ](./faq.md) — cost, cancellation, sync, privacy and data ownership.
+
+<!-- /widget -->

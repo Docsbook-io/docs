@@ -354,13 +354,17 @@ Then hand the queue over. This audit writes nothing.
 
 ## Related
 
+<!-- widget:cards plain cols=2 -->
+
 - [Jobs to be done](../lenses/jobs-to-be-done.md) — reading a job properly once
-  the sweep has named it.
+  the sweep has named it. {briefcase}
 - [Market expansion](../lenses/market-expansion.md) — what to do with an
-  adjacent market you decide to serve.
+  adjacent market you decide to serve. {trending-up}
 - [Search intent](../lenses/search-intent.md) — matching a page to the depth of
-  the question that reaches it.
+  the question that reaches it. {search}
 - [Page set](../planning/page-set.md) — where the priority queue goes, and how
-  a gap becomes a commissioned page.
+  a gap becomes a commissioned page. {layout-grid}
 - [Choosing a lens](./choosing-a-lens.md) — when demand gaps outrank a measured
-  reading, and when they do not.
+  reading, and when they do not. {compass}
+
+<!-- /widget -->

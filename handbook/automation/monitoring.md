@@ -148,9 +148,13 @@ Say this out loud at handover, and act on it the moment you see it:
 
 ## Related
 
-- [Setting up automation](./setting-it-up.md) — the interview that sets the threshold, the destination and the quiet hours before anything is installed.
-- [Events and handlers](./events.md) — registering, verifying and proving the delivery path.
-- [Drift](./drift.md) — the scheduled freshness and correctness monitors, in full.
-- [Metrics](../auditing/metrics.md) — the confounders and sample floors these thresholds inherit.
-- [Reader behaviour](../auditing/behaviour.md) — what the behavioural signals mean before you alert on them.
-- [Analytics](../../analytics/README.md) — where the numbers come from.
+<!-- widget:cards plain cols=2 -->
+
+- [Setting up automation](./setting-it-up.md) — the interview that sets the threshold, the destination and the quiet hours before anything is installed. {settings}
+- [Events and handlers](./events.md) — registering, verifying and proving the delivery path. {zap}
+- [Drift](./drift.md) — the scheduled freshness and correctness monitors, in full. {git-compare}
+- [Metrics](../auditing/metrics.md) — the confounders and sample floors these thresholds inherit. {chart-line}
+- [Reader behaviour](../auditing/behaviour.md) — what the behavioural signals mean before you alert on them. {search}
+- [Analytics](../../analytics/README.md) — where the numbers come from. {bar-chart-3}
+
+<!-- /widget -->

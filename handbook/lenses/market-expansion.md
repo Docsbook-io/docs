@@ -191,9 +191,13 @@ Then hand over and stop: the single test page to [the page set](../planning/page
 
 ## Related
 
-- [Demand gaps](../auditing/demand-gaps.md) — the capability map, the audience map and the candidate sweep this reading consumes.
-- [Competitors](./competitors.md) — whether the candidate market is contested or empty.
-- [User language](./user-language.md) — the vocabulary mismatch that decides gate 3 and most of the cost.
-- [Jobs to be done](./jobs-to-be-done.md) — the belief ladder whose length sets the page count.
-- [Backlinks and digital PR](./backlinks-digital-pr.md) — the asset that is often the cheapest door into a new market.
-- [Translations](../../translation/README.md) — the axis with the permanent multiplier.
+<!-- widget:cards plain cols=2 -->
+
+- [Demand gaps](../auditing/demand-gaps.md) — the capability map, the audience map and the candidate sweep this reading consumes. {compass}
+- [Competitors](./competitors.md) — whether the candidate market is contested or empty. {scale}
+- [User language](./user-language.md) — the vocabulary mismatch that decides gate 3 and most of the cost. {message-circle}
+- [Jobs to be done](./jobs-to-be-done.md) — the belief ladder whose length sets the page count. {target}
+- [Backlinks and digital PR](./backlinks-digital-pr.md) — the asset that is often the cheapest door into a new market. {globe}
+- [Translations](../../translation/README.md) — the axis with the permanent multiplier. {languages}
+
+<!-- /widget -->

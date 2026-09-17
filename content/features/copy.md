@@ -1,6 +1,7 @@
 ---
 title: "Let readers copy your docs page as markdown or code"
 description: "Add a Copy page button, per-code-block copy icons, and one-click hand-off of the page into ChatGPT, Claude, Cursor, Windsurf or VS Code MCP."
+tldr: "Docsbook lets a reader copy a whole page as markdown, copy a single code block, or hand the page to ChatGPT, Claude, Cursor, Windsurf or VS Code MCP — your exact wording, not an assistant's summary."
 ---
 
 # Copy page and copy markdown buttons
@@ -51,7 +52,7 @@ Each click is recorded as an event, so [Events analytics](../../analytics/tracki
 
 ## Make your pages worth copying
 
-Every new project starts with $1 of balance, and the copy controls do not spend it.
+Every new project starts with a free AI wallet, and the copy controls do not spend it.
 
 [Create a project](https://docsbook.io/start)
 

@@ -197,10 +197,14 @@ Hand over, never do: missing pillars, missing sub-topics and gap-closing pages g
 
 ## Related
 
-- [Search intent](./search-intent.md) — what a query wants, once the concept is named at all.
-- [User language](./user-language.md) — what the concept is called by the people searching for it.
-- [Content architecture](./content-architecture.md) — where the pillar and its cluster sit in the tree.
-- [Internal linking](./internal-linking.md) — whether the cluster's pages are actually joined.
-- [GEO and AI search](./geo-ai-search.md) — whether a passage about the entity can be lifted and cited, and where the fan-out figures come from.
-- [Claims](../evidence/claims.md) — the standing of the cluster and fan-out figures, and the control test for each.
-- [GEO in Docsbook](../../geo/README.md) — what the platform already emits on every page, and the honest size of the effect.
+<!-- widget:cards plain cols=2 -->
+
+- [Search intent](./search-intent.md) — what a query wants, once the concept is named at all. {search}
+- [User language](./user-language.md) — what the concept is called by the people searching for it. {message-circle}
+- [Content architecture](./content-architecture.md) — where the pillar and its cluster sit in the tree. {list}
+- [Internal linking](./internal-linking.md) — whether the cluster's pages are actually joined. {git-fork}
+- [GEO and AI search](./geo-ai-search.md) — whether a passage about the entity can be lifted and cited, and where the fan-out figures come from. {sparkles}
+- [Claims](../evidence/claims.md) — the standing of the cluster and fan-out figures, and the control test for each. {scale}
+- [GEO in Docsbook](../../geo/README.md) — what the platform already emits on every page, and the honest size of the effect. {globe}
+
+<!-- /widget -->

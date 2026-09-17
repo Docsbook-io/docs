@@ -189,8 +189,12 @@ Handed back in this order:
 
 ## Related
 
-- [Demand gaps](../auditing/demand-gaps.md) — the needs that prose does close, and the capability-to-job chain behind them.
-- [Original research](./original-research.md) — the dataset a tool often queries, and how to make it publishable.
-- [Backlinks and digital PR](./backlinks-digital-pr.md) — why a tool is the most linkable thing documentation can hold.
-- [Presentation](../writing/presentation.md) — the widgets already available before anything is built.
-- [External checks](../auditing/external-checks.md) — verifying a tool's answers against the live source of truth.
+<!-- widget:cards plain cols=2 -->
+
+- [Demand gaps](../auditing/demand-gaps.md) — the needs that prose does close, and the capability-to-job chain behind them. {compass}
+- [Original research](./original-research.md) — the dataset a tool often queries, and how to make it publishable. {chart-line}
+- [Backlinks and digital PR](./backlinks-digital-pr.md) — why a tool is the most linkable thing documentation can hold. {globe}
+- [Presentation](../writing/presentation.md) — the widgets already available before anything is built. {panels-top-left}
+- [External checks](../auditing/external-checks.md) — verifying a tool's answers against the live source of truth. {search}
+
+<!-- /widget -->
