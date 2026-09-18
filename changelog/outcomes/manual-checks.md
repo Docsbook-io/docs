@@ -19,6 +19,11 @@ A watch someone keeps by remembering to look, kept by a webhook instead. This is
 - **More than one account per service.** Two GitHub organisations, three Slack workspaces and somebody's personal Drive can all feed one project, each renamed to something your team recognises, paused, reconnected or removed on its own — so nobody has to choose which half of the truth to connect. `Integrations`
 - **Triggers: 29 occasions a connector can wake the agent for**, written for documentation rather than copied from a vendor's event list — code landing on a branch, a release published, a pull request merged, an API spec changed, a question nobody answered in Slack, a launch three days out on the calendar. Documentation stops depending on somebody remembering, and starts happening because something moved. `Integrations`
 - **A trigger that cannot fire yet says so on its own card.** Eight deliver today (GitHub and connected sources); the rest are listed, unarmable, with the reason. An armed trigger that silently never fires is indistinguishable from a quiet week, so the ones that would be silent are never offered as though they worked. `Integrations`
+- **Three new built-in feeds: Content gaps, Conversions, and Plan & usage.** Content gaps is where the assistant came up empty or a search returned nothing — the fastest signal of what your docs are missing. Conversions is every click that took a reader toward your product. Plan & usage is every plan change and usage-limit warning the workspace crossed. Content gaps and Plan & usage can each carry an alert, so you can get pinged in Slack or Discord the moment a reader hits a wall or a teammate nears a spend limit, instead of noticing it days later in the feed. `Feeds`
+
+### Changed
+
+- **Logs ▸ Activity now opens straight on the feed, with every feed a tab above it** instead of a page of cards you had to click through first. Switching between Reader events, a saved alert list and everything else is one click that never leaves the screen, and each tab keeps its own filter — narrowing one never changes what another tab shows. `Feeds`
 
 ## NEW - 15.09.2026
 

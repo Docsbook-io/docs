@@ -62,31 +62,30 @@ you're looking at it, so there is no time range to pick and nothing to remember 
 
 ### Picking a feed
 
-The **Feeds** section opens on a page of cards — one per feed, each with a line saying what it
-holds, plus a **Create your own feed** card at the end. Opening a card switches to that feed itself,
-with no title or back link above it: you got here by picking a card, and the sidebar row for **Feeds**
-is the way back to them.
+The **Feeds** section (Logs ▸ Activity in the admin panel) opens directly on the feed, with a **tab
+strip** above the toolbar: one tab per feed — the built-in presets, then any lists you've saved,
+then a trailing **New list** tab. Picking a tab swaps the filter in place; there is no separate page
+to navigate to and no back link, because switching feeds never leaves this screen. Click **New
+list** to name and save a filter of your own — it opens as a fresh tab immediately, narrowed with
+the same controls as everything else on the toolbar.
 
-The same feeds are also rows under that sidebar section, for switching between them without leaving
-the one you're reading — but that list starts **closed**. Hover the **Feeds** row and a chevron
-takes over from its icon; click it to show up to five feeds, most-recently-opened first, with
-**Show N more** for the rest, and Docsbook remembers whether you left it open the next time you're
-back. The `+` that creates a new list from an empty filter sits both on that row and as a card in
-the gallery.
-
-Seven feeds are built in, so there is something to open on your first visit before you've saved
+Ten feeds are built in, so there is something to open on your first visit before you've saved
 anything of your own: **Reader events** (everything people reading your docs did — pages read,
 searches run, questions asked of the AI, feedback left), **Translations** (every language generated,
 outdated or still needed), **Language events** (which languages readers switch the docs into),
 **Chat events** (questions the AI assistant was asked, where it came up empty, which answers got a
-thumbs-down), **Reader feedback** (thumbs-down and comments, on a page or an answer), **MCP calls**
-(every metered call an agent made), and **All events** — everything, unfiltered, last on the list
-since it's the one you reach for when none of the named ones fit. **Reader events**, **Language
-events** and **MCP calls** are feeds to read rather than to subscribe to, since none of their events
-is one an alert can be attached to; the other four are exactly what you'd point a notifier at. All
-seven are starting filters rather than saved lists, so they cannot be deleted and nothing can be
-pointed at one directly — narrow one and **Save as list** turns it into a feed of your own, which
-appears as its own row and is the form an alert can be attached to.
+thumbs-down), **Content gaps** (the assistant coming up empty and searches that returned nothing —
+the fastest signal of what your docs are missing), **Reader feedback** (thumbs-down and comments, on
+a page or an answer), **Conversions** (clicks that took a reader toward your product — an outbound
+link, an AI answer sending them off-site, or Publish/Claim), **Plan & usage** (every plan change and
+usage-limit warning this workspace crossed), **MCP calls** (every metered call an agent made), and
+**All events** — everything, unfiltered, last on the list since it's the one you reach for when none
+of the named ones fit. **Reader events**, **Language events**, **Conversions** and **MCP calls** are
+feeds to read rather than to subscribe to, since none of their events is one an alert can be attached
+to; the other six are exactly what you'd point a notifier at. All ten are starting filters rather
+than saved lists, so they cannot be deleted and nothing can be pointed at one directly — narrow one
+and **Save as list** turns it into a feed of your own, which appears as its own tab and is the form
+an alert can be attached to.
 
 ### Reading the feed
 

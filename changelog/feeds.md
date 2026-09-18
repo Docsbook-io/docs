@@ -13,6 +13,11 @@ Everything that shipped in **Feeds**. This is the Feeds slice of the [full Docsb
 
 - **Usage now answers what a whole organization or account spent**, with a dropdown that narrows to one project and shows each project's spend beside its name — so finding the site that is burning the balance takes one look instead of opening six projects and adding the figures up. `Feeds`
 - **Integrations now shows what is connected where**, a line per project across the organization, so a site with nothing watching it is visible at a glance rather than after six panels. Connecting something is still done on the project, inline, without leaving the screen. `Webhooks`
+- **Three new built-in feeds: Content gaps, Conversions, and Plan & usage.** Content gaps is where the assistant came up empty or a search returned nothing — the fastest signal of what your docs are missing. Conversions is every click that took a reader toward your product. Plan & usage is every plan change and usage-limit warning the workspace crossed. Content gaps and Plan & usage can each carry an alert, so you can get pinged in Slack or Discord the moment a reader hits a wall or a teammate nears a spend limit, instead of noticing it days later in the feed. `Feeds`
+
+### Changed
+
+- **Logs ▸ Activity now opens straight on the feed, with every feed a tab above it** instead of a page of cards you had to click through first. Switching between Reader events, a saved alert list and everything else is one click that never leaves the screen, and each tab keeps its own filter — narrowing one never changes what another tab shows. `Feeds`
 
 ## NEW - 15.09.2026
 
