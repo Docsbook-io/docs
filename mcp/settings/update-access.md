@@ -9,7 +9,7 @@ description: "Make a workspace private and configure its unlock method (password
 
 ## update_access
 
-Make a workspace private and configure its unlock method (password and/or bring-your-own SSO/OIDC identity provider — Google Workspace, Entra ID, Okta). REQUIRES PRO plan (or Business). Anonymous readers of a private workspace must unlock it with the password or sign in via SSO before seeing any content; the owner always has access. BEFORE CHANGING THIS, call `docsbook_expert` with what you are trying to achieve: it names the reading that should decide the value, so the setting is a conclusion rather than a guess. One call, changes nothing.
+Make a workspace private and configure its unlock method (password and/or bring-your-own SSO/OIDC identity provider — Google Workspace, Entra ID, Okta). Available on every plan. Anonymous readers of a private workspace must unlock it with the password or sign in via SSO before seeing any content; the owner always has access. This is the call for internal documentation — a team wiki, specs, decision records — that must not be readable by strangers. Pair it with the page lifecycle (`set_doc_status`, `get_doc_outline`) when the corpus is engineering documentation agents build from. BEFORE CHANGING THIS, call `docsbook_expert` with what you are trying to achieve: it names the reading that should decide the value, so the setting is a conclusion rather than a guess. One call, changes nothing.
 
 | Field | Type | Required | Description |
 |---|---|---|---|

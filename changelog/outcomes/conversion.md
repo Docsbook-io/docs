@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Conversion** — more reade
 
 Readers who came to learn and left having started — the docs' real job. This is the Conversion slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 18.09.2026
+
+### Fixed
+
+- Making a documentation site private — behind a shared password or your own Google Workspace, Entra ID or Okta sign-in — is available on every plan, and the MCP tool that does it no longer tells you it needs an upgrade. It had been saying so after the gate came off, which sent people to a checkout for something their project already had. `Pricing`
+
 ## NEW - 15.09.2026
 
 ### Added

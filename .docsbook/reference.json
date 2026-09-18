@@ -316,6 +316,10 @@
       "label": "READ",
       "kind": "tool"
     },
+    "mcp/content/set-doc-status": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
     "mcp/content/write-docs": {
       "label": "WRITE",
       "kind": "tool"
@@ -472,7 +476,7 @@
       "label": "READ",
       "kind": "tool"
     },
-    "mcp/product-help/ask-docsbook": {
+    "mcp/product-help/docsbook-assistant": {
       "label": "READ",
       "kind": "tool"
     },

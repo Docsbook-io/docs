@@ -135,6 +135,11 @@
       "from": "reference/api",
       "to": "rest-api",
       "at": "2026-09-15T00:00:00.000Z"
+    },
+    {
+      "from": "mcp/product-help/ask-docsbook",
+      "to": "mcp/product-help/docsbook-assistant",
+      "at": "2026-09-18T00:00:00.000Z"
     }
   ]
 }

@@ -1,11 +1,11 @@
 ---
 title: "Agent"
-description: "The one agent — `docsbook_expert` — an expert that tells you how to do the work and does none of it."
+description: "The direction agent — `docsbook_expert` — an expert that tells you WHAT to do and WHY, and does none of it."
 ---
 
 # Agent
 
-The one agent — `docsbook_expert` — an expert that tells you how to do the work and does none of it.
+The direction agent — `docsbook_expert` — an expert that tells you WHAT to do and WHY, and does none of it. Its pair, `docsbook_assistant`, answers HOW.
 
 <!-- widget:cards cols=2 -->
 

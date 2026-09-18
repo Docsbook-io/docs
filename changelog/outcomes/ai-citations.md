@@ -9,6 +9,13 @@ Everything Docsbook shipped that moves one number: **AI citations** — more ans
 
 Whether ChatGPT, Claude and Perplexity can read you — and quote you. This is the AI citations slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 18.09.2026
+
+### Added
+
+- **Every documentation page can now carry a status and a version**, so an agent asked to build from your specs knows which pages a human actually signed off and which one a machine drafted an hour ago. Pages written through MCP open at `generated`; `draft`, `review`, `approved`, `locked`, `deprecated` and `archived` are the rest of the ladder, and both fields live in the page's own frontmatter, so they travel with a `git clone` and stay readable in any editor. Nobody has to keep a separate list of which documents are trustworthy, and an agent stops quietly building on a page that was never agreed. `MCP`
+- `get_doc_outline` now doubles as a review board: filter it to what is waiting on a human or to what a machine wrote and nobody has read, and every answer counts how much of the corpus sits at each status. "How much of this is actually approved" is one call instead of opening pages to find out. `MCP`
+
 ## NEW - 15.09.2026
 
 ### Added

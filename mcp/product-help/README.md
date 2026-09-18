@@ -1,14 +1,14 @@
 ---
 title: "Product Help"
-description: "Ask a real question about USING DOCSBOOK ITSELF and get back the same answer a reader gets from the public 'Ask AI' chat on docsbook.io/docs — not advice on how to do the work,…"
+description: "The specialist — `docsbook_assistant` — the agent that answers HOW the work is done well, from the published corpus, with the pages it drew on."
 ---
 
 # Product Help
 
-Ask a real question about USING DOCSBOOK ITSELF and get back the same answer a reader gets from the public 'Ask AI' chat on docsbook.io/docs — not advice on how to do the work, the actual cited answer.
+The specialist — `docsbook_assistant` — the agent that answers HOW the work is done well, from the published corpus, with the pages it drew on.
 
 <!-- widget:cards cols=2 -->
 
-- [`ask_docsbook`](./ask-docsbook.md) — Ask a question about USING DOCSBOOK ITSELF — how a feature works, how to set something up, what a plan includes, why…
+- [`docsbook_assistant`](./docsbook-assistant.md) — 🔴 THE SPECIALIST — the second of this server's two agents, and the one that answers HOW.
 
 <!-- /widget -->

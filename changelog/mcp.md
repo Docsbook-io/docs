@@ -7,6 +7,15 @@ description: "Every release that touched the MCP server: the tools it serves, wh
 
 Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 18.09.2026
+
+### Added
+
+- **Every documentation page can now carry a status and a version**, so an agent asked to build from your specs knows which pages a human actually signed off and which one a machine drafted an hour ago. Pages written through MCP open at `generated`; `draft`, `review`, `approved`, `locked`, `deprecated` and `archived` are the rest of the ladder, and both fields live in the page's own frontmatter, so they travel with a `git clone` and stay readable in any editor. Nobody has to keep a separate list of which documents are trustworthy, and an agent stops quietly building on a page that was never agreed. `MCP`
+- `set_doc_status` approves, freezes, deprecates or archives one page, and it is the only way to reach `approved` or `locked` — `write_docs` cannot mark its own output approved however it is asked to, so sign-off stays something a person did rather than something an edit claimed. A `locked` decision record refuses to be rewritten at all, including by a rename, so the wording somebody agreed on cannot be revised by a passing cleanup. `MCP`
+- `get_doc_outline` now doubles as a review board: filter it to what is waiting on a human or to what a machine wrote and nobody has read, and every answer counts how much of the corpus sits at each status. "How much of this is actually approved" is one call instead of opening pages to find out. `MCP`
+- `read_doc` now says per page whether its content may be built from, and `write_docs` reports where each page it wrote ended up. An edit to an approved page bumps its version and sends it back to review — the sign-off was of the text that just changed — and the write says so, so an agent stops reporting docs as settled in the same breath as unsettling them. `MCP`
+
 ## NEW - 15.09.2026
 
 ### Added

@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Time to answer** — reader
 
 How long a reader hunts before the page they needed is in front of them. This is the Time to answer slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 18.09.2026
+
+### Added
+
+- `get_doc_outline` now doubles as a review board: filter it to what is waiting on a human or to what a machine wrote and nobody has read, and every answer counts how much of the corpus sits at each status. "How much of this is actually approved" is one call instead of opening pages to find out. `MCP`
+
 ## NEW - 15.09.2026
 
 ### Added
