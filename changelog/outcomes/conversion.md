@@ -11,9 +11,21 @@ Readers who came to learn and left having started — the docs' real job. This i
 
 ## NEW - 18.09.2026
 
+### Added
+
+- **A new organization starts with 14 days of Pro**, and that is one trial per account, ever. A second organization is created on Free, and the dialog says so before you click rather than after — so nobody plans a week of evaluation around a trial that was already spent. `Pricing`
+
+### Changed
+
+- A project is now on the best plan it can reach — its own, its team's, or its owner's — so moving a site into a team that pays for Pro switches the paid capabilities on without buying anything again. `Pricing`
+
 ### Fixed
 
 - Making a documentation site private — behind a shared password or your own Google Workspace, Entra ID or Okta sign-in — is available on every plan, and the MCP tool that does it no longer tells you it needs an upgrade. It had been saying so after the gate came off, which sent people to a checkout for something their project already had. `Pricing`
+
+### Removed
+
+- **Upgrade project** and **Open documentation** are gone from the project switcher. The first named the wrong thing now that a plan is bought for you or for your team rather than for whichever project you happen to have open, and it opened the pricing tab that is one click away in the same panel; the second was a link out to a website inside a menu whose whole job is taking you to another of your projects. Creating a project, creating a team and moving this project into one took their place. `Organizations`
 
 ## NEW - 15.09.2026
 

@@ -9,6 +9,16 @@ Everything Docsbook shipped that moves one number: **Broken pages** — fewer pa
 
 Claims and links that stopped being true — found before a reader finds them. This is the Broken pages slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 18.09.2026
+
+### Added
+
+- **A team's own page — people, projects and plan on one screen**, reached by hovering the organization in the switcher and opening **People & settings**. Invite a teammate as a member or an admin, withdraw an invitation that went to the wrong address, see who has access without asking anybody. `Organizations`
+
+### Removed
+
+- **Upgrade project** and **Open documentation** are gone from the project switcher. The first named the wrong thing now that a plan is bought for you or for your team rather than for whichever project you happen to have open, and it opened the pricing tab that is one click away in the same panel; the second was a link out to a website inside a menu whose whole job is taking you to another of your projects. Creating a project, creating a team and moving this project into one took their place. `Organizations`
+
 ## NEW - 15.09.2026
 
 ### Added

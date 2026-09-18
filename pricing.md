@@ -50,6 +50,12 @@ Subscribe and the project keeps Pro, with the month's AI usage credited to its b
 
 Spend the wallet out without subscribing and **the project is paused**: it goes private, and the published docs stop being readable until it has a balance again. You are warned on the way there — at half the wallet, at three quarters, and again near the end — so the pause is never the first you hear of it. Nothing is deleted, your Markdown stays in your repository, and topping the project up or subscribing publishes it again exactly as it was.
 
+## A plan on an organization
+
+A plan can also sit on an **organization** rather than on one project. Every project filed into that organization is on the organization's plan, including the ones added afterwards, so a team buys once instead of once per site. A project is always on the best of what it has: its own subscription, its organization's, or its owner's — moving a project into a team can only ever raise what it may do, never lower it.
+
+A new organization starts with **14 days of Pro**, and that is **one trial per account, ever**. Creating a second organization does not hand out a second trial — it is created on Free, and the dialog says so before you click, not after. A project created inside an organization has no separate wallet of its own either; it spends the organization's.
+
 ## The two plans, and which balance they fill
 
 Both plans switch on the same things. What differs is **whose balance is topped up**, and it is the only question worth asking when choosing between them:

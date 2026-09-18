@@ -13,10 +13,23 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - `set_doc_status` approves, freezes, deprecates or archives one page, and it is the only way to reach `approved` or `locked` — `write_docs` cannot mark its own output approved however it is asked to, so sign-off stays something a person did rather than something an edit claimed. A `locked` decision record refuses to be rewritten at all, including by a rename, so the wording somebody agreed on cannot be revised by a passing cleanup. `MCP`
 - `get_doc_outline` now doubles as a review board: filter it to what is waiting on a human or to what a machine wrote and nobody has read, and every answer counts how much of the corpus sits at each status. "How much of this is actually approved" is one call instead of opening pages to find out. `MCP`
 - `read_doc` now says per page whether its content may be built from, and `write_docs` reports where each page it wrote ended up. An edit to an approved page bumps its version and sends it back to review — the sign-off was of the text that just changed — and the write says so, so an agent stops reporting docs as settled in the same breath as unsettling them. `MCP`
+- **Organizations: a team you make in one click.** Give it a name and it exists — the handle fills itself, is checked while you type, and a taken one is never a dead end. Everything a team needed and could not have lives on it: invite somebody once and they reach every project in the organization, including the ones you add later, instead of one invite per site; and the plan sits on the organization, so a team buys once rather than once per documentation site. A team with six sites stops paying six times and stops sending six invitations. `Organizations`
+- **Projects move into an organization from the project switcher**, and back out the same way. Click the project's name in the sidebar, choose **Move project…**, pick the team. Nothing about the site changes — not its address, not its settings, not who owns it — so nobody has to weigh a reorganisation against the risk of breaking a live site, and deleting a team never deletes the documentation inside it. `Organizations`
+- **A team's own page — people, projects and plan on one screen**, reached by hovering the organization in the switcher and opening **People & settings**. Invite a teammate as a member or an admin, withdraw an invitation that went to the wrong address, see who has access without asking anybody. `Organizations`
+- **A new organization starts with 14 days of Pro**, and that is one trial per account, ever. A second organization is created on Free, and the dialog says so before you click rather than after — so nobody plans a week of evaluation around a trial that was already spent. `Pricing`
+
+### Changed
+
+- **The project switcher now shows your projects the way you think about them, not the way GitHub files them.** Your own sites — the ones Docsbook hosts and the repositories under your own account — are one list called yours; a company's GitHub organization still gets its own row when a repository really does belong to one; and the teams you made in Docsbook sit in a section of their own. Sites Docsbook hosts for you used to appear under an internal account name you have never heard of, and a repository under your own login was listed as though it were somebody's company. `Organizations`
+- A project is now on the best plan it can reach — its own, its team's, or its owner's — so moving a site into a team that pays for Pro switches the paid capabilities on without buying anything again. `Pricing`
 
 ### Fixed
 
 - Making a documentation site private — behind a shared password or your own Google Workspace, Entra ID or Okta sign-in — is available on every plan, and the MCP tool that does it no longer tells you it needs an upgrade. It had been saying so after the gate came off, which sent people to a checkout for something their project already had. `Pricing`
+
+### Removed
+
+- **Upgrade project** and **Open documentation** are gone from the project switcher. The first named the wrong thing now that a plan is bought for you or for your team rather than for whichever project you happen to have open, and it opened the pricing tab that is one click away in the same panel; the second was a link out to a website inside a menu whose whole job is taking you to another of your projects. Creating a project, creating a team and moving this project into one took their place. `Organizations`
 
 ## NEW - 15.09.2026
 

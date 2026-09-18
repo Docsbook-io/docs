@@ -179,9 +179,13 @@ To close it, switch the workspace to **private** in **Settings** → **Privacy &
 
 ## Work with other people
 
+**Through an organization.** This is the path for a team that works on more than one project. Open the project switcher at the top of the panel's sidebar, choose **New organization**, and give it a name — the handle fills itself and only has to be free. Then invite people into the organization once, and they reach every project in it, including the ones you add later. Members are managed on the organization's own page: hover its row in the switcher and open **People & settings**.
+
+To put an existing project into an organization, open it, click its name in the sidebar and choose **Move project…**. Nothing about the site changes — not its address, not its settings, not who owns it — and the same picker moves it back out.
+
 **Through GitHub.** Add them as collaborators on the repository. They edit files or open pull requests, and the site updates when a change reaches your default branch. This is the path for anyone who already works in the repository.
 
-**Through the AI chat.** Press **Invite** in the chat toolbar, or use **Collaborators** in Settings, and send an email invite. It is a one-time link — the invited teammate accepts it while signed in with that same email address, then shows up under **People with access**. No GitHub account needed.
+**Through the AI chat.** Press **Invite** in the chat toolbar, or use **Collaborators** in Settings, and send an email invite. It is a one-time link — the invited teammate accepts it while signed in with that same email address, then shows up under **People with access**. This adds somebody to ONE project; an organization invite covers all of them. No GitHub account needed.
 
 ## Fix a site that has not updated
 

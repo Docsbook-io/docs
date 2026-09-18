@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **First-visit bounce** — fe
 
 Docs that look like the product, rather than like a template someone forgot. This is the First-visit bounce slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 18.09.2026
+
+### Added
+
+- **Projects move into an organization from the project switcher**, and back out the same way. Click the project's name in the sidebar, choose **Move project…**, pick the team. Nothing about the site changes — not its address, not its settings, not who owns it — so nobody has to weigh a reorganisation against the risk of breaking a live site, and deleting a team never deletes the documentation inside it. `Organizations`
+
 ## NEW - 15.09.2026
 
 ### Added
