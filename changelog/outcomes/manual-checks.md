@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Manual checks** — fewer t
 
 A watch someone keeps by remembering to look, kept by a webhook instead. This is the Manual checks slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 18.09.2026
+
+### Added
+
+- **Integrations now shows what is connected where**, a line per project across the organization, so a site with nothing watching it is visible at a glance rather than after six panels. Connecting something is still done on the project, inline, without leaving the screen. `Webhooks`
+
 ## NEW - 15.09.2026
 
 ### Added

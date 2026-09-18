@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **AI spend** — less money b
 
 Sees where the model budget actually goes before the invoice does. This is the AI spend slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 18.09.2026
+
+### Added
+
+- **Usage now answers what a whole organization or account spent**, with a dropdown that narrows to one project and shows each project's spend beside its name — so finding the site that is burning the balance takes one look instead of opening six projects and adding the figures up. `Feeds`
+
 ## NEW - 15.09.2026
 
 ### Added

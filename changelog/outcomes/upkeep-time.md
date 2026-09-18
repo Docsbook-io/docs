@@ -17,6 +17,10 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 - `set_doc_status` approves, freezes, deprecates or archives one page, and it is the only way to reach `approved` or `locked` — `write_docs` cannot mark its own output approved however it is asked to, so sign-off stays something a person did rather than something an edit claimed. A `locked` decision record refuses to be rewritten at all, including by a rename, so the wording somebody agreed on cannot be revised by a passing cleanup. `MCP`
 - `read_doc` now says per page whether its content may be built from, and `write_docs` reports where each page it wrote ended up. An edit to an approved page bumps its version and sends it back to review — the sign-off was of the text that just changed — and the write says so, so an agent stops reporting docs as settled in the same breath as unsettling them. `MCP`
 
+### Changed
+
+- Agent, Customize, Logs, Analytics and Settings show a project picker when you are looking at a whole organization, and open that project's own panel — an agent is armed on one project and a design belongs to one site, so merging them would have produced a screen whose every row had to say which site it meant. `Organizations`
+
 ## NEW - 15.09.2026
 
 ### Added

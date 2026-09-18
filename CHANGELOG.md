@@ -17,11 +17,16 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - **Projects move into an organization from the project switcher**, and back out the same way. Click the project's name in the sidebar, choose **Move project…**, pick the team. Nothing about the site changes — not its address, not its settings, not who owns it — so nobody has to weigh a reorganisation against the risk of breaking a live site, and deleting a team never deletes the documentation inside it. `Organizations`
 - **A team's own page — people, projects and plan on one screen**, reached by hovering the organization in the switcher and opening **People & settings**. Invite a teammate as a member or an admin, withdraw an invitation that went to the wrong address, see who has access without asking anybody. `Organizations`
 - **A new organization starts with 14 days of Pro**, and that is one trial per account, ever. A second organization is created on Free, and the dialog says so before you click rather than after — so nobody plans a week of evaluation around a trial that was already spent. `Pricing`
+- **Your dashboard now opens on an organization or an account rather than on one site at a time.** Pick a team, a company's GitHub organization or your own projects in the switcher at the top left, and the sections read all of it at once: the Inbox lists what came in across every project in one thread of time, and Issues shows every claim that is due, scored the same way in each, so the morning check on six sites is one screen instead of six. `Organizations`
+- **Usage now answers what a whole organization or account spent**, with a dropdown that narrows to one project and shows each project's spend beside its name — so finding the site that is burning the balance takes one look instead of opening six projects and adding the figures up. `Feeds`
+- **Integrations now shows what is connected where**, a line per project across the organization, so a site with nothing watching it is visible at a glance rather than after six panels. Connecting something is still done on the project, inline, without leaving the screen. `Webhooks`
 
 ### Changed
 
 - **The project switcher now shows your projects the way you think about them, not the way GitHub files them.** Your own sites — the ones Docsbook hosts and the repositories under your own account — are one list called yours; a company's GitHub organization still gets its own row when a repository really does belong to one; and the teams you made in Docsbook sit in a section of their own. Sites Docsbook hosts for you used to appear under an internal account name you have never heard of, and a repository under your own login was listed as though it were somebody's company. `Organizations`
 - A project is now on the best plan it can reach — its own, its team's, or its owner's — so moving a site into a team that pays for Pro switches the paid capabilities on without buying anything again. `Pricing`
+- **Opening a team, a GitHub organization or your own projects is now a click in the project switcher**, on every kind of row rather than only on the teams made in Docsbook. It is the same control that tells you which team the open project belongs to, so the way back is where you were already looking. `Organizations`
+- Agent, Customize, Logs, Analytics and Settings show a project picker when you are looking at a whole organization, and open that project's own panel — an agent is armed on one project and a design belongs to one site, so merging them would have produced a screen whose every row had to say which site it meant. `Organizations`
 
 ### Fixed
 
@@ -30,6 +35,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ### Removed
 
 - **Upgrade project** and **Open documentation** are gone from the project switcher. The first named the wrong thing now that a plan is bought for you or for your team rather than for whichever project you happen to have open, and it opened the pricing tab that is one click away in the same panel; the second was a link out to a website inside a menu whose whole job is taking you to another of your projects. Creating a project, creating a team and moving this project into one took their place. `Organizations`
+- **Back to Dashboard** is gone from a project's panel. It could only ever lead to one place, and somebody who arrived from their team's dashboard and somebody who arrived from their own account's need to go back to different ones — so half the time it quietly took you somewhere you had not been. The project's own switcher does both. `Organizations`
 
 ## NEW - 15.09.2026
 

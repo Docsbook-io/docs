@@ -7,6 +7,13 @@ description: "Every release that touched Feeds: the live event stream from your 
 
 Everything that shipped in **Feeds**. This is the Feeds slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 18.09.2026
+
+### Added
+
+- **Usage now answers what a whole organization or account spent**, with a dropdown that narrows to one project and shows each project's spend beside its name — so finding the site that is burning the balance takes one look instead of opening six projects and adding the figures up. `Feeds`
+- **Integrations now shows what is connected where**, a line per project across the organization, so a site with nothing watching it is visible at a glance rather than after six panels. Connecting something is still done on the project, inline, without leaving the screen. `Webhooks`
+
 ## NEW - 15.09.2026
 
 ### Added
