@@ -9,6 +9,13 @@ Everything Docsbook shipped that moves one number: **Support load** — fewer qu
 
 Questions the docs answer are questions your inbox never sees. This is the Support load slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 18.09.2026
+
+### Added
+
+- **A comment left here also puts the assistant to work**: it reads the conversation, the record and the change, then answers on the thread or does what was asked. Replying to a question on your own tracker stops being something you have to sit down and do. `Issues`
+- `comment_on_issue` lets an agent answer on the record instead of only in its own reply, and `get_issue_thread` hands it the conversation together with how much of the predicted move has landed — so an agent stops re-deriving whether the last change worked, and stops answering a question somebody already answered. Both work on pull requests too. `MCP`
+
 ## NEW - 15.09.2026
 
 ### Added

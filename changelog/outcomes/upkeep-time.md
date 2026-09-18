@@ -13,12 +13,15 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 
 ### Added
 
+- `comment_on_issue` lets an agent answer on the record instead of only in its own reply, and `get_issue_thread` hands it the conversation together with how much of the predicted move has landed — so an agent stops re-deriving whether the last change worked, and stops answering a question somebody already answered. Both work on pull requests too. `MCP`
 - **Every documentation page can now carry a status and a version**, so an agent asked to build from your specs knows which pages a human actually signed off and which one a machine drafted an hour ago. Pages written through MCP open at `generated`; `draft`, `review`, `approved`, `locked`, `deprecated` and `archived` are the rest of the ladder, and both fields live in the page's own frontmatter, so they travel with a `git clone` and stay readable in any editor. Nobody has to keep a separate list of which documents are trustworthy, and an agent stops quietly building on a page that was never agreed. `MCP`
 - `set_doc_status` approves, freezes, deprecates or archives one page, and it is the only way to reach `approved` or `locked` — `write_docs` cannot mark its own output approved however it is asked to, so sign-off stays something a person did rather than something an edit claimed. A `locked` decision record refuses to be rewritten at all, including by a rename, so the wording somebody agreed on cannot be revised by a passing cleanup. `MCP`
 - `read_doc` now says per page whether its content may be built from, and `write_docs` reports where each page it wrote ended up. An edit to an approved page bumps its version and sends it back to review — the sign-off was of the text that just changed — and the write says so, so an agent stops reporting docs as settled in the same breath as unsettling them. `MCP`
 
 ### Changed
 
+- **`create_issue` now requires the impact the issue is expected to move** and refuses figures that could not come out false — an outcome outside the thirteen, a missing unit, a target equal to its baseline, or a move too small to tell from the reading's own noise. An agent can no longer fill a backlog with work nobody will ever be able to judge, which is the state most backlogs quietly reach. `MCP`
+- `write_docs` accepts the same claim and the day to check it, and writes both into the pull request it opens, so a merged change carries the reason it was worth merging. Changes that are not making a claim — a typo, a reword — pass without one rather than inviting an invented number. `MCP`
 - Agent, Customize, Logs, Analytics and Settings show a project picker when you are looking at a whole organization, and open that project's own panel — an agent is armed on one project and a design belongs to one site, so merging them would have produced a screen whose every row had to say which site it meant. `Organizations`
 
 ## NEW - 15.09.2026

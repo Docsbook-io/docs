@@ -1,11 +1,22 @@
 ---
 title: "What shipped in the Docsbook issue tracker, and when"
-description: "Every release that touched Issues: the GitHub tracker inside the panel, the Start, Audit and Verify actions, and issue generation across the ten stages. The section was removed on 12.09.2026 in favour of a card on Overview; this page is its history."
+description: "Every release that touched Issues: the GitHub tracker inside the panel, the impact each issue and pull request claims, and the score that says whether it worked. The section was retired on 12.09.2026 and came back on 18.09.2026 as the All tab, which is why this page has a gap in the middle."
 ---
 
 # What shipped in the Docsbook issue tracker, and when
 
 Everything that shipped in **Issues**. This is the Issues slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
+
+## NEW - 18.09.2026
+
+### Added
+
+- **Issues now shows the whole tracker on one screen — every issue and every pull request together**, filtered the way you already filter GitHub (`is:issue state:open`, `label:bug`, a number typed from memory). They are two stages of one piece of work, so checking what is open on a project stops being two tabs and two mental lists, and nobody has to keep a browser tab on GitHub open beside the panel to see what is actually happening. `Issues`
+- **Every issue and pull request now says what number it is supposed to move**, in figures: which outcome, the unit, what the number says today, what it should say afterwards, and the day we look. The claim is written into the record itself, so it is readable on GitHub as well as here, and it survives the project moving. `Issues`
+- **A bar on each row says how much of that promise actually arrived**, worked out from the figures rather than asserted by the assistant — so "did that change do anything" is answered by looking instead of by somebody re-running the numbers by hand a month later. A change that claimed nothing says so plainly rather than looking finished. `Issues`
+- **Sort by "Impact at risk"** to put the readings nobody has taken at the top, and filter to the work that claimed nothing at all — the backlog can now be read by outcome rather than only by date. `Issues`
+- **Comment on an issue or a pull request without leaving the panel**, with the same Write and Preview tabs you are used to. The comment lands on the record on GitHub, where the next person will find it. `Issues`
+- **A comment left here also puts the assistant to work**: it reads the conversation, the record and the change, then answers on the thread or does what was asked. Replying to a question on your own tracker stops being something you have to sit down and do. `Issues`
 
 ## NEW - 13.09.2026
 
