@@ -18,6 +18,7 @@ One visit is a look; a second is a product someone is actually adopting. This is
 ### Changed
 
 - **Logs ▸ Activity now opens straight on the feed, with every feed a tab above it** instead of a page of cards you had to click through first. Switching between Reader events, a saved alert list and everything else is one click that never leaves the screen, and each tab keeps its own filter — narrowing one never changes what another tab shows. `Feeds`
+- **Log out is now always red**, not only on hover — the one action in the account menu that ends the session, marked as such at rest instead of waiting for you to reach for it. `Organizations`
 
 ## NEW - 15.09.2026
 

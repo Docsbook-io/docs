@@ -15,6 +15,7 @@ Readers who came to learn and left having started — the docs' real job. This i
 
 - **A new organization starts with 14 days of Pro**, and that is one trial per account, ever. A second organization is created on Free, and the dialog says so before you click rather than after — so nobody plans a week of evaluation around a trial that was already spent. `Pricing`
 - **Three new built-in feeds: Content gaps, Conversions, and Plan & usage.** Content gaps is where the assistant came up empty or a search returned nothing — the fastest signal of what your docs are missing. Conversions is every click that took a reader toward your product. Plan & usage is every plan change and usage-limit warning the workspace crossed. Content gaps and Plan & usage can each carry an alert, so you can get pinged in Slack or Discord the moment a reader hits a wall or a teammate nears a spend limit, instead of noticing it days later in the feed. `Feeds`
+- **Billing has a settled home: Settings → Plan.** The same plan comparison and balance the Pricing tab shows, one tab away from Usage and Profile instead of a separate menu. `Pricing`
 
 ### Changed
 

@@ -15,6 +15,11 @@ Sees where the model budget actually goes before the invoice does. This is the A
 
 - **Usage now answers what a whole organization or account spent**, with a dropdown that narrows to one project and shows each project's spend beside its name — so finding the site that is burning the balance takes one look instead of opening six projects and adding the figures up. `Feeds`
 - **Three new built-in feeds: Content gaps, Conversions, and Plan & usage.** Content gaps is where the assistant came up empty or a search returned nothing — the fastest signal of what your docs are missing. Conversions is every click that took a reader toward your product. Plan & usage is every plan change and usage-limit warning the workspace crossed. Content gaps and Plan & usage can each carry an alert, so you can get pinged in Slack or Discord the moment a reader hits a wall or a teammate nears a spend limit, instead of noticing it days later in the feed. `Feeds`
+- **Billing has a settled home: Settings → Plan.** The same plan comparison and balance the Pricing tab shows, one tab away from Usage and Profile instead of a separate menu. `Pricing`
+
+### Removed
+
+- **Billing, Usage, Help & feedback, Theme, and the links to the changelog and the docs are gone from the sidebar's account menu.** Usage and Profile are one click away in Settings, Billing moved to Settings → Plan, and the account menu's own job is now switching between your organizations and profile, and signing out. `Organizations`
 
 ## NEW - 15.09.2026
 

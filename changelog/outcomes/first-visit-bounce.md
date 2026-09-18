@@ -15,6 +15,14 @@ Docs that look like the product, rather than like a template someone forgot. Thi
 
 - **Projects move into an organization from the project switcher**, and back out the same way. Click the project's name in the sidebar, choose **Move project…**, pick the team. Nothing about the site changes — not its address, not its settings, not who owns it — so nobody has to weigh a reorganisation against the risk of breaking a live site, and deleting a team never deletes the documentation inside it. `Organizations`
 
+### Changed
+
+- **The bottom of the sidebar is now the account switcher.** It drops down into your organizations and your own profile, each with a plan badge, the projects under whichever one you open, and "New organization" — with Log out, in red, at the very bottom. The project switcher above it still names the open project and its own siblings, but no longer switches accounts or shows a plan badge of its own: a plan is bought on a profile or an organization, never on a project. `Organizations`
+
+### Removed
+
+- **Billing, Usage, Help & feedback, Theme, and the links to the changelog and the docs are gone from the sidebar's account menu.** Usage and Profile are one click away in Settings, Billing moved to Settings → Plan, and the account menu's own job is now switching between your organizations and profile, and signing out. `Organizations`
+
 ## NEW - 15.09.2026
 
 ### Added

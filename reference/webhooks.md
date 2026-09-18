@@ -198,7 +198,7 @@ its count and its cost as a plain number you can sum, and a column saying whethe
 charged — as well as the raw events behind it, bounded by the window you are looking at.
 
 The same screen is what **See usage** opens from the sidebar's balance notice — the card that warns
-when this project is running low. Topping up is in the account menu's **Balance** block: one answers
+when this project is running low. Topping up is in **Settings → Plan**: one answers
 how much is left, this one answers what took it.
 
 ## Notifiers: where events go

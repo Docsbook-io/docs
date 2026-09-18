@@ -179,9 +179,9 @@ To close it, switch the workspace to **private** in **Settings** → **Privacy &
 
 ## Work with other people
 
-**Through an organization.** This is the path for a team that works on more than one project. Open the project switcher at the top of the panel's sidebar, choose **New organization**, and give it a name — the handle fills itself and only has to be free. Then invite people into the organization once, and they reach every project in it, including the ones you add later. Members are managed on the organization's own page: hover its row in the switcher and open **People & settings**.
+**Through an organization.** This is the path for a team that works on more than one project. Open the account menu at the bottom of the panel's sidebar, choose **New organization**, and give it a name — the handle fills itself and only has to be free. If a company's GitHub organization isn't showing up there yet, the same dialog has a **Connect**/**Reconnect** button for it. Then invite people into the organization once, and they reach every project in it, including the ones you add later. Members are managed on the organization's own page: hover its row in the account menu and open **People & settings**.
 
-To put an existing project into an organization, open it, click its name in the sidebar and choose **Move project…**. Nothing about the site changes — not its address, not its settings, not who owns it — and the same picker moves it back out.
+To put an existing project into an organization, open it, click its name at the top of the sidebar and choose **Move project…**. Nothing about the site changes — not its address, not its settings, not who owns it — and the same picker moves it back out.
 
 **Through GitHub.** Add them as collaborators on the repository. They edit files or open pull requests, and the site updates when a change reaches your default branch. This is the path for anyone who already works in the repository.
 
