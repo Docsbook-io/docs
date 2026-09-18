@@ -18,6 +18,7 @@ Readers who came to learn and left having started — the docs' real job. This i
 ### Changed
 
 - A project is now on the best plan it can reach — its own, its team's, or its owner's — so moving a site into a team that pays for Pro switches the paid capabilities on without buying anything again. `Pricing`
+- **Paste as many addresses at once as you like** when connecting a source, one per line, with a preview of where each one will be filed before you commit. A project's docs are written from its repository *and* its pricing page *and* its API reference, and connecting them one dialog at a time is how a source list ends up with a single row in it. `Integrations`
 
 ### Fixed
 

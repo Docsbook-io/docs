@@ -11,6 +11,7 @@ Docsbook keeps one changelog, [the full one](../CHANGELOG.md), and cuts it two w
 
 - [Changes](./changes.md) — What shipped in the Docsbook Changes tab, and when
 - [Issues](./issues.md) — What shipped in the Docsbook issue tracker, and when
+- [Integrations](./integrations.md) — What changed in Docsbook Integrations, and in which release
 - [MCP](./mcp.md) — What changed in the Docsbook MCP server, and when it shipped
 - [Sources](./sources.md) — What changed in Docsbook Sources, and in which release
 - [Agents](./agents.md) — What changed in Docsbook Agents, and when it shipped

@@ -15,6 +15,10 @@ Claims and links that stopped being true — found before a reader finds them. T
 
 - **A team's own page — people, projects and plan on one screen**, reached by hovering the organization in the switcher and opening **People & settings**. Invite a teammate as a member or an admin, withdraw an invitation that went to the wrong address, see who has access without asking anybody. `Organizations`
 
+### Changed
+
+- **Yours and Discover** split the section in two: what you have wired up, and what you could. A connector that is broken stays under Yours rather than disappearing at the moment it needs attention. `Integrations`
+
 ### Removed
 
 - **Upgrade project** and **Open documentation** are gone from the project switcher. The first named the wrong thing now that a plan is bought for you or for your team rather than for whichever project you happen to have open, and it opened the pricing tab that is one click away in the same panel; the second was a link out to a website inside a menu whose whole job is taking you to another of your projects. Creating a project, creating a team and moving this project into one took their place. `Organizations`

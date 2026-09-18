@@ -15,6 +15,7 @@ Questions the docs answer are questions your inbox never sees. This is the Suppo
 
 - **A comment left here also puts the assistant to work**: it reads the conversation, the record and the change, then answers on the thread or does what was asked. Replying to a question on your own tracker stops being something you have to sit down and do. `Issues`
 - `comment_on_issue` lets an agent answer on the record instead of only in its own reply, and `get_issue_thread` hands it the conversation together with how much of the predicted move has landed — so an agent stops re-deriving whether the last change worked, and stops answering a question somebody already answered. Both work on pull requests too. `MCP`
+- **Connect Google Calendar, GitHub, Slack, Google Workspace, Telegram, Notion, Linear, Jira, Intercom, Zendesk, GitLab, Sentry, Figma or HubSpot** — and search 2 500 more by name. Your documentation can be written from the places the work actually happens instead of from whatever somebody remembered to paste, so a release, a merged pull request or a repeated support question reaches the docs without anybody carrying it there. `Integrations`
 
 ## NEW - 15.09.2026
 
