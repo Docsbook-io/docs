@@ -83,7 +83,7 @@ Endpoint: `https://docsbook.io/api/mcp/server`
 - [Analytics](./analytics/README.md) — What readers, searchers and the assistant actually did.
 - [Orientation](./orientation/README.md) — Find out what this server is, and which project the user means.
 - [Work](./work/README.md) — How the work on this project is going — the board, and what each piece of it is connected to.
-- [Inbox](./inbox/README.md) — The owner's mailbox — a report worth a human read, or a question you cannot decide without their own words,…
+- [Inbox](./inbox/README.md) — The owner's mailbox — a report worth a human read, or a question you cannot decide without their own words.…
 - [Alerts](./alerts/README.md) — Outbound notifications when something happens on the site.
 
 <!-- /widget -->
