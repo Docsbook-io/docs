@@ -56,7 +56,6 @@ That block is a promise about our process: a claim we cannot support is visible 
 Documentation drifts away from a product silently, which is the failure mode Docsbook exists to fix — so the same machinery runs on these docs.
 
 - Every user-facing change ships with an entry in the [changelog](./CHANGELOG.md), stating what the change was meant to buy, not just what moved.
-- The changelog is projected into [per-outcome pages](./changelog/outcomes/README.md), so you can read the history of one outcome — AI citations, support load, organic traffic — rather than a flat list.
 - Pages carry a visible last-modified date taken from the commit that changed them, so a stale page cannot pretend to be current. See [GEO](./geo/README.md).
 
 ## Found something wrong?
