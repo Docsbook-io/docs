@@ -20,6 +20,10 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Fixed: the public MCP endpoint had been silently dropping three of its ten advertised tools; the support widget meant for us was leaking onto published docs. `MCP`
 - Read-only tools on your MCP owner surface now have their own `GET /api/v1/<tool>` endpoint, and a narrow set of settings tools (branding, navigation, the chatbot, translation mode, mention tracking) their own `POST` — no MCP client, no wrapping args object. `MCP`
 - Fixed: the tool catalog at docsbook.io/mcp had silently narrowed to 16 tools instead of the real ~162, and several tool pages documented a REST call that would 404; both now reflect what actually runs. `MCP`
+- Every feed — built-in presets, your saved lists, New list — is now a tab right next to Chat and Feedback in Logs, with no separate Activity tab to open first. `Feeds`
+- New **AI crawler activity** feed: every page an AI or search crawler fetched from your docs, each row priced at the real crawl rate rather than a generic per-visit figure — proof of what's actually paying for your citations. `Feeds`
+- A **Live** toggle on the feed pauses its own re-polling, for reading a fast-moving feed without rows shifting under you. `Feeds`
+- Opening Logs for a whole organization with no project picked now merges every project's feed into one list, labelled by project, instead of asking you to open one project at a time. `Feeds`
 
 ## NEW - 18.09.2026
 

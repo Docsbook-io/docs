@@ -54,7 +54,7 @@ A 2xx response = delivered. Anything else triggers retry until the attempt budge
 
 ## Seeing what your workspace emits
 
-The **Feeds** panel in your admin shows every event the workspace produced, newest first —
+The **Logs** section of your admin shows every event the workspace produced, newest first —
 **including events no alert was watching**, and every MCP tool call made against it. You do not need a webhook registered to see the feed
 fill up, which is the point: it is how you find out which events your docs actually emit before you
 decide what to be notified about. The feed is live — it refreshes itself every few seconds while
@@ -62,14 +62,17 @@ you're looking at it, so there is no time range to pick and nothing to remember 
 
 ### Picking a feed
 
-The **Feeds** section (Logs ▸ Activity in the admin panel) opens directly on the feed, with a **tab
-strip** above the toolbar: one tab per feed — the built-in presets, then any lists you've saved,
-then a trailing **New list** tab. Picking a tab swaps the filter in place; there is no separate page
-to navigate to and no back link, because switching feeds never leaves this screen. Click **New
-list** to name and save a filter of your own — it opens as a fresh tab immediately, narrowed with
-the same controls as everything else on the toolbar.
+The **Logs** section opens on **Chat**, then **Feedback** — and every feed lives right after them
+on the same **tab strip**, in the panel's own header: the built-in presets, then any lists you've
+saved, then a trailing **New list** tab. There is no separate "Activity" tab to open first any
+more — the feeds are simply more tabs of the strip you're already looking at. Picking one swaps
+the filter in place; there is no page to navigate to and no back link, because switching feeds
+never leaves the screen. Click **New list** to name and save a filter of your own — it opens as a
+fresh tab immediately, narrowed with the same controls as everything else on the toolbar. A
+**Live** control sits at the end of the strip: on by default, it pauses or resumes the feed's own
+re-polling, for reading a fast-moving feed without rows shifting underneath you.
 
-Ten feeds are built in, so there is something to open on your first visit before you've saved
+Eleven feeds are built in, so there is something to open on your first visit before you've saved
 anything of your own: **Reader events** (everything people reading your docs did — pages read,
 searches run, questions asked of the AI, feedback left), **Translations** (every language generated,
 outdated or still needed), **Language events** (which languages readers switch the docs into),
@@ -78,14 +81,22 @@ thumbs-down), **Content gaps** (the assistant coming up empty and searches that 
 the fastest signal of what your docs are missing), **Reader feedback** (thumbs-down and comments, on
 a page or an answer), **Conversions** (clicks that took a reader toward your product — an outbound
 link, an AI answer sending them off-site, or Publish/Claim), **Plan & usage** (every plan change and
-usage-limit warning this workspace crossed), **MCP calls** (every metered call an agent made), and
-**All events** — everything, unfiltered, last on the list since it's the one you reach for when none
-of the named ones fit. **Reader events**, **Language events**, **Conversions** and **MCP calls** are
-feeds to read rather than to subscribe to, since none of their events is one an alert can be attached
-to; the other six are exactly what you'd point a notifier at. All ten are starting filters rather
-than saved lists, so they cannot be deleted and nothing can be pointed at one directly — narrow one
-and **Save as list** turns it into a feed of your own, which appears as its own tab and is the form
-an alert can be attached to.
+usage-limit warning this workspace crossed), **MCP calls** (every metered call an agent made),
+**AI crawler activity** (every page an AI or search crawler fetched from your docs, each row priced
+at the real crawl rate rather than a generic per-visit figure — see [what crawling
+costs](/pricing#what-crawling-costs)), and **All events** — everything, unfiltered, last on the list since
+it's the one you reach for when none of the named ones fit. **Reader events**, **Language events**,
+**Conversions**, **MCP calls** and **AI crawler activity** are feeds to read rather than to
+subscribe to, since none of their events is one an alert can be attached to; the other six are
+exactly what you'd point a notifier at. All eleven are starting filters rather than saved lists, so
+they cannot be deleted and nothing can be pointed at one directly — narrow one and **Save as list**
+turns it into a feed of your own, which appears as its own tab and is the form an alert can be
+attached to.
+
+Opening **Logs** at the organization or profile level, with no project picked, merges this same
+feed across every project you own into one list, each row labelled with which project it happened
+on — the presets only, since a saved list belongs to one project. Pick one project's own panel to
+see its saved lists or to save a new one.
 
 ### Reading the feed
 
