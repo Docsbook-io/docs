@@ -7,6 +7,13 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ## NEW - 19.09.2026
 
+- **The panel opens on an Overview again** — first row in the sidebar, four cards, no scrolling: which site is live and on what address, the commit it is serving and who pushed it, whether the agent is armed, what the AI engines did this week, and whether readers arrived. The question "is everything all right with my docs" is now answered by looking, not by opening four sections. `Panel`
+- Your site's card carries the last commit's message, its short hash and its author, so **"did my push go live?" stops being a trip to GitHub**. `Panel`
+- A new **Edit** button beside Visit opens your documentation in edit mode with nothing else on screen — click a block and change it, no chat rail taking half the window. `Panel`
+- The **+** beside Domains goes straight to setting up your own domain, instead of a line of text telling you that you have not got one. `Panel`
+- The Overview's AI card splits crawler traffic into **AI answers, Indexing and Training**, so "an assistant read us while answering somebody" is no longer averaged in with "a model swept us for training data". `Analytics`
+- A reading that could not be taken now shows as a dash rather than a zero, and a week-on-week figure with no previous week to compare against shows no percentage at all — **nothing on this page is a number nobody measured**. `Analytics`
+
 - New content blocks — a **stats** band, a **hero** with buttons and a code panel, cards with **New**/**Beta** pills, and a full **footer** — so a docs homepage can read as a product page instead of a table of contents. `Content`
 - **Creating a project now runs no AI and finishes in about a second**: pick from 32 hand-written templates (API reference, on-call runbook, help centre, contributor guide, blank), paste your site's address for instant branding, or import a GitHub repository (searched across your organizations, nothing written into it) — the site is readable the moment it exists, and writing with AI is still one screen away when you want it. `Onboarding`
 - Drop a folder of PDFs, Word docs, Markdown or plain text into a new or existing project and each file becomes a searchable, answerable page (Integrations ▸ Files). `Integrations`
