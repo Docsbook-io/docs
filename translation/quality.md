@@ -2,6 +2,8 @@
 title: "How good are Docsbook's translations, and what does Google do with them?"
 description: "What Docsbook measures about translation quality, how to correct a translation, how hreflang and canonicals are built per page, and what machine translation still gets wrong in technical docs."
 tldr: "Docsbook publishes no translation quality score. It measures coverage and freshness — how many pages exist per language and how many were translated from the current source — and builds a per-page hreflang cluster that lists only locales this page is genuinely translated into, because Google discards a cluster containing one member that contradicts its own canonical."
+status: generated
+version: "0.2"
 ---
 
 # Translation quality and SEO
@@ -73,7 +75,7 @@ The rule that makes it work is **reciprocity**, and it is enforced per page rath
 
 Docsbook builds the canonical and the alternates from the same function that routes the URL, so the address it advertises is the one that answers with a 200 rather than one that redirects — a canonical pointing at a redirect is resolved by Google by dropping the page.
 
-One more mechanism sits under the same rule. Google says plainly that it *"uses the visible content of your page to determine its language"* and *"We don't use any code-level language information such as lang attributes, or the URL"* — so a fully translated page that still ships an English `<title>` is sending its strongest on-page signal in the wrong language. Docsbook recovers the title from the translated HTML it already stored, by reading that page's own translated `<h1>`, with no extra model call. The meta description is deliberately left as the original in that case: inventing a translation for it is not something a metadata build may do, and a correct title over an original-language description beats both being wrong.
+One more mechanism sits under the same rule. Google says plainly that it *"uses the visible content of your page to determine its language"* and *"We don't use any code-level language information such as lang attributes, or the URL"* — so a fully translated page that still ships an English `<title>` is sending its strongest on-page signal in the wrong language. Docsbook recovers the title, the meta and social descriptions, and the JSON-LD `headline` from the translated page it already stored, with no extra model call — none of them stays pinned to the source language.
 
 ### Why each of those rules is the right one
 

@@ -2,6 +2,8 @@
 title: "What a Docsbook translation pass does to a page"
 description: "What triggers a pass, how a page is chunked, exactly what is protected from the model and by which mechanism, how a stale translation is detected, and what happens when a run fails halfway."
 tldr: "Docsbook renders your Markdown to HTML, splits it at heading boundaries into chunks capped at 9,000 characters, extracts code blocks and inline code into placeholders restored byte-for-byte, and translates the rest at temperature 0. Chunks are cached by content hash, so editing one section re-translates only that section. A page where any chunk failed is served for that request but never stored."
+status: generated
+version: "0.2"
 ---
 
 # AI translations
@@ -68,7 +70,7 @@ Three consequences worth knowing:
 
 ### Translated as sets, not one at a time
 
-Navigation labels are translated as one group in a single request that must return the same number of labels in the same order; a malformed or mismatched response keeps the originals rather than guessing. If every returned label is identical to the original — the signature of a translation that did not happen — the result is discarded rather than cached, so the next attempt can try again instead of locking in English labels forever. A page's title and description are translated together as a pair, so the two can never drift out of sync.
+Navigation labels — sidebar entries, header links, subheader tabs and breadcrumb names — are translated as one group per page and cached as a label → translation map, not a positional list: the cache key is the sorted set of labels, so a lookup is independent of the order any particular caller asks for them in. A malformed or mismatched response keeps the originals rather than guessing. If every returned label is identical to the original — the signature of a translation that did not happen — the result is discarded rather than cached, so the next attempt can try again instead of locking in English labels forever. A page's title and description are translated together as a pair, so the two can never drift out of sync.
 
 ## How an outdated translation is detected
 
