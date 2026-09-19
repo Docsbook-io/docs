@@ -1,6 +1,8 @@
 ---
 title: "Docsbook documentation: publish, get found, get quoted, measure."
 description: "Docsbook publishes the Markdown you already have to a site search engines index and AI assistants cite, then hands your agent a goal and reports the number it moved. Start here."
+status: generated
+version: "0.2"
 ---
 
 <!-- widget:hero size=large -->
@@ -28,7 +30,7 @@ Codex, Cursor, Windsurf, Cline and any other MCP client use the same endpoint.
 <!-- widget:stats cols=4 -->
 
 - **5 min** — from a repository to a public URL
-- **164** — MCP tools your docs agent can use
+- **167** — MCP tools your docs agent can use
 - **15** — languages, each indexed on its own
 - **$0** — for hosting, search, analytics and a custom domain
 
