@@ -15,8 +15,13 @@ A watch someone keeps by remembering to look, kept by a webhook instead. This is
 
 - **What can wake a job now comes from the apps you have connected**, not from a fixed list: a merged pull request, a solved support ticket, a row added to a sheet. Each occasion says what evidence it hands the agent, and one this deployment cannot deliver yet is offered greyed out with the reason on it rather than armed to a silence you would find out about in a month. `Agents`
 
+### Improved
+
+- **The figure on a merged change is now read by Docsbook rather than typed onto it.** Where we measure the outcome ourselves — organic traffic today, and questions reaching your assistant — the number is taken the moment you open the list, so a reading stops going stale as soon as anything moves and nobody has to monitor a date and copy the result onto the record by hand. Each row says which figures are ours and which were reported, and we only stand in for a figure when it is the same measurement over the same window. `Issues`
+
 ### Changed
 
+- **Every pull request now shows how far it actually got** — opened, reviewed, merged, measured, as four marks worked out from the record itself instead of from a sentence somebody wrote on it. A merged change that never got its reading is a gap you see at a glance, rather than something to monitor by reading the tracker. Issues carry none on purpose: an issue ships nothing, so there is nothing for it to be three quarters of the way through. `Issues`
 - **Every connector in the grid now wears its service's real logo in its real colour**, so finding Slack or Sentry among forty tiles is a glance instead of reading forty names in a column. Grey now means one thing only — this one cannot be connected here yet — rather than being what every tile looked like. `Integrations`
 
 ## NEW - 18.09.2026

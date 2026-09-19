@@ -20,12 +20,17 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 - **A reader's agent can now open the page it just found.** `search` has always answered "call `read_doc` on this path", and on the public endpoint that tool did not exist — so the only thing an agent could do with a hit was guess the page from its title, which is the invention the search result is there to prevent. `read_doc` and `get_doc_outline` are public now. `MCP`
 - **Docsbook's own manual is readable over MCP** — `search_docsbook_docs`, `read_docsbook_doc` and `list_docsbook_docs`, on both servers. Every other tool reads *your* documentation, so "what can this product do and what should I set up next" had nothing grounded to answer from, and an agent answered it from memory. `MCP`
 
+### Improved
+
+- **The figure on a merged change is now read by Docsbook rather than typed onto it.** Where we measure the outcome ourselves — organic traffic today, and questions reaching your assistant — the number is taken the moment you open the list, so a reading stops going stale as soon as anything moves and nobody has to monitor a date and copy the result onto the record by hand. Each row says which figures are ours and which were reported, and we only stand in for a figure when it is the same measurement over the same window. `Issues`
+
 ### Changed
 
 - **The Agent screen is one grid of jobs and nothing else**: no tab strip over it, no paragraph describing the grid to somebody already looking at it, no Refresh button, no "3 of 10 on" counter. Cards no longer unfold either — settings and run sit beside each card, so opening one stops moving every other card under your cursor. `Agents`
 
 ### Removed
 
+- **Opportunities is gone from the panel.** It showed what an audit had found beside the list of work, where research reads as a backlog of things nobody has agreed to do. What an audit finds is still kept and still readable by an agent over MCP; what went is the screen. `Issues`
 - **The Agent ▸ Activity tab is gone.** Every call an agent makes against your project is still recorded and still readable under Logs ▸ Activity; what went is a second screen onto the same ledger, and the upkeep of keeping two readings of one record honest. `Agents`
 
 ### Fixed

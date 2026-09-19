@@ -1,11 +1,26 @@
 ---
 title: "What shipped in the Docsbook issue tracker, and when"
-description: "Every release that touched Issues: the GitHub tracker inside the panel, the impact each issue and pull request claims, and the score that says whether it worked. The section was retired on 12.09.2026 and came back on 18.09.2026 as the All tab, which is why this page has a gap in the middle."
+description: "Every release that touched Issues: the GitHub tracker inside the panel, the impact each issue and pull request claims, and the score that says whether it worked. The section was retired on 12.09.2026 and came back on 18.09.2026 as one tabless list of every issue and pull request, which is why this page has a gap in the middle."
 ---
 
 # What shipped in the Docsbook issue tracker, and when
 
 Everything that shipped in **Issues**. This is the Issues slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
+
+## NEW - 19.09.2026
+
+### Improved
+
+- **The figure on a merged change is now read by Docsbook rather than typed onto it.** Where we measure the outcome ourselves — organic traffic today, and questions reaching your assistant — the number is taken the moment you open the list, so a reading stops going stale as soon as anything moves and nobody has to monitor a date and copy the result onto the record by hand. Each row says which figures are ours and which were reported, and we only stand in for a figure when it is the same measurement over the same window. `Issues`
+
+### Changed
+
+- **Issues is one list — the Open, Measuring and Closed tabs are gone.** They were the same records asked a slightly different question, so a project with six open records drew three "nothing here" pages beside the one list that had everything. The counts above the list are the same doors: each one writes a filter you can read in the box, combine (`is:pr is:due`) and paste to somebody. `Issues`
+- **Every pull request now shows how far it actually got** — opened, reviewed, merged, measured, as four marks worked out from the record itself instead of from a sentence somebody wrote on it. A merged change that never got its reading is a gap you see at a glance, rather than something to monitor by reading the tracker. Issues carry none on purpose: an issue ships nothing, so there is nothing for it to be three quarters of the way through. `Issues`
+
+### Removed
+
+- **Opportunities is gone from the panel.** It showed what an audit had found beside the list of work, where research reads as a backlog of things nobody has agreed to do. What an audit finds is still kept and still readable by an agent over MCP; what went is the screen. `Issues`
 
 ## NEW - 18.09.2026
 

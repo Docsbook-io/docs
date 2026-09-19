@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Organic traffic** — more 
 
 Pages that already rank 5–20 are the cheapest traffic you will ever buy. This is the Organic traffic slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 19.09.2026
+
+### Improved
+
+- **The figure on a merged change is now read by Docsbook rather than typed onto it.** Where we measure the outcome ourselves — organic traffic today, and questions reaching your assistant — the number is taken the moment you open the list, so a reading stops going stale as soon as anything moves and nobody has to monitor a date and copy the result onto the record by hand. Each row says which figures are ours and which were reported, and we only stand in for a figure when it is the same measurement over the same window. `Issues`
+
 ## NEW - 15.09.2026
 
 ### Changed

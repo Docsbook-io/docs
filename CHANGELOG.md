@@ -18,10 +18,13 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Improved
 
+- **The figure on a merged change is now read by Docsbook rather than typed onto it.** Where we measure the outcome ourselves — organic traffic today, and questions reaching your assistant — the number is taken the moment you open the list, so a reading stops going stale as soon as anything moves and nobody has to monitor a date and copy the result onto the record by hand. Each row says which figures are ours and which were reported, and we only stand in for a figure when it is the same measurement over the same window. `Issues`
 - **A long question now finds the pages it is actually about.** A prompt covering four subjects at once used to be averaged into a single point that landed between them all, and the answer came back full of pages that are vaguely about everything: measured on our own 3 409-heading corpus, none of the four right pages made the top six. A long question is now searched part by part and the results fused, and all four do. Short questions are untouched. `MCP`
 
 ### Changed
 
+- **Issues is one list — the Open, Measuring and Closed tabs are gone.** They were the same records asked a slightly different question, so a project with six open records drew three "nothing here" pages beside the one list that had everything. The counts above the list are the same doors: each one writes a filter you can read in the box, combine (`is:pr is:due`) and paste to somebody. `Issues`
+- **Every pull request now shows how far it actually got** — opened, reviewed, merged, measured, as four marks worked out from the record itself instead of from a sentence somebody wrote on it. A merged change that never got its reading is a gap you see at a glance, rather than something to monitor by reading the tracker. Issues carry none on purpose: an issue ships nothing, so there is nothing for it to be three quarters of the way through. `Issues`
 - **The Agent screen is one grid of jobs and nothing else**: no tab strip over it, no paragraph describing the grid to somebody already looking at it, no Refresh button, no "3 of 10 on" counter. Cards no longer unfold either — settings and run sit beside each card, so opening one stops moving every other card under your cursor. `Agents`
 - **The account menu at the bottom of the sidebar now lists your organizations and nothing else**, and each one is a single click into that team's dashboard — where its projects, its people and its plan already are. Hovering a team used to fly a second menu of its projects out to the side, which meant reaching your own team cost a hover you had to hold steady and a target you had to aim at. Switching between the projects of the team you are already in is unchanged: that is the project switcher at the top of the same sidebar. `Organizations`
 - **The search box in that menu takes your typing the moment it opens**, so finding one team among thirty is type-and-go instead of click, aim, click again. It used to lose the race with the menu itself about half the time, and the failure was the confusing kind: the cursor looked ready and the first letters went somewhere else. `Organizations`
@@ -32,6 +35,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Removed
 
+- **Opportunities is gone from the panel.** It showed what an audit had found beside the list of work, where research reads as a backlog of things nobody has agreed to do. What an audit finds is still kept and still readable by an agent over MCP; what went is the screen. `Issues`
 - **The Agent ▸ Activity tab is gone.** Every call an agent makes against your project is still recorded and still readable under Logs ▸ Activity; what went is a second screen onto the same ledger, and the upkeep of keeping two readings of one record honest. `Agents`
 - **The Change Log button is gone from the panel header.** The per-section release notes it opened are unchanged and still published at `docsbook.io/docs/changelog` — what was ours to read had taken the one corner of every screen that should be about your project. `Changes`
 
