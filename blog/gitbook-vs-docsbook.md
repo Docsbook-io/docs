@@ -159,7 +159,7 @@ Docsbook is a good product for a different audience: teams whose docs already li
 
 If you are the first audience, GitBook is the right call. If you are the second, Docsbook is the better fit — and the deciding factor is not the price today but which number grows when the team does.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 ## Next steps
 

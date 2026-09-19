@@ -90,7 +90,7 @@ Docsbook and Mintlify auto-generate `llms.txt`. GitBook and ReadMe do not as of 
 
 Because prices copied into a comparison page are the sentences that outlive their accuracy. Docsbook does not sell tiers: each project carries its own balance, and the balance is spent on AI usage — the site, its hosting, its domain and every page view draw nothing from it. [docsbook.io/pricing](https://docsbook.io/pricing) is generated from the live pricing constants on every request, so it is right at the moment you open it. Every competitor figure above carries the date it was read from that vendor's own page, for the same reason.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 ## Next steps
 

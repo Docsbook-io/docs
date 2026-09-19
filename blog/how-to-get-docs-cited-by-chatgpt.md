@@ -130,4 +130,4 @@ Docsbook ships AI usage analytics (`get_ai_questions`, `get_ai_unanswered`, `get
 
 ---
 
-Docsbook handles `llms.txt`, JSON-LD, server-side rendering, and AI crawler robots.txt automatically. [Publish your docs →](https://docsbook.io/start)
+Docsbook handles `llms.txt`, JSON-LD, server-side rendering, and AI crawler robots.txt automatically. [Publish your docs →](https://docsbook.io/?start=1)

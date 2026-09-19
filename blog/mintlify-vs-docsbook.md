@@ -72,7 +72,7 @@ None of that promises a ranking. It removes the mechanical reasons a page cannot
 
 Mintlify is a strong product, and for an API-first company already inside its ecosystem it is a reasonable place to stay. Docsbook is the better fit when the docs already live in a GitHub repository, when the site should exist before the config file does, and when what you want to pay for is AI usage rather than a seat at a tier.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 ## Next steps
 

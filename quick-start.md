@@ -22,7 +22,7 @@ You do not need a credit card, a build pipeline, or an account before step 3.
 ## Step 1 — Generate a draft
 <!-- anchor: step-1-create-website -->
 
-1. Open [docsbook.io/start](https://docsbook.io/start).
+1. Open [docsbook.io/create](https://docsbook.io/create).
 2. Paste your source into the single field: a website URL, a GitHub repository link, or a sentence about your product. Docsbook works out which it is — there is no type to pick.
 3. Wait while Docsbook reads the source. Each step names what it read and what it found.
 
@@ -78,6 +78,6 @@ You have a published documentation site: a public URL, full-text search, a `site
 
 Paste a repository, a website URL, or a sentence about your product, and read the draft before you sign in.
 
-[Create your first project](https://docsbook.io/start)
+[Create your first project](https://docsbook.io/?start=1)
 
 <!-- /widget -->

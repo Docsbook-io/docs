@@ -270,7 +270,7 @@ A small bordered block closing a page with the one thing the reader should do ne
 
 Connect a repository and your markdown is live.
 
-[Create a project](https://docsbook.io/start) · [See pricing](https://docsbook.io/pricing)
+[Create a project](https://docsbook.io/?start=1) · [See pricing](https://docsbook.io/pricing)
 
 <!-- /widget -->
 ```

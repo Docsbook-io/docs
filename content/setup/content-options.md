@@ -80,6 +80,6 @@ Both can be on at once. Unlike the other options on this tab, this one leads som
 
 Every new project starts with $1 of balance, and these toggles do not spend it.
 
-[Create a project](https://docsbook.io/start)
+[Create a project](https://docsbook.io/?start=1)
 
 <!-- /widget -->

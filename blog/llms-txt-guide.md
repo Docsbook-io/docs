@@ -121,4 +121,4 @@ For a more thorough check, ask ChatGPT or Claude to "fetch and summarize https:/
 
 Docsbook generates `llms.txt` and `llms-full.txt` automatically for every workspace, with nothing to enable and nothing to pay for.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)

@@ -136,7 +136,7 @@ The honest answer: if documentation isn't your product, don't build a documentat
 
 Hosting docs from GitHub used to mean a config repository, a deploy pipeline, and recurring cleanup. Paste your repository URL and the site is live; the Markdown never leaves the repo, so the move is reversible.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 ## Next steps
 

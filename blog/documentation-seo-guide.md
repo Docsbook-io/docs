@@ -96,7 +96,7 @@ Documentation is not only a support resource. It is the most durable marketing a
 
 None of the above promises a ranking, and nothing can. What the technical work does is remove the mechanical reasons a page cannot rank — slow rendering, missing canonical tags, no structured data, no internal links, one URL serving several languages. Docsbook emits that layer by default, which leaves you the part that actually decides the outcome: writing the page that answers the question.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 ## Next steps
 

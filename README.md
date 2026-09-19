@@ -11,7 +11,7 @@ description: "Docsbook publishes the Markdown you already have to a site search 
 
 Publish the Markdown you already have to a site search engines index and AI assistants cite. Then hand your agent a goal and read, on a date, the number it moved.
 
-[Start free](https://docsbook.io/start) · [Connect your agent](./agent-ready/mcp.md)
+[Start free](https://docsbook.io/?start=1) · [Connect your agent](./agent-ready/mcp.md)
 
 > ![Claude](https://docsbook.io/agents/claude.svg) ![OpenAI](https://docsbook.io/agents/openai.svg) ![Cursor](https://docsbook.io/agents/cursor.svg) **Onboard your agent** — Set up Docsbook for me. Fetch https://docsbook.io/get-started.md and follow it.
 >
@@ -155,6 +155,6 @@ Live sites, public and readable without signing in.
 
 Ask one question and you get a researched answer about your own market, whether or not you run anything it suggests. Questions: [support@docsbook.io](mailto:support@docsbook.io) or the [Docsbook Discord](https://discord.gg/baqUCdwrag).
 
-[Start free — no credit card](https://docsbook.io/start) · [Connect your agent](./agent-ready/mcp.md)
+[Start free — no credit card](https://docsbook.io/?start=1) · [Connect your agent](./agent-ready/mcp.md)
 
 <!-- /widget -->

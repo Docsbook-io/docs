@@ -171,4 +171,4 @@ Buying is the right answer for most teams for one structural reason: docs AI is 
 
 Docsbook AI chat: bring your own provider, set your own system prompt, and hook the request before and after the model call. Cost is metered in dollars against the project's balance rather than sold as a tier — current numbers on [docsbook.io/pricing](https://docsbook.io/pricing).
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)

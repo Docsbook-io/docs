@@ -77,7 +77,7 @@ Docsbook is pay-as-you-go rather than tiered. Each project carries its own balan
 
 Publish your existing repository, then read the failed searches for a week.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 ## Next steps
 

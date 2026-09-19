@@ -131,7 +131,7 @@ Docsbook scores 3/3 because your files live in GitHub. Mintlify scores 3/3 becau
 
 Deliberately not answered on this page. Vendor prices change, and the sentence a reader — or an assistant summarising this page next year — repeats to a buyer should not be one we wrote from memory. Every competitor figure above carries the date it was read from that vendor's own pricing page. For Docsbook, [docsbook.io/pricing](https://docsbook.io/pricing) is generated from the live pricing constants on every request, so it cannot go stale; nothing else, including this page, is a source for a Docsbook price.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 ## Next steps
 

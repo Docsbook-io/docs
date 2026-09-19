@@ -61,6 +61,6 @@ The edit link calls no AI model, so it does not draw on your project balance.
 
 Every new project starts with $1 of balance, and the edit link does not spend it.
 
-[Create a project](https://docsbook.io/start)
+[Create a project](https://docsbook.io/?start=1)
 
 <!-- /widget -->

@@ -197,4 +197,4 @@ Good:
 
 ---
 
-Docsbook ships AI chat, JSON-LD, `llms.txt`, and analytics for any API documentation. [Publish from your repo →](https://docsbook.io/start)
+Docsbook ships AI chat, JSON-LD, `llms.txt`, and analytics for any API documentation. [Publish from your repo →](https://docsbook.io/?start=1)

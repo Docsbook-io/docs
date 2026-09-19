@@ -77,7 +77,7 @@ Source files never leave your repository, so the move is reversible: the thing y
 
 Step 3 is the one that decides whether the move costs you search traffic. [Migrating from Docusaurus to Docsbook](./migrating-from-docusaurus-to-docsbook.md) has the full redirect checklist.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 ## Next steps
 

@@ -162,4 +162,4 @@ Prices in this category move; each vendor's own pricing page is the only reliabl
 
 Docsbook serves `docs.yourcompany.com` with automatic SSL, and the domain draws nothing from your project balance.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)

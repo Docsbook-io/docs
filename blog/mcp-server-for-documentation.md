@@ -112,7 +112,7 @@ About 4–6 engineering weeks if you have not done it before. Docsbook's MCP ser
 
 Docsbook ships a managed MCP server with OAuth, so Claude Code and Cursor read and edit your docs without you running anything. Connection details are at [docsbook.io/mcp](https://docsbook.io/mcp).
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 ## Next steps
 
