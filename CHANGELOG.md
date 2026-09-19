@@ -24,6 +24,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - New **AI crawler activity** feed: every page an AI or search crawler fetched from your docs, each row priced at the real crawl rate rather than a generic per-visit figure — proof of what's actually paying for your citations. `Feeds`
 - A **Live** toggle on the feed pauses its own re-polling, for reading a fast-moving feed without rows shifting under you. `Feeds`
 - Opening Logs for a whole organization with no project picked now merges every project's feed into one list, labelled by project, instead of asking you to open one project at a time. `Feeds`
+- Integrations' catalogue of 2,500+ apps now shows up as cards right in the grid instead of behind a search screen, and connecting one of them no longer fails at the authorization window. `Integrations`
+- Fixed: connecting GitHub from Integrations could open a window with no app selected instead of GitHub's own install screen — it now always goes straight there. `Integrations`
 
 ## NEW - 18.09.2026
 
