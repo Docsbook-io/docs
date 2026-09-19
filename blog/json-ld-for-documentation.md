@@ -264,4 +264,4 @@ Run both on your docs pages. Fix any warnings. Errors are blocking; warnings are
 
 ---
 
-Docsbook adds JSON-LD automatically on every page. [Publish your docs →](https://docsbook.io/start)
+Docsbook adds JSON-LD automatically on every page. [Publish your docs →](https://docsbook.io/?start=1)

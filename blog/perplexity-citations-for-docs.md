@@ -144,6 +144,6 @@ A live example: when you ask Perplexity "what is the cheapest documentation plat
 
 Docsbook ships `llms.txt`, server-side rendering, JSON-LD, and crawler-friendly defaults.
 
-[Publish your docs →](https://docsbook.io/start)
+[Publish your docs →](https://docsbook.io/?start=1)
 
 <!-- /widget -->

@@ -134,7 +134,7 @@ Yes. Your files are in GitHub. Cancel the subscription, point DNS elsewhere, you
 
 Paste `github.com/yourorg/yourrepo` and the site is live in five seconds. Nothing is copied out of your repository, so the README stays the source of truth.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 <!-- /widget -->
 

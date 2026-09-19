@@ -17,6 +17,18 @@
     }
   ],
   "badges": {
+    "mcp/agent/configure-agent-job": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/agent/create-agent-job": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/agent/delete-agent-job": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
     "mcp/agent/docsbook-agent": {
       "label": "WRITE",
       "kind": "tool"
@@ -34,6 +46,10 @@
       "kind": "tool"
     },
     "mcp/agent/docsbook-agent-tasks": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/agent/list-agent-jobs": {
       "label": "READ",
       "kind": "tool"
     },
@@ -333,6 +349,10 @@
       "label": "WRITE",
       "kind": "tool"
     },
+    "mcp/event/create-event-feed": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
     "mcp/evidence/collect-ai-citability": {
       "label": "READ",
       "kind": "tool"
@@ -419,6 +439,10 @@
     },
     "mcp/inbox/send-inbox-message": {
       "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/integration/connect-integration": {
+      "label": "WRITE",
       "kind": "tool"
     },
     "mcp/issues/comment-on-issue": {
@@ -655,6 +679,10 @@
     },
     "mcp/settings/upload-translation": {
       "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/watch/watch-with-agent-job": {
+      "label": "READ",
       "kind": "tool"
     },
     "mcp/work/get-work-board": {

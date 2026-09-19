@@ -309,7 +309,7 @@ Your Markdown is portable; almost everything around it is replaceable. Almost ev
 ### How do I migrate from Docusaurus to Docsbook?
 
 1. Move docs into `README.md` and a `docs/` folder if they're not already there
-2. Connect your GitHub repo at `docsbook.io/start`
+2. Connect your GitHub repo at `docsbook.io`
 3. Point your custom domain in the workspace settings
 4. Branding, colors, navigation — configure in the dashboard or via MCP with Claude Code
 
@@ -373,7 +373,7 @@ If you want managed, enterprise-shaped, and team-collaborative, [GitBook](https:
 
 If you want the site live today from the repository you already have, with AI, translations and analytics attached — that is what Docsbook is.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 <!-- widget:cards plain cols=2 -->
 

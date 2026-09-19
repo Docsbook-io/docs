@@ -83,6 +83,6 @@ It also meters **machine crawling** — the pages AI and search bots read from y
 
 The draft is generated before you sign in, so you can judge the result before committing to anything.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 <!-- /widget -->

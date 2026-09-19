@@ -9,7 +9,7 @@ The owner's mailbox — a report worth a human read, or a question you cannot de
 
 <!-- widget:cards cols=2 -->
 
-- [`list_inbox_messages`](./list-inbox-messages.md) — WHAT THIS PROJECT'S AGENT HAS WRITTEN TO THE OWNER, AND WHETHER A QUESTION WAS ANSWERED.
-- [`send_inbox_message`](./send-inbox-message.md) — WRITE A LETTER INTO THIS PROJECT'S INBOX — the owner's mailbox, the first screen of their panel.
+- [`list_inbox_messages`](./list-inbox-messages.md) — WHAT THIS PROJECT'S OWNER AND AGENT HAVE WRITTEN TO EACH OTHER.
+- [`send_inbox_message`](./send-inbox-message.md) — WRITE A LETTER INTO THIS PROJECT'S INBOX — the owner's mailbox in their panel, with its unread count on the row.
 
 <!-- /widget -->

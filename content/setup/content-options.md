@@ -81,6 +81,6 @@ Both can be on at once. Unlike the other options on this tab, this one leads som
 
 Every new project starts with a free AI wallet, and these toggles do not spend it.
 
-[Create a project](https://docsbook.io/start)
+[Create a project](https://docsbook.io/?start=1)
 
 <!-- /widget -->

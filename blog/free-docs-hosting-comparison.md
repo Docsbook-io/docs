@@ -177,7 +177,7 @@ Because a price copied into a blog post goes stale without telling anyone, and a
 
 [docsbook.io/pricing](https://docsbook.io/pricing) is generated from the live pricing constants on every request. It has no "last updated" date because there is nothing on it that can go stale. Read the number there; treat any Docsbook price you find anywhere else, including here, as a rumour.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 <!-- widget:cards plain cols=2 -->
 

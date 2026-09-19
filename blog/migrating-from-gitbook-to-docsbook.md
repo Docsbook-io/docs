@@ -191,7 +191,7 @@ In our experience helping teams migrate:
 
 The expensive part is socializing the URL change internally and updating saved replies in your support tool.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 <!-- widget:cards plain cols=2 -->
 

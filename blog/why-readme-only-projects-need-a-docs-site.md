@@ -151,6 +151,6 @@ For everything else, having a docs site is the better default in 2026.
 
 Publishing a site from your repository costs nothing — paste `github.com/yourorg/yourrepo` and it is live in five seconds.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 <!-- /widget -->

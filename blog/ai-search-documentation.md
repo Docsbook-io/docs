@@ -85,7 +85,7 @@ Keyword search matches strings; readers ask questions. Semantic search closes th
 
 Docsbook includes semantic search and reports the queries that returned nothing, so the gaps arrive as a list of pages to write.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 <!-- /widget -->
 

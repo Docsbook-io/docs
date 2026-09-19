@@ -181,7 +181,7 @@ The repo has a `SKILL.md` template and a contribution guide.
 
 Docsbook ships docs-skills support: the `find_skill` MCP tool for runtime discovery, and `npx docs-skills install` for a local copy. Publish a workspace and the MCP endpoint comes with it — the setup steps are at [docsbook.io/mcp](https://docsbook.io/mcp).
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 <!-- widget:cards plain cols=2 -->
 

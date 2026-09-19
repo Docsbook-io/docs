@@ -70,7 +70,7 @@ When you create a Docsbook workspace, two files appear immediately:
 
 The platform itself also serves `docsbook.io/llms.txt` describing Docsbook the product. This is the dogfooded version of the standard.
 
-No configuration. No `llms.config.js`. The graph of your docs is the source of both files. See [our docs](https://docsbook.io/docs/ai/llms-txt) for the live example.
+No configuration. No `llms.config.js`. The graph of your docs is the source of both files. See [our docs](https://docsbook.io/geo/llms-txt) for the live example.
 
 ## What to put in your llms.txt
 
@@ -128,6 +128,6 @@ For a more thorough check, ask ChatGPT or Claude to "fetch and summarize https:/
 
 Docsbook generates `llms.txt` and `llms-full.txt` automatically for every workspace, with nothing to enable and nothing to pay for.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 <!-- /widget -->

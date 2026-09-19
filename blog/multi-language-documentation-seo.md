@@ -156,7 +156,7 @@ Translating 200 pages to 14 additional languages:
 
 Machine translation is not strictly better. It is better at the thing that kills most translation projects, which is not the first pass but the twentieth revision.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 <!-- widget:cards plain cols=2 -->
 

@@ -23,7 +23,7 @@ It also meters one thing that is not AI work: **machine crawling** of your publi
 
 ### Is there a free way to try Docsbook?
 
-Yes. Generating a draft site needs no account and no credit card: paste a repository, a website URL or a sentence about your product at [docsbook.io/start](https://docsbook.io/start) and read the result before signing in. Every new project then starts on Pro with an AI wallet of its own — real credit against AI work, spendable immediately and with no time limit to claim it by. See [Pricing](./pricing.md) for the amount and how it works.
+Yes. Generating a draft site needs no account and no credit card: paste a repository, a website URL or a sentence about your product at [docsbook.io/create](https://docsbook.io/create) and read the result before signing in. Every new project then starts on a Pro trial carrying **$5.00** of AI credit — real credit against AI work, spendable immediately, and it expires on day 15. See [Pricing](./pricing.md) for how it works.
 
 ### How do I start spending, and what does a top-up cost?
 
@@ -71,7 +71,7 @@ Email [support@docsbook.io](mailto:support@docsbook.io) to discuss it. There is 
 
 ### Do I need a GitHub repository to try Docsbook?
 
-No. At [docsbook.io/start](https://docsbook.io/start) one field takes whatever you have — a website URL, a repository link, a PDF or screenshots, or a sentence about what you sell — and generates a draft site from it. You land on the draft's admin panel, with the documentation one click away, and can change branding, layout and SEO before creating an account.
+No. At [docsbook.io/create](https://docsbook.io/create) one field takes whatever you have — a website URL, a repository link, a PDF or screenshots, or a sentence about what you sell — and generates a draft site from it. You land on the draft's admin panel, with the documentation one click away, and can change branding, layout and SEO before creating an account.
 
 GitHub is needed only to link an existing repository, or when you publish. Any sign-in method works: GitHub, Google, Apple, or email with a one-time code.
 
@@ -271,7 +271,7 @@ See [MCP server](./agent-ready/mcp.md) and the [MCP tools reference](./mcp/READM
 Three steps:
 
 1. **Export from GitBook.** GitBook can sync to a Git repository, or export Markdown as a `.zip`. Push the resulting `.md` files to a GitHub repository — any structure works.
-2. **Connect the repository.** Paste `github.com/your-org/your-repo` at [docsbook.io/start](https://docsbook.io/start).
+2. **Connect the repository.** Paste `github.com/your-org/your-repo` at [docsbook.io/create](https://docsbook.io/create).
 3. **Re-point your domain.** Remove the custom domain in GitBook, add it in Docsbook, and update the CNAME record. The TLS certificate is provisioned for you.
 
 What carries over automatically: page structure, internal links (relative `.md` paths are resolved), images, GFM code blocks, headings and frontmatter. What you redo: branding, navigation links, and the AI chat's suggested questions. Side-by-side comparison: [GitBook vs Docsbook](./blog/gitbook-vs-docsbook.md).
@@ -323,6 +323,6 @@ Yes: [Terms](https://docsbook.io/terms) and [Privacy](https://docsbook.io/privac
 
 Generate a draft from your own repository or website and judge the result before you sign in.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 <!-- /widget -->

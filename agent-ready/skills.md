@@ -2,6 +2,8 @@
 title: "Docs Skills: how a SKILL.md teaches an agent to do docs work"
 description: "The exact anatomy of a Docsbook skill — frontmatter, guardrails, ordered steps, acceptance criteria — and how agents discover, load, verify and run one."
 tldr: "Docsbook publishes four orchestrator skills as SKILL.md files. Each declares a validated frontmatter, a numbered workflow, negative guardrails and a checkbox acceptance list. Agents find them with `find_skill`, load them on demand, and an audit-mode skill has its mutating tools blocked server-side while it runs."
+status: generated
+version: "0.2"
 ---
 
 # Docs Skills
@@ -97,16 +99,15 @@ All of it fails open. A parse miss degrades to model-driven behaviour, never to 
 
 Four MCP tools used to run one skill each on Docsbook's machines and hand back a run id to poll — `run_docs_analyze`, `run_docs_create`, `run_docs_manage`, `run_docs_automate`. They were removed on 12.09.2026, with the run screens that read them back. A run you cannot watch is a worse way to buy minutes of work your own agent is already holding the repository for.
 
-What is there instead is `docsbook_expert`, the one agent on the server, and it advises:
+What is there instead is `docsbook_agent`, the one worker on the server. Give it the request in your own words and it runs the job itself — reads the sources, decides what to change, writes the pages, configures what needs configuring, measures the effect — and reports back, rather than handing your agent a list of steps to carry out:
 
 ```typescript
-docsbook({ request: "why is our quickstart getting impressions but no clicks?" })
-// → how to think about it, the steps in order with the tool on each,
-//   who runs each one, what to carry between them, and what would make
-//   the answer wrong. Your agent then makes those calls itself.
+docsbook_agent({ request: "why is our quickstart getting impressions but no clicks?" })
+// → a task id at once; docsbook_agent_status watches progress, and
+//   docsbook_agent_reply answers a question it asks mid-run.
 ```
 
-It changes nothing, works with a read-only token, costs a read, and `workspace_id` is optional — so it is safe to ask before you know whether the answer will help. `find_skill` still hands over the whole SKILL.md when you want the rulebook rather than a route through it.
+`docsbook_assistant` is the adviser for a question that should not change anything yet — it answers HOW the work should be done without doing it, the way `docsbook_expert` once did. `find_skill` still hands over the whole SKILL.md when you want the rulebook rather than a route through it.
 
 ### Quality controls
 
@@ -142,7 +143,7 @@ The frontmatter fields Docsbook uses are a superset of the open Agent Skills sta
 
 ## Related
 
-- [MCP Server](./mcp.md) — where `find_skill` and the `docsbook_expert` adviser live, and what a call draws on
+- [MCP Server](./mcp.md) — where `find_skill`, `docsbook_agent` and the `docsbook_assistant` adviser live, and what a call draws on
 - [Source of Truth](./source-of-truth.md) — the document graph a skill's steps read before they write
 - [Agent-ready content](./README.md) — how the four machine surfaces fit together
 - [llms.txt](../geo/llms-txt.md) — the discovery surface for an agent with no MCP connection

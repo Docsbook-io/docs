@@ -149,6 +149,6 @@ GitBook scores poorly on the first (content in their DB), well on the others. Mi
 
 Docsbook is the hybrid: the source stays in Git, while AI, SEO, translations and MCP are managed. Pricing is metered on AI usage rather than sold as a tier — current numbers on [docsbook.io/pricing](https://docsbook.io/pricing).
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 <!-- /widget -->

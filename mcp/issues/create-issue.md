@@ -10,6 +10,7 @@ description: "File a GitHub issue on this project's repository."
 ## create_issue
 
 File a GitHub issue on this project's repository. THIS IS HOW A FINDING OUTLIVES THE CONVERSATION — when you have audited, diagnosed or measured something and found work worth doing, write it down here rather than only in your answer. One call per issue; do not batch several findings into one.
+🔴 FILING IS NOT FIXING. An issue is a note for what you are NOT doing now. Before you file, do the smallest real part of the work in this same run — write the page, correct the line, change the setting — and file for what is genuinely left. A run whose only output is issues moved nothing.
 Body: what you observed (with the evidence you actually collected), why it matters for this project, and what done looks like.
 Call list_issues first and skip anything that duplicates an open issue.
 Label it with the stage of work it belongs to when one fits: observe, understand, discover, decide, plan, execute, measure, verify, learn, coordinate.

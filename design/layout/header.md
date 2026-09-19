@@ -82,6 +82,8 @@ Header links are the custom text links in your Docsbook site's top bar. Add them
 
 **Format:** Each link has a **label** and a **URL**.
 
+By default, a link to another site opens in a new tab and a link to a page on your own site opens in the current one. Uncheck **New tab** on a link to keep readers on the current tab instead, or check it to force a new tab either way.
+
 Example:
 | Label | URL |
 |---|---|

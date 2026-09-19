@@ -1,7 +1,9 @@
 ---
 title: "MCP server: run your documentation from a coding agent"
 description: "Connect Claude Code, Cursor, Codex or any MCP client to Docsbook and read, write, measure and configure your documentation from inside the editor."
-tldr: "Docsbook's remote MCP server exposes 164 typed tools over one OAuth-protected endpoint. Since 2026-09-18 your own connected agent meets a small owner surface — orientation, reading your own docs, and giving a job to `docsbook_agent` — and delegates everything else (writing docs, translations, webhooks, settings, analytics) to that background worker instead of calling it directly. Calls are billed per call against the project's balance by billing class; discovery is free."
+tldr: "Docsbook's remote MCP server exposes 167 typed tools over one OAuth-protected endpoint. Since 2026-09-18 your own connected agent meets a small owner surface — orientation, reading your own docs, and giving a job to `docsbook_agent` — and delegates everything else (writing docs, translations, webhooks, settings, analytics) to that background worker instead of calling it directly. Calls are billed per call against the project's balance by billing class; discovery is free."
+status: generated
+version: "0.2"
 ---
 
 # MCP Server
@@ -12,15 +14,15 @@ This page is the reference for what the server serves and what a call draws on. 
 
 ## What is the Docsbook MCP server?
 
-The Docsbook MCP server registers **164 tools** over the Model Context Protocol, an open standard for handing tools, resources and prompts to AI agents over a typed RPC interface. Not every tool is reachable by every caller — see the next section before you go looking for `write_docs` on your own token.
+The Docsbook MCP server registers **167 tools** over the Model Context Protocol, an open standard for handing tools, resources and prompts to AI agents over a typed RPC interface. Not every tool is reachable by every caller — see the next section before you go looking for `write_docs` on your own token.
 
 ## Two surfaces, one endpoint (2026-09-18)
 
-**Your own connected agent — the one that just completed the OAuth step above — meets a small, fixed surface, not the 164-tool catalog.** Orientation (`get_info`, `list_workspaces`, `get_workspace`), creating a project, reading your own documentation and Docsbook's own docs by meaning or by name, and the five tools that give a job to **`docsbook_agent`** and watch it (`docsbook_agent`, `docsbook_agent_status`, `docsbook_agent_tasks`, `docsbook_agent_reply`, `docsbook_agent_stop`). That is the whole of "manage the documentation" from your own token now.
+**Your own connected agent — the one that just completed the OAuth step above — meets a small, fixed surface, not the 167-tool catalog.** Orientation (`get_info`, `list_workspaces`, `get_workspace`), creating a project, reading your own documentation and Docsbook's own docs by meaning or by name, and the five tools that give a job to **`docsbook_agent`** and watch it (`docsbook_agent`, `docsbook_agent_status`, `docsbook_agent_tasks`, `docsbook_agent_reply`, `docsbook_agent_stop`). That is the whole of "manage the documentation" from your own token now.
 
 **Everything else described on this page — writing documentation, translations, webhooks, settings, analytics beyond your own project's summary, the product's own accumulated memory — is performed by `docsbook_agent`, not called by you directly.** Describe the outcome in your own words ("improve the docs", "document this API", "why are readers not converting") and it plans the work, makes the calls itself, and reports back. The tool-by-tool sections below are still worth reading in full: they are `docsbook_agent`'s capability list, and knowing what it *can* do is how you know what to ask it for.
 
-`docsbook_assistant` — the specialist that answers HOW a page should be structured, what a quickstart owes its first screen, how to write a passage an answer engine will quote whole — moved behind `docsbook_agent` the same day: it is read from inside a task now, not called on your own token. The same retrieval still answers reader questions instantly and for free on the public "Ask AI" chat at [docsbook.io/docs](https://docsbook.io/docs) and on the anonymous MCP endpoint's `search` — neither of those needs a token.
+`docsbook_assistant` — the specialist that answers HOW a page should be structured, what a quickstart owes its first screen, how to write a passage an answer engine will quote whole — moved behind `docsbook_agent` the same day: it is read from inside a task now, not called on your own token. The same retrieval still answers reader questions instantly and for free on the public "Ask AI" chat at [docsbook.io](https://docsbook.io) and on the anonymous MCP endpoint's `search` — neither of those needs a token.
 
 A narrow, separate slice of pure configuration (branding, navigation, the chatbot, translation mode, mention tracking) is reachable directly over REST by your workspace API key even though it is not on your MCP token's surface — see the [REST API reference](../rest-api/README.md) for that list.
 

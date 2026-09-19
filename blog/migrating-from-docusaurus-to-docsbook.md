@@ -214,7 +214,7 @@ Docusaurus's `docs/versioned_docs/version-1.0/` pattern is not directly supporte
 
 Test the migration before committing to it. Publishing a second site from the same repository costs nothing and changes nothing about the Docusaurus deploy still serving your readers — if the result does not reach parity, you have lost the five seconds it took.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 <!-- widget:cards plain cols=2 -->
 

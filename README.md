@@ -1,7 +1,9 @@
 ---
-title: "Docsbook documentation: publish, get found, get quoted, measure"
+title: "Docsbook documentation: publish, get found, get quoted, measure."
 description: "Docsbook publishes the Markdown you already have to a site search engines index and AI assistants cite, then hands your agent a goal and reports the number it moved. Start here."
 tldr: "Docsbook publishes the Markdown you already have to a documentation site that search engines index and AI assistants cite, then takes a goal from your agent and reports, on a date, the number it moved."
+status: generated
+version: "0.2"
 ---
 
 <!-- widget:hero size=large -->
@@ -12,7 +14,7 @@ tldr: "Docsbook publishes the Markdown you already have to a documentation site 
 
 Publish the Markdown you already have to a site search engines index and AI assistants cite. Then hand your agent a goal and read, on a date, the number it moved.
 
-[Start free](https://docsbook.io/start) · [Connect your agent](./agent-ready/mcp.md)
+[Start free](https://docsbook.io/?start=1) · [Connect your agent](./agent-ready/mcp.md)
 
 > ![Claude](https://docsbook.io/agents/claude.svg) ![OpenAI](https://docsbook.io/agents/openai.svg) ![Cursor](https://docsbook.io/agents/cursor.svg) **Onboard your agent** — Set up Docsbook for me. Fetch https://docsbook.io/get-started.md and follow it.
 >
@@ -29,7 +31,7 @@ Codex, Cursor, Windsurf, Cline and any other MCP client use the same endpoint.
 <!-- widget:stats cols=4 -->
 
 - **5 min** — from a repository to a public URL
-- **164** — MCP tools your docs agent can use
+- **167** — MCP tools your docs agent can use
 - **15** — languages, each indexed on its own
 - **$0** — for hosting, search, analytics and a custom domain
 
@@ -156,6 +158,6 @@ Live sites, public and readable without signing in.
 
 Ask one question and you get a researched answer about your own market, whether or not you run anything it suggests. Questions: [support@docsbook.io](mailto:support@docsbook.io) or the [Docsbook Discord](https://discord.gg/baqUCdwrag).
 
-[Start free — no credit card](https://docsbook.io/start) · [Connect your agent](./agent-ready/mcp.md)
+[Start free — no credit card](https://docsbook.io/?start=1) · [Connect your agent](./agent-ready/mcp.md)
 
 <!-- /widget -->

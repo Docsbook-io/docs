@@ -112,7 +112,7 @@ A wiki is for the people who are already inside. Docs are for the people who are
 
 That is the lesson. Everything else is implementation detail.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 <!-- widget:cards plain cols=2 -->
 

@@ -81,6 +81,6 @@ Six situations teams arrive with, and what Docsbook does about each. Every one e
 
 Paste a repository, a website URL, or a sentence about your product, and read the draft before you sign in.
 
-[Start with your own source](https://docsbook.io/start)
+[Start with your own source](https://docsbook.io/?start=1)
 
 <!-- /widget -->

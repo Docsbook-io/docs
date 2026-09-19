@@ -2,6 +2,8 @@
 title: "Citation signals: how to write a passage an engine will quote"
 description: "Each rule that makes documentation quotable by a generative engine, paired with the retrieval behaviour that justifies it and a source you can open."
 tldr: "An engine retrieves passages, not pages, so every section must survive being read alone: name the subject in full, answer in the first sentence, and give one extractable fact. Measured to help, on one 10K-query benchmark: quotations, statistics and cited sources. Measured to hurt: keyword stuffing, and rewriting a body for quotability alone."
+status: generated
+version: "0.2"
 ---
 
 # Citation signals
@@ -49,7 +51,7 @@ Three parts of Docsbook read the shapes above directly, so following the rules c
 
 - **Your first paragraph becomes your machine summary.** If a page has no `tldr:` in frontmatter, the [GEO](./README.md) TL;DR block is built from the document's first real paragraph — headings, blockquotes, lists, code fences and image-only lines are skipped — capped at 280 characters. A lede shorter than 40 characters produces no block at all.
 - **A question heading becomes structured data.** With [AEO](../aeo/README.md) on, any `###` heading ending in a question mark is emitted as a `Question` in `FAQPage` JSON-LD, with the paragraphs beneath it as the answer, up to 20 questions per page and 1,000 characters per answer. Phrasing a heading as the reader's question is therefore not a style preference — it is the input to a detector.
-- **`audit_geo` checks the mechanical preconditions**, including whether at least 200 words of body prose are present in the raw HTML with no JavaScript executed, and whether the page states any date at all.
+- **`collect_ai_citability` checks the mechanical preconditions**, including whether at least 200 words of body prose are present in the raw HTML with no JavaScript executed, and whether the page states any date at all.
 
 ## Rules with a measured effect size
 
@@ -86,7 +88,7 @@ Practically: **give every page something extractable** — a limit, a timeout, a
 | `ClaudeBot` | "collecting web content that could potentially contribute to their training" | Training |
 | `PerplexityBot` | "surface and link websites in search results on Perplexity. It is not used to crawl content for AI foundation models" | Search |
 
-Sources: [OpenAI](https://developers.openai.com/api/docs/bots), [Anthropic](https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler), [Perplexity](https://docs.perplexity.ai/guides/bots). Blocking training while allowing search is a coherent business decision. Blocking the search agent while expecting citations is the incoherent one, and it is almost always accidental — [`audit_geo`](./README.md) reports it as critical.
+Sources: [OpenAI](https://developers.openai.com/api/docs/bots), [Anthropic](https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler), [Perplexity](https://docs.perplexity.ai/guides/bots). Blocking training while allowing search is a coherent business decision. Blocking the search agent while expecting citations is the incoherent one, and it is almost always accidental — [`collect_ai_citability`](./README.md) reports it as critical.
 
 **Do not expect a special file or schema to substitute for the writing.** Google states there are "no additional requirements to appear in AI Overviews or AI Mode, nor other special optimizations necessary", and "You don't need to create new machine readable files, AI text files, or markup" ([Google AI features](https://developers.google.com/search/docs/appearance/ai-features)). See [llms.txt](./llms-txt.md) for the same question asked of that file specifically.
 

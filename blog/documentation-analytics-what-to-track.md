@@ -155,6 +155,6 @@ This is the highest ROI loop in documentation. Each iteration turns a known cont
 
 Docsbook reports failed searches, unanswered assistant questions, negative feedback and page journeys, so the gaps arrive as a list of pages to write rather than as a chart to interpret.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 <!-- /widget -->

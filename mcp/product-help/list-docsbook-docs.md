@@ -50,8 +50,6 @@ curl -X POST 'https://docsbook.io/api/mcp/server' \
 
 The same tool is callable as a plain HTTP request, no MCP client required. It runs on the same server, at the same price.
 
-Your workspace is resolved from the API key, so `workspace_id` is decided server-side here and anything you send for it is ignored.
-
 <!-- widget:api -->
 
 ### GET /api/v1/list_docsbook_docs

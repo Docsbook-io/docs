@@ -235,6 +235,29 @@ does the same to whatever fired on it — a subscription is never widened by los
 Only saved lists can be served: the built-in feeds, **All events** among them, are filters rather
 than lists, so save the one you want as a feed of your own first.
 
+### What a notifier sends, and who writes it
+
+A notifier bound to a list delivers **each matching event as it was recorded** — the signed JSON
+envelope for an API destination, and a short machine-built line for Slack or Discord. That is exact
+and it is not prose: it names the event and its fields, nothing more.
+
+For something written rather than recorded, point an **agent** at the destination. The notifier's
+editor lists this project's agent jobs under **Written by**; tick one and every finished run of that
+job arrives here, in whatever shape its own prompt asked for. An agent told "summarise what changed
+and why it matters, in two sentences, for the team channel" sends that, instead of a field dump.
+
+The two are not exclusive. A destination can carry both the raw stream of a list and an agent's
+morning write-up, and nothing has to be switched off to add the second.
+
+One thing to know about the direction this is stored in: **an agent's report is addressed, not
+subscribed.** Ticking a job under **Written by** writes the destination onto that job, so the job
+is what decides where its report goes. No list filter and no event subscription will bring agent
+reports to a destination — only the jobs listed with a tick send here.
+
+A run that only *started* something sends nothing yet. Most agent jobs hand the work to a
+background run that takes minutes; the report is delivered when that run finishes, and it carries
+what the agent wrote rather than the fact that it began.
+
 ## Event catalog
 
 A Docsbook workspace emits 18 typed events. Each row below names the event exactly as it appears in the `X-Docsbook-Event` header and in the `event` field of the body, with the fields its `data` object carries.

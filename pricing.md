@@ -128,6 +128,6 @@ Your Markdown always stays in your own GitHub repository. Docsbook renders those
 
 Create a project, publish it, and watch the balance while you use it. It starts on Pro with an AI wallet of its own and no time limit, and no card is asked for.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 <!-- /widget -->

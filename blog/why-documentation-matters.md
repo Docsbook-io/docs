@@ -80,7 +80,7 @@ Docsbook sells plans, not pay-as-you-go. AI usage is still metered per project �
 
 Publish your existing repository, then read the failed searches for a week.
 
-[Start free — no credit card](https://docsbook.io/start)
+[Start free — no credit card](https://docsbook.io/?start=1)
 
 <!-- /widget -->
 
