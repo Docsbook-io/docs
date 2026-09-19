@@ -22,6 +22,7 @@ Sees where the model budget actually goes before the invoice does. This is the A
 - **Enterprise now always reads "Contact sales", with no price on the plan screen.** Reach out and we'll work out a number for your repository — the balance still lands on the project itself, and everyone with access to it spends from that one balance. `Billing`
 - **The platform features every project gets now live inside the Pro plan's own card**, instead of a separate panel underneath both plans repeating a comparison you had just finished reading. `Billing`
 - **The trial banner's "Upgrade plan" button now opens the Plan tab**, so you see the Pro/Enterprise choice before committing to either, instead of a checkout window opening straight away. `Billing`
+- **Creating a project runs no AI at all and finishes in about a second.** It used to crawl your site and write nine pages before you saw anything: minutes of waiting, model cost on every click including the ones that never became a project, and a first page nobody could predict well enough to show you beforehand. You pick a template, paste your site's address so the project comes out in your colours, logo and fonts, add your files if you have them, and press Continue. Writing with AI is still there, one screen later, when you ask for it. `Onboarding`
 
 ### Removed
 

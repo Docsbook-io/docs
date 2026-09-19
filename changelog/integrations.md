@@ -9,12 +9,17 @@ Everything that shipped in **Integrations**. This is the Integrations slice of t
 
 ## NEW - 19.09.2026
 
+### Added
+
+- **Drop a folder of documents into a new project and each file becomes a page** — PDF, Word, Markdown or plain text, with the folder structure kept. The same upload now sits in Integrations ▸ Files for a project you already have, so last year's handbook stops being a file nobody can search and starts answering questions in your docs and your assistant. `Integrations`
+
 ### Changed
 
 - **Every screen in the panel now carries a Visit Website button in its top-right corner**, opening your published documentation in a new tab. Checking what a reader actually sees after changing a setting stops being a retyped address, so nobody ships a change to a live site on the assumption that it looked right. `Integrations`
 - **Connect MCP moved to that same corner, beside Visit Website, as an outline button.** It sat next to the section title, where it read as a label rather than something to press; the top-right corner is where the panel keeps the things you can do from the screen you are on. `Integrations`
 - **Your API key and this project's MCP address now sit in Settings ▸ Profile**, beside the GitHub account the project commits through, instead of above the connector grid. Integrations answers what your project is wired *to*; a key and an endpoint are how *you* reach it, so the thing you came to copy is now where you keep your other credentials rather than at the top of a catalogue of forty services. Old links still land on it. `Integrations`
 - **Every connector in the grid now wears its service's real logo in its real colour**, so finding Slack or Sentry among forty tiles is a glance instead of reading forty names in a column. Grey now means one thing only — this one cannot be connected here yet — rather than being what every tile looked like. `Integrations`
+- **The integrations you want wired up are picked while you create the project**, from the same catalogue the panel shows rather than a shorter list that drifts from it, and the new project opens on them so nothing you chose is forgotten between the two screens. `Integrations`
 
 ### Fixed
 

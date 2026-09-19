@@ -31,6 +31,7 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 ### Changed
 
 - **The Agent screen is one grid of jobs and nothing else**: no tab strip over it, no paragraph describing the grid to somebody already looking at it, no Refresh button, no "3 of 10 on" counter. Cards no longer unfold either — settings and run sit beside each card, so opening one stops moving every other card under your cursor. `Agents`
+- **The integrations you want wired up are picked while you create the project**, from the same catalogue the panel shows rather than a shorter list that drifts from it, and the new project opens on them so nothing you chose is forgotten between the two screens. `Integrations`
 
 ### Removed
 

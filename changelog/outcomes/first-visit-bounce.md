@@ -14,11 +14,14 @@ Docs that look like the product, rather than like a template someone forgot. Thi
 ### Added
 
 - **The `hero` widget grew a button row, a code aside and a large size.** A links-only paragraph after the heading becomes two buttons (the first filled, the rest outlined); a fenced code block or a lone image becomes a framed panel beside the copy on a wide screen and under it on a phone, with the paragraph after it as the caption; `size=large` steps the title up for a front page that has hidden its sidebar. A visitor's first screen now carries the one command to run instead of a paragraph to read. `Content widgets`
+- **Thirty-two templates to start a project from** — an API reference that ships with its endpoint table, an on-call runbook with real triage steps, a help centre, a contributor guide, a data dictionary, and blank ones that are structure and branding with nothing to delete. Every page is written by hand and committed as it is, so the card tells you exactly what will land and the site is readable the second it exists, instead of waiting on something being written for you. `Onboarding`
 
 ### Changed
 
 - **The account menu at the bottom of the sidebar now lists your organizations and nothing else**, and each one is a single click into that team's dashboard — where its projects, its people and its plan already are. Hovering a team used to fly a second menu of its projects out to the side, which meant reaching your own team cost a hover you had to hold steady and a target you had to aim at. Switching between the projects of the team you are already in is unchanged: that is the project switcher at the top of the same sidebar. `Organizations`
 - **Every connector in the grid now wears its service's real logo in its real colour**, so finding Slack or Sentry among forty tiles is a glance instead of reading forty names in a column. Grey now means one thing only — this one cannot be connected here yet — rather than being what every tile looked like. `Integrations`
+- **Creating a project runs no AI at all and finishes in about a second.** It used to crawl your site and write nine pages before you saw anything: minutes of waiting, model cost on every click including the ones that never became a project, and a first page nobody could predict well enough to show you beforehand. You pick a template, paste your site's address so the project comes out in your colours, logo and fonts, add your files if you have them, and press Continue. Writing with AI is still there, one screen later, when you ask for it. `Onboarding`
+- **Importing a GitHub repository is now half of the new-project screen**, with your organisations listed and a search across them — and nothing is written into the repository, because its own markdown is the site. Pasting a `github.com` link into the address field is read as an import as well, instead of quietly branding your new project after GitHub's own home page. `Onboarding`
 
 ## NEW - 18.09.2026
 
