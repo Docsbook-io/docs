@@ -13,6 +13,10 @@ Everything that shipped in **Changes**. This is the Changes slice of the [full D
 
 - **The Change Log button is gone from the panel header.** The per-section release notes it opened are unchanged and still published at `docsbook.io/docs/changelog` — what was ours to read had taken the one corner of every screen that should be about your project. `Changes`
 
+### Fixed
+
+- **Our own support chat no longer appears on your published documentation.** It was mounted everywhere rather than only in the admin panel, which put a support bubble meant for us in front of your readers. `Changes`
+
 ## NEW - 13.09.2026
 
 ### Added

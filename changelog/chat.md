@@ -7,6 +7,12 @@ description: "Every release that touched AI Chat: the assistant on your docs sit
 
 Everything that shipped in **Chat**. This is the Chat slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 19.09.2026
+
+### Fixed
+
+- **The floating "Ask Docs" button now shows for you as well as your readers.** It was hidden whenever your own toolbar was on screen, so the one person checking whether the widget works could never see it — the two sit in different corners and never overlapped. `AI Chat`
+
 ## NEW - 15.09.2026
 
 ### Added

@@ -23,6 +23,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - **The search box in that menu takes your typing the moment it opens**, so finding one team among thirty is type-and-go instead of click, aim, click again. It used to lose the race with the menu itself about half the time, and the failure was the confusing kind: the cursor looked ready and the first letters went somewhere else. `Organizations`
 - **Every screen in the panel now carries a Visit Website button in its top-right corner**, opening your published documentation in a new tab. Checking what a reader actually sees after changing a setting stops being a retyped address, so nobody ships a change to a live site on the assumption that it looked right. `Integrations`
 - **Connect MCP moved to that same corner, beside Visit Website, as an outline button.** It sat next to the section title, where it read as a label rather than something to press; the top-right corner is where the panel keeps the things you can do from the screen you are on. `Integrations`
+- **Your API key and this project's MCP address now sit in Settings ▸ Profile**, beside the GitHub account the project commits through, instead of above the connector grid. Integrations answers what your project is wired *to*; a key and an endpoint are how *you* reach it, so the thing you came to copy is now where you keep your other credentials rather than at the top of a catalogue of forty services. Old links still land on it. `Integrations`
+- **Every connector in the grid now wears its service's real logo in its real colour**, so finding Slack or Sentry among forty tiles is a glance instead of reading forty names in a column. Grey now means one thing only — this one cannot be connected here yet — rather than being what every tile looked like. `Integrations`
 
 ### Removed
 
@@ -32,6 +34,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 - **The public MCP endpoint was serving four tools and quietly dropping three it advertised** — `find_skill`, `find_widget` and `list_content_widgets` were listed by `get_info` as available and were never handed over. Ten tools are served now, counted against the real server rather than against the code that registers them. `MCP`
 - **"Connect to VSCode" pointed at an address that exists nowhere in the product** and had therefore never connected anything. It uses the real endpoint for your project now. `MCP`
+- **Opening a connector's page now starts you at the top of it.** Clicking a service from far down the catalogue used to drop you into the middle of its page — or past the end of a short one — so the name, the status and the Connect button were all above where you landed and you had to scroll up to find out what you had opened. `Integrations`
+- **Our own support chat no longer appears on your published documentation.** It was mounted everywhere rather than only in the admin panel, which put a support bubble meant for us in front of your readers. `Changes`
+- **The floating "Ask Docs" button now shows for you as well as your readers.** It was hidden whenever your own toolbar was on screen, so the one person checking whether the widget works could never see it — the two sit in different corners and never overlapped. `AI Chat`
 
 ## NEW - 18.09.2026
 

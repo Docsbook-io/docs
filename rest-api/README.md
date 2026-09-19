@@ -11,8 +11,10 @@ Docsbook MCP server registers, without bringing an MCP client.
 
 ## Get your key
 
-Open **Integrations** — from your avatar in the assistant's input, or your profile
-dropdown in the admin panel. View it, copy it, or reset it there.
+Open **Settings ▸ Profile** in the admin panel, beside the GitHub account this project
+commits through. View the key, copy it, or reset it there. (It lived under **Integrations**
+until 19.09.2026; that section is now about what the project is wired *to*, and a key you
+copy out of the panel is not that.)
 
 One live key per project. Resetting revokes the old one immediately, everywhere, and
 there is no key history — so update your callers before you reset.

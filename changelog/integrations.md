@@ -13,6 +13,12 @@ Everything that shipped in **Integrations**. This is the Integrations slice of t
 
 - **Every screen in the panel now carries a Visit Website button in its top-right corner**, opening your published documentation in a new tab. Checking what a reader actually sees after changing a setting stops being a retyped address, so nobody ships a change to a live site on the assumption that it looked right. `Integrations`
 - **Connect MCP moved to that same corner, beside Visit Website, as an outline button.** It sat next to the section title, where it read as a label rather than something to press; the top-right corner is where the panel keeps the things you can do from the screen you are on. `Integrations`
+- **Your API key and this project's MCP address now sit in Settings ▸ Profile**, beside the GitHub account the project commits through, instead of above the connector grid. Integrations answers what your project is wired *to*; a key and an endpoint are how *you* reach it, so the thing you came to copy is now where you keep your other credentials rather than at the top of a catalogue of forty services. Old links still land on it. `Integrations`
+- **Every connector in the grid now wears its service's real logo in its real colour**, so finding Slack or Sentry among forty tiles is a glance instead of reading forty names in a column. Grey now means one thing only — this one cannot be connected here yet — rather than being what every tile looked like. `Integrations`
+
+### Fixed
+
+- **Opening a connector's page now starts you at the top of it.** Clicking a service from far down the catalogue used to drop you into the middle of its page — or past the end of a short one — so the name, the status and the Connect button were all above where you landed and you had to scroll up to find out what you had opened. `Integrations`
 
 ## NEW - 18.09.2026
 

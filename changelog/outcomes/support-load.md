@@ -15,6 +15,11 @@ Questions the docs answer are questions your inbox never sees. This is the Suppo
 
 - **The search box in that menu takes your typing the moment it opens**, so finding one team among thirty is type-and-go instead of click, aim, click again. It used to lose the race with the menu itself about half the time, and the failure was the confusing kind: the cursor looked ready and the first letters went somewhere else. `Organizations`
 
+### Fixed
+
+- **Our own support chat no longer appears on your published documentation.** It was mounted everywhere rather than only in the admin panel, which put a support bubble meant for us in front of your readers. `Changes`
+- **The floating "Ask Docs" button now shows for you as well as your readers.** It was hidden whenever your own toolbar was on screen, so the one person checking whether the widget works could never see it — the two sit in different corners and never overlapped. `AI Chat`
+
 ## NEW - 18.09.2026
 
 ### Added

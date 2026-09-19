@@ -20,6 +20,7 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 ### Fixed
 
 - **The public MCP endpoint was serving four tools and quietly dropping three it advertised** — `find_skill`, `find_widget` and `list_content_widgets` were listed by `get_info` as available and were never handed over. Ten tools are served now, counted against the real server rather than against the code that registers them. `MCP`
+- **The floating "Ask Docs" button now shows for you as well as your readers.** It was hidden whenever your own toolbar was on screen, so the one person checking whether the widget works could never see it — the two sit in different corners and never overlapped. `AI Chat`
 
 ## NEW - 18.09.2026
 
