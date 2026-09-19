@@ -64,7 +64,7 @@ Three things, and nothing else. A connected source is not crawled on a timer, is
 
 **Your own MCP agents.** The same two tools over your project's MCP endpoint, plus `connect_source` and `configure_source` for setting one up without opening a browser. Those two need a read-write MCP token.
 
-**Background runs.** Scheduled prompts and agent runs read them too, which is where it matters most: there is nobody sitting there to paste a link.
+**Background runs.** Scheduled prompts read them too, which is where it matters most: there is nobody sitting there to paste a link.
 
 Not every automated run reaches a source, so the panel says which do rather than implying they all can. Wherever runs are listed, the chips are drawn in three states:
 
@@ -145,12 +145,16 @@ Both come off the balance of the project the call is about. Amounts are on the [
 - **Notes are instructions, and they are yours to keep honest.** Everything that reads a source reads your note as guidance. A stale note ("the v1 API, deprecated") steers an agent as effectively as a correct one.
 - **We publish no measurement of how much sources reduce wrong answers.** The mechanism is above and the evidence for it is external; a before-and-after number over customer corpora is not something Docsbook has run. Treat "sources improve accuracy on your docs" as a well-supported expectation, not as a figure we have measured.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
-- [AI chat](./chat.md) — the assistant on your docs site, and what it may answer from.
-- [Answer quality](./answer-quality.md) — the retrieval and grounding pipeline, in full.
-- [Chat hooks](./chat-hooks.md) — the other way to hand a model a fact it cannot read.
-- [MCP server](../agent-ready/mcp.md) — the same tools, for your own agents.
-- [MCP tools reference](../mcp/README.md) — `list_sources`, `read_source`, `connect_source`, `configure_source` in full.
-- [Source of Truth](../agent-ready/source-of-truth.md) — a different feature with a similar name: a local graph of *your own* pages, built on the agent's machine.
-- [Pricing](https://docsbook.io/pricing) — what a source read draws on.
+- [AI chat](./chat.md) — the assistant on your docs site, and what it may answer from. {message-circle}
+- [Answer quality](./answer-quality.md) — the retrieval and grounding pipeline, in full. {layers}
+- [Chat hooks](./chat-hooks.md) — the other way to hand a model a fact it cannot read. {webhook}
+- [MCP server](../agent-ready/mcp.md) — the same tools, for your own agents. {terminal}
+- [MCP tools reference](../mcp/README.md) — `list_sources`, `read_source`, `connect_source`, `configure_source` in full. {book-open}
+- [Source of Truth](../agent-ready/source-of-truth.md) — a different feature with a similar name: a local graph of *your own* pages, built on the agent's machine. {git-branch}
+- [Pricing](https://docsbook.io/pricing) — what a source read draws on. {credit-card}
+
+<!-- /widget -->

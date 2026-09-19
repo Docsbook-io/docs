@@ -1,6 +1,7 @@
 ---
 title: "How Docsbook bills AI usage against a project balance"
 description: "What a project balance is, which actions spend it, how a call is priced, and where to set a per-source ceiling so one job cannot absorb everything."
+tldr: "Docsbook charges AI usage against one balance per project — every model call costs the provider's price plus a markup, only actions that call a model spend it, and current prices live at docsbook.io/pricing."
 ---
 
 # How Docsbook charges for AI usage
@@ -64,9 +65,13 @@ Manage or cancel from the dashboard at [docsbook.io/chat](https://docsbook.io/ch
 
 Billing questions go to [support@docsbook.io](mailto:support@docsbook.io).
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
-- [Docsbook pricing](../../pricing.md) — the model in one page, and the link to the live figures.
-- [AI chat](../../ai-chat/chat.md) — the reader-facing assistant, the largest single consumer of a project balance.
-- [Translations](../../translation/README.md) — how a page is queued, translated and re-translated.
-- [AI usage analytics](../../analytics/tracking/ai-usage.md) — where the balance actually went.
+- [Docsbook pricing](../../pricing.md) — the model in one page, and the link to the live figures. {credit-card}
+- [AI chat](../../ai-chat/chat.md) — the reader-facing assistant, the largest single consumer of a project balance. {message-circle}
+- [Translations](../../translation/README.md) — how a page is queued, translated and re-translated. {languages}
+- [AI usage analytics](../../analytics/tracking/ai-usage.md) — where the balance actually went. {chart-line}
+
+<!-- /widget -->

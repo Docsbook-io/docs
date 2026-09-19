@@ -65,10 +65,14 @@ conversions, where the list of converters is the answer and a percentile is not.
 step is almost always the last one; the biggest proportional drop between two
 adjacent steps is where the route actually breaks.
 
+<!-- widget:callout type=note -->
+
 **Money stays off unless you switch it on.** A goal value of `0` is refused
 outright — `null` and `0` are different claims, and only one of them belongs in
 a revenue figure. Where no value is declared, money columns are blank rather
 than `$0`.
+
+<!-- /widget -->
 
 ### What the validator refuses, and what it only warns about
 
@@ -153,9 +157,13 @@ discriminating paths.
   did not describe, the funnel will report failure while the reverse funnel
   reports the truth. Read both.
 
+<!-- widget:cards plain horizontal -->
+
 ## Related
 
-- [How measurement works](../how-measurement-works.md) — the visit definition, the bot filters and the sample floors every number here inherits
-- [Analytics overview](../tracking/overview.md) — conversion rate and revenue in the headline strip
-- [Tracked events reference](../tracking/events.md) — the event names an `event` goal can match
-- [MCP tools reference](../../mcp/README.md) — `create_goal`, `create_funnel`, `get_funnel`, `get_retention` and the rest
+- [How measurement works](../how-measurement-works.md) — the visit definition, the bot filters and the sample floors every number here inherits {gauge}
+- [Analytics overview](../tracking/overview.md) — conversion rate and revenue in the headline strip {chart-line}
+- [Tracked events reference](../tracking/events.md) — the event names an `event` goal can match {list}
+- [MCP tools reference](../../mcp/README.md) — `create_goal`, `create_funnel`, `get_funnel`, `get_retention` and the rest {plug}
+
+<!-- /widget -->

@@ -44,6 +44,8 @@ You can also reach the server from inside your own project: open the admin panel
 
 A single tool still has its own page, and the page still has an address: the URL carries the tool, so you can refresh it, bookmark it, or send it to a colleague and land them on the same tool. Everything on it is about that one tool. Its arguments are a form with a **Run** button that makes a real call against this project, and the button carries the price before the money moves. Under that is its **call history**, drawn by the same **Feeds** table you read everywhere else, narrowed to this one tool: one line per call, and expanding a row shows the call in full — what went in, what came back, who asked (your own client, an outside agent, a webhook delivery), how long it took, what it was priced at, and what actually left your balance. Under that sits one worked example to copy into your own client; what runs from inside Docsbook is the call, made by you or your agent — nothing here calls itself.
 
+<!-- widget:tabs -->
+
 ### Claude Code
 
 ```bash
@@ -160,6 +162,8 @@ ChatGPT supports remote MCP through **Connectors**, on ChatGPT's own paid plans.
 1. Open **ChatGPT → Settings → Connectors → Advanced → Developer mode**.
 2. Click **Create** and paste the URL: `https://docsbook.io/api/mcp/server`.
 3. Authorize in the browser when prompted.
+
+<!-- /widget -->
 
 ## What are the Docsbook MCP tools for?
 
@@ -463,6 +467,8 @@ When a call is refused, the server returns a structured error naming the reason 
 
 **Where do I go if a call is refused for a reason other than balance?** The server returns a structured error naming the reason — a missing scope on a read-only token, `NO_GITHUB_ACCESS` when Docsbook's own credential cannot reach a repository in your own GitHub account, or a private site. See [MCP server security](./mcp-security.md) for what each token scope can and cannot do.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
 - [MCP tools reference](../mcp/README.md) — every tool with its parameters.
@@ -470,3 +476,5 @@ When a call is refused, the server returns a structured error naming the reason 
 - [Docs Skills](./skills.md) — Discover SKILL.md files through `find_skill`, or give `docsbook_agent` the job and let it use one directly.
 - [Webhooks](../reference/webhooks.md) — Register event handlers from MCP, and verify their signatures.
 - [Pricing](https://docsbook.io/pricing) — what a metered call draws on, generated from the live billing constants.
+
+<!-- /widget -->

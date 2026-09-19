@@ -1,6 +1,7 @@
 ---
 title: "How to get your documentation cited by ChatGPT in 2026"
 description: "A working checklist for making docs readable and quotable by ChatGPT, Claude, Perplexity and Gemini — structure, crawler access, and honest measurement."
+tldr: "Docsbook gets documentation cited by ChatGPT, Claude and Perplexity by generating a clean llms.txt, rendering server-side HTML readable without JavaScript, adding JSON-LD automatically, and shipping a robots.txt that allows the major AI crawlers."
 ---
 
 # How to get your documentation cited by ChatGPT in 2026
@@ -121,12 +122,16 @@ Three signals worth tracking:
 
 Docsbook ships AI usage analytics (`get_ai_questions`, `get_ai_unanswered`, `get_failed_searches`) so you can see what people are asking that you do not answer well.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related reading
 
-- [llms.txt: the complete guide](./llms-txt-guide.md)
-- [Perplexity citations for docs](./perplexity-citations-for-docs.md)
-- [Documentation SEO guide](./documentation-seo-guide.md)
-- [JSON-LD for documentation](./json-ld-for-documentation.md)
+- [llms.txt: the complete guide](./llms-txt-guide.md) — The standard this checklist's first item depends on.
+- [Perplexity citations for docs](./perplexity-citations-for-docs.md) — The same question, narrowed to one engine.
+- [Documentation SEO guide](./documentation-seo-guide.md) — The structured-data implementation this checklist references.
+- [JSON-LD for documentation](./json-ld-for-documentation.md) — Which schema types to add, and which ones still do anything.
+
+<!-- /widget -->
 
 ---
 

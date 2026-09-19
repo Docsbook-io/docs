@@ -8,7 +8,11 @@ tldr: "Source of Truth is a document graph an agent builds locally with the open
 
 Source of Truth is a structured graph of your entire documentation — pages, headings, sections, and cross-links — built locally by AI agents like Claude Code via [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp). The agent runs the parser on your repository, holds the graph in memory, and queries it — as commands, or as LSP requests — while it works on your docs.
 
-> **Note.** Server-side Source of Truth indexing and the hosted MCP graph tools (`get_doc_graph`, `read_doc_sections`, `reindex_doc_graph` and the `doc_*` LSP-style tools) were removed in **v0.22.0**. The graph now lives entirely on the agent's machine: there is no hosted index, no reindex quota, and nothing about it draws on your project balance.
+<!-- widget:callout type=note -->
+
+**Note.** Server-side Source of Truth indexing and the hosted MCP graph tools (`get_doc_graph`, `read_doc_sections`, `reindex_doc_graph` and the `doc_*` LSP-style tools) were removed in **v0.22.0**. The graph now lives entirely on the agent's machine: there is no hosted index, no reindex quota, and nothing about it draws on your project balance.
+
+<!-- /widget -->
 
 ## How do I give an agent the Source of Truth graph?
 
@@ -104,6 +108,8 @@ The trade-off is real and worth naming: an agent with no checkout of your reposi
 - **Version-dependent.** Subcommand names and flags belong to `markdown-lsp`, which versions on its own schedule. The package README is the authority; this page describes the interface as published today.
 - **Under question: wiki-style `[[note]]` links.** An earlier version of this page said they are supported. The package documents neither wiki links nor a plugin that adds them, and its parser is `remark` with GitHub-flavoured Markdown, which does not resolve them by itself. Treat wiki links as unsupported until the package says otherwise; ordinary Markdown links in all three styles are covered above.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
 - [MCP Server](./mcp.md) — the hosted server for workspace, content, analytics and webhooks.
@@ -111,3 +117,5 @@ The trade-off is real and worth naming: an agent with no checkout of your reposi
 - [llms.txt](../geo/llms-txt.md) — the machine-readable index of the *published* site, for agents with no checkout.
 - [MCP server security](./mcp-security.md) — what the hosted half stores, and what a token can reach.
 - [Webhooks](../reference/webhooks.md) — subscribe to `content.indexed` and `content.outdated` on the hosted side.
+
+<!-- /widget -->

@@ -1,6 +1,7 @@
 ---
 title: "Docsbook FAQ: cost, limits, sync and data ownership"
 description: "Answers to what Docsbook costs, what happens when a balance runs out, who can read your site, how GitHub sync works, and what you keep if you leave."
+tldr: "Docsbook meters four kinds of AI work — reader chat, admin and agent calls, translation and indexing — plus bot crawling past a monthly allowance; hosting, GitHub sync, search and custom domains are never metered, and current prices are always at docsbook.io/pricing."
 ---
 
 # Docsbook FAQ: cost, limits, sync and data ownership
@@ -22,11 +23,11 @@ It also meters one thing that is not AI work: **machine crawling** of your publi
 
 ### Is there a free way to try Docsbook?
 
-Yes. Generating a draft site needs no account and no credit card: paste a repository, a website URL or a sentence about your product at [docsbook.io/start](https://docsbook.io/start) and read the result before signing in. Every new project is then created with **$1.00** of balance, and a further **$5.00** can be claimed once the project is **3 minutes old**. Both are real credit against AI work.
+Yes. Generating a draft site needs no account and no credit card: paste a repository, a website URL or a sentence about your product at [docsbook.io/start](https://docsbook.io/start) and read the result before signing in. Every new project then starts on Pro with an AI wallet of its own — real credit against AI work, spendable immediately and with no time limit to claim it by. See [Pricing](./pricing.md) for the amount and how it works.
 
 ### How do I start spending, and what does a top-up cost?
 
-The $1.00 a Docsbook project starts with is spendable immediately — ask the AI chat a question and you will watch it move. Press **Claim** on the project's billing card once the project is 3 minutes old to add the **$5.00** welcome credit; nothing adds it on your behalf.
+The AI wallet a Docsbook project starts with is spendable immediately — ask the AI chat a question and you will watch it move. It is spent first, ahead of anything you top up, and there is no clock on it: the trial runs until the wallet is empty, however long that takes.
 
 After that you name the amount yourself. The smallest single top-up is **$20.00** and the largest is **$5,000.00**; for more, top up twice. The money lands on the balance of the one project you chose. Nothing refills on a schedule — set up a monthly payment on the billing screen if you want a recurring amount.
 
@@ -259,7 +260,7 @@ Install them with `npx skills add Docsbook-io/docs-skills --skill '*'`, or let a
 
 ### Can an AI agent edit my documentation?
 
-Yes. Docsbook's MCP server exposes 140 tools at `https://docsbook.io/api/mcp/server`, so Claude Code, Cursor or ChatGPT can ask the `docsbook_expert` agent what to do and be handed instructions to carry out, read your pages, search them, change settings and commit new pages back. Writing requires a token authorised with read-write scope; a read-only token is refused.
+Yes. Docsbook's MCP server at `https://docsbook.io/api/mcp/server` exposes the tool list your token returns — the MCP section of your admin panel reads it live — so Claude Code, Cursor or ChatGPT can ask the `docsbook_expert` agent what to do and be handed instructions to carry out, read your pages, search them, change settings and commit new pages back. Writing requires a token authorised with read-write scope; a read-only token is refused.
 
 See [MCP server](./agent-ready/mcp.md) and the [MCP tools reference](./mcp/README.md).
 

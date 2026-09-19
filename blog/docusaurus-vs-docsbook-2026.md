@@ -1,6 +1,7 @@
 ---
 title: "Should you move off Docusaurus in 2026? A decision guide"
 description: "A decision guide for teams already running Docusaurus: what the setup really costs per quarter, when staying is correct, and what changes if you move."
+tldr: "Docsbook argues you should move off Docusaurus once nobody on the team is paid to own its frontend build — trading React component embedding for built-in AI chat, 15-language translation and an MCP server."
 ---
 
 # Should you move off Docusaurus in 2026? A decision guide
@@ -79,8 +80,12 @@ Step 3 is the one that decides whether the move costs you search traffic. [Migra
 
 [Start free — no credit card](https://docsbook.io/start)
 
+<!-- widget:cards plain cols=2 -->
+
 ## Next steps
 
-- [Docusaurus alternatives in 2026: 9 platforms compared](./docusaurus-vs-docsbook.md) — the full field, if Docsbook is not the only candidate
-- [Migrating from Docusaurus to Docsbook](./migrating-from-docusaurus-to-docsbook.md) — the step-by-step move with redirects
-- [Docs as code vs managed platform](./docs-as-code-vs-managed-platform.md) — the same decision stated as a principle rather than a bill
+- [Docusaurus alternatives in 2026: 9 platforms compared](./docusaurus-vs-docsbook.md) — the full field, if Docsbook is not the only candidate {scale}
+- [Migrating from Docusaurus to Docsbook](./migrating-from-docusaurus-to-docsbook.md) — the step-by-step move with redirects {arrow-right-left}
+- [Docs as code vs managed platform](./docs-as-code-vs-managed-platform.md) — the same decision stated as a principle rather than a bill {code}
+
+<!-- /widget -->

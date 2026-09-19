@@ -70,7 +70,7 @@ Only models in the published catalog are honoured on Docsbook's key, because spe
 
 **AI chat for readers is a Pro capability.** On a Free project a visitor's question is refused before any model is called, whatever key the project holds — the gate is a tier decision, not a cost decision, so bringing your own key does not re-open it. The owner's own questions in the admin chat stay open on every plan. Current plans are on the [pricing page](https://docsbook.io/pricing).
 
-Three things in the chat are metered against the project balance: an answer to a reader, building or rebuilding the semantic index (and the embedding of each incoming question), and an agent run started from the chat. Hosting the widget, serving the page, keyword search, page feedback and hook calls are not metered.
+Two things in the chat are metered against the project balance: an answer to a reader, and building or rebuilding the semantic index (and the embedding of each incoming question). Hosting the widget, serving the page, keyword search, page feedback and hook calls are not metered.
 
 Metered and *calls a model* are not the same list, and it is worth knowing which way each one falls. Two model calls on the reader path are **not** billed today: the three follow-up questions under an answer, and the agentic search loop that only runs when every retriever came back empty. One model call that is not part of the reader path **is** billed: the judge that fills the **Answered** column on your Chat tab, charged as owner-side AI work.
 
@@ -96,11 +96,15 @@ When the balance is exhausted, the chat stops rather than billing further. The s
 - **No published accuracy figure.** Docsbook does not claim an answer-accuracy percentage. [Answer quality](./answer-quality.md) explains what is measured instead and why we do not quote a number.
 - **The default reader model is the provider's to change.** Context window, refusal behaviour and price are theirs; the retrieval and citation mechanism is ours.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
-- [Answer quality](./answer-quality.md) — the retrieval and grounding pipeline in full, with sources.
-- [Sources](./sources.md) — what the assistant may read beyond your own pages.
-- [Chat hooks](./chat-hooks.md) — block, enrich, or mirror every answer.
-- [Search](./search.md) — the keyword index the chat shares with your search box.
-- [MCP server](../agent-ready/mcp.md) — manage chat settings from Claude Code or Cursor.
-- [Pricing](https://docsbook.io/pricing) — what an answer draws on.
+- [Answer quality](./answer-quality.md) — the retrieval and grounding pipeline in full, with sources. {layers}
+- [Sources](./sources.md) — what the assistant may read beyond your own pages. {plug}
+- [Chat hooks](./chat-hooks.md) — block, enrich, or mirror every answer. {webhook}
+- [Search](./search.md) — the keyword index the chat shares with your search box. {search}
+- [MCP server](../agent-ready/mcp.md) — manage chat settings from Claude Code or Cursor. {terminal}
+- [Pricing](https://docsbook.io/pricing) — what an answer draws on. {credit-card}
+
+<!-- /widget -->

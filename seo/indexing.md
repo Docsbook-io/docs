@@ -148,6 +148,8 @@ direction of the gap, not its size on yours.
   can automate. Whether a crawled page ranks is Google's call on your content, and no
   timer on this page changes it.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
 - [SEO — what Docsbook does for search visibility](./README.md)
@@ -155,3 +157,5 @@ direction of the gap, not its size on yours.
 - [Analytics](../analytics/README.md)
 - [GEO — being cited by AI assistants](../geo/README.md)
 - [AI translations](../translation/ai-translations.md)
+
+<!-- /widget -->

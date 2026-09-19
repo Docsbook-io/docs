@@ -138,6 +138,8 @@ The frontmatter fields Docsbook uses are a superset of the open Agent Skills sta
 - **Nothing here measures whether skills make agents better.** Docsbook runs an internal harness against its own admin chat and uses it to decide which descriptions to change. Those are our own measurements on our own probes, not a published benchmark, and this page states none of their numbers as fact.
 - **Running a skill with your own agent costs nothing here, and Docsbook cannot see it.** Only the MCP tools a skill calls draw on a project's balance; the [pricing page](https://docsbook.io/pricing) carries the current amounts.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
 - [MCP Server](./mcp.md) — where `find_skill` and the `docsbook_expert` adviser live, and what a call draws on
@@ -146,3 +148,5 @@ The frontmatter fields Docsbook uses are a superset of the open Agent Skills sta
 - [llms.txt](../geo/llms-txt.md) — the discovery surface for an agent with no MCP connection
 - [docs-subagents](https://github.com/Docsbook-io/docs-subagents) — executors with pinned models and tools, for a specific project rather than any project
 - [markdown-lsp](https://github.com/Docsbook-io/markdown-lsp) — the open-source Markdown parser the graph is built with
+
+<!-- /widget -->

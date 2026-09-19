@@ -1,6 +1,7 @@
 ---
 title: "Why README-only projects need a documentation site"
 description: "A single README caps what search engines and AI assistants can find about your project. Here is what a docs site adds and when it is worth the move."
+tldr: "A GitHub README caps discovery at the repo name; a separate documentation site adds long-tail SEO, reliable AI citation via llms.txt, sidebar navigation, search and analytics, while the README stays as the project's first look."
 ---
 
 # Why README-only projects need a documentation site
@@ -109,7 +110,7 @@ Three steps with Docsbook:
 2. Sign in with GitHub
 3. Paste `github.com/yourorg/yourrepo`
 
-Site live at `docsbook.io/yourorg/yourrepo`. Free tier covers public repos. No config files, no CI/CD.
+Site live at `docsbook.io/yourorg/yourrepo`. No config files, no CI/CD — current plans are at [docsbook.io/pricing](https://docsbook.io/pricing).
 
 If you have only a README, you get a one-page docs site. If you have `docs/`, you get a multi-page site with a sidebar.
 
@@ -133,6 +134,8 @@ Two cases:
 
 For everything else, having a docs site is the better default in 2026.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related reading
 
 - [Turn your README.md into a documentation site](./readme-md-to-docs-site.md)
@@ -140,8 +143,14 @@ For everything else, having a docs site is the better default in 2026.
 - [Documentation SEO guide](./documentation-seo-guide.md)
 - [How to get docs cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md)
 
+<!-- /widget -->
+
 ---
+
+<!-- widget:cta -->
 
 Publishing a site from your repository costs nothing — paste `github.com/yourorg/yourrepo` and it is live in five seconds.
 
 [Start free — no credit card](https://docsbook.io/start)
+
+<!-- /widget -->

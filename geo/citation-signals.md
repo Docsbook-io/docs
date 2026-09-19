@@ -37,7 +37,11 @@ That is a vendor working around prose that does not name its own subject. Prose 
 - **Name the subject in full inside every section.** "To rotate it, call the endpoint" is unretrievable — nothing in it says which product, or that the thing being rotated is an API key.
 - **Answer in the first sentence after the heading**, then elaborate. "Before we get into rotation, it is worth understanding…" is the answer arriving too late to be the passage that gets picked.
 
+<!-- widget:callout type=tip -->
+
 **The quote test.** Paste a section into an empty file. If it no longer says what it is about, rewrite it. That is exactly the operation a retriever performs on your page.
+
+<!-- /widget -->
 
 ## What Docsbook does with these rules mechanically
 
@@ -94,10 +98,14 @@ Sources: [OpenAI](https://developers.openai.com/api/docs/bots), [Anthropic](http
 - **The numbers above are from one benchmark and one era.** GEO-bench was evaluated in 2024 on a fixed engine configuration. The direction of the findings has held up in review; the magnitudes should not be quoted as your expected result.
 - **Docsbook measures none of this for you.** What your analytics can show is the trace: crawler hits from assistant user agents and referral traffic from assistant domains. A citation you did not observe is not a metric.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
-- [GEO](./README.md) — what Docsbook injects into the page, and how to check it.
-- [llms.txt](./llms-txt.md) — the site-level machine index and its evidence.
-- [AEO](../aeo/README.md) — question headings, `FAQPage` and `HowTo` markup.
-- [SEO](../seo/README.md) — indexing and crawlability, the stage before citation.
-- [Analytics](../analytics/README.md) — where assistant crawler hits and referrals show up.
+- [GEO](./README.md) — what Docsbook injects into the page, and how to check it. {sparkles}
+- [llms.txt](./llms-txt.md) — the site-level machine index and its evidence. {file-text}
+- [AEO](../aeo/README.md) — question headings, `FAQPage` and `HowTo` markup. {help-circle}
+- [SEO](../seo/README.md) — indexing and crawlability, the stage before citation. {trending-up}
+- [Analytics](../analytics/README.md) — where assistant crawler hits and referrals show up. {chart-line}
+
+<!-- /widget -->

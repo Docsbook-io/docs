@@ -1,6 +1,7 @@
 ---
 title: "MCP server for documentation: what it is and why it wins"
 description: "How Claude Code and Cursor read and edit documentation through Model Context Protocol, which tools matter, and why agents are now a traffic channel."
+tldr: "Docsbook ships a managed MCP server so agents like Claude Code and Cursor can read your docs as structured data and edit branding, analytics and translations directly — AI agents already account for a large and growing share of documentation traffic."
 ---
 
 # MCP server for documentation: what it is and why it wins
@@ -114,9 +115,13 @@ Docsbook ships a managed MCP server with OAuth, so Claude Code and Cursor read a
 
 [Start free — no credit card](https://docsbook.io/start)
 
+<!-- widget:cards plain cols=2 -->
+
 ## Next steps
 
 - [docs-skills: modular capabilities for AI agents](./docs-skills-for-ai-agents.md) — the layer that sits on top of MCP
 - [llms.txt explained](./llms-txt-guide.md) — the companion standard for agents without MCP
 - [AI documentation platforms compared](./ai-docs-platform-comparison.md) — which of the four ship an MCP server
 - [How to get your documentation cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — the discovery side of the same channel
+
+<!-- /widget -->

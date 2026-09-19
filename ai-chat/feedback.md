@@ -117,10 +117,14 @@ The practical reading of those four rows: a page with ten thumbs-down is worth o
 - **We publish no benchmark of what a Docsbook feedback rate looks like.** No cross-customer distribution has been measured, so there is no "healthy" number to compare yourself against. The external sources above are about voluntary feedback in general, not about Docsbook sites.
 - **A comment field is in the payload and nothing fills it.** If you build a surface that collects one, the webhook contract already has a place for it; out of the box it is always `null`.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
-- [AI chat](./chat.md) — the assistant whose answers carry their own, separate thumbs.
-- [Answer quality](./answer-quality.md) — what happens to a question the assistant could not answer.
-- [Full-text search](./search.md) — failed searches are the other signal that a page is missing or misnamed.
-- [Web analytics](../analytics/tracking/overview.md) — check a page's traffic before you rewrite it on three votes.
-- [Webhooks](../reference/webhooks.md) — `feedback.received` and `chat.negative_feedback` in full, signed and retried.
+- [AI chat](./chat.md) — the assistant whose answers carry their own, separate thumbs. {message-circle}
+- [Answer quality](./answer-quality.md) — what happens to a question the assistant could not answer. {layers}
+- [Full-text search](./search.md) — failed searches are the other signal that a page is missing or misnamed. {search}
+- [Web analytics](../analytics/tracking/overview.md) — check a page's traffic before you rewrite it on three votes. {chart-line}
+- [Webhooks](../reference/webhooks.md) — `feedback.received` and `chat.negative_feedback` in full, signed and retried. {webhook}
+
+<!-- /widget -->

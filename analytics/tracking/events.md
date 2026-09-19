@@ -25,6 +25,8 @@ the list changes with your plan.
 
 ## The catalogue
 
+<!-- widget:accordion -->
+
 Every event carries your project's full name (`owner/repo`). The **Also
 carries** column is what it adds on top of that. Events marked **beacon** are
 delivered by `navigator.sendBeacon` at the moment the reader leaves; the rest
@@ -129,6 +131,8 @@ rejected outright rather than dropped. Votes are recorded through a server
 route so a webhook can fire on them; if that request fails, the browser records
 the same event directly, so the count survives.
 
+<!-- /widget -->
+
 ## Automatic, or dependent on a feature
 
 There is no tracking toggle anywhere in Docsbook, and no `enabled` flag on any
@@ -226,10 +230,14 @@ IPs are never returned. See
   in the UI. Treat the 36 as the complete set of events you can *act* on, not
   as a complete inventory of every string in the stream.
 
+<!-- widget:cards plain horizontal -->
+
 ## Related
 
-- [How measurement works](../how-measurement-works.md) — visitor identity, bot filtering, retention and privacy for everything on this page
-- [Analytics overview](./overview.md) — the cards and figures these events feed
-- [Goals and funnels](../reports/goals-and-funnels.md) — declaring an outcome on one of these event names
-- [Read time](../reports/read-time.md) — `docs.read_time` as a report
-- [Webhooks](../../reference/webhooks.md) — the events that *can* notify you
+- [How measurement works](../how-measurement-works.md) — visitor identity, bot filtering, retention and privacy for everything on this page {gauge}
+- [Analytics overview](./overview.md) — the cards and figures these events feed {chart-line}
+- [Goals and funnels](../reports/goals-and-funnels.md) — declaring an outcome on one of these event names {target}
+- [Read time](../reports/read-time.md) — `docs.read_time` as a report {history}
+- [Webhooks](../../reference/webhooks.md) — the events that *can* notify you {webhook}
+
+<!-- /widget -->

@@ -1,6 +1,7 @@
 ---
 title: "llms.txt explained: the complete guide for docs sites"
 description: "What llms.txt is, how it differs from robots.txt and sitemap.xml, what evidence supports it, and a working example for a documentation site."
+tldr: "Docsbook generates llms.txt and llms-full.txt automatically for every workspace — a plain-text file at your domain root that lists the pages an AI agent should read first, the way robots.txt once told crawlers what to skip."
 ---
 
 # llms.txt explained: the complete guide for docs sites
@@ -111,14 +112,22 @@ curl -s https://yourdomain.com/llms.txt | head -20
 
 For a more thorough check, ask ChatGPT or Claude to "fetch and summarize https://yourdomain.com/llms.txt" — if the summary matches your intent, the file is doing its job.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related reading
 
 - [AI search and documentation](./ai-search-documentation.md) — how AI search works under the hood
 - [How to get docs cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — practical citation checklist
 - [Perplexity citations for docs](./perplexity-citations-for-docs.md) — Perplexity-specific guide
 
+<!-- /widget -->
+
 ---
+
+<!-- widget:cta -->
 
 Docsbook generates `llms.txt` and `llms-full.txt` automatically for every workspace, with nothing to enable and nothing to pay for.
 
 [Start free — no credit card](https://docsbook.io/start)
+
+<!-- /widget -->

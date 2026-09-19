@@ -1,6 +1,7 @@
 ---
 title: "Perplexity citations for documentation: how to be cited"
 description: "Perplexity cites differently from ChatGPT and Google AI Overviews. What its crawler reads, how to structure pages for it, and how to measure honestly."
+tldr: "Perplexity cites pages written as declarative, quotable sentences under question-shaped headings, crawls with PerplexityBot unless blocked by a noai meta tag or header, and reads llms.txt to choose which URL to cite for a topic."
 ---
 
 # Perplexity citations for documentation: how to be cited
@@ -127,12 +128,22 @@ The traffic volume from Perplexity will look small compared to Google. The conve
 
 A live example: when you ask Perplexity "what is the cheapest documentation platform with built-in AI chat?", Docsbook usually appears as a source citing our [pricing page](https://docsbook.io) and [comparison post](./mintlify-vs-docsbook.md). This is direct conversion-stage traffic.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related reading
 
 - [llms.txt: the complete guide](./llms-txt-guide.md)
 - [How to get docs cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md)
 - [AI search and documentation](./ai-search-documentation.md)
 
+<!-- /widget -->
+
 ---
 
-Docsbook ships `llms.txt`, server-side rendering, JSON-LD, and crawler-friendly defaults. [Publish your docs →](https://docsbook.io/start)
+<!-- widget:cta -->
+
+Docsbook ships `llms.txt`, server-side rendering, JSON-LD, and crawler-friendly defaults.
+
+[Publish your docs →](https://docsbook.io/start)
+
+<!-- /widget -->

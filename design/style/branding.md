@@ -1,6 +1,7 @@
 ---
 title: "Match your documentation site to your product brand"
 description: "Set the name, accent color, fonts and icon of your Docsbook site, and declare the page it drives readers to so analytics can report what it earned."
+tldr: "Docsbook's Branding page sets your site's name, logo, colors and fonts — its Call To Action URL and Average Product Price fields are what let analytics report conversions and revenue at all."
 ---
 
 # Branding
@@ -47,7 +48,11 @@ Set it and the analytics panel starts reporting **Revenue** and **Revenue per vi
 
 Enter it in dollars — `299` or `29.90`, with or without the `$`. It pairs with the Call To Action URL above, and both are needed: one says which click counts, the other says what it is worth. Set only one and the revenue figures stay switched off, saying which half is still missing.
 
+<!-- widget:callout type=note -->
+
 Leave it empty to turn revenue reporting off again. There is no way to enter `0` — a zero average price would leave the figures looking switched on while reporting `$0` forever, which is worse than an honest blank.
+
+<!-- /widget -->
 
 ## Accent color
 
@@ -105,8 +110,12 @@ Set a custom favicon and header icon for your documentation site.
 - Browser favicon (tab icon)
 - Header logo area in your docs sidebar
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
-- [Theming — light, dark, system](./theming.md) — the theme your accent color is drawn on
-- [Header layout and navigation](../layout/header.md) — where the name, logo and icon appear
-- [Analytics overview](../../analytics/README.md) — the Revenue and Conversion figures these two fields switch on
+- [Theming — light, dark, system](./theming.md) — the theme your accent color is drawn on {moon}
+- [Header layout and navigation](../layout/header.md) — where the name, logo and icon appear {panel-top}
+- [Analytics overview](../../analytics/README.md) — the Revenue and Conversion figures these two fields switch on {chart-line}
+
+<!-- /widget -->

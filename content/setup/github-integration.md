@@ -1,6 +1,7 @@
 ---
 title: "Add an Edit on GitHub link to every documentation page"
 description: "Turn on the reader-facing Edit on GitHub link, set the edit base URL for your repository layout, and let readers open a pull request on a typo."
+tldr: "Docsbook can add an Edit on GitHub link to the bottom of every page, opening that page's source in the GitHub editor so a reader can fix a typo and open a pull request without learning Docsbook."
 ---
 
 # Add an Edit on GitHub link
@@ -59,7 +60,7 @@ The edit link calls no AI model, so it does not draw on your project balance.
 
 ## Turn your readers into contributors
 
-Every new project starts with $1 of balance, and the edit link does not spend it.
+Every new project starts with a free AI wallet, and the edit link does not spend it.
 
 [Create a project](https://docsbook.io/start)
 

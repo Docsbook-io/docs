@@ -127,10 +127,14 @@ Take this section as seriously as the rest of the page.
 - **The model can change under you.** The default translation model is a configuration constant, and the picker lets you change it. A page translated last month was translated by whatever was selected then; nothing re-translates a page because the model improved.
 - **Regional variants are not modelled.** One `pt` for Brazil and Portugal, one `zh` for Simplified and Traditional. For products where that distinction sells, this is a real limitation rather than a rounding error.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
-- [AI translations](./ai-translations.md) — the pipeline itself: chunking, protection, failure handling
-- [Translation settings](./settings.md) — enabling a language, the model, the mode, locale URLs
-- [SEO](../seo/README.md) — canonicals, sitemap and structured data on every page
-- [GEO](../geo/README.md) — what makes a page quotable by an assistant
-- [How Docsbook proves what it claims](../evidence.md) — the rule this page is written to
+- [AI translations](./ai-translations.md) — the pipeline itself: chunking, protection, failure handling {languages}
+- [Translation settings](./settings.md) — enabling a language, the model, the mode, locale URLs {settings}
+- [SEO](../seo/README.md) — canonicals, sitemap and structured data on every page {trending-up}
+- [GEO](../geo/README.md) — what makes a page quotable by an assistant {sparkles}
+- [How Docsbook proves what it claims](../evidence.md) — the rule this page is written to {shield-check}
+
+<!-- /widget -->

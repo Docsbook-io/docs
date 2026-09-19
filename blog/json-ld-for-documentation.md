@@ -1,6 +1,7 @@
 ---
 title: "JSON-LD for documentation: schema types that matter"
 description: "Which JSON-LD schema types are worth adding to documentation pages, which no longer earn rich results, and copy-paste examples you can validate today."
+tldr: "Docsbook adds TechArticle and BreadcrumbList to every doc page automatically; HowTo earns step rich results, SoftwareApplication surfaces pricing and ratings, and FAQPage still marks up Q&A even though Google limited its rich snippet to a few sites in 2023."
 ---
 
 # JSON-LD for documentation: schema types that matter
@@ -251,11 +252,15 @@ Two tools:
 
 Run both on your docs pages. Fix any warnings. Errors are blocking; warnings are not.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related reading
 
-- [Documentation SEO guide](./documentation-seo-guide.md)
-- [How to get docs cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md)
-- [llms.txt: the complete guide](./llms-txt-guide.md)
+- [Documentation SEO guide](./documentation-seo-guide.md) — The wider SEO setup this schema fits into.
+- [How to get docs cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — JSON-LD is one item on a longer checklist.
+- [llms.txt: the complete guide](./llms-txt-guide.md) — The companion file for AI agents, not search engines.
+
+<!-- /widget -->
 
 ---
 

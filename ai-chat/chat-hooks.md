@@ -84,7 +84,11 @@ The streaming hook receives `event: "message"`, `question`, `answer`, `refs` (th
 
 ## Are chat hooks signed?
 
+<!-- widget:callout type=warning -->
+
 **No.** Docsbook sends a plain `POST` with `Content-Type: application/json` and no HMAC header, so your endpoint must not treat the payload as proof of origin. Keep the URL secret, put a token in its path or query string, restrict it to Docsbook's egress, and treat the body as untrusted input.
+
+<!-- /widget -->
 
 Docsbook [webhooks](../reference/webhooks.md) are a different mechanism and *are* signed: HMAC-SHA256 over the raw body in `X-Docsbook-Signature-256`, as `sha256=<hex>`. Do not carry a webhook's verification code over to a chat hook and assume it verifies anything — it will pass on a body anyone could have sent.
 
@@ -118,10 +122,14 @@ Pass an empty string to `set_chat_hooks` to clear an individual hook. `test_chat
 - **`set_chat_hooks` and `test_chat_hook` still describe themselves as requiring Pro.** The capability they check is open on every plan, so the tool descriptions are stale rather than the behaviour. Under question until those strings are corrected.
 - **A slow pre-hook is paid for by the reader.** Five seconds is the ceiling, and it lands before the first token. Keep the endpoint fast, or return nothing and let the chat continue.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
-- [AI chat](./chat.md) — the contract the hooks plug into.
-- [Answer quality](./answer-quality.md) — where in the pipeline each hook sits.
-- [Sources](./sources.md) — the other way to give the assistant facts it does not have.
-- [Webhooks](../reference/webhooks.md) — signed, retried, event-driven deliveries.
-- [MCP server](../agent-ready/mcp.md) — configure hooks remotely from your editor.
+- [AI chat](./chat.md) — the contract the hooks plug into. {message-circle}
+- [Answer quality](./answer-quality.md) — where in the pipeline each hook sits. {layers}
+- [Sources](./sources.md) — the other way to give the assistant facts it does not have. {plug}
+- [Webhooks](../reference/webhooks.md) — signed, retried, event-driven deliveries. {webhook}
+- [MCP server](../agent-ready/mcp.md) — configure hooks remotely from your editor. {terminal}
+
+<!-- /widget -->
