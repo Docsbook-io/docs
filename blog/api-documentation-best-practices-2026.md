@@ -110,7 +110,7 @@ Webhook docs are where most APIs get sloppy. The pattern that works:
 - Provide a test endpoint or "send test event" UI
 - Document idempotency requirements on the receiving side
 
-See [our webhook docs](https://docsbook.io/docs/webhooks) for a working example.
+See [our webhook docs](https://docsbook.io/reference/webhooks) for a working example.
 
 ## AI chat on docs is now table stakes
 

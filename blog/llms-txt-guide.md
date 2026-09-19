@@ -69,7 +69,7 @@ When you create a Docsbook workspace, two files appear immediately:
 
 The platform itself also serves `docsbook.io/llms.txt` describing Docsbook the product. This is the dogfooded version of the standard.
 
-No configuration. No `llms.config.js`. The graph of your docs is the source of both files. See [our docs](https://docsbook.io/docs/ai/llms-txt) for the live example.
+No configuration. No `llms.config.js`. The graph of your docs is the source of both files. See [our docs](https://docsbook.io/geo/llms-txt) for the live example.
 
 ## What to put in your llms.txt
 
