@@ -1,6 +1,8 @@
 ---
 title: "Docsbook FAQ: cost, limits, sync and data ownership"
 description: "Answers to what Docsbook costs, what happens when a balance runs out, who can read your site, how GitHub sync works, and what you keep if you leave."
+status: generated
+version: "0.2"
 ---
 
 # Docsbook FAQ: cost, limits, sync and data ownership
@@ -67,6 +69,10 @@ Email [support@docsbook.io](mailto:support@docsbook.io) with your account addres
 Email [support@docsbook.io](mailto:support@docsbook.io) to discuss it. There is no published organization discount to quote here.
 
 ## Getting started
+
+### How do I create a documentation site?
+
+Two ways, both free. **From scratch:** paste a website URL, a repository link, or a sentence about your product at [docsbook.io/create](https://docsbook.io/create) — Docsbook drafts a site and hosts the Markdown itself, no GitHub account needed. **From your own GitHub repository:** sign in at [docsbook.io/connect](https://docsbook.io/connect), authorise GitHub, and pick a repository containing Markdown files — Docsbook builds the navigation and publishes it. Either way you land on a live site within seconds. See [Create your first documentation site](./guides/getting-started/creating-docs.md) for the full walkthrough.
 
 ### Do I need a GitHub repository to try Docsbook?
 
