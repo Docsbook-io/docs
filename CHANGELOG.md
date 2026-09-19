@@ -34,6 +34,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Fixed: connecting GitHub from Integrations could open a window with no app selected instead of GitHub's own install screen — it now always goes straight there. `Integrations`
 - Fixed: opening an issue or pull request covered the whole panel, sidebar and header included, instead of just replacing the list you opened it from — it now swaps only that section's body, the same way an MCP tool's own page already does. `Issues`
 - Integrations opens straight on Discover now, and the Skills tab is gone — one screen, no tab to pick between what's connected and what could be. `Integrations`
+- Each project now wears **its own icon** in the panel's project switcher — in the list and on the open project alike — so telling six sites apart is a glance instead of a read. A project that has set no icon gets a folder. `Panel`
+- **The bottom of the sidebar names the organization you have open**, not your own account, so the one label on screen agrees with the row ticked inside the menu. `Panel`
+- **An organization's dashboard keeps that same organization switcher at the bottom** instead of turning into a static name, and its sidebar header now lists that organization's projects — so the panel answers "which project" and "which organization" in the same two places wherever you are. `Panel`
 
 ## NEW - 18.09.2026
 
