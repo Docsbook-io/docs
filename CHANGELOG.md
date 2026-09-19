@@ -5,6 +5,34 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 # Releases
 
+## NEW - 19.09.2026
+
+### Added
+
+- **Connect MCP is now one item in the Copy page menu on your published docs.** It copies a ready prompt that wires this project's documentation into any agent — the endpoint, the command for Claude Code and Codex, the config for everything else, and what the tools are once connected. A reader who wants their own agent to work from your docs stops needing you to write them instructions. `MCP`
+- **A reader's agent can now open the page it just found.** `search` has always answered "call `read_doc` on this path", and on the public endpoint that tool did not exist — so the only thing an agent could do with a hit was guess the page from its title, which is the invention the search result is there to prevent. `read_doc` and `get_doc_outline` are public now. `MCP`
+- **Docsbook's own manual is readable over MCP** — `search_docsbook_docs`, `read_docsbook_doc` and `list_docsbook_docs`, on both servers. Every other tool reads *your* documentation, so "what can this product do and what should I set up next" had nothing grounded to answer from, and an agent answered it from memory. `MCP`
+
+### Improved
+
+- **A long question now finds the pages it is actually about.** A prompt covering four subjects at once used to be averaged into a single point that landed between them all, and the answer came back full of pages that are vaguely about everything: measured on our own 3 409-heading corpus, none of the four right pages made the top six. A long question is now searched part by part and the results fused, and all four do. Short questions are untouched. `MCP`
+
+### Changed
+
+- **The account menu at the bottom of the sidebar now lists your organizations and nothing else**, and each one is a single click into that team's dashboard — where its projects, its people and its plan already are. Hovering a team used to fly a second menu of its projects out to the side, which meant reaching your own team cost a hover you had to hold steady and a target you had to aim at. Switching between the projects of the team you are already in is unchanged: that is the project switcher at the top of the same sidebar. `Organizations`
+- **The search box in that menu takes your typing the moment it opens**, so finding one team among thirty is type-and-go instead of click, aim, click again. It used to lose the race with the menu itself about half the time, and the failure was the confusing kind: the cursor looked ready and the first letters went somewhere else. `Organizations`
+- **Every screen in the panel now carries a Visit Website button in its top-right corner**, opening your published documentation in a new tab. Checking what a reader actually sees after changing a setting stops being a retyped address, so nobody ships a change to a live site on the assumption that it looked right. `Integrations`
+- **Connect MCP moved to that same corner, beside Visit Website, as an outline button.** It sat next to the section title, where it read as a label rather than something to press; the top-right corner is where the panel keeps the things you can do from the screen you are on. `Integrations`
+
+### Removed
+
+- **The Change Log button is gone from the panel header.** The per-section release notes it opened are unchanged and still published at `docsbook.io/docs/changelog` — what was ours to read had taken the one corner of every screen that should be about your project. `Changes`
+
+### Fixed
+
+- **The public MCP endpoint was serving four tools and quietly dropping three it advertised** — `find_skill`, `find_widget` and `list_content_widgets` were listed by `get_info` as available and were never handed over. Ten tools are served now, counted against the real server rather than against the code that registers them. `MCP`
+- **"Connect to VSCode" pointed at an address that exists nowhere in the product** and had therefore never connected anything. It uses the real endpoint for your project now. `MCP`
+
 ## NEW - 18.09.2026
 
 ### Added

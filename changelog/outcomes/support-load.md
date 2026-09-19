@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Support load** — fewer qu
 
 Questions the docs answer are questions your inbox never sees. This is the Support load slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 19.09.2026
+
+### Changed
+
+- **The search box in that menu takes your typing the moment it opens**, so finding one team among thirty is type-and-go instead of click, aim, click again. It used to lose the race with the menu itself about half the time, and the failure was the confusing kind: the cursor looked ready and the first letters went somewhere else. `Organizations`
+
 ## NEW - 18.09.2026
 
 ### Added

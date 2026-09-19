@@ -9,6 +9,16 @@ Everything Docsbook shipped that moves one number: **Time to answer** — reader
 
 How long a reader hunts before the page they needed is in front of them. This is the Time to answer slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 19.09.2026
+
+### Added
+
+- **A reader's agent can now open the page it just found.** `search` has always answered "call `read_doc` on this path", and on the public endpoint that tool did not exist — so the only thing an agent could do with a hit was guess the page from its title, which is the invention the search result is there to prevent. `read_doc` and `get_doc_outline` are public now. `MCP`
+
+### Changed
+
+- **Connect MCP moved to that same corner, beside Visit Website, as an outline button.** It sat next to the section title, where it read as a label rather than something to press; the top-right corner is where the panel keeps the things you can do from the screen you are on. `Integrations`
+
 ## NEW - 18.09.2026
 
 ### Added

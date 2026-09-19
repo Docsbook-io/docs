@@ -7,6 +7,13 @@ description: "Every release that touched Integrations: the apps, sources and del
 
 Everything that shipped in **Integrations**. This is the Integrations slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 19.09.2026
+
+### Changed
+
+- **Every screen in the panel now carries a Visit Website button in its top-right corner**, opening your published documentation in a new tab. Checking what a reader actually sees after changing a setting stops being a retyped address, so nobody ships a change to a live site on the assumption that it looked right. `Integrations`
+- **Connect MCP moved to that same corner, beside Visit Website, as an outline button.** It sat next to the section title, where it read as a label rather than something to press; the top-right corner is where the panel keeps the things you can do from the screen you are on. `Integrations`
+
 ## NEW - 18.09.2026
 
 ### Added

@@ -7,6 +7,12 @@ description: "Every release that touched the Changes tab, later renamed Pull Req
 
 Everything that shipped in **Changes**. This is the Changes slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 19.09.2026
+
+### Removed
+
+- **The Change Log button is gone from the panel header.** The per-section release notes it opened are unchanged and still published at `docsbook.io/docs/changelog` — what was ours to read had taken the one corner of every screen that should be about your project. `Changes`
+
 ## NEW - 13.09.2026
 
 ### Added

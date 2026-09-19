@@ -7,6 +7,23 @@ description: "Every release that touched the MCP server: the tools it serves, wh
 
 Everything that shipped in **MCP**. This is the MCP slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
 
+## NEW - 19.09.2026
+
+### Added
+
+- **Connect MCP is now one item in the Copy page menu on your published docs.** It copies a ready prompt that wires this project's documentation into any agent — the endpoint, the command for Claude Code and Codex, the config for everything else, and what the tools are once connected. A reader who wants their own agent to work from your docs stops needing you to write them instructions. `MCP`
+- **A reader's agent can now open the page it just found.** `search` has always answered "call `read_doc` on this path", and on the public endpoint that tool did not exist — so the only thing an agent could do with a hit was guess the page from its title, which is the invention the search result is there to prevent. `read_doc` and `get_doc_outline` are public now. `MCP`
+- **Docsbook's own manual is readable over MCP** — `search_docsbook_docs`, `read_docsbook_doc` and `list_docsbook_docs`, on both servers. Every other tool reads *your* documentation, so "what can this product do and what should I set up next" had nothing grounded to answer from, and an agent answered it from memory. `MCP`
+
+### Improved
+
+- **A long question now finds the pages it is actually about.** A prompt covering four subjects at once used to be averaged into a single point that landed between them all, and the answer came back full of pages that are vaguely about everything: measured on our own 3 409-heading corpus, none of the four right pages made the top six. A long question is now searched part by part and the results fused, and all four do. Short questions are untouched. `MCP`
+
+### Fixed
+
+- **The public MCP endpoint was serving four tools and quietly dropping three it advertised** — `find_skill`, `find_widget` and `list_content_widgets` were listed by `get_info` as available and were never handed over. Ten tools are served now, counted against the real server rather than against the code that registers them. `MCP`
+- **"Connect to VSCode" pointed at an address that exists nowhere in the product** and had therefore never connected anything. It uses the real endpoint for your project now. `MCP`
+
 ## NEW - 18.09.2026
 
 ### Added

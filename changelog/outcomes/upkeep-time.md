@@ -9,6 +9,18 @@ Everything Docsbook shipped that moves one number: **Upkeep time** — less time
 
 Work a person does by hand every week, handed to the agent instead. This is the Upkeep time slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 19.09.2026
+
+### Added
+
+- **Connect MCP is now one item in the Copy page menu on your published docs.** It copies a ready prompt that wires this project's documentation into any agent — the endpoint, the command for Claude Code and Codex, the config for everything else, and what the tools are once connected. A reader who wants their own agent to work from your docs stops needing you to write them instructions. `MCP`
+- **A reader's agent can now open the page it just found.** `search` has always answered "call `read_doc` on this path", and on the public endpoint that tool did not exist — so the only thing an agent could do with a hit was guess the page from its title, which is the invention the search result is there to prevent. `read_doc` and `get_doc_outline` are public now. `MCP`
+- **Docsbook's own manual is readable over MCP** — `search_docsbook_docs`, `read_docsbook_doc` and `list_docsbook_docs`, on both servers. Every other tool reads *your* documentation, so "what can this product do and what should I set up next" had nothing grounded to answer from, and an agent answered it from memory. `MCP`
+
+### Fixed
+
+- **The public MCP endpoint was serving four tools and quietly dropping three it advertised** — `find_skill`, `find_widget` and `list_content_widgets` were listed by `get_info` as available and were never handed over. Ten tools are served now, counted against the real server rather than against the code that registers them. `MCP`
+
 ## NEW - 18.09.2026
 
 ### Added
