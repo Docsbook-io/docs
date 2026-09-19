@@ -9,7 +9,7 @@ description: "Choose what the mention checks watch on one engine: turn the daily
 
 ## configure_mentions
 
-Choose what the mention checks watch on one engine: turn the daily check on or off, and set the queries (up to 5) — the exact words a reader would type or ask. Queries a workspace does NOT rank for are the point: those are the ones Search Console can never report on. Use get_mentions to read what the checks found. BEFORE CHANGING THIS, call `docsbook_expert` with what you are trying to achieve: it names the reading that should decide the value, so the setting is a conclusion rather than a guess. One call, changes nothing.
+Choose what the mention checks watch on one engine: turn the daily check on or off, and set the queries (up to 5) — the exact words a reader would type or ask. Queries a workspace does NOT rank for are the point: those are the ones Search Console can never report on. Use get_mentions to read what the checks found.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -61,20 +61,24 @@ Your workspace is resolved from the API key, so `workspace_id` is decided server
 
 <!-- widget:api -->
 
-### POST /api/v1/tools/configure_mentions
+### POST /api/v1/configure_mentions
 
 | Field | Type | Required | Description |
 |---|---|---|---|
 | `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | yes | The arguments above, as one JSON object. |
+| `workspace_id` | string | no | Workspace ID (optional when MCP endpoint is auto-scoped to a workspace). Numeric workspace id — OR the project as the user names it: 'owner/repo', the repo name alone, the site's display name, its docs URL or custom domain. Text is resolved server-side; an ambiguous name returns the candidates instead of guessing, so pass what the user said rather than calling list_workspaces first. |
+| `surface` | string | yes | Which engine this arms: ai_overview (Google's AI answer), google or bing (the results page). One of: `ai_overview`, `google`, `bing`. |
+| `enabled` | boolean | no | Whether the daily check runs. Queries are kept either way. |
+| `queries` | string[] | no | The queries to check, up to 5. Replaces the saved list. |
+| `cron_expression` | string | no | 5-field UTC cron for the check. Defaults to a daily early-morning slot. |
 
 #### Request
 
 ```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/configure_mentions' \
+curl -X POST 'https://docsbook.io/api/v1/configure_mentions' \
   -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
   -H 'Content-Type: application/json' \
-  -d '{"args":{"surface":"ai_overview"}}'
+  -d '{"surface":"ai_overview"}'
 ```
 
 <!-- /widget -->

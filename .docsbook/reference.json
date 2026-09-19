@@ -2,13 +2,6 @@
   "version": 1,
   "sections": [
     {
-      "root": "api",
-      "kind": "api",
-      "label": "API Reference",
-      "source": "https://docsbook.io/openapi.json",
-      "icon": "terminal"
-    },
-    {
       "root": "mcp",
       "kind": "mcp",
       "label": "MCP Tools",
@@ -24,15 +17,23 @@
     }
   ],
   "badges": {
-    "api/chat/ask-docs": {
-      "label": "POST",
-      "kind": "method"
+    "mcp/agent/docsbook-agent": {
+      "label": "WRITE",
+      "kind": "tool"
     },
-    "api/tools/call-tool": {
-      "label": "POST",
-      "kind": "method"
+    "mcp/agent/docsbook-agent-reply": {
+      "label": "WRITE",
+      "kind": "tool"
     },
-    "mcp/agent/docsbook-expert": {
+    "mcp/agent/docsbook-agent-status": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/agent/docsbook-agent-stop": {
+      "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/agent/docsbook-agent-tasks": {
       "label": "READ",
       "kind": "tool"
     },
@@ -126,6 +127,10 @@
     },
     "mcp/alerts/unregister-webhook": {
       "label": "WRITE",
+      "kind": "tool"
+    },
+    "mcp/analytics/get-ai-provider-usage": {
+      "label": "READ",
       "kind": "tool"
     },
     "mcp/analytics/get-ai-questions": {
@@ -408,11 +413,27 @@
       "label": "WRITE",
       "kind": "tool"
     },
+    "mcp/inbox/list-inbox-messages": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/inbox/send-inbox-message": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/issues/comment-on-issue": {
+      "label": "READ",
+      "kind": "tool"
+    },
     "mcp/issues/create-issue": {
       "label": "WRITE",
       "kind": "tool"
     },
     "mcp/issues/get-issue": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/issues/get-issue-thread": {
       "label": "READ",
       "kind": "tool"
     },
@@ -477,6 +498,18 @@
       "kind": "tool"
     },
     "mcp/product-help/docsbook-assistant": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/product-help/list-docsbook-docs": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/product-help/read-docsbook-doc": {
+      "label": "READ",
+      "kind": "tool"
+    },
+    "mcp/product-help/search-docsbook-docs": {
       "label": "READ",
       "kind": "tool"
     },

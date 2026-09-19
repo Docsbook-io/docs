@@ -9,7 +9,7 @@ description: "ADD ONE OPPORTUNITY to a direction — one search, question or job
 
 ## add_opportunity
 
-ADD ONE OPPORTUNITY to a direction — one search, question or job people actually make, how many of them there are, where these docs stand for it, who wins it today, and what winning it is worth. Free on every plan. 🔴 WRITTEN FOR THE OWNER, AND REFUSED WHEN IT IS NOT. `intent`, `current`, `competitor`, `potential`, `demand_note` and `drop_reason` are the row on their screen: no call ids, tool names, file paths, metric dumps or jargon they would have to look up. Say what the customer looks for, what they see today, who they are sent to instead and what beats them, what winning brings. Example — intent: 'virtual card for paying foreign subscriptions'; current: 'our card page never uses those words, so Google does not show it'; competitor: 'Yello Card and three others — Google's AI answer recommends them with a price table'; potential: '110 people a month who today see four competitors priced 19–200% above us'. The trace — call ids, URLs, the figures as measured — goes in `evidence` and `demand_source`. 🔴 `demand_value` IS NULLABLE AND NULL IS NOT ZERO. Leave it out when nobody measured it and say what you tried in `demand_note`, plainly. A zero written where nothing was measured reads as "nobody searches for this", travels into the decision to skip the row, and is never revisited — this repository has paid for that mistake twice. 🔴 A FIGURE REQUIRES A `demand_source`, and for an agent this is REFUSED rather than warned about. It has to be something a reader can open: a `call_id` from this project's own ledger (re-readable with get_tool_call) or an absolute URL. Where the figures come from: read_keyword_demand (absolute monthly searches), read_search_trends (relative interest — never a count), read_search_suggestions (the exact phrasings people type), read_serp_snapshot (what Google shows, AI Overview included), get_failed_searches / get_popular_searches (what readers asked once already here), collect_ai_citability (whether an assistant can quote this project), crawl_competitor_docs (what the competitor holding the slot has). `action` is from a closed list — create / rewrite / expand / structure / authority / none — because free text here becomes a promise the product cannot keep. `none` is a real answer: a recorded "measured and deliberately not worth doing" is what stops the next run re-finding it. Nothing here says whether the opportunity was WON: that is the verdict on the hypotheses pointing at this row. After adding the top opportunities, configure_mentions with their `intent`s so the direction is measured by whether the docs actually show up. This answers WHAT, not what to do about it. If you have not already got the method from `docsbook_expert`, get it first: it names which readings answer this question, what to compare them against, and what would make the conclusion wrong. One call, changes nothing.
+ADD ONE OPPORTUNITY to a direction — one search, question or job people actually make, how many of them there are, where these docs stand for it, who wins it today, and what winning it is worth. Free on every plan. 🔴 WRITTEN FOR THE OWNER, AND REFUSED WHEN IT IS NOT. `intent`, `current`, `competitor`, `potential`, `demand_note` and `drop_reason` are the row on their screen: no call ids, tool names, file paths, metric dumps or jargon they would have to look up. Say what the customer looks for, what they see today, who they are sent to instead and what beats them, what winning brings. Example — intent: 'virtual card for paying foreign subscriptions'; current: 'our card page never uses those words, so Google does not show it'; competitor: 'Yello Card and three others — Google's AI answer recommends them with a price table'; potential: '110 people a month who today see four competitors priced 19–200% above us'. The trace — call ids, URLs, the figures as measured — goes in `evidence` and `demand_source`. 🔴 `demand_value` IS NULLABLE AND NULL IS NOT ZERO. Leave it out when nobody measured it and say what you tried in `demand_note`, plainly. A zero written where nothing was measured reads as "nobody searches for this", travels into the decision to skip the row, and is never revisited — this repository has paid for that mistake twice. 🔴 A FIGURE REQUIRES A `demand_source`, and for an agent this is REFUSED rather than warned about. It has to be something a reader can open: a `call_id` from this project's own ledger (re-readable with get_tool_call) or an absolute URL. Where the figures come from: read_keyword_demand (absolute monthly searches), read_search_trends (relative interest — never a count), read_search_suggestions (the exact phrasings people type), read_serp_snapshot (what Google shows, AI Overview included), get_failed_searches / get_popular_searches (what readers asked once already here), collect_ai_citability (whether an assistant can quote this project), crawl_competitor_docs (what the competitor holding the slot has). `action` is from a closed list — create / rewrite / expand / structure / authority / none — because free text here becomes a promise the product cannot keep. `none` is a real answer: a recorded "measured and deliberately not worth doing" is what stops the next run re-finding it. Nothing here says whether the opportunity was WON: that is the verdict on the hypotheses pointing at this row. After adding the top opportunities, configure_mentions with their `intent`s so the direction is measured by whether the docs actually show up.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -66,32 +66,6 @@ curl -X POST 'https://docsbook.io/api/mcp/server' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json, text/event-stream' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"add_opportunity","arguments":{"direction_key":"<direction_key>","key":"<key>","intent":"<intent>","action":"create","disposition":"open"}}}'
-```
-
-<!-- /widget -->
-
-## Try it over REST
-
-The same tool is callable as a plain HTTP request, no MCP client required. It runs on the same server, at the same price.
-
-Your workspace is resolved from the API key, so `workspace_id` is decided server-side here and anything you send for it is ignored.
-
-<!-- widget:api -->
-
-### POST /api/v1/tools/add_opportunity
-
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | yes | The arguments above, as one JSON object. |
-
-#### Request
-
-```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/add_opportunity' \
-  -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
-  -H 'Content-Type: application/json' \
-  -d '{"args":{"direction_key":"<direction_key>","key":"<key>","intent":"<intent>","action":"create","disposition":"open"}}'
 ```
 
 <!-- /widget -->

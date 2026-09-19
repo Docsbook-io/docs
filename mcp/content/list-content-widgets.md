@@ -9,7 +9,7 @@ description: "List the widgets that can be embedded directly in documentation ma
 
 ## list_content_widgets
 
-List the widgets that can be embedded directly in documentation markdown (as opposed to find_widget, which covers interactive widgets rendered in the AI chat). Returns, for each widget, what it renders, when to use it, the exact markdown contract it expects, and a copy-pasteable example. Widgets the workspace owner switched off in the admin panel are NOT listed — their markers render as plain markdown, so writing one would produce a page that silently looks unchanged. Call this before writing or editing a docs page that would benefit from a card grid, an accordion, or any other rich content block — the catalog is the live source of truth, so never guess a widget name or syntax. This tells you what is here, not what to do with it. If you have not already asked `docsbook_expert` what the user actually wants done, ask it — one call returns the ordered steps with the tool on each, and it changes nothing.
+List the widgets that can be embedded directly in documentation markdown (as opposed to find_widget, which covers interactive widgets rendered in the AI chat). Returns, for each widget, what it renders, when to use it, the exact markdown contract it expects, and a copy-pasteable example. Widgets the workspace owner switched off in the admin panel are NOT listed — their markers render as plain markdown, so writing one would produce a page that silently looks unchanged. Call this before writing or editing a docs page that would benefit from a card grid, an accordion, or any other rich content block — the catalog is the live source of truth, so never guess a widget name or syntax.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -43,32 +43,6 @@ curl -X POST 'https://docsbook.io/api/mcp/server' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json, text/event-stream' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"list_content_widgets","arguments":{}}}'
-```
-
-<!-- /widget -->
-
-## Try it over REST
-
-The same tool is callable as a plain HTTP request, no MCP client required. It runs on the same server, at the same price.
-
-Your workspace is resolved from the API key, so `workspace_id` is decided server-side here and anything you send for it is ignored.
-
-<!-- widget:api -->
-
-### POST /api/v1/tools/list_content_widgets
-
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | no | The arguments above, as one JSON object. |
-
-#### Request
-
-```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/list_content_widgets' \
-  -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
-  -H 'Content-Type: application/json' \
-  -d '{"args":{}}'
 ```
 
 <!-- /widget -->

@@ -9,7 +9,7 @@ description: "CORRECT a goal that already exists — its label, what one complet
 
 ## edit_goal
 
-CORRECT a goal that already exists — its label, what one completion is worth, or what it matches — without breaking it. 🔴 Not the same as deleting it and creating it again, which was the only route until 2026-09-12 and silently cost two things every time. A funnel step refers to a goal BY KEY, so archiving the goal breaks every funnel naming it, and a funnel that loses a step reports a BETTER conversion rate than the real one. And `created_at` is when this project started measuring the thing: a re-create resets it, so four months of history reads as a goal created today. The KEY cannot be changed here, deliberately — funnels, MCP callers and the owner's own notes all point at it, and a rename leaves all of them pointing at nothing. A different name is a different goal. Pass only what changes. Warnings come back in `issues` and are worth relaying verbatim. This answers WHAT, not what to do about it. If you have not already got the method from `docsbook_expert`, get it first: it names which readings answer this question, what to compare them against, and what would make the conclusion wrong. One call, changes nothing.
+CORRECT a goal that already exists — its label, what one completion is worth, or what it matches — without breaking it. 🔴 Not the same as deleting it and creating it again, which was the only route until 2026-09-12 and silently cost two things every time. A funnel step refers to a goal BY KEY, so archiving the goal breaks every funnel naming it, and a funnel that loses a step reports a BETTER conversion rate than the real one. And `created_at` is when this project started measuring the thing: a re-create resets it, so four months of history reads as a goal created today. The KEY cannot be changed here, deliberately — funnels, MCP callers and the owner's own notes all point at it, and a rename leaves all of them pointing at nothing. A different name is a different goal. Pass only what changes. Warnings come back in `issues` and are worth relaying verbatim.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -52,32 +52,6 @@ curl -X POST 'https://docsbook.io/api/mcp/server' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json, text/event-stream' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"edit_goal","arguments":{"key":"<key>","kind":"page"}}}'
-```
-
-<!-- /widget -->
-
-## Try it over REST
-
-The same tool is callable as a plain HTTP request, no MCP client required. It runs on the same server, at the same price.
-
-Your workspace is resolved from the API key, so `workspace_id` is decided server-side here and anything you send for it is ignored.
-
-<!-- widget:api -->
-
-### POST /api/v1/tools/edit_goal
-
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | yes | The arguments above, as one JSON object. |
-
-#### Request
-
-```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/edit_goal' \
-  -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
-  -H 'Content-Type: application/json' \
-  -d '{"args":{"key":"<key>","kind":"page"}}'
 ```
 
 <!-- /widget -->

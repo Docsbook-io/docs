@@ -9,7 +9,7 @@ description: "WRITE ONE LINE INTO THIS PROJECT'S BRIEF — an aim, an open quest
 
 ## add_memory
 
-WRITE ONE LINE INTO THIS PROJECT'S BRIEF — an aim, an open question, or something learnt — for every later run and for the owner to see. Free on every plan. Write a `goal` ONLY when the owner tells you what these docs are for beyond the standing goal every project already has (be found, on Google and in AI answers — never ask for that one, never write it down again). Write a `question` the moment you would otherwise GUESS something about THE PRODUCT that nobody can read off it — 'is 2 490 ₽ a month still the price?', 'who buys this: solo developers or companies with a support team?', 'is the v1 API still supported?'. It costs one call, it stops the guess from being laundered into a fact, and the owner reading the panel can often answer it in one line. Close it later with edit_memory's `resolution`. 🔴 A QUESTION IS WRITTEN FOR THE OWNER AND IS ABOUT THEIR PRODUCT, and this call REFUSES an agent's question that is not: no call ids, tool names, file paths, environment names or jargon in it, and nothing about the machinery — access, tokens, plans, grants, the loop's own cadence. Those are setup problems: say them in your run report (the harness reads blockers off the ledger, and the setup checklist shows the owner what to connect) and go on with the work that does not depend on them. Measured 2026-09-14: four of the six open questions filed to owners were about a token, a plan's expiry or a GitHub grant, in the loop's own words, and none of them was a question the owner could answer on a phone. Write a `fact`, `rule` or `preference` when you learn something the NEXT run would otherwise work out again — where a thing lives, what the product actually charges, which generator builds the reference, what an experiment already showed. Do NOT write findings that expire: 'the quickstart is slow this week' is a measurement (take a reading instead, they are recorded automatically), while 'measure the quickstart against the week before a change, not against last month' is a rule that stays true. 🔴 Never file a standing order to WAIT as a `fact` or `rule` — neither one takes a `resolution`, so 'too thin to trust yet, re-run once traffic passes N' has no way to close, and it is the first line every later run reads, forever, as the reason to do nothing again. Measured live 2026-09-14: one project's own such line sat in front of sixteen consecutive empty cycles before it was rewritten. A sample-size observation belongs on a hypothesis instead — `check_in_days` gives it a date this project is worth reading again, and that date is the thing a fact cannot hold. One claim per line. A paragraph holding three cannot be corrected later, only replaced. `evidence` is what the line rests on — the page, the URL, the `call_id` of the reading it came from — and it has NO length limit, unlike `text` (hard 600). Put the dates, numbers, call_ids and secondary observations there; keep `text` to the one sentence they support. A fact without evidence can never be re-checked, so nothing will ever mark it stale; you will get a warning saying so, and the line is still written. Relay the warnings: they are the part the owner needs. This answers WHAT, not what to do about it. If you have not already got the method from `docsbook_expert`, get it first: it names which readings answer this question, what to compare them against, and what would make the conclusion wrong. One call, changes nothing.
+WRITE ONE LINE INTO THIS PROJECT'S BRIEF — an aim, an open question, or something learnt — for every later run and for the owner to see. Free on every plan. Write a `goal` ONLY when the owner tells you what these docs are for beyond the standing goal every project already has (be found, on Google and in AI answers — never ask for that one, never write it down again). Write a `question` the moment you would otherwise GUESS something about THE PRODUCT that nobody can read off it — 'is 2 490 ₽ a month still the price?', 'who buys this: solo developers or companies with a support team?', 'is the v1 API still supported?'. It costs one call, it stops the guess from being laundered into a fact, and the owner reading the panel can often answer it in one line. Close it later with edit_memory's `resolution`. 🔴 A QUESTION IS WRITTEN FOR THE OWNER AND IS ABOUT THEIR PRODUCT, and this call REFUSES an agent's question that is not: no call ids, tool names, file paths, environment names or jargon in it, and nothing about the machinery — access, tokens, plans, grants, the loop's own cadence. Those are setup problems: say them in your run report (the harness reads blockers off the ledger, and the setup checklist shows the owner what to connect) and go on with the work that does not depend on them. Measured 2026-09-14: four of the six open questions filed to owners were about a token, a plan's expiry or a GitHub grant, in the loop's own words, and none of them was a question the owner could answer on a phone. Write a `fact`, `rule` or `preference` when you learn something the NEXT run would otherwise work out again — where a thing lives, what the product actually charges, which generator builds the reference, what an experiment already showed. Do NOT write findings that expire: 'the quickstart is slow this week' is a measurement (take a reading instead, they are recorded automatically), while 'measure the quickstart against the week before a change, not against last month' is a rule that stays true. 🔴 Never file a standing order to WAIT as a `fact` or `rule` — neither one takes a `resolution`, so 'too thin to trust yet, re-run once traffic passes N' has no way to close, and it is the first line every later run reads, forever, as the reason to do nothing again. Measured live 2026-09-14: one project's own such line sat in front of sixteen consecutive empty cycles before it was rewritten. A sample-size observation belongs on a hypothesis instead — `check_in_days` gives it a date this project is worth reading again, and that date is the thing a fact cannot hold. One claim per line. A paragraph holding three cannot be corrected later, only replaced. `evidence` is what the line rests on — the page, the URL, the `call_id` of the reading it came from — and it has NO length limit, unlike `text` (hard 600). Put the dates, numbers, call_ids and secondary observations there; keep `text` to the one sentence they support. A fact without evidence can never be re-checked, so nothing will ever mark it stale; you will get a warning saying so, and the line is still written. Relay the warnings: they are the part the owner needs.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -54,32 +54,6 @@ curl -X POST 'https://docsbook.io/api/mcp/server' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json, text/event-stream' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"add_memory","arguments":{"key":"<key>","kind":"fact","text":"<text>","waiting_on":"owner"}}}'
-```
-
-<!-- /widget -->
-
-## Try it over REST
-
-The same tool is callable as a plain HTTP request, no MCP client required. It runs on the same server, at the same price.
-
-Your workspace is resolved from the API key, so `workspace_id` is decided server-side here and anything you send for it is ignored.
-
-<!-- widget:api -->
-
-### POST /api/v1/tools/add_memory
-
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | yes | The arguments above, as one JSON object. |
-
-#### Request
-
-```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/add_memory' \
-  -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
-  -H 'Content-Type: application/json' \
-  -d '{"args":{"key":"<key>","kind":"fact","text":"<text>","waiting_on":"owner"}}'
 ```
 
 <!-- /widget -->

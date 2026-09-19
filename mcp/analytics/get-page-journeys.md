@@ -9,7 +9,7 @@ description: "Visitor session journeys — ordered page sequences per pseudo-ses
 
 ## get_page_journeys
 
-Visitor session journeys — ordered page sequences per pseudo-session (PRO). Sessions are bucketed by 30-min windows. Each row includes a stable `visitor_id` (hashed IP) that can be passed to `get_visitor_activity` to see all events for that visitor. Raw IPs never leave Axiom. This answers WHAT, not what to do about it. If you have not already got the method from `docsbook_expert`, get it first: it names which readings answer this question, what to compare them against, and what would make the conclusion wrong. One call, changes nothing.
+Visitor session journeys — ordered page sequences per pseudo-session (PRO). Sessions are bucketed by 30-min windows. Each row includes a stable `visitor_id` (hashed IP) that can be passed to `get_visitor_activity` to see all events for that visitor. Raw IPs never leave Axiom.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -45,32 +45,6 @@ curl -X POST 'https://docsbook.io/api/mcp/server' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json, text/event-stream' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"get_page_journeys","arguments":{}}}'
-```
-
-<!-- /widget -->
-
-## Try it over REST
-
-The same tool is callable as a plain HTTP request, no MCP client required. It runs on the same server, at the same price.
-
-Your workspace is resolved from the API key, so `workspace_id` is decided server-side here and anything you send for it is ignored.
-
-<!-- widget:api -->
-
-### POST /api/v1/tools/get_page_journeys
-
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | no | The arguments above, as one JSON object. |
-
-#### Request
-
-```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/get_page_journeys' \
-  -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
-  -H 'Content-Type: application/json' \
-  -d '{"args":{}}'
 ```
 
 <!-- /widget -->

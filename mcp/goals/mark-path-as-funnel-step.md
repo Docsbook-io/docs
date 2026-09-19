@@ -9,7 +9,7 @@ description: "Add a documentation PAGE to a funnel as its next step, creating th
 
 ## mark_path_as_funnel_step
 
-Add a documentation PAGE to a funnel as its next step, creating the page goal if it does not exist yet. The shortcut for 'this page is part of the route readers should take' — it saves creating a goal and then editing the funnel. Creates the funnel too if the name is new. Note the broad-entry rule: if this is the FIRST step of a new funnel you will get a warning, because a single page as step 1 excludes every reader who arrived deep. BEFORE FILING THIS, call `docsbook_expert` with the outcome you want: it says whether this is the thing worth doing first and what it would move, so the backlog is ranked rather than merely long. One call, changes nothing.
+Add a documentation PAGE to a funnel as its next step, creating the page goal if it does not exist yet. The shortcut for 'this page is part of the route readers should take' — it saves creating a goal and then editing the funnel. Creates the funnel too if the name is new. Note the broad-entry rule: if this is the FIRST step of a new funnel you will get a warning, because a single page as step 1 excludes every reader who arrived deep.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -49,32 +49,6 @@ curl -X POST 'https://docsbook.io/api/mcp/server' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json, text/event-stream' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"mark_path_as_funnel_step","arguments":{"path":"<path>","funnel":"<funnel>"}}}'
-```
-
-<!-- /widget -->
-
-## Try it over REST
-
-The same tool is callable as a plain HTTP request, no MCP client required. It runs on the same server, at the same price.
-
-Your workspace is resolved from the API key, so `workspace_id` is decided server-side here and anything you send for it is ignored.
-
-<!-- widget:api -->
-
-### POST /api/v1/tools/mark_path_as_funnel_step
-
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | yes | The arguments above, as one JSON object. |
-
-#### Request
-
-```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/mark_path_as_funnel_step' \
-  -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
-  -H 'Content-Type: application/json' \
-  -d '{"args":{"path":"<path>","funnel":"<funnel>"}}'
 ```
 
 <!-- /widget -->

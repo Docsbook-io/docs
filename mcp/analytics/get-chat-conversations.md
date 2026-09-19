@@ -9,7 +9,7 @@ description: "What readers asked the AI assistant, grouped by TOPIC and by wheth
 
 ## get_chat_conversations
 
-What readers asked the AI assistant, grouped by TOPIC and by whether they clicked the page the answer cited (PRO). The unit is a conversation, not a question — four questions from one stuck reader and one question each from four readers produce identical question counts and opposite conclusions. `click_through` is the share of conversations on that topic where the reader opened a cited page: a topic with buying intent and no clicks is a SALES leak (the answer did not carry them onward), not a missing page. This answers WHAT, not what to do about it. If you have not already got the method from `docsbook_expert`, get it first: it names which readings answer this question, what to compare them against, and what would make the conclusion wrong. One call, changes nothing.
+What readers asked the AI assistant, grouped by TOPIC and by whether they clicked the page the answer cited (PRO). The unit is a conversation, not a question — four questions from one stuck reader and one question each from four readers produce identical question counts and opposite conclusions. `click_through` is the share of conversations on that topic where the reader opened a cited page: a topic with buying intent and no clicks is a SALES leak (the answer did not carry them onward), not a missing page.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -45,32 +45,6 @@ curl -X POST 'https://docsbook.io/api/mcp/server' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json, text/event-stream' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"get_chat_conversations","arguments":{}}}'
-```
-
-<!-- /widget -->
-
-## Try it over REST
-
-The same tool is callable as a plain HTTP request, no MCP client required. It runs on the same server, at the same price.
-
-Your workspace is resolved from the API key, so `workspace_id` is decided server-side here and anything you send for it is ignored.
-
-<!-- widget:api -->
-
-### POST /api/v1/tools/get_chat_conversations
-
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | no | The arguments above, as one JSON object. |
-
-#### Request
-
-```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/get_chat_conversations' \
-  -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
-  -H 'Content-Type: application/json' \
-  -d '{"args":{}}'
 ```
 
 <!-- /widget -->
