@@ -1,5 +1,5 @@
 ---
-title: "Docsbook documentation: publish, get found, get quoted, measure"
+title: "Docsbook documentation: publish, get found, get quoted, measure."
 description: "Docsbook publishes the Markdown you already have to a site search engines index and AI assistants cite, then hands your agent a goal and reports the number it moved. Start here."
 ---
 
