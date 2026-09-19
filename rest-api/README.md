@@ -1,25 +1,48 @@
 ---
 title: "Docsbook API"
-description: "Everything Docsbook can do, your backend can do — with one key and a curl."
+description: "Everything your workspace API key can reach, your backend can call directly — one key, plain REST, no MCP client."
 ---
 
 # Docsbook API
 
-Everything Docsbook can do, your backend can do — with one key and a `curl`. Ask your
-documentation a question and get a grounded answer with its sources; or call any tool the
-Docsbook MCP server registers, without bringing an MCP client.
+Everything your workspace API key can reach, your backend can call directly — one key,
+plain REST, no MCP client.
 
 ## Get your key
 
-Open **Integrations** — from your avatar in the assistant's input, or your profile
-dropdown in the admin panel. View it, copy it, or reset it there.
+Open **Settings ▸ Profile** in the admin panel, beside the GitHub account this project
+commits through. View the key, copy it, or reset it there.
 
 One live key per project. Resetting revokes the old one immediately, everywhere, and
 there is no key history — so update your callers before you reset.
 
-The key carries the same full access an owner has from the admin panel, including tools
-that write to your documentation. Treat it as a server-side secret: never ship it in a
+## What the key reaches, and what it does not
+
+Since 2026-09-18 this key meets the same owner surface your own connected MCP agent
+does: orientation, reading your own documentation and Docsbook's own docs, and giving a
+job to `docsbook_agent` (then watching, answering, or stopping it) — plus a narrow,
+separate list of pure configuration settings (branding, navigation, the chatbot,
+translation mode, mention tracking), each published below at its own `GET` or `POST`
+path.
+
+**It does not reach documentation writes, translations or webhooks directly.** That
+catalog — everything tagged below with a tool page rather than its own REST path — is
+reached only by delegating a job to `docsbook_agent`; there is no `write_docs` endpoint
+to call from your backend. This is a narrower key than it used to be, on purpose: see the
+MCP Tools section's intro for why.
+
+Treat the key as a server-side secret regardless of what it can reach: never ship it in a
 browser bundle or a mobile app.
+
+## Read vs write, as real HTTP verbs
+
+Every tool below that is safe to call from a script now has its own path and its own
+verb — `GET /api/v1/get_analytics?period=30d` reads, `POST /api/v1/update_branding`
+writes a setting. Nothing here 404s on the first call: what you see below is what runs.
+For a tool that has neither — no individual path — the dispatch-by-name form,
+`POST /api/v1/tools/{tool}`, still reaches the handful of owner-surface tools that are
+not settings-shaped (`create_workspace`, and giving/watching/answering/stopping a
+`docsbook_agent` job).
 
 ## What a call costs
 
@@ -34,7 +57,7 @@ Base URL: `https://docsbook.io`
 
 Every page below is generated from the OpenAPI document, so it describes the API that is running right now.
 
-151 more operations call MCP tools one by one; each is documented on its own tool page under **MCP Tools**, together with the MCP call it mirrors.
+26 more operations call MCP tools one by one; each is documented on its own tool page under **MCP Tools**, together with the MCP call it mirrors.
 
 <!-- widget:cards cols=2 -->
 

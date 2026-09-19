@@ -9,7 +9,7 @@ description: "What this Docsbook MCP server is and how to work it: the plan tier
 
 ## get_info
 
-What this Docsbook MCP server is and how to work it: the plan tiers and what each unlocks, every tool family with the rule for when it applies and how many tools it holds, how a project is named on every tool, whether this token can write, and how a site is created. Call it once, first, when you have no other orientation. This tells you what is here, not what to do with it. If you have not already asked `docsbook_expert` what the user actually wants done, ask it — one call returns the ordered steps with the tool on each, and it changes nothing.
+What this Docsbook MCP server is and how to work it: the plan tiers and what each unlocks, every tool family with the rule for when it applies and how many tools it holds, how a project is named on every tool, whether this token can write, and how a site is created. Call it once, first, when you have no other orientation.
 
 <!-- /widget -->
 
@@ -50,20 +50,17 @@ Your workspace is resolved from the API key, so `workspace_id` is decided server
 
 <!-- widget:api -->
 
-### POST /api/v1/tools/get_info
+### GET /api/v1/get_info
 
 | Field | Type | Required | Description |
 |---|---|---|---|
 | `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | no | The arguments above, as one JSON object. |
 
 #### Request
 
 ```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/get_info' \
-  -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
-  -H 'Content-Type: application/json' \
-  -d '{"args":{}}'
+curl 'https://docsbook.io/api/v1/get_info' \
+  -H 'Authorization: Bearer dbk_YOUR_API_KEY'
 ```
 
 <!-- /widget -->

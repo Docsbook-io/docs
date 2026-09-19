@@ -9,7 +9,7 @@ description: "Define an ORDERED route through the docs, as a list of goal names.
 
 ## create_funnel
 
-Define an ORDERED route through the docs, as a list of goal names. Order is the whole point: a visit counts as reaching step N only if it hit steps 1..N in sequence, so a reader who lands on step 3 first is not counted. Two rules the validator enforces and you should follow when proposing one: start BROAD (most docs readers arrive deep from search or an AI answer, and a narrow step 1 excludes the majority of traffic before measuring anything), and end on a REAL OUTCOME (a funnel ending on a scroll measures attention, not results). `window_hours` bounds how long after step 1 a later step still counts; omit it to use the visit itself, which is the honest default for docs. BEFORE FILING THIS, call `docsbook_expert` with the outcome you want: it says whether this is the thing worth doing first and what it would move, so the backlog is ranked rather than merely long. One call, changes nothing.
+Define an ORDERED route through the docs, as a list of goal names. Order is the whole point: a visit counts as reaching step N only if it hit steps 1..N in sequence, so a reader who lands on step 3 first is not counted. Two rules the validator enforces and you should follow when proposing one: start BROAD (most docs readers arrive deep from search or an AI answer, and a narrow step 1 excludes the majority of traffic before measuring anything), and end on a REAL OUTCOME (a funnel ending on a scroll measures attention, not results). `window_hours` bounds how long after step 1 a later step still counts; omit it to use the visit itself, which is the honest default for docs.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -50,32 +50,6 @@ curl -X POST 'https://docsbook.io/api/mcp/server' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json, text/event-stream' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"create_funnel","arguments":{"key":"<key>","steps":[]}}}'
-```
-
-<!-- /widget -->
-
-## Try it over REST
-
-The same tool is callable as a plain HTTP request, no MCP client required. It runs on the same server, at the same price.
-
-Your workspace is resolved from the API key, so `workspace_id` is decided server-side here and anything you send for it is ignored.
-
-<!-- widget:api -->
-
-### POST /api/v1/tools/create_funnel
-
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | yes | The arguments above, as one JSON object. |
-
-#### Request
-
-```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/create_funnel' \
-  -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
-  -H 'Content-Type: application/json' \
-  -d '{"args":{"key":"<key>","steps":[]}}'
 ```
 
 <!-- /widget -->

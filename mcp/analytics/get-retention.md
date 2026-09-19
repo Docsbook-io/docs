@@ -9,7 +9,7 @@ description: "W1/W4 return rate by weekly cohort (BUSINESS) — the only cohort 
 
 ## get_retention
 
-W1/W4 return rate by weekly cohort (BUSINESS) — the only cohort view in the system; everything else is a snapshot. READ THE CAVEAT: visitors are hashed IPs, so mobile networks split one reader into many and office NAT merges many into one. Report it as a trend, never a headcount. Direction depends on the section: high return is healthy for reference docs and a FAILURE for onboarding. This answers WHAT, not what to do about it. If you have not already got the method from `docsbook_expert`, get it first: it names which readings answer this question, what to compare them against, and what would make the conclusion wrong. One call, changes nothing.
+W1/W4 return rate by weekly cohort (BUSINESS) — the only cohort view in the system; everything else is a snapshot. READ THE CAVEAT: visitors are hashed IPs, so mobile networks split one reader into many and office NAT merges many into one. Report it as a trend, never a headcount. Direction depends on the section: high return is healthy for reference docs and a FAILURE for onboarding.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -44,32 +44,6 @@ curl -X POST 'https://docsbook.io/api/mcp/server' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json, text/event-stream' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"get_retention","arguments":{}}}'
-```
-
-<!-- /widget -->
-
-## Try it over REST
-
-The same tool is callable as a plain HTTP request, no MCP client required. It runs on the same server, at the same price.
-
-Your workspace is resolved from the API key, so `workspace_id` is decided server-side here and anything you send for it is ignored.
-
-<!-- widget:api -->
-
-### POST /api/v1/tools/get_retention
-
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | no | The arguments above, as one JSON object. |
-
-#### Request
-
-```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/get_retention' \
-  -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
-  -H 'Content-Type: application/json' \
-  -d '{"args":{}}'
 ```
 
 <!-- /widget -->

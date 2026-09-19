@@ -9,7 +9,7 @@ description: "Get one project in full — every setting an update_* tool can cha
 
 ## get_workspace
 
-Get one project in full — every setting an update_* tool can change, its plan and capabilities, its call to action, its live site_url. Address it the way the user did: a numeric id, 'owner/repo', the repo name alone, the display name, the docs URL or the custom domain — the server resolves the name, so this is the FIRST call when the user names a project, never list_workspaces. A name matching several projects returns AMBIGUOUS_WORKSPACE with the candidates; one matching none returns WORKSPACE_NOT_FOUND with the closest. This tells you what is here, not what to do with it. If you have not already asked `docsbook_expert` what the user actually wants done, ask it — one call returns the ordered steps with the tool on each, and it changes nothing.
+Get one project in full — every setting an update_* tool can change, its plan and capabilities, its call to action, its live site_url. Address it the way the user did: a numeric id, 'owner/repo', the repo name alone, the display name, the docs URL or the custom domain — the server resolves the name, so this is the FIRST call when the user names a project, never list_workspaces. A name matching several projects returns AMBIGUOUS_WORKSPACE with the candidates; one matching none returns WORKSPACE_NOT_FOUND with the closest.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -56,20 +56,19 @@ Your workspace is resolved from the API key, so `workspace_id` is decided server
 
 <!-- widget:api -->
 
-### POST /api/v1/tools/get_workspace
+### GET /api/v1/get_workspace
 
 | Field | Type | Required | Description |
 |---|---|---|---|
 | `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | no | The arguments above, as one JSON object. |
+| `workspace_id` | string | no | Numeric workspace id — OR the project as the user names it: 'owner/repo', the repo name alone, the site's display name, its docs URL or custom domain. Text is resolved server-side; an ambiguous name returns the candidates instead of guessing, so pass what the user said rather than calling list_workspaces first. |
+| `repo` | string | no | 'owner/repo', or anything else the user calls the project — a repo name, a display name, a docs URL, a custom domain. Resolved the same way as a textual workspace_id. |
 
 #### Request
 
 ```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/get_workspace' \
-  -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
-  -H 'Content-Type: application/json' \
-  -d '{"args":{}}'
+curl 'https://docsbook.io/api/v1/get_workspace' \
+  -H 'Authorization: Bearer dbk_YOUR_API_KEY'
 ```
 
 <!-- /widget -->

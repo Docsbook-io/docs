@@ -9,7 +9,7 @@ description: "Define a goal — one thing you want a reader to do."
 
 ## create_goal
 
-Define a goal — one thing you want a reader to do. Matched RETROACTIVELY against the history already recorded, so the numbers appear immediately rather than starting from today. Refused when it cannot ever fire (an event these docs do not emit) or when the value is 0 — a goal that never fires looks EXACTLY like a goal with 100% drop-off, and $0 reads as a measurement instead of an absent declaration. Warnings come back in `issues` and are worth relaying to the owner verbatim. Set `value_usd` only if you can defend the number; leaving it empty keeps money figures switched off rather than showing an invented one. BEFORE FILING THIS, call `docsbook_expert` with the outcome you want: it says whether this is the thing worth doing first and what it would move, so the backlog is ranked rather than merely long. One call, changes nothing.
+Define a goal — one thing you want a reader to do. Matched RETROACTIVELY against the history already recorded, so the numbers appear immediately rather than starting from today. Refused when it cannot ever fire (an event these docs do not emit) or when the value is 0 — a goal that never fires looks EXACTLY like a goal with 100% drop-off, and $0 reads as a measurement instead of an absent declaration. Warnings come back in `issues` and are worth relaying to the owner verbatim. Set `value_usd` only if you can defend the number; leaving it empty keeps money figures switched off rather than showing an invented one.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -53,32 +53,6 @@ curl -X POST 'https://docsbook.io/api/mcp/server' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json, text/event-stream' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"create_goal","arguments":{"key":"<key>","kind":"page","match":"<match>"}}}'
-```
-
-<!-- /widget -->
-
-## Try it over REST
-
-The same tool is callable as a plain HTTP request, no MCP client required. It runs on the same server, at the same price.
-
-Your workspace is resolved from the API key, so `workspace_id` is decided server-side here and anything you send for it is ignored.
-
-<!-- widget:api -->
-
-### POST /api/v1/tools/create_goal
-
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | yes | The arguments above, as one JSON object. |
-
-#### Request
-
-```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/create_goal' \
-  -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
-  -H 'Content-Type: application/json' \
-  -d '{"args":{"key":"<key>","kind":"page","match":"<match>"}}'
 ```
 
 <!-- /widget -->

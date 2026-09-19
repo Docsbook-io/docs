@@ -55,7 +55,7 @@ A 2xx response = delivered. Anything else triggers retry until the attempt budge
 
 ## Seeing what your workspace emits
 
-The **Feeds** panel in your admin shows every event the workspace produced, newest first —
+The **Logs** section of your admin shows every event the workspace produced, newest first —
 **including events no alert was watching**, and every MCP tool call made against it. You do not need a webhook registered to see the feed
 fill up, which is the point: it is how you find out which events your docs actually emit before you
 decide what to be notified about. The feed is live — it refreshes itself every few seconds while
@@ -63,31 +63,41 @@ you're looking at it, so there is no time range to pick and nothing to remember 
 
 ### Picking a feed
 
-The **Feeds** section opens on a page of cards — one per feed, each with a line saying what it
-holds, plus a **Create your own feed** card at the end. Opening a card switches to that feed itself,
-with no title or back link above it: you got here by picking a card, and the sidebar row for **Feeds**
-is the way back to them.
+The **Logs** section opens on **Chat**, then **Feedback** — and every feed lives right after them
+on the same **tab strip**, in the panel's own header: the built-in presets, then any lists you've
+saved, then a trailing **New list** tab. There is no separate "Activity" tab to open first any
+more — the feeds are simply more tabs of the strip you're already looking at. Picking one swaps
+the filter in place; there is no page to navigate to and no back link, because switching feeds
+never leaves the screen. Click **New list** to name and save a filter of your own — it opens as a
+fresh tab immediately, narrowed with the same controls as everything else on the toolbar. A
+**Live** control sits at the end of the strip: on by default, it pauses or resumes the feed's own
+re-polling, for reading a fast-moving feed without rows shifting underneath you.
 
-The same feeds are also rows under that sidebar section, for switching between them without leaving
-the one you're reading — but that list starts **closed**. Hover the **Feeds** row and a chevron
-takes over from its icon; click it to show up to five feeds, most-recently-opened first, with
-**Show N more** for the rest, and Docsbook remembers whether you left it open the next time you're
-back. The `+` that creates a new list from an empty filter sits both on that row and as a card in
-the gallery.
-
-Seven feeds are built in, so there is something to open on your first visit before you've saved
+Eleven feeds are built in, so there is something to open on your first visit before you've saved
 anything of your own: **Reader events** (everything people reading your docs did — pages read,
 searches run, questions asked of the AI, feedback left), **Translations** (every language generated,
 outdated or still needed), **Language events** (which languages readers switch the docs into),
 **Chat events** (questions the AI assistant was asked, where it came up empty, which answers got a
-thumbs-down), **Reader feedback** (thumbs-down and comments, on a page or an answer), **MCP calls**
-(every metered call an agent made), and **All events** — everything, unfiltered, last on the list
-since it's the one you reach for when none of the named ones fit. **Reader events**, **Language
-events** and **MCP calls** are feeds to read rather than to subscribe to, since none of their events
-is one an alert can be attached to; the other four are exactly what you'd point a notifier at. All
-seven are starting filters rather than saved lists, so they cannot be deleted and nothing can be
-pointed at one directly — narrow one and **Save as list** turns it into a feed of your own, which
-appears as its own row and is the form an alert can be attached to.
+thumbs-down), **Content gaps** (the assistant coming up empty and searches that returned nothing —
+the fastest signal of what your docs are missing), **Reader feedback** (thumbs-down and comments, on
+a page or an answer), **Conversions** (clicks that took a reader toward your product — an outbound
+link, an AI answer sending them off-site, or Publish/Claim), **Plan & usage** (every plan change and
+usage-limit warning this workspace crossed), **MCP calls** (every metered call an agent made),
+**AI crawler activity** (every page an AI or search crawler fetched from your docs, each row priced
+at the real crawl rate rather than a generic per-visit figure — see [what crawling
+costs](/pricing#what-crawling-costs)), and **All events** — everything, unfiltered, last on the list since
+it's the one you reach for when none of the named ones fit. **Reader events**, **Language events**,
+**Conversions**, **MCP calls** and **AI crawler activity** are feeds to read rather than to
+subscribe to, since none of their events is one an alert can be attached to; the other six are
+exactly what you'd point a notifier at. All eleven are starting filters rather than saved lists, so
+they cannot be deleted and nothing can be pointed at one directly — narrow one and **Save as list**
+turns it into a feed of your own, which appears as its own tab and is the form an alert can be
+attached to.
+
+Opening **Logs** at the organization or profile level, with no project picked, merges this same
+feed across every project you own into one list, each row labelled with which project it happened
+on — the presets only, since a saved list belongs to one project. Pick one project's own panel to
+see its saved lists or to save a new one.
 
 ### Reading the feed
 
@@ -200,7 +210,7 @@ its count and its cost as a plain number you can sum, and a column saying whethe
 charged — as well as the raw events behind it, bounded by the window you are looking at.
 
 The same screen is what **See usage** opens from the sidebar's balance notice — the card that warns
-when this project is running low. Topping up is in the account menu's **Balance** block: one answers
+when this project is running low. Topping up is in **Settings → Plan**: one answers
 how much is left, this one answers what took it.
 
 ## Notifiers: where events go

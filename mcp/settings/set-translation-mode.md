@@ -9,7 +9,7 @@ description: "Set the translation workflow mode for a workspace: 'auto' (Docsboo
 
 ## set_translation_mode
 
-Set the translation workflow mode for a workspace: 'auto' (Docsbook AI), 'manual' (drafts via API), or 'external' (forward to webhook). REQUIRES PRO or higher. BEFORE WRITING, call `docsbook_expert` with what you are trying to achieve: it answers what this page has to do, what to read before touching it, and what would make the result wrong — and it will tell you when the evidence is too thin to write from yet. One call, cheapest on the server, changes nothing.
+Set the translation workflow mode for a workspace: 'auto' (Docsbook AI), 'manual' (drafts via API), or 'external' (forward to webhook). REQUIRES PRO or higher.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -60,20 +60,22 @@ Your workspace is resolved from the API key, so `workspace_id` is decided server
 
 <!-- widget:api -->
 
-### POST /api/v1/tools/set_translation_mode
+### POST /api/v1/set_translation_mode
 
 | Field | Type | Required | Description |
 |---|---|---|---|
 | `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | yes | The arguments above, as one JSON object. |
+| `workspace_id` | string | yes | Numeric workspace id — OR the project as the user names it: 'owner/repo', the repo name alone, the site's display name, its docs URL or custom domain. Text is resolved server-side; an ambiguous name returns the candidates instead of guessing, so pass what the user said rather than calling list_workspaces first. |
+| `mode` | string | yes | Translation workflow mode One of: `auto`, `manual`, `external`. |
+| `external_webhook_url` | string | no | Webhook URL (required for 'external' mode, empty string clears) |
 
 #### Request
 
 ```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/set_translation_mode' \
+curl -X POST 'https://docsbook.io/api/v1/set_translation_mode' \
   -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
   -H 'Content-Type: application/json' \
-  -d '{"args":{"workspace_id":"<workspace_id>","mode":"auto"}}'
+  -d '{"workspace_id":"<workspace_id>","mode":"auto"}'
 ```
 
 <!-- /widget -->

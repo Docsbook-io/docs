@@ -8,7 +8,7 @@ tldr: "A connected source is an address the assistant is allowed to fetch. With 
 
 A **Docsbook source** is a repository, a website or a single page that this project's assistant and agents are allowed to fetch. Connect one, and "update the documentation" or "is this page still true" starts with a read instead of a recollection.
 
-Open the **Sources** section of your project's admin panel, directly under MCP.
+Open **Integrations ▸ Connectors** in your project's admin panel. Every kind of source — a repository, a documentation platform, a knowledge base — is a card in that grid, beside the apps and delivery channels the project is wired to. There is no separate Sources screen: what this project may READ and what it is CONNECTED TO are the same question, so they are answered in one place.
 
 ## What you get
 
@@ -33,7 +33,9 @@ A row without a button is deliberate. A row is only allowed to offer **Connect**
 
 ## How do I connect a source?
 
-Press **Connect** on a row, or **New Source** above the table. Either way there is one field, and the **address** decides what the source is — not the row you pressed. The row you clicked only sets the placeholder and the heading, and when the two disagree the dialog says so before you commit.
+Open the card for the kind of source you have and press **Add addresses**. You can paste as many as you like at once — one per line — because a project's documentation is usually written from its repository *and* its pricing page *and* its API reference, and connecting them one dialog at a time is how a source list ends up with one row in it.
+
+The **address** decides what each source is, not the card you opened. The card only sets the placeholder and the heading; before you commit, the dialog lists every line you pasted and says which card each one will actually land on, so a GitBook link pasted onto the Mintlify card is caught while it is still cheap to fix.
 
 | What you paste | What it becomes | What a read returns |
 |---|---|---|
@@ -95,7 +97,7 @@ Every connected source shows a green dot and the word **Online**. A paused one s
 
 > **Online means the source is connected and your agents may read it. It is not a health check.** Nothing pings the host and nothing checks the repository still exists. The honest signal is the **Last used** column, written only when a tool actually fetched the source *successfully* — a failed fetch never stamps it.
 
-**Disconnect** keeps the row and stops everything reading it; press it again (it reads **Connect**) to resume. **Remove** deletes the connection outright, along with any GitHub authorisation attached to it. **Open** visits the address. The two ways to stop reading a source are different on purpose: "stop reading this for now" should not make you retype the address later.
+Each connected address is listed on its card's own page. **Disconnect** keeps the address and stops everything reading it; press it again (it reads **Connect**) to resume. **Remove** deletes the connection outright, along with any GitHub authorisation attached to it. **Open** visits the address. The two ways to stop reading a source are different on purpose: "stop reading this for now" should not make you retype the address later.
 
 ## What happens when a source cannot be read
 
@@ -103,10 +105,10 @@ Every failure is a sentence with a next step, and none of them is an empty resul
 
 | Situation | What the tool returns |
 |---|---|
-| The source is paused | Names the source and says it is switched off in this workspace's Sources tab |
+| The source is paused | Names the source and says it is switched off in this workspace's Integrations ▸ Connectors section |
 | A repository tree will not load | "The repository may be private, renamed or deleted. Say so plainly rather than answering from memory about what it contains." |
 | A file path is wrong | Suggests listing the repository first — the file may live under a different folder |
-| A private repo's stored authorisation stopped working | "GitHub refused … with the authorisation stored for it. Reconnect the repository from Sources." — never an empty commit list |
+| A private repo's stored authorisation stopped working | "GitHub refused … with the authorisation stored for it. Reconnect the repository from Integrations ▸ Connectors." — never an empty commit list |
 | A site is down, blocks server-side fetches, or disallows the path in `robots.txt` | Says which, and says to report that rather than describing the site from memory |
 | Nothing is connected at all | `NO_SOURCES`, with "Do not invent one" |
 

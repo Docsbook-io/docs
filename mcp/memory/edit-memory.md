@@ -9,7 +9,7 @@ description: "CORRECT a line in this project's brief, or CLOSE it."
 
 ## edit_memory
 
-CORRECT a line in this project's brief, or CLOSE it. Free on every plan. 🔴 ANSWERING A QUESTION IS THIS TOOL: pass `resolution` with the answer, and the question stays on the record with the answer beside it — which is what stops the next run asking it again. The same field marks a `goal` met, with the reading that showed it. Corrections happen in place, rather than removing a line and adding it back, and the difference is not cosmetic: `created_at` is when this project first learnt the thing, and a re-create resets it so every line reads as learnt today. A memory whose age is a lie is one the owner cannot audit. Pass only the fields that change. This is also how a line gets DOWNGRADED honestly — a fact that turns out to be an assumption becomes a rule or a preference rather than being quietly deleted. This answers WHAT, not what to do about it. If you have not already got the method from `docsbook_expert`, get it first: it names which readings answer this question, what to compare them against, and what would make the conclusion wrong. One call, changes nothing.
+CORRECT a line in this project's brief, or CLOSE it. Free on every plan. 🔴 ANSWERING A QUESTION IS THIS TOOL: pass `resolution` with the answer, and the question stays on the record with the answer beside it — which is what stops the next run asking it again. The same field marks a `goal` met, with the reading that showed it. Corrections happen in place, rather than removing a line and adding it back, and the difference is not cosmetic: `created_at` is when this project first learnt the thing, and a re-create resets it so every line reads as learnt today. A memory whose age is a lie is one the owner cannot audit. Pass only the fields that change. This is also how a line gets DOWNGRADED honestly — a fact that turns out to be an assumption becomes a rule or a preference rather than being quietly deleted.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -53,32 +53,6 @@ curl -X POST 'https://docsbook.io/api/mcp/server' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json, text/event-stream' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"edit_memory","arguments":{"key":"<key>","kind":"fact","waiting_on":"owner"}}}'
-```
-
-<!-- /widget -->
-
-## Try it over REST
-
-The same tool is callable as a plain HTTP request, no MCP client required. It runs on the same server, at the same price.
-
-Your workspace is resolved from the API key, so `workspace_id` is decided server-side here and anything you send for it is ignored.
-
-<!-- widget:api -->
-
-### POST /api/v1/tools/edit_memory
-
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | yes | The arguments above, as one JSON object. |
-
-#### Request
-
-```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/edit_memory' \
-  -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
-  -H 'Content-Type: application/json' \
-  -d '{"args":{"key":"<key>","kind":"fact","waiting_on":"owner"}}'
 ```
 
 <!-- /widget -->

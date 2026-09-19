@@ -1,14 +1,17 @@
 ---
 title: "Product Help"
-description: "Ask a real question about USING DOCSBOOK ITSELF and get back the same answer a reader gets from the public 'Ask AI' chat on docsbook.io/docs — not advice on how to do the work,…"
+description: "The craft corpus — `docsbook_assistant` — how the work is done well, from Docsbook's published pages, with the pages it drew on."
 ---
 
 # Product Help
 
-Ask a real question about USING DOCSBOOK ITSELF and get back the same answer a reader gets from the public 'Ask AI' chat on docsbook.io/docs — not advice on how to do the work, the actual cited answer.
+The craft corpus — `docsbook_assistant` — how the work is done well, from Docsbook's published pages, with the pages it drew on. Served to Docsbook's own agent, not to an owner's token.
 
 <!-- widget:cards cols=2 -->
 
-- [`ask_docsbook`](./ask-docsbook.md) — Ask a question about USING DOCSBOOK ITSELF — how a feature works, how to set something up, what a plan includes, why…
+- [`docsbook_assistant`](./docsbook-assistant.md) — 🔴 THE SPECIALIST — this server's agent, and the one that answers HOW.
+- [`list_docsbook_docs`](./list-docsbook-docs.md) — List EVERY page of Docsbook's own official documentation — the product's full table of contents.
+- [`read_docsbook_doc`](./read-docsbook-doc.md) — Read ONE page of DOCSBOOK'S OWN official documentation in full, verbatim, by the `path` from a `search_docsbook_docs`…
+- [`search_docsbook_docs`](./search-docsbook-docs.md) — WHAT CAN DOCSBOOK DO, AND WHAT SHOULD I DO NEXT — ask this tool, never your own memory.
 
 <!-- /widget -->

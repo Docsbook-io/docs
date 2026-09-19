@@ -9,7 +9,7 @@ description: "THE HISTORY OF WHAT THIS SERVER WAS ASKED about this project — e
 
 ## list_tool_calls
 
-THE HISTORY OF WHAT THIS SERVER WAS ASKED about this project — every metered call, with the arguments it was given and the answer it gave back. Free on every plan. 🔴 THIS IS HOW YOU MEASURE ANYTHING HERE. Any read tool is a snapshot instrument: call it today, call it again after you change something, and the two rows are a before and an after. So BEFORE you change a page, a setting, a nav or a prompt, take the reading you intend to be judged by — and before you claim a change worked, look for the reading that was taken beforehand. A recommendation made without looking at what was already tried here is the most expensive mistake available to you. The answer groups into `series`: one series is one TOOL on one SUBJECT, and a subject is a page, a heading, a host, a search query or the whole site — normalised, so a reading taken with `path: "/Quick-Start/"` and one taken with `page: "quick-start"` are the same series and can be compared. Each series says how many readings exist, when the newest was taken and when the one before it was, which is exactly what decides whether a comparison is available today. Then `compare_tool_calls` puts two readings side by side, `get_tool_call` reads one whole, and `search_tool_calls` finds one by what is IN it. No verdict at any step: two readings a week apart are a pair of facts, not cause and effect. This answers WHAT, not what to do about it. If you have not already got the method from `docsbook_expert`, get it first: it names which readings answer this question, what to compare them against, and what would make the conclusion wrong. One call, changes nothing.
+THE HISTORY OF WHAT THIS SERVER WAS ASKED about this project — every metered call, with the arguments it was given and the answer it gave back. Free on every plan. 🔴 THIS IS HOW YOU MEASURE ANYTHING HERE. Any read tool is a snapshot instrument: call it today, call it again after you change something, and the two rows are a before and an after. So BEFORE you change a page, a setting, a nav or a prompt, take the reading you intend to be judged by — and before you claim a change worked, look for the reading that was taken beforehand. A recommendation made without looking at what was already tried here is the most expensive mistake available to you. The answer groups into `series`: one series is one TOOL on one SUBJECT, and a subject is a page, a heading, a host, a search query or the whole site — normalised, so a reading taken with `path: "/Quick-Start/"` and one taken with `page: "quick-start"` are the same series and can be compared. Each series says how many readings exist, when the newest was taken and when the one before it was, which is exactly what decides whether a comparison is available today. Then `compare_tool_calls` puts two readings side by side, `get_tool_call` reads one whole, and `search_tool_calls` finds one by what is IN it. No verdict at any step: two readings a week apart are a pair of facts, not cause and effect.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -52,32 +52,6 @@ curl -X POST 'https://docsbook.io/api/mcp/server' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json, text/event-stream' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"list_tool_calls","arguments":{"kind":"analytics"}}}'
-```
-
-<!-- /widget -->
-
-## Try it over REST
-
-The same tool is callable as a plain HTTP request, no MCP client required. It runs on the same server, at the same price.
-
-Your workspace is resolved from the API key, so `workspace_id` is decided server-side here and anything you send for it is ignored.
-
-<!-- widget:api -->
-
-### POST /api/v1/tools/list_tool_calls
-
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | no | The arguments above, as one JSON object. |
-
-#### Request
-
-```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/list_tool_calls' \
-  -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
-  -H 'Content-Type: application/json' \
-  -d '{"args":{"kind":"analytics"}}'
 ```
 
 <!-- /widget -->

@@ -9,7 +9,7 @@ description: "CONNECT TWO PIECES OF WORK — an issue, a pull request, a hypothe
 
 ## link_work
 
-CONNECT TWO PIECES OF WORK — an issue, a pull request, a hypothesis or a memory line (a goal or an open question). Free on every plan. 🔴 THE LINK IS WHAT MAKES THE WORK MEASURABLE. A merged pull request with nothing linked to it appears on get_work_board as `unmeasured`, which is the honest word for a change nobody can say anything about afterwards. Link the hypothesis it tests (with a `check_at` date on it) and the goal it argues for — two calls, and the board then answers "did this work" by itself. Undirected: linking A to B is the same fact as linking B to A, and writing it twice is one row, not two. Refs: an issue or a pull request by its GitHub NUMBER; a hypothesis or memory line by its KEY. The usual set, in the order they are written: hypothesis ↔ issue (what the work is for), issue ↔ pull request (how it arrived — write_docs does this for you when you pass `closes_issues`), issue ↔ memory (the goal it argues for, the question it waits on). This answers WHAT, not what to do about it. If you have not already got the method from `docsbook_expert`, get it first: it names which readings answer this question, what to compare them against, and what would make the conclusion wrong. One call, changes nothing.
+CONNECT TWO PIECES OF WORK — an issue, a pull request, a hypothesis or a memory line (a goal or an open question). Free on every plan. 🔴 THE LINK IS WHAT MAKES THE WORK MEASURABLE. A merged pull request with nothing linked to it appears on get_work_board as `unmeasured`, which is the honest word for a change nobody can say anything about afterwards. Link the hypothesis it tests (with a `check_at` date on it) and the goal it argues for — two calls, and the board then answers "did this work" by itself. Undirected: linking A to B is the same fact as linking B to A, and writing it twice is one row, not two. Refs: an issue or a pull request by its GitHub NUMBER; a hypothesis or memory line by its KEY. The usual set, in the order they are written: hypothesis ↔ issue (what the work is for), issue ↔ pull request (how it arrived — write_docs does this for you when you pass `closes_issues`), issue ↔ memory (the goal it argues for, the question it waits on).
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -52,32 +52,6 @@ curl -X POST 'https://docsbook.io/api/mcp/server' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json, text/event-stream' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"link_work","arguments":{"from_kind":"issue","from_ref":"<from_ref>","to_kind":"issue","to_ref":"<to_ref>"}}}'
-```
-
-<!-- /widget -->
-
-## Try it over REST
-
-The same tool is callable as a plain HTTP request, no MCP client required. It runs on the same server, at the same price.
-
-Your workspace is resolved from the API key, so `workspace_id` is decided server-side here and anything you send for it is ignored.
-
-<!-- widget:api -->
-
-### POST /api/v1/tools/link_work
-
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | yes | The arguments above, as one JSON object. |
-
-#### Request
-
-```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/link_work' \
-  -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
-  -H 'Content-Type: application/json' \
-  -d '{"args":{"from_kind":"issue","from_ref":"<from_ref>","to_kind":"issue","to_ref":"<to_ref>"}}'
 ```
 
 <!-- /widget -->
