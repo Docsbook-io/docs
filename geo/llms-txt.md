@@ -2,6 +2,8 @@
 title: "llms.txt: what Docsbook generates, and what the file is worth"
 description: "Docsbook generates llms.txt and llms-full.txt for every workspace — what goes in them, how they refresh, how they differ from sitemap.xml, and who measurably reads them."
 tldr: "Docsbook generates llms.txt and llms-full.txt for every workspace automatically, cached one hour, listing every published page at its canonical URL. The evidence that AI crawlers read the file is weak: Ahrefs found 97% of llms.txt files got zero requests in May 2026, and Google says no new machine-readable file is needed."
+status: generated
+version: "0.2"
 ---
 
 # llms.txt
@@ -67,7 +69,7 @@ They answer different questions and neither replaces the other.
 | Standardised by | [sitemaps.org](https://www.sitemaps.org/protocol.html), supported by search engines | [llmstxt.org](https://llmstxt.org/), a proposal |
 | Consumed in production by | Search engines, demonstrably | See below |
 
-Docsbook generates both, and `audit_geo` checks for both.
+Docsbook generates both, and `collect_ai_citability` checks for both.
 
 ## How often does it refresh?
 

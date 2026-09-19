@@ -2,6 +2,8 @@
 title: "GEO: what Docsbook adds so an AI assistant can quote you"
 description: "The page-level signals Docsbook injects on every page — TL;DR block, visible last-modified time, Person author JSON-LD — and the honest size of the effect."
 tldr: "GEO is on for every project, on every plan — there is no setting. Docsbook injects a TL;DR block after the H1 (from `tldr:` frontmatter or the lede, capped at 280 characters), a visible Updated date inside a real time element, and makes the JSON-LD author a Person rather than your organisation."
+status: generated
+version: "0.2"
 ---
 
 # GEO — Generative Engine Optimization
@@ -61,7 +63,7 @@ The body is rendered inside `<article>`, and the TL;DR block carries `role="note
 
 ## How do I check GEO is doing anything?
 
-Ask the MCP tool `audit_geo`. It runs no model at all — every number in it is a fetch — so it cannot invent a finding. In one call it:
+Ask the MCP tool `collect_ai_citability`. It runs no model at all — every number in it is a fetch — so it cannot invent a finding. In one call it:
 
 - reads your `robots.txt` and checks it against **seven named assistant agents** (a dated list, currently as of 2026-08-29), separating search-index agents from training crawlers, because blocking training is a decision and blocking the search-index agent while expecting citations is usually an accident;
 - fetches each sampled page **twice in the same minute** — once as a browser, once as `OAI-SearchBot` — to catch a CDN that serves a person a page and an assistant a challenge;
@@ -94,7 +96,7 @@ A probe that times out or hits a 404 is recorded as **null with a reason**, neve
 
 **GEO does not reach a custom domain.** All three signals on this page are emitted by the Docsbook-hosted render path. A page served on your own domain gets **no TL;DR block, no visible Updated line**, and a single `TechArticle` node whose author is always a `Person` named after the repository owner's GitHub login — regardless of `author:` frontmatter. None of these signals reach a custom domain today. See [SEO limits](../seo/how-it-works.md#limits-and-open-questions) for the rest of what differs there.
 
-**What GEO cannot do.** It does not get an unindexed page indexed, does not unblock a crawler your `robots.txt` disallows, and does not make a client-side-rendered page readable. Those are [SEO](../seo/README.md) problems, and `audit_geo` reports them as critical for exactly that reason.
+**What GEO cannot do.** It does not get an unindexed page indexed, does not unblock a crawler your `robots.txt` disallows, and does not make a client-side-rendered page readable. Those are [SEO](../seo/README.md) problems, and `collect_ai_citability` reports them as critical for exactly that reason.
 
 ## What you actually do
 
