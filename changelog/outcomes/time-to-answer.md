@@ -13,6 +13,7 @@ How long a reader hunts before the page they needed is in front of them. This is
 
 ### Added
 
+- **The `hero` widget grew a button row, a code aside and a large size.** A links-only paragraph after the heading becomes two buttons (the first filled, the rest outlined); a fenced code block or a lone image becomes a framed panel beside the copy on a wide screen and under it on a phone, with the paragraph after it as the caption; `size=large` steps the title up for a front page that has hidden its sidebar. A visitor's first screen now carries the one command to run instead of a paragraph to read. `Content widgets`
 - **A reader's agent can now open the page it just found.** `search` has always answered "call `read_doc` on this path", and on the public endpoint that tool did not exist — so the only thing an agent could do with a hit was guess the page from its title, which is the invention the search result is there to prevent. `read_doc` and `get_doc_outline` are public now. `MCP`
 
 ### Changed

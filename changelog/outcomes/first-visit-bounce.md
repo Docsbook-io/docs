@@ -11,6 +11,10 @@ Docs that look like the product, rather than like a template someone forgot. Thi
 
 ## NEW - 19.09.2026
 
+### Added
+
+- **The `hero` widget grew a button row, a code aside and a large size.** A links-only paragraph after the heading becomes two buttons (the first filled, the rest outlined); a fenced code block or a lone image becomes a framed panel beside the copy on a wide screen and under it on a phone, with the paragraph after it as the caption; `size=large` steps the title up for a front page that has hidden its sidebar. A visitor's first screen now carries the one command to run instead of a paragraph to read. `Content widgets`
+
 ### Changed
 
 - **The account menu at the bottom of the sidebar now lists your organizations and nothing else**, and each one is a single click into that team's dashboard — where its projects, its people and its plan already are. Hovering a team used to fly a second menu of its projects out to the side, which meant reaching your own team cost a hover you had to hold steady and a target you had to aim at. Switching between the projects of the team you are already in is unchanged: that is the project switcher at the top of the same sidebar. `Organizations`

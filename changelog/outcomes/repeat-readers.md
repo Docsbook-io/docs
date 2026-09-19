@@ -11,6 +11,11 @@ One visit is a look; a second is a product someone is actually adopting. This is
 
 ## NEW - 19.09.2026
 
+### Added
+
+- **The `hero` widget grew a button row, a code aside and a large size.** A links-only paragraph after the heading becomes two buttons (the first filled, the rest outlined); a fenced code block or a lone image becomes a framed panel beside the copy on a wide screen and under it on a phone, with the paragraph after it as the caption; `size=large` steps the title up for a front page that has hidden its sidebar. A visitor's first screen now carries the one command to run instead of a paragraph to read. `Content widgets`
+- **Two more switches on "Home page as a landing page":** hide the article chrome on the front page (the breadcrumb and copy-page bar, the "Updated" line, the "Was this page helpful?" bar and previous/next), and landing-page typography, which gives each section on the front page a large title with the paragraph under it as its lead. Both apply to the front page only and are off by default; a visitor who lands on your home no longer reads page one of a manual. `Content`
+
 ### Removed
 
 - **The Agent ▸ Activity tab is gone.** Every call an agent makes against your project is still recorded and still readable under Logs ▸ Activity; what went is a second screen onto the same ledger, and the upkeep of keeping two readings of one record honest. `Agents`

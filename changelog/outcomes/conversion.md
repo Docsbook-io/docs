@@ -11,6 +11,10 @@ Readers who came to learn and left having started — the docs' real job. This i
 
 ## NEW - 19.09.2026
 
+### Added
+
+- **`cards icons=inline`: the bordered card without the grid-paper band.** The icon sits in a small tile at the top of the body, so a hub of twelve doors is twelve icons over twelve titles rather than twelve grey rectangles, and a reader scans it in one pass. Combines with `horizontal` and `cols=`. `Content widgets`
+
 ### Improved
 
 - **Adding credit now opens Paddle's checkout directly**, instead of landing on a page that asked which amount before it could get there. `Billing`

@@ -13,6 +13,9 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 
 ### Added
 
+- **A `stats` content widget: a band of three or four large figures with a label under each**, written as the list you would type anyway (`- **140** — MCP tools`). It is the strip an enterprise landing page puts under its hero, and it now takes one markdown block on any Docsbook site. `Content widgets`
+- **The `hero` widget grew a button row, a code aside and a large size.** A links-only paragraph after the heading becomes two buttons (the first filled, the rest outlined); a fenced code block or a lone image becomes a framed panel beside the copy on a wide screen and under it on a phone, with the paragraph after it as the caption; `size=large` steps the title up for a front page that has hidden its sidebar. A visitor's first screen now carries the one command to run instead of a paragraph to read. `Content widgets`
+- **`cards icons=inline`: the bordered card without the grid-paper band.** The icon sits in a small tile at the top of the body, so a hub of twelve doors is twelve icons over twelve titles rather than twelve grey rectangles, and a reader scans it in one pass. Combines with `horizontal` and `cols=`. `Content widgets`
 - **A green play button beside every job on the Agent screen runs that job now**, so finding out whether a pass does what you want stops being "arm it and wait until Monday". The run is billed and recorded exactly like one your own agent makes, and it arms nothing — the card stays off until you say otherwise. `Agents`
 - **Every job now opens a settings dialog**: the instruction in your own words, and what wakes it — a schedule composed as a sentence in your own clock, something that happens on your project, an occasion from an app you have connected, or nothing at all, for a job you keep on the grid and run by hand. `Agents`
 - **What can wake a job now comes from the apps you have connected**, not from a fixed list: a merged pull request, a solved support ticket, a row added to a sheet. Each occasion says what evidence it hands the agent, and one this deployment cannot deliver yet is offered greyed out with the reason on it rather than armed to a silence you would find out about in a month. `Agents`
@@ -35,6 +38,7 @@ Work a person does by hand every week, handed to the agent instead. This is the 
 
 ### Fixed
 
+- **`cards plain cols=N` now really gives N columns.** The plain grid's own auto-fill track was declared after the column rules and overrode them on every site, so a "Next steps" block asked to be two columns came out as four; the same rule order fixed `icons=inline`. `Content widgets`
 - **The public MCP endpoint was serving four tools and quietly dropping three it advertised** — `find_skill`, `find_widget` and `list_content_widgets` were listed by `get_info` as available and were never handed over. Ten tools are served now, counted against the real server rather than against the code that registers them. `MCP`
 - **The floating "Ask Docs" button now shows for you as well as your readers.** It was hidden whenever your own toolbar was on screen, so the one person checking whether the widget works could never see it — the two sit in different corners and never overlapped. `AI Chat`
 
