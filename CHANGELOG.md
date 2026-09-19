@@ -8,6 +8,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ## NEW - 19.09.2026
 
 - New content blocks — a **stats** band, a **hero** with buttons and a code panel, cards with **New**/**Beta** pills, and a full **footer** — so a docs homepage can read as a product page instead of a table of contents. `Content`
+- **Creating a project now runs no AI and finishes in about a second**: pick from 32 hand-written templates (API reference, on-call runbook, help centre, contributor guide, blank), paste your site's address for instant branding, or import a GitHub repository (searched across your organizations, nothing written into it) — the site is readable the moment it exists, and writing with AI is still one screen away when you want it. `Onboarding`
+- Drop a folder of PDFs, Word docs, Markdown or plain text into a new or existing project and each file becomes a searchable, answerable page (Integrations ▸ Files). `Integrations`
+- The integrations you want wired up are now picked while creating the project, from the same catalogue the panel shows. `Integrations`
 - Agent jobs can now be run instantly from a green Play button, configured through a settings dialog (instruction, plus a schedule or a connected-app trigger), and armed from real events in the apps you've connected — a merged pull request, a solved ticket, a new row in a sheet. `Agents`
 - `read_doc` and `get_doc_outline` are public over MCP now, and **Connect MCP** is one item in every published page's Copy menu — so a reader's agent can open the exact page a search returned instead of guessing from its title. Docsbook's own manual is readable the same way. `MCP`
 - A long, multi-topic question is now searched part by part and the results fused, instead of being averaged into one point that lands between all of them. `MCP`
