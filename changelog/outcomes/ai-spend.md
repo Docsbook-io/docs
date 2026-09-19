@@ -11,9 +11,21 @@ Sees where the model budget actually goes before the invoice does. This is the A
 
 ## NEW - 19.09.2026
 
+### Improved
+
+- **Adding credit now opens Paddle's checkout directly**, instead of landing on a page that asked which amount before it could get there. `Billing`
+
 ### Changed
 
 - **The account menu at the bottom of the sidebar now lists your organizations and nothing else**, and each one is a single click into that team's dashboard — where its projects, its people and its plan already are. Hovering a team used to fly a second menu of its projects out to the side, which meant reaching your own team cost a hover you had to hold steady and a target you had to aim at. Switching between the projects of the team you are already in is unchanged: that is the project switcher at the top of the same sidebar. `Organizations`
+- **What this project has been and will be charged now has its own Invoices tab**, split out of the Plan screen it used to sit above. Choosing between Pro and Enterprise and reading what has already been charged were one long scroll before; each is a tab of its own now. `Billing`
+- **Enterprise now always reads "Contact sales", with no price on the plan screen.** Reach out and we'll work out a number for your repository — the balance still lands on the project itself, and everyone with access to it spends from that one balance. `Billing`
+- **The platform features every project gets now live inside the Pro plan's own card**, instead of a separate panel underneath both plans repeating a comparison you had just finished reading. `Billing`
+- **The trial banner's "Upgrade plan" button now opens the Plan tab**, so you see the Pro/Enterprise choice before committing to either, instead of a checkout window opening straight away. `Billing`
+
+### Removed
+
+- **The "How the AI is billed" mechanics card is gone from the Plan screen.** It restated the trial, the allowance and the overage cap in a paragraph beside cards that already say each of those in fewer words. `Billing`
 
 ## NEW - 18.09.2026
 

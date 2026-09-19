@@ -9,6 +9,20 @@ Everything Docsbook shipped that moves one number: **Conversion** — more reade
 
 Readers who came to learn and left having started — the docs' real job. This is the Conversion slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 19.09.2026
+
+### Improved
+
+- **Adding credit now opens Paddle's checkout directly**, instead of landing on a page that asked which amount before it could get there. `Billing`
+
+### Changed
+
+- **The trial banner's "Upgrade plan" button now opens the Plan tab**, so you see the Pro/Enterprise choice before committing to either, instead of a checkout window opening straight away. `Billing`
+
+### Removed
+
+- **The "How the AI is billed" mechanics card is gone from the Plan screen.** It restated the trial, the allowance and the overage cap in a paragraph beside cards that already say each of those in fewer words. `Billing`
+
 ## NEW - 18.09.2026
 
 ### Added

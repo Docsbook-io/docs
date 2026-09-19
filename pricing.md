@@ -61,9 +61,9 @@ A new organization starts with **14 days of Pro**, and that is **one trial per a
 Both plans switch on the same things. What differs is **whose balance is topped up**, and it is the only question worth asking when choosing between them:
 
 - **Pro is bought by a person.** It credits you, and covers a project you own.
-- **Enterprise is bought for a repository.** It credits **the project**, and everyone with access to that project spends that one balance — invite whoever you like, none of them needs a plan of their own. Buying it for a second repository means buying it again, one repository at a time, so each keeps its own balance and a quiet project never pays for a busy one.
+- **Enterprise is bought for a repository, arranged with our team.** It credits **the project**, and everyone with access to that project spends that one balance — invite whoever you like, none of them needs a plan of their own. Buying it for a second repository means arranging it again, one repository at a time, so each keeps its own balance and a quiet project never pays for a busy one.
 
-Both prices are on [docsbook.io/pricing](https://docsbook.io/pricing).
+Pro's price is on [docsbook.io/pricing](https://docsbook.io/pricing); Enterprise has none published — reach out and we'll work out a number for your repository.
 
 ## How top-ups work
 

@@ -20,6 +20,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 - **The figure on a merged change is now read by Docsbook rather than typed onto it.** Where we measure the outcome ourselves — organic traffic today, and questions reaching your assistant — the number is taken the moment you open the list, so a reading stops going stale as soon as anything moves and nobody has to monitor a date and copy the result onto the record by hand. Each row says which figures are ours and which were reported, and we only stand in for a figure when it is the same measurement over the same window. `Issues`
 - **A long question now finds the pages it is actually about.** A prompt covering four subjects at once used to be averaged into a single point that landed between them all, and the answer came back full of pages that are vaguely about everything: measured on our own 3 409-heading corpus, none of the four right pages made the top six. A long question is now searched part by part and the results fused, and all four do. Short questions are untouched. `MCP`
+- **Adding credit now opens Paddle's checkout directly**, instead of landing on a page that asked which amount before it could get there. `Billing`
 
 ### Changed
 
@@ -32,12 +33,17 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - **Connect MCP moved to that same corner, beside Visit Website, as an outline button.** It sat next to the section title, where it read as a label rather than something to press; the top-right corner is where the panel keeps the things you can do from the screen you are on. `Integrations`
 - **Your API key and this project's MCP address now sit in Settings ▸ Profile**, beside the GitHub account the project commits through, instead of above the connector grid. Integrations answers what your project is wired *to*; a key and an endpoint are how *you* reach it, so the thing you came to copy is now where you keep your other credentials rather than at the top of a catalogue of forty services. Old links still land on it. `Integrations`
 - **Every connector in the grid now wears its service's real logo in its real colour**, so finding Slack or Sentry among forty tiles is a glance instead of reading forty names in a column. Grey now means one thing only — this one cannot be connected here yet — rather than being what every tile looked like. `Integrations`
+- **What this project has been and will be charged now has its own Invoices tab**, split out of the Plan screen it used to sit above. Choosing between Pro and Enterprise and reading what has already been charged were one long scroll before; each is a tab of its own now. `Billing`
+- **Enterprise now always reads "Contact sales", with no price on the plan screen.** Reach out and we'll work out a number for your repository — the balance still lands on the project itself, and everyone with access to it spends from that one balance. `Billing`
+- **The platform features every project gets now live inside the Pro plan's own card**, instead of a separate panel underneath both plans repeating a comparison you had just finished reading. `Billing`
+- **The trial banner's "Upgrade plan" button now opens the Plan tab**, so you see the Pro/Enterprise choice before committing to either, instead of a checkout window opening straight away. `Billing`
 
 ### Removed
 
 - **Opportunities is gone from the panel.** It showed what an audit had found beside the list of work, where research reads as a backlog of things nobody has agreed to do. What an audit finds is still kept and still readable by an agent over MCP; what went is the screen. `Issues`
 - **The Agent ▸ Activity tab is gone.** Every call an agent makes against your project is still recorded and still readable under Logs ▸ Activity; what went is a second screen onto the same ledger, and the upkeep of keeping two readings of one record honest. `Agents`
 - **The Change Log button is gone from the panel header.** The per-section release notes it opened are unchanged and still published at `docsbook.io/docs/changelog` — what was ours to read had taken the one corner of every screen that should be about your project. `Changes`
+- **The "How the AI is billed" mechanics card is gone from the Plan screen.** It restated the trial, the allowance and the overage cap in a paragraph beside cards that already say each of those in fewer words. `Billing`
 
 ### Fixed
 
