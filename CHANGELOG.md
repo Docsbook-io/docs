@@ -9,6 +9,9 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Added
 
+- **A green play button beside every job on the Agent screen runs that job now**, so finding out whether a pass does what you want stops being "arm it and wait until Monday". The run is billed and recorded exactly like one your own agent makes, and it arms nothing — the card stays off until you say otherwise. `Agents`
+- **Every job now opens a settings dialog**: the instruction in your own words, and what wakes it — a schedule composed as a sentence in your own clock, something that happens on your project, an occasion from an app you have connected, or nothing at all, for a job you keep on the grid and run by hand. `Agents`
+- **What can wake a job now comes from the apps you have connected**, not from a fixed list: a merged pull request, a solved support ticket, a row added to a sheet. Each occasion says what evidence it hands the agent, and one this deployment cannot deliver yet is offered greyed out with the reason on it rather than armed to a silence you would find out about in a month. `Agents`
 - **Connect MCP is now one item in the Copy page menu on your published docs.** It copies a ready prompt that wires this project's documentation into any agent — the endpoint, the command for Claude Code and Codex, the config for everything else, and what the tools are once connected. A reader who wants their own agent to work from your docs stops needing you to write them instructions. `MCP`
 - **A reader's agent can now open the page it just found.** `search` has always answered "call `read_doc` on this path", and on the public endpoint that tool did not exist — so the only thing an agent could do with a hit was guess the page from its title, which is the invention the search result is there to prevent. `read_doc` and `get_doc_outline` are public now. `MCP`
 - **Docsbook's own manual is readable over MCP** — `search_docsbook_docs`, `read_docsbook_doc` and `list_docsbook_docs`, on both servers. Every other tool reads *your* documentation, so "what can this product do and what should I set up next" had nothing grounded to answer from, and an agent answered it from memory. `MCP`
@@ -19,6 +22,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Changed
 
+- **The Agent screen is one grid of jobs and nothing else**: no tab strip over it, no paragraph describing the grid to somebody already looking at it, no Refresh button, no "3 of 10 on" counter. Cards no longer unfold either — settings and run sit beside each card, so opening one stops moving every other card under your cursor. `Agents`
 - **The account menu at the bottom of the sidebar now lists your organizations and nothing else**, and each one is a single click into that team's dashboard — where its projects, its people and its plan already are. Hovering a team used to fly a second menu of its projects out to the side, which meant reaching your own team cost a hover you had to hold steady and a target you had to aim at. Switching between the projects of the team you are already in is unchanged: that is the project switcher at the top of the same sidebar. `Organizations`
 - **The search box in that menu takes your typing the moment it opens**, so finding one team among thirty is type-and-go instead of click, aim, click again. It used to lose the race with the menu itself about half the time, and the failure was the confusing kind: the cursor looked ready and the first letters went somewhere else. `Organizations`
 - **Every screen in the panel now carries a Visit Website button in its top-right corner**, opening your published documentation in a new tab. Checking what a reader actually sees after changing a setting stops being a retyped address, so nobody ships a change to a live site on the assumption that it looked right. `Integrations`
@@ -28,6 +32,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 ### Removed
 
+- **The Agent ▸ Activity tab is gone.** Every call an agent makes against your project is still recorded and still readable under Logs ▸ Activity; what went is a second screen onto the same ledger, and the upkeep of keeping two readings of one record honest. `Agents`
 - **The Change Log button is gone from the panel header.** The per-section release notes it opened are unchanged and still published at `docsbook.io/docs/changelog` — what was ours to read had taken the one corner of every screen that should be about your project. `Changes`
 
 ### Fixed

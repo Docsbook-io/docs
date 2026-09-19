@@ -11,6 +11,10 @@ Questions the docs answer are questions your inbox never sees. This is the Suppo
 
 ## NEW - 19.09.2026
 
+### Added
+
+- **What can wake a job now comes from the apps you have connected**, not from a fixed list: a merged pull request, a solved support ticket, a row added to a sheet. Each occasion says what evidence it hands the agent, and one this deployment cannot deliver yet is offered greyed out with the reason on it rather than armed to a silence you would find out about in a month. `Agents`
+
 ### Changed
 
 - **The search box in that menu takes your typing the moment it opens**, so finding one team among thirty is type-and-go instead of click, aim, click again. It used to lose the race with the menu itself about half the time, and the failure was the confusing kind: the cursor looked ready and the first letters went somewhere else. `Organizations`

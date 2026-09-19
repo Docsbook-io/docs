@@ -11,6 +11,10 @@ A watch someone keeps by remembering to look, kept by a webhook instead. This is
 
 ## NEW - 19.09.2026
 
+### Added
+
+- **What can wake a job now comes from the apps you have connected**, not from a fixed list: a merged pull request, a solved support ticket, a row added to a sheet. Each occasion says what evidence it hands the agent, and one this deployment cannot deliver yet is offered greyed out with the reason on it rather than armed to a silence you would find out about in a month. `Agents`
+
 ### Changed
 
 - **Every connector in the grid now wears its service's real logo in its real colour**, so finding Slack or Sentry among forty tiles is a glance instead of reading forty names in a column. Grey now means one thing only — this one cannot be connected here yet — rather than being what every tile looked like. `Integrations`

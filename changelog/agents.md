@@ -1,11 +1,27 @@
 ---
 title: "What changed in Docsbook Agents, and when it shipped"
-description: "Every release that touched Agents: the goals your project pursues on its own, the route of MCP calls each one walks, what wakes them, and the history of every run."
+description: "Every release that touched the Agent section: the jobs your project does on its own, what wakes each one, what you tell it to do, and running one on the spot. It was a catalogue of routed agents until 12.09.2026 and a grid of jobs since, which is why the page reads as two products."
 ---
 
 # What changed in Docsbook Agents, and when it shipped
 
 Everything that shipped in **Agents**. This is the Agents slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG).
+
+## NEW - 19.09.2026
+
+### Added
+
+- **A green play button beside every job on the Agent screen runs that job now**, so finding out whether a pass does what you want stops being "arm it and wait until Monday". The run is billed and recorded exactly like one your own agent makes, and it arms nothing — the card stays off until you say otherwise. `Agents`
+- **Every job now opens a settings dialog**: the instruction in your own words, and what wakes it — a schedule composed as a sentence in your own clock, something that happens on your project, an occasion from an app you have connected, or nothing at all, for a job you keep on the grid and run by hand. `Agents`
+- **What can wake a job now comes from the apps you have connected**, not from a fixed list: a merged pull request, a solved support ticket, a row added to a sheet. Each occasion says what evidence it hands the agent, and one this deployment cannot deliver yet is offered greyed out with the reason on it rather than armed to a silence you would find out about in a month. `Agents`
+
+### Changed
+
+- **The Agent screen is one grid of jobs and nothing else**: no tab strip over it, no paragraph describing the grid to somebody already looking at it, no Refresh button, no "3 of 10 on" counter. Cards no longer unfold either — settings and run sit beside each card, so opening one stops moving every other card under your cursor. `Agents`
+
+### Removed
+
+- **The Agent ▸ Activity tab is gone.** Every call an agent makes against your project is still recorded and still readable under Logs ▸ Activity; what went is a second screen onto the same ledger, and the upkeep of keeping two readings of one record honest. `Agents`
 
 ## NEW - 14.09.2026
 

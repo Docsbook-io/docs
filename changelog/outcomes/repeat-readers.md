@@ -9,6 +9,12 @@ Everything Docsbook shipped that moves one number: **Repeat readers** — more r
 
 One visit is a look; a second is a product someone is actually adopting. This is the Repeat readers slice of the [full Docsbook changelog](https://docsbook.io/docs/CHANGELOG); an entry appears here whenever what it shipped moves this number, whichever part of the panel it landed in.
 
+## NEW - 19.09.2026
+
+### Removed
+
+- **The Agent ▸ Activity tab is gone.** Every call an agent makes against your project is still recorded and still readable under Logs ▸ Activity; what went is a second screen onto the same ledger, and the upkeep of keeping two readings of one record honest. `Agents`
+
 ## NEW - 18.09.2026
 
 ### Added
