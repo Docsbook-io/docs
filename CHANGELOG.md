@@ -19,6 +19,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - **Connect MCP is now one item in the Copy page menu on your published docs.** It copies a ready prompt that wires this project's documentation into any agent — the endpoint, the command for Claude Code and Codex, the config for everything else, and what the tools are once connected. A reader who wants their own agent to work from your docs stops needing you to write them instructions. `MCP`
 - **A reader's agent can now open the page it just found.** `search` has always answered "call `read_doc` on this path", and on the public endpoint that tool did not exist — so the only thing an agent could do with a hit was guess the page from its title, which is the invention the search result is there to prevent. `read_doc` and `get_doc_outline` are public now. `MCP`
 - **Docsbook's own manual is readable over MCP** — `search_docsbook_docs`, `read_docsbook_doc` and `list_docsbook_docs`, on both servers. Every other tool reads *your* documentation, so "what can this product do and what should I set up next" had nothing grounded to answer from, and an agent answered it from memory. `MCP`
+- **The agent can now ask you something directly in the Inbox and read your answer back on its own.** A question comes with an answer box for each thing it needs decided, saved as you type it — so a scheduled run can ask something only you can decide without needing you to be there when it runs, and check back on its own the next time it runs. Reports it posts now render properly too: headings, lists and links, not a wall of plain text. `Inbox`
+- **The Inbox has an Archived tab now, next to Unread, with a way to bring a letter back.** Archiving one used to be a one-way trip. `Inbox`
 
 ### Improved
 
@@ -57,6 +59,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - **Opening a connector's page now starts you at the top of it.** Clicking a service from far down the catalogue used to drop you into the middle of its page — or past the end of a short one — so the name, the status and the Connect button were all above where you landed and you had to scroll up to find out what you had opened. `Integrations`
 - **Our own support chat no longer appears on your published documentation.** It was mounted everywhere rather than only in the admin panel, which put a support bubble meant for us in front of your readers. `Changes`
 - **The floating "Ask Docs" button now shows for you as well as your readers.** It was hidden whenever your own toolbar was on screen, so the one person checking whether the widget works could never see it — the two sit in different corners and never overlapped. `AI Chat`
+- **Read and archived marks in the Inbox now survive a reload on their own**, even on a project whose database hasn't caught up to the mailbox's own table yet — they used to reset to unread every time you came back. `Inbox`
 
 ## NEW - 18.09.2026
 
