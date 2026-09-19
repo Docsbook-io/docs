@@ -17,6 +17,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - The Inbox now lets you answer an agent's question inline, with an Archived tab and a way to bring a letter back. `Inbox`
 - The Change Log button and the per-section release-note pages it opened are both gone — this single page is now the whole changelog. `Changes`
 - Fixed: the public MCP endpoint had been silently dropping three of its ten advertised tools; the support widget meant for us was leaking onto published docs. `MCP`
+- Read-only tools on your MCP owner surface now have their own `GET /api/v1/<tool>` endpoint, and a narrow set of settings tools (branding, navigation, the chatbot, translation mode, mention tracking) their own `POST` — no MCP client, no wrapping args object. `MCP`
+- Fixed: the tool catalog at docsbook.io/mcp had silently narrowed to 16 tools instead of the real ~162, and several tool pages documented a REST call that would 404; both now reflect what actually runs. `MCP`
 
 ## NEW - 18.09.2026
 
