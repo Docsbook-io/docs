@@ -9,6 +9,7 @@ What readers, searchers and the assistant actually did.
 
 <!-- widget:cards cols=2 -->
 
+- [`get_ai_provider_usage`](./get-ai-provider-usage.md) — Docsbook's OWN OpenRouter account balance and account-wide AI spend for the last 7 and 30 days — not one workspace's…
 - [`get_ai_questions`](./get-ai-questions.md) — List AI chatbot questions with timestamp, country, language, and whether an answer was produced (PRO).
 - [`get_ai_unanswered`](./get-ai-unanswered.md) — AI questions that produced no answer or got negative feedback — perfect for finding doc gaps (PRO).
 - [`get_ai_usage`](./get-ai-usage.md) — Get AI chatbot and translation usage stats: token budget, credits remaining, usage by category…

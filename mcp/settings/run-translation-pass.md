@@ -9,7 +9,7 @@ description: "Start a REAL translation catch-up run for one or more languages: t
 
 ## run_translation_pass
 
-Start a REAL translation catch-up run for one or more languages: the same batch the panel's 'Translate now' starts, with pages that are behind translated before pages that are missing. Answers with the job id per language as soon as the runs are open — the pages themselves land over the following minutes and are visible in Translations. Languages already level with the source are skipped unless force=true, a language with a live run is left alone, and at most 3 languages are started per call. It NEVER discards existing translations (that is the owner's 'Re-translate everything'). REQUIRES PRO or higher. BEFORE WRITING, call `docsbook_expert` with what you are trying to achieve: it answers what this page has to do, what to read before touching it, and what would make the result wrong — and it will tell you when the evidence is too thin to write from yet. One call, cheapest on the server, changes nothing.
+Start a REAL translation catch-up run for one or more languages: the same batch the panel's 'Translate now' starts, with pages that are behind translated before pages that are missing. Answers with the job id per language as soon as the runs are open — the pages themselves land over the following minutes and are visible in Translations. Languages already level with the source are skipped unless force=true, a language with a live run is left alone, and at most 3 languages are started per call. It NEVER discards existing translations (that is the owner's 'Re-translate everything'). REQUIRES PRO or higher.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -47,32 +47,6 @@ curl -X POST 'https://docsbook.io/api/mcp/server' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json, text/event-stream' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"run_translation_pass","arguments":{"workspace_id":"<workspace_id>"}}}'
-```
-
-<!-- /widget -->
-
-## Try it over REST
-
-The same tool is callable as a plain HTTP request, no MCP client required. It runs on the same server, at the same price.
-
-Your workspace is resolved from the API key, so `workspace_id` is decided server-side here and anything you send for it is ignored.
-
-<!-- widget:api -->
-
-### POST /api/v1/tools/run_translation_pass
-
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | yes | The arguments above, as one JSON object. |
-
-#### Request
-
-```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/run_translation_pass' \
-  -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
-  -H 'Content-Type: application/json' \
-  -d '{"args":{"workspace_id":"<workspace_id>"}}'
 ```
 
 <!-- /widget -->

@@ -9,7 +9,7 @@ description: "One call for the four traffic facts every analysis starts from: wh
 
 ## collect_traffic
 
-One call for the four traffic facts every analysis starts from: who arrived (pageviews, visitors, top pages, referrers, countries), how the visits ENDED (success / dead end / bounce / partial, with the denominator), which pages they ended on, and the 2–4 page sequences readers actually walk. Four tools' worth of warehouse in one probe, and kept as four separate tables rather than averaged into a health number — a pageview count answers 'is anyone here', the outcome mix answers 'did it work', and a report that merges them answers neither. Every rate here is an estimate over hashed IPs and says so; where the warehouse withheld a rate for too small a sample, this returns null WITH the reason rather than a zero, because a zero is the version an owner acts on. Returns an evidence record and the exact `get_analytics` / `get_visit_outcomes` / `get_dead_end_pages` / `get_route_patterns` calls behind every row. No ranking, no cause, no fix. Use it for 'give me the traffic numbers', 'how do visits end', 'which pages do people give up on', 'what routes do readers walk', «дай цифры по трафику», «чем заканчиваются визиты», «на каких страницах сдаются». WHY the numbers moved, and what to do about any one page, is not in here — ask `docsbook_expert` with the outcome you want: it names what to compare this window against (a control set, the same window last year) and the readings that separate a real move from the season. Returns a validated `collect_traffic.v1` payload: an `evidence` map, the normalised `rows` behind it, and a `reproduce` block naming the exact MCP calls and arguments that produced every row — run them yourself and you get the same answer. There is no model in the path, so there are no findings, no scores and nothing to disbelieve; interpretation is what the audits charge for. Changes nothing; safe on a read-only token. Evidence, not a verdict — nothing here says what the gap MEANS. If you have not already asked `docsbook_expert` how to read it, ask: it says what this evidence is worth against, and what to do with it. One call, changes nothing.
+One call for the four traffic facts every analysis starts from: who arrived (pageviews, visitors, top pages, referrers, countries), how the visits ENDED (success / dead end / bounce / partial, with the denominator), which pages they ended on, and the 2–4 page sequences readers actually walk. Four tools' worth of warehouse in one probe, and kept as four separate tables rather than averaged into a health number — a pageview count answers 'is anyone here', the outcome mix answers 'did it work', and a report that merges them answers neither. Every rate here is an estimate over hashed IPs and says so; where the warehouse withheld a rate for too small a sample, this returns null WITH the reason rather than a zero, because a zero is the version an owner acts on. Returns an evidence record and the exact `get_analytics` / `get_visit_outcomes` / `get_dead_end_pages` / `get_route_patterns` calls behind every row. No ranking, no cause, no fix. Use it for 'give me the traffic numbers', 'how do visits end', 'which pages do people give up on', 'what routes do readers walk', «дай цифры по трафику», «чем заканчиваются визиты», «на каких страницах сдаются». WHY the numbers moved, and what to do about any one page, is not in here — ask `docsbook_expert` with the outcome you want: it names what to compare this window against (a control set, the same window last year) and the readings that separate a real move from the season. Returns a validated `collect_traffic.v1` payload: an `evidence` map, the normalised `rows` behind it, and a `reproduce` block naming the exact MCP calls and arguments that produced every row — run them yourself and you get the same answer. There is no model in the path, so there are no findings, no scores and nothing to disbelieve; interpretation is what the audits charge for. Changes nothing; safe on a read-only token.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -44,32 +44,6 @@ curl -X POST 'https://docsbook.io/api/mcp/server' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json, text/event-stream' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"collect_traffic","arguments":{}}}'
-```
-
-<!-- /widget -->
-
-## Try it over REST
-
-The same tool is callable as a plain HTTP request, no MCP client required. It runs on the same server, at the same price.
-
-Your workspace is resolved from the API key, so `workspace_id` is decided server-side here and anything you send for it is ignored.
-
-<!-- widget:api -->
-
-### POST /api/v1/tools/collect_traffic
-
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | no | The arguments above, as one JSON object. |
-
-#### Request
-
-```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/collect_traffic' \
-  -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
-  -H 'Content-Type: application/json' \
-  -d '{"args":{}}'
 ```
 
 <!-- /widget -->

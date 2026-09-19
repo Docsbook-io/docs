@@ -11,7 +11,7 @@ description: "Change or disconnect one of this project's connected sources (see 
 
 Change or disconnect one of this project's connected sources (see `list_sources`): rename it, rewrite the `note` every tool reads as instruction, pause it, or remove it.
 Pausing (`enabled: false`) keeps the row and stops every tool and agent from reading it — the move for a repository that has moved or a site that is being rebuilt. `disconnect: true` deletes it, along with any GitHub authorisation attached to it.
-Identify the source by `source_id` from list_sources, or by `match` (a word from its label or URL). REQUIRES a read-write MCP token. BEFORE CHANGING THIS, call `docsbook_expert` with what you are trying to achieve: it names the reading that should decide the value, so the setting is a conclusion rather than a guess. One call, changes nothing.
+Identify the source by `source_id` from list_sources, or by `match` (a word from its label or URL). REQUIRES a read-write MCP token.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -51,32 +51,6 @@ curl -X POST 'https://docsbook.io/api/mcp/server' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json, text/event-stream' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"configure_source","arguments":{}}}'
-```
-
-<!-- /widget -->
-
-## Try it over REST
-
-The same tool is callable as a plain HTTP request, no MCP client required. It runs on the same server, at the same price.
-
-Your workspace is resolved from the API key, so `workspace_id` is decided server-side here and anything you send for it is ignored.
-
-<!-- widget:api -->
-
-### POST /api/v1/tools/configure_source
-
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | no | The arguments above, as one JSON object. |
-
-#### Request
-
-```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/configure_source' \
-  -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
-  -H 'Content-Type: application/json' \
-  -d '{"args":{}}'
 ```
 
 <!-- /widget -->

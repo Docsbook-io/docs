@@ -1,7 +1,7 @@
 ---
 title: "MCP server: run your documentation from a coding agent"
 description: "Connect Claude Code, Cursor, Codex or any MCP client to Docsbook and read, write, measure and configure your documentation from inside the editor."
-tldr: "Docsbook's remote MCP server exposes 151 typed tools over one OAuth-protected endpoint, and two of them are agents: `docsbook_expert` answers what to do and why, `docsbook_assistant` answers how to build it well. You carry the work out yourself: read pages, commit them, read analytics, change settings. Calls are billed per call against the project's balance by billing class; discovery is free."
+tldr: "Docsbook's remote MCP server exposes 164 typed tools over one OAuth-protected endpoint. Since 2026-09-18 your own connected agent meets a small owner surface — orientation, reading your own docs, and giving a job to `docsbook_agent` — and delegates everything else (writing docs, translations, webhooks, settings, analytics) to that background worker instead of calling it directly. Calls are billed per call against the project's balance by billing class; discovery is free."
 ---
 
 # MCP Server
@@ -12,17 +12,19 @@ This page is the reference for what the server serves and what a call draws on. 
 
 ## What is the Docsbook MCP server?
 
-The Docsbook MCP server exposes **151 tools** over the Model Context Protocol, an open standard for handing tools, resources and prompts to AI agents over a typed RPC interface.
+The Docsbook MCP server registers **164 tools** over the Model Context Protocol, an open standard for handing tools, resources and prompts to AI agents over a typed RPC interface. Not every tool is reachable by every caller — see the next section before you go looking for `write_docs` on your own token.
 
-**Two of them are agents, and they answer different questions.** `docsbook_expert` takes any documentation request in your own words — "improve the docs", "document this API", "why are readers not converting" — and answers in one round trip with how to do the work: the steps in order, the tool to call on each, what to carry from one step to the next, what would make the answer wrong, and what to remember afterwards. It runs nothing itself and needs no approval; you make the calls it names, on your own token, at read prices. Call it first, before reaching for anything below.
+## Two surfaces, one endpoint (2026-09-18)
 
-**The second answers how the work is done well.** `docsbook_assistant` is the specialist: ask it how a page for a given search intent should be structured, what a quickstart owes its first screen, how to write a passage an answer engine will quote whole, what a translated page needs beyond translation. It answers from [the documentation handbook](../handbook/README.md) and the rest of this site, searched by meaning, and comes back with the pages it drew on — so the guidance is quotable to whoever asks why your page is shaped that way. Pass `context` with it: the product, the audience, the intent, what already exists, what you expect it to move. Without that, the answer is about documentation in general rather than about your page. `docsbook_expert` composes that question for you: its answer carries a `consult` block you can send as it stands.
+**Your own connected agent — the one that just completed the OAuth step above — meets a small, fixed surface, not the 164-tool catalog.** Orientation (`get_info`, `list_workspaces`, `get_workspace`), creating a project, reading your own documentation and Docsbook's own docs by meaning or by name, and the five tools that give a job to **`docsbook_agent`** and watch it (`docsbook_agent`, `docsbook_agent_status`, `docsbook_agent_tasks`, `docsbook_agent_reply`, `docsbook_agent_stop`). That is the whole of "manage the documentation" from your own token now.
 
-The same tool answers questions about USING DOCSBOOK ITSELF — "how does X work", "does Docsbook do Y" — because it is the same corpus and the same AI-generated, cited answer a reader gets from the public "Ask AI" chat on [docsbook.io/docs](https://docsbook.io/docs). It runs the same retrieval and model call the public widget runs, and the question is logged in your own project's chat analytics exactly the way a real reader's question would be — not a lookalike, the same call. It was called `ask_docsbook` until 2026-09-15; the old name still works if your client cached it.
+**Everything else described on this page — writing documentation, translations, webhooks, settings, analytics beyond your own project's summary, the product's own accumulated memory — is performed by `docsbook_agent`, not called by you directly.** Describe the outcome in your own words ("improve the docs", "document this API", "why are readers not converting") and it plans the work, makes the calls itself, and reports back. The tool-by-tool sections below are still worth reading in full: they are `docsbook_agent`'s capability list, and knowing what it *can* do is how you know what to ask it for.
 
-**The division matters more than the names.** The expert holds what your project is owed — its goals, its opportunities, the claims somebody wrote down before a change — and holds no craft. The assistant holds the craft and knows nothing about your project. Ask the expert first: it decides whether this is the work. Ask the assistant second: it decides how the work is built. Where they disagree, the expert wins on whether and when, the assistant wins on how.
+`docsbook_assistant` — the specialist that answers HOW a page should be structured, what a quickstart owes its first screen, how to write a passage an answer engine will quote whole — moved behind `docsbook_agent` the same day: it is read from inside a task now, not called on your own token. The same retrieval still answers reader questions instantly and for free on the public "Ask AI" chat at [docsbook.io/docs](https://docsbook.io/docs) and on the anonymous MCP endpoint's `search` — neither of those needs a token.
 
-Every other tool is a plain, individually named call — workspace and branding, content, the issue tracker, AI chat, translations, analytics, call history, project memory, opportunities, hypotheses, the work board and webhooks — among them the two that connect and configure a repository or website as a source of truth, and `collect_ai_citability`, which scores whether an answer engine can fetch and quote you. None of them run unattended: a standing agent that fired on its own schedule or on a repository's commits, and the 135 narrower tools that only ever ran inside one, were retired on 2026-09-12 for the reason `docsbook_expert` replaced them — the value in them was never the running, it was knowing which reads, in what order, and what makes the answer wrong, which is a thing to be told rather than a thing to be run. See the [MCP tools reference](../mcp/README.md) for the full list.
+A narrow, separate slice of pure configuration (branding, navigation, the chatbot, translation mode, mention tracking) is reachable directly over REST by your workspace API key even though it is not on your MCP token's surface — see the [REST API reference](../rest-api/README.md) for that list.
+
+**Why the surface narrowed.** Before 2026-09-18 every connected client met the same ~150 names: the reads, the writes, the settings, this project's accumulated memory and hypotheses. That assumed the caller was a coding agent holding the repository and the method — true of Docsbook's own background worker, false of the customer this endpoint is sold to. What moved behind `docsbook_agent` is MANAGEMENT — writing, configuring, measuring, and everything that carries method rather than content; the reads that answer "what does my own documentation say" stayed, because hiding those would protect nothing and break the one integration every customer already has.
 
 ## Endpoint
 
@@ -160,6 +162,8 @@ ChatGPT supports remote MCP through **Connectors**, on ChatGPT's own paid plans.
 3. Authorize in the browser when prompted.
 
 ## What are the Docsbook MCP tools for?
+
+Every tool named from here down is `docsbook_agent`'s toolbox, not your own token's — give it the job and it makes these calls itself (see "Two surfaces, one endpoint" above). Reading the sections below tells you what to ask for, not what to call.
 
 The Docsbook MCP tools exist to make one of four things happen: more qualified readers arrive, more of them leave with what they came for, more buying-intent readers are carried forward by the assistant, and fewer questions reach a person. Everything below is grouped by which of those four it serves.
 
@@ -348,22 +352,20 @@ Documentation that repairs itself and shows its work — "saw the problem" and "
 
 ## Prompt library
 
-One request per lever above, in the words you would actually type — paste any of these into Claude Code, Cursor or another connected client once OAuth is done:
+One request per lever above, in the words you would actually type — give any of these to `docsbook_agent` from Claude Code, Cursor or another connected client once OAuth is done:
 
 - **Acquisition:** "Are AI assistants actually reading our docs, and where do we rank in Google for our own quickstart?" → `get_analytics` (AI-bot breakdown), `get_search_rankings`
 - **Conversion:** "Which page is losing readers, and why?" → `get_visit_outcomes`, `get_dead_end_pages`, `get_rage_signals`
 - **Sales:** "Pull every chat conversation where someone was comparing us to a competitor." → `get_chat_intent`
 - **Cost avoided:** "What are people asking the docs assistant that it can't answer?" → `get_ai_unanswered`, `get_failed_searches`
 
-`docsbook_expert` answers each of these first with the full route in order; the tools named above are what it ends up calling.
+Give any of these, plus `workspace_id`, to `docsbook_agent` rather than running the route yourself — it plans through the tools named above and calls them itself, and reports back what it did.
 
 ## Handing over the whole job
 
-Every tool here answers inside the call that asked for it. There is no job to start and no run to poll.
+`docsbook_agent` starts a real background run and hands back a `task_id` to poll — `docsbook_agent_status` for one job, `docsbook_agent_tasks` for every job on the account, `docsbook_agent_reply` to answer a question it asks mid-run, `docsbook_agent_stop` to cancel it.
 
-There used to be four — `run_docs_analyze`, `run_docs_create`, `run_docs_manage`, `run_docs_automate` — which ran a skill on our side against your workspace and handed back a run id to poll. They are gone, along with `get_agent_run`, `list_agent_runs` and `cancel_agent_run`. Auditing a site, building one, restructuring it or standing up its monitors is still minutes of work, but it is minutes of work your own agent is already holding the repository for, and a run you cannot watch is a worse way to buy them.
-
-What replaced them is `docsbook_expert`, the one agent on this server, and it advises rather than runs: ask it in your own words and it answers with how to think about the request, the steps in order with the tool on each, who runs each one, what to carry between them, what will make the answer wrong, and what is worth remembering. It also names the two readings to take before any of it — what you declared counts as this documentation working, and what your readers actually asked — because advice given without them is true about documentation in general and unfalsifiable about your site. Then your agent does the work, on your token, at read prices. `find_skill` still hands over the long-form method when you want the whole rulebook rather than a route through it.
+There used to be four narrower runners — `run_docs_analyze`, `run_docs_create`, `run_docs_manage`, `run_docs_automate` — retired 2026-09-12 along with `get_agent_run`, `list_agent_runs` and `cancel_agent_run`. For six days after that (2026-09-12 to 2026-09-18) nothing on this server ran unattended at all: the one agent, `docsbook_expert`, only ever advised, and you made every call yourself on your own token. `docsbook_agent` is what replaced it, and the direction reversed: describe the job in your own words — "improve the docs", "document this API", "why are readers not converting" — and it does the work itself rather than handing you steps to run. `find_skill` still hands over the long-form method when you want the whole rulebook a job draws on, rather than delegating it.
 
 ## Buying the evidence without the opinion
 
@@ -381,7 +383,7 @@ Five **collectors** are the first half on its own, charged as a `probe` rather t
 
 There is no model in the path, so there is nothing in them to disbelieve — and the payload proves it rather than claiming it. Every answer carries a **`reproduce`** block: the exact MCP calls and the arguments they were made with, per row. Run them yourself and you get the same record back, apart from the timestamp. Nothing an audit returns can offer that, because an audit's answer passed through a model.
 
-What you do not get is a judgement. No findings, no scores, no ranking, no recommendation — a collector that quietly included one would be a model run at a fraction of the price. For the judgement, ask `docsbook_expert` how to read the rows: it answers with the method and what would make the reading wrong.
+What you do not get is a judgement. No findings, no scores, no ranking, no recommendation — a collector that quietly included one would be a model run at a fraction of the price. For the judgement, give the job to `docsbook_agent`: it reads the rows, says what they mean, and what would make that reading wrong.
 
 **When the cheap one is the right one.** `collect_corpus_map` needs no search data, no traffic and no history at all, and hands back real rows on a site that went up this morning — useful on exactly the projects where every analytics-shaped question answers "not enough data yet".
 
@@ -399,7 +401,7 @@ Every analytics response from the Docsbook MCP server carries its own caveats in
 
 There are two ways to work with your documentation content from an agent, and which one you want depends on whether the agent has the repository on disk:
 
-- **Hosted, via MCP tokens** — `search_docs` (read-only; works with any connected token regardless of its scope), `get_doc_outline` (read-only; lists every markdown page's title, heading count, and size before searching or writing), and `write_docs` (requires a token authorized with **read-write** scope; commits one or more files as a single atomic git commit). These run against the Docsbook-hosted repository directly, no local checkout needed.
+- **Hosted, via MCP tokens** — `search_docs` and `get_doc_outline` are read-only and on your own owner surface: call them directly, with any connected token. `write_docs` is not: since 2026-09-18 it is reached only by giving `docsbook_agent` a job that writes, never by calling it yourself. These run against the Docsbook-hosted repository directly, no local checkout needed.
 - **Local, via `markdown-lsp`** — for an agent working directly on your checked-out files, [`markdown-lsp`](https://github.com/Docsbook-io/markdown-lsp) answers richer graph questions (workspace outline, fuzzy heading search, full-text with context, incoming and outgoing links, link resolution) as commands the agent runs — `npx markdown-lsp <subcommand> ./docs` — or as a language server. It is not an MCP server and needs no token. See [Source of Truth](./source-of-truth.md) for the subcommand list and the rationale.
 
 Use `search_docs`/`write_docs` when the agent only has an MCP connection (no local checkout); use `markdown-lsp` when the agent already has the repo on disk and wants deeper graph navigation.
@@ -442,19 +444,20 @@ Unauthenticated, repo-scoped access to a public documentation site is never mete
 
 ## What a token is allowed to do
 
-Access to the Docsbook MCP server is decided by the token, not by a tier. A token carries a **scope**, and the scope is the only thing that separates reading from writing:
+Since 2026-09-18 the first gate is the **audience** — which surface your token meets at all, described above — and it is decided by who is connecting, not by a per-call scope: your own OAuth token is always `owner` and always meets the same sixteen names, whatever scope it carries.
 
-- **Read-only** — every reporting, search and outline tool answers. `write_docs`, `create_issue`, `connect_source` and `configure_source` refuse, and say why. Those four are the tools that currently check the scope; the settings, webhook, goal and translation writers are gated by project ownership alone, so read-only is not a "changes nothing" token — see [MCP server security](./mcp-security.md#what-each-scope-can-do).
-- **Read-write** — everything the account can do: committing pages, filing issues, connecting sources and changing settings.
+- **Owner, read-only** — the orientation and read tools answer; giving `docsbook_agent` a job that would need to write anything is refused with the reason named, before the job starts.
+- **Owner, read-write** — the whole owner surface: orientation, reading your own documentation and Docsbook's own docs, creating a project, and giving `docsbook_agent` a job (including one that writes).
+- **`docsbook_agent` itself** — a token minted per task, scoped to the workspaces named in that task, meeting the full catalog described on this page minus four account-wide tools (`create_workspace`, `update_access`, `grant_repo_access`, `list_workspaces`) a task scoped to existing projects has no business reaching. This is not a token you hold yourself; it is what the background worker runs on while it carries out the job you gave it.
 - **No token at all** — on a repo-scoped endpoint (`docsbook.io/{owner}/{repo}/api/mcp/server`), `get_info`, `find_skill`, `find_widget` and `list_content_widgets` answer from the public catalog, and `search` answers over that site's own documentation — the one tool here that reads a project, because what it reads is the published site. It is refused on a private site, on a site whose plan has lapsed, on an endpoint not pinned to a site, and when the project has no AI balance left; it takes no project argument, so it can only ever read the site it is pinned to. Every other tool requires a valid Bearer token tied to a Docsbook account.
 
 When a call is refused, the server returns a structured error naming the reason rather than a bare 403, so the agent can tell a reader what to fix. See [MCP Server — Trust & Security](./mcp-security.md) for the authentication flow and what the server stores.
 
 ## Troubleshooting / FAQ
 
-**Is the agents/MCP tooling still working?** Yes. On 2026-09-12 the standing-agent engine described in older material — a scheduled agent that ran on its own, plus the 135 action tools and 4 `run_docs_*` runners that only ever ran inside one — was retired. One agent remains: `docsbook_expert`, which advises in one round trip rather than running unattended. Every connection and every other tool on this page works exactly as documented above.
+**Is the agents/MCP tooling still working?** Yes, and it changed direction twice. On 2026-09-12 the standing-agent engine described in older material — a scheduled agent that ran on its own, plus 135 action tools and 4 `run_docs_*` runners that only ever ran inside one — was retired in favour of `docsbook_expert`, a single tool that advised in one round trip and ran nothing. On 2026-09-18 `docsbook_expert` was itself removed and replaced by `docsbook_agent`, which runs the job rather than advising on it, and your own token's surface narrowed to sixteen names — see "Two surfaces, one endpoint" above.
 
-**My client still lists the tool as `docsbook`, not `docsbook_expert` — did the connection break?** No. An MCP client reads the tool list once, when it connects, and keeps those names for the rest of that session. The server resolves the old name rather than refusing it, so nothing is broken — reconnect the client to see the current name.
+**My client still lists `docsbook_expert` (or the older name `docsbook`) — did the connection break?** No, but those names no longer resolve to anything: `docsbook_expert` was removed, not renamed, on 2026-09-18. Reconnect the client so it reads the current tool list and sees `docsbook_agent`.
 
 **A call was refused for an empty balance — what happened?** The refusal names the project, what the call draws, and what is left. Reconnecting or retrying will not fix it; top up the project's balance from the panel. Discovery calls (`get_info`, `find_skill`, listing and creating workspaces) are never metered and keep working regardless.
 
@@ -464,6 +467,6 @@ When a call is refused, the server returns a structured error naming the reason 
 
 - [MCP tools reference](../mcp/README.md) — every tool with its parameters.
 - [Chat Hooks](../ai-chat/chat-hooks.md) — Configure pre/post-LLM hooks via MCP.
-- [Docs Skills](./skills.md) — Discover SKILL.md files through `find_skill`, or ask `docsbook_expert` for the route through one.
+- [Docs Skills](./skills.md) — Discover SKILL.md files through `find_skill`, or give `docsbook_agent` the job and let it use one directly.
 - [Webhooks](../reference/webhooks.md) — Register event handlers from MCP, and verify their signatures.
 - [Pricing](https://docsbook.io/pricing) — what a metered call draws on, generated from the live billing constants.

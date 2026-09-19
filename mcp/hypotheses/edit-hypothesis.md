@@ -9,7 +9,7 @@ description: "JUDGE a hypothesis with what the reading showed, move its date, or
 
 ## edit_hypothesis
 
-JUDGE a hypothesis with what the reading showed, move its date, or correct it. Free on every plan. 🔴 JUDGING IS THE POINT. `result` is what was measured — the pair, with the denominator, not a rate on its own — and `verdict` is which way it went. **"Nothing distinguishable" is `rejected`, not a missing verdict**: the claim predicted an effect and none appeared, and that is the most valuable row this store produces, because it is what stops the same change being made again with the same confidence. 🔴 TOO EARLY IS NOT A VERDICT. If the honest wait has not passed, move the date with `check_in_days` instead of judging. A verdict recorded on a week's own variance is a wrong answer that will be quoted for a year. Pass an empty string in `verdict` to RETRACT one — a reading taken against the wrong baseline has to be retractable, and the row goes back to `testing` rather than to untested, because the change was still made. After a verdict: add_memory the RULE it taught (not the figure — figures expire, 'this class of change does nothing here' does not), and — when it was rejected — add_hypothesis for the successor and put its key in `next_key`. A rejection that names nothing next is a dead end nobody learned from. Corrections happen in place rather than remove-and-re-add, and here that is load-bearing: "written before the change, judged after it" is the entire claim a hypothesis rests on, and a re-created row cannot make it. This answers WHAT, not what to do about it. If you have not already got the method from `docsbook_expert`, get it first: it names which readings answer this question, what to compare them against, and what would make the conclusion wrong. One call, changes nothing.
+JUDGE a hypothesis with what the reading showed, move its date, or correct it. Free on every plan. 🔴 JUDGING IS THE POINT. `result` is what was measured — the pair, with the denominator, not a rate on its own — and `verdict` is which way it went. **"Nothing distinguishable" is `rejected`, not a missing verdict**: the claim predicted an effect and none appeared, and that is the most valuable row this store produces, because it is what stops the same change being made again with the same confidence. 🔴 TOO EARLY IS NOT A VERDICT. If the honest wait has not passed, move the date with `check_in_days` instead of judging. A verdict recorded on a week's own variance is a wrong answer that will be quoted for a year. Pass an empty string in `verdict` to RETRACT one — a reading taken against the wrong baseline has to be retractable, and the row goes back to `testing` rather than to untested, because the change was still made. After a verdict: add_memory the RULE it taught (not the figure — figures expire, 'this class of change does nothing here' does not), and — when it was rejected — add_hypothesis for the successor and put its key in `next_key`. A rejection that names nothing next is a dead end nobody learned from. Corrections happen in place rather than remove-and-re-add, and here that is load-bearing: "written before the change, judged after it" is the entire claim a hypothesis rests on, and a re-created row cannot make it.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -67,32 +67,6 @@ curl -X POST 'https://docsbook.io/api/mcp/server' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json, text/event-stream' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"edit_hypothesis","arguments":{"key":"<key>","kind":"forecast","status":"untested"}}}'
-```
-
-<!-- /widget -->
-
-## Try it over REST
-
-The same tool is callable as a plain HTTP request, no MCP client required. It runs on the same server, at the same price.
-
-Your workspace is resolved from the API key, so `workspace_id` is decided server-side here and anything you send for it is ignored.
-
-<!-- widget:api -->
-
-### POST /api/v1/tools/edit_hypothesis
-
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | yes | The arguments above, as one JSON object. |
-
-#### Request
-
-```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/edit_hypothesis' \
-  -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
-  -H 'Content-Type: application/json' \
-  -d '{"args":{"key":"<key>","kind":"forecast","status":"untested"}}'
 ```
 
 <!-- /widget -->

@@ -9,6 +9,6 @@ Dispatch any MCP tool by name.
 
 <!-- widget:cards cols=2 -->
 
-- [Call any tool by name](./call-tool.md) — Call any tool the Docsbook MCP server registers, over plain REST — no MCP client, no JSON-RPC transport, no OAuth dance.
+- [Call any tool by name](./call-tool.md) — Call a tool by name, over plain REST — no MCP client, no JSON-RPC transport, no OAuth dance.
 
 <!-- /widget -->

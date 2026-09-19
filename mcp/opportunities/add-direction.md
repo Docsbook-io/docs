@@ -9,7 +9,7 @@ description: "OPEN A DIRECTION: decompose the standing goal — be found, on Goo
 
 ## add_direction
 
-OPEN A DIRECTION: decompose the standing goal — be found, on Google and in AI answers — for ONE audience of this product. Name who they are and what they look for, and say what reaching them would look like. Free on every plan. 🔴 THIS IS THE STEP THAT MAKES A CHANGE ARGUE FOR A SHARE OF SOMETHING. Without it a hypothesis argues for a goal and cannot say how much of that goal is at stake, so `confirmed` on a change addressing 2% of the audience reads exactly like `confirmed` on one addressing all of it. The sentence this exists to make sayable: *the hypothesis was confirmed and the direction is still not reached*. 🔴 WRITTEN FOR THE OWNER. `title`, `question`, `target` and `result` are printed on their screen and are REFUSED when they read as a technical note — a call id, a tool name, a file path, a metric dump. Say it as their customer would: "Organisers looking for hackathon judging tools — show up on Google and in its AI answer for their searches by November". The trace goes in `scope`, `method`, `baseline` and `target_metric`, which the owner never reads and which you MUST fill: a direction with no `target_metric` cannot come out SHORT, and coming out short is the finding. `goal_key` is optional: the standing goal `be_found` applies unless the owner declared their own (list_goals, or a `goal` line in list_memory). Do not ask the owner for a goal and do not create one to make this call work. Then add_opportunity, once per search or question: what they type, how many do (read_keyword_demand / read_search_trends / read_search_suggestions / read_serp_snapshot), where we stand, who wins it today (crawl_competitor_docs, collect_ai_citability). Then configure_mentions with the top intents, so the direction is measured by whether the docs actually show up. Then draw hypotheses FROM the opportunities: add_hypothesis with `direction_key` and `opportunity_key`. This answers WHAT, not what to do about it. If you have not already got the method from `docsbook_expert`, get it first: it names which readings answer this question, what to compare them against, and what would make the conclusion wrong. One call, changes nothing.
+OPEN A DIRECTION: decompose the standing goal — be found, on Google and in AI answers — for ONE audience of this product. Name who they are and what they look for, and say what reaching them would look like. Free on every plan. 🔴 THIS IS THE STEP THAT MAKES A CHANGE ARGUE FOR A SHARE OF SOMETHING. Without it a hypothesis argues for a goal and cannot say how much of that goal is at stake, so `confirmed` on a change addressing 2% of the audience reads exactly like `confirmed` on one addressing all of it. The sentence this exists to make sayable: *the hypothesis was confirmed and the direction is still not reached*. 🔴 WRITTEN FOR THE OWNER. `title`, `question`, `target` and `result` are printed on their screen and are REFUSED when they read as a technical note — a call id, a tool name, a file path, a metric dump. Say it as their customer would: "Organisers looking for hackathon judging tools — show up on Google and in its AI answer for their searches by November". The trace goes in `scope`, `method`, `baseline` and `target_metric`, which the owner never reads and which you MUST fill: a direction with no `target_metric` cannot come out SHORT, and coming out short is the finding. `goal_key` is optional: the standing goal `be_found` applies unless the owner declared their own (list_goals, or a `goal` line in list_memory). Do not ask the owner for a goal and do not create one to make this call work. Then add_opportunity, once per search or question: what they type, how many do (read_keyword_demand / read_search_trends / read_search_suggestions / read_serp_snapshot), where we stand, who wins it today (crawl_competitor_docs, collect_ai_citability). Then configure_mentions with the top intents, so the direction is measured by whether the docs actually show up. Then draw hypotheses FROM the opportunities: add_hypothesis with `direction_key` and `opportunity_key`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -58,32 +58,6 @@ curl -X POST 'https://docsbook.io/api/mcp/server' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json, text/event-stream' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"add_direction","arguments":{"key":"<key>","title":"<title>"}}}'
-```
-
-<!-- /widget -->
-
-## Try it over REST
-
-The same tool is callable as a plain HTTP request, no MCP client required. It runs on the same server, at the same price.
-
-Your workspace is resolved from the API key, so `workspace_id` is decided server-side here and anything you send for it is ignored.
-
-<!-- widget:api -->
-
-### POST /api/v1/tools/add_direction
-
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | yes | The arguments above, as one JSON object. |
-
-#### Request
-
-```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/add_direction' \
-  -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
-  -H 'Content-Type: application/json' \
-  -d '{"args":{"key":"<key>","title":"<title>"}}'
 ```
 
 <!-- /widget -->

@@ -28,7 +28,7 @@ Codex, Cursor, Windsurf, Cline and any other MCP client use the same endpoint.
 <!-- widget:stats cols=4 -->
 
 - **5 min** — from a repository to a public URL
-- **140** — MCP tools an agent can call
+- **164** — MCP tools your docs agent can use
 - **15** — languages, each indexed on its own
 - **$0** — for hosting, search, analytics and a custom domain
 
