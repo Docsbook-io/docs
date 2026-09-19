@@ -32,6 +32,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Opening Logs for a whole organization with no project picked now merges every project's feed into one list, labelled by project, instead of asking you to open one project at a time. `Feeds`
 - Integrations' catalogue of 2,500+ apps now shows up as cards right in the grid instead of behind a search screen, and connecting one of them no longer fails at the authorization window. `Integrations`
 - Fixed: connecting GitHub from Integrations could open a window with no app selected instead of GitHub's own install screen — it now always goes straight there. `Integrations`
+- Fixed: opening an issue or pull request covered the whole panel, sidebar and header included, instead of just replacing the list you opened it from — it now swaps only that section's body, the same way an MCP tool's own page already does. `Issues`
 
 ## NEW - 18.09.2026
 
