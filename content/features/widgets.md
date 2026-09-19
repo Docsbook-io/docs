@@ -1,6 +1,6 @@
 ---
 title: "Content widgets: rich blocks written in plain markdown"
-description: "Reference for every Docsbook content widget — hero, cards, showcase, journey, tabs, code-group, callout, accordion, stepper, pricing, api, mcp, cta, cta-form and recommendations — and the markers each reads."
+description: "Reference for every Docsbook content widget — hero, stats, cards, showcase, journey, tabs, code-group, callout, accordion, stepper, pricing, api, mcp, cta, cta-form and recommendations — and the markers each reads."
 ---
 
 # Content widgets
@@ -58,7 +58,7 @@ Turns link lists into a responsive grid. Best on index and hub pages that send r
 
 **Give a card its own action.** If the last indented line contains nothing but links, it becomes the card's call-to-action row. A sentence that merely *contains* a link stays ordinary text.
 
-**Choose the layout.** `cols=1`, `cols=2`, `cols=3` or `cols=4` fixes the number of columns; `horizontal` puts the icon beside the text instead of above it, for a compact row; `plain` drops the illustration band and puts a small accent-coloured icon above the title; `arrow=hover` hides the affordance arrow until the pointer is on the card. They go on the opening marker and can be combined. Without `cols` the grid fits as many cards per row as the page width allows, which is usually what you want. Narrow screens always get fewer columns.
+**Choose the layout.** `cols=1`, `cols=2`, `cols=3` or `cols=4` fixes the number of columns; `horizontal` puts the icon beside the text instead of above it, for a compact row; `plain` drops the illustration band and puts a small accent-coloured icon above the title; `icons=inline` keeps the bordered card but swaps the band for a small icon tile at the top of the body — icon, title, one sentence, arrow; `arrow=hover` hides the affordance arrow until the pointer is on the card. They go on the opening marker and can be combined. Without `cols` the grid fits as many cards per row as the page width allows, which is usually what you want. Narrow screens always get fewer columns.
 
 **Full-weight or `plain`?** The default card leads with an illustration band — right when the grid *is* the page, on a documentation home or a section index. `plain` is right when the grid is the page's edge: a "Next steps" close, a "Related topics" block, the two or three links an introduction hands off to. A full-weight grid there makes the footer the loudest thing on the screen.
 
@@ -299,7 +299,11 @@ Renders a small eyebrow label, the page's own heading, a lead paragraph, a row o
 - A **blockquote** becomes the agent pill. The bold run is the button's label; everything after it is the text the button copies.
 - Put images at the front of that blockquote to show which agents the prompt is for — they render as an overlapping avatar stack. With no images the pill shows a neutral glyph.
 - A second paragraph inside the blockquote becomes the hint line under the pill.
+- A paragraph made only of links, after the heading, becomes the button row: `[Start free](/start) · [Connect your agent](./mcp.md)`. The first link is the filled button, the rest are outlined. Two is the ceiling.
+- A fenced code block inside the hero becomes the aside: a framed panel beside the copy on a wide screen, under it on a phone. Put the one command a reader runs first there. A paragraph that is only an image does the same with a picture.
+- The paragraph right after that block is its caption, rendered small under the panel.
 - `align=center` on the marker centres the block. The default is left-aligned, which is what sits correctly next to a sidebar.
+- `size=large` steps the title and lead up one size — for a front page that has hidden its sidebar and outline.
 - Everything except the heading is optional. A hero with no blockquote is simply a titled opener.
 
 ```markdown
@@ -348,6 +352,28 @@ Use `cards` instead when the items are destinations inside your own documentatio
 - [ClickHouse](https://example.com/clickhouse) — Column-oriented database for analytics {color:#faff69}
 
   ![ClickHouse docs](https://example.com/shots/clickhouse.png)
+
+<!-- /widget -->
+```
+
+### stats — a band of large numbers
+
+Three or four figures with a short label under each — the strip an enterprise landing page puts under its hero. Use it on a landing or overview page that has real, checkable figures to show at a glance. Not for numbers that change weekly: the page is static, and a stale figure on the front page costs more trust than none.
+
+- Each list item is one figure: `- **140** — MCP tools`. The bold run is the number, the rest of the line is its label.
+- Without bold, the text before the first ` — ` is the number: `- 140 — MCP tools` renders the same.
+- Keep the number short: a value and a unit (`5 min`, `99.9%`, `$0`).
+- End an item with `{icon-name}` to put a small icon above the number. All items or none.
+- Headings above the list become group labels, as in `cards`.
+- `cols=1` to `cols=4` on the marker fixes the number of columns.
+
+```markdown
+<!-- widget:stats cols=4 -->
+
+- **5 min** — from repository to public URL
+- **140** — MCP tools your agent can call
+- **15** — languages, each indexed separately
+- **$0** — for hosting, search and analytics
 
 <!-- /widget -->
 ```
