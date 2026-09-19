@@ -64,11 +64,13 @@ You now have a repository holding example documentation, ready to publish.
 
    > Docsbook reads your repository files. It cannot modify or delete anything in your repository unless you ask it to.
 
-4. Find the repository you forked in the list and click it.
+4. Docsbook opens your dashboard with the new-project form on the right. Find the repository you forked in the list and click it.
 
    ![Docsbook repository list with one repository selected](./images/select-repo.png)
 
-5. Docsbook builds your site and redirects you to it.
+   Everything under the list — your website address, files, screenshots, integrations and a template — is optional. You can add them now or later.
+
+5. Click **Create**. Docsbook builds your site and opens it.
 
 Your documentation is now live at:
 
