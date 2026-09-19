@@ -51,6 +51,8 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - Each project now wears **its own icon** in the panel's project switcher — in the list and on the open project alike — so telling six sites apart is a glance instead of a read. A project that has set no icon gets a folder. `Panel`
 - **The bottom of the sidebar names the organization you have open**, not your own account, so the one label on screen agrees with the row ticked inside the menu. `Panel`
 - **An organization's dashboard keeps that same organization switcher at the bottom** instead of turning into a static name, and its sidebar header now lists that organization's projects — so the panel answers "which project" and "which organization" in the same two places wherever you are. `Panel`
+- A header link now has a **New tab** toggle, so you can keep readers on the current tab for a link that used to force a new one open (and vice versa) instead of that always being decided by whether the URL is external. `Design`
+- Fixed: the Autonomous agent card showed two glows at once, a spectrum-cycling sweep and a separate accent one — it's now a single accent glow in the top-left corner. `Agents`
 
 ## NEW - 18.09.2026
 
