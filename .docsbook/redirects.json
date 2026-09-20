@@ -1,3 +1,8 @@
+---
+status: generated
+version: "0.2"
+---
+
 {
   "version": 1,
   "redirects": [
@@ -140,6 +145,17 @@
       "from": "mcp/product-help/ask-docsbook",
       "to": "mcp/product-help/docsbook-assistant",
       "at": "2026-09-18T00:00:00.000Z"
+    },
+    {
+      "from": "mintlify-alternative",
+      "to": "blog/mintlify-vs-docsbook",
+      "at": "2026-09-20T08:00:00.000Z"
+    },
+    {
+      "from": "gitbook-alternative",
+      "to": "blog/gitbook-vs-docsbook",
+      "at": "2026-09-20T08:00:00.000Z"
     }
   ]
 }
+
