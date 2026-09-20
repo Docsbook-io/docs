@@ -2,6 +2,8 @@
 title: "FAQ reply notebook: copy-paste answers for comments"
 description: "Ready-to-paste answers to the questions people keep asking about Docsbook in public threads — a short version for replies, a long one for posts."
 tldr: "Docsbook publishes a documentation site from a public GitHub repository in seconds, with AI chat trained on your content, search and analytics included, and keeps every Markdown file in your own repo rather than a proprietary database."
+status: generated
+version: "0.2"
 ---
 
 # FAQ reply notebook: copy-paste answers for comments
@@ -78,7 +80,7 @@ tldr: "Docsbook publishes a documentation site from a public GitHub repository i
 
 ### What happens if I exceed AI request limits?
 
-**TL;DR:** AI usage stops when the project's balance runs out — you are never billed past what you put in — and you top it up when you want more. You can also bring your own OpenAI / Anthropic / Gemini / OpenRouter key and pay the provider directly instead.
+**TL;DR:** AI usage stops when the project's balance runs out — you are never billed past what you put in — and you top it up when you want more. You can also bring your own OpenAI / Anthropic / Gemini / OpenRouter / Vercel AI Gateway key and pay the provider directly instead.
 
 **Long:** Each project carries its own balance and every AI call is deducted from it at the model's real price plus our markup, both shown in the dashboard. When the balance reaches zero the assistant stops answering rather than billing you further — there is no overage and no surprise invoice. Top the project up and it resumes. You can also plug your own API key into the AI settings and route requests through your provider, in which case we meter nothing at all. Current numbers: https://docsbook.io/pricing
 
@@ -140,13 +142,13 @@ tldr: "Docsbook publishes a documentation site from a public GitHub repository i
 
 **TL;DR:** It's trained on *your* documentation only, not the open web. Visitors ask questions, it answers with citations to your doc pages.
 
-**Long:** The flow is Search → Reading → Answer. The chatbot retrieves relevant sections from your indexed doc graph, then synthesizes an answer with the LLM, citing the pages it pulled from. You can configure suggested questions, the system prompt, pre/post LLM hooks, and the model provider (we default to OpenRouter `openai/gpt-4o-mini`, but you can plug in your own OpenAI / Anthropic / Gemini key). Streaming responses, full usage analytics, and a `get_ai_questions` MCP tool so you can see what your users are actually asking.
+**Long:** The flow is Search → Reading → Answer. The chatbot retrieves relevant sections from your indexed doc graph, then synthesizes an answer with the LLM, citing the pages it pulled from. You can configure suggested questions, the system prompt, pre/post LLM hooks, and the model provider (we default to OpenRouter `openai/gpt-4o-mini`, but you can plug in your own OpenAI / Anthropic / Gemini / Vercel AI Gateway key). Streaming responses, full usage analytics, and a `get_ai_questions` MCP tool so you can see what your users are actually asking.
 
 ---
 
 ### Which AI providers can I use?
 
-**TL;DR:** OpenRouter (default), OpenAI, Anthropic, Gemini. You can bring your own API key and pick any model the provider supports.
+**TL;DR:** OpenRouter (default), OpenAI, Anthropic, Gemini, Vercel AI Gateway. You can bring your own API key and pick any model the provider supports.
 
 **Long:** Default is OpenRouter with `openai/gpt-4o-mini` because it's cheap and good enough for most docs Q&A. You override at the workspace level in AI settings — paste your key, choose model, done. Requests through your own key don't count against the monthly cap. This is also how you can route to a private/dedicated deployment if compliance requires it.
 
@@ -198,7 +200,7 @@ tldr: "Docsbook publishes a documentation site from a public GitHub repository i
 
 ### What tech stack does Docsbook run on?
 
-**TL;DR:** Next.js 16 on Vercel, PostgreSQL on Neon, Redis cache, Drizzle ORM. AI via OpenRouter/OpenAI/Anthropic/Gemini. Boring, fast, scales.
+**TL;DR:** Next.js 16 on Vercel, PostgreSQL on Neon, Redis cache, Drizzle ORM. AI via OpenRouter/OpenAI/Anthropic/Gemini/Vercel AI Gateway. Boring, fast, scales.
 
 **Long:** Frontend is Next.js 16 App Router + React 19 + Tailwind 4 + shadcn/ui. Auth is `next-auth v5` with GitHub OAuth. Database is Neon serverless Postgres with Drizzle migrations. Markdown pipeline is `unified` + `remark-parse` + `remark-gfm` + `remark-rehype` + `rehype-pretty-code` + `shiki`. MCP server is `@modelcontextprotocol/sdk` 1.29 with full OAuth 2.0. Hosting is Vercel including custom domains, billing through Paddle, analytics through Axiom.
 

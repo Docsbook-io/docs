@@ -2,7 +2,7 @@
 title: "Content"
 description: "Read and write the documentation itself."
 status: generated
-version: "0.2"
+version: "0.3"
 ---
 
 # Content
@@ -11,6 +11,7 @@ Read and write the documentation itself.
 
 <!-- widget:cards cols=2 -->
 
+- [`ask_docs`](./ask-docs.md) — Answer a question from this project's own published docs — the same retrieval and model call the public 'Ask AI' widget runs, returning the synthesized, cited answer a reader would see instead of a page to read yourself.
 - [`configure_source`](./configure-source.md) — Change or disconnect one of this project's connected sources (see `list_sources`): rename it, rewrite the `note` every…
 - [`connect_source`](./connect-source.md) — Connect a repository, a website or a single page as a SOURCE OF TRUTH for this documentation — what `list_sources`…
 - [`fetch_url`](./fetch-url.md) — Read one public web page and get it back as clean Markdown, with its title, meta description and final URL after…

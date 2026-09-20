@@ -3,7 +3,7 @@ title: "Docsbook concepts: workspace, project balance, indexing"
 description: "Definitions of the terms Docsbook uses — workspace, project balance, indexing, source of truth, draft, sync, and the surfaces machines read your docs through."
 tldr: "In Docsbook, a workspace is one documentation site and its settings — backed by a GitHub repository, or one Docsbook hosts for you — with a project balance that only AI work draws down — reader chat, admin and agent calls, translation and indexing."
 status: generated
-version: "0.3"
+version: "0.4"
 ---
 
 # Docsbook concepts: workspace, project balance, indexing
@@ -137,7 +137,7 @@ Docsbook generates it from the indexed content, so it does not go stale separate
 
 ### MCP server
 
-The **MCP server** is Docsbook's Model Context Protocol endpoint at `https://docsbook.io/api/mcp/server`, exposing 167 tools that let an AI agent give `docsbook_agent` a job and have it read your documentation, search it, change settings, and commit pages back on your behalf. Authentication is Bearer over OAuth 2.0 with PKCE.
+The **MCP server** is Docsbook's Model Context Protocol endpoint at `https://docsbook.io/api/mcp/server`, exposing 169 tools that let an AI agent give `docsbook_agent` a job and have it read your documentation, search it, change settings, and commit pages back on your behalf. Authentication is Bearer over OAuth 2.0 with PKCE.
 
 Discovery calls are never metered; other calls draw on the project balance. See [MCP server](./agent-ready/mcp.md) and the [MCP tools reference](./mcp/README.md).
 

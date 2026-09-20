@@ -2,6 +2,8 @@
 title: "AI chat for documentation: should you build or buy?"
 description: "The real cost of building retrieval-based AI chat for your docs versus buying it — engineering weeks, model spend, and where each option breaks."
 tldr: "Docsbook's answer to build-vs-buy AI chat for docs is buy: setup takes hours instead of 3–6 engineer-weeks, and retrieval-quality upkeep becomes the vendor's job rather than yours."
+status: generated
+version: "0.2"
 ---
 
 # AI chat for documentation: should you build or buy?
@@ -145,7 +147,7 @@ If documentation is the only surface, buy.
 
 Docsbook gives you more control than most managed options:
 
-- **Provider** — OpenAI, Anthropic, Gemini, OpenRouter. Bring your own API key, pick your model.
+- **Provider** — OpenAI, Anthropic, Gemini, OpenRouter, Vercel AI Gateway. Bring your own API key, pick your model.
 - **System prompt** — full text replacement
 - **Pre/post hooks** — intercept a query before the model call, post-process the answer
 - **Usage** — metered in dollars against the project's balance; when the balance runs out the assistant stops answering rather than billing further

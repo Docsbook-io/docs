@@ -2,6 +2,8 @@
 title: "Manage and update a published Docsbook documentation site"
 description: "Update pages, undo a publish, control who can read the docs, fix a site that has not refreshed, and work with other people on the same repository."
 tldr: "Docsbook picks up a published site from a GitHub commit automatically — edit a page on GitHub, from your computer with git, or right in the AI chat — with nothing to redeploy."
+status: generated
+version: "0.3"
 ---
 
 # Manage your documentation site
@@ -186,7 +188,7 @@ To put an existing project into an organization, open it, click its name at the 
 
 **Through GitHub.** Add them as collaborators on the repository. They edit files or open pull requests, and the site updates when a change reaches your default branch. This is the path for anyone who already works in the repository.
 
-**Through the AI chat.** Press **Invite** in the chat toolbar, or use **Collaborators** in Settings, and send an email invite. It is a one-time link — the invited teammate accepts it while signed in with that same email address, then shows up under **People with access**. This adds somebody to ONE project; an organization invite covers all of them. No GitHub account needed.
+**Through the AI chat.** Press **Invite** in the chat toolbar, or use **Collaborators** in Settings, and choose **Full access** or **Read-only** for the person you are adding. Either send an email invite — a one-time link the invited teammate accepts while signed in with that same email address — or copy a shareable invite link that anyone who opens it can use to join at that access level. Either way, they show up under **People with access** once they join. This adds somebody to ONE project; an organization invite covers all of them. No GitHub account needed.
 
 ## Fix a site that has not updated
 
@@ -214,7 +216,9 @@ Two reports answer most questions about a page: [Web analytics](../../analytics/
 
 ## Delete a workspace
 
-**Settings** → **Delete Workspace** removes the documentation site and every setting on it. It cannot be undone.
+**Settings** → **Project** → **Danger Zone** deletes the project — its docs, analytics, translations and collaborators. It cannot be undone.
+
+Only the owner can do this. A collaborator with Full access — including one who can [move the project](#work-with-other-people) — cannot delete it. To confirm, type the repository's own name; there is no plain "are you sure" dialog.
 
 Your GitHub repository is untouched. The markdown stays where it always was, so deleting a workspace loses configuration, not content.
 

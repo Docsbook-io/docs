@@ -3,7 +3,7 @@ title: "Docsbook FAQ: cost, limits, sync and data ownership"
 description: "Answers to what Docsbook costs, what happens when a balance runs out, who can read your site, how GitHub sync works, and what you keep if you leave."
 tldr: "Docsbook meters four kinds of AI work — reader chat, admin and agent calls, translation and indexing — plus bot crawling past a monthly allowance; hosting, GitHub sync, search and custom domains are never metered, and current prices are always at docsbook.io/pricing."
 status: generated
-version: "0.4"
+version: "0.5"
 ---
 
 # Docsbook FAQ: cost, limits, sync and data ownership
@@ -266,7 +266,7 @@ Install them with `npx skills add Docsbook-io/docs-skills --skill '*'`, or let a
 
 ### Can an AI agent edit my documentation?
 
-Yes. Docsbook's MCP server exposes 167 tools at `https://docsbook.io/api/mcp/server`, so Claude Code, Cursor or ChatGPT can give `docsbook_agent` a job and have it read your pages, search them, change settings and commit new pages back on your behalf. Writing requires a token authorised with read-write scope; a read-only token is refused.
+Yes. Docsbook's MCP server exposes 169 tools at `https://docsbook.io/api/mcp/server`, so Claude Code, Cursor or ChatGPT can give `docsbook_agent` a job and have it read your pages, search them, change settings and commit new pages back on your behalf. Writing requires a token authorised with read-write scope; a read-only token is refused.
 
 See [MCP server](./agent-ready/mcp.md) and the [MCP tools reference](./mcp/README.md).
 
