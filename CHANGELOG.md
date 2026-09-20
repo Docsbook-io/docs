@@ -34,6 +34,7 @@ version: "0.2"
 - **A project paying with its own translation key is no longer stopped when the shared pool runs out.** Bringing your own key is the product's answer to an exhausted shared quota, and it now holds at every step of a translation run rather than only at the last one. `Translations`
 - **`llms.txt` names the languages a site publishes**, and shows what a translated address looks like, so an assistant asked "is there documentation in German" can answer from the one file it is pointed at. `SEO`
 - **Agent runs are billed for the work they did, not for how long they took.** A run that read four pages no longer costs what a run that rewrote the site costs, and a run waiting on your answer no longer bills you for the wait. Pricing is per token with the session fee kept for the per-run machinery; the previous monthly free-run allowance is gone, since under a token meter a free run has no size. `Agents`
+- **The doc toolbar's Assistant, Analytics, Customize and Settings buttons open in a new tab.** Clicking one used to leave the page you were reading; now the dashboard section opens beside it, so you keep your place in the doc. `Panel`
 
 ## NEW - 19.09.2026
 
