@@ -45,6 +45,7 @@ See [visitor countries report](./reports/countries.md), and [translation setting
 - [Tracking overview](./tracking/overview.md) — every figure, card and tab in the analytics panel, and what each one is not evidence of
 - [Tracked events](./tracking/events.md) — all 36 `docs.*` events, what fires each one, and the payload it carries
 - [AI usage and cost](./tracking/ai-usage.md) — what is metered, how a call is priced, and what your chat was asked and cost
+- [What your documentation earned](./value-earned.md) — the outcomes your docs produced, valued and set against what the work cost: why an AI-referred reader beats a search click and a citation beats both
 - [Goals and funnels](./reports/goals-and-funnels.md) — declare what a reader should do, then measure whether they did
 - [Read time](./reports/read-time.md) — how time-on-page is measured, and the clip the figure rests on
 - [Countries and languages](./reports/countries.md) — where readers are, how reliably that is known, and which of them read a translation

@@ -5,18 +5,18 @@ description: "Docsbook meters four kinds of AI work, plus machine crawling of yo
 
 # Docsbook pricing: what costs money and what does not
 
-Docsbook meters **five** things, charged against the balance of the project that asked for them: four kinds of AI work, and machine crawling of your published site. Publishing the site, serving it to people, full-text search, GitHub sync and recording analytics are not metered — they do not move a balance. This page explains the mechanism; the current figures live on [the Docsbook pricing page](https://docsbook.io/pricing).
+Docsbook meters **six** things, charged against the balance of the project that asked for them: four kinds of AI work, machine crawling of your published site, and each run of the Docsbook agent. Publishing the site, serving it to people, full-text search, GitHub sync and recording analytics are not metered — they do not move a balance. This page explains the mechanism; the current figures live on [the Docsbook pricing page](https://docsbook.io/pricing).
 
 ## What draws on a project balance
 
 Four kinds of AI work spend a Docsbook project's balance. Each appears as its own row in **Spend by source** on the project's Limits card:
 
 - **Readers (AI Chat)** — an AI answer given to a reader of your published documentation.
-- **Admin & AI Agent** — an agent run you or a connected agent started, including metered MCP tool calls.
+- **Admin & AI Agent** — the metered MCP tool calls you or a connected agent made. The agent **run** is charged separately from the calls it makes; see below.
 - **AI Translations** — translating a page into another language.
 - **Semantic Index** — building the embeddings the AI chat retrieves from.
 
-Machine crawling is the fifth, and it is the one thing on this page that is not AI work: see [What crawling costs](#what-crawling-costs) below.
+Machine crawling is the fifth, and it is the one thing on this page that is not AI work: see [What crawling costs](#what-crawling-costs) below. Agent runs are the sixth — the work itself, as distinct from the tool calls a run makes: see [What an agent run costs](#what-an-agent-run-costs).
 
 Nothing else moves the balance. Hosting the site, a custom domain and its TLS certificate, people browsing, editors writing, GitHub sync, full-text search, branding and analytics are all unmetered, however much of them you use.
 
@@ -96,6 +96,25 @@ What this means in practice:
 
 When both the allowance and the balance are gone, crawlers are answered with `429 Too Many Requests` until the next month or your next top-up — and **only crawlers**. People reading your documentation, search, and the AI assistant are unaffected; a site never goes dark because a bot walked it too often.
 
+## What an agent run costs
+
+Handing work to the Docsbook agent — "rewrite the quickstart", "nobody finds us in AI answers" — starts a run that thinks for minutes, reads your project, and writes pages. That is the most expensive thing Docsbook can be asked to do, and it is metered.
+
+- **A run is charged a flat fee plus a rate per minute it holds the task open**, with a **cap per run**, so a run that hangs can never bill more than the cap however long it stays open.
+- **Every plan includes a number of free runs each month.** The first honest experience of the agent never depends on a balance; the allowance is what a small project uses and not what a team runs on.
+- **The run and its tool calls are two separate charges, and neither is derived from the other.** A run holds an agent open; the calls it makes are the individual things it asked Docsbook to do. Both appear separately, so neither can hide inside the other.
+- **A hand-over that never reached the agent is free.** If the run could not be started, nothing is charged and it does not count against the monthly allowance.
+- **A run that failed is charged.** It used the work it did before failing — the same rule every other meter here follows.
+- **Starting a run is refused before it begins** when the paying balance cannot cover it. The refusal names the balance, what is left, and the price. Nothing is half-charged.
+
+## Who pays: the project, or the organization
+
+If a project belongs to an organization, **the organization's balance pays for its agent runs** — as long as it can cover the run. If the organization's balance cannot, that project's own balance pays instead.
+
+The payer is decided before the charge, never split: one run is paid by one balance, and your usage view says which. Top up the organization to fund a whole team's agents from one place, or top up a single project to keep it running on its own.
+
+Today this applies to **agent runs**. The other metered work — AI answers, translations, the semantic index and MCP calls — still draws on each project's own balance.
+
 ## What happens when a project's balance runs out
 
 When a Docsbook project's balance runs out, a metered call is refused **before it runs**. The refusal names which project ran out, what the call would have cost, what is left, and where to top that project up. Nothing is deleted and the documentation site stays online — readers keep browsing, search keeps working, GitHub sync keeps running.
@@ -120,6 +139,7 @@ Your Markdown always stays in your own GitHub repository. Docsbook renders those
 - [Use cases](./use-cases.md) — what teams publish documentation to change
 - [MCP tools reference](./mcp/README.md) — every tool, its parameters and its price class
 - [AI usage and costs](./analytics/tracking/ai-usage.md) — where spend shows up in your analytics
+- [What your documentation earned](./analytics/value-earned.md) — the other side of this page: the outcomes your docs produced, valued and set against what they cost
 
 <!-- widget:cta -->
 
