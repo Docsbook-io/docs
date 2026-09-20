@@ -15,6 +15,7 @@ version: "0.7"
 - **Your GitHub organizations show up the moment you sign in**, whether or not anything has been filed into them yet, so a new account can open the company it works under instead of only its own profile. `Panel`
 - **You can watch a documentation task work, step by step, while it is still working.** A run takes minutes, and the only sign of life was one line of progress that the next one overwrote, so "what is it doing right now" had no answer anyone could check and an assistant asked it would describe what an agent probably does. Every action a task takes is now a line in an ordered timeline you can follow as it happens: the pages it reads, the pages it writes, the translations it runs, how long each took and whether it worked. `Agents`
 - **Anyone can see the documentation work done on a public project, with no account and no token.** The project's own endpoint now answers what the agent has been doing on it, so a reader deciding whether your docs are maintained can look instead of guess. It shows the work and not the business: what you asked for, what the agent reported back to you, your analytics and your settings are not in it, and a private project's work stays private. `MCP`
+- **Enterprise's pricing card now names the Array API among what the plan buys.** It's arranged in the same contract as SSO, SCIM and RBAC, so a team evaluating Enterprise sees it listed before they ever talk to sales. `Pricing`
 
 ### Fixed
 
