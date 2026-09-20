@@ -13,6 +13,8 @@ version: "0.2"
 
 - **The sidebar lists your GitHub repositories, not only the projects you have already made.** Pick one and the new-project form opens with it chosen, so connecting a repository is a click on the repository itself instead of a trip through a second picker. `Panel`
 - **Your GitHub organizations show up the moment you sign in**, whether or not anything has been filed into them yet, so a new account can open the company it works under instead of only its own profile. `Panel`
+- **What an agent reads from outside your docs is kept now, as figures.** When it checks what a keyword is worth, who links to you, or what Google actually answers for a question your readers ask, the answer lands on a card — monthly searches, referring domains, whether the results page carried an AI answer above the links. You read the finding instead of only "an agent checked this two hours ago", and nobody has to re-run a paid check to see a number that was already fetched. `Analytics`
+- **The same cards name the checks nobody has run yet**, so "nothing has ever looked at who links to these docs" stops being an invisible gap and becomes one line you can act on. `Analytics`
 
 ### Fixed
 
@@ -35,6 +37,10 @@ version: "0.2"
 - **`llms.txt` names the languages a site publishes**, and shows what a translated address looks like, so an assistant asked "is there documentation in German" can answer from the one file it is pointed at. `SEO`
 - **Agent runs are billed for the work they did, not for how long they took.** A run that read four pages no longer costs what a run that rewrote the site costs, and a run waiting on your answer no longer bills you for the wait. Pricing is per token with the session fee kept for the per-run machinery; the previous monthly free-run allowance is gone, since under a token meter a free run has no size. `Agents`
 - **The doc toolbar's Assistant, Analytics, Customize and Settings buttons open in a new tab.** Clicking one used to leave the page you were reading; now the dashboard section opens beside it, so you keep your place in the doc. `Panel`
+- **Which AI crawlers read your docs is now on Analytics ▸ GEO**, beside the card that says whether those engines then NAME you. The two halves of one question used to sit two tabs apart, so answering "do the models know us" meant knowing that half the answer lived inside a card called something else. `Analytics`
+- **What readers asked the chat is now one screen**: the eight-tab readout sits under the four figures that summarise the same conversations, instead of at the foot of a page about page traffic. `Analytics`
+- **The readers table is Logs ▸ Users.** It is a record you scan for one person, like the Chat and Feedback logs beside it, rather than a figure you compare against another figure — and every link that used to open it still does. `Analytics`
+- **Every card on the SEO and GEO tabs now has its own Turn on switch** and a short walkthrough over sample figures, so a report you have never read explains itself once instead of leaving you to work out what it counts. `Analytics`
 
 ## NEW - 19.09.2026
 
