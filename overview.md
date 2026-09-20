@@ -1,6 +1,8 @@
 ---
 title: "How Docsbook publishes documentation machines can cite"
 description: "Docsbook publishes the documentation you already have to a site people and AI assistants can read, and reports what those readers did next."
+status: generated
+version: "0.2"
 ---
 
 # How Docsbook publishes documentation machines can cite
@@ -16,7 +18,7 @@ Most companies with a product, customers and an ad budget still cannot be recomm
 | 1. Connect a source | Reads a GitHub repository, scans a website, or drafts from a sentence about your product | A draft site you can open before you sign in |
 | 2. Index | Parses Markdown and frontmatter, extracts headings, links and metadata, builds a navigable graph | Full-text search, a per-page outline, links between files resolved |
 | 3. Publish | Serves the site at `docsbook.io/{owner}/{repo}`, rendered on the server | A public URL with sitemap, OpenGraph and JSON-LD |
-| 4. Expose to machines | Serves `llms.txt` and an MCP server with 140 tools | Assistants and agents can read your docs, and agents can edit them |
+| 4. Expose to machines | Serves `llms.txt` and an MCP server with 167 tools | Assistants and agents can read your docs, and agents can edit them |
 | 5. Sync | Re-checks GitHub when the site is visited and re-indexes what changed | Pages match the repository with no build step and no CI pipeline |
 | 6. Measure | Records page views, searches, events, feedback and AI usage | Reports on which pages are read and where readers stop |
 
@@ -33,7 +35,7 @@ An AI assistant recommending a product quotes what it can read and verify cheapl
 Three surfaces do this work:
 
 - **`llms.txt`** — a plain-text index of your documentation at the site root, for AI agents that look for one. See [llms.txt](./geo/llms-txt.md).
-- **MCP server** — 140 tools over the Model Context Protocol, so Claude Code, Cursor or ChatGPT can ask the `docsbook_expert` agent what to do and get instructions back, read your pages, search them, and commit changes back. See [MCP server](./agent-ready/mcp.md).
+- **MCP server** — 167 tools over the Model Context Protocol, so Claude Code, Cursor or ChatGPT can give `docsbook_agent` a job and have it read your pages, search them, and commit changes back. See [MCP server](./agent-ready/mcp.md).
 - **AEO markup** — FAQPage, HowTo and speakable JSON-LD generated from your Markdown, for answer boxes and voice assistants. See [AEO](./aeo/README.md).
 
 ## Analytics: which pages are read and where readers stop
@@ -85,3 +87,4 @@ The draft is generated before you sign in, so you can judge the result before co
 [Start free — no credit card](https://docsbook.io/?start=1)
 
 <!-- /widget -->
+
