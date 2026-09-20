@@ -42,6 +42,7 @@ version: "0.7"
 - **Settings, Customize and Analytics no longer show tabs that all led to the same "pick a project" screen.** Viewing an organization, a GitHub organization or your own profile drew every tab of those three sections regardless, even though almost none of them meant anything until you had a specific project open — Usage and Profile, the two that genuinely work at that level, stay on the strip. `Panel`
 - **A failed API key reset no longer takes the whole card with it.** Your key, and the button to try resetting it again, used to disappear behind a bare error sentence the moment a reset attempt failed — the only way back was a full page reload. The key stays visible and the reset button stays clickable now; the error shows alongside them. `Settings`
 - **An Anthropic key in Bring Your Own Key now actually works**, for both the new Test button and real chat/translation answers — it was calling a URL that does not exist, so a valid Anthropic key failed every time regardless of the key itself. `Settings`
+- **The admin chat's corner button no longer covers the New Project form's Create button.** Opening the new-project screen used to leave the floating chat pill sitting directly on top of Create, so finishing the form meant working around it; the button now hides itself on that screen. `AI chat`
 
 ### Changed
 
