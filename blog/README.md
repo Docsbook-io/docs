@@ -1,6 +1,8 @@
 ---
 title: "Docsbook blog: documentation strategy and comparisons"
 description: "Long-form posts on running documentation as a channel — AI search, SEO, analytics, and head-to-head comparisons of the platforms that host it."
+status: generated
+version: "0.2"
 ---
 
 # Docsbook blog: documentation strategy and comparisons
@@ -26,6 +28,10 @@ Head-to-head comparisons. Each one names the cases where the other product wins.
 - [Docusaurus alternatives in 2026: 9 platforms compared](./docusaurus-vs-docsbook.md) — the full field, managed and self-hosted
 - [GitBook vs Docsbook](./gitbook-vs-docsbook.md) — how each one charges, and where the content lives
 - [Mintlify vs Docsbook](./mintlify-vs-docsbook.md) — configuration, AI and multi-language SEO
+- [ReadMe vs Docsbook](./readme-vs-docsbook.md) — interactive API docs vs a hosted Markdown site
+- [Docsio vs Docsbook](./docsio-vs-docsbook.md) — AI-generated-from-URL docs vs Git-native docs
+- [Theneo vs Docsbook](./theneo-vs-docsbook.md) — API-format-specific tooling vs a hosted Markdown site
+- [Docny vs Docsbook](./docny-vs-docsbook.md) — AI-generated, drift-checked docs vs Git-native docs
 - [AI documentation platforms compared](./ai-docs-platform-comparison.md) — what AI is actually implemented across four managed tools
 - [Free documentation hosting compared](./free-docs-hosting-comparison.md) — six ways to pay nothing, and what each costs in time
 - [Docs as code vs a managed platform](./docs-as-code-vs-managed-platform.md) — the same choice stated as a principle
