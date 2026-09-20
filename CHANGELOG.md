@@ -2,7 +2,7 @@
 title: "Docsbook Changelog"
 description: "Release notes for Docsbook — new features, fixes, and improvements to the AI-powered documentation platform, newest first."
 status: generated
-version: "0.3"
+version: "0.4"
 ---
 
 # Releases
@@ -28,12 +28,14 @@ version: "0.3"
 - **A page in Arabic reads right-to-left**, and a screen reader is now told which language it is reading instead of announcing every translated page as English. `Translations`
 - **Publishing one new page no longer sends the whole site's menu back to the original language** while it waits for the next translation run. `Translations`
 - **A project reached at a differently-capitalised address is no longer treated as a different project**, which used to cost it its translated menu without anything looking broken. `Translations`
+- **A conversation started from the floating Ask Docs button now stays docked to the corner it opened from**, as a small widget-style card (a full-width sheet on mobile), for the rest of that conversation. It used to hand off to the same full-viewport view every other entry point uses the moment you sent your first message. Every other way to open chat — the header's Ask AI, a pending search or outline query, the admin toolbar, `?chat=1` — is unchanged. `AI chat`
 
 ### Changed
 
 - **A project paying with its own translation key is no longer stopped when the shared pool runs out.** Bringing your own key is the product's answer to an exhausted shared quota, and it now holds at every step of a translation run rather than only at the last one. `Translations`
 - **`llms.txt` names the languages a site publishes**, and shows what a translated address looks like, so an assistant asked "is there documentation in German" can answer from the one file it is pointed at. `SEO`
 - **Agent runs are billed for the work they did, not for how long they took.** A run that read four pages no longer costs what a run that rewrote the site costs, and a run waiting on your answer no longer bills you for the wait. Pricing is per token with the session fee kept for the per-run machinery; the previous monthly free-run allowance is gone, since under a token meter a free run has no size. `Agents`
+- **Three Analytics reports moved to the tab that answers their question.** AI Views — which assistants and crawlers fetch your docs — sat on the Insights tab, three scrolls below the human-traffic cards it was being compared against and one tab away from the report on whether an AI answer actually names you; the two now sit together. The docs-assistant conversation breakdown sat at the foot of the page-traffic report; it now lives on the Chat tab, beside the KPI tiles that already summarised the same conversations. The per-reader table (who came, when, what they read) moved out of Analytics into Logs. `Analytics`
 
 ## NEW - 19.09.2026
 
