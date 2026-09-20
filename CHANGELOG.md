@@ -30,6 +30,7 @@ version: "0.2"
 
 ### Changed
 
+- **The panel's sidebar now hands you the one line that connects your own AI agent**, in place of the seven-step setup list it used to keep there. Paste it into Claude Code, Cursor or ChatGPT and the rest of the setup can be done from the editor you already work in, instead of coming back to this panel for each step. The checklist is unchanged and still a click away in the chat, and the navigation above it stops being squeezed on a short screen. `Panel`
 - **A project paying with its own translation key is no longer stopped when the shared pool runs out.** Bringing your own key is the product's answer to an exhausted shared quota, and it now holds at every step of a translation run rather than only at the last one. `Translations`
 - **`llms.txt` names the languages a site publishes**, and shows what a translated address looks like, so an assistant asked "is there documentation in German" can answer from the one file it is pointed at. `SEO`
 - **Agent runs are billed for the work they did, not for how long they took.** A run that read four pages no longer costs what a run that rewrote the site costs, and a run waiting on your answer no longer bills you for the wait. Pricing is per token with the session fee kept for the per-run machinery; the previous monthly free-run allowance is gone, since under a token meter a free run has no size. `Agents`
