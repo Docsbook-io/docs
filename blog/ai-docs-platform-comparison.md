@@ -1,6 +1,8 @@
 ---
 title: "AI documentation platforms compared: four managed tools"
 description: "What AI is actually implemented in Docsbook, Mintlify, GitBook and ReadMe — chat, translation, MCP and llms.txt — and where each of the four falls short."
+status: generated
+version: "0.2"
 ---
 
 # AI documentation platforms compared: four managed tools
@@ -14,7 +16,7 @@ We make Docsbook. We list our weaknesses too — see the "where we lose" rows.
 | Feature | Docsbook | Mintlify | GitBook | ReadMe |
 |---|---|---|---|---|
 | AI chat | Built-in, configurable provider | Built-in (Mintlify AI) | AI Search + Assistant | Owlbot AI |
-| Custom AI provider/key | Yes — OpenAI, Anthropic, Gemini, OpenRouter | Limited | No | No |
+| Custom AI provider/key | Yes — OpenAI, Anthropic, Gemini, OpenRouter, Vercel AI Gateway | Limited | No | No |
 | AI translation | 15 languages, separate SEO per locale | None | Add-on | Add-on |
 | MCP server | Yes, OAuth 2.0 | Partial | None | None |
 | llms.txt / llms-full.txt | Auto, per-workspace + platform | Auto | None | None |
@@ -58,7 +60,7 @@ All four use embeddings over your docs and call a frontier model (GPT-4 class) t
 
 What differs:
 
-- **Provider flexibility** — Docsbook lets you bring your own key and pick the model (OpenRouter, OpenAI, Gemini, Anthropic). Others lock the provider.
+- **Provider flexibility** — Docsbook lets you bring your own key and pick the model (OpenRouter, OpenAI, Gemini, Anthropic, Vercel AI Gateway). Others lock the provider.
 - **Hooks** — Docsbook supports pre- and post-LLM hooks: intercept a query, redirect it to your internal API, or post-process the answer. The others have no equivalent.
 - **System prompt** — Docsbook exposes the system prompt for full control. Mintlify partially, the others not.
 
