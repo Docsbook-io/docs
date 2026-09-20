@@ -40,6 +40,8 @@ version: "0.7"
 - **A collaborator invite now links straight to the docs, not only to the sign-in-gated accept page.** Deciding whether to join a project used to mean creating an account first and looking around after; the invite email now also opens the documentation site itself. `Collaboration`
 - **The public Ask AI API now actually answers.** A call authenticated with your API key came back `200 OK` with an empty answer and no error on every question, with nothing in the response to explain why — the endpoint was silently misreading every request as automated traffic before it ever reached the model. It now returns the real answer, citations and follow-up questions your integration expects. `API`
 - **Settings, Customize and Analytics no longer show tabs that all led to the same "pick a project" screen.** Viewing an organization, a GitHub organization or your own profile drew every tab of those three sections regardless, even though almost none of them meant anything until you had a specific project open — Usage and Profile, the two that genuinely work at that level, stay on the strip. `Panel`
+- **A failed API key reset no longer takes the whole card with it.** Your key, and the button to try resetting it again, used to disappear behind a bare error sentence the moment a reset attempt failed — the only way back was a full page reload. The key stays visible and the reset button stays clickable now; the error shows alongside them. `Settings`
+- **An Anthropic key in Bring Your Own Key now actually works**, for both the new Test button and real chat/translation answers — it was calling a URL that does not exist, so a valid Anthropic key failed every time regardless of the key itself. `Settings`
 
 ### Changed
 
