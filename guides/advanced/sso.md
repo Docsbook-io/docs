@@ -1,6 +1,8 @@
 ---
 title: "Restrict who can read your Docsbook documentation site"
 description: "Switch a workspace to private, then gate it with a shared password or your own Google Workspace, Microsoft Entra ID or Okta OIDC provider."
+status: generated
+version: "0.2"
 ---
 
 # Private docs: password and SSO
@@ -20,6 +22,11 @@ Access control calls no AI model, so gating a workspace does not draw on the pro
   everyone else.
 - You can configure a password, SSO, or both at once. If both are set, a reader picks whichever
   they have.
+- If Docsbook hosts your repository for you (you started from a website scan or a written brief,
+  rather than your own GitHub repository), switching to Private also makes that repository private
+  on GitHub — so the Markdown behind your site isn't readable there either. If your site is built
+  from your own GitHub repository, Docsbook never changes that repository's visibility in either
+  direction: only the site's access setting changes.
 
 ## Option 1: password protection
 
@@ -124,8 +131,17 @@ Double-check the client secret and the three endpoint URLs — a typo in any of 
 handshake. Endpoints must be the exact ones your identity provider issues for your tenant/org, not
 generic placeholders.
 
+### Switching to Private is refused
+
+For a workspace whose repository Docsbook hosts for you, going private also has to close that
+repository on GitHub, and that step can be refused — you'll see the reason instead of a silent
+failure. Switching back to Public never fails this way, since a public site is already serving. If
+your project has never published yet, there's no repository to close: your Private setting is
+saved as-is and takes effect the first time you publish.
+
 ## Next steps
 
 - [Manage your documentation site](../getting-started/managing-docs.md) — where the Privacy & Access panel sits among the other settings.
 - [What Docsbook includes and what costs money](./premium.md) — the capabilities around this one, and what draws on the project balance.
 - [MCP tools reference](../../mcp/README.md) — the full argument list for `update_access`.
+
