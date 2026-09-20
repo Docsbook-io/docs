@@ -52,6 +52,7 @@ version: "0.7"
 - **The API key and MCP server address moved from your Profile to the project's Settings.** They are project credentials, not personal ones, so they now sit alongside the domain and the other things set on this project, rather than under the account tab that holds your name, avatar and GitHub link. `Settings`
 - **Logs' feed tabs (Reader events, Translations, and the rest) now carry the same icons Chat, Feedback and Users already had**, and an organization's aggregated Logs view draws them through the identical strip a single project's Logs uses, instead of its own differently-styled row — so the two no longer look like different features. `Logs`
 - **The active-trial banner now warns you'll lose the project, not just how many days are left**, matching the urgency of the paused-project banner: upgrade to keep it running, spelled out for both a dated grant and a clockless trial. `Billing`
+- **The Spend tile in Analytics' headline strip takes up less room now**, so it stays visible next to Visitors and Revenue without competing with them for attention. `Analytics`
 
 ## NEW - 19.09.2026
 
