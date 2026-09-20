@@ -37,6 +37,7 @@ version: "0.7"
 - **Starting a documentation task now tells you it can be watched live and asked about while it runs**, instead of only pointing at a status check. The tool that hands a job over used to read like a script to wait; it now names the live timeline and lets you send the agent a question mid-run rather than only after it asks you one. `Agents`
 - **A collaborator invite now links straight to the docs, not only to the sign-in-gated accept page.** Deciding whether to join a project used to mean creating an account first and looking around after; the invite email now also opens the documentation site itself. `Collaboration`
 - **The public Ask AI API now actually answers.** A call authenticated with your API key came back `200 OK` with an empty answer and no error on every question, with nothing in the response to explain why — the endpoint was silently misreading every request as automated traffic before it ever reached the model. It now returns the real answer, citations and follow-up questions your integration expects. `API`
+- **Settings, Customize and Analytics no longer show tabs that all led to the same "pick a project" screen.** Viewing an organization, a GitHub organization or your own profile drew every tab of those three sections regardless, even though almost none of them meant anything until you had a specific project open — Usage and Profile, the two that genuinely work at that level, stay on the strip. `Panel`
 
 ### Changed
 
@@ -47,6 +48,8 @@ version: "0.7"
 - **The admin chat resolves your project itself, instead of asking first.** Opening it used to start with a dropdown of every workspace you can reach — your own, your organization's, anyone's you collaborate on — before it would take a question. It now picks the project from what you say in the message, or the one you already have open, and shows which one it picked; the corner button is a plain icon now, since everyone who can see it is already signed in as the admin. `AI chat`
 - **The "Connect your agent" sidebar card now reads as one surface, tinted toward your project's own accent color**, instead of a plain white card under a single-colored header strip. Its copy-prompt button also shows the same compact, truncated prompt as the "Onboard your agent" card, instead of the full sentence wrapped across three lines. `Panel`
 - **The API key and MCP server address moved from your Profile to the project's Settings.** They are project credentials, not personal ones, so they now sit alongside the domain and the other things set on this project, rather than under the account tab that holds your name, avatar and GitHub link. `Settings`
+- **Logs' feed tabs (Reader events, Translations, and the rest) now carry the same icons Chat, Feedback and Users already had**, and an organization's aggregated Logs view draws them through the identical strip a single project's Logs uses, instead of its own differently-styled row — so the two no longer look like different features. `Logs`
+- **The active-trial banner now warns you'll lose the project, not just how many days are left**, matching the urgency of the paused-project banner: upgrade to keep it running, spelled out for both a dated grant and a clockless trial. `Billing`
 
 ## NEW - 19.09.2026
 
