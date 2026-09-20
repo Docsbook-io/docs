@@ -3,7 +3,7 @@ title: "Manage and update a published Docsbook documentation site"
 description: "Update pages, undo a publish, control who can read the docs, fix a site that has not refreshed, and work with other people on the same repository."
 tldr: "Docsbook picks up a published site from a GitHub commit automatically — edit a page on GitHub, from your computer with git, or right in the AI chat — with nothing to redeploy."
 status: generated
-version: "0.3"
+version: "0.4"
 ---
 
 # Manage your documentation site
@@ -74,8 +74,8 @@ Deleting a page is the same loop: delete the file, commit, push. The page disapp
 
 For a small correction you need neither GitHub nor a local checkout — edit the page you are reading.
 
-1. Open the project in the Docsbook AI chat with the preview beside it (split view).
-2. Switch the bar above the preview from **Preview** to **Edit**.
+1. Open your docs site.
+2. Press **Editor** in the toolbar to make every block clickable.
 3. Click the block you want to change.
 
 The panel that opens can rewrite the block with AI, edit its text directly, shorten or expand it, turn it into a [content widget](../../content/features/widgets.md), or remove it. Drag a block by its handle to move it; the new order is previewed until you click **Save** or **Revert**.
