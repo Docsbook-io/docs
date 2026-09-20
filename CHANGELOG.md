@@ -2,7 +2,7 @@
 title: "Docsbook Changelog"
 description: "Release notes for Docsbook — new features, fixes, and improvements to the AI-powered documentation platform, newest first."
 status: generated
-version: "0.2"
+version: "0.3"
 ---
 
 # Releases
@@ -13,8 +13,6 @@ version: "0.2"
 
 - **The sidebar lists your GitHub repositories, not only the projects you have already made.** Pick one and the new-project form opens with it chosen, so connecting a repository is a click on the repository itself instead of a trip through a second picker. `Panel`
 - **Your GitHub organizations show up the moment you sign in**, whether or not anything has been filed into them yet, so a new account can open the company it works under instead of only its own profile. `Panel`
-- **What an agent reads from outside your docs is kept now, as figures.** When it checks what a keyword is worth, who links to you, or what Google actually answers for a question your readers ask, the answer lands on a card — monthly searches, referring domains, whether the results page carried an AI answer above the links. You read the finding instead of only "an agent checked this two hours ago", and nobody has to re-run a paid check to see a number that was already fetched. `Analytics`
-- **The same cards name the checks nobody has run yet**, so "nothing has ever looked at who links to these docs" stops being an invisible gap and becomes one line you can act on. `Analytics`
 
 ### Fixed
 
@@ -23,6 +21,7 @@ version: "0.2"
 - **A repository Docsbook cannot read now says so, and names what would fix it.** It used to report the project as having no documentation at all, so an assistant asked about your docs confidently said there were none, and you went looking through your pages instead of at the one access setting that was wrong. `MCP`
 - **Granting Docsbook access to an organization now takes effect straight away.** The switcher only knew about organizations that already held a project, so re-granting access on GitHub looked like it had done nothing. Docsbook asks GitHub directly now, and a fresh grant is on screen at the next sign-in instead of after a wait. `Onboarding`
 - **An empty repository list now says which of the two things is wrong** — no GitHub connected, or a sign-in that cannot see private repositories — and offers the one button that fixes it. Most of a company's repositories are private, so "nothing here" used to read as a grant that had failed. `Panel`
+- **The Assistant, Analytics, Customize and Settings shortcuts on the doc toolbar now open beside your doc instead of replacing it.** Clicking one used to leave the page you were reading and load the dashboard in its place, so getting back meant the browser's back button. Each shortcut opens in its own tab now, and the doc you were reading stays exactly where you left it. `Panel`
 - **A translated page is now that language all the way through.** The menu, the breadcrumbs, the buttons in the header, the subheader tabs and the AI panel's suggested questions were staying in the original language next to a fully translated article — a French page with an English sidebar. They are translated now, and a reader stops having to navigate a site in a language they did not choose. `Translations`
 - **A translated page now tells search and AI engines what it says, in the language it says it in.** Its title, its description, its social card and its structured data were all still English under a French URL, so an assistant asked about your French page quoted the English sentence and a search result listed the English one. All of them are taken from the translated page itself. `Translations`
 - **Ask Docs and the language picker speak the reader's language.** Both were English on thirteen of the fifteen languages we offer, on sites that were otherwise fully translated. The rest of the furniture — "Updated", the theme picker, the menu and AI-panel controls — is translated too. `Translations`
@@ -32,15 +31,9 @@ version: "0.2"
 
 ### Changed
 
-- **The panel's sidebar now hands you the one line that connects your own AI agent**, in place of the seven-step setup list it used to keep there. Paste it into Claude Code, Cursor or ChatGPT and the rest of the setup can be done from the editor you already work in, instead of coming back to this panel for each step. The checklist is unchanged and still a click away in the chat, and the navigation above it stops being squeezed on a short screen. `Panel`
 - **A project paying with its own translation key is no longer stopped when the shared pool runs out.** Bringing your own key is the product's answer to an exhausted shared quota, and it now holds at every step of a translation run rather than only at the last one. `Translations`
 - **`llms.txt` names the languages a site publishes**, and shows what a translated address looks like, so an assistant asked "is there documentation in German" can answer from the one file it is pointed at. `SEO`
 - **Agent runs are billed for the work they did, not for how long they took.** A run that read four pages no longer costs what a run that rewrote the site costs, and a run waiting on your answer no longer bills you for the wait. Pricing is per token with the session fee kept for the per-run machinery; the previous monthly free-run allowance is gone, since under a token meter a free run has no size. `Agents`
-- **The doc toolbar's Assistant, Analytics, Customize and Settings buttons open in a new tab.** Clicking one used to leave the page you were reading; now the dashboard section opens beside it, so you keep your place in the doc. `Panel`
-- **Which AI crawlers read your docs is now on Analytics ▸ GEO**, beside the card that says whether those engines then NAME you. The two halves of one question used to sit two tabs apart, so answering "do the models know us" meant knowing that half the answer lived inside a card called something else. `Analytics`
-- **What readers asked the chat is now one screen**: the eight-tab readout sits under the four figures that summarise the same conversations, instead of at the foot of a page about page traffic. `Analytics`
-- **The readers table is Logs ▸ Users.** It is a record you scan for one person, like the Chat and Feedback logs beside it, rather than a figure you compare against another figure — and every link that used to open it still does. `Analytics`
-- **Every card on the SEO and GEO tabs now has its own Turn on switch** and a short walkthrough over sample figures, so a report you have never read explains itself once instead of leaving you to work out what it counts. `Analytics`
 
 ## NEW - 19.09.2026
 
