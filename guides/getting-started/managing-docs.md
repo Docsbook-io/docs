@@ -1,6 +1,8 @@
 ---
 title: "Manage and update a published Docsbook documentation site"
 description: "Update pages, undo a publish, control who can read the docs, fix a site that has not refreshed, and work with other people on the same repository."
+status: generated
+version: "0.2"
 ---
 
 # Manage your documentation site
@@ -213,7 +215,9 @@ Two reports answer most questions about a page: [Web analytics](../../analytics/
 
 ## Delete a workspace
 
-**Settings** → **Delete Workspace** removes the documentation site and every setting on it. It cannot be undone.
+**Settings** → **Project** → **Danger Zone** deletes the project — its docs, analytics, translations and collaborators. It cannot be undone.
+
+Only the owner can do this. A collaborator with Full access — including one who can [move the project](#work-with-other-people) — cannot delete it. To confirm, type the repository's own name; there is no plain "are you sure" dialog.
 
 Your GitHub repository is untouched. The markdown stays where it always was, so deleting a workspace loses configuration, not content.
 
