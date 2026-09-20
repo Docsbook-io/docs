@@ -3,7 +3,7 @@ title: "Docsbook FAQ: cost, limits, sync and data ownership"
 description: "Answers to what Docsbook costs, what happens when a balance runs out, who can read your site, how GitHub sync works, and what you keep if you leave."
 tldr: "Docsbook meters four kinds of AI work — reader chat, admin and agent calls, translation and indexing — plus bot crawling past a monthly allowance; hosting, GitHub sync, search and custom domains are never metered, and current prices are always at docsbook.io/pricing."
 status: generated
-version: "0.3"
+version: "0.4"
 ---
 
 # Docsbook FAQ: cost, limits, sync and data ownership
@@ -186,7 +186,7 @@ You can change it — see the next answer.
 
 ### Can I make my documentation private?
 
-Yes. Switch the workspace to **private** and readers meet an unlock screen instead of your content, gated either by a shared password or by your own SSO identity provider. Structure, pages and the search index stay hidden until a reader unlocks it, and the owner always has full access.
+Yes. Switch the workspace to **private** and readers meet an unlock screen instead of your content, gated either by a shared password or by your own SSO identity provider. Structure, pages and the search index stay hidden until a reader unlocks it, and the owner always has full access. If Docsbook hosts your repository for you, going private also closes that repository on GitHub — and the switch is refused, with a reason, if that step fails, rather than leaving the repository open silently.
 
 See [Private docs: password and SSO](./guides/advanced/sso.md) for setup.
 
@@ -332,4 +332,5 @@ Generate a draft from your own repository or website and judge the result before
 [Start free — no credit card](https://docsbook.io/?start=1)
 
 <!-- /widget -->
+
 

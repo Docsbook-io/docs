@@ -3,7 +3,7 @@ title: "Docsbook concepts: workspace, project balance, indexing"
 description: "Definitions of the terms Docsbook uses — workspace, project balance, indexing, source of truth, draft, sync, and the surfaces machines read your docs through."
 tldr: "In Docsbook, a workspace is one documentation site and its settings — backed by a GitHub repository, or one Docsbook hosts for you — with a project balance that only AI work draws down — reader chat, admin and agent calls, translation and indexing."
 status: generated
-version: "0.2"
+version: "0.3"
 ---
 
 # Docsbook concepts: workspace, project balance, indexing
@@ -117,7 +117,7 @@ Public is what makes the site indexable by Google and quotable by AI assistants.
 
 ### Private site
 
-A **private site** shows an unlock screen instead of your content to everyone but the owner, gated by a shared password or by your own SSO identity provider. Structure, pages and the search index stay hidden until a reader unlocks it.
+A **private site** shows an unlock screen instead of your content to everyone but the owner, gated by a shared password or by your own SSO identity provider. Structure, pages and the search index stay hidden until a reader unlocks it. For a workspace whose repository Docsbook hosts for you, going private also closes that repository on GitHub; for a workspace built from your own GitHub repository, Docsbook never changes that repository's visibility either way.
 
 The owner always has full access regardless of visibility. See [Private docs: password and SSO](./guides/advanced/sso.md).
 

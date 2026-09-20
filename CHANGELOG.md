@@ -1,6 +1,8 @@
 ---
 title: "Docsbook Changelog"
 description: "Release notes for Docsbook — new features, fixes, and improvements to the AI-powered documentation platform, newest first."
+status: generated
+version: "0.6"
 ---
 
 # Releases
@@ -11,25 +13,32 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 - **The sidebar lists your GitHub repositories, not only the projects you have already made.** Pick one and the new-project form opens with it chosen, so connecting a repository is a click on the repository itself instead of a trip through a second picker. `Panel`
 - **Your GitHub organizations show up the moment you sign in**, whether or not anything has been filed into them yet, so a new account can open the company it works under instead of only its own profile. `Panel`
+- **You can watch a documentation task work, step by step, while it is still working.** A run takes minutes, and the only sign of life was one line of progress that the next one overwrote, so "what is it doing right now" had no answer anyone could check and an assistant asked it would describe what an agent probably does. Every action a task takes is now a line in an ordered timeline you can follow as it happens: the pages it reads, the pages it writes, the translations it runs, how long each took and whether it worked. `Agents`
+- **Anyone can see the documentation work done on a public project, with no account and no token.** The project's own endpoint now answers what the agent has been doing on it, so a reader deciding whether your docs are maintained can look instead of guess. It shows the work and not the business: what you asked for, what the agent reported back to you, your analytics and your settings are not in it, and a private project's work stays private. `MCP`
 
 ### Fixed
 
+- **A private site whose repository Docsbook hosts is now actually private everywhere.** Switching visibility to Private closed the site behind an unlock screen, but if Docsbook hosts your documentation's repository for you, that repository could still sit open on GitHub — readable and cloneable by anyone, outside your own GitHub account entirely. Going private now closes that repository too, and refuses the change with a reason if it can't. A site built from your own GitHub repository was never affected: Docsbook has never changed your repository's visibility either way. `Privacy & access`
 - **Documentation kept in a private repository now opens.** Granting the Docsbook GitHub App was enough to let Docsbook publish to a repository but never to read one, so a private project sat on "your docs are deploying" and its AI answered as though the pages did not exist. Docsbook now reads with the installation you granted, and a private site serves without anyone handing over a personal access token. `Sources`
 - **A repository Docsbook cannot read now says so, and names what would fix it.** It used to report the project as having no documentation at all, so an assistant asked about your docs confidently said there were none, and you went looking through your pages instead of at the one access setting that was wrong. `MCP`
 - **Granting Docsbook access to an organization now takes effect straight away.** The switcher only knew about organizations that already held a project, so re-granting access on GitHub looked like it had done nothing. Docsbook asks GitHub directly now, and a fresh grant is on screen at the next sign-in instead of after a wait. `Onboarding`
 - **An empty repository list now says which of the two things is wrong** — no GitHub connected, or a sign-in that cannot see private repositories — and offers the one button that fixes it. Most of a company's repositories are private, so "nothing here" used to read as a grant that had failed. `Panel`
+- **The Assistant, Analytics, Customize and Settings shortcuts on the doc toolbar now open beside your doc instead of replacing it.** Clicking one used to leave the page you were reading and load the dashboard in its place, so getting back meant the browser's back button. Each shortcut opens in its own tab now, and the doc you were reading stays exactly where you left it. `Panel`
 - **A translated page is now that language all the way through.** The menu, the breadcrumbs, the buttons in the header, the subheader tabs and the AI panel's suggested questions were staying in the original language next to a fully translated article — a French page with an English sidebar. They are translated now, and a reader stops having to navigate a site in a language they did not choose. `Translations`
 - **A translated page now tells search and AI engines what it says, in the language it says it in.** Its title, its description, its social card and its structured data were all still English under a French URL, so an assistant asked about your French page quoted the English sentence and a search result listed the English one. All of them are taken from the translated page itself. `Translations`
 - **Ask Docs and the language picker speak the reader's language.** Both were English on thirteen of the fifteen languages we offer, on sites that were otherwise fully translated. The rest of the furniture — "Updated", the theme picker, the menu and AI-panel controls — is translated too. `Translations`
 - **A page in Arabic reads right-to-left**, and a screen reader is now told which language it is reading instead of announcing every translated page as English. `Translations`
 - **Publishing one new page no longer sends the whole site's menu back to the original language** while it waits for the next translation run. `Translations`
 - **A project reached at a differently-capitalised address is no longer treated as a different project**, which used to cost it its translated menu without anything looking broken. `Translations`
+- **A conversation started from the floating Ask Docs button now stays docked to the corner it opened from**, as a small widget-style card (a full-width sheet on mobile), for the rest of that conversation. It used to hand off to the same full-viewport view every other entry point uses the moment you sent your first message. Every other way to open chat — the header's Ask AI, a pending search or outline query, the admin toolbar, `?chat=1` — is unchanged. `AI chat`
+- **The install link every agent task uses to enable its live timeline can no longer be taken over by a project name.** That link reached the install script by a coincidence of routing rather than by design; a project created with that exact name would have silently broken every agent task's step-by-step timeline afterward, with nothing anywhere saying why. That name is now reserved and can never belong to a project, the same way a handful of other system paths already are. `Agents`
 
 ### Changed
 
 - **A project paying with its own translation key is no longer stopped when the shared pool runs out.** Bringing your own key is the product's answer to an exhausted shared quota, and it now holds at every step of a translation run rather than only at the last one. `Translations`
 - **`llms.txt` names the languages a site publishes**, and shows what a translated address looks like, so an assistant asked "is there documentation in German" can answer from the one file it is pointed at. `SEO`
 - **Agent runs are billed for the work they did, not for how long they took.** A run that read four pages no longer costs what a run that rewrote the site costs, and a run waiting on your answer no longer bills you for the wait. Pricing is per token with the session fee kept for the per-run machinery; the previous monthly free-run allowance is gone, since under a token meter a free run has no size. `Agents`
+- **Three Analytics reports moved to the tab that answers their question.** AI Views — which assistants and crawlers fetch your docs — sat on the Insights tab, three scrolls below the human-traffic cards it was being compared against and one tab away from the report on whether an AI answer actually names you; the two now sit together. The docs-assistant conversation breakdown sat at the foot of the page-traffic report; it now lives on the Chat tab, beside the KPI tiles that already summarised the same conversations. The per-reader table (who came, when, what they read) moved out of Analytics into Logs. `Analytics`
 
 ## NEW - 19.09.2026
 
@@ -203,3 +212,4 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 ## Launch — May–June 2026
 
 Docsbook launched in May 2026 as a documentation site generated straight from a GitHub repository: hosting, theming, translations, an SEO panel, and an MCP server for AI-assisted editing. June added the admin AI chat (`/chat`) with full read/write access to a project's docs, sign-in beyond GitHub (Google, Apple, email), and the first pricing plans.
+

@@ -1,7 +1,9 @@
 ---
 title: "Read the analytics panel: what each figure is, and is not, evidence of"
 description: "Every tile, card and tab in the Docsbook analytics panel — what it measures, where the number comes from, what it cannot tell you, and which decision it supports."
-tldr: "Seven tiles across the top, four breakdown cards under them, and an AI-crawler card below those. Six of the seven tiles are properties of a visit and are computed from one reconstructed event stream, so they cannot disagree; the seventh, Spend, is read off the billing ledger and is the only figure here whose zero is a measurement rather than a gap."
+tldr: "Seven tiles across the top and four breakdown cards under them. Six of the seven tiles are properties of a visit and are computed from one reconstructed event stream, so they cannot disagree; the seventh, Spend, is read off the billing ledger and is the only figure here whose zero is a measurement rather than a gap."
+status: generated
+version: "0.2"
 ---
 
 # Analytics overview
@@ -119,7 +121,7 @@ Filters stack and are removed by clicking their chip. Cards and tiles apply the
 same predicate to the same reconstructed visits, which is what stops "United
 States" meaning one thing in a card and another in the chart above it.
 
-Tabs counted per **event** rather than per visit — Headings, UTM, AI Views, CTA
+Tabs counted per **event** rather than per visit — Headings, UTM, CTA
 Clicks, Feedback and Searches — cannot be cut this way. They say so above their
 rows while a filter is on, instead of showing unfiltered numbers under a
 filtered heading.
@@ -157,22 +159,11 @@ the three sites it actually consists of, with their shares — an organic-search
 row that is almost entirely Google and one spread across five engines are
 different situations.
 
-### AI Views
-
-Three tabs, one for each reason a crawler came, because the three support
-completely different decisions:
-
-| Tab | What it is | The decision it supports |
-|---|---|---|
-| Answers | A live fetch made while someone was being answered | Your page was quoted at a person. Worth a link and a current price on it |
-| Indexing | Building the corpus an assistant later retrieves from | The precondition for ever being cited |
-| Training | Bulk collection for model training | Only one: whether to allow it |
-
-Within each tab you can group by **Pages** (which pages assistants read) or by
-**Crawlers** (one line per bot, labelled with its provider). Classification is
-by User-Agent against a table of 23 named bots, first match wins — so
-`Applebot-Extended` is never swallowed by `Applebot` — and an unrecognised AI
-bot is treated as training, the claim that promises you the least.
+**AI Views moved off this page on 20 September 2026.** The crawler-traffic
+breakdown — which pages assistants and search crawlers fetched, and why — now
+sits next to how often these docs get named in an AI-generated answer, so the
+two questions read together instead of three scrolls apart. Its new home is
+not yet written up on this site.
 
 ### Time ranges
 
