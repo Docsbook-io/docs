@@ -1,7 +1,9 @@
 ---
 title: "Create your first Docsbook site from a GitHub repo"
 description: "Fork an example repository, connect it to Docsbook, edit a page on GitHub, and watch the published documentation site update — no coding needed."
-tldr: "Docsbook publishes a documentation site straight from a GitHub repository: fork the example repo, connect it at docsbook.io/connect, edit a page on GitHub, and the published site updates on its own."
+tldr: "Docsbook publishes a documentation site straight from a GitHub repository: fork the example repo, sign in to Docsbook, then click that repository in the list — the project is created from the click — and the published site updates whenever you edit a page on GitHub."
+status: generated
+version: "0.2"
 ---
 
 # Create your first documentation site
@@ -67,13 +69,11 @@ You now have a repository holding example documentation, ready to publish.
 
    > Docsbook reads your repository files. It cannot modify or delete anything in your repository unless you ask it to.
 
-4. Docsbook opens your dashboard with the new-project form on the right. Find the repository you forked in the list and click it.
+4. Docsbook opens your dashboard with your repositories listed on the right. Find the repository you forked in the list and click it.
 
    ![Docsbook repository list with one repository selected](./images/select-repo.png)
 
-   Everything under the list — your website address, files, screenshots, integrations and a template — is optional. You can add them now or later.
-
-5. Click **Create**. Docsbook builds your site and opens it.
+   Docsbook creates the project from that click and opens it straight away — there is no form to fill in first and no separate button to press.
 
 Your documentation is now live at:
 
