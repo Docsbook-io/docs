@@ -3,7 +3,7 @@ title: "MCP server: run your documentation from a coding agent"
 description: "Connect Claude Code, Cursor, Codex or any MCP client to Docsbook and read, write, measure and configure your documentation from inside the editor."
 tldr: "Docsbook's remote MCP server exposes 167 typed tools over one OAuth-protected endpoint. Since 2026-09-18 your own connected agent meets a small owner surface — orientation, reading your own docs, and giving a job to `docsbook_agent` — and delegates everything else (writing docs, translations, webhooks, settings, analytics) to that background worker instead of calling it directly. Calls are billed per call against the project's balance by billing class; discovery is free."
 status: generated
-version: "0.2"
+version: "0.3"
 ---
 
 # MCP Server
@@ -440,7 +440,7 @@ The current amount for every class and every individual tool is on the tool's ow
 
 **When the balance runs out**, a metered call is refused before it runs, and the refusal names which project ran out, what the call draws, what is left, and where to top that project up. Nothing is granted to a balance on a schedule, though you can set up a monthly payment of your own on the billing screen, which tops the same balance up each month. Free discovery keeps working, so your agent can still find out what happened.
 
-**A call that fails is still charged** — the work happened, and the answer says so. A call the server never managed to run is not charged.
+**A call that fails is still charged** — the work happened, and the answer says so: a failed call comes back `ok: false` with `accepts` (the arguments that tool actually declares), `you_sent`, `missing_required`, and one `next` line naming the fix, so a wrong or misnamed argument reads as a shape to correct rather than as the tool being broken. A call the server never managed to run is not charged.
 
 **You can read the calls line by line.** The project's **Agent** section reads them as the conversation they were: one continuous stream, broken only by the day, with each call on its own line saying what it was for, what it was called with and what came back — so you can tell whether an agent is changing anything without opening a single row. Clicking one unfolds the full result, the arguments it was given and who made the call. The same calls also appear in the [Feeds panel](../reference/webhooks.md#mcp-tool-calls-in-the-feed) when you want them as a filterable table instead, narrowed by billing class. Calls that were about no single project (describing the server, listing your projects, creating one) belong to your account and appear in neither; discovery calls leave no row at all.
 
@@ -468,6 +468,8 @@ When a call is refused, the server returns a structured error naming the reason 
 **A call was refused for an empty balance — what happened?** The refusal names the project, what the call draws, and what is left. Reconnecting or retrying will not fix it; top up the project's balance from the panel. Discovery calls (`get_info`, `find_skill`, listing and creating workspaces) are never metered and keep working regardless.
 
 **Where do I go if a call is refused for a reason other than balance?** The server returns a structured error naming the reason — a missing scope on a read-only token, `NO_GITHUB_ACCESS` when Docsbook's own credential cannot reach a repository in your own GitHub account, or a private site. See [MCP server security](./mcp-security.md) for what each token scope can and cannot do.
+
+**My call came back `ok: false` — what does that mean?** The tool ran and rejected what you sent it — almost always a missing or misnamed argument, not a broken tool. Compare the response's `accepts` list (the arguments that tool actually declares) against `you_sent` and `missing_required`, and follow the one `next` line; a call that still fails once it matches `accepts` is the one worth reporting to Docsbook.
 
 <!-- widget:cards plain cols=2 -->
 

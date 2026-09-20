@@ -2,6 +2,7 @@
 title: "Documentation versioning: patterns, and how Docsbook handles it"
 description: "The common ways teams version their docs — URL-path versions, a version switcher, branch-per-version — and which one to use with Docsbook, which publishes one version per branch."
 tldr: "Docsbook publishes one version of your documentation — the current state of the connected branch — with no built-in switcher; run several versions by creating one workspace per branch or repository."
+status: review
 ---
 
 # Documentation versioning

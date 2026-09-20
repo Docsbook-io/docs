@@ -2,6 +2,8 @@
 title: "How Docsbook builds the head, canonical and sitemap of a page"
 description: "The resolution orders behind every SEO signal Docsbook emits: title, description, canonical, hreflang, cards, robots, sitemap, structured data and render mode."
 tldr: "Every doc page gets a title (frontmatter → H1 → filename, brand appended once), a description (frontmatter → cleaned first paragraphs, 160 and 400 characters), one canonical URL, an hreflang set containing only genuinely translated locales, an OpenGraph and X card with a generated 1200×630 image, robots directives, a JSON-LD graph, and a sitemap entry with a real commit date as lastmod."
+status: generated
+version: "0.2"
 ---
 
 # How Docsbook builds the head of a page
@@ -32,8 +34,10 @@ template from appending a second brand copy.
 
 On a translated page the title comes from the cached translated metadata, and
 otherwise from the first `<h1>` of the stored translated HTML — so a Chinese page
-ships a Chinese title. The description is deliberately left in the source language
-there: Docsbook does not invent a translation for it.
+ships a Chinese title. The meta description, the OpenGraph/X card descriptions, the
+JSON-LD `headline` and the `BreadcrumbList` segment names are recovered from that
+same translated page too, rather than left in the source language, and the page's
+`<html lang>` attribute and text direction (`dir`) match the language being served.
 
 ## What is the meta description, and what is stripped out of it?
 
