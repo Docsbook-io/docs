@@ -2,7 +2,7 @@
 title: "Docsio vs Docsbook: pricing, setup and AI search compared"
 description: "Docsio and Docsbook compared on how each one generates and hosts your docs, what AI search features are free vs paid, and pricing — including the cases where Docsio is the better pick."
 status: generated
-version: "0.1"
+version: "0.2"
 ---
 
 # Docsio vs Docsbook: pricing, setup and AI search compared
@@ -65,6 +65,8 @@ Docsio is a strong choice if you are starting from nothing and want an AI to tur
 
 ## Next steps
 
+<!-- widget:cards plain cols=2 arrow=hover -->
 - [AI documentation platforms compared](./ai-docs-platform-comparison.md) — the same question across four managed platforms
 - [ReadMe vs Docsbook](./readme-vs-docsbook.md) — the same comparison against an API-reference-first competitor
 - [Best documentation platforms for startups in 2026](./best-docs-platforms-for-startups-2026.md) — the wider field of platforms a startup might weigh against Docsbook
+<!-- /widget -->
