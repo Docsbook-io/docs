@@ -3,7 +3,7 @@ title: "MCP server: run your documentation from a coding agent"
 description: "Connect Claude Code, Cursor, Codex or any MCP client to Docsbook and read, write, measure and configure your documentation from inside the editor."
 tldr: "Docsbook's remote MCP server exposes 167 typed tools over one OAuth-protected endpoint. Since 2026-09-18 your own connected agent meets a small owner surface — orientation, reading your own docs, and giving a job to `docsbook_agent` — and delegates everything else (writing docs, translations, webhooks, settings, analytics) to that background worker instead of calling it directly. Calls are billed per call against the project's balance by billing class; discovery is free."
 status: generated
-version: "0.3"
+version: "0.4"
 ---
 
 # MCP Server
@@ -47,6 +47,12 @@ You can also reach the server from inside your own project: open the admin panel
 A single tool still has its own page, and the page still has an address: the URL carries the tool, so you can refresh it, bookmark it, or send it to a colleague and land them on the same tool. Everything on it is about that one tool. Its arguments are a form with a **Run** button that makes a real call against this project, and the button carries the price before the money moves. Under that is its **call history**, drawn by the same **Feeds** table you read everywhere else, narrowed to this one tool: one line per call, and expanding a row shows the call in full — what went in, what came back, who asked (your own client, an outside agent, a webhook delivery), how long it took, what it was priced at, and what actually left your balance. Under that sits one worked example to copy into your own client; what runs from inside Docsbook is the call, made by you or your agent — nothing here calls itself.
 
 ### Claude Code
+
+Claude Code is one name over two MCP stores that do not read each other, so which lane applies depends on the surface, not the client name.
+
+**Desktop app and web (claude.ai)** — MCP servers come from the claude.ai connector store, not from a config file. Open **Settings → Connectors**, find Docsbook (search if it is not on the first screen) and click **Connect**. Running the terminal command below on these surfaces writes a config file they never read, so it succeeds and connects nothing.
+
+**Terminal (CLI)** — reads a local config file, and this command writes it:
 
 ```bash
 claude mcp add --transport http docsbook https://docsbook.io/api/mcp/server
