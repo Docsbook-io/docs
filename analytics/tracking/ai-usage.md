@@ -2,6 +2,8 @@
 title: "What your AI actually cost, and what it was spent on"
 description: "How Docsbook meters AI work: what is billed, how a call is priced, how it is attributed to a project balance, and what breakdowns the owner can read per model, route and tool."
 tldr: "Every AI call and every metered MCP tool call writes a ledger row against one project's balance. Cost is the provider's own reported figure where the provider reports one, and a per-model rate card otherwise — never an estimate from character counts. Money is stored in millicents so sub-cent calls are not rounded to nothing, and what leaves the wallet is whole cents with the remainder carried."
+status: generated
+version: "0.2"
 ---
 
 # AI usage and cost
@@ -21,8 +23,9 @@ call writes its own row naming the tool and its billing class.
 
 From those rows you can read spend **by model**, **by surface**, **by budget
 category**, **by conversation**, **by translated language and page**, and **by
-MCP tool** — plus a per-day series for each. The headline **Spend** tile on the
-[analytics overview](./overview.md) is the same two ledgers summed.
+MCP tool** — plus a per-day series for each. Summed, they are your total spend;
+the [analytics overview](./overview.md) headline strip no longer carries that
+total as a tile, so this page and the Usage view are where to read it.
 
 Reading any of this is free. Answering a reader is not.
 
@@ -108,10 +111,10 @@ then any one-time balance.
 
 **A consequence you can see on screen.** The column recording what actually
 left the wallet on *that* call is `0` on nearly every row, because sub-cent
-calls only move the carry. Newer surfaces — the Spend tile and the Usage view —
-therefore rebuild each row's list price from the provider cost and the frozen
-markup instead of summing that column, while two older screens still sum it.
-Where those two disagree, the rebuilt figure is the more honest one.
+calls only move the carry. The newer Usage view therefore rebuilds each row's
+list price from the provider cost and the frozen markup instead of summing
+that column, while older screens still sum it. Where the two disagree, the
+rebuilt figure is the more honest one.
 
 ### What happens when the balance runs out
 
@@ -190,9 +193,9 @@ separate day figure — both are read over the window already on screen.
   deliberately high.** A model outside the catalogue is priced pessimistically
   on purpose — under-charging a customer for a model nobody priced is the worse
   error — so an estimated row is an upper bound, not a measurement.
-- **Two older screens still sum the deducted-cents column** and therefore
-  under-report projects whose calls are mostly sub-cent. The Spend tile and the
-  Usage view rebuild list price instead. If two spend figures disagree, that is
+- **Older screens still sum the deducted-cents column** and therefore
+  under-report projects whose calls are mostly sub-cent. The Usage view
+  rebuilds list price instead. If two spend figures disagree, that is
   the reason.
 - **Savings is an estimate and is labelled as one.** It multiplies answered
   conversations by an industry-default support ticket cost. It is not your
@@ -224,20 +227,18 @@ and rates are on the [pricing page](https://docsbook.io/pricing).
 
 ## Where to look
 
-1. **Spend over time, next to your traffic** — the Spend tile on the
-   [analytics overview](./overview.md).
-2. **What the money went on** — the Usage view: AI by surface, category and
+1. **What the money went on** — the Usage view: AI by surface, category and
    model; MCP by tool and class; events priced but not charged. Windows are
    24 hours, 7 days and 30 days.
-3. **What your chat was asked and what it cost** — the **Chat** row in the
+2. **What your chat was asked and what it cost** — the **Chat** row in the
    admin sidebar; open a conversation for its transcript and its own
    cost breakdown.
-4. **From an agent** — `get_ai_usage` over
+3. **From an agent** — `get_ai_usage` over
    [MCP](../../mcp/README.md).
 
 ## Related
 
-- [Analytics overview](./overview.md) — the Spend tile and how it behaves under filters
+- [Analytics overview](./overview.md) — the six headline tiles and how they behave under filters
 - [How measurement works](../how-measurement-works.md) — retention and where the data lives
 - [Tracked events](./events.md) — the chat events behind these conversations
 - [AI chat](../../ai-chat/chat.md) — choosing a model and a provider

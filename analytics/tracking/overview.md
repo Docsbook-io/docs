@@ -1,9 +1,9 @@
 ---
 title: "Read the analytics panel: what each figure is, and is not, evidence of"
 description: "Every tile, card and tab in the Docsbook analytics panel — what it measures, where the number comes from, what it cannot tell you, and which decision it supports."
-tldr: "Seven tiles across the top and four breakdown cards under them. Six of the seven tiles are properties of a visit and are computed from one reconstructed event stream, so they cannot disagree; the seventh, Spend, is read off the billing ledger and is the only figure here whose zero is a measurement rather than a gap."
+tldr: "Six tiles across the top and four breakdown cards under them. All six are properties of a visit and are computed from one reconstructed event stream, so they cannot disagree. Spend came off this strip on 20 September 2026 — its ledger now lives on its own page."
 status: generated
-version: "0.2"
+version: "0.3"
 ---
 
 # Analytics overview
@@ -19,7 +19,7 @@ own team are excluded, how long data is kept — are in
 ## What you get
 
 One page that answers the questions an owner actually has, from one source.
-Six of the seven headline tiles are properties of a **visit**, and all six are
+All six headline tiles are properties of a **visit**, and all six are
 derived from the same reconstructed event stream rather than from six
 independent counters — so bounce rate here and bounce rate in the outcome split
 are the same computation, not two numbers with one name. Reading any of it
@@ -27,13 +27,12 @@ costs nothing against your project's balance, and none of it is gated by plan.
 
 ## How it is built
 
-### The seven tiles
+### The six tiles
 
 | Tile | Definition | Chartable |
 |---|---|---|
 | Visitors | Distinct visitors with at least one human visit in the window, split new / returning | yes |
 | Revenue | Conversions × your average product price | **no** |
-| Spend | What left this project's balance — AI calls plus MCP calls | yes |
 | Conversion rate | Conversions ÷ visitors | yes |
 | Revenue/visitor | Revenue ÷ visitors | yes |
 | Bounce rate | Visits classified as a bounce ÷ visits | yes |
@@ -57,24 +56,16 @@ an owner acts on without checking how it was produced. Both live in
 [Branding](../../design/style/branding.md). A stored price of `0` is refused by
 the validator for the same reason.
 
-**Spend is the exception on every count.** It is money leaving rather than a
-property of a visit, it comes from the billing ledger rather than the event
-stream, and it is the one figure here whose `0` is a real reading. Consequences
-worth knowing:
-
-- **It is not netted.** A top-up does not make it dip; Spend answers "what did
-  this project cost me", and that question has one direction.
-- **It ignores your filters.** A filter cuts *visits*, and a translation run is
-  not a visit — "United States" has nothing to say about an embedding job.
-- **It survives an empty window.** A translation run at 3am is a real bill with
-  no reader behind it, and that is often the most useful thing this tile has to
-  show. Every other tile prints "no visits to measure" over such a window.
-- **Its arrow has no colour.** Spend rising because readers are asking more is
-  the product working; spend rising because a job is stuck is a fire. Every
-  other delta is green for good news — bounce rate going *down* is green — and
-  this one stays grey, because the panel has no evidence for which case it is.
-- **An unreadable ledger disables the tile** and says so, rather than showing
-  `$0`. What it counts is in [AI usage and cost](./ai-usage.md).
+**Spend came off this strip on 20 September 2026.** It used to be the
+exception on every count here — money leaving rather than a property of a
+visit, read from the billing ledger rather than the event stream, and the one
+figure whose `0` was a real reading rather than "no visits to measure." That
+made it behave unlike the other six in ways worth knowing if you filed
+against it before: it wasn't netted by a top-up, it ignored visit filters, it
+survived an empty window, and its arrow carried no colour because the panel
+had no way to tell a busy day from a stuck job. None of that applies to the
+six tiles here now. What Spend counts and where to read it today is
+[AI usage and cost](./ai-usage.md).
 
 Each tile also shows the change against the immediately preceding window of the
 same length. Growth from a previous value of zero draws **no arrow at all**: it
@@ -182,7 +173,7 @@ points. In Now the tiles and chart refresh every 5 seconds and the cards every
 30; switch to any other range and refreshing stops, so a historical range you
 are not watching is never silently refetched under you.
 
-**Online now** — readers active in the last 5 minutes — is not one of the seven
+**Online now** — readers active in the last 5 minutes — is not one of the six
 tiles. It is a right-now gauge rather than a total over the window you picked,
 so it sits as its own chip beside the panel title; putting it in the strip
 would invite comparing it against a period it does not belong to.
@@ -242,7 +233,7 @@ last, which it remembers across visits.
 
 - [How measurement works](../how-measurement-works.md) — visitor identity, bot and owner filtering, retention, privacy
 - [Tracked events](./events.md) — every event behind these figures
-- [AI usage and cost](./ai-usage.md) — what the Spend tile is counting
+- [AI usage and cost](./ai-usage.md) — what your AI and MCP calls cost, now that spend has moved off this page
 - [Read time](../reports/read-time.md) — the Reading time ranking, in full
 - [Countries](../reports/countries.md) — the Countries and Languages tabs as their own report
 - [Goals and funnels](../reports/goals-and-funnels.md) — measuring an outcome you declared rather than a default
