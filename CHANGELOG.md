@@ -36,6 +36,7 @@ version: "0.7"
 - **The install link every agent task uses to enable its live timeline can no longer be taken over by a project name.** That link reached the install script by a coincidence of routing rather than by design; a project created with that exact name would have silently broken every agent task's step-by-step timeline afterward, with nothing anywhere saying why. That name is now reserved and can never belong to a project, the same way a handful of other system paths already are. `Agents`
 - **Starting a documentation task now tells you it can be watched live and asked about while it runs**, instead of only pointing at a status check. The tool that hands a job over used to read like a script to wait; it now names the live timeline and lets you send the agent a question mid-run rather than only after it asks you one. `Agents`
 - **A collaborator invite now links straight to the docs, not only to the sign-in-gated accept page.** Deciding whether to join a project used to mean creating an account first and looking around after; the invite email now also opens the documentation site itself. `Collaboration`
+- **The public Ask AI API now actually answers.** A call authenticated with your API key came back `200 OK` with an empty answer and no error on every question, with nothing in the response to explain why — the endpoint was silently misreading every request as automated traffic before it ever reached the model. It now returns the real answer, citations and follow-up questions your integration expects. `API`
 
 ### Changed
 
