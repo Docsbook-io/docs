@@ -74,7 +74,7 @@ If any of those has no answer, the fix is a measurement, not a redesign.
 
 ## What does Docsbook cost?
 
-Docsbook sells plans, not pay-as-you-go. AI usage is still metered per project — each project carries its own balance, and only AI usage draws it down; the site itself, its hosting, the reading and the search do not. Current plans and numbers live on [docsbook.io/pricing](https://docsbook.io/pricing), which is generated from the live pricing constants on every request; a price copied into a blog post goes stale silently, so read it there.
+Docsbook is pay-as-you-go rather than tiered. Each project carries its own balance, and that balance is spent on AI usage — the site itself, its hosting, the reading and the search do not draw it down. Current numbers live on [docsbook.io/pricing](https://docsbook.io/pricing), which is generated from the live pricing constants on every request; a price copied into a blog post goes stale silently, so read it there.
 
 <!-- widget:cta -->
 

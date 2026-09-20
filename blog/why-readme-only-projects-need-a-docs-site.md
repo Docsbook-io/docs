@@ -110,7 +110,7 @@ Three steps with Docsbook:
 2. Sign in with GitHub
 3. Paste `github.com/yourorg/yourrepo`
 
-Site live at `docsbook.io/yourorg/yourrepo`. No config files, no CI/CD — current plans are at [docsbook.io/pricing](https://docsbook.io/pricing).
+Site live at `docsbook.io/yourorg/yourrepo`. No config files, no CI/CD — current numbers are at [docsbook.io/pricing](https://docsbook.io/pricing).
 
 If you have only a README, you get a one-page docs site. If you have `docs/`, you get a multi-page site with a sidebar.
 

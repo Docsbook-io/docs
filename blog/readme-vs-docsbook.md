@@ -1,6 +1,7 @@
 ---
 title: "ReadMe vs Docsbook: pricing, AI and setup compared"
 description: "ReadMe and Docsbook compared on API reference tooling, AI features, translation and pricing — including the cases where ReadMe is the better pick."
+tldr: "ReadMe is built around an interactive API explorer where a developer authenticates and runs live calls inside the docs; Docsbook is built around AI discoverability — GitHub sync on every push, an MCP server, llms.txt and 15 separately indexed languages."
 status: generated
 version: "0.1"
 ---
@@ -65,8 +66,12 @@ ReadMe is a strong, purpose-built choice for an API-first product that wants liv
 
 [Start free — no credit card](https://docsbook.io/?start=1)
 
+<!-- widget:cards plain cols=2 -->
+
 ## Next steps
 
 - [AI documentation platforms compared](./ai-docs-platform-comparison.md) — the same question across four managed platforms, ReadMe included
 - [Mintlify vs Docsbook](./mintlify-vs-docsbook.md) — the same comparison against a different competitor
 - [Best documentation platforms for startups in 2026](./best-docs-platforms-for-startups-2026.md) — where ReadMe and Docsbook both rank among eight platforms
+
+<!-- /widget -->
