@@ -1,6 +1,8 @@
 ---
 title: "MCP server for documentation: what it is and why it wins"
 description: "How Claude Code and Cursor read and edit documentation through Model Context Protocol, which tools matter, and why agents are now a traffic channel."
+status: generated
+version: "0.2"
 ---
 
 # MCP server for documentation: what it is and why it wins
@@ -64,11 +66,13 @@ Docsbook's MCP server exposes tools in these categories. The full list is return
 
 ## Connecting from Claude Code
 
-```
-mcp add --transport http https://docsbook.io/api/mcp/server
+Claude Code is one name over two MCP stores that do not read each other. On the desktop app and web (claude.ai), servers come from the connector store — connect from **Settings → Connectors** instead of any command. On the terminal, it's a local config file:
+
+```bash
+claude mcp add --transport http docsbook https://docsbook.io/api/mcp/server
 ```
 
-The OAuth flow opens in the browser, you authorize, the tools appear in Claude Code. No API keys to manage, no config file to edit.
+The first call opens a browser tab for OAuth, you authorize, and the tools appear in Claude Code. Running that command on the desktop or web app writes a file those surfaces don't read, so it succeeds and connects nothing — use the connector store there instead.
 
 Cursor uses the same MCP server with similar UX. ChatGPT and Gemini are adding HTTP MCP support through 2026.
 
