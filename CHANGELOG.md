@@ -44,6 +44,7 @@ version: "0.9"
 - **Three Analytics reports moved to the tab that answers their question.** AI Views — which assistants and crawlers fetch your docs — sat on the Insights tab, three scrolls below the human-traffic cards it was being compared against and one tab away from the report on whether an AI answer actually names you; the two now sit together. The docs-assistant conversation breakdown sat at the foot of the page-traffic report; it now lives on the Chat tab, beside the KPI tiles that already summarised the same conversations. The per-reader table (who came, when, what they read) moved out of Analytics into Logs. `Analytics`
 - **The admin chat resolves your project itself, instead of asking first.** Opening it used to start with a dropdown of every workspace you can reach — your own, your organization's, anyone's you collaborate on — before it would take a question. It now picks the project from what you say in the message, or the one you already have open, and shows which one it picked; the corner button is a plain icon now, since everyone who can see it is already signed in as the admin. `AI chat`
 - **Visit Website moved from the panel's header to its sidebar.** It is a plain row now, sitting just above the account and organization switcher at the bottom of the sidebar, instead of a highlighted button in the top-right corner. `Panel`
+- **The Spend tile is off Analytics' headline strip.** The row now reads Visitors, Revenue, Conversion rate and the rest, without it. `Analytics`
 
 ## NEW - 19.09.2026
 
