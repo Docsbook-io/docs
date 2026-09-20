@@ -2,7 +2,7 @@
 title: "Docsio vs Docsbook: pricing, setup and AI search compared"
 description: "Docsio and Docsbook compared on how each one generates and hosts your docs, what AI search features are free vs paid, and pricing — including the cases where Docsio is the better pick."
 status: generated
-version: "0.2"
+version: "0.3"
 ---
 
 # Docsio vs Docsbook: pricing, setup and AI search compared
@@ -20,7 +20,7 @@ We make Docsbook. This page names the cases where Docsio is the better choice, a
 | GitHub sync | Not the primary workflow — content is AI-generated and AI-edited, not authored as Markdown in your own repo | Yes — redeploys on every push |
 | `llms.txt` | Auto-generated, on the free plan | Auto-generated per workspace, plus `llms-full.txt` |
 | MCP server | Pro plan only ($60/mo) | Included, OAuth 2.0, on every plan |
-| AI chat widget for readers | Pro plan only | Built-in, configurable provider (OpenAI, Anthropic, Gemini, OpenRouter) |
+| AI chat widget for readers | Pro plan only ($60/mo) | Part of the $20/mo Pro plan, configurable provider (OpenAI, Anthropic, Gemini, OpenRouter) |
 | AI translation | Not listed among Docsio's published features | 15 languages, each indexed separately with `hreflang` |
 | Doc versioning | Pro plan only | Not supported — one version per branch (see [Documentation versioning](../guides/advanced/documentation-versioning.md)) |
 | Pricing model | Flat $0 or $60/month per site | Pay-as-you-go balance held per project |
@@ -42,7 +42,7 @@ Docsbook does not sell tiers per site. A Free plan covers branding, navigation, 
 Both platforms treat being cited by an AI assistant as a first-class goal rather than an afterthought, and both auto-generate `llms.txt`. The gap is in what is free and what is gated:
 
 - **MCP server** — free and included on every Docsbook plan; on Docsio it ships only on the $60/month Pro plan, so a reader's agent can query your docs over MCP only if you are paying for Pro.
-- **AI chat for your readers** — same pattern: built into Docsbook from the start, a Pro-only add-on on Docsio.
+- **AI chat for your readers** — both gate it behind their Pro plan; the gap is price, not presence. Docsbook's Pro is $20/month with an AI allowance included, against Docsio's flat $60/month.
 - **Translation** — Docsbook auto-translates to 15 languages and indexes each locale separately with `hreflang`; Docsio's own published feature list does not name a translation or multi-language pipeline as of 2026-09-20. See [Multi-language documentation SEO](./multi-language-documentation-seo.md) for why per-locale indexing matters for search.
 
 ## When should you choose Docsio?
@@ -54,12 +54,12 @@ Both platforms treat being cited by an AI assistant as a first-class goal rather
 ## When should you choose Docsbook?
 
 - Your docs already live (or you want them to live) as Markdown in a GitHub repository, versioned and reviewable like code.
-- You want the MCP server and the AI chat widget included rather than gated behind a higher tier.
+- You want the MCP server included on every plan, and a lower-cost path to the AI chat widget than Docsio's flat $60/month Pro tier.
 - You need documentation in more than one language, indexed separately per locale rather than left to a separate pipeline.
 
 ## The bottom line
 
-Docsio is a strong choice if you are starting from nothing and want an AI to turn your existing website into a first draft of documentation in minutes. Docsbook is the better fit once you have — or want to keep — your docs as Markdown in a Git repository, and you want AI discoverability features like MCP and chat included rather than reserved for a paid tier.
+Docsio is a strong choice if you are starting from nothing and want an AI to turn your existing website into a first draft of documentation in minutes. Docsbook is the better fit once you have — or want to keep — your docs as Markdown in a Git repository, and you want MCP included on every plan with a lower entry price into the AI chat widget than Docsio's flat $60/month tier.
 
 [Start free — no credit card](https://docsbook.io/?start=1)
 
