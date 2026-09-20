@@ -1,6 +1,7 @@
 ---
 title: "Docsbook pricing: what costs money and what does not"
 description: "Docsbook meters four kinds of AI work, plus machine crawling of your published site, against each project's own balance. Hosting, custom domains, human readers, search and GitHub sync are never metered."
+tldr: "Docsbook meters five things against a project's balance — four kinds of AI work plus machine crawling of the published site — and charges nothing for hosting, search, GitHub sync or human readers; current prices live at docsbook.io/pricing."
 ---
 
 # Docsbook pricing: what costs money and what does not
@@ -79,7 +80,7 @@ Bringing your own provider API key is supported. When you do, you pay the provid
 
 ## What MCP tool calls cost
 
-Docsbook MCP tool calls are charged a flat price fixed before the call runs, independent of the size of the answer. Discovery calls — describing the server, finding a skill or a widget, listing your projects, creating one — are never metered. Reads, writes, analytics scans, and full agent runs each sit in their own price class.
+Docsbook MCP tool calls are charged a flat price fixed before the call runs, independent of the size of the answer. Discovery calls — describing the server, finding a skill or a widget, listing your projects, creating one — are never metered. Reads, writes and analytics scans each sit in their own price class.
 
 The class and price of every tool is on its row in the **MCP** section of your admin panel and in the [MCP tools reference](./mcp/README.md). Every metered call also appears line by line in the project's Feeds panel — which tool, whether it worked, how long it took and what it cost.
 

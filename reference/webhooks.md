@@ -1,6 +1,7 @@
 ---
 title: "Subscribe to what happens inside your Docsbook workspace"
 description: "The 18 typed events a Docsbook workspace emits, their payload fields, the HMAC signature to verify, the retry schedule, and the feed that shows them live."
+tldr: "Docsbook emits 18 typed events — content indexed, translations needed, chat questions asked, traffic anomalies and more — and POSTs a signed JSON payload to your URL, retrying up to 3 times with backoff before marking a delivery failed."
 ---
 
 # Webhooks
@@ -294,7 +295,11 @@ curl -X POST https://docsbook.io/api/webhooks \
   -d '{"workspace_id": 42, "event_type": "content.indexed", "url": "https://you.example.com/hook"}'
 ```
 
+<!-- widget:callout type=warning -->
+
 The response includes the `secret` exactly once — store it.
+
+<!-- /widget -->
 
 `event_type` accepts either spelling of an event name: the dotted form used throughout this page (`content.indexed`) or the underscored form (`content_indexed`). Both register the same subscription.
 
@@ -355,9 +360,13 @@ Other MCP tools, with the billing class each call is metered under:
 - After the 3rd failure → `status = "failed"`. Use `replay_webhook_delivery` to re-attempt.
 - Response code and (truncated) body are stored on every delivery row.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
-- [MCP tools reference](../mcp/README.md) — the `register_webhook_<event>` tools and every other tool on the server
-- [MCP server overview](../agent-ready/mcp.md) — connecting a client, and the rate card the feed prices calls against
-- [Tracked events reference](../analytics/tracking/events.md) — the reader actions behind several of these events
-- [Analytics overview](../analytics/tracking/overview.md) — reading the same activity as a report rather than as a stream
+- [MCP tools reference](../mcp/README.md) — the `register_webhook_<event>` tools and every other tool on the server {plug}
+- [MCP server overview](../agent-ready/mcp.md) — connecting a client, and the rate card the feed prices calls against {server}
+- [Tracked events reference](../analytics/tracking/events.md) — the reader actions behind several of these events {activity}
+- [Analytics overview](../analytics/tracking/overview.md) — reading the same activity as a report rather than as a stream {chart-line}
+
+<!-- /widget -->

@@ -1,6 +1,7 @@
 ---
 title: "Point your own domain at your Docsbook documentation"
 description: "Add docs.yourcompany.com in settings, create the DNS record Docsbook shows you, wait for propagation, and get an automatic SSL certificate."
+tldr: "Docsbook serves your documentation from a domain you own: add it under Settings → Custom Domain, create the DNS record Docsbook shows you, and Docsbook issues the SSL certificate automatically once DNS resolves."
 ---
 
 # Set up a custom domain

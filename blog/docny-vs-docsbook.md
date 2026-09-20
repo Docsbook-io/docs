@@ -1,6 +1,7 @@
 ---
 title: "Docny vs Docsbook: AI-generated docs vs Git-native docs compared"
 description: "Docny and Docsbook compared on how each one generates and hosts your docs, what's free vs paid, and where each one fits — including the cases where Docny is the better pick."
+tldr: "Docny generates a documentation site by scanning your repository, a URL or an OpenAPI spec, then watches for drift against your code; Docsbook reads the Markdown already in your GitHub repository, redeploys on every push, and leaves drift-checking to an agent you call."
 status: generated
 version: "0.2"
 ---

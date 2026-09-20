@@ -1,6 +1,7 @@
 ---
 title: "Migrating from GitBook to Docsbook: a step-by-step guide"
 description: "Move your docs off GitBook without losing search traffic — export, import from GitHub, wire the custom domain, and get every redirect right."
+tldr: "Docsbook replaces GitBook by publishing straight from a GitHub repo: export GitBook's content as Markdown, connect the repo, wire the custom domain, and 301-redirect the old GitBook paths — most teams finish in under three hours."
 ---
 
 # Migrating from GitBook to Docsbook: a step-by-step guide
@@ -18,6 +19,8 @@ Most teams complete this in under three hours. The expensive part is the redirec
 5. Wire your custom domain `docs.yourcompany.com` to Docsbook
 6. Set up redirects from old GitBook paths
 7. Update internal links across your site
+
+<!-- widget:stepper -->
 
 ## Step 1: Export from GitBook
 
@@ -155,6 +158,8 @@ curl https://docs.yourcompany.com/sitemap.xml | head -10
 
 See [llms.txt: the complete guide](./llms-txt-guide.md) for what to expect.
 
+<!-- /widget -->
+
 ## What gets better
 
 | | GitBook | Docsbook |
@@ -168,9 +173,13 @@ See [llms.txt: the complete guide](./llms-txt-guide.md) for what to expect.
 
 ## What might break
 
+<!-- widget:callout type=note -->
+
 - **GitBook-specific blocks** — collapsible sections, hint blocks, tabs. Docsbook supports standard markdown + Docsbook-specific blocks. Most GitBook hints rewrite cleanly to `> [!NOTE]` callouts.
 - **Custom OpenAPI integration** — GitBook has its API reference renderer. Docsbook renders OpenAPI through your existing tools or links out.
 - **GitBook AI chat history** — does not transfer. The chat starts fresh with your new content.
+
+<!-- /widget -->
 
 ## Timing
 
@@ -184,8 +193,12 @@ The expensive part is socializing the URL change internally and updating saved r
 
 [Start free — no credit card](https://docsbook.io/?start=1)
 
+<!-- widget:cards plain cols=2 -->
+
 ## Next steps
 
 - [GitBook vs Docsbook](./gitbook-vs-docsbook.md) — the feature-by-feature comparison behind this move
 - [Custom domain for documentation](./custom-domain-for-docs-howto.md) — the DNS and SSL half of step 4
 - [Documentation SEO guide](./documentation-seo-guide.md) — how to keep rankings through the URL change
+
+<!-- /widget -->

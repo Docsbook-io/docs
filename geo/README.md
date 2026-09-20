@@ -31,10 +31,14 @@ Docsbook injects a short summary immediately after the leading H1, rendered as `
 
 Whichever wins is cleaned before it is printed: link syntax, inline code, emphasis marks and raw HTML tags are stripped, and whitespace is collapsed. The result is capped at **280 characters**, truncated at the last word boundary if that boundary falls past the halfway mark, with trailing punctuation removed and a single ellipsis appended.
 
+<!-- widget:callout type=note -->
+
 Two behaviours are worth knowing because they are what stop the block being noise:
 
 - **A first paragraph shorter than 40 characters produces no TL;DR at all.** A fragment is worse than nothing.
 - **When the TL;DR came from the lede, the lede is removed from the body.** The same sentence never appears twice in a row; when the TL;DR came from frontmatter, your opening paragraph stays exactly where you wrote it.
+
+<!-- /widget -->
 
 ### A visible last-modified time
 
@@ -106,11 +110,15 @@ plan ([pricing](https://docsbook.io/pricing)). The one edit worth making is to
 lifts is a sentence you wrote rather than whichever paragraph happened to open the
 page. That is the whole first pass.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
-- [Citation signals](./citation-signals.md) — the writing rules, each with the retrieval behaviour that justifies it.
-- [llms.txt](./llms-txt.md) — the site-level machine index, and what its evidence is actually worth.
-- [SEO](../seo/README.md) — indexing, canonical URLs, sitemap: the stage before any of this matters.
-- [AEO](../aeo/README.md) — `FAQPage`, `HowTo` and `speakable` markup.
-- [AI chat](../ai-chat/chat.md) — the assistant that answers on your own site.
-- [How Docsbook proves what it claims](../evidence.md) — the rule these pages are written to.
+- [Citation signals](./citation-signals.md) — the writing rules, each with the retrieval behaviour that justifies it. {quote}
+- [llms.txt](./llms-txt.md) — the site-level machine index, and what its evidence is actually worth. {file-text}
+- [SEO](../seo/README.md) — indexing, canonical URLs, sitemap: the stage before any of this matters. {trending-up}
+- [AEO](../aeo/README.md) — `FAQPage`, `HowTo` and `speakable` markup. {help-circle}
+- [AI chat](../ai-chat/chat.md) — the assistant that answers on your own site. {message-circle}
+- [How Docsbook proves what it claims](../evidence.md) — the rule these pages are written to. {shield-check}
+
+<!-- /widget -->

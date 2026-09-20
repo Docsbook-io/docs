@@ -221,6 +221,8 @@ policy is enforced. Five things are not: the site-wide SEO switch and per-page `
   Google's own limit. Docsbook emits one sitemap per owner and does not shard; an
   owner past that ceiling is not handled today.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
 - [SEO — what Docsbook does for search visibility](./README.md)
@@ -228,3 +230,5 @@ policy is enforced. Five things are not: the site-wide SEO switch and per-page `
 - [AEO — answer engines and rich results](../aeo/README.md)
 - [GEO — being cited by AI assistants](../geo/README.md)
 - [AI translations](../translation/ai-translations.md)
+
+<!-- /widget -->

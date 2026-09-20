@@ -48,6 +48,8 @@ deliberately *not* folded — your docs usually live on a subdomain, and folding
 would count "went back to the docs" as a sale. A visitor who clicks through
 five times is one conversion.
 
+<!-- widget:callout type=note -->
+
 **Both money tiles stay off until two settings exist**: the Call To Action URL
 decides *which* click is a conversion, the Average Product Price decides what
 it is *worth*. Until both are set they report a dash and name the missing one —
@@ -55,6 +57,8 @@ never `$0`. A missing price is not a price of zero, and revenue is the figure
 an owner acts on without checking how it was produced. Both live in
 [Branding](../../design/style/branding.md). A stored price of `0` is refused by
 the validator for the same reason.
+
+<!-- /widget -->
 
 **Spend came off this strip on 20 September 2026.** It used to be the
 exception on every count here — money leaving rather than a property of a
@@ -229,12 +233,16 @@ Open any page of your documentation site and click the **Analytics** tab in the
 floating toolbar at the bottom. The overview loads with the range you picked
 last, which it remembers across visits.
 
+<!-- widget:cards plain horizontal -->
+
 ## Related
 
-- [How measurement works](../how-measurement-works.md) — visitor identity, bot and owner filtering, retention, privacy
-- [Tracked events](./events.md) — every event behind these figures
-- [AI usage and cost](./ai-usage.md) — what your AI and MCP calls cost, now that spend has moved off this page
-- [Read time](../reports/read-time.md) — the Reading time ranking, in full
-- [Countries](../reports/countries.md) — the Countries and Languages tabs as their own report
-- [Goals and funnels](../reports/goals-and-funnels.md) — measuring an outcome you declared rather than a default
-- [Branding](../../design/style/branding.md) — the two settings that switch Revenue on
+- [How measurement works](../how-measurement-works.md) — visitor identity, bot and owner filtering, retention, privacy {gauge}
+- [Tracked events](./events.md) — every event behind these figures {list}
+- [AI usage and cost](./ai-usage.md) — what your AI and MCP calls cost, now that spend has moved off this page {credit-card}
+- [Read time](../reports/read-time.md) — the Reading time ranking, in full {history}
+- [Countries](../reports/countries.md) — the Countries and Languages tabs as their own report {globe}
+- [Goals and funnels](../reports/goals-and-funnels.md) — measuring an outcome you declared rather than a default {target}
+- [Branding](../../design/style/branding.md) — the two settings that switch Revenue on {palette}
+
+<!-- /widget -->

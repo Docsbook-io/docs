@@ -54,7 +54,11 @@ The estimate is priced on the model you selected, so the quote and the charge de
 
 Pick nothing and you get the default marked `(default)` in the picker, currently **GPT-5.6 Luna**. Each option shows its price per 1M tokens, so a cheaper model stretches the balance over more pages and a stronger one is one click away when a language reads badly. Only models in Docsbook's catalog are honoured in managed mode, because spend is billed at the model's published price and an unrecognised model would be charged at a rate you were never shown.
 
+<!-- widget:callout type=note -->
+
 If you bring your own translation API key, the model becomes a free-text field on that card and the run is billed by your own provider instead of your project balance. Bringing your own key does not unlock translation on a free project: the gate is a plan decision, not a cost one.
+
+<!-- /widget -->
 
 ## Choose when translations run
 
@@ -130,10 +134,14 @@ Uncheck it in the Translation tab, or use the switch on that language's own page
 - **The language switcher is the only reader-facing language control.** Docsbook does not redirect readers by `Accept-Language` and does not geo-route them; a reader who has expressed no preference gets the site's configured default.
 - **Model choice is per workspace, not per language.** You cannot translate Japanese on a stronger model than Polish within one project.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
-- [AI translations](./ai-translations.md) — what a pass does to a page, and what is protected from the model
-- [Translation quality and SEO](./quality.md) — coverage, freshness, corrections, `hreflang` and canonicals
-- [Header layout and navigation](../design/layout/header.md) — putting the switcher in the header
-- [Sidebar layout and configuration](../design/layout/sidebar.md) — putting it in the sidebar instead
-- [Visitor countries report](../analytics/reports/countries.md) — which regions arrive that you do not translate for yet
+- [AI translations](./ai-translations.md) — what a pass does to a page, and what is protected from the model {languages}
+- [Translation quality and SEO](./quality.md) — coverage, freshness, corrections, `hreflang` and canonicals {check}
+- [Header layout and navigation](../design/layout/header.md) — putting the switcher in the header {panel-top}
+- [Sidebar layout and configuration](../design/layout/sidebar.md) — putting it in the sidebar instead {panel-left}
+- [Visitor countries report](../analytics/reports/countries.md) — which regions arrive that you do not translate for yet {globe}
+
+<!-- /widget -->

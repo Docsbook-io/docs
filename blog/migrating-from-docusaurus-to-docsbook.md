@@ -1,6 +1,7 @@
 ---
 title: "Migrating from Docusaurus to Docsbook, step by step"
 description: "Move a Docusaurus site to Docsbook without losing search traffic — adapt MDX, retire the CI pipeline, port redirects, and keep every URL working."
+tldr: "Docsbook replaces a Docusaurus site by reading the same GitHub repo directly: convert MDX admonitions and tabs to standard Markdown, connect the repo, wire the custom domain, and delete the build pipeline — a few hours for a small site."
 ---
 
 # Migrating from Docusaurus to Docsbook, step by step
@@ -11,6 +12,8 @@ We make Docsbook. We will also tell you when migration is not worth it.
 
 ## When you should not migrate
 
+<!-- widget:callout type=note -->
+
 Skip this migration if:
 
 - Your Docusaurus site uses heavy React component embeds (interactive demos, custom plugins). Docsbook is markdown-first.
@@ -18,6 +21,8 @@ Skip this migration if:
 - You need a deeply custom React theme. Docsbook gives you color tokens, fonts, layout switches, header/footer config — not full theme swizzle.
 
 If any of those apply, [stay on Docusaurus](./docusaurus-vs-docsbook-2026.md) and read the rest of this guide later.
+
+<!-- /widget -->
 
 ## TL;DR
 
@@ -27,6 +32,8 @@ If any of those apply, [stay on Docusaurus](./docusaurus-vs-docsbook-2026.md) an
 4. Wire custom domain
 5. Port redirects
 6. Drop the CI pipeline and the hosting bill
+
+<!-- widget:stepper -->
 
 ## Step 1: MDX to markdown
 
@@ -162,6 +169,8 @@ GitHub Actions workflow file for Docusaurus deployment: also delete.
 
 The result: docs deploy on every `git push` to `main`, no CI minutes used.
 
+<!-- /widget -->
+
 ## What you gain
 
 | | Docusaurus | Docsbook |
@@ -207,9 +216,13 @@ Test the migration before committing to it. Publishing a second site from the sa
 
 [Start free — no credit card](https://docsbook.io/?start=1)
 
+<!-- widget:cards plain cols=2 -->
+
 ## Next steps
 
 - [Should you move off Docusaurus in 2026?](./docusaurus-vs-docsbook-2026.md) — the decision, if you have not made it yet
 - [Docusaurus alternatives in 2026: 9 platforms compared](./docusaurus-vs-docsbook.md) — the wider field
 - [Custom domain for docs](./custom-domain-for-docs-howto.md) — the DNS and redirect half of this migration
 - [Docs as code vs a managed platform](./docs-as-code-vs-managed-platform.md) — the principle behind the move
+
+<!-- /widget -->

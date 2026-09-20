@@ -1,6 +1,7 @@
 ---
 title: "FAQ reply notebook: copy-paste answers for comments"
 description: "Ready-to-paste answers to the questions people keep asking about Docsbook in public threads — a short version for replies, a long one for posts."
+tldr: "Docsbook publishes a documentation site from a public GitHub repository in seconds, with AI chat trained on your content, search and analytics included, and keeps every Markdown file in your own repo rather than a proprietary database."
 status: generated
 version: "0.2"
 ---
@@ -340,9 +341,13 @@ A weekly skill that:
 
 ---
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
-- [Docsbook product overview](../overview.md)
-- [Public FAQ for users](../faq.md)
-- [Docusaurus vs Docsbook](./docusaurus-vs-docsbook.md)
-- [Mintlify vs Docsbook](./mintlify-vs-docsbook.md)
+- [Docsbook product overview](../overview.md) — What the product is and who it's built for.
+- [Public FAQ for users](../faq.md) — The reader-facing version of these same answers.
+- [Docusaurus vs Docsbook](./docusaurus-vs-docsbook.md) — The framework-vs-hosted-platform comparison.
+- [Mintlify vs Docsbook](./mintlify-vs-docsbook.md) — The other managed-platform comparison.
+
+<!-- /widget -->

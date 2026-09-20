@@ -27,13 +27,17 @@ One thing.
 2. **Nothing else.** Canonical URLs, the sitemap, `robots.txt`, cards, JSON-LD and
    the language cluster are managed, and there is no configuration surface for them.
 
-> **There used to be a switch here, and turning it on was step one.** SEO was a
-> per-project toggle in **Settings ▸ SEO & GEO**, off on a new project, and while it
-> was off every page was served `noindex, nofollow` — every signal generated, all of
-> them saying "do not index me". It was the single most common reason a Docsbook site
-> was not in Google: on 14 September 2026, two thirds of all projects had it off. The
-> switch is gone and the tab with it. Every project is indexable, and the only
-> opt-outs are per page (`noindex: true`, below) or the whole project going private.
+<!-- widget:callout type=note -->
+
+**There used to be a switch here, and turning it on was step one.** SEO was a
+per-project toggle in **Settings ▸ SEO & GEO**, off on a new project, and while it
+was off every page was served `noindex, nofollow` — every signal generated, all of
+them saying "do not index me". It was the single most common reason a Docsbook site
+was not in Google: on 14 September 2026, two thirds of all projects had it off. The
+switch is gone and the tab with it. Every project is indexable, and the only
+opt-outs are per page (`noindex: true`, below) or the whole project going private.
+
+<!-- /widget -->
 
 To override the generated line for one page, put it in frontmatter:
 
@@ -136,6 +140,8 @@ equivalent is making the project private, which stops it being readable at all.
 - [ ] For multilingual docs, [translations are enabled](../translation/settings.md)
       so each language earns its own indexable URL.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
 - [How Docsbook builds the head of a page](./how-it-works.md) — the resolution orders.
@@ -145,3 +151,5 @@ equivalent is making the project private, which stops it being readable at all.
 - [llms.txt](../geo/llms-txt.md)
 - [AI translations](../translation/ai-translations.md)
 - [Search options](../ai-chat/search.md) — the on-site search readers use once they arrive.
+
+<!-- /widget -->

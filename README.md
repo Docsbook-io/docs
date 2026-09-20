@@ -1,6 +1,7 @@
 ---
 title: "Docsbook documentation: publish, get found, get quoted, measure."
 description: "Docsbook publishes the Markdown you already have to a site search engines index and AI assistants cite, then hands your agent a goal and reports the number it moved. Start here."
+tldr: "Docsbook publishes the Markdown you already have to a documentation site that search engines index and AI assistants cite, then takes a goal from your agent and reports, on a date, the number it moved."
 status: generated
 version: "0.3"
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Docsbook API"
 description: "The REST API reference moved to /rest-api."
+tldr: "The Docsbook REST API reference moved to docsbook.io/rest-api, which carries the base URL, authentication and every endpoint the running server exposes, generated from that server. This address no longer serves the reference itself."
 status: generated
 version: "0.1"
 ---

@@ -106,10 +106,14 @@ readers who landed on a translated page, clamped so it can never exceed 100% —
 a reader who sampled two languages counts once per language in the raw figures
 and must not therefore appear as 150% served.
 
+<!-- widget:callout type=note -->
+
 **One caution when comparing screens.** The percentage shown in this list is a
 share of the **top-30 subtotal**, while the shares on the Analytics breakdown
 cards are of the whole window. Two correct numbers about the same country can
 differ for that reason alone.
+
+<!-- /widget -->
 
 Each country is a marker on the map — its flag in a ring, sized by how many
 readers it sent — and the ring carries the comparison:
@@ -192,10 +196,14 @@ Where a marker is drawn depends on what the event actually carried:
 - **One language at a time** — open **Translations** and pick a language from
   the sidebar to see how much of its own audience it reaches and what it cost.
 
+<!-- widget:cards plain horizontal -->
+
 ## Related
 
-- [How measurement works](../how-measurement-works.md) — visitor identity, bot filtering and why every count here is an estimate
-- [Analytics overview](../tracking/overview.md) — the Audience card these tabs live in, and filtering the dashboard by a country
-- [Translation settings](../../translation/settings.md) — enabling a language for a region this report flags red
-- [How AI translations work](../../translation/ai-translations.md) — what a translation run does, and what it costs
-- [Tracked events](../tracking/events.md) — `docs.language_switch`, the one event that records a reader changing language deliberately
+- [How measurement works](../how-measurement-works.md) — visitor identity, bot filtering and why every count here is an estimate {gauge}
+- [Analytics overview](../tracking/overview.md) — the Audience card these tabs live in, and filtering the dashboard by a country {chart-line}
+- [Translation settings](../../translation/settings.md) — enabling a language for a region this report flags red {languages}
+- [How AI translations work](../../translation/ai-translations.md) — what a translation run does, and what it costs {sparkles}
+- [Tracked events](../tracking/events.md) — `docs.language_switch`, the one event that records a reader changing language deliberately {list}
+
+<!-- /widget -->

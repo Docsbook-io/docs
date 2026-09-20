@@ -1,6 +1,7 @@
 ---
 title: "Docsbook concepts: workspace, project balance, indexing"
 description: "Definitions of the terms Docsbook uses — workspace, project balance, indexing, source of truth, draft, sync, and the surfaces machines read your docs through."
+tldr: "In Docsbook, a workspace is one documentation site and its settings — backed by a GitHub repository, or one Docsbook hosts for you — with a project balance that only AI work draws down — reader chat, admin and agent calls, translation and indexing."
 status: generated
 version: "0.4"
 ---
@@ -77,7 +78,7 @@ Edits made in the web editor, in GitHub, and by an agent over MCP all land in th
 
 ### Project balance
 
-A **project balance** is the money attached to one workspace, spent on the AI work done for that workspace. Every new project is created with **$1.00** of balance, plus **$5.00** the owner can claim once the project is **3 minutes old**, and is topped up after that from the billing screen.
+A **project balance** is the money attached to one workspace, spent on the AI work done for that workspace. Every new project starts on Pro with an AI wallet of its own — spent first, ahead of anything topped up, with no time limit on it — and is topped up after that from the billing screen.
 
 Balances are per project, not per account: one project running out does not stop another. See [Pricing](./pricing.md).
 
@@ -146,6 +147,8 @@ The **float widget** is the control menu in the bottom-right corner of your own 
 
 It switches chat, repository and mode, opens settings, and signs you out.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
 - [Overview](./overview.md) — how these pieces fit together, end to end
@@ -153,4 +156,4 @@ It switches chat, repository and mode, opens settings, and signs you out.
 - [MCP tools reference](./mcp/README.md) — every tool, its parameters and its price class
 - [Pricing](./pricing.md) — what is metered and what a project balance pays for
 
-
+<!-- /widget -->

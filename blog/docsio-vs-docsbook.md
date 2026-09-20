@@ -1,6 +1,7 @@
 ---
 title: "Docsio vs Docsbook: pricing, setup and AI search compared"
 description: "Docsio and Docsbook compared on how each one generates and hosts your docs, what AI search features are free vs paid, and pricing — including the cases where Docsio is the better pick."
+tldr: "Docsio generates a documentation site by scanning your product URL and letting an AI agent edit it from chat; Docsbook reads the Markdown you already keep in a GitHub repository and redeploys on every push, with the MCP server, AI chat and 15-language translation included."
 status: generated
 version: "0.3"
 ---

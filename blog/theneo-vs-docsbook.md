@@ -1,6 +1,7 @@
 ---
 title: "Theneo vs Docsbook: pricing, API tooling and AI search compared"
 description: "Theneo and Docsbook compared on API-reference tooling, developer portals, MCP/llms.txt for AI agents, and pricing — including the cases where Theneo is the better pick."
+tldr: "Theneo builds specifically around API references — REST, AsyncAPI, SOAP, GraphQL and gRPC, with a playground, code generation and spec-diff changelogs; Docsbook is a general documentation platform that reads the Markdown already in your GitHub repo and redeploys on every push."
 status: generated
 version: "0.1"
 ---

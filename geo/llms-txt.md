@@ -96,9 +96,17 @@ Weak, and Docsbook will not pretend otherwise. Here is the whole case, both dire
 | Is it requested in practice? | Measured by Ahrefs across 137,000 domains: 28% published a valid `llms.txt`, and of those, "97% received zero requests for it" in May 2026 | [Ahrefs, updated 15 June 2026](https://ahrefs.com/blog/what-is-llms-txt/) |
 | Does having it raise citations? | No published, replicated study shows it does | — |
 
+<!-- widget:callout type=tip -->
+
 **What the file still buys you.** An agent you hand the URL to — in a prompt, in an MCP client, in a support workflow — gets a complete, current map of your documentation in one fetch instead of crawling. Your MCP server and skills catalog are discoverable from it. It is diffable, so it is a cheap inventory of what is actually published. And it costs you nothing, because Docsbook generates it.
 
+<!-- /widget -->
+
+<!-- widget:callout type=warning -->
+
 **What it does not buy you.** Any claim about assistant traffic. If you want to know whether assistants read your docs, measure the thing that leaves a trace: crawler hits from assistant user agents, and referral traffic from assistant domains. Both are visible in your [analytics](../analytics/README.md); a file at a URL is not evidence of anything on its own.
+
+<!-- /widget -->
 
 ## Limits and open questions
 
@@ -108,10 +116,14 @@ Weak, and Docsbook will not pretend otherwise. Here is the whole case, both dire
 - **The one-hour cache is not configurable**, and neither is the file's content. That is deliberate — there is no second, machine-readable copy of your docs to drift out of sync — but it means you cannot curate what an agent sees.
 - **Under question: is any of this read by the assistants that matter?** The vendor bot documentation describes crawlers that fetch *pages*; none of it describes fetching `llms.txt`. Until a vendor documents consumption, or someone publishes server-log evidence that contradicts the Ahrefs measurement above, treat the file as free hygiene rather than a channel.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
-- [GEO](./README.md) — the page-level signals: TL;DR block, visible dates, author attribution.
-- [Citation signals](./citation-signals.md) — the writing rules that decide whether a retrieved passage gets quoted.
-- [SEO](../seo/README.md) — sitemap, canonical URLs, `noindex`.
-- [MCP server](../agent-ready/mcp.md) — the machine surface for agents that write as well as read.
-- [Source of truth](../agent-ready/source-of-truth.md) — the local doc graph, for an agent with your repository on disk.
+- [GEO](./README.md) — the page-level signals: TL;DR block, visible dates, author attribution. {sparkles}
+- [Citation signals](./citation-signals.md) — the writing rules that decide whether a retrieved passage gets quoted. {quote}
+- [SEO](../seo/README.md) — sitemap, canonical URLs, `noindex`. {trending-up}
+- [MCP server](../agent-ready/mcp.md) — the machine surface for agents that write as well as read. {plug}
+- [Source of truth](../agent-ready/source-of-truth.md) — the local doc graph, for an agent with your repository on disk. {compass}
+
+<!-- /widget -->

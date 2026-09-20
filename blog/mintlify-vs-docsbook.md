@@ -1,6 +1,7 @@
 ---
 title: "Mintlify vs Docsbook: pricing, setup, AI and SEO compared"
 description: "Mintlify and Docsbook compared on configuration, GitHub sync, AI search and multi-language SEO — including the cases where Mintlify is the better pick."
+tldr: "Mintlify needs a mint.json config file and a monthly subscription; Docsbook reads the Markdown already in your repo with no config file, charges nothing for the site, and indexes translations at a separate URL per language."
 ---
 
 # Mintlify vs Docsbook: pricing, setup, AI and SEO compared
@@ -68,11 +69,17 @@ None of that promises a ranking. It removes the mechanical reasons a page cannot
 - You need documentation in more than one language, indexed separately per locale.
 - You want AI discoverability — `llms.txt`, an MCP server, JSON-LD — as part of the platform rather than as a project.
 
+<!-- widget:cta -->
+
 ## The bottom line
 
 Mintlify is a strong product, and for an API-first company already inside its ecosystem it is a reasonable place to stay. Docsbook is the better fit when the docs already live in a GitHub repository, when the site should exist before the config file does, and when what you want to pay for is AI usage rather than a seat at a tier.
 
 [Start free — no credit card](https://docsbook.io/?start=1)
+
+<!-- /widget -->
+
+<!-- widget:cards plain cols=2 -->
 
 ## Next steps
 
@@ -80,3 +87,5 @@ Mintlify is a strong product, and for an API-first company already inside its ec
 - [Docusaurus alternatives in 2026: 9 platforms compared](./docusaurus-vs-docsbook.md) — the wider field including self-hosted options
 - [Multi-language documentation SEO](./multi-language-documentation-seo.md) — why per-locale URLs decide whether translations earn traffic
 - [MCP server for documentation](./mcp-server-for-documentation.md) — what agents do with your docs once they can read them
+
+<!-- /widget -->

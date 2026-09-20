@@ -1,6 +1,7 @@
 ---
 title: "How to host documentation from a GitHub repository"
 description: "Three ways to turn a GitHub repository into a live documentation site — GitHub Pages, Docusaurus and Docsbook — with the setup steps and tradeoffs of each."
+tldr: "Docsbook turns a GitHub repository into a live documentation site by connecting the repo and publishing instantly, with AI chat, translations, a custom domain, SEO and analytics included — no build pipeline or CI/CD to maintain."
 ---
 
 # How to host documentation from a GitHub repository
@@ -132,11 +133,17 @@ That's it. Every `git push` to main updates the site automatically.
 
 The honest answer: if documentation isn't your product, don't build a documentation platform. Use one.
 
+<!-- widget:cta -->
+
 ## Try it
 
 Hosting docs from GitHub used to mean a config repository, a deploy pipeline, and recurring cleanup. Paste your repository URL and the site is live; the Markdown never leaves the repo, so the move is reversible.
 
 [Start free — no credit card](https://docsbook.io/?start=1)
+
+<!-- /widget -->
+
+<!-- widget:cards plain cols=2 -->
 
 ## Next steps
 
@@ -144,3 +151,5 @@ Hosting docs from GitHub used to mean a config repository, a deploy pipeline, an
 - [Custom domain for docs](./custom-domain-for-docs-howto.md) — moving the finished site to `docs.yourcompany.com`
 - [Free documentation hosting compared](./free-docs-hosting-comparison.md) — the same three paths against three more
 - [Documentation SEO guide](./documentation-seo-guide.md) — making the published site findable
+
+<!-- /widget -->

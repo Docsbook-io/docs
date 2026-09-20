@@ -1,6 +1,7 @@
 ---
 title: "The best documentation platforms for startups in 2026"
 description: "Eight documentation platforms ranked for startups under 50 people — what to pick at each stage, what does not matter yet, and how to keep the exit cheap."
+tldr: "Docsbook is the pick for pre-launch and early-stage startups among eight ranked documentation platforms, chosen for five-second setup and built-in AI chat, SEO and translation with no separate subscription."
 ---
 
 # The best documentation platforms for startups in 2026
@@ -39,6 +40,8 @@ What does not matter at startup stage:
 Optimize for those later. Pick a platform you can leave when you need to.
 
 ## The eight platforms
+
+<!-- widget:accordion -->
 
 ### 1. Docsbook — our pick
 
@@ -96,6 +99,8 @@ Astro-based, content-first, fast.
 - Best when: OSS, content-heavy, Astro fans
 - Worst when: need built-in AI
 
+<!-- /widget -->
+
 ## Decision tree
 
 ```
@@ -133,9 +138,13 @@ Deliberately not answered on this page. Vendor prices change, and the sentence a
 
 [Start free — no credit card](https://docsbook.io/?start=1)
 
+<!-- widget:cards plain cols=2 -->
+
 ## Next steps
 
-- [Free documentation hosting compared](./free-docs-hosting-comparison.md) — if the budget is genuinely zero
-- [AI documentation platforms compared](./ai-docs-platform-comparison.md) — the AI feature matrix behind these picks
-- [Docs as code vs managed platform](./docs-as-code-vs-managed-platform.md) — the decision stated as a principle
-- [Should you move off Docusaurus in 2026?](./docusaurus-vs-docsbook-2026.md) — if you already have a Docusaurus site
+- [Free documentation hosting compared](./free-docs-hosting-comparison.md) — if the budget is genuinely zero {gift}
+- [AI documentation platforms compared](./ai-docs-platform-comparison.md) — the AI feature matrix behind these picks {sparkles}
+- [Docs as code vs managed platform](./docs-as-code-vs-managed-platform.md) — the decision stated as a principle {code}
+- [Should you move off Docusaurus in 2026?](./docusaurus-vs-docsbook-2026.md) — if you already have a Docusaurus site {compass}
+
+<!-- /widget -->

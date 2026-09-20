@@ -1,6 +1,7 @@
 ---
 title: "What Docsbook includes and what actually costs money"
 description: "The capabilities a Docsbook project can use, which of them draw on the project balance, and where to read the prices that are current right now."
+tldr: "Every capability on Docsbook — GitHub sync, branding, SEO, custom domains, analytics — is open to every project; only work that calls an AI model draws on the project balance, and current prices live at docsbook.io/pricing."
 ---
 
 # What Docsbook includes, and what costs money
@@ -43,9 +44,13 @@ Two pages carry the detail, and this one deliberately repeats neither:
 
 Current prices are published at [docsbook.io/pricing](https://docsbook.io/pricing), regenerated on every request. A price written into a documentation page is a copy that goes stale silently, so none appears here.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Next steps
 
-- [Set up a custom domain](./custom-domain.md) — serve the docs from `docs.yourcompany.com`.
-- [Enable AI translations](../../translation/settings.md) — the capability that draws on the balance fastest.
-- [Restrict who can read your docs](./sso.md) — password or your own identity provider.
-- [How Docsbook charges for AI usage](../../content/setup/pricing-spec.md) — the metering in detail.
+- [Set up a custom domain](./custom-domain.md) — serve the docs from `docs.yourcompany.com`. {globe}
+- [Enable AI translations](../../translation/settings.md) — the capability that draws on the balance fastest. {languages}
+- [Restrict who can read your docs](./sso.md) — password or your own identity provider. {lock}
+- [How Docsbook charges for AI usage](../../content/setup/pricing-spec.md) — the metering in detail. {credit-card}
+
+<!-- /widget -->

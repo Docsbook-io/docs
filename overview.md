@@ -1,6 +1,7 @@
 ---
 title: "How Docsbook publishes documentation machines can cite"
 description: "Docsbook publishes the documentation you already have to a site people and AI assistants can read, and reports what those readers did next."
+tldr: "Docsbook publishes your existing Markdown as a public site machines can read, then does three jobs with it: get it found in search, get it quoted by AI assistants, and report which pages readers actually used."
 status: generated
 version: "0.3"
 ---
@@ -69,7 +70,7 @@ Docsbook meters four kinds of AI work against each project's own balance:
 - **AI Translations** — translating a page into another language.
 - **Semantic Index** — building the embeddings the AI chat retrieves from.
 
-It also meters **machine crawling** — the pages AI and search bots read from your published site, past the monthly allowance every plan includes. Hosting, a custom domain and its TLS certificate, people reading, editors, GitHub sync, full-text search, branding and analytics are unmetered. Every new project starts with **$1.00** of balance and can claim **$5.00** more once it is 3 minutes old; top-ups after that run from $20.00 to $5,000.00. See [Pricing](./pricing.md) for the mechanism and [docsbook.io/pricing](https://docsbook.io/pricing) for current figures.
+It also meters **machine crawling** — the pages AI and search bots read from your published site, past the monthly allowance every plan includes. Hosting, a custom domain and its TLS certificate, people reading, editors, GitHub sync, full-text search, branding and analytics are unmetered. Every new project starts on Pro with an AI wallet of its own — spent first, with no time limit on it — then tops up at whatever amount you choose. See [Pricing](./pricing.md) for the mechanism and [docsbook.io/pricing](https://docsbook.io/pricing) for current figures.
 
 ## Next steps
 

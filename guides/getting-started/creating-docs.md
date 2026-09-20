@@ -1,6 +1,7 @@
 ---
 title: "Create your first Docsbook site from a GitHub repo"
 description: "Fork an example repository, connect it to Docsbook, edit a page on GitHub, and watch the published documentation site update — no coding needed."
+tldr: "Docsbook publishes a documentation site straight from a GitHub repository: fork the example repo, sign in to Docsbook, then click that repository in the list — the project is created from the click — and the published site updates whenever you edit a page on GitHub."
 status: generated
 version: "0.2"
 ---
@@ -19,6 +20,8 @@ You need two things:
 - **A GitHub account.** It is free. Step 1 creates one if you do not have one.
 
 > **What is GitHub?** GitHub is a website where people store and share text files. Think of Google Drive, built for documentation and code. Docsbook reads your files from GitHub and publishes them as a documentation website.
+
+<!-- widget:stepper -->
 
 ## Step 1: create a GitHub account
 
@@ -106,6 +109,8 @@ Open it and click through the sidebar. Every page you see is a markdown file in 
 Go back to your Docsbook site and reload the page you edited. Your new sentence is there.
 
 That is the whole loop: commit to GitHub, and the published site follows. You have finished the tutorial.
+
+<!-- /widget -->
 
 ## Add and delete pages
 
@@ -216,8 +221,12 @@ Three rules follow from that:
 
 For what decides the *order* of those pages, see [Manage your documentation site](./managing-docs.md#understand-the-sidebar-order).
 
+<!-- widget:cards plain cols=2 -->
+
 ## Next steps
 
-- [Manage your documentation site](./managing-docs.md) — update content, control access, and fix a site that has not refreshed.
-- [Set up a custom domain](../advanced/custom-domain.md) — serve the docs from `docs.yourcompany.com`.
-- [Turn on full-text search](../../ai-chat/search.md) — let readers find a page by keyword.
+- [Manage your documentation site](./managing-docs.md) — update content, control access, and fix a site that has not refreshed. {settings}
+- [Set up a custom domain](../advanced/custom-domain.md) — serve the docs from `docs.yourcompany.com`. {globe}
+- [Turn on full-text search](../../ai-chat/search.md) — let readers find a page by keyword. {search}
+
+<!-- /widget -->

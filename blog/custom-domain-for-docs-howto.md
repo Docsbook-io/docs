@@ -1,6 +1,7 @@
 ---
 title: "Custom domain for docs: docs.yourcompany.com setup"
 description: "Set up docs.yourcompany.com end to end — subdomain versus subdirectory, DNS records, SSL, redirects, and the SEO consequences of each choice."
+tldr: "Docsbook publishes docs.yourcompany.com from one CNAME record, with SSL provisioned automatically within about five minutes and 301 redirects available for any prior documentation URL."
 ---
 
 # Custom domain for docs: docs.yourcompany.com setup
@@ -31,6 +32,8 @@ For most teams, the subdomain is easier and the SEO difference is small. Only go
 
 ## Setting up the subdomain (Docsbook example)
 
+<!-- widget:stepper -->
+
 Three steps:
 
 ### 1. In Docsbook dashboard
@@ -60,6 +63,8 @@ If your DNS provider doesn't support CNAME at the root (Cloudflare's flattening 
 SSL is automatic. Docsbook (via Vercel) provisions a Let's Encrypt cert within 5 minutes. You will see "Active" status in the dashboard.
 
 Total time: usually 5–15 minutes including DNS propagation.
+
+<!-- /widget -->
 
 ## When SSL takes longer
 
@@ -152,11 +157,15 @@ Prices in this category move; each vendor's own pricing page is the only reliabl
 - **HTTPS not enforced** — some platforms serve HTTP and HTTPS both; force redirect to HTTPS
 - **Multiple `docs` subdomains** — only one CNAME at a time, drop old ones first
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related reading
 
-- [Migrating from GitBook to Docsbook](./migrating-from-gitbook-to-docsbook.md)
-- [Migrating from Docusaurus to Docsbook](./migrating-from-docusaurus-to-docsbook.md)
-- [Documentation SEO guide](./documentation-seo-guide.md)
+- [Migrating from GitBook to Docsbook](./migrating-from-gitbook-to-docsbook.md) {arrow-right-left}
+- [Migrating from Docusaurus to Docsbook](./migrating-from-docusaurus-to-docsbook.md) {arrow-right-left}
+- [Documentation SEO guide](./documentation-seo-guide.md) {search}
+
+<!-- /widget -->
 
 ---
 

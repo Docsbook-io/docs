@@ -1,6 +1,7 @@
 ---
 title: "Turn your README.md into a real documentation site"
 description: "Most open-source projects hide their docs in README.md. Here is how to publish that file as a real documentation site without rewriting anything."
+tldr: "Docsbook turns a public GitHub repository's README.md (and any docs/ folder) into a hosted documentation site, with search, AI chat, analytics and llms.txt, in about five seconds at no cost to publish."
 ---
 
 # Turn your README.md into a real documentation site
@@ -109,6 +110,8 @@ You push a commit to `main`. Docsbook indexes the change and updates the site. N
 
 ## Common questions
 
+<!-- widget:accordion -->
+
 ### Does it work for private repositories?
 
 Yes. Docsbook authenticates through your GitHub OAuth scope, and the published site can itself be public or private.
@@ -125,9 +128,17 @@ You control brand colours, fonts, layout, header, footer, sidebar and your own d
 
 Yes. Your files are in GitHub. Cancel the subscription, point DNS elsewhere, your content is untouched.
 
+<!-- /widget -->
+
+<!-- widget:cta -->
+
 Paste `github.com/yourorg/yourrepo` and the site is live in five seconds. Nothing is copied out of your repository, so the README stays the source of truth.
 
 [Start free — no credit card](https://docsbook.io/?start=1)
+
+<!-- /widget -->
+
+<!-- widget:cards plain cols=2 -->
 
 ## Next steps
 
@@ -135,3 +146,5 @@ Paste `github.com/yourorg/yourrepo` and the site is live in five seconds. Nothin
 - [How to host documentation from a GitHub repository](./how-to-host-docs-from-github.md) — the other two routes, with tradeoffs
 - [Free documentation hosting compared](./free-docs-hosting-comparison.md) — six options against each other
 - [Custom domain for docs](./custom-domain-for-docs-howto.md) — moving the result to your own domain
+
+<!-- /widget -->

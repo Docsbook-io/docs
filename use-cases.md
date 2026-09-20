@@ -1,6 +1,7 @@
 ---
 title: "Docsbook use cases: the jobs teams hire documentation for"
 description: "Six situations teams bring to Docsbook — being recommended by AI assistants, proving docs convert, keeping pages current, and shipping other languages."
+tldr: "Docsbook is hired for six jobs: getting recommended by AI assistants, proving documentation converts, keeping pages level with the product, shipping other languages, cutting repeat support tickets, and turning a README into a real site."
 ---
 
 # Docsbook use cases: the jobs teams hire documentation for

@@ -1,6 +1,7 @@
 ---
 title: "Configure the left sidebar of your documentation site"
 description: "Choose what the left navigation panel shows: sidebar search, breadcrumbs, the language switcher, page and folder icons, and top-level folders as subheader tabs."
+tldr: "Docsbook's left sidebar is the page tree, plus optional search, breadcrumbs, a language switcher and per-page icons — free display settings that never spend your project balance."
 ---
 
 # Sidebar Control
@@ -51,7 +52,11 @@ The sidebar language switcher is a language selector shown inside the left panel
 
 **When to use:** Enable this when your header is already crowded with other elements.
 
-> Note: Enable *either* the sidebar switcher *or* the [header language selector](./header.md#header-options) — not both. Showing it in two places creates redundancy.
+<!-- widget:callout type=note -->
+
+Note: Enable *either* the sidebar switcher *or* the [header language selector](./header.md#header-options) — not both. Showing it in two places creates redundancy.
+
+<!-- /widget -->
 
 Requires at least one translation language to be enabled. Until then, opening the switcher on your own site shows **Activate languages**, which takes you straight to the translation settings. Your readers see a plain *No languages added* notice instead.
 [Set up translations →](../../translation/settings.md)
@@ -116,9 +121,13 @@ A folder shown in the subheader can also be hidden from — or kept in — the l
 
 One folder is exempt: **Getting Started** always stays in the sidebar, and its toggle is locked on. It is where a reader who closes the introduction early goes back to, so hiding it strands them with no way to return.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
-- [Header layout and navigation](./header.md) — the top bar, and the other place the language switcher can sit
-- [Search options](../../ai-chat/search.md) — what the sidebar search box searches
-- [Translation settings](../../translation/settings.md) — the languages the switcher offers
-- [Theming — light, dark, system](../style/theming.md) — the other place the theme toggle can sit
+- [Header layout and navigation](./header.md) — the top bar, and the other place the language switcher can sit {panel-top}
+- [Search options](../../ai-chat/search.md) — what the sidebar search box searches {search}
+- [Translation settings](../../translation/settings.md) — the languages the switcher offers {languages}
+- [Theming — light, dark, system](../style/theming.md) — the other place the theme toggle can sit {moon}
+
+<!-- /widget -->

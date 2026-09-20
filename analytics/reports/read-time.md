@@ -44,12 +44,16 @@ returns only the events it has not already sent, so an iOS hidden-flush followed
 by a real exit does not double-count, and a page restored from the back/forward
 cache can flush again.
 
+<!-- widget:callout type=note -->
+
 **Every segment is clipped at 300 seconds before anything sums it.** This is the
 number the whole report rests on. The emitter keeps counting while a desktop tab
 sits in the background, and on a calibration sweep of **11,176 real sessions
 across 7 workspaces**: 40 individual segments exceeded two hours, the 99th
 percentile was **81,342 seconds** — 22 hours — and summing raw segments inflated
 total read time from a true **42,160 seconds to 1,268,422**, roughly thirtyfold.
+
+<!-- /widget -->
 
 **The clip is defined once, in one module with no imports, and re-exported to
 everything that quotes a time figure** — the per-page average, the visit
@@ -133,9 +137,13 @@ precisely the page a gap-based measurement cannot see.
 row that names a place in your documentation and nothing for a row that names a
 country or a browser, so it is offered there and nowhere else.
 
+<!-- widget:cards plain horizontal -->
+
 ## Related
 
-- [How measurement works](../how-measurement-works.md) — the clip, the beacon path and the bot filters in full
-- [Analytics overview](../tracking/overview.md) — the Pages card this ranking lives in
-- [Tracked events reference](../tracking/events.md) — heading views, which say how far down a long page readers get
-- [Goals and funnels](./goals-and-funnels.md) — measuring what the visit achieved, not only how long it lasted
+- [How measurement works](../how-measurement-works.md) — the clip, the beacon path and the bot filters in full {gauge}
+- [Analytics overview](../tracking/overview.md) — the Pages card this ranking lives in {chart-line}
+- [Tracked events reference](../tracking/events.md) — heading views, which say how far down a long page readers get {list}
+- [Goals and funnels](./goals-and-funnels.md) — measuring what the visit achieved, not only how long it lasted {target}
+
+<!-- /widget -->

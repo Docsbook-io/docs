@@ -1,6 +1,7 @@
 ---
 title: "docs-skills: modular capabilities for AI agents on docs"
 description: "What docs-skills are, what the open-source catalog contains, and how the layer sits between an MCP server and the documentation an agent acts on."
+tldr: "Docsbook's open-source docs-skills catalog packages four AI-agent capabilities — docs-create, docs-analyze, docs-manage, docs-automate — discoverable at runtime through the find_skill MCP tool."
 ---
 
 # docs-skills: modular capabilities for AI agents on docs
@@ -83,6 +84,8 @@ Each skill is a standalone `SKILL.md` in the GitHub repository, with a `referenc
 
 ## Two ways to use skills
 
+<!-- widget:tabs -->
+
 ### Local install
 
 ```bash
@@ -104,6 +107,8 @@ find_skill({ query: "audit my docs for SEO and accessibility" })
 It returns the top matching skills with `raw_url` for each `SKILL.md`. The agent fetches and follows the instructions.
 
 This pattern: no local install, always the latest version, works across machines.
+
+<!-- /widget -->
 
 ## How AI agents use skills in practice
 
@@ -178,9 +183,13 @@ Docsbook ships docs-skills support: the `find_skill` MCP tool for runtime discov
 
 [Start free — no credit card](https://docsbook.io/?start=1)
 
+<!-- widget:cards plain cols=2 -->
+
 ## Next steps
 
-- [MCP server for documentation](./mcp-server-for-documentation.md) — the layer skills sit on top of
-- [How to get your documentation cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — what agents do with the docs they can read
-- [llms.txt explained](./llms-txt-guide.md) — the companion file for agents that do not speak MCP
-- [AI documentation platforms compared](./ai-docs-platform-comparison.md) — which platforms expose an MCP server at all
+- [MCP server for documentation](./mcp-server-for-documentation.md) — the layer skills sit on top of {plug}
+- [How to get your documentation cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — what agents do with the docs they can read {message-square}
+- [llms.txt explained](./llms-txt-guide.md) — the companion file for agents that do not speak MCP {file-text}
+- [AI documentation platforms compared](./ai-docs-platform-comparison.md) — which platforms expose an MCP server at all {sparkles}
+
+<!-- /widget -->

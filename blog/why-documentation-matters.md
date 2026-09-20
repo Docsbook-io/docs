@@ -1,6 +1,7 @@
 ---
 title: "Why documentation matters for SaaS: the hidden ROI"
 description: "Bad documentation moves cost onto support, onboarding and feature adoption. Here is how to measure that cost yourself and which mechanisms reduce it."
+tldr: "Bad documentation does not create a cost line — it shifts cost onto support tickets, slower engineer onboarding and lost feature adoption, all measurable from ticket tags, search logs and AI chat logs you already have."
 ---
 
 # Why documentation matters for SaaS: the hidden ROI
@@ -75,12 +76,20 @@ If any of those has no answer, the fix is a measurement, not a redesign.
 
 Docsbook is pay-as-you-go rather than tiered. Each project carries its own balance, and that balance is spent on AI usage — the site itself, its hosting, the reading and the search do not draw it down. Current numbers live on [docsbook.io/pricing](https://docsbook.io/pricing), which is generated from the live pricing constants on every request; a price copied into a blog post goes stale silently, so read it there.
 
+<!-- widget:cta -->
+
 Publish your existing repository, then read the failed searches for a week.
 
 [Start free — no credit card](https://docsbook.io/?start=1)
+
+<!-- /widget -->
+
+<!-- widget:cards plain cols=2 -->
 
 ## Next steps
 
 - [Documentation analytics: what to track](./documentation-analytics-what-to-track.md) — the metrics behind the counts on this page
 - [Documentation SEO guide](./documentation-seo-guide.md) — making the pages findable once they exist
 - [How to get your documentation cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — the assistant-facing half of discovery
+
+<!-- /widget -->

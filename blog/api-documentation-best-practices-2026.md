@@ -1,6 +1,7 @@
 ---
 title: "API documentation best practices for developers in 2026"
 description: "OpenAPI hygiene, code samples that run, AI question answering on top, and the page structure that earns high-intent search and assistant traffic."
+tldr: "Docsbook argues API documentation succeeds or fails in the first five minutes: lead with a working code sample, keep an OpenAPI spec as the source of truth, and document every error code."
 ---
 
 # API documentation best practices for developers in 2026
@@ -189,11 +190,15 @@ Good:
 - **Hidden authentication examples** — auth should be on the first page, not buried
 - **No changelog** — users have no signal whether the API has stabilized
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related reading
 
-- [AI chat for documentation: build vs buy](./ai-chat-for-documentation-build-vs-buy.md)
-- [Documentation SEO guide](./documentation-seo-guide.md)
-- [JSON-LD for documentation](./json-ld-for-documentation.md)
+- [AI chat for documentation: build vs buy](./ai-chat-for-documentation-build-vs-buy.md) {message-circle}
+- [Documentation SEO guide](./documentation-seo-guide.md) {search}
+- [JSON-LD for documentation](./json-ld-for-documentation.md) {code}
+
+<!-- /widget -->
 
 ---
 

@@ -42,14 +42,17 @@ is what the model picker is for, and it is available on every plan.
 | Follow-up suggestions and conversation titles | Serving an already-translated page |
 | Translating a page | Branding, theming, navigation, SEO settings |
 | Building the semantic index and its embeddings | Registering a webhook and receiving deliveries |
-| A background agent run | MCP discovery calls — finding out what the server can do |
-| A metered MCP tool call | Reader events on your docs site |
+| A metered MCP tool call | MCP discovery calls — finding out what the server can do, and reader events on your docs site |
+
+<!-- widget:callout type=note -->
 
 **Reader events are priced but never charged.** The Usage view puts a figure
 next to each event class so you can see what your traffic implies, and nothing
 deducts it from anything. Billed money and metered-only money are kept in
 separate totals precisely so one screen can never present the second as an
 invoice.
+
+<!-- /widget -->
 
 **Calls on your own provider key are metered but not billed.** The row is still
 written — with the provider's real cost, your model, your token counts — and
@@ -118,15 +121,17 @@ rebuilt figure is the more honest one.
 
 ### What happens when the balance runs out
 
-Docsbook is pay-as-you-go. The balance does not refill on its own, and nothing
-about your site changes when it empties — only AI work stops, and it stops in
-the place that can explain itself:
+Every project runs on a wallet — a $5 trial credit with no time limit, then
+whatever plan or top-up funds it after — and the balance does not refill on
+its own. A project with an active subscription or its own provider key keeps
+serving once that balance hits zero; only AI work stops, and it stops in the
+place that can explain itself. A project with neither is paused entirely once
+its wallet is empty.
 
 | Surface | What happens |
 |---|---|
 | Reader chat | The request is refused before the model runs, with a reason code rather than a broken answer |
 | Admin agent loop | Checked before the loop *and before every iteration*, so one long turn cannot burn the remainder mid-flight |
-| Agent runs | The run is recorded as failed with a human sentence — the balance ran out, top it up and it runs again on its next trigger |
 | Batch translation | The job halts and says so; remaining pages are untranslated, not silently skipped |
 | Semantic index | Refused before the job row is even opened |
 | MCP tools | A structured refusal naming the tool, its billing class, the project, the price per call, the balance remaining and a top-up link. Discovery tools keep working |
@@ -236,11 +241,15 @@ and rates are on the [pricing page](https://docsbook.io/pricing).
 3. **From an agent** — `get_ai_usage` over
    [MCP](../../mcp/README.md).
 
+<!-- widget:cards plain horizontal -->
+
 ## Related
 
-- [Analytics overview](./overview.md) — the six headline tiles and how they behave under filters
-- [How measurement works](../how-measurement-works.md) — retention and where the data lives
-- [Tracked events](./events.md) — the chat events behind these conversations
-- [AI chat](../../ai-chat/chat.md) — choosing a model and a provider
-- [How AI translations work](../../translation/ai-translations.md) — the other thing that spends this balance
-- [Webhooks](../../reference/webhooks.md) — being told you are approaching a limit instead of finding out
+- [Analytics overview](./overview.md) — the six headline tiles and how they behave under filters {chart-line}
+- [How measurement works](../how-measurement-works.md) — retention and where the data lives {gauge}
+- [Tracked events](./events.md) — the chat events behind these conversations {list}
+- [AI chat](../../ai-chat/chat.md) — choosing a model and a provider {message-circle}
+- [How AI translations work](../../translation/ai-translations.md) — the other thing that spends this balance {languages}
+- [Webhooks](../../reference/webhooks.md) — being told you are approaching a limit instead of finding out {webhook}
+
+<!-- /widget -->

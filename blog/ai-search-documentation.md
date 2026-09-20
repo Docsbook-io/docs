@@ -1,6 +1,7 @@
 ---
 title: "AI search for documentation: why keyword search fails"
 description: "Why keyword search returns nothing for the questions readers actually type, how semantic search fixes it, and what to measure before and after."
+tldr: "Docsbook's semantic search matches meaning rather than exact words, so a query about resetting a password can return a page titled Account Recovery Options even though no words overlap."
 ---
 
 # AI search for documentation: why keyword search fails
@@ -80,13 +81,21 @@ Docsbook ships AI search out of the box. Zero configuration. Works on day one.
 
 Keyword search matches strings; readers ask questions. Semantic search closes that gap by matching meaning, which is why a query phrased in the reader's words can reach a page written in yours. It is no longer a differentiator between documentation platforms — it is the baseline, and the thing worth comparing is what each platform reports back to you about the searches that still fail.
 
+<!-- widget:cta -->
+
 Docsbook includes semantic search and reports the queries that returned nothing, so the gaps arrive as a list of pages to write.
 
 [Start free — no credit card](https://docsbook.io/?start=1)
 
+<!-- /widget -->
+
+<!-- widget:cards plain cols=2 -->
+
 ## Next steps
 
-- [Documentation analytics: the metrics worth tracking](./documentation-analytics-what-to-track.md) — what to do with the failed searches this surfaces
-- [Documentation SEO guide](./documentation-seo-guide.md) — the off-site half of the same findability problem
-- [How to get your documentation cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — when the search happens inside an assistant instead
-- [AI chat for documentation: should you build or buy?](./ai-chat-for-documentation-build-vs-buy.md) — the cost side of the build-vs-buy question above
+- [Documentation analytics: the metrics worth tracking](./documentation-analytics-what-to-track.md) — what to do with the failed searches this surfaces {chart-line}
+- [Documentation SEO guide](./documentation-seo-guide.md) — the off-site half of the same findability problem {search}
+- [How to get your documentation cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — when the search happens inside an assistant instead {message-square}
+- [AI chat for documentation: should you build or buy?](./ai-chat-for-documentation-build-vs-buy.md) — the cost side of the build-vs-buy question above {message-circle}
+
+<!-- /widget -->

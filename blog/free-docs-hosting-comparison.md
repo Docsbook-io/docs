@@ -1,6 +1,7 @@
 ---
 title: "Free documentation hosting compared: six real options"
 description: "Six ways to host documentation for nothing — GitHub Pages, Vercel, Netlify, Cloudflare Pages, ReadTheDocs and Docsbook — and what each one costs in time."
+tldr: "Docsbook publishes a documentation site from a GitHub repo in five seconds with search, AI chat and analytics included; GitHub Pages, Vercel, Netlify, Cloudflare Pages and ReadTheDocs are free in dollars but cost hours of setup work."
 ---
 
 # Free documentation hosting compared: six real options
@@ -178,9 +179,13 @@ Because a price copied into a blog post goes stale without telling anyone, and a
 
 [Start free — no credit card](https://docsbook.io/?start=1)
 
+<!-- widget:cards plain cols=2 -->
+
 ## Next steps
 
 - [Best documentation platforms for startups in 2026](./best-docs-platforms-for-startups-2026.md) — the same field ranked by company stage
 - [How to host documentation from GitHub](./how-to-host-docs-from-github.md) — the step-by-step for the three main paths
 - [Turn your README.md into a documentation site](./readme-md-to-docs-site.md) — the shortest path if your docs are one file
 - [Custom domain for documentation](./custom-domain-for-docs-howto.md) — DNS, SSL and redirects for `docs.yourcompany.com`
+
+<!-- /widget -->

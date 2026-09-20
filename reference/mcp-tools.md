@@ -1,6 +1,7 @@
 ---
 title: "MCP Tools"
 description: "The MCP tools reference moved to /mcp."
+tldr: "The Docsbook MCP tools reference moved to docsbook.io/mcp, where every tool the server exposes is listed by family with example prompts and troubleshooting. This address no longer serves the reference itself."
 status: generated
 version: "0.1"
 ---

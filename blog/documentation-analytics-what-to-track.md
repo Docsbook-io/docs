@@ -1,6 +1,7 @@
 ---
 title: "Documentation analytics: the metrics worth tracking"
 description: "Pageviews tell you scope, not health. Here are the documentation metrics that surface real failures — failed searches, unanswered questions, dead ends."
+tldr: "Docsbook argues pageviews measure popularity, not documentation health — the metrics that change behavior are failed searches, unanswered AI questions, negative feedback, and the page journeys around them."
 ---
 
 # Documentation analytics: the metrics worth tracking
@@ -138,14 +139,22 @@ A working monthly ritual:
 
 This is the highest ROI loop in documentation. Each iteration turns a known content gap into a search-engine-indexed page that AI search can cite.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related reading
 
-- [Documentation SEO guide](./documentation-seo-guide.md)
-- [AI chat for documentation: build vs buy](./ai-chat-for-documentation-build-vs-buy.md)
-- [How to get docs cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md)
+- [Documentation SEO guide](./documentation-seo-guide.md) {search}
+- [AI chat for documentation: build vs buy](./ai-chat-for-documentation-build-vs-buy.md) {message-circle}
+- [How to get docs cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) {message-square}
+
+<!-- /widget -->
 
 ---
+
+<!-- widget:cta -->
 
 Docsbook reports failed searches, unanswered assistant questions, negative feedback and page journeys, so the gaps arrive as a list of pages to write rather than as a chart to interpret.
 
 [Start free — no credit card](https://docsbook.io/?start=1)
+
+<!-- /widget -->

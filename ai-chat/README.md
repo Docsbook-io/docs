@@ -23,7 +23,11 @@ What the chat could not answer is recorded — unanswered questions and searches
 
 Connect your [Sources](./sources.md) first. A connected source is what stops the assistant answering from memory: with a repository or a site registered, "what does this cost" begins by reading it, rather than by guessing. Then turn on [AI chat](./chat.md) itself.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
-- [Get cited by AI and found by search](../seo/README.md) — the other half of the AI layer: being read and quoted OFF your own site
-- [Use cases](../use-cases.md) — the situations teams bring to Docsbook
+- [Get cited by AI and found by search](../seo/README.md) — the other half of the AI layer: being read and quoted OFF your own site {search}
+- [Use cases](../use-cases.md) — the situations teams bring to Docsbook {briefcase}
+
+<!-- /widget -->

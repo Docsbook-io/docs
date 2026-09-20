@@ -1,6 +1,7 @@
 ---
 title: "Configure the footer of your Docsbook documentation site"
 description: "Add a footer under your documentation: columns of links, a copyright and legal block, a call-to-action button, social icons and a light/dark picker."
+tldr: "Docsbook's site footer is off by default and only appears once you switch it on and fill in at least one block — a link column, copyright text, a CTA button, your logo, or social icons."
 ---
 
 # Footer Options
@@ -32,11 +33,15 @@ You can also just ask the AI chat — "add a footer with Terms and Privacy at th
 
 ---
 
+<!-- widget:callout type=note -->
+
 ## Turning it on is not quite enough
 
 The footer renders once it is switched on **and** has something in it: a link column, the copyright text, a call-to-action label, your logo, or social icons you have actually set.
 
 This is deliberate. Switching it on and filling it in are two different cards, so "on, nothing in it yet" is the normal state for as long as it takes to type the first column — and a rule with nothing above it drawn across the bottom of every page looks like a site that broke, not like a setting you have not finished. Fill in any one block and the footer appears.
+
+<!-- /widget -->
 
 ---
 
@@ -114,9 +119,13 @@ The badge at the foot of your pages is not a footer setting. When you enable a f
 
 Footer link labels and the copyright text are shown exactly as you wrote them in every language. Unlike sidebar labels and header links, they are not currently sent for translation.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related
 
-- [Header options](./header.md) — the other end of the frame, and where social links are set
-- [Sidebar layout and configuration](./sidebar.md)
-- [Branding — name, logo, colors, fonts](../style/branding.md) — the logo and accent the footer uses
-- [Theming — light, dark, system](../style/theming.md) — what the footer's theme picker switches
+- [Header options](./header.md) — the other end of the frame, and where social links are set {panel-top}
+- [Sidebar layout and configuration](./sidebar.md) {panel-left}
+- [Branding — name, logo, colors, fonts](../style/branding.md) — the logo and accent the footer uses {palette}
+- [Theming — light, dark, system](../style/theming.md) — what the footer's theme picker switches {moon}
+
+<!-- /widget -->

@@ -1,6 +1,7 @@
 ---
 title: "GitBook vs Docsbook: pricing, lock-in and migration"
 description: "GitBook and Docsbook compared on how each one charges, where your content actually lives, what AI you get, and what the migration between them costs."
+tldr: "GitBook charges per site plus a fee for every collaborating editor and stores content in its own database; Docsbook charges nothing for the site, meters only AI usage, and reads Markdown straight from your GitHub repo."
 status: generated
 version: "0.2"
 ---
@@ -163,9 +164,13 @@ If you are the first audience, GitBook is the right call. If you are the second,
 
 [Start free — no credit card](https://docsbook.io/?start=1)
 
+<!-- widget:cards plain cols=2 -->
+
 ## Next steps
 
 - [Migrating from GitBook to Docsbook](./migrating-from-gitbook-to-docsbook.md) — the export, the import and the redirect list
 - [Docusaurus alternatives in 2026: 9 platforms compared](./docusaurus-vs-docsbook.md) — the wider field, if GitBook is not your only candidate
 - [AI documentation platforms compared](./ai-docs-platform-comparison.md) — the AI feature matrix across four managed platforms
 - [Custom domain for documentation](./custom-domain-for-docs-howto.md) — the DNS and SSL steps for `docs.yourcompany.com`
+
+<!-- /widget -->

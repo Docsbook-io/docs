@@ -1,6 +1,7 @@
 ---
 title: "AI chat for documentation: should you build or buy?"
 description: "The real cost of building retrieval-based AI chat for your docs versus buying it — engineering weeks, model spend, and where each option breaks."
+tldr: "Docsbook's answer to build-vs-buy AI chat for docs is buy: setup takes hours instead of 3–6 engineer-weeks, and retrieval-quality upkeep becomes the vendor's job rather than yours."
 status: generated
 version: "0.2"
 ---
@@ -163,14 +164,22 @@ Three questions, in order:
 
 Buying is the right answer for most teams for one structural reason: docs AI is a maintenance commitment, not a build. The teams that should build are the ones building a broader AI product where documentation is one surface among several.
 
+<!-- widget:cards plain cols=2 -->
+
 ## Related reading
 
-- [AI documentation platforms compared (2026)](./ai-docs-platform-comparison.md)
-- [Documentation analytics: what to track in 2026](./documentation-analytics-what-to-track.md)
-- [API documentation best practices in 2026](./api-documentation-best-practices-2026.md)
+- [AI documentation platforms compared (2026)](./ai-docs-platform-comparison.md) {sparkles}
+- [Documentation analytics: what to track in 2026](./documentation-analytics-what-to-track.md) {chart-line}
+- [API documentation best practices in 2026](./api-documentation-best-practices-2026.md) {terminal}
+
+<!-- /widget -->
 
 ---
+
+<!-- widget:cta -->
 
 Docsbook AI chat: bring your own provider, set your own system prompt, and hook the request before and after the model call. Cost is metered in dollars against the project's balance rather than sold as a tier — current numbers on [docsbook.io/pricing](https://docsbook.io/pricing).
 
 [Start free — no credit card](https://docsbook.io/?start=1)
+
+<!-- /widget -->
