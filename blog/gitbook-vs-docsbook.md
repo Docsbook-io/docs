@@ -1,6 +1,8 @@
 ---
 title: "GitBook vs Docsbook: pricing, lock-in and migration"
 description: "GitBook and Docsbook compared on how each one charges, where your content actually lives, what AI you get, and what the migration between them costs."
+status: generated
+version: "0.2"
 ---
 
 # GitBook vs Docsbook: pricing, lock-in and migration
@@ -146,7 +148,7 @@ You can, but it defeats the point. Pick one source of truth. If GitBook is yours
 Set up 301 redirects from every old GitBook URL to the matching Docsbook path. Search engines follow a 301 and carry the ranking signals across; a path you forget to redirect is the one that loses traffic. Docsbook emits per-page meta tags and JSON-LD by default, so the new pages are not missing markup the old ones had — but no platform can promise you a ranking, and this one does not.
 
 **Does Docsbook have AI search like GitBook?**
-Yes. AI chat is trained on your own docs, and its cost is metered in dollars against the project's balance rather than gated behind a tier. You can also bring your own API key — OpenRouter, OpenAI, Anthropic or Gemini — and pay the provider directly instead.
+Yes. AI chat is trained on your own docs, and its cost is metered in dollars against the project's balance rather than gated behind a tier. You can also bring your own API key — OpenRouter, OpenAI, Anthropic, Gemini or Vercel AI Gateway — and pay the provider directly instead.
 
 **Can I customize the look and feel?**
 Yes. Logo, favicon, accent colours for light and dark, Google Fonts, and per-component visibility toggles — search bar, copy button, edit-on-GitHub link, AI chat button and the rest. The one thing you cannot switch off is the small "Powered by Docsbook" link in the page footer: it renders on every Docsbook site, unconditionally.
