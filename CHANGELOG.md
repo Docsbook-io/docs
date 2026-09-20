@@ -2,7 +2,7 @@
 title: "Docsbook Changelog"
 description: "Release notes for Docsbook — new features, fixes, and improvements to the AI-powered documentation platform, newest first."
 status: generated
-version: "0.9"
+version: "0.10"
 ---
 
 # Releases
@@ -35,6 +35,7 @@ version: "0.9"
 - **Starting a documentation task now tells you it can be watched live and asked about while it runs**, instead of only pointing at a status check. The tool that hands a job over used to read like a script to wait; it now names the live timeline and lets you send the agent a question mid-run rather than only after it asks you one. `Agents`
 - **A collaborator invite now links straight to the docs, not only to the sign-in-gated accept page.** Deciding whether to join a project used to mean creating an account first and looking around after; the invite email now also opens the documentation site itself. `Collaboration`
 - **The trial-wallet warnings this page promises now actually fire.** A trial without an expiry date (running since 15 September) never triggered its 50%, 75% and 90% notices — a field-name mismatch made every one of them silently read as not running a trial at all, for the five days between shipping and this fix. `Pricing`
+- **The Feedback tab in Logs now shows the same empty state as every other tab on the strip when there is nothing to show**, instead of a plainer placeholder of its own. Its **Fix it** action now opens the admin chat directly. `Logs`
 
 ### Changed
 
