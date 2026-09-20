@@ -2,7 +2,7 @@
 title: "Docsbook Changelog"
 description: "Release notes for Docsbook — new features, fixes, and improvements to the AI-powered documentation platform, newest first."
 status: generated
-version: "0.5"
+version: "0.6"
 ---
 
 # Releases
@@ -13,7 +13,8 @@ version: "0.5"
 
 - **The sidebar lists your GitHub repositories, not only the projects you have already made.** Pick one and the new-project form opens with it chosen, so connecting a repository is a click on the repository itself instead of a trip through a second picker. `Panel`
 - **Your GitHub organizations show up the moment you sign in**, whether or not anything has been filed into them yet, so a new account can open the company it works under instead of only its own profile. `Panel`
-- **An agent's work is now readable while it is still running, not only once it reports back.** A job used to leave a single status word and a silent gap between updates; it now leaves a running timeline of what it actually did — each call it made against your project, plus, when it works from a Claude Code session, the commands, files and pages that call alone would not show. Read it with `docsbook_agent_activity` from the panel's chat or your own MCP client, and, for a public project, from a token-free endpoint scoped to that project alone. What is redacted never reaches the record in the first place: no credential, no internal method, no raw argument payloads — only the pages read, the pages written, and the translations run, the same activity a public project already shows elsewhere. `Agents`
+- **You can watch a documentation task work, step by step, while it is still working.** A run takes minutes, and the only sign of life was one line of progress that the next one overwrote, so "what is it doing right now" had no answer anyone could check and an assistant asked it would describe what an agent probably does. Every action a task takes is now a line in an ordered timeline you can follow as it happens: the pages it reads, the pages it writes, the translations it runs, how long each took and whether it worked. `Agents`
+- **Anyone can see the documentation work done on a public project, with no account and no token.** The project's own endpoint now answers what the agent has been doing on it, so a reader deciding whether your docs are maintained can look instead of guess. It shows the work and not the business: what you asked for, what the agent reported back to you, your analytics and your settings are not in it, and a private project's work stays private. `MCP`
 
 ### Fixed
 
@@ -30,6 +31,7 @@ version: "0.5"
 - **Publishing one new page no longer sends the whole site's menu back to the original language** while it waits for the next translation run. `Translations`
 - **A project reached at a differently-capitalised address is no longer treated as a different project**, which used to cost it its translated menu without anything looking broken. `Translations`
 - **A conversation started from the floating Ask Docs button now stays docked to the corner it opened from**, as a small widget-style card (a full-width sheet on mobile), for the rest of that conversation. It used to hand off to the same full-viewport view every other entry point uses the moment you sent your first message. Every other way to open chat — the header's Ask AI, a pending search or outline query, the admin toolbar, `?chat=1` — is unchanged. `AI chat`
+- **The install link every agent task uses to enable its live timeline can no longer be taken over by a project name.** That link reached the install script by a coincidence of routing rather than by design; a project created with that exact name would have silently broken every agent task's step-by-step timeline afterward, with nothing anywhere saying why. That name is now reserved and can never belong to a project, the same way a handful of other system paths already are. `Agents`
 
 ### Changed
 
