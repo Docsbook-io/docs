@@ -1,6 +1,8 @@
 ---
 title: "Quick start: publish a documentation site with Docsbook"
 description: "Generate a Docsbook draft from a repository, a website or an idea, review it before signing in, and publish it to a public URL you can share."
+status: generated
+version: "0.2"
 ---
 
 # Quick start: publish a documentation site with Docsbook
@@ -32,7 +34,7 @@ You do not need a credit card, a build pipeline, or an account before step 3.
 
 1. Press **Open** on the admin panel, or click the preview itself.
 2. Browse the generated pages as a real documentation site — header, sidebar tree, outline, breadcrumbs and prev/next all work.
-3. Use **Assistant** in the panel to change wording or ask about the site. In the message box, **interactive mode** opens the site with the chat beside it and every block clickable.
+3. Press **Editor** in the toolbar to make every block clickable, then click one to change its wording. Your request opens in a small assistant panel docked to the corner of the page.
 
 **Expected result:** you have read the draft and know whether it describes your product correctly. A draft from a website or an idea lives in your browser only until you publish it.
 
