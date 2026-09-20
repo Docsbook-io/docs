@@ -45,6 +45,7 @@ version: "0.9"
 - **The admin chat resolves your project itself, instead of asking first.** Opening it used to start with a dropdown of every workspace you can reach — your own, your organization's, anyone's you collaborate on — before it would take a question. It now picks the project from what you say in the message, or the one you already have open, and shows which one it picked; the corner button is a plain icon now, since everyone who can see it is already signed in as the admin. `AI chat`
 - **Visit Website moved from the panel's header to its sidebar.** It is a plain row now, sitting just above the account and organization switcher at the bottom of the sidebar, instead of a highlighted button in the top-right corner. `Panel`
 - **The Spend tile is off Analytics' headline strip.** The row now reads Visitors, Revenue, Conversion rate and the rest, without it. `Analytics`
+- **Turning on the autonomous growth agent now needs this project's own paid plan, not trial credit.** It runs hourly and unwatched, which made it the fastest way to burn through a trial's free sample; its settings dialog now makes the business case for what it actually does, and sends you to the Plan page instead of arming it if you try to turn it on without a subscription. `Pricing`
 
 ## NEW - 19.09.2026
 
