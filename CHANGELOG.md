@@ -11,6 +11,7 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 
 - **The sidebar lists your GitHub repositories, not only the projects you have already made.** Pick one and the new-project form opens with it chosen, so connecting a repository is a click on the repository itself instead of a trip through a second picker. `Panel`
 - **Your GitHub organizations show up the moment you sign in**, whether or not anything has been filed into them yet, so a new account can open the company it works under instead of only its own profile. `Panel`
+- **Privacy & Access now says what "private" means for your project, and checks GitHub rather than assuming.** A site Docsbook hosts for you goes private together with its repository; a site built from your own repository is never touched by the switch, because a private repository serving a public site is supported outright. The card reads the repository's real state on GitHub, so it can warn you outright when a site marked private still has a public repository behind it. `Panel`
 
 ### Fixed
 
@@ -30,6 +31,11 @@ description: "Release notes for Docsbook — new features, fixes, and improvemen
 - **A project paying with its own translation key is no longer stopped when the shared pool runs out.** Bringing your own key is the product's answer to an exhausted shared quota, and it now holds at every step of a translation run rather than only at the last one. `Translations`
 - **`llms.txt` names the languages a site publishes**, and shows what a translated address looks like, so an assistant asked "is there documentation in German" can answer from the one file it is pointed at. `SEO`
 - **Agent runs are billed for the work they did, not for how long they took.** A run that read four pages no longer costs what a run that rewrote the site costs, and a run waiting on your answer no longer bills you for the wait. Pricing is per token with the session fee kept for the per-run machinery; the previous monthly free-run allowance is gone, since under a token meter a free run has no size. `Agents`
+
+### Security
+
+- **Switching a Docsbook-hosted site to private now makes its repository private as well.** Until today the switch gated the address while every page of that documentation stayed readable, cloneable and searchable in a public GitHub repository, so a site marked private protected its URL and nothing else. If the repository cannot be made private, the change is now refused with the reason instead of being recorded as though it had worked. `Privacy`
+- **A gated project's page names no longer sit in a cache shared with public projects.** The file list and branch of a private site could be filed alongside public ones, which let the shape of a site be probed from outside without ever getting past its sign-in. `Privacy`
 
 ## NEW - 19.09.2026
 
