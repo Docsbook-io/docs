@@ -2,7 +2,7 @@
 title: "Docny vs Docsbook: AI-generated docs vs Git-native docs compared"
 description: "Docny and Docsbook compared on how each one generates and hosts your docs, what's free vs paid, and where each one fits — including the cases where Docny is the better pick."
 status: generated
-version: "0.1"
+version: "0.2"
 ---
 
 # Docny vs Docsbook: AI-generated docs vs Git-native docs compared
@@ -67,6 +67,8 @@ Docny is a strong choice if you are starting from little or nothing — includin
 
 ## Next steps
 
+<!-- widget:cards plain cols=2 arrow=hover -->
 - [The best documentation platforms for startups in 2026](./best-docs-platforms-for-startups-2026.md) — how Docny and Docsbook each stack up against the wider field
 - [AI documentation platforms compared](./ai-docs-platform-comparison.md) — what AI is actually implemented across managed tools
 - [Docsio vs Docsbook](./docsio-vs-docsbook.md) — another AI-generation-first competitor, compared the same way
+<!-- /widget -->

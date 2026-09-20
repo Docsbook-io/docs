@@ -2,7 +2,7 @@
 title: "Docsbook blog: documentation strategy and comparisons"
 description: "Long-form posts on running documentation as a channel — AI search, SEO, analytics, and head-to-head comparisons of the platforms that host it."
 status: generated
-version: "0.2"
+version: "0.3"
 ---
 
 # Docsbook blog: documentation strategy and comparisons
@@ -24,6 +24,7 @@ Start here if the docs are in a README, a wiki, or nowhere.
 
 Head-to-head comparisons. Each one names the cases where the other product wins.
 
+<!-- widget:cards plain cols=2 arrow=hover -->
 - [The best documentation platforms for startups in 2026](./best-docs-platforms-for-startups-2026.md) — eight platforms, ranked by company stage
 - [Docusaurus alternatives in 2026: 9 platforms compared](./docusaurus-vs-docsbook.md) — the full field, managed and self-hosted
 - [GitBook vs Docsbook](./gitbook-vs-docsbook.md) — how each one charges, and where the content lives
@@ -35,6 +36,7 @@ Head-to-head comparisons. Each one names the cases where the other product wins.
 - [AI documentation platforms compared](./ai-docs-platform-comparison.md) — what AI is actually implemented across four managed tools
 - [Free documentation hosting compared](./free-docs-hosting-comparison.md) — six ways to pay nothing, and what each costs in time
 - [Docs as code vs a managed platform](./docs-as-code-vs-managed-platform.md) — the same choice stated as a principle
+<!-- /widget -->
 
 ## I already run docs somewhere and want to move
 
