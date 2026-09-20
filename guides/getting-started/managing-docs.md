@@ -2,7 +2,7 @@
 title: "Manage and update a published Docsbook documentation site"
 description: "Update pages, undo a publish, control who can read the docs, fix a site that has not refreshed, and work with other people on the same repository."
 status: generated
-version: "0.2"
+version: "0.3"
 ---
 
 # Manage your documentation site
@@ -187,7 +187,7 @@ To put an existing project into an organization, open it, click its name at the 
 
 **Through GitHub.** Add them as collaborators on the repository. They edit files or open pull requests, and the site updates when a change reaches your default branch. This is the path for anyone who already works in the repository.
 
-**Through the AI chat.** Press **Invite** in the chat toolbar, or use **Collaborators** in Settings, and send an email invite. It is a one-time link — the invited teammate accepts it while signed in with that same email address, then shows up under **People with access**. This adds somebody to ONE project; an organization invite covers all of them. No GitHub account needed.
+**Through the AI chat.** Press **Invite** in the chat toolbar, or use **Collaborators** in Settings, and choose **Full access** or **Read-only** for the person you are adding. Either send an email invite — a one-time link the invited teammate accepts while signed in with that same email address — or copy a shareable invite link that anyone who opens it can use to join at that access level. Either way, they show up under **People with access** once they join. This adds somebody to ONE project; an organization invite covers all of them. No GitHub account needed.
 
 ## Fix a site that has not updated
 
