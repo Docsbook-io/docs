@@ -2,7 +2,7 @@
 title: "Docsbook Changelog"
 description: "Release notes for Docsbook — new features, fixes, and improvements to the AI-powered documentation platform, newest first."
 status: generated
-version: "0.8"
+version: "0.9"
 ---
 
 # Releases
@@ -34,6 +34,7 @@ version: "0.8"
 - **The install link every agent task uses to enable its live timeline can no longer be taken over by a project name.** That link reached the install script by a coincidence of routing rather than by design; a project created with that exact name would have silently broken every agent task's step-by-step timeline afterward, with nothing anywhere saying why. That name is now reserved and can never belong to a project, the same way a handful of other system paths already are. `Agents`
 - **Starting a documentation task now tells you it can be watched live and asked about while it runs**, instead of only pointing at a status check. The tool that hands a job over used to read like a script to wait; it now names the live timeline and lets you send the agent a question mid-run rather than only after it asks you one. `Agents`
 - **A collaborator invite now links straight to the docs, not only to the sign-in-gated accept page.** Deciding whether to join a project used to mean creating an account first and looking around after; the invite email now also opens the documentation site itself. `Collaboration`
+- **The trial-wallet warnings this page promises now actually fire.** A trial without an expiry date (running since 15 September) never triggered its 50%, 75% and 90% notices — a field-name mismatch made every one of them silently read as not running a trial at all, for the five days between shipping and this fix. `Pricing`
 
 ### Changed
 
@@ -42,8 +43,7 @@ version: "0.8"
 - **Agent runs are billed for the work they did, not for how long they took.** A run that read four pages no longer costs what a run that rewrote the site costs, and a run waiting on your answer no longer bills you for the wait. Pricing is per token with the session fee kept for the per-run machinery; the previous monthly free-run allowance is gone, since under a token meter a free run has no size. `Agents`
 - **Three Analytics reports moved to the tab that answers their question.** AI Views — which assistants and crawlers fetch your docs — sat on the Insights tab, three scrolls below the human-traffic cards it was being compared against and one tab away from the report on whether an AI answer actually names you; the two now sit together. The docs-assistant conversation breakdown sat at the foot of the page-traffic report; it now lives on the Chat tab, beside the KPI tiles that already summarised the same conversations. The per-reader table (who came, when, what they read) moved out of Analytics into Logs. `Analytics`
 - **The admin chat resolves your project itself, instead of asking first.** Opening it used to start with a dropdown of every workspace you can reach — your own, your organization's, anyone's you collaborate on — before it would take a question. It now picks the project from what you say in the message, or the one you already have open, and shows which one it picked; the corner button is a plain icon now, since everyone who can see it is already signed in as the admin. `AI chat`
-- **Every AI conversation on your docs now opens the same way: a small panel docked to the corner of the page.** It used to open full-viewport or split beside the page depending on which button started it, and only the official Docsbook docs had the opt-in button that docked it to the corner. Every entry point behaves the same way now, with no full-page or split-screen view left to fall into. `AI chat`
-- **Turning on click-to-edit no longer means opening the chat first.** It used to arm from inside the AI chat's split-screen layout, behind an **Assistant** toolbar shortcut that had not opened a working conversation since 2 September. Press the toggle in the corner of the page directly now, and every block becomes clickable right away. `Panel`
+- **Visit Website moved from the panel's header to its sidebar.** It is a plain row now, sitting just above the account and organization switcher at the bottom of the sidebar, instead of a highlighted button in the top-right corner. `Panel`
 
 ## NEW - 19.09.2026
 
