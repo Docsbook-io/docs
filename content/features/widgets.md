@@ -1,6 +1,8 @@
 ---
 title: "Content widgets: rich blocks written in plain markdown"
 description: "Reference for every Docsbook content widget — hero, stats, cards, showcase, journey, tabs, code-group, callout, accordion, stepper, pricing, api, mcp, cta, cta-form and recommendations — and the markers each reads."
+status: generated
+version: "0.2"
 ---
 
 # Content widgets
@@ -173,7 +175,7 @@ client.messages.create(model="claude-opus-5", max_tokens=1024)
 ```
 
 ```typescript
-await client.messages.create({ model: "claude-opus-5", max_tokens: 1024 })
+await client.messages.create({ model: "claude-opus-5", max_tokens: 2048 })
 ```
 
 <!-- /widget -->
@@ -380,7 +382,7 @@ Three or four figures with a short label under each — the strip an enterprise 
 
 ### journey — lifecycle stages side by side
 
-Ordered stages laid out as columns on one rail, each with a numbered head and a short list of links. A pipeline the reader reads left to right, rather than a sequence they follow top to bottom.
+Ordered stages arranged vertically down the page in a tall rail layout, each with a numbered head and a short list of links. A pipeline the reader follows top to bottom, rather than a horizontal row of narrow columns.
 
 `stepper` is the close relative, and the two are not interchangeable. Use a stepper when skipping a step breaks the next one; use a journey when the reader is choosing which stage they are in and each stage holds several destinations.
 
@@ -388,8 +390,10 @@ Ordered stages laid out as columns on one rail, each with a numbered head and a 
 - The bullet list under a heading becomes that stage's links: `- [Quickstart](./quick-start.md) {rocket}`.
 - A paragraph under a heading, before the list, becomes a one-line note under the stage title.
 - Content before the first heading renders above the rail as an intro.
-- `cols=1` to `cols=4` fixes the number of lanes per row; without it the rail fits as many as the page width allows and wraps the rest.
-- Three to five stages is the working range. Two is a pair of lists and wanted `cards`; seven turns each lane into a column two words wide.
+- `cols=1` to `cols=4` fixes the number of card-columns *inside* each stage — the grid of destination cards within a stage. Without it the rail fits as many cards per row as the stage width allows. Because each stage occupies the full page width, stage titles can wrap freely and the rail avoids the cramped ~190px-per-stage problem that existed when stages were arranged side by side.
+- Three to five stages is the working range. Two is a pair of lists and wanted `cards`; seven turns the page into a long scroll.
+
+The layout moved from a horizontal column-row (where each stage got ~190px and forced short labels) to a vertical rail (where each stage takes the full column width). The markdown contract — heading + list — is unchanged, so existing pages render the new shape without rewriting.
 
 ```markdown
 <!-- widget:journey cols=2 -->
