@@ -2,31 +2,25 @@
 title: "Bento card grid"
 description: "Renders mixed-width feature cards on a twelve-column rail — each with a screenshot, badge, chips and icon. Available on all plans."
 status: generated
-version: "0.1"
+version: "0.2"
 ---
 
 # Bento card grid
 
-<!-- widget:mcp access=read -->
-
-## find_skill / find_widget usage
-
-Available as a content widget on every plan. Call `list_content_widgets` or open Settings → Widgets to see the full contract and examples. This page covers how it differs from `cards` and `showcase`, and when to reach for it.
-
-### What it is
+## What it is
 
 A twelve-column rail of feature cards of different widths, each carrying a title, a short description, an optional badge, a screenshot, and either inline body or chip tags. It is the block a landing or feature page uses to show what the product looks like across several features at once.
 
 ### Difference from neighbours
 
-- `cards` crops an image into a 6.5rem band beside an icon, which turns a dashboard screenshot into a grey smear. A bento card carries the full screenshot flush to the bottom edge.
-- `showcase` IS its picture, with only a name and tagline under it — right for 'sites other people built', wrong for 'here is one feature, explained'.
+- **cards** crops an image into a 6.5rem band beside an icon, which turns a dashboard screenshot into a grey smear. A bento card carries the full screenshot flush to the bottom edge.
+- **showcase** IS its picture, with only a name and tagline under it — right for 'sites other people built', wrong for 'here is one feature, explained'.
 
-Reach for `bento` when each item needs a paragraph AND a screenshot, and when relative importance should be visible in their width.
+Reach for **bento** when each item needs a paragraph AND a screenshot, and when relative importance should be visible in their width.
 
 ### Marker syntax
 
-```markdown
+```
 <!-- widget:bento cols=3 -->
 ```
 
@@ -36,12 +30,12 @@ Reach for `bento` when each item needs a paragraph AND a screenshot, and when re
 
 All per-card markers appear at the end of the list item, before the closing punctuation:
 
-- `{span:N}` — card width out of 12 columns. Values outside 1–12 are ignored. A row adds up to 12.
-- `{crop:center}` / `{crop:top}` / `{crop:bottom}` etc. — which part of the screenshot survives the frame. Default `top`.
-- `{side}` — picture BESIDE the copy instead of under it. Useful for full-width `{span:12}` cards.
-- `{badge:New}` / `{badge:Beta}` — small accent-coloured pill above the title, up to 32 characters.
-- `{tags}` — nested bullet list renders as chips under the title instead of body prose. Each chip one or two words.
-- `{icon-name}` — Lucide glyph above the title (e.g. `{rocket}`, `{chart-line}`).
+- **{span:N}** — card width out of 12 columns. Values outside 1–12 are ignored. A row adds up to 12.
+- **{crop:center} / {crop:top} / {crop:bottom} etc.** — which part of the screenshot survives the frame. Default `top`.
+- **{side}** — picture BESIDE the copy instead of under it. Useful for full-width `{span:12}` cards.
+- **{badge:New} / {badge:Beta}** — small accent-coloured pill above the title, up to 32 characters.
+- **{tags}** — nested bullet list renders as chips under the title instead of body prose. Each chip one or two words.
+- **{icon-name}** — Lucide glyph above the title (e.g. `{rocket}`, `{chart-line}`).
 
 Markers may appear in any order and are all optional. A card without a screenshot falls back to `{icon-name}` or plain text.
 

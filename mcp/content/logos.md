@@ -2,30 +2,24 @@
 title: "Logos strip"
 description: "Social-proof strip under a landing page hero — uploads logos for brands that have them, names for those that don't. Available on all plans."
 status: generated
-version: "0.1"
+version: "0.2"
 ---
 
 # Logos strip
 
-<!-- widget:mcp access=read -->
-
-## find_skill / find_widget usage
-
-Available as a content widget on every plan. Call `list_content_widgets` or open Settings → Widgets to see the full contract and examples. This page covers when to use it versus similar widgets.
-
-### What it is
+## What it is
 
 A centered row of customer marks placed directly under a landing page's hero. When an item has an uploaded logo image, it renders the logo; otherwise it renders the customer's name set in the page type. A half-finished wall always looks deliberate.
 
 ### Difference from neighbours
 
-- `showcase` is a gallery where every tile carries a screenshot — right for 'here is what their site looks like'.
-- `cards` labels destinations within your own docs — a grid of doors.
-- `logos` says 'these people use it' — a single row of marks, not a gallery.
+- **showcase** is a gallery where every tile carries a screenshot — right for 'here is what their site looks like'.
+- **cards** labels destinations within your own docs — a grid of doors.
+- **logos** says 'these people use it' — a single row of marks, not a gallery.
 
 ### Marker syntax
 
-```markdown
+```
 <!-- widget:logos size=md color -->
 ```
 
