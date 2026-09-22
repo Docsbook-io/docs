@@ -1,6 +1,8 @@
 ---
 title: "Update ui settings"
 description: "Show or hide one interface element of the docs site — the header search button, sidebar search, the copy-page menu and its entries, previous/next links, breadcrumbs,…"
+status: generated
+version: "0.2"
 ---
 
 # Update ui settings
@@ -9,7 +11,7 @@ description: "Show or hide one interface element of the docs site — the header
 
 ## update_ui_settings
 
-Show or hide one interface element of the docs site — the header search button, sidebar search, the copy-page menu and its entries, previous/next links, breadcrumbs, scroll-to-top, page feedback, the 'was this helpful' bar, edit-on-GitHub, the Ask AI buttons (header, outline, on selection), copy-as-markdown, and where the language and theme switchers sit. Also the HOME-PAGE LANDING switches (home_hide_sidebar, home_hide_outline, home_wide_content, home_hide_chrome, home_landing_typography), which strip the sidebar, the outline, the column width and the article chrome (breadcrumbs, 'Updated', rating bar, prev/next) off the site's FRONT PAGE ONLY and give its sections landing-page scale so it can read as a landing page — use them for 'make the home page a landing page', 'full-width main page', «сделай главную посадочной», «убери сайдбары на главной». And the SITE FOOTER (whether it exists, its layout, its copyright text, its call-to-action button, and whether it shows the social icons and a theme picker) — 'add a footer', 'put a copyright line at the bottom', «добавь футер». Pass only the toggles the user mentioned; the rest are untouched. Use it for 'hide the search button', 'remove breadcrumbs', «убери кнопку поиска». NOT header links or folder tabs — and NOT the footer's LINK COLUMNS, which are update_navigation's footer_columns. NOT colours or fonts (update_branding). All toggles available on FREE plan.
+Show or hide one interface element of the docs site — the header search button, sidebar search, the copy-page menu and its entries, previous/next links, breadcrumbs, scroll-to-top, page feedback, the 'was this helpful' bar, edit-on-GitHub, the Ask AI buttons (header, outline, on selection), copy-as-markdown, and where the language and theme switchers sit. Also the HOME-PAGE LANDING switches (home_hide_sidebar, home_hide_outline, home_hide_chrome, home_landing_typography), which strip the sidebar, the outline and the article chrome (breadcrumbs, 'Updated', rating bar, prev/next) off the site's FRONT PAGE ONLY and give its sections landing-page scale so it can read as a landing page — use them for 'make the home page a landing page', «сделай главную посадочной», «убери сайдбары на главной». And the SITE FOOTER (whether it exists, its layout, its copyright text, its call-to-action button, and whether it shows the social icons and a theme picker) — 'add a footer', 'put a copyright line at the bottom', «добавь футер». Pass only the toggles the user mentioned; the rest are untouched. Use it for 'hide the search button', 'remove breadcrumbs', «убери кнопку поиска». NOT header links or folder tabs — and NOT the footer's LINK COLUMNS, which are update_navigation's footer_columns. NOT colours or fonts (update_branding). All toggles available on FREE plan.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -29,7 +31,6 @@ Show or hide one interface element of the docs site — the header search button
 | `show_breadcrumbs` | boolean | no | — |
 | `home_hide_sidebar` | boolean | no | HOME PAGE ONLY: hide the left navigation rail on the site's front page (its top-level README/index), on desktop — the mobile drawer stays. Every other page keeps its sidebar. |
 | `home_hide_outline` | boolean | no | HOME PAGE ONLY: hide the right-hand "On this page" outline on the site's front page. |
-| `home_wide_content` | boolean | no | HOME PAGE ONLY: let the front page's content run the full window width instead of the fixed reading column. |
 | `home_hide_chrome` | boolean | no | HOME PAGE ONLY: remove the article chrome from the front page — the breadcrumb/copy-page bar, the "Updated" line, the "Was this page helpful?" bar and the previous/next links — so it reads as a landing page, not as page one of a manual. |
 | `home_landing_typography` | boolean | no | HOME PAGE ONLY: landing-page scale for the front page's sections — each h2 becomes a large section title with air above it and the paragraph under it reads as that section's lead. Pair it with hero/stats/cards widgets in the README. |
 | `show_scroll_to_top` | boolean | no | — |
@@ -117,7 +118,6 @@ The same tool is callable as a plain HTTP request, no MCP client required. It ru
 | `show_breadcrumbs` | boolean | no | — |
 | `home_hide_sidebar` | boolean | no | HOME PAGE ONLY: hide the left navigation rail on the site's front page (its top-level README/index), on desktop — the mobile drawer stays. Every other page keeps its sidebar. |
 | `home_hide_outline` | boolean | no | HOME PAGE ONLY: hide the right-hand "On this page" outline on the site's front page. |
-| `home_wide_content` | boolean | no | HOME PAGE ONLY: let the front page's content run the full window width instead of the fixed reading column. |
 | `home_hide_chrome` | boolean | no | HOME PAGE ONLY: remove the article chrome from the front page — the breadcrumb/copy-page bar, the "Updated" line, the "Was this page helpful?" bar and the previous/next links — so it reads as a landing page, not as page one of a manual. |
 | `home_landing_typography` | boolean | no | HOME PAGE ONLY: landing-page scale for the front page's sections — each h2 becomes a large section title with air above it and the paragraph under it reads as that section's lead. Pair it with hero/stats/cards widgets in the README. |
 | `show_scroll_to_top` | boolean | no | — |
