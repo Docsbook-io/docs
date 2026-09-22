@@ -2,7 +2,7 @@
 title: "Docsbook documentation: publish, get found, get quoted, measure."
 description: "Docsbook publishes the Markdown you already have to a site search engines index and AI assistants cite, then hands your agent a goal and reports the number it moved. Start here."
 status: generated
-version: "0.3"
+version: "0.4"
 ---
 
 <!-- widget:hero size=large -->
@@ -36,6 +36,18 @@ Codex, Cursor, Windsurf, Cline and any other MCP client use the same endpoint.
 
 <!-- /widget -->
 
+<!-- widget:logos -->
+
+**Documentation running on Docsbook**
+
+- [Cursor](https://docsbook-websites.docsbook.io/cursor)
+- [ClickHouse](https://docsbook-websites.docsbook.io/clickhouse)
+- [Discord Developers](https://docsbook-websites.docsbook.io/discord-developers/)
+
+[See every site →](https://docsbook.io/showcase)
+
+<!-- /widget -->
+
 ## Start here
 
 Four doors. Each one is a page you can finish in one sitting.
@@ -59,6 +71,58 @@ Every goal comes with the reading it is judged by — a number, not an impressio
 - [Be recommended](./geo/README.md) — Named when assistants answer your category, read as citations across a fixed question set. {sparkles}
 - [Turn readers into customers](./analytics/reports/goals-and-funnels.md) — More readers reaching the product, read as goal completions per page. {git-fork}
 - [Open a new market](./translation/README.md) — Readers in another language, read as traffic and rank per locale. {languages}
+
+<!-- /widget -->
+
+## Everything a docs team hires five tools for
+
+One panel, the whole growth loop: publishing, the agent, analytics, SEO, GEO and branding — measured in the same place they are changed.
+
+<!-- widget:bento -->
+
+- **An agent that wakes up when your product changes** — Commits, releases, merged pull requests, labelled issues, a watched API spec, a question in Discord — every trigger points at the agent. {badge:Autonomous agent} {span:7} {crop:top-left}
+
+  ![Triggers screen: the Docsbook agent card and its event triggers](https://docsbook.io/landing-triggers.jpg)
+
+- **Plugs into where the answers already live** — GitHub, Slack, Google Calendar, Google Workspace — or any MCP server. It reads the channels where questions get asked and the calendar where launches are planned. {span:5} {crop:top-left}
+
+  ![Integrations screen: GitHub, Slack, Google Calendar and Google Workspace](https://docsbook.io/landing-integrations.jpg)
+
+- **Analytics that speak in revenue, not pageviews** — Set a call-to-action URL and an average deal size, and read Revenue, Conversion rate and Revenue per visitor next to Bounce rate — plus a live map, entry pages, headings read, and the searches that found nothing. {span:12} {side} {tags} {crop:top-right}
+
+  - Insights
+  - Graph
+  - Chat
+  - Agent
+  - Writing
+  - SEO
+  - GEO
+  - Socials
+
+  ![Analytics screen: visitors, revenue, conversion rate, bounce rate and the traffic chart](https://docsbook.io/landing-analytics.jpg)
+
+- **Be found: clicks and impressions per intent** — Views, clicks, CTR, ranking and mentions across Google, Bing and DuckDuckGo, by query and by page. Plus every in-site search, so you see what readers wanted and did not get. {badge:SEO} {span:6} {crop:top-right}
+
+  ![SEO screen: search queries with views, and in-site searches](https://docsbook.io/landing-seo.jpg)
+
+- **Be recommended: who ChatGPT, Perplexity and Claude cite** — AI answers, indexing and training crawls per page and per crawler. When an assistant answers your category without you, the agent reads the answer engine and fixes it. {badge:GEO} {span:6} {crop:top-right}
+
+  ![GEO screen: AI answers per page from ChatGPT-User, Perplexity-User and Claude-Web](https://docsbook.io/landing-geo.jpg)
+
+- **Brand it in minutes** — Logo, colours, fonts, header, footer, sidebars and your own domain — one CNAME, SSL automatic. {span:4} {crop:top-right}
+
+  ![Customize screen: background style presets and colours](https://docsbook.io/landing-customize.jpg)
+
+- **Ship through pull requests** — Every change is a pull request with the diff and the issues behind it. Auto-merge on, or review first. Your repository stays the source of truth. {span:4}
+
+  ![Settings screen: the auto-merge toggle and the call-to-action URL](https://docsbook.io/landing-pull-requests.jpg)
+
+- **AI chat that admits what it doesn't know** — Answers grounded in your pages and your real site facts. No answer in the docs? It says so and hands the reader to support. {span:4} {message-circle}
+
+  - Custom system prompt and suggested questions
+  - Pick the model for readers and for the agent
+  - REST API to call the chat from your backend
+  - Password or SSO for private docs
 
 <!-- /widget -->
 
@@ -94,9 +158,9 @@ On the date, the reading is taken. Confirmed or rejected, and a rejection is kep
 
 <!-- /widget -->
 
-## Documentation running on Docsbook
+## What those sites look like
 
-Live sites, public and readable without signing in.
+Live documentation, public and readable without signing in.
 
 <!-- widget:showcase cols=3 -->
 
