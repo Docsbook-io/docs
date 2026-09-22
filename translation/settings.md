@@ -2,6 +2,8 @@
 title: "Enable a language, pick the model, and set the URL shape"
 description: "The configuration surface for translation: source language, enabled languages, translation model, when passes run, where the language switcher appears, and the URL of every locale."
 tldr: "Enable languages in the Float Widget → Translation tab; Docsbook quotes the run before you confirm. Your source language is auto-detected from the repository README and can never be a translation target. Translated pages live at https://<user>.docsbook.io/<lang>/<repo>/<path> — the locale is always a path segment, never a subdomain."
+status: generated
+version: "0.2"
 ---
 
 # Translation settings
@@ -37,8 +39,6 @@ The rules that matter:
 2. Float Widget → **Translation** tab.
 3. Check the language you want.
 4. Confirm the dialog. The pass starts in the background.
-
-If the language switcher is already on your site, opening it and pressing **Activate languages** goes to the same tab. That entry point appears only for you as the owner, or in admin preview — never for readers.
 
 Enabling a language does not itself translate anything at the API level: `update_languages` sets the set, and `run_translation_pass` (or the mode's own trigger) does the work. In the panel the two are joined for you, so checking a box does start a pass.
 
@@ -90,6 +90,19 @@ The switcher can appear in the sidebar, in the header, or in both. Header placem
 Pick one. Showing the same control twice on the same screen is noise. Configure it in [Header options](../design/layout/header.md) or [Sidebar control](../design/layout/sidebar.md).
 
 A site with no enabled languages shows no switcher at all, rather than a control with one entry in it.
+
+## How language presence works
+
+Previously the language picker required an activation step: you checked languages, confirmed, then pressed **Activate languages** to flip the switch. The intermediate step has been removed.
+
+A language is now served when it has translated pages — regardless of the enabled_languages column — plus whatever the owner pre-enabled so the first translation pass has somewhere to land. The two sources are combined: the switch is an invitation, not a gate.
+
+Consequences for the interface:
+- **No activation button.** Checking a box and confirming starts a pass; when translations finish the language appears to readers.
+- **Empty picker disappears.** When there are zero enabled + translated languages the control isn't rendered at all, instead suggesting owners activate languages. That message and its variants were removed in favour of the simpler state.
+- **Consistency everywhere.** Page headers, redirect gates, hreflang, sitemaps, llms.txt entries, and custom domain proxy locales all resolve languages the same way.
+
+`upload_translation` (the manual-upload endpoint) also writes the language into the column, so the admin-facing surfaces — language registry, sync, per-language analytics — stay aligned with what readers actually see.
 
 ## The URL of a translated page
 
