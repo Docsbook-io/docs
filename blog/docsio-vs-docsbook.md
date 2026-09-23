@@ -2,71 +2,51 @@
 title: "Docsio vs Docsbook: pricing, setup and AI search compared"
 description: "Docsio and Docsbook compared on how each one generates and hosts your docs, what AI search features are free vs paid, and pricing — including the cases where Docsio is the better pick."
 status: generated
-version: "0.3"
+version: "0.4"
 ---
 
-# Docsio vs Docsbook: pricing, setup and AI search compared
+# Docsio vs Docsbook
 
-Docsio and Docsbook are both recent, AI-first documentation platforms built around the same bet: that assistants like ChatGPT, Claude and Perplexity are now a real distribution channel for docs, not just search engines. Where they differ is how the docs get written in the first place. Docsio generates a documentation site by reading your existing website URL and letting an AI agent edit it from there. Docsbook reads the Markdown you already keep in a GitHub repository and redeploys on every push.
-
-We make Docsbook. This page names the cases where Docsio is the better choice, and it quotes no Docsio price we could not read on Docsio's own site.
-
-## Side-by-side comparison
+Both are AI-first documentation platforms built around the same idea: ChatGPT, Claude and Perplexity are a real distribution channel for docs. Where they differ is how docs get written.
 
 | Feature | Docsio | Docsbook |
 |---|---|---|
-| Best fit | No existing docs yet, want a site generated from your website in minutes | Docs already live as Markdown in a GitHub repo |
-| How content starts | AI scans your product URL and drafts the doc tree; an AI agent edits it from chat instructions | Reads `README.md` and `docs/` from your repo as written |
-| GitHub sync | Not the primary workflow — content is AI-generated and AI-edited, not authored as Markdown in your own repo | Yes — redeploys on every push |
-| `llms.txt` | Auto-generated, on the free plan | Auto-generated per workspace, plus `llms-full.txt` |
-| MCP server | Pro plan only ($60/mo) | Included, OAuth 2.0, on every plan |
-| AI chat widget for readers | Pro plan only ($60/mo) | Part of the $20/mo Pro plan, configurable provider (OpenAI, Anthropic, Gemini, OpenRouter) |
-| AI translation | Not listed among Docsio's published features | 15 languages, each indexed separately with `hreflang` |
-| Doc versioning | Pro plan only | Not supported — one version per branch (see [Documentation versioning](../guides/advanced/documentation-versioning.md)) |
-| Pricing model | Flat $0 or $60/month per site | Pay-as-you-go balance held per project |
+| Best fit | No docs yet — generate from your website URL | Docs as Markdown in a GitHub repo |
+| Content start | AI scans your product URL and drafts a doc tree | Reads Markdown from your repo |
+| GitHub sync | Not primary — AI edits from chat instructions | Yes — redeploys on every push |
+| MCP server | Pro plan only ($60/mo) | Included on every plan |
+| AI reader chat | Pro plan only ($60/mo) | In $20/mo Pro plan |
+| Translation | Not listed | 15 languages, indexed per locale |
+| Pricing | Flat $0 or $60/month per site | Free $0; Pro $20/project + pay-as-you-go AI |
 
-## How much does each one cost?
+**Docsio** starts from a URL: point it at your marketing site and its AI drafts a full doc tree in minutes, editing later through plain-English chat. Good if you have zero docs yet and want something fast.
 
-As of 2026-09-20, [docsio.co](https://docsio.co/) listed a free plan (1 site, 5 AI edits/month, hosting, custom domain, SSL and `llms.txt` included) and a Pro plan at $60/month per site, which removes the Docsio badge and adds password protection, doc versioning, full-text search, the AI chat widget and the MCP server. Check the current figures there before you budget — plans move, and this page cannot move with them.
+**Docsbook** starts from a repo: connect GitHub and the site redeploys on every push, reading the Markdown you write. The docs are exactly the files in your repo.
 
-Docsbook does not sell tiers per site. A Free plan covers branding, navigation, analytics and a custom domain at $0; Pro is $20/month per project with a $20 monthly AI allowance included and overage capped by default; Enterprise is a flat price for unlimited projects, contact sales. Current numbers live on [docsbook.io/pricing](https://docsbook.io/pricing), generated from the live pricing constants on every request.
+## When to choose which
 
-## How different is the setup?
+**Docsio** if:
+- You need an AI-generated first draft from your existing website.
+- You prefer chat-based AI instructions over writing Markdown.
+- A flat $60/site/month budget works for you.
 
-**Docsio** starts from a URL, not a repository: point it at your existing website and its AI drafts a full doc tree in minutes, extracting your colors and fonts along the way. Ongoing edits happen by instructing the AI agent in plain English rather than editing Markdown files directly. That is a real advantage if you have no documentation at all yet and want something presentable fast.
+**Docsbook** if:
+- Your docs live (or should live) as Markdown in Git, versioned like code.
+- You want the MCP server free on every plan.
+- You need multi-language docs indexed per locale ([Multi-language SEO](./multi-language-documentation-seo.md)).
 
-**Docsbook** starts from a repository: connect a GitHub repo and the site redeploys on every push, reading the Markdown you already have (or are willing to write). There is no AI-generation step and no dashboard-first content model — the docs are exactly the files in your repo.
+## Pricing details
 
-## How do the AI-search features differ?
+As of 2026-09-20, [docsio.co](https://docsio.co/) lists a free tier (1 site, 5 AI edits/month, custom domain, SSL) and a Pro plan at $60/month per site (password protection, versioning, search, AI chat, MCP). Plans move — check there before budgeting.
 
-Both platforms treat being cited by an AI assistant as a first-class goal rather than an afterthought, and both auto-generate `llms.txt`. The gap is in what is free and what is gated:
-
-- **MCP server** — free and included on every Docsbook plan; on Docsio it ships only on the $60/month Pro plan, so a reader's agent can query your docs over MCP only if you are paying for Pro.
-- **AI chat for your readers** — both gate it behind their Pro plan; the gap is price, not presence. Docsbook's Pro is $20/month with an AI allowance included, against Docsio's flat $60/month.
-- **Translation** — Docsbook auto-translates to 15 languages and indexes each locale separately with `hreflang`; Docsio's own published feature list does not name a translation or multi-language pipeline as of 2026-09-20. See [Multi-language documentation SEO](./multi-language-documentation-seo.md) for why per-locale indexing matters for search.
-
-## When should you choose Docsio?
-
-- You have no documentation written anywhere yet, and want an AI to generate a first version by reading your existing marketing site rather than starting from a blank repo.
-- You would rather instruct an AI agent in plain English to edit the site than write and commit Markdown yourself.
-- A flat $60/month for one site, with MCP and AI chat as paid add-ons, fits your budget better than a pay-as-you-go AI balance.
-
-## When should you choose Docsbook?
-
-- Your docs already live (or you want them to live) as Markdown in a GitHub repository, versioned and reviewable like code.
-- You want the MCP server included on every plan, and a lower-cost path to the AI chat widget than Docsio's flat $60/month Pro tier.
-- You need documentation in more than one language, indexed separately per locale rather than left to a separate pipeline.
-
-## The bottom line
-
-Docsio is a strong choice if you are starting from nothing and want an AI to turn your existing website into a first draft of documentation in minutes. Docsbook is the better fit once you have — or want to keep — your docs as Markdown in a Git repository, and you want MCP included on every plan with a lower entry price into the AI chat widget than Docsio's flat $60/month tier.
+Docsbook: Free covers branding, navigation, analytics, custom domain at $0. Pro is $20/month per project with $20/month AI allowance included. Enterprise is unlimited projects, contact sales. See [pricing](https://docsbook.io/pricing).
 
 [Start free — no credit card](https://docsbook.io/?start=1)
 
 ## Next steps
 
 <!-- widget:cards plain cols=2 arrow=hover -->
-- [AI documentation platforms compared](./ai-docs-platform-comparison.md) — the same question across four managed platforms
-- [ReadMe vs Docsbook](./readme-vs-docsbook.md) — the same comparison against an API-reference-first competitor
-- [Best documentation platforms for startups in 2026](./best-docs-platforms-for-startups-2026.md) — the wider field of platforms a startup might weigh against Docsbook
+- [AI documentation platforms compared](./ai-docs-platform-comparison.md) — four managed platforms side by side
+- [ReadMe vs Docsbook](./readme-vs-docsbook.md) — API-reference-first competitor
+- [Best documentation platforms for startups in 2026](./best-docs-platforms-for-startups-2026.md) — wider field
 <!-- /widget -->
