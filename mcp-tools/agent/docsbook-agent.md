@@ -5,7 +5,7 @@ description: "THE DOCSBOOK AGENT — a general-purpose worker you delegate to."
 
 # Docsbook agent
 
-<!-- widget:mcp access=write price-millicents=800 -->
+<!-- widget:mcp access=write price-millicents=3 -->
 
 ## docsbook_agent
 
@@ -57,20 +57,22 @@ The same tool is callable as a plain HTTP request, no MCP client required. It ru
 
 <!-- widget:api -->
 
-### POST /api/v1/tools/docsbook_agent
+### POST /api/v1/docsbook_agent
 
 | Field | Type | Required | Description |
 |---|---|---|---|
 | `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | yes | The arguments above, as one JSON object. |
+| `workspace_id` | string | no | Which project — OPTIONAL. Omit it and the agent works out which project you mean: the account's only one, or the one your request names. Pass it to be certain, or when the account has several and the request does not say. Numeric workspace id — OR the project as the user names it: 'owner/repo', the repo name alone, the site's display name, its docs URL or custom domain. Text is resolved server-side; an ambiguous name returns the candidates instead of guessing, so pass what the user said rather than calling list_workspaces first. |
+| `request` | string | yes | What you want, in the user's own words, in any language. Say the GOAL and the evidence for it ('support keeps asking how to rotate keys'), not a list of steps — the agent decides the steps. Naming the project here also lets workspace_id be omitted. |
+| `label` | string | no | Short name for this job in the list, e.g. 'API reference pass'. |
 
 #### Request
 
 ```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/docsbook_agent' \
+curl -X POST 'https://docsbook.io/api/v1/docsbook_agent' \
   -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
   -H 'Content-Type: application/json' \
-  -d '{"args":{"request":"<request>"}}'
+  -d '{"request":"<request>"}'
 ```
 
 <!-- /widget -->

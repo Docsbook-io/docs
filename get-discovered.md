@@ -106,7 +106,7 @@ The panel is the other place to say it: the chat button at the bottom right of t
 
 Each page change is a git commit delivered as a pull request — merged at once or left for you, per **Settings ▸ General ▸ When a change goes live** ([reviewing changes](./agent/review.md)). Every run appears in **Activity ▸ Agent runs** with its full trace, and a question the agent can't settle alone lands in **Inbox**.
 
-A run is billed to your balance: $0.10 per run plus three times what its model tokens cost, capped at $50 per run ([pricing](./pricing/plans.md)).
+A run is billed to your balance: $0.10 per run plus twice what its model tokens cost, capped at $50 per run ([pricing](./pricing/plans.md)).
 
 ## What else can your connection do?
 
@@ -123,7 +123,7 @@ Your connection lists 55 tools. The agent is the main one, and the rest act on y
 | **Goals** | `create_goal`, `list_goals`, `create_funnel`, `mark_path_as_funnel_step` |
 | **Docsbook's own manual** | `search_docsbook_docs`, `read_docsbook_doc`, `list_docsbook_docs` |
 
-Another 33 tools stay out of the list — webhook alerts, the agent's [memory folder](./brain/memory.md), hand-over links and `update_access`. `find_tool` finds one by what you want to do, and `call_tool` runs it. Every tool is in the [MCP tools reference](./mcp-tools/README.md).
+Another 33 tools stay out of the list — webhook alerts, the agent's [memory folder](./brain/memory.md), hand-over links and `update_access`. `find_tool` finds one by what you want to do, and `call_tool` runs it. Every tool is in the [MCP tools reference](./mcp-tools/README.md), and every one of them, listed or not, is also a plain HTTPS endpoint in the [API reference](./rest-api/README.md).
 
 ## Is it safe to connect?
 
@@ -147,7 +147,7 @@ No. One endpoint serves every project on your account; name the project in your 
 
 ### What does a connection cost?
 
-Discovery calls such as `get_info`, `find_tool` and `list_workspaces` are free. Other tool calls are billed per call from your balance, and agent runs as above — see [pricing](./pricing/plans.md).
+Discovery calls such as `get_info`, `find_tool` and `list_workspaces` are free. Other tool calls are billed per call from your balance at twice what serving them costs — a few cents per thousand for most — and agent runs as above; see [pricing](./pricing/plans.md).
 
 ### Can my readers' agents connect too?
 

@@ -47,7 +47,7 @@ Claude Code, Cursor, Codex, VS Code, Windsurf, Gemini CLI, ChatGPT and Claude co
 
 ### How much does an agent run cost?
 
-$0.10 per run plus three times what its model tokens cost, capped at $50 a run, paid from your balance. See [pricing](./pricing/plans.md).
+$0.10 per run plus twice what its model tokens cost, capped at $50 a run, paid from your balance. See [pricing](./pricing/plans.md).
 
 <!-- /widget -->
 

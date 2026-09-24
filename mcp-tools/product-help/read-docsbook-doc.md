@@ -5,7 +5,7 @@ description: "Read ONE page of DOCSBOOK'S OWN official documentation in full, ve
 
 # Read docsbook doc
 
-<!-- widget:mcp access=read anonymous price-millicents=800 -->
+<!-- widget:mcp access=read anonymous price-millicents=3 -->
 
 ## read_docsbook_doc
 

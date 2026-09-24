@@ -237,7 +237,351 @@
       "label": "WRITE",
       "kind": "tool"
     },
+    "rest-api/agent/docsbook-agent": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/agent/docsbook-agent-activity": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/agent/docsbook-agent-reply": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/agent/docsbook-agent-status": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/agent/docsbook-agent-stop": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/agent/docsbook-agent-tasks": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/alerts/list-webhook-deliveries": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/alerts/list-webhooks": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/alerts/register-webhook-chat-negative-feedback": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/alerts/register-webhook-chat-no-answer": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/alerts/register-webhook-chat-question-asked": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/alerts/register-webhook-content-indexed": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/alerts/register-webhook-content-indexing-failed": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/alerts/register-webhook-content-outdated": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/alerts/register-webhook-feedback-received": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/alerts/register-webhook-mcp-tool-called": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/alerts/register-webhook-plan-downgraded": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/alerts/register-webhook-plan-upgraded": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/alerts/register-webhook-project-domain-connected": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/alerts/register-webhook-search-no-results": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/alerts/register-webhook-search-popular": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/alerts/register-webhook-traffic-drop": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/alerts/register-webhook-traffic-spike": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/alerts/register-webhook-translation-completed": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/alerts/register-webhook-translation-needed": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/alerts/register-webhook-translation-outdated": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/alerts/register-webhook-usage-limit-approaching": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/alerts/register-webhook-usage-overage-limit-reached": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/alerts/replay-webhook-delivery": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/alerts/test-webhook": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/alerts/unregister-webhook": {
+      "label": "POST",
+      "kind": "method"
+    },
     "rest-api/chat/ask-docs": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/content/ask-project-docs": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/content/configure-source": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/content/connect-source": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/content/find-widget": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/content/get-project-doc-outline": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/content/grant-repo-access": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/content/list-content-widgets": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/content/list-sources": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/content/read-project-doc": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/content/read-source": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/content/search-docs": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/content/search-project-docs": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/content/set-doc-status": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/content/write-docs": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/context/list-context": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/context/read-context": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/context/retire-context": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/context/search-context": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/context/write-context": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/create/create-workspace": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/goals/create-funnel": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/goals/create-goal": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/goals/delete-goal": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/goals/edit-goal": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/goals/list-goals": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/goals/mark-path-as-funnel-step": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/handoff/create-claim-link": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/handoff/revoke-claim-link": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/orientation/get-info": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/orientation/get-workspace": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/orientation/list-workspaces": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/product-help/list-docsbook-docs": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/product-help/read-docsbook-doc": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/product-help/search-docsbook-docs": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/settings/approve-translation": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/settings/configure-mentions": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/settings/delete-translation": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/settings/get-chat-system-prompt": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/settings/get-translation": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/settings/get-translation-status": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/settings/list-pending-translations": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/settings/run-translation-pass": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/settings/set-chat-hooks": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/settings/set-chat-system-prompt": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/settings/set-translation-mode": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/settings/test-chat-hook": {
+      "label": "GET",
+      "kind": "method"
+    },
+    "rest-api/settings/update-access": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/settings/update-ai-settings": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/settings/update-branding": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/settings/update-domain": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/settings/update-languages": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/settings/update-navigation": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/settings/update-site-address": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/settings/update-ui-settings": {
+      "label": "POST",
+      "kind": "method"
+    },
+    "rest-api/settings/upload-translation": {
       "label": "POST",
       "kind": "method"
     },

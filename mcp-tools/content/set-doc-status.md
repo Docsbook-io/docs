@@ -5,7 +5,7 @@ description: "Move ONE documentation page through its lifecycle — the call for
 
 # Set doc status
 
-<!-- widget:mcp access=write price-millicents=2000 -->
+<!-- widget:mcp access=write price-millicents=1 -->
 
 ## set_doc_status
 

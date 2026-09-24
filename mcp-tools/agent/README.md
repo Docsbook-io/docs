@@ -7,7 +7,7 @@ description: "The Docsbook agent — one worker you delegate to, and the whole o
 
 The Docsbook agent — one worker you delegate to, and the whole of "manage the documentation" on a customer's token.
 
-<!-- widget:cards plain cols=2 arrow=hover -->
+<!-- widget:cards cols=2 -->
 
 - [`docsbook_agent`](./docsbook-agent.md) — THE DOCSBOOK AGENT — a general-purpose worker you delegate to.
 - [`docsbook_agent_activity`](./docsbook-agent-activity.md) — WATCH THE DOCSBOOK AGENT WORK — the ordered timeline of what a job has actually done, step by step, while it is still…

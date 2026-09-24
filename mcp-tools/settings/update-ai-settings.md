@@ -5,7 +5,7 @@ description: "Configure the AI chatbot."
 
 # Update ai settings
 
-<!-- widget:mcp access=write price-millicents=2000 -->
+<!-- widget:mcp access=write price-millicents=1 -->
 
 ## update_ai_settings
 

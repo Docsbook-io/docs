@@ -1,0 +1,39 @@
+---
+title: "List content widgets"
+description: "List the widgets that can be embedded directly in documentation markdown (as opposed to find_widget, which covers interactive widgets rendered in the AI chat)."
+---
+
+# List content widgets
+
+<!-- widget:api -->
+
+## GET /api/v1/list_content_widgets
+
+List the widgets that can be embedded directly in documentation markdown (as opposed to find_widget, which covers interactive widgets rendered in the AI chat). Returns, for each widget, what it renders, when to use it, the exact markdown contract it expects, and a copy-pasteable example — and, above them, `writing_style`: how the PROSE between the widgets reads (one- or two-line paragraphs, identifiers in inline code, concepts linked where they are named, bold only where the eye lands) with a page that shows it. Widgets the workspace owner switched off in the admin panel are NOT listed — their markers render as plain markdown, so writing one would produce a page that silently looks unchanged. Call this before writing or editing a docs page that would benefit from a card grid, an accordion, or any other rich content block — the catalog is the live source of truth, so never guess a widget name or syntax.
+
+**Price** — $0.00003 per call (twice what serving it costs us), charged to the workspace balance, the same as over MCP.
+
+Also reachable without a token on this workspace's public MCP endpoint.
+
+Also reachable by name at `POST /api/v1/tools/list_content_widgets`.
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `name` | string | no | Return only this widget (e.g. 'cards'). Omit to list every content widget. |
+
+### Request
+
+```bash
+curl -X GET 'https://docsbook.io/api/v1/list_content_widgets' \
+  -H 'Authorization: Bearer dbk_YOUR_API_KEY'
+```
+
+<!-- /widget -->
+
+## Responses
+
+| Status | Meaning |
+|---|---|
+| `200` | The tool ran. Read `ok` to see whether it succeeded. |
+| `401` | Missing or invalid API key. |

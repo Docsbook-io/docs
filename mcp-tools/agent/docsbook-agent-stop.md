@@ -5,7 +5,7 @@ description: "Stop a Docsbook agent job."
 
 # Docsbook agent stop
 
-<!-- widget:mcp access=write price-millicents=800 -->
+<!-- widget:mcp access=write price-millicents=3 -->
 
 ## docsbook_agent_stop
 
@@ -56,20 +56,21 @@ The same tool is callable as a plain HTTP request, no MCP client required. It ru
 
 <!-- widget:api -->
 
-### POST /api/v1/tools/docsbook_agent_stop
+### POST /api/v1/docsbook_agent_stop
 
 | Field | Type | Required | Description |
 |---|---|---|---|
 | `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | yes | The arguments above, as one JSON object. |
+| `task_id` | string | yes | The job to stop. |
+| `reason` | string | no | Why, for the record. |
 
 #### Request
 
 ```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/docsbook_agent_stop' \
+curl -X POST 'https://docsbook.io/api/v1/docsbook_agent_stop' \
   -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
   -H 'Content-Type: application/json' \
-  -d '{"args":{"task_id":"<task_id>"}}'
+  -d '{"task_id":"<task_id>"}'
 ```
 
 <!-- /widget -->

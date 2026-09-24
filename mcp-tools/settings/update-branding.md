@@ -5,7 +5,7 @@ description: "Update visual branding: colors, fonts, logo, theme, the site's cal
 
 # Update branding
 
-<!-- widget:mcp access=write price-millicents=2000 -->
+<!-- widget:mcp access=write price-millicents=1 -->
 
 ## update_branding
 
@@ -22,6 +22,7 @@ Update visual branding: colors, fonts, logo, theme, the site's call-to-action UR
 | `site_source_url` | string | no | Site source — the product's OWN website, the place to read real facts from (pricing, plan names, limits, contacts) instead of inventing them. http(s). Save it as soon as the owner names their website or you fetch one for this project, so later sessions can look facts up there. NOT the same as cta_url (that is a destination for readers; this is an origin for facts). Pass an empty string to clear it. |
 | `logo_url` | string | no | URL for site logo |
 | `icon_url` | string | no | URL for favicon |
+| `icon_url_dark` | string | no | URL for an alternate icon shown only when the site is in dark theme (e.g. a dark/near-monochrome icon that would otherwise sink into a dark header). Optional — unset means icon_url renders unchanged in dark mode too. |
 | `custom_name` | string | no | Display name for the docs site |
 | `accent_color` | string | no | Primary accent color as hex (#3b82f6) |
 | `accent_color_dark` | string | no | Accent color for dark mode |
@@ -95,6 +96,7 @@ The same tool is callable as a plain HTTP request, no MCP client required. It ru
 | `site_source_url` | string | no | Site source — the product's OWN website, the place to read real facts from (pricing, plan names, limits, contacts) instead of inventing them. http(s). Save it as soon as the owner names their website or you fetch one for this project, so later sessions can look facts up there. NOT the same as cta_url (that is a destination for readers; this is an origin for facts). Pass an empty string to clear it. |
 | `logo_url` | string | no | URL for site logo |
 | `icon_url` | string | no | URL for favicon |
+| `icon_url_dark` | string | no | URL for an alternate icon shown only when the site is in dark theme (e.g. a dark/near-monochrome icon that would otherwise sink into a dark header). Optional — unset means icon_url renders unchanged in dark mode too. |
 | `custom_name` | string | no | Display name for the docs site |
 | `accent_color` | string | no | Primary accent color as hex (#3b82f6) |
 | `accent_color_dark` | string | no | Accent color for dark mode |

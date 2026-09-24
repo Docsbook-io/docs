@@ -49,3 +49,26 @@ curl -X POST 'https://docsbook.io/api/mcp/server' \
 ```
 
 <!-- /widget -->
+
+## Try it over REST
+
+The same tool is callable as a plain HTTP request, no MCP client required. It runs on the same server, at the same price.
+
+<!-- widget:api -->
+
+### GET /api/v1/find_widget
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `query` | string | yes | Free-text description of what the user wants, e.g. 'dark mode toggle' or 'analytics dashboard'. |
+| `mode` | string | no | Restrict matches to widgets available in this mode (admin or user). One of: `admin`, `user`. |
+
+#### Request
+
+```bash
+curl 'https://docsbook.io/api/v1/find_widget?query=%3Cquery%3E&mode=admin' \
+  -H 'Authorization: Bearer dbk_YOUR_API_KEY'
+```
+
+<!-- /widget -->

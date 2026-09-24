@@ -5,7 +5,7 @@ description: "Every job this account has given the Docsbook agent, newest first 
 
 # Docsbook agent tasks
 
-<!-- widget:mcp access=read price-millicents=800 -->
+<!-- widget:mcp access=read price-millicents=3 -->
 
 ## docsbook_agent_tasks
 

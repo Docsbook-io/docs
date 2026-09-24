@@ -5,7 +5,7 @@ description: "WHAT CAN DOCSBOOK DO, AND WHAT SHOULD I DO NEXT — ask this tool,
 
 # Search docsbook docs
 
-<!-- widget:mcp access=read anonymous price-millicents=800 -->
+<!-- widget:mcp access=read anonymous price-millicents=3 -->
 
 ## search_docsbook_docs
 

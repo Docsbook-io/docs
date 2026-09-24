@@ -138,14 +138,14 @@ Anything that runs a model or does work for you comes off one balance: the plan'
 
 | What | How it's priced |
 |---|---|
-| **AI chat answers**, for readers and in the panel | The model provider's price plus 900%, ten times the provider's price |
+| **AI chat answers**, for readers and in the panel | Twice the model provider's price for the tokens it used |
 | **Translations** | The same rate |
 | **Semantic index** — embedding your pages so chat and search find them by meaning | The same rate |
-| **Agent runs** — `docsbook_agent` jobs and the triggers that start them | $0.10 per run plus three times what its model tokens cost, capped at $50 a run |
-| **MCP tool calls** | A flat price per call: discovery is free, reads cost $8 and writes $20 per 1,000, AI-backed calls such as `search_project_docs` $300 per 1,000 |
+| **Agent runs** — `docsbook_agent` jobs and the triggers that start them | $0.10 per run plus twice what its model tokens cost, capped at $50 a run |
+| **MCP and API calls** | Twice what serving the call costs us: discovery is free and most calls cost $0.01–$0.16 per 1,000; a call that uses model tokens or a paid data source adds twice their price |
 | **Bot crawls** | 5,000 pages a month free on Free, 100,000 on Pro, 500,000 on Enterprise; $0.30 per 1,000 pages after that |
 
-Each model on **Settings ▸ Agent** shows its billed price per 1M tokens, so you can pick a cheaper one to make the balance last longer. Every tool's own price is on its page in the [MCP tools reference](./mcp-tools/README.md).
+Each model on **Settings ▸ Agent** shows its billed price per 1M tokens, so you can pick a cheaper one to make the balance last longer. Every tool's own price is on its page in the [MCP tools reference](./mcp-tools/README.md) and the [API reference](./rest-api/README.md) — a tool costs the same over both.
 
 Only AI and search crawlers count as crawls; a person who clicks through from an AI answer is a reader. When the allowance and the balance are both used up, crawlers get `429 Too Many Requests` until next month or a top-up, and people reading your docs are never turned away.
 

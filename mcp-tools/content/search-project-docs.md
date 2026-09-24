@@ -5,7 +5,7 @@ description: "FIND A DOCUMENTATION PAGE — start here, and this is the FIRST ca
 
 # Search project docs
 
-<!-- widget:mcp access=read price-millicents=30000 -->
+<!-- widget:mcp access=read price-millicents=9 -->
 
 ## search_project_docs
 

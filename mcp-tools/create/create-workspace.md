@@ -58,20 +58,21 @@ The same tool is callable as a plain HTTP request, no MCP client required. It ru
 
 <!-- widget:api -->
 
-### POST /api/v1/tools/create_workspace
+### POST /api/v1/create_workspace
 
 | Field | Type | Required | Description |
 |---|---|---|---|
 | `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | no | The arguments above, as one JSON object. |
+| `repo_full_name` | string | no | GitHub repository in 'owner/repo' format, e.g. 'acme/docs'. OMIT for a Docsbook-hosted site created from scratch — no GitHub account or repository needed. |
+| `custom_name` | string | no | Display name for the site, e.g. 'Acme API'. Derive it from the product's brand or repo name — never invent one; ask the user if you cannot. It also names the hosted repository, so pass it whenever you create from scratch. |
 
 #### Request
 
 ```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/create_workspace' \
+curl -X POST 'https://docsbook.io/api/v1/create_workspace' \
   -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
   -H 'Content-Type: application/json' \
-  -d '{"args":{}}'
+  -d '{}'
 ```
 
 <!-- /widget -->

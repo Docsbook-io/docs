@@ -5,7 +5,7 @@ description: "Choose what the mention checks watch on one engine: turn the daily
 
 # Configure mentions
 
-<!-- widget:mcp access=write price-millicents=800 -->
+<!-- widget:mcp access=write price-millicents=3 -->
 
 ## configure_mentions
 
