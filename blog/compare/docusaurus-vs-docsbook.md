@@ -1,13 +1,34 @@
 ---
 title: "Docusaurus alternatives in 2026: when to stay, when to move"
 description: "Docusaurus vs Docsbook, Mintlify, GitBook, VitePress and Starlight: what self-hosting Docusaurus costs, when staying is right, and what changes if you move."
+layout: landing
 ---
 
+<!-- widget:story share -->
+
+[All posts](../README.md)
+
+![Docsbook](../assets/docsbook-mark-white.png) **Docsbook**
+
+**Compare**
+
 # Docusaurus alternatives in 2026
+
+[Start free](https://docsbook.io/?start=1)
+
+![Docsbook settings for pull requests the agent opens](https://docsbook.io/landing-pull-requests.jpg) {bg:teal}
 
 Stay on Docusaurus while someone on your team owns its build; move to a managed platform such as Docsbook when nobody does and the upkeep keeps arriving anyway.
 
 Docusaurus is a free, MIT-licensed static-site generator built on React and maintained by Meta Open Source. It gives you MDX, versioning and translations, and leaves hosting, search and upgrades to you.
+
+- **Category** — Compare
+- **Facts checked** — September 2026
+- **Reading time** — 5 min
+
+[Plans and pricing](../../pricing/plans.md)
+
+<!-- /widget -->
 
 Facts below are from [docusaurus.io](https://docusaurus.io/docs) as of September 2026, when the current version was 3.10.2.
 
@@ -24,7 +45,7 @@ The licence is free; the hours are not. Price these line items against your own 
 | AI answers for readers | A separate service, plus the work to connect it |
 | Translations | Locale routing is built in; producing the translations is yours |
 
-On Docsbook these lines are part of the platform: hosting, the build and search on every plan, and AI answers and translations on [Pro](../pricing/plans.md), $20 a month per project with $20 of AI usage included.
+On Docsbook these lines are part of the platform: hosting, the build and search on every plan, and AI answers and translations on [Pro](../../pricing/plans.md), $20 a month per project with $20 of AI usage included.
 
 ## When should you stay on Docusaurus?
 
@@ -40,10 +61,10 @@ Stay when the ownership cost is already paid. Any one of these is enough:
 Move when the site has no owner and the work keeps landing on engineers anyway:
 
 - **The build breaks when a dependency moves**, and nobody's week has room for it.
-- **Readers ask questions** — the Docsbook [AI chat](../ai-chat/README.md) answers from your pages and cites them (Pro).
-- **You sell in several languages** — [translations](../site/translations.md) into 15 languages, each page at its own URL (Pro).
-- **Nobody has time to improve the docs** — the Docsbook agent reads failed searches, unanswered questions and AI answers, checks pages against [299 published rules](../agent/expertise.md) and sends pull requests. See [Find wins fast](../find-wins-fast.md).
-- **You would rather ask than configure** — tell the agent what you want from Claude Code or Cursor ([Get discovered](../get-discovered.md)).
+- **Readers ask questions** — the Docsbook [AI chat](../../ai-chat/README.md) answers from your pages and cites them (Pro).
+- **You sell in several languages** — [translations](../../site/translations.md) into 15 languages, each page at its own URL (Pro).
+- **Nobody has time to improve the docs** — the Docsbook agent reads failed searches, unanswered questions and AI answers, checks pages against [299 published rules](../../agent/expertise.md) and sends pull requests. See [Find wins fast](../../find-wins-fast.md).
+- **You would rather ask than configure** — tell the agent what you want from Claude Code or Cursor ([Get discovered](../../get-discovered.md)).
 
 ## How do the Docusaurus alternatives compare?
 
@@ -62,11 +83,11 @@ Three of the five host the site for you; VitePress and Starlight are generators 
 Your Markdown moves as it is; the machinery around it does not. On a custom domain, `docs/intro.md` publishes at `/docs/intro`, the same path Docusaurus serves by default.
 
 - **Kept** — `.md` and `.mdx` files, folders, frontmatter `title` and `description`, relative links to `.md` files.
-- **Rewritten** — `:::note` admonitions become [callouts](../site/widgets.md), `<Tabs>` become tabs, and imported React components go.
+- **Rewritten** — `:::note` admonitions become [callouts](../../site/widgets.md), `<Tabs>` become tabs, and imported React components go.
 - **Dropped** — `sidebars.js`, `_category_.json` and `sidebar_position`: the folders order the sidebar.
 - **Redirected** — pages whose URL came from a `slug` or a number prefix such as `01-intro.md`.
 
-[Migrating from Docusaurus to Docsbook](./migrating-from-docusaurus-to-docsbook.md) has the steps and the conversions.
+[Migrating from Docusaurus to Docsbook](../migrate/migrating-from-docusaurus-to-docsbook.md) has the steps and the conversions.
 
 ## FAQ
 
@@ -94,9 +115,9 @@ The managed ones: Docsbook (AI chat on Pro), Mintlify (Assistant on Pro) and Git
 
 <!-- widget:cards plain cols=2 arrow=hover -->
 
-- [Migrating from Docusaurus](./migrating-from-docusaurus-to-docsbook.md) — Keep your URLs, convert admonitions and tabs {arrow-right-left}
-- [Quickstart](../quickstart.md) — From a repository to a live site {rocket}
-- [Find wins fast](../find-wins-fast.md) — How the agent picks the change that moves a number {zap}
-- [Plans and pricing](../pricing/plans.md) — What Pro includes and what AI usage costs {credit-card}
+- [Migrating from Docusaurus](../migrate/migrating-from-docusaurus-to-docsbook.md) — Keep your URLs, convert admonitions and tabs {arrow-right-left}
+- [Quickstart](../../quickstart.md) — From a repository to a live site {rocket}
+- [Find wins fast](../../find-wins-fast.md) — How the agent picks the change that moves a number {zap}
+- [Plans and pricing](../../pricing/plans.md) — What Pro includes and what AI usage costs {credit-card}
 
 <!-- /widget -->

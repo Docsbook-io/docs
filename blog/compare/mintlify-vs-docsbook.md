@@ -1,26 +1,55 @@
 ---
 title: "Mintlify vs Docsbook: pricing, setup, AI and SEO compared"
 description: "Mintlify vs Docsbook as of September 2026: plan prices, docs.json versus no config, AI assistant and agents, SEO and GEO, and when Mintlify fits better."
+layout: landing
 ---
 
+<!-- widget:story share -->
+
+[All posts](../README.md)
+
+![Docsbook](../assets/docsbook-mark-white.png) **Docsbook**
+
+**Compare**
+
 # Mintlify vs Docsbook
+
+[Start free](https://docsbook.io/?start=1)
+
+![A documentation site on Docsbook](https://docsbook.io/gallery-docsbook-dark.png) {bg:emerald}
 
 Mintlify is configured through `docs.json` and puts its AI assistant on a Pro plan at $450 a month billed annually; Docsbook reads your folders with no config file and includes AI on Pro at $20 a month per project.
 
 Both publish docs from Git with AI built in. Mintlify facts below come from [mintlify.com/pricing](https://www.mintlify.com/pricing) and the [Mintlify docs](https://www.mintlify.com/docs), as of September 2026.
+
+- **Category** — Compare
+- **Facts checked** — September 2026
+- **Reading time** — 6 min
+
+[Plans and pricing](../../pricing/plans.md)
+
+<!-- /widget -->
+
+<!-- widget:stats cols=3 -->
+
+- **$20** — a month per project for Docsbook Pro, AI usage included {credit-card}
+- **$450** — a month for Mintlify Pro, billed annually {receipt}
+- **0** — config files: your folders become the sidebar {folder-tree}
+
+<!-- /widget -->
 
 ## Mintlify vs Docsbook at a glance
 
 | | Mintlify | Docsbook |
 |---|---|---|
 | Setup | `docs.json`, the required config file that declares navigation, appearance and integrations | No config file: folders become the sidebar, `README.md` the home page |
-| Page format | MDX, with built-in and custom components | Markdown, plus [widget](../site/widgets.md) markers that stay invisible on GitHub |
+| Page format | MDX, with built-in and custom components | Markdown, plus [widget](../../site/widgets.md) markers that stay invisible on GitHub |
 | Free start | Starter: $0 a month, 5 editor seats, custom domain, web editor, MCP server | 14-day Pro trial with $5 of AI credit, no card |
-| Paid plan | Pro: $450 a month billed annually, $540 billed monthly | [Pro](../pricing/plans.md): $20 a month per project, $20 of AI usage included |
-| AI answers for readers | Assistant on Pro, 25 credits per answer | [AI chat](../ai-chat/README.md) that cites the pages it used, on Pro |
-| Writing agent | Agent and automations on Pro | The [Docsbook agent](../agent/README.md) on Pro: 50 ready-made triggers, 299 published rules |
+| Paid plan | Pro: $450 a month billed annually, $540 billed monthly | [Pro](../../pricing/plans.md): $20 a month per project, $20 of AI usage included |
+| AI answers for readers | Assistant on Pro, 25 credits per answer | [AI chat](../../ai-chat/README.md) that cites the pages it used, on Pro |
+| Writing agent | Agent and automations on Pro | The [Docsbook agent](../../agent/README.md) on Pro: 50 ready-made triggers, 299 published rules |
 | Analytics | Pro and up | During the trial and on paid plans |
-| AI translations | Pro and up | [15 languages](../site/translations.md) on Pro |
+| AI translations | Pro and up | [15 languages](../../site/translations.md) on Pro |
 | `llms.txt`, Markdown pages, MCP server | Every plan | Every site |
 | White label | Enterprise | Every site shows a Powered by Docsbook badge |
 
@@ -33,7 +62,7 @@ Mintlify prices by plan and credits; Docsbook prices by project and AI usage.
 - **Docsbook Pro** — $20 a month per project; the $20 comes back as AI usage, and past it usage continues up to a cap you set ($200 a month by default).
 - **Enterprise** — both sell it through a conversation, with no published price.
 
-Current Docsbook numbers live on [Plans and pricing](../pricing/plans.md).
+Current Docsbook numbers live on [Plans and pricing](../../pricing/plans.md).
 
 ## How different is the setup?
 
@@ -48,17 +77,17 @@ guides/webhooks.md     → Guides ▸ Webhooks
 
 Every `.md` and `.mdx` file becomes a page, and the sidebar follows your folders in reading order: pages named like `introduction` or `quickstart` first, `reference`, `changelog` and `faq` last. Each page's search title and description come from its frontmatter.
 
-Branding and header links are set later, in the panel or by [telling your agent](../get-discovered.md).
+Branding and header links are set later, in the panel or by [telling your agent](../../get-discovered.md).
 
 ## What does the AI do on each platform?
 
 Both answer readers from the docs and both have a writing agent that opens pull requests. Docsbook's agent is built to find the next win on its own.
 
 - **It reads the signals** — searches that found nothing, chat questions nobody answered, pages readers rated down, AI answers that cite someone else.
-- **It checks the pages** against [299 published rules](../agent/expertise.md) of documentation craft, each with a source.
+- **It checks the pages** against [299 published rules](../../agent/expertise.md) of documentation craft, each with a source.
 - **It sends a pull request** with the reason, a prediction and a date to check the result.
 
-The 50 ready-made [triggers](../agent/triggers.md), such as **Organic search audit** and **Do AI engines cite you**, run these loops on a schedule. See [Find wins fast](../find-wins-fast.md).
+The 50 ready-made [triggers](../../agent/triggers.md), such as **Organic search audit** and **Do AI engines cite you**, run these loops on a schedule. See [Find wins fast](../../find-wins-fast.md).
 
 ## How do they compare on SEO and AI visibility?
 
@@ -93,11 +122,11 @@ Docsbook fits teams whose docs are Markdown in Git and who want the AI to do the
 
 ### Does Mintlify have llms.txt and an MCP server?
 
-Yes: as of September 2026, Mintlify hosts `llms.txt`, Markdown versions of pages and an MCP server for every docs site. Docsbook does the same; see [llms.txt and Markdown for AI](../geo/llms-txt.md).
+Yes: as of September 2026, Mintlify hosts `llms.txt`, Markdown versions of pages and an MCP server for every docs site. Docsbook does the same; see [llms.txt and Markdown for AI](../../geo/llms-txt.md).
 
 ### Can I move from Mintlify to Docsbook?
 
-Your Markdown and MDX files move as they are, and the folders become the sidebar in place of `docs.json`. MDX components do not run on Docsbook, so replace them with [widgets](../site/widgets.md) or plain Markdown.
+Your Markdown and MDX files move as they are, and the folders become the sidebar in place of `docs.json`. MDX components do not run on Docsbook, so replace them with [widgets](../../site/widgets.md) or plain Markdown.
 
 ### Is Docsbook free?
 
@@ -109,9 +138,9 @@ Every account gets one 14-day Pro trial with $5 of AI credit and no card. Withou
 
 <!-- widget:cards plain cols=2 arrow=hover -->
 
-- [Quickstart](../quickstart.md) — From a repository to a live site {rocket}
-- [Find wins fast](../find-wins-fast.md) — How the agent picks the change that moves a number {zap}
-- [AI chat](../ai-chat/README.md) — Answers for your readers, with the pages cited {messages-square}
+- [Quickstart](../../quickstart.md) — From a repository to a live site {rocket}
+- [Find wins fast](../../find-wins-fast.md) — How the agent picks the change that moves a number {zap}
+- [AI chat](../../ai-chat/README.md) — Answers for your readers, with the pages cited {messages-square}
 - [GitBook vs Docsbook](./gitbook-vs-docsbook.md) — The same comparison against GitBook {git-compare}
 
 <!-- /widget -->

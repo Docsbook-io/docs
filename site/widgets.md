@@ -54,8 +54,24 @@ A custom domain needs one DNS record. See [Custom domain](./custom-domain.md).
 | `journey` | Lifecycle stages, each with destination cards | "Where am I, and what's next" overviews |
 | `bento` | Mixed-width feature cards with screenshots | Showing what a product looks like |
 | `logos` | A row of customer logos | Social proof under a hero |
+| `stories` | Coloured post cards filtered by category chips | A blog or case-study index |
+| `story` | A post header with a brand panel, the lead and a fact column | The top of a blog post |
+| `quote` | A quotation on a card with the speaker's name and role | A real quote in a post |
 
 Each widget's full contract and a copyable example are in **Customize ▸ Widgets** and in `list_content_widgets`. The **Next steps** block at the end of this page is a `cards` widget.
+
+## Lay out a blog
+
+A blog index and its posts read best without the docs sidebar. Put `layout: landing` in a page's frontmatter and that page drops the sidebar, the on-this-page outline, breadcrumbs, the rating bar and previous/next links; its text keeps a left-aligned reading width.
+
+```markdown
+---
+title: "Mintlify vs Docsbook"
+layout: landing
+---
+```
+
+Keep each category's posts in their own folder, such as `blog/compare/` and `blog/migrate/`, and give the index one heading per folder inside a `stories` widget: each heading becomes a filter chip, and `?category=compare` opens the index on that chip. Open each post with a `story` widget. This site's [blog](../blog/README.md) is built this way.
 
 ## Switch a widget off
 

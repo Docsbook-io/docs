@@ -21,7 +21,7 @@ No. Describe your product or paste a link to your website on [docsbook.io/connec
 
 ### Can I bring the docs I already have?
 
-Yes. Connect the GitHub repository your Markdown lives in and its pages become the site as they stand, or paste a link to your Mintlify or GitBook docs on [docsbook.io/connect](https://docsbook.io/connect) and the first agent run moves them over page by page. You can also upload PDF, Word and Markdown files as [sources](./brain/sources.md), each of which becomes a page. Guides for [GitBook](./blog/migrating-from-gitbook-to-docsbook.md) and [Docusaurus](./blog/migrating-from-docusaurus-to-docsbook.md) cover the details.
+Yes. Connect the GitHub repository your Markdown lives in and its pages become the site as they stand, or paste a link to your Mintlify or GitBook docs on [docsbook.io/connect](https://docsbook.io/connect) and the first agent run moves them over page by page. You can also upload PDF, Word and Markdown files as [sources](./brain/sources.md), each of which becomes a page. Guides for [GitBook](./blog/migrate/migrating-from-gitbook-to-docsbook.md) and [Docusaurus](./blog/migrate/migrating-from-docusaurus-to-docsbook.md) cover the details.
 
 ### Does Docsbook support versioned docs?
 
