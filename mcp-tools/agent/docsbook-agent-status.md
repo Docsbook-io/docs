@@ -5,7 +5,7 @@ description: "What the Docsbook agent is doing on a job, and what came of it —
 
 # Docsbook agent status
 
-<!-- widget:mcp access=read price-millicents=800 -->
+<!-- widget:mcp access=read price-millicents=3 -->
 
 ## docsbook_agent_status
 

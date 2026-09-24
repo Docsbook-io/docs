@@ -5,7 +5,7 @@ description: "Ask a question about THIS project's own documentation and get back
 
 # Ask project docs
 
-<!-- widget:mcp access=read price-millicents=800 -->
+<!-- widget:mcp access=read price-millicents=3 -->
 
 ## ask_project_docs
 

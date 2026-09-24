@@ -5,7 +5,7 @@ description: "LITERAL-string search over the workspace's documentation files —
 
 # Search docs
 
-<!-- widget:mcp access=read price-millicents=30000 -->
+<!-- widget:mcp access=read price-millicents=9 -->
 
 ## search_docs
 

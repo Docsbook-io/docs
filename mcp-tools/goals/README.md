@@ -7,7 +7,7 @@ description: "Declare what a reader was supposed to do, and count who did."
 
 Declare what a reader was supposed to do, and count who did.
 
-<!-- widget:cards plain cols=2 arrow=hover -->
+<!-- widget:cards cols=2 -->
 
 - [`create_funnel`](./create-funnel.md) — Define an ORDERED route through the docs, as a list of goal names.
 - [`create_goal`](./create-goal.md) — Define a goal — one thing you want a reader to do.

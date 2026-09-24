@@ -5,7 +5,7 @@ description: "WATCH THE DOCSBOOK AGENT WORK — the ordered timeline of what a j
 
 # Docsbook agent activity
 
-<!-- widget:mcp access=write anonymous price-millicents=800 -->
+<!-- widget:mcp access=write anonymous price-millicents=3 -->
 
 ## docsbook_agent_activity
 
@@ -56,20 +56,22 @@ The same tool is callable as a plain HTTP request, no MCP client required. It ru
 
 <!-- widget:api -->
 
-### POST /api/v1/tools/docsbook_agent_activity
+### POST /api/v1/docsbook_agent_activity
 
 | Field | Type | Required | Description |
 |---|---|---|---|
 | `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | yes | The arguments above, as one JSON object. |
+| `task_id` | string | yes | The job to watch — the id docsbook_agent returned. |
+| `after` | number | no | Resume from here: the `next_after` of your last call. Omit to start at the beginning. |
+| `limit` | number | no | How many steps, 1-200. Default 50. |
 
 #### Request
 
 ```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/docsbook_agent_activity' \
+curl -X POST 'https://docsbook.io/api/v1/docsbook_agent_activity' \
   -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
   -H 'Content-Type: application/json' \
-  -d '{"args":{"task_id":"<task_id>"}}'
+  -d '{"task_id":"<task_id>"}'
 ```
 
 <!-- /widget -->

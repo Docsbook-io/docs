@@ -5,7 +5,7 @@ description: "Read ONE documentation page in full — its complete markdown, tit
 
 # Read project doc
 
-<!-- widget:mcp access=read price-millicents=800 -->
+<!-- widget:mcp access=read price-millicents=3 -->
 
 ## read_project_doc
 

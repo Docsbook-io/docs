@@ -5,7 +5,7 @@ description: "Set a custom system prompt for the AI chatbot."
 
 # Set chat system prompt
 
-<!-- widget:mcp access=write price-millicents=2000 -->
+<!-- widget:mcp access=write price-millicents=1 -->
 
 ## set_chat_system_prompt
 

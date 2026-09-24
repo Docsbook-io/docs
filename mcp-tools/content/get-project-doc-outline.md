@@ -5,7 +5,7 @@ description: "List every markdown page in the workspace with a short summary (ti
 
 # Get project doc outline
 
-<!-- widget:mcp access=read price-millicents=800 -->
+<!-- widget:mcp access=read price-millicents=3 -->
 
 ## get_project_doc_outline
 

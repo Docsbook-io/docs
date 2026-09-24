@@ -5,7 +5,7 @@ description: "Show or hide one interface element of the docs site — the header
 
 # Update ui settings
 
-<!-- widget:mcp access=write price-millicents=2000 -->
+<!-- widget:mcp access=write price-millicents=1 -->
 
 ## update_ui_settings
 
@@ -28,7 +28,7 @@ Show or hide one interface element of the docs site — the header search button
 | `show_connect_mcp` | boolean | no | Show "Connect MCP" in the Copy page dropdown — copies a prompt that installs this project's MCP server into any agent |
 | `show_prev_next_buttons` | boolean | no | — |
 | `show_breadcrumbs` | boolean | no | — |
-| `home_hide_sidebar` | boolean | no | HOME PAGE ONLY: hide the left navigation rail on the site's front page (its top-level README/index), on desktop — the mobile drawer stays. Every other page keeps its sidebar. |
+| `home_hide_sidebar` | boolean | no | HOME PAGE ONLY: hide the left navigation rail on the site's front page (its top-level README/index), on desktop — the mobile drawer stays. Every other page keeps its sidebar. It also makes the front page a landing rather than the first doc: it leaves the sidebar tree, and the subheader's "Overview" tab opens the next page instead and is not highlighted on the front page (give the front page its own tab with update_navigation subheader_folders kind:"page" if the owner wants one). |
 | `home_hide_outline` | boolean | no | HOME PAGE ONLY: hide the right-hand "On this page" outline on the site's front page. |
 | `home_hide_chrome` | boolean | no | HOME PAGE ONLY: remove the article chrome from the front page — the breadcrumb/copy-page bar, the "Updated" line, the "Was this page helpful?" bar and the previous/next links — so it reads as a landing page, not as page one of a manual. |
 | `home_landing_typography` | boolean | no | HOME PAGE ONLY: landing-page scale for the front page's sections — each h2 becomes a large section title with air above it and the paragraph under it reads as that section's lead. Pair it with hero/stats/cards widgets in the README. |
@@ -116,7 +116,7 @@ The same tool is callable as a plain HTTP request, no MCP client required. It ru
 | `show_connect_mcp` | boolean | no | Show "Connect MCP" in the Copy page dropdown — copies a prompt that installs this project's MCP server into any agent |
 | `show_prev_next_buttons` | boolean | no | — |
 | `show_breadcrumbs` | boolean | no | — |
-| `home_hide_sidebar` | boolean | no | HOME PAGE ONLY: hide the left navigation rail on the site's front page (its top-level README/index), on desktop — the mobile drawer stays. Every other page keeps its sidebar. |
+| `home_hide_sidebar` | boolean | no | HOME PAGE ONLY: hide the left navigation rail on the site's front page (its top-level README/index), on desktop — the mobile drawer stays. Every other page keeps its sidebar. It also makes the front page a landing rather than the first doc: it leaves the sidebar tree, and the subheader's "Overview" tab opens the next page instead and is not highlighted on the front page (give the front page its own tab with update_navigation subheader_folders kind:"page" if the owner wants one). |
 | `home_hide_outline` | boolean | no | HOME PAGE ONLY: hide the right-hand "On this page" outline on the site's front page. |
 | `home_hide_chrome` | boolean | no | HOME PAGE ONLY: remove the article chrome from the front page — the breadcrumb/copy-page bar, the "Updated" line, the "Was this page helpful?" bar and the previous/next links — so it reads as a landing page, not as page one of a manual. |
 | `home_landing_typography` | boolean | no | HOME PAGE ONLY: landing-page scale for the front page's sections — each h2 becomes a large section title with air above it and the paragraph under it reads as that section's lead. Pair it with hero/stats/cards widgets in the README. |

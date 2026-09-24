@@ -21,7 +21,7 @@ Every tool below appears in your client's tool list:
 
 ## More tools through `call_tool`
 
-Webhook alerts (`register_webhook_*`), the agent's [memory folder](../brain/memory.md) (`*_context`), claim links that hand a project to its owner, and site access are callable but kept off the list so it stays short. Ask `find_tool` for one by describing it, then run it with `call_tool`.
+Webhook alerts (`register_webhook_*`), the agent's [memory folder](../brain/memory.md) (`*_context`), claim links that hand a project to its owner, and site access are callable but kept off the list so it stays short. Ask `find_tool` for one by describing it, then run it with `call_tool`. Each of them also has its own page in the [REST API reference](../rest-api/README.md).
 
 ## What the Docsbook agent adds
 
@@ -29,6 +29,6 @@ Webhook alerts (`register_webhook_*`), the agent's [memory folder](../brain/memo
 
 ## Cost and access
 
-Each call has a flat price, shown on its page and charged to your balance — discovery calls such as `get_info` and `find_tool` are free. See [pricing](../plans-and-pricing.md).
+Each call is charged to your balance at **twice what serving it costs us** — the price is on every tool's page. For most tools that is a few cents per thousand calls; discovery calls such as `get_info` and `find_tool` are free. Model tokens a tool spends are billed at twice the provider's price, and a tool that calls a paid data vendor adds twice the vendor's price. See [pricing](../plans-and-pricing.md).
 
-The pill beside a tool in the sidebar says whether it only **reads** a project or can **change** it.
+The pill beside a tool in the sidebar says whether it only **reads** a project or can **change** it. Every tool here is also a plain HTTPS endpoint — see the [REST API](../rest-api/README.md).

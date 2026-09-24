@@ -5,7 +5,7 @@ description: "Talk to the Docsbook agent about a job that is still open — answ
 
 # Docsbook agent reply
 
-<!-- widget:mcp access=write price-millicents=800 -->
+<!-- widget:mcp access=write price-millicents=3 -->
 
 ## docsbook_agent_reply
 
@@ -57,20 +57,21 @@ The same tool is callable as a plain HTTP request, no MCP client required. It ru
 
 <!-- widget:api -->
 
-### POST /api/v1/tools/docsbook_agent_reply
+### POST /api/v1/docsbook_agent_reply
 
 | Field | Type | Required | Description |
 |---|---|---|---|
 | `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `args` | object | yes | The arguments above, as one JSON object. |
+| `task_id` | string | yes | The job to reply to. |
+| `text` | string | yes | What you want to tell the agent, in your own words. |
 
 #### Request
 
 ```bash
-curl -X POST 'https://docsbook.io/api/v1/tools/docsbook_agent_reply' \
+curl -X POST 'https://docsbook.io/api/v1/docsbook_agent_reply' \
   -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
   -H 'Content-Type: application/json' \
-  -d '{"args":{"task_id":"<task_id>","text":"<text>"}}'
+  -d '{"task_id":"<task_id>","text":"<text>"}'
 ```
 
 <!-- /widget -->

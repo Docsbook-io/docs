@@ -5,7 +5,7 @@ description: "List EVERY page of Docsbook's own official documentation — the p
 
 # List docsbook docs
 
-<!-- widget:mcp access=read anonymous price-millicents=800 -->
+<!-- widget:mcp access=read anonymous price-millicents=3 -->
 
 ## list_docsbook_docs
 
