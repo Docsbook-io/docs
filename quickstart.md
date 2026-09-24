@@ -1,6 +1,8 @@
 ---
 title: "Quickstart: publish your docs with Docsbook"
 description: "Go from a GitHub repo, a website or a short product description to a live documentation site in minutes, then hand the writing to the Docsbook agent."
+status: generated
+version: "0.2"
 ---
 
 # Quickstart
@@ -61,7 +63,7 @@ Pick a template — **Docs shell** is the blank one — and put your site in **M
 
 ### A description {file-text}
 
-No site yet? Pick a template, fill in **What does your product do?** and attach any files or screenshots. **Generate docs from your brief** drafts the docs from that material alone and removes the template pages it says nothing about.
+No site yet? Pick a template, fill in **What does your product do?** and attach any files or screenshots. **Generate docs from your prompt** drafts the docs from that material alone and removes the template pages it says nothing about.
 
 <!-- /widget -->
 
