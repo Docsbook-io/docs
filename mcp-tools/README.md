@@ -1,3 +1,10 @@
+---
+title: "MCP Tools"
+description: "Every tool your own agent can call once it is connected to Docsbook over MCP — from Claude Code, Cursor, Codex, VS Code or any other MCP client."
+---
+
+# MCP Tools
+
 Every tool your own agent can call once it is connected to Docsbook over MCP — from Claude Code, Cursor, Codex, VS Code or any other MCP client.
 
 ## Connect
@@ -30,3 +37,17 @@ Webhook alerts (`register_webhook_*`), the agent's [memory folder](../brain/memo
 ## Cost and access
 
 Each call has a flat price, shown on its page and charged to the project's balance. The pill beside a tool in the sidebar says whether it only **reads** a project or can **change** it.
+
+Endpoint: `https://docsbook.io/api/mcp/server`
+
+<!-- widget:cards cols=2 -->
+
+- [Settings](./settings/README.md) — Change one thing about the site to a value the user stated.
+- [Content](./content/README.md) — Read and write the documentation itself.
+- [Orientation](./orientation/README.md) — Find out what this server is, which project the user means, and — on an owner's token — what else this…
+- [Goals](./goals/README.md) — Declare what a reader was supposed to do, and count who did.
+- [Create](./create/README.md) — Bring a documentation site into existence.
+- [Agent](./agent/README.md) — The Docsbook agent — one worker you delegate to, and the whole of "manage the documentation" on a customer's…
+- [Product Help](./product-help/README.md) — The craft corpus — `docsbook_assistant` — how the work is done well, from Docsbook's published pages, with…
+
+<!-- /widget -->

@@ -1,226 +1,162 @@
 ---
-title: "Docsbook documentation: publish, get found, get quoted, measure."
-description: "Docsbook publishes the Markdown you already have to a site search engines index and AI assistants cite, then hands your agent a goal and reports the number it moved. Start here."
-status: generated
-version: "0.4"
+title: "Docsbook: docs that AI agents grow, rank and keep true"
+description: "Publish your docs in minutes. Docsbook's AI agents find the fastest wins in Google and AI answers, ship each fix as a pull request and measure what it moved."
 ---
 
 <!-- widget:hero size=large -->
 
 **Docsbook documentation**
 
-# Documentation that gets your product found, quoted and measured
+# Find wins fast. Tell your agent, get discovered.
 
-Publish the Markdown you already have to a site search engines index and AI assistants cite. Then hand your agent a goal and read, on a date, the number it moved.
+Docsbook publishes your docs and puts AI agents to work on them. They check your pages against 299 published rules, read what search engines, AI assistants and readers do, and ship the next win as a pull request.
 
-[Start free](https://docsbook.io/?start=1) · [Connect your agent](./agent-ready/mcp.md)
+[Start free](https://docsbook.io/?start=1) · [Tell your agent](./get-discovered.md)
 
 > ![Claude](https://docsbook.io/agents/claude.svg) ![OpenAI](https://docsbook.io/agents/openai.svg) ![Cursor](https://docsbook.io/agents/cursor.svg) **Onboard your agent** — Set up Docsbook for me. Fetch https://docsbook.io/get-started.md and follow it.
 >
-> One prompt into Claude Code, Cursor or Codex: the agent connects the server, writes a Docsbook rule into its memory file and takes a first project live.
+> Paste it into Claude Code, Cursor or Codex: your agent connects Docsbook and takes a first project live.
 
 ```bash
 claude mcp add --transport http docsbook https://docsbook.io/api/mcp/server
 ```
 
-Codex, Cursor, Windsurf, Cline and any other MCP client use the same endpoint.
+One endpoint for Claude Code, Cursor, Codex and any MCP client.
 
 <!-- /widget -->
 
 <!-- widget:stats cols=4 -->
 
-- **5 min** — from a repository to a public URL
-- **169** — MCP tools your docs agent can use
+- **299** — rules of documentation craft the agent checks
+- **194** — published sources behind those rules
+- **49** — ready-made agent workflows
 - **15** — languages, each indexed on its own
-- **$0** — for hosting, search, analytics and a custom domain
 
 <!-- /widget -->
 
-<!-- widget:logos -->
+## Two ideas the product is built on
 
-**Documentation running on Docsbook**
-
-- [Cursor](https://docsbook-websites.docsbook.io/cursor)
-- [ClickHouse](https://docsbook-websites.docsbook.io/clickhouse)
-- [Discord Developers](https://docsbook-websites.docsbook.io/discord-developers/)
-
-[See every site →](https://docsbook.io/showcase)
-
-<!-- /widget -->
-
-## Start here
-
-Four doors. Each one is a page you can finish in one sitting.
-
-<!-- widget:cards icons=inline cols=4 arrow=hover -->
-
-- [Publish a site](./quick-start.md) — From a repository, a website scan or one sentence about your product, to a public URL. {rocket}
-- [Connect your agent](./agent-ready/mcp.md) — Claude Code, Cursor, Codex and any MCP client, through one endpoint. {plug}
-- [Brand it](./design/README.md) — Logo, colours, fonts, header, footer and your own domain. {palette}
-- [Read the numbers](./analytics/README.md) — Which pages were read, which searches found nothing, and where readers stopped. {bar-chart-3}
-
-<!-- /widget -->
-
-## What teams hire it for
-
-Every goal comes with the reading it is judged by — a number, not an impression.
+You don't need to know how to rank, get cited or write docs people finish. The agents know — you delegate.
 
 <!-- widget:cards icons=inline horizontal cols=2 arrow=hover -->
 
-- [Be found](./seo/README.md) — Qualified organic traffic, read as clicks and impressions per intent. {search}
-- [Be recommended](./geo/README.md) — Named when assistants answer your category, read as citations across a fixed question set. {sparkles}
-- [Turn readers into customers](./analytics/reports/goals-and-funnels.md) — More readers reaching the product, read as goal completions per page. {git-fork}
-- [Open a new market](./translation/README.md) — Readers in another language, read as traffic and rank per locale. {languages}
+- [Find wins fast](./find-wins-fast.md) — The agent reads every signal your docs produce and ships the change most likely to move a number soonest. {trophy}
+- [Tell your agent, get discovered](./get-discovered.md) — One sentence from Claude Code, Cursor or the panel. The agent does the job; search engines and AI assistants find you. {megaphone}
 
 <!-- /widget -->
 
-## Everything a docs team hires five tools for
+## What your docs get
 
-One panel, the whole growth loop: publishing, the agent, analytics, SEO, GEO and branding — measured in the same place they are changed.
+Six things every Docsbook site does — and the agent keeps improving on its own.
+
+<!-- widget:cards icons=inline cols=3 arrow=hover -->
+
+- [Search engines see you](./seo/README.md) — Server-rendered pages, sitemaps and structured data, and an agent that tunes titles and answers to real queries. {search}
+- [AI engines read and cite you](./geo/README.md) — `llms.txt`, Markdown for every page, and an agent that checks what ChatGPT and Perplexity say about you. {sparkles}
+- [A second brain for your product](./brain/README.md) — Your pages, your code and what the agent learned, searchable by meaning for you, your readers and their agents. {brain}
+- [AI answers your readers](./ai-chat/README.md) — A chat grounded in your pages, with sources — and every unanswered question turned into a page. {message-circle}
+- [AI writes and updates your docs](./agent/README.md) — One worker that reads, writes, configures and measures, on your word or on a trigger. {bot}
+- [You hear every reader](./analytics/README.md) — Ratings, failed searches, dead ends and chat questions per page, fed straight back to the agent. {ear}
+
+<!-- /widget -->
+
+## Agents that keep working when you stop
 
 <!-- widget:bento -->
 
-- **An agent that wakes up when your product changes** — Commits, releases, merged pull requests, labelled issues, a watched API spec, a question in Discord — every trigger points at the agent. {badge:Autonomous agent} {span:7} {crop:top-left}
+- **Wakes up on its own** — 49 ready-made workflows run on a schedule or on an event: a push, a search that found nothing, a question the chat could not answer, a thumbs-down. {badge:Triggers} {span:7} {crop:top-left}
 
-  ![Triggers screen: the Docsbook agent card and its event triggers](https://docsbook.io/landing-triggers.jpg)
+  ![Triggers screen: ready-made agent workflows, each with its own switch](https://docsbook.io/landing-triggers.jpg)
 
-- **Plugs into where the answers already live** — GitHub, Slack, Google Calendar, Google Workspace — or any MCP server. It reads the channels where questions get asked and the calendar where launches are planned. {span:5} {crop:top-left}
+- **Ships through pull requests** — Every change is a commit to your repository with the reason behind it. Review it first, or let it merge. {span:5}
 
-  ![Integrations screen: GitHub, Slack, Google Calendar and Google Workspace](https://docsbook.io/landing-integrations.jpg)
+  ![Settings screen with the auto-merge switch](https://docsbook.io/landing-pull-requests.jpg)
 
-- **Analytics that speak in revenue, not pageviews** — Set a call-to-action URL and an average deal size, and read Revenue, Conversion rate and Revenue per visitor next to Bounce rate — plus a live map, entry pages, headings read, and the searches that found nothing. {span:12} {side} {tags} {crop:top-right}
+- **Knows what good documentation looks like** — Analytics ▸ Audit judges your pages against 299 rules from search engines, standards bodies and published research, and turns each miss into work with a forecast. {badge:Expertise} {span:12} {side} {tags} {graduation-cap}
 
-  - Insights
-  - Graph
-  - Chat
-  - Agent
-  - Writing
-  - SEO
-  - GEO
-  - Socials
+  - Search intent
+  - Titles & snippets
+  - Crawl & index
+  - AI crawlers
+  - Passages
+  - First screen
+  - Plain language
+  - Freshness
 
-  ![Analytics screen: visitors, revenue, conversion rate, bounce rate and the traffic chart](https://docsbook.io/landing-analytics.jpg)
+- **Found on Google** — Clicks, impressions and positions per query and per page, and the searches readers ran on your site. {badge:SEO} {span:6} {crop:top-right}
 
-- **Be found: clicks and impressions per intent** — Views, clicks, CTR, ranking and mentions across Google, Bing and DuckDuckGo, by query and by page. Plus every in-site search, so you see what readers wanted and did not get. {badge:SEO} {span:6} {crop:top-right}
+  ![SEO screen: search queries with clicks and impressions](https://docsbook.io/landing-seo.jpg)
 
-  ![SEO screen: search queries with views, and in-site searches](https://docsbook.io/landing-seo.jpg)
+- **Cited by AI engines** — Which assistants and crawlers read each page, and whether an answer names you. {badge:GEO} {span:6} {crop:top-right}
 
-- **Be recommended: who ChatGPT, Perplexity and Claude cite** — AI answers, indexing and training crawls per page and per crawler. When an assistant answers your category without you, the agent reads the answer engine and fixes it. {badge:GEO} {span:6} {crop:top-right}
-
-  ![GEO screen: AI answers per page from ChatGPT-User, Perplexity-User and Claude-Web](https://docsbook.io/landing-geo.jpg)
-
-- **Brand it in minutes** — Logo, colours, fonts, header, footer, sidebars and your own domain — one CNAME, SSL automatic. {span:4} {crop:top-right}
-
-  ![Customize screen: background style presets and colours](https://docsbook.io/landing-customize.jpg)
-
-- **Ship through pull requests** — Every change is a pull request with the diff and the issues behind it. Auto-merge on, or review first. Your repository stays the source of truth. {span:4}
-
-  ![Settings screen: the auto-merge toggle and the call-to-action URL](https://docsbook.io/landing-pull-requests.jpg)
-
-- **AI chat that admits what it doesn't know** — Answers grounded in your pages and your real site facts. No answer in the docs? It says so and hands the reader to support. {span:4} {message-circle}
-
-  - Custom system prompt and suggested questions
-  - Pick the model for readers and for the agent
-  - REST API to call the chat from your backend
-  - Password or SSO for private docs
+  ![GEO screen: AI answers per page and per crawler](https://docsbook.io/landing-geo.jpg)
 
 <!-- /widget -->
 
-## How the loop runs
+## How a win ships
 
-You name the outcome. Docsbook researches what is there, proposes the change, writes the expected number down **before** the work, and reads it on the date.
+<!-- widget:journey cols=2 -->
 
-<!-- widget:journey cols=4 -->
+### Signal
 
-### Goal
+A query with impressions and no clicks, a crawler that never reaches a page, a question nobody answered.
 
-One sentence from you: the outcome you want, not a brief or a backlog.
+- [Hear every reader](./analytics/README.md) {ear}
+- [AI visibility](./geo/ai-visibility.md) {eye}
 
-- [Give your agent a goal](./agent-ready/mcp.md) {target}
+### Rule
 
-### Research
+The agent matches the signal to a published rule and ranks the fix by what it is expected to move.
 
-What your product does, who ranks for it, what assistants answer, and what your readers searched for and did not find.
+- [Expertise](./agent/expertise.md) {graduation-cap}
+- [Find wins fast](./find-wins-fast.md) {trophy}
 
-- [How we prove it](./evidence.md) {scale}
+### Change
 
-### Experiment
+A pull request on your repository, with the reason and the prediction written down.
 
-A change committed to your repository as a pull request, with the number it is expected to hit and the date it is read on.
+- [Review the agent's work](./agent/review.md) {git-pull-request}
+- [Triggers](./agent/triggers.md) {zap}
 
-- [Source of truth](./agent-ready/source-of-truth.md) {git-branch}
+### Measure
 
-### Verdict
+On the date, the number is read and the prediction is judged.
 
-On the date, the reading is taken. Confirmed or rejected, and a rejection is kept so the next bet does not repeat it.
-
-- [Goals and funnels](./analytics/reports/goals-and-funnels.md) {check-circle}
+- [Docs analytics](./analytics/insights.md) {chart-line}
+- [Search Console](./seo/search-console.md) {search-check}
 
 <!-- /widget -->
 
-## What those sites look like
-
-Live documentation, public and readable without signing in.
+## Built with Docsbook
 
 <!-- widget:showcase cols=3 -->
 
-- [Cursor](https://docsbook-websites.docsbook.io/cursor) — Documentation for the AI code editor {color:#1a1a1a}
+- [Cursor](https://cursor.docsbook.io/) — Documentation for the AI code editor {color:#1a1a1a}
 
   ![Cursor documentation built with Docsbook](https://docsbook.io/gallery-cursor-light.png)
 
-- [ClickHouse](https://docsbook-websites.docsbook.io/clickhouse) — Column-oriented database for real-time analytics {color:#faff69}
+- [ClickHouse](https://clickhouse.docsbook.io/) — Column-oriented database for real-time analytics {color:#faff69}
 
   ![ClickHouse documentation built with Docsbook](https://docsbook.io/gallery-clickhouse-light.png)
 
-- [Discord Developers](https://docsbook-websites.docsbook.io/discord-developers/) — Build bots, Activities, and apps on Discord {color:#5865F2}
+- [Discord Developers](https://discord-developers.docsbook.io/) — Build bots, Activities and apps on Discord {color:#5865F2}
 
   ![Discord Developers documentation built with Docsbook](https://docsbook.io/gallery-discord-developers-light.png)
 
 <!-- /widget -->
 
-[See every site in the showcase →](https://docsbook.io/showcase)
+## Pricing
 
-## Explore the documentation
-
-<!-- widget:cards plain cols=3 arrow=hover -->
-
-## Publish
-
-- [Quick start](./quick-start.md) — Source to public URL {rocket}
-- [Content and setup](./content/README.md) — Sources, indexing, GitHub link {settings-2}
-- [Custom domain](./guides/advanced/custom-domain.md) — One CNAME, SSL automatic {globe}
-- [Private docs](./guides/advanced/sso.md) — Shared password or your own SSO {lock}
-- [Translation](./translation/README.md) — 15 languages, indexed separately {languages}
-- [Design and branding](./design/README.md) — Name, colour, fonts, layout {palette}
-
-## Agents
-
-- [MCP server](./agent-ready/mcp.md) — Connect the agent you already use {plug}
-- [MCP tools reference](./mcp/README.md) — Every tool and its price class {list}
-- [Docs skills](./agent-ready/skills.md) — SKILL.md files any agent can load {graduation-cap}
-- [Source of truth](./agent-ready/source-of-truth.md) — The graph an agent navigates {network}
-- [MCP security](./agent-ready/mcp-security.md) — Auth model and token scopes {shield}
-- [AI chat](./ai-chat/README.md) — Answers for readers, grounded in your pages {message-circle}
-
-## Reference
-
-- [Concepts](./basics.md) — Workspace, balance, indexing {box}
-- [Pricing](./pricing.md) — What is metered, and what is not {credit-card}
-- [REST API](./rest-api/README.md) — Call your docs chat from your backend {code}
-- [Webhooks](./reference/webhooks.md) — Event catalogue and payload schemas {bell}
-- [Content widgets](./content/features/widgets.md) — Hero, cards, stats and steps in Markdown {layout-grid}
-- [Changelog](./CHANGELOG.md) — What shipped, and what it was meant to buy {history}
-
-<!-- /widget -->
+PRICING_PLACEHOLDER
 
 <!-- widget:cta -->
 
 **Ready when you are**
 
-## Give your agent a goal
+## Give your agent the first goal
 
-Ask one question and you get a researched answer about your own market, whether or not you run anything it suggests. Questions: [support@docsbook.io](mailto:support@docsbook.io) or the [Docsbook Discord](https://discord.gg/baqUCdwrag).
+Publish a site from a repository, a website or one sentence, then tell the agent what you want it to win.
 
-[Start free — no credit card](https://docsbook.io/?start=1) · [Connect your agent](./agent-ready/mcp.md)
+[Start free](https://docsbook.io/?start=1) · [Read the quickstart](./quickstart.md)
 
 <!-- /widget -->

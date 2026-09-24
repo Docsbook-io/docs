@@ -1,36 +1,34 @@
 ---
 title: "Docsbook API"
-description: "One workspace API key: the AI chat engine that answers from your documentation, your MCP owner surface (orientation, your own reads, and delegating a job to `docsbook_agent`),…"
+description: "Call Docsbook from your own backend with one API key and plain HTTPS — ask your docs a question, read them, change settings or hand work to the Docsbook agent."
 ---
 
 # Docsbook API
 
-One workspace API key: the AI chat engine that answers from your documentation, your
-MCP owner surface (orientation, your own reads, and delegating a job to `docsbook_agent`), and a
-narrow list of configuration settings — each with its own real `GET` or `POST` below.
+Call Docsbook from your own backend with one API key and plain HTTPS — ask your docs a question, read them, change settings or hand work to the Docsbook agent.
 
-This does not include writing documentation, translations or webhooks directly: since 2026-09-18
-that catalog is reached only by delegating a job to `docsbook_agent`, the same as your own connected
-MCP agent now does.
+## Get your key
 
-This document is generated from the running server, so every operation below is reachable right now —
-nothing here 404s on the first call. Get your key from **Integrations** in your workspace settings.
+Open **Settings ▸ Domain & API** in the panel to view, copy or reset the project's API key. Send it as `Authorization: Bearer dbk_…`.
+
+There is one live key per project. Resetting it revokes the old key everywhere at once, so update your callers first — and keep the key on your server, never in a browser or mobile app.
+
+## What the key reaches
+
+- **`POST /api/v1/chat`** — a grounded answer from your docs, with sources: the same engine as the [AI chat](../ai-chat/README.md).
+- **Reads** — `GET /api/v1/{tool}` for your projects, your pages, your agent jobs and Docsbook's own manual.
+- **Settings** — `POST /api/v1/{tool}` for branding, navigation, site toggles, languages, translation mode, mention tracking, page status and the AI chat.
+- **Everything else your MCP connection can call** — `POST /api/v1/tools/{tool}` with the tool's arguments as `args`, including `docsbook_agent` and `write_docs`. Each tool is described in the [MCP tools reference](../mcp-tools/README.md).
+
+## What a call costs
+
+`POST /api/v1/chat` spends from the project's balance, the same wallet the Ask AI widget on your site uses. Every other call costs the same flat price as the MCP tool it runs, shown on that tool's page.
 
 Base URL: `https://docsbook.io`
 
-Your workspace's API key, from **Integrations** in workspace settings.
-
-The key reaches your MCP owner surface — orientation, delegating and watching a `docsbook_agent`
-job, reading your own documentation and Docsbook's own docs — plus a narrow, separate list of
-configuration settings (branding, navigation, the chatbot, translation mode, mention tracking) each
-published at its own path below. It does **not** reach documentation writes, translations, webhooks
-or the product's own memory: that catalog is reached by delegating a job to `docsbook_agent`, never
-directly over REST. Treat the key as a server-side secret regardless: never ship it in a browser
-bundle or a mobile app. Resetting a key revokes the old one immediately, everywhere.
-
 Every page below is generated from the OpenAPI document, so it describes the API that is running right now.
 
-26 more operations call MCP tools one by one; each is documented on its own tool page under **MCP Tools**, together with the MCP call it mirrors.
+28 more operations call MCP tools one by one; each is documented on its own tool page under **MCP Tools**, together with the MCP call it mirrors.
 
 <!-- widget:cards cols=2 -->
 

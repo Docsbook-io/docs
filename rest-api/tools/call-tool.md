@@ -1,8 +1,6 @@
 ---
 title: "Call any tool by name"
 description: "Call a tool by name, over plain REST — no MCP client, no JSON-RPC transport, no OAuth dance."
-status: generated
-version: "0.2"
 ---
 
 # Call any tool by name
@@ -54,7 +52,7 @@ curl -X POST 'https://docsbook.io/api/v1/tools/{tool}' \
 
 | Status | Meaning |
 |---|---|
-| `200` | The tool ran. Read `ok` to see whether it succeeded — a failure still returns `200`, with `accepts` (the arguments that tool actually declares), `you_sent`, `missing_required` and one `next` line naming the fix. |
+| `200` | The tool ran. Read `ok` to see whether it succeeded. |
 | `400` | `args` was not a JSON object. |
 | `401` | Missing or invalid API key. |
 | `404` | `TOOL_NOT_FOUND` — this server serves no tool by that name. Never billed: the call never reached a tool. |

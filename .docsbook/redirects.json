@@ -1,161 +1,625 @@
----
-status: generated
-version: "0.2"
----
-
 {
   "version": 1,
   "redirects": [
     {
+      "from": "aeo",
+      "to": "geo/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "aeo/content-rules",
+      "to": "agent/expertise",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "aeo/introduction",
+      "to": "geo/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "aeo/structured-answers",
+      "to": "geo/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "agent-ready",
+      "to": "get-discovered",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "agent-ready/introduction",
+      "to": "get-discovered",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "agent-ready/mcp",
+      "to": "get-discovered",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "agent-ready/mcp-security",
+      "to": "get-discovered",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "agent-ready/skills",
+      "to": "brain/skills",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "agent-ready/source-of-truth",
+      "to": "brain/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
       "from": "ai",
-      "to": "seo",
-      "at": "2026-09-05T00:00:00.000Z"
+      "to": "seo/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
     },
     {
-      "from": "ai/llms-txt",
-      "to": "geo/llms-txt",
-      "at": "2026-09-05T00:00:00.000Z"
+      "from": "ai-chat/answer-quality",
+      "to": "ai-chat/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
     },
     {
-      "from": "ai/mcp",
-      "to": "agent-ready/mcp",
-      "at": "2026-09-05T00:00:00.000Z"
+      "from": "ai-chat/chat",
+      "to": "ai-chat/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
     },
     {
-      "from": "ai/mcp-security",
-      "to": "agent-ready/mcp-security",
-      "at": "2026-09-05T00:00:00.000Z"
+      "from": "ai-chat/chat-hooks",
+      "to": "ai-chat/api",
+      "at": "2026-09-24T00:00:00.000Z"
     },
     {
-      "from": "ai/source-of-truth",
-      "to": "agent-ready/source-of-truth",
-      "at": "2026-09-05T00:00:00.000Z"
+      "from": "ai-chat/feedback",
+      "to": "analytics/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
     },
     {
-      "from": "content/features/seo",
-      "to": "seo",
-      "at": "2026-09-05T00:00:00.000Z"
+      "from": "ai-chat/search",
+      "to": "ai-chat/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
     },
     {
-      "from": "content/features/geo",
-      "to": "geo",
-      "at": "2026-09-05T00:00:00.000Z"
+      "from": "ai-chat/skills",
+      "to": "brain/skills",
+      "at": "2026-09-24T00:00:00.000Z"
     },
     {
-      "from": "content/features/aeo",
-      "to": "aeo",
-      "at": "2026-09-05T00:00:00.000Z"
-    },
-    {
-      "from": "ai/chat",
-      "to": "ai-chat/chat",
-      "at": "2026-09-05T00:00:00.000Z"
-    },
-    {
-      "from": "ai/chat-hooks",
-      "to": "ai-chat/chat-hooks",
-      "at": "2026-09-05T00:00:00.000Z"
-    },
-    {
-      "from": "ai/sources",
-      "to": "ai-chat/sources",
-      "at": "2026-09-05T00:00:00.000Z"
-    },
-    {
-      "from": "ai/skills",
-      "to": "agent-ready/skills",
-      "at": "2026-09-05T00:00:00.000Z"
-    },
-    {
-      "from": "content/features/feedback",
-      "to": "ai-chat/feedback",
-      "at": "2026-09-05T00:00:00.000Z"
-    },
-    {
-      "from": "content/features/search",
-      "to": "ai-chat/search",
-      "at": "2026-09-05T00:00:00.000Z"
-    },
-    {
-      "from": "api",
-      "to": "reference/api",
-      "at": "2026-09-05T10:33:43.552Z"
-    },
-    {
-      "from": "webhooks",
-      "to": "reference/webhooks",
-      "at": "2026-09-05T10:33:43.553Z"
+      "from": "ai-chat/sources",
+      "to": "brain/sources",
+      "at": "2026-09-24T00:00:00.000Z"
     },
     {
       "from": "ai-visibility",
-      "to": "seo",
-      "at": "2026-09-05T12:00:00.000Z"
+      "to": "seo/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
     },
     {
-      "from": "ai-visibility/seo",
-      "to": "seo",
-      "at": "2026-09-05T12:00:00.000Z"
+      "from": "ai-visibility/aeo",
+      "to": "geo/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
     },
     {
       "from": "ai-visibility/geo",
-      "to": "geo",
-      "at": "2026-09-05T12:00:00.000Z"
+      "to": "geo/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "ai-visibility/introduction",
+      "to": "seo/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
     },
     {
       "from": "ai-visibility/llms-txt",
       "to": "geo/llms-txt",
-      "at": "2026-09-05T12:00:00.000Z"
-    },
-    {
-      "from": "ai-visibility/aeo",
-      "to": "aeo",
-      "at": "2026-09-05T12:00:00.000Z"
+      "at": "2026-09-24T00:00:00.000Z"
     },
     {
       "from": "ai-visibility/mcp",
-      "to": "agent-ready/mcp",
-      "at": "2026-09-05T12:00:00.000Z"
+      "to": "get-discovered",
+      "at": "2026-09-24T00:00:00.000Z"
     },
     {
       "from": "ai-visibility/mcp-security",
-      "to": "agent-ready/mcp-security",
-      "at": "2026-09-05T12:00:00.000Z"
+      "to": "get-discovered",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "ai-visibility/seo",
+      "to": "seo/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
     },
     {
       "from": "ai-visibility/source-of-truth",
-      "to": "agent-ready/source-of-truth",
-      "at": "2026-09-05T12:00:00.000Z"
+      "to": "brain/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
     },
     {
-      "from": "ai-chat/skills",
-      "to": "agent-ready/skills",
-      "at": "2026-09-05T12:00:00.000Z"
+      "from": "ai/chat",
+      "to": "ai-chat/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
     },
     {
-      "from": "reference/mcp-tools",
-      "to": "mcp",
-      "at": "2026-09-15T00:00:00.000Z"
+      "from": "ai/chat-hooks",
+      "to": "ai-chat/api",
+      "at": "2026-09-24T00:00:00.000Z"
     },
     {
-      "from": "reference/api",
-      "to": "rest-api",
-      "at": "2026-09-15T00:00:00.000Z"
+      "from": "ai/introduction",
+      "to": "seo/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
     },
     {
-      "from": "mcp/product-help/ask-docsbook",
-      "to": "mcp/product-help/docsbook-assistant",
-      "at": "2026-09-18T00:00:00.000Z"
+      "from": "ai/llms-txt",
+      "to": "geo/llms-txt",
+      "at": "2026-09-24T00:00:00.000Z"
     },
     {
-      "from": "mintlify-alternative",
-      "to": "blog/mintlify-vs-docsbook",
-      "at": "2026-09-20T08:00:00.000Z"
+      "from": "ai/mcp",
+      "to": "get-discovered",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "ai/mcp-security",
+      "to": "get-discovered",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "ai/skills",
+      "to": "brain/skills",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "ai/source-of-truth",
+      "to": "brain/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "ai/sources",
+      "to": "brain/sources",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "analytics/how-measurement-works",
+      "to": "analytics/insights",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "analytics/reports",
+      "to": "analytics/insights",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "analytics/reports/countries",
+      "to": "analytics/insights",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "analytics/reports/goals-and-funnels",
+      "to": "analytics/goals",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "analytics/reports/introduction",
+      "to": "analytics/insights",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "analytics/reports/read-time",
+      "to": "analytics/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "analytics/tracking",
+      "to": "analytics/insights",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "analytics/tracking/ai-usage",
+      "to": "geo/ai-visibility",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "analytics/tracking/events",
+      "to": "analytics/insights",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "analytics/tracking/introduction",
+      "to": "analytics/insights",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "analytics/tracking/overview",
+      "to": "analytics/insights",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "api",
+      "to": "rest-api/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "basics",
+      "to": "quickstart",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/ai-chat-for-documentation-build-vs-buy",
+      "to": "ai-chat/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/ai-docs-platform-comparison",
+      "to": "blog/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/api-documentation-best-practices-2026",
+      "to": "blog/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/best-docs-platforms-for-startups-2026",
+      "to": "blog/free-docs-hosting-comparison",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/custom-domain-for-docs-howto",
+      "to": "site/custom-domain",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/docny-vs-docsbook",
+      "to": "blog/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/docs-as-code-vs-managed-platform",
+      "to": "blog/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/docs-skills-for-ai-agents",
+      "to": "brain/skills",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/docsio-vs-docsbook",
+      "to": "blog/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/documentation-analytics-what-to-track",
+      "to": "analytics/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/documentation-seo-guide",
+      "to": "seo/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/docusaurus-vs-docsbook-2026",
+      "to": "blog/docusaurus-vs-docsbook",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/faq-replies",
+      "to": "faq",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/json-ld-for-documentation",
+      "to": "seo/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/mcp-server-for-documentation",
+      "to": "brain/mcp-server",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/multi-language-documentation-seo",
+      "to": "site/translations",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/notion-for-docs-engineering-lessons",
+      "to": "blog/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/perplexity-citations-for-docs",
+      "to": "geo/ai-visibility",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/readme-vs-docsbook",
+      "to": "blog/readme-md-to-docs-site",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/theneo-vs-docsbook",
+      "to": "blog/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/why-documentation-matters",
+      "to": "blog/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/why-readme-only-projects-need-a-docs-site",
+      "to": "blog/readme-md-to-docs-site",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "content",
+      "to": "site/editing",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "content/features/aeo",
+      "to": "geo/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "content/features/copy",
+      "to": "geo/llms-txt",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "content/features/feedback",
+      "to": "analytics/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "content/features/geo",
+      "to": "geo/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "content/features/search",
+      "to": "ai-chat/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "content/features/seo",
+      "to": "seo/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "content/features/widgets",
+      "to": "site/widgets",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "content/introduction",
+      "to": "site/editing",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "content/setup/content-options",
+      "to": "site/editing",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "content/setup/github-integration",
+      "to": "site/editing",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "content/setup/pricing-spec",
+      "to": "site/widgets",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "design",
+      "to": "site/branding",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "design/introduction",
+      "to": "site/branding",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "design/layout/footer",
+      "to": "site/branding",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "design/layout/header",
+      "to": "site/branding",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "design/layout/sidebar",
+      "to": "site/branding",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "design/style/branding",
+      "to": "site/branding",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "design/style/theming",
+      "to": "site/branding",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "evidence",
+      "to": "find-wins-fast",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "geo/citation-signals",
+      "to": "geo/ai-visibility",
+      "at": "2026-09-24T00:00:00.000Z"
     },
     {
       "from": "gitbook-alternative",
       "to": "blog/gitbook-vs-docsbook",
-      "at": "2026-09-20T08:00:00.000Z"
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "guides",
+      "to": "quickstart",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "guides/advanced",
+      "to": "site/editing",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "guides/advanced/custom-domain",
+      "to": "site/custom-domain",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "guides/advanced/documentation-versioning",
+      "to": "faq",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "guides/advanced/introduction",
+      "to": "site/editing",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "guides/advanced/premium",
+      "to": "plans-and-pricing",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "guides/advanced/sso",
+      "to": "site/private-docs",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "guides/advanced/translation",
+      "to": "site/translations",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "guides/getting-started",
+      "to": "quickstart",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "guides/getting-started/creating-docs",
+      "to": "quickstart",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "guides/getting-started/introduction",
+      "to": "quickstart",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "guides/getting-started/managing-docs",
+      "to": "site/editing",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "guides/introduction",
+      "to": "quickstart",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "mintlify-alternative",
+      "to": "blog/mintlify-vs-docsbook",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "overview",
+      "to": "",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "pricing",
+      "to": "plans-and-pricing",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "quick-start",
+      "to": "quickstart",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "reference",
+      "to": "mcp-tools/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "reference/api",
+      "to": "rest-api/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "reference/introduction",
+      "to": "mcp-tools/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "reference/mcp-tools",
+      "to": "mcp-tools/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "reference/webhooks",
+      "to": "analytics/alerts",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "seo/how-it-works",
+      "to": "seo/introduction",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "seo/indexing",
+      "to": "seo/search-console",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "translation",
+      "to": "site/translations",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "translation/ai-translations",
+      "to": "site/translations",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "translation/introduction",
+      "to": "site/translations",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "translation/quality",
+      "to": "site/translations",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "translation/settings",
+      "to": "site/translations",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "use-cases",
+      "to": "",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "webhooks",
+      "to": "analytics/alerts",
+      "at": "2026-09-24T00:00:00.000Z"
     }
   ]
 }
-

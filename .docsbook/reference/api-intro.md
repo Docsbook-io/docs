@@ -1,47 +1,18 @@
-Everything your workspace API key can reach, your backend can call directly — one key,
-plain REST, no MCP client.
+Call Docsbook from your own backend with one API key and plain HTTPS — ask your docs a question, read them, change settings or hand work to the Docsbook agent.
 
 ## Get your key
 
-Open **Settings ▸ Profile** in the admin panel, beside the GitHub account this project
-commits through. View the key, copy it, or reset it there.
+Open **Settings ▸ Domain & API** in the panel to view, copy or reset the project's API key. Send it as `Authorization: Bearer dbk_…`.
 
-One live key per project. Resetting revokes the old one immediately, everywhere, and
-there is no key history — so update your callers before you reset.
+There is one live key per project. Resetting it revokes the old key everywhere at once, so update your callers first — and keep the key on your server, never in a browser or mobile app.
 
-## What the key reaches, and what it does not
+## What the key reaches
 
-Since 2026-09-18 this key meets the same owner surface your own connected MCP agent
-does: orientation, reading your own documentation and Docsbook's own docs, and giving a
-job to `docsbook_agent` (then watching, answering, or stopping it) — plus a narrow,
-separate list of pure configuration settings (branding, navigation, the chatbot,
-translation mode, mention tracking), each published below at its own `GET` or `POST`
-path.
-
-**It does not reach documentation writes, translations or webhooks directly.** That
-catalog — everything tagged below with a tool page rather than its own REST path — is
-reached only by delegating a job to `docsbook_agent`; there is no `write_docs` endpoint
-to call from your backend. This is a narrower key than it used to be, on purpose: see the
-MCP Tools section's intro for why.
-
-Treat the key as a server-side secret regardless of what it can reach: never ship it in a
-browser bundle or a mobile app.
-
-## Read vs write, as real HTTP verbs
-
-Every tool below that is safe to call from a script now has its own path and its own
-verb — `GET /api/v1/get_analytics?period=30d` reads, `POST /api/v1/update_branding`
-writes a setting. Nothing here 404s on the first call: what you see below is what runs.
-For a tool that has neither — no individual path — the dispatch-by-name form,
-`POST /api/v1/tools/{tool}`, still reaches the handful of owner-surface tools that are
-not settings-shaped (`create_workspace`, and giving/watching/answering/stopping a
-`docsbook_agent` job).
+- **`POST /api/v1/chat`** — a grounded answer from your docs, with sources: the same engine as the [AI chat](../ai-chat/README.md).
+- **Reads** — `GET /api/v1/{tool}` for your projects, your pages, your agent jobs and Docsbook's own manual.
+- **Settings** — `POST /api/v1/{tool}` for branding, navigation, site toggles, languages, translation mode, mention tracking, page status and the AI chat.
+- **Everything else your MCP connection can call** — `POST /api/v1/tools/{tool}` with the tool's arguments as `args`, including `docsbook_agent` and `write_docs`. Each tool is described in the [MCP tools reference](../mcp-tools/README.md).
 
 ## What a call costs
 
-`POST /api/v1/chat` spends from your project's AI budget — the same wallet the Ask AI
-widget on your published site spends from. There is no separate API quota.
-
-Every other call is a tool call, charged the same flat per-call price it would cost over
-MCP and written to the same event feed, marked `api` so your call history can tell the
-two apart. Each tool's page names its price.
+`POST /api/v1/chat` spends from the project's balance, the same wallet the Ask AI widget on your site uses. Every other call costs the same flat price as the MCP tool it runs, shown on that tool's page.
