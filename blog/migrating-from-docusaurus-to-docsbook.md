@@ -1,215 +1,142 @@
 ---
 title: "Migrating from Docusaurus to Docsbook, step by step"
-description: "Move a Docusaurus site to Docsbook without losing search traffic — adapt MDX, retire the CI pipeline, port redirects, and keep every URL working."
+description: "Move a Docusaurus site to Docsbook: keep your /docs URLs, convert admonitions and tabs, drop sidebars.js and the build, and redirect the pages that changed."
 ---
 
-# Migrating from Docusaurus to Docsbook, step by step
+# Migrating from Docusaurus to Docsbook
 
-Docusaurus is great until the next major migration lands and you spend a sprint on it instead of shipping the product. This guide walks through the realistic migration path.
+Point Docsbook at the repository that holds your Docusaurus `docs/` folder, convert admonitions and tabs, and your pages keep their `/docs/…` URLs with no build step.
 
-We make Docsbook. We will also tell you when migration is not worth it.
+Docusaurus details below are from [docusaurus.io](https://docusaurus.io/docs) as of September 2026. If you are still deciding whether to move, read [Docusaurus alternatives in 2026](./docusaurus-vs-docsbook.md) first.
 
-## When you should not migrate
+## How do I move from Docusaurus to Docsbook?
 
-Skip this migration if:
+<!-- widget:stepper -->
 
-- Your Docusaurus site uses heavy React component embeds (interactive demos, custom plugins). Docsbook is markdown-first.
-- You have a dedicated docs engineer whose job partly includes Docusaurus. The platform has real strengths in their hands.
-- You need a deeply custom React theme. Docsbook gives you color tokens, fonts, layout switches, header/footer config — not full theme swizzle.
+### Connect the repository
 
-If any of those apply, [stay on Docusaurus](./docusaurus-vs-docsbook-2026.md) and read the rest of this guide later.
+[Start on Docsbook](https://docsbook.io/?start=1) and import the repository. Every `.md` and `.mdx` file outside `node_modules/` and `.github/` becomes a page, including a Docusaurus `blog/` folder, and the site goes live at `https://<owner>.docsbook.io/<repo>`.
 
-## TL;DR
+### Convert admonitions and tabs
 
-1. Strip MDX-specific syntax to standard markdown
-2. Push to a GitHub repo (you already have one)
-3. Connect Docsbook
-4. Wire custom domain
-5. Port redirects
-6. Drop the CI pipeline and the hosting bill
+Docsbook does not compile MDX, so `:::note` shows up as text and tabs lose their switcher. Swap them for [widgets](../site/widgets.md) using the table below.
 
-## Step 1: MDX to markdown
+### Take React out of the pages
 
-Docusaurus uses MDX, which is markdown + JSX. Docsbook uses standard markdown with extensions.
+`import` lines and JSX components do not run on Docsbook. Replace them with a widget, plain Markdown, or a link to a live demo hosted elsewhere.
 
-Three classes of MDX that need handling:
+### Fix image paths
 
-### Imports and React components
+Docusaurus serves `static/img/diagram.png` at `/img/diagram.png`. Docsbook resolves images relative to the page's file, so write `../static/img/diagram.png` from a page in `docs/`.
 
-```mdx
-import Foo from '@site/src/components/Foo';
+### Redirect what moved
 
-<Foo />
-```
+Pages whose Docusaurus URL came from a number prefix or a `slug` get a new URL on Docsbook. Rename them, or map the old path in `.docsbook/redirects.json`.
 
-Solutions:
+**On a [custom domain](../site/custom-domain.md)** the redirects file does not fire yet — it works on the site's `docsbook.io` address — so keep the old paths wherever you can.
 
-- For static visuals: replace with a hosted image and a link to a live demo
-- For interactive elements: link out to your app
-- For tabs/admonitions: use Docsbook's native blocks (see below)
+### Move the domain and retire the build
 
-### Admonitions
+Attach the domain in **Settings ▸ Domain & API**, then delete the deploy workflow. The repository stays; only the build goes.
 
-Docusaurus:
+<!-- /widget -->
 
-```mdx
-:::note Title
-Content
+## What changes in the Markdown?
+
+Plain Markdown and frontmatter `title` and `description` move as they are. MDX features and sidebar config need a Docsbook equivalent.
+
+| Docusaurus | Docsbook |
+|---|---|
+| `:::note` … `:::` | A `callout` widget with `type=note`; `tip`, `info`, `warning` and `danger` keep their names |
+| `:::note Custom title` | The same callout with a `### Custom title` heading inside |
+| `<Tabs>` and `<TabItem label="npm">` with their imports | A `tabs` widget with one `### npm` heading per tab, or a `code-group` when the tabs only hold code |
+| `sidebars.js`, `_category_.json`, `sidebar_position` | Not read: folders and file names order the sidebar |
+| `slug` in front matter | Not read: the URL is the file path |
+| `versioned_docs/` | No version switcher: keep the current version, or keep old ones as an ordinary folder |
+
+An admonition before and after, readable on GitHub either way:
+
+<!-- widget:code-group -->
+
+#### Docusaurus
+
+```markdown
+:::warning
+Rotate the API key before you deploy.
 :::
 ```
 
-Docsbook (GitHub-flavored markdown):
+#### Docsbook
 
 ```markdown
-> [!NOTE]
-> Content
+<!-- widget:callout type=warning -->
+
+Rotate the API key before you deploy.
+
+<!-- /widget -->
 ```
 
-Find-and-replace:
+<!-- /widget -->
 
-```bash
-find . -name "*.mdx" -exec rename 's/\.mdx$/\.md/' {} \;
-find . -name "*.md" -exec sed -i.bak -E 's/:::note/> [!NOTE]/g; s/:::tip/> [!TIP]/g; s/:::warning/> [!WARNING]/g; s/:::caution/> [!CAUTION]/g; s/:::info/> [!NOTE]/g; s/^:::$//' {} \;
+## Will my URLs change?
+
+Most will not. Docusaurus serves `docs/intro.md` at `/docs/intro` by default, and so does Docsbook on your domain, because Docsbook's URL is the file path.
+
+Two kinds of page do change:
+
+- **Number prefixes** — Docusaurus serves `docs/01-intro.md` at `/docs/intro`; Docsbook serves it at `/docs/01-intro` and shows the prefix in the sidebar label.
+- **Custom slugs** — a page with `slug: /start` in its front matter moves back to its file path.
+
+Rename those files, or send the old path to the new one:
+
+```json
+{
+  "version": 1,
+  "redirects": [
+    { "from": "docs/start", "to": "docs/getting-started" }
+  ]
+}
 ```
 
-### Tabs and code groups
+Both sides are page paths without `.md`, up to 500 entries. When the agent renames a page for you, it adds the redirect itself.
 
-Docsbook supports tabs via a standard syntax:
+## Can the agent do the conversion?
 
-```markdown
-<Tabs>
-  <Tab title="npm">npm install foo</Tab>
-  <Tab title="pnpm">pnpm add foo</Tab>
-</Tabs>
+Yes. Tell the Docsbook agent in one sentence, from Claude Code, Cursor or the panel chat ([Get discovered](../get-discovered.md)):
+
+```text
+Convert the Docusaurus admonitions and tabs in docs/ to Docsbook callouts and tabs, and remove the MDX imports.
 ```
 
-Most Docusaurus tabs translate one-to-one.
+It opens a [pull request](../agent/review.md); with **Auto-merge** off, the change waits for your approval. On a repository in your own GitHub account, install the Docsbook GitHub App with **Contents: Read and write** first.
 
-## Step 2: Sidebar and navigation
+After the move, the same agent keeps looking for the next win: [Find wins fast](../find-wins-fast.md).
 
-Docusaurus uses `sidebars.js` to define navigation. Docsbook builds navigation from your folder structure and frontmatter.
+## FAQ
 
-If you want a specific order:
+<!-- widget:accordion -->
 
-```markdown
----
-title: "Quick Start"
-order: 1
----
-```
+### What happens to my Docusaurus landing page?
 
-If you do not specify order, Docsbook sorts alphabetically. Move files into ordered folders if you need explicit grouping.
+`README.md` at the repository root becomes the home page, so give it your docs' introduction. React pages under `src/pages/` (`.js` or `.tsx`) are not published, because Docsbook publishes only Markdown files.
 
-You can delete `sidebars.js`, `docusaurus.config.js`, `babel.config.js`, and the `src/` directory after migration.
+### Do I have to delete docusaurus.config.js?
 
-## Step 3: Connect Docsbook
+No: Docsbook reads only Markdown, so config and theme files are ignored. Delete them once the domain points at Docsbook.
 
-Your docs are already in `docs/`. Connect the repository:
+### Can I run both sites while I test?
 
-- [docsbook.io](https://docsbook.io) → Sign in with GitHub
-- Paste `github.com/yourorg/yourrepo`
-- Site live at `docsbook.io/yourorg/yourrepo`
+Yes. Connecting the repository publishes a second site on a `docsbook.io` address and changes nothing in your Docusaurus deploy until you move the domain.
 
-## Step 4: Custom domain
-
-Docsbook serves `docs.yourcompany.com` with automatic SSL.
-
-- Docsbook dashboard → Settings → Domain
-- Enter `docs.yourcompany.com`
-- Update DNS: CNAME `docs` → `cname.vercel-dns.com`
-- Wait 5 minutes for SSL
-
-## Step 5: URL preservation
-
-Docusaurus URLs typically look like:
-
-```
-docs.yourcompany.com/docs/intro
-docs.yourcompany.com/docs/category/guides/getting-started
-```
-
-Docsbook URLs match your file paths:
-
-```
-docs.yourcompany.com/intro.md → docs.yourcompany.com/intro
-docs.yourcompany.com/guides/getting-started.md → docs.yourcompany.com/guides/getting-started
-```
-
-If your Docusaurus had a `/docs/` prefix and you want to keep parity:
-
-**Option A**: rename the local `docs/` folder to keep the prefix in URLs (Docsbook will serve from a different path).
-
-**Option B**: add redirects from old `/docs/*` URLs to new `/*` URLs at your CDN or DNS layer.
-
-## Step 6: Drop the CI/CD
-
-Once Docsbook is serving traffic:
-
-```bash
-# Files you can delete
-rm -rf .docusaurus/
-rm -rf build/
-rm -rf node_modules/
-rm docusaurus.config.js
-rm sidebars.js
-rm babel.config.js
-rm -rf src/
-rm -rf static/
-# Keep docs/ — it is your source
-```
-
-GitHub Actions workflow file for Docusaurus deployment: also delete.
-
-The result: docs deploy on every `git push` to `main`, no CI minutes used.
-
-## What you gain
-
-| | Docusaurus | Docsbook |
-|---|---|---|
-| Build time | 30–120 seconds per push | 5 seconds total setup |
-| Hosting cost | Vercel/Netlify pro tier | Included |
-| AI chat | Plugin work | Built-in |
-| Translations | Per-locale config + translation pipeline | Built-in, 15 languages |
-| Major version migrations | Every 18 months | Never |
-| Theme maintenance | Swizzle drift | Color tokens, no maintenance |
-
-## What you give up
-
-- React component embeds inside docs (host them elsewhere, link in)
-- Full swizzle theme control (you get color/font/layout tokens)
-- Plugin ecosystem (most cases are built-in already)
-
-## Edge cases
-
-### Algolia DocSearch
-
-You can keep using Algolia DocSearch on Docsbook (point it at your new domain). Or use Docsbook's built-in search, which is included for free.
-
-### Custom landing page
-
-Docusaurus often has a custom landing page at `/` built in React. Docsbook serves your `README.md` at `/`. If you want a marketing-style landing page, host that separately and point Docsbook at `docs.yourcompany.com` instead of `yourcompany.com`.
-
-### Versioning
-
-Docusaurus's `docs/versioned_docs/version-1.0/` pattern is not directly supported. Options:
-
-- Use separate Docsbook workspaces per version (`docsbook.io/yourorg/yourrepo-v1`)
-- Use Git branches and switch the indexed branch
-- Drop old versions (most teams find they were maintaining them out of habit)
-
-## Timing
-
-- OSS project, ~80 pages, minimal MDX: 2 hours
-- Startup, ~300 pages, moderate MDX: half a day
-- Mid-stage, ~1000 pages, heavy MDX: 1–2 days
-
-Test the migration before committing to it. Publishing a second site from the same repository costs nothing and changes nothing about the Docusaurus deploy still serving your readers — if the result does not reach parity, you have lost the five seconds it took.
-
-[Start free — no credit card](https://docsbook.io/?start=1)
+<!-- /widget -->
 
 ## Next steps
 
-- [Should you move off Docusaurus in 2026?](./docusaurus-vs-docsbook-2026.md) — the decision, if you have not made it yet
-- [Docusaurus alternatives in 2026: 9 platforms compared](./docusaurus-vs-docsbook.md) — the wider field
-- [Custom domain for docs](./custom-domain-for-docs-howto.md) — the DNS and redirect half of this migration
-- [Docs as code vs a managed platform](./docs-as-code-vs-managed-platform.md) — the principle behind the move
+<!-- widget:cards plain cols=2 arrow=hover -->
+
+- [Docusaurus alternatives in 2026](./docusaurus-vs-docsbook.md) — When to stay, when to move {git-compare}
+- [Widgets](../site/widgets.md) — Callouts, tabs, steppers and cards in plain Markdown {layers}
+- [Custom domain](../site/custom-domain.md) — Serve the docs from your own domain {globe}
+- [Find wins fast](../find-wins-fast.md) — What the agent fixes first after you move {zap}
+
+<!-- /widget -->

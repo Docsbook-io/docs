@@ -1,191 +1,140 @@
 ---
-title: "Migrating from GitBook to Docsbook: a step-by-step guide"
-description: "Move your docs off GitBook without losing search traffic — export, import from GitHub, wire the custom domain, and get every redirect right."
+title: "Migrating from GitBook to Docsbook: step-by-step guide"
+description: "Move your docs from GitBook to Docsbook with Git Sync: convert hint and tab blocks, replace SUMMARY.md, keep every URL working, and connect your custom domain."
 ---
 
-# Migrating from GitBook to Docsbook: a step-by-step guide
+# Migrating from GitBook to Docsbook
 
-You hit the point where GitBook's per-user fee grows faster than the docs do. Or the AI add-on price. Or you noticed you are paying an annual bill for a docs site that does not index well. This is the practical migration guide.
+Sync your GitBook space to a GitHub repository, point Docsbook at that repository, convert GitBook's `{% hint %}` and `{% tabs %}` blocks, and redirect any URL that changed.
 
-Most teams complete this in under three hours. The expensive part is the redirects.
+GitBook's Git Sync already writes your content to GitHub as Markdown, so most of the move is conversion, not export. GitBook details below are from GitBook's docs as of September 2026.
 
-## TL;DR
+## How do I move from GitBook to Docsbook?
 
-1. Export GitBook content as markdown
-2. Push to a new GitHub repository
-3. Connect Docsbook to that repo (5 seconds)
-4. Verify the site at `docsbook.io/yourorg/yourrepo`
-5. Wire your custom domain `docs.yourcompany.com` to Docsbook
-6. Set up redirects from old GitBook paths
-7. Update internal links across your site
+<!-- widget:stepper -->
 
-## Step 1: Export from GitBook
+### Sync the GitBook space to GitHub
 
-GitBook supports markdown export through the workspace settings:
+Turn on Git Sync for the space and connect a GitHub repository; Git Sync is on every GitBook plan, Free included. GitBook writes each page as a Markdown file, plus `SUMMARY.md` for the table of contents and, if you use one, a `.gitbook.yaml` config.
 
-- Open your GitBook space
-- Settings → Synchronize with Git → "Sync GitBook with Git provider"
-- Choose GitHub, pick a new private or public repo
-- GitBook syncs your content as markdown with frontmatter
+### Create the Docsbook project from that repository
 
-Alternative (no Git Sync): use the "Export to Markdown" option from the space menu and unzip the result locally.
+[Start on Docsbook](https://docsbook.io/?start=1) and import the repository. Every `.md` file becomes a page, `README.md` is the home page, and the site goes live at `https://<owner>.docsbook.io/<repo>`.
 
-The folder structure GitBook exports:
+### Convert the GitBook blocks
 
-```
-README.md
-SUMMARY.md
-docs/
-  introduction.md
-  guides/
-    quick-start.md
-  api/
-    auth.md
-```
+Docsbook does not read GitBook's template tags, so they would show up as text. Convert them with the table below, or ask the agent to do it for you.
 
-## Step 2: Adjust for Docsbook conventions
+### Check every URL
 
-Two small differences to handle:
+Compare your old URLs with the new ones. For each path that changed, add a redirect to `.docsbook/redirects.json`, as shown further down.
 
-### SUMMARY.md is optional in Docsbook
+**On a [custom domain](../site/custom-domain.md)** the redirects file does not fire yet — it works on the site's `docsbook.io` address — so keep the old paths wherever you can.
 
-GitBook uses `SUMMARY.md` as the navigation source. Docsbook builds navigation from your folder structure and frontmatter `title` automatically.
+### Move your domain
 
-You can keep `SUMMARY.md` (Docsbook ignores it) or delete it. Most teams delete it.
+In **Settings ▸ Domain & API**, enter your domain, then add one DNS record: a `CNAME` to `cname.vercel-dns.com` for a subdomain, as the [custom domain](../site/custom-domain.md) page shows. A custom domain can be attached once you subscribe or the free trial has ended.
 
-### Frontmatter
+### Switch off Git Sync
 
-GitBook frontmatter:
+When Docsbook serves your domain, turn off Git Sync in GitBook so there is one place to edit.
 
-```yaml
----
-description: How to authenticate
----
-```
+<!-- /widget -->
 
-Docsbook reads the same `description` field plus optional `title`. If `title` is missing, the first H1 is used.
+## What changes in the Markdown?
 
-A simple migration script:
+The pages move as they are; GitBook-specific syntax and files need a Docsbook equivalent.
 
-```bash
-find . -name "*.md" -not -path "./.git/*" -exec \
-  sed -i.bak '1,/^---$/ s/^description:/description:/' {} \;
+| GitBook | Docsbook |
+|---|---|
+| `{% hint style="info" %}` … `{% endhint %}` | A [`callout` widget](../site/widgets.md) with `type=info`; `success`, `warning` and `danger` map one to one |
+| `{% tabs %}` with `{% tab title="macOS" %}` | A `tabs` widget with one `### macOS` heading per tab |
+| `SUMMARY.md` | Delete it: the folder tree is the sidebar, and a leftover `SUMMARY.md` would publish as a page |
+| `redirects` in `.gitbook.yaml` | Entries in `.docsbook/redirects.json` |
+
+A converted hint looks like this, and the markers stay invisible when the file is read on GitHub:
+
+<!-- widget:code-group -->
+
+#### GitBook
+
+```markdown
+{% hint style="warning" %}
+Rotate the API key before you deploy.
+{% endhint %}
 ```
 
-(No changes needed in most cases — GitBook and Docsbook frontmatter are compatible.)
+#### Docsbook
 
-## Step 3: Connect Docsbook
+```markdown
+<!-- widget:callout type=warning -->
 
-- Go to [docsbook.io](https://docsbook.io)
-- Sign in with GitHub
-- Paste `github.com/yourorg/yourrepo`
-- Site live at `docsbook.io/yourorg/yourrepo` in 5 seconds
+Rotate the API key before you deploy.
 
-If your repo has `docs/` folder, Docsbook uses it. If your docs live at the root, that works too.
-
-## Step 4: Custom domain
-
-Docsbook serves `docs.yourcompany.com` with automatic SSL.
-
-In Docsbook dashboard:
-
-- Settings → Domain
-- Enter `docs.yourcompany.com`
-- Update your DNS: CNAME `docs` → `cname.vercel-dns.com`
-- SSL is automatic and free
-
-## Step 5: The redirects
-
-This is the only step that matters for SEO. GitBook URLs look like:
-
-```
-docs.yourcompany.com/v/1.0/api/authentication
+<!-- /widget -->
 ```
 
-Docsbook URLs:
+<!-- /widget -->
 
-```
-docs.yourcompany.com/api/authentication
-```
+## Can the agent do the conversion?
 
-You have two options:
+Yes. Tell the Docsbook agent what you want, from Claude Code, Cursor or the panel chat ([Get discovered](../get-discovered.md)):
 
-### Option A: redirect at DNS/CDN level
-
-If you have Cloudflare in front of your domain, add page rules:
-
-```
-docs.yourcompany.com/v/*/api/* → docs.yourcompany.com/api/$2 [301]
+```text
+Convert every GitBook hint and tabs block in this repository to Docsbook callouts and tabs, and delete SUMMARY.md.
 ```
 
-### Option B: redirect via Docsbook
+The work arrives as a [pull request](../agent/review.md); with **Auto-merge** off, it waits for your approval before anything goes live. On a repository in your own GitHub account, install the Docsbook GitHub App with **Contents: Read and write** first, so the agent can open it.
 
-Add a `_redirects` file (if your stack supports it) at the root of your repo:
+## How do I keep my URLs?
 
-```
-/v/1.0/api/auth /api/auth 301
-/v/1.0/api/webhooks /api/webhooks 301
-```
+Docsbook serves each file at its own path: on your domain, `guides/setup.md` is `/guides/setup`. Where a path changed, map the old one to the new one in `.docsbook/redirects.json`:
 
-A 301 preserves SEO authority. A 302 does not — use 301.
-
-## Step 6: Update internal references
-
-Search and replace across your codebase:
-
-```bash
-grep -rl "docs.yourcompany.com/v/" . | xargs sed -i.bak 's|docs.yourcompany.com/v/[0-9.]*/|docs.yourcompany.com/|g'
+```json
+{
+  "version": 1,
+  "redirects": [
+    { "from": "getting-started/setup", "to": "guides/setup" }
+  ]
+}
 ```
 
-Update:
+Both sides are page paths without `.md`, and the file holds up to 500 entries. When the agent moves a page, it adds the redirect itself.
 
-- Your product app footer link
-- Your marketing site
-- Your README links on GitHub
-- Your support team's saved replies
+## What do you get after the move?
 
-## Step 7: Verify the AI surface
+The site you had, plus the parts that make it findable and keep it current:
 
-Docsbook generates `llms.txt`, `llms-full.txt`, JSON-LD, and sitemap automatically. Check:
+- **An [AI chat](../ai-chat/README.md)** that answers readers from your pages and cites them (Pro).
+- **[`llms.txt`](../geo/llms-txt.md), a Markdown copy of every page and an MCP server**, generated for you.
+- **[Translations](../site/translations.md)** into 15 languages, each page at its own URL (Pro).
+- **An agent that finds the next win** — failed searches, unanswered questions, AI answers that cite someone else, on Pro ([Find wins fast](../find-wins-fast.md)).
 
-```bash
-curl https://docs.yourcompany.com/llms.txt | head -20
-curl https://docs.yourcompany.com/sitemap.xml | head -10
-```
+## FAQ
 
-See [llms.txt: the complete guide](./llms-txt-guide.md) for what to expect.
+<!-- widget:accordion -->
 
-## What gets better
+### Will I lose search traffic when I leave GitBook?
 
-| | GitBook | Docsbook |
-|---|---|---|
-| Pricing model | Per site, plus a fee per collaborating user ([gitbook.com/pricing](https://www.gitbook.com/pricing), read 2026-09-03) | Pay-as-you-go balance per project, spent on AI usage ([docsbook.io/pricing](https://docsbook.io/pricing), generated live) |
-| AI chat | Add-on | Built-in |
-| AI translation | Not available | 15 languages |
-| MCP server | Not available | Built-in |
-| llms.txt | Manual | Automatic |
-| Source of truth | GitBook DB | Your GitHub repo |
+Not if every old URL keeps working. Keep the same paths where you can, and redirect the rest in `.docsbook/redirects.json`; a URL that starts returning 404 is the one that loses its traffic.
 
-## What might break
+### What about my API reference?
 
-- **GitBook-specific blocks** — collapsible sections, hint blocks, tabs. Docsbook supports standard markdown + Docsbook-specific blocks. Most GitBook hints rewrite cleanly to `> [!NOTE]` callouts.
-- **Custom OpenAPI integration** — GitBook has its API reference renderer. Docsbook renders OpenAPI through your existing tools or links out.
-- **GitBook AI chat history** — does not transfer. The chat starts fresh with your new content.
+Docsbook hosts an interactive OpenAPI reference that readers can try calls from, and the **OpenAPI sync** trigger (Pro) rebuilds it from your spec every day.
 
-## Timing
+### Does Docsbook read SUMMARY.md?
 
-In our experience helping teams migrate:
+No. The sidebar comes from your folders and file names, in reading order: `README.md`, introduction and quickstart pages first, reference, changelog and FAQ pages last.
 
-- Solo founder, ~50 pages: 1 hour
-- Small startup, ~200 pages: 3 hours
-- Mid-stage company, ~1000 pages, custom domain: half a day
-
-The expensive part is socializing the URL change internally and updating saved replies in your support tool.
-
-[Start free — no credit card](https://docsbook.io/?start=1)
+<!-- /widget -->
 
 ## Next steps
 
-- [GitBook vs Docsbook](./gitbook-vs-docsbook.md) — the feature-by-feature comparison behind this move
-- [Custom domain for documentation](./custom-domain-for-docs-howto.md) — the DNS and SSL half of step 4
-- [Documentation SEO guide](./documentation-seo-guide.md) — how to keep rankings through the URL change
+<!-- widget:cards plain cols=2 arrow=hover -->
+
+- [GitBook vs Docsbook](./gitbook-vs-docsbook.md) — Pricing, AI and editing compared {git-compare}
+- [Custom domain](../site/custom-domain.md) — Serve the docs from your own domain {globe}
+- [Edit and publish](../site/editing.md) — Editor, GitHub sync, review mode and redirects {git-branch}
+- [Find wins fast](../find-wins-fast.md) — What the agent fixes first after you move {zap}
+
+<!-- /widget -->

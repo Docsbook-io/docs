@@ -1,92 +1,88 @@
 ---
 title: "AI search for documentation: why keyword search fails"
-description: "Why keyword search returns nothing for the questions readers actually type, how semantic search fixes it, and what to measure before and after."
+description: "Why documentation search returns nothing for the questions readers type, how AI search answers by meaning, and how to turn every failed search into a page."
 ---
 
-# AI search for documentation: why keyword search fails
+# AI search for documentation
 
-## Why does keyword search fail in documentation?
+Keyword search fails when a reader describes the problem in their own words and your page uses different ones; AI search answers by meaning, and the lasting fix is to write the page the failed searches were asking for.
 
-You've seen it a hundred times. A user types "how do I reset my password" into a documentation search bar and gets zero results — because the actual page is titled "Account Recovery Options."
+## Why does keyword search return nothing?
 
-Traditional keyword search matches strings. It doesn't understand meaning. And in 2025, that's no longer acceptable.
+Keyword search matches the words in the query against the words on the page. A reader who types "reset my password" gets nothing when the page is called "Account recovery".
 
-## How do developers actually phrase a search?
-
-Developers don't search with precise keywords. They search with intent:
+Readers rarely type your headings. They type the symptom or the question:
 
 - "why does my webhook keep failing"
 - "can I use this without an API key"
-- "difference between plan A and plan B"
-- "how to set up for production"
+- "what is the difference between the two plans"
 
-None of these match a page title exactly. Keyword search fails all of them. AI search understands all of them.
+When the words don't match the page that answers them, a keyword index comes back empty and the reader leaves or opens a ticket.
 
-## What does AI search actually do differently?
+## How does AI search work?
 
-Modern AI search (also called semantic search or vector search) works differently:
+AI search compares meaning instead of words. Most implementations follow the same three steps:
 
-1. **Embeds your content** — Every paragraph is converted into a vector representing its meaning
-2. **Embeds the query** — The user's question is converted into the same vector space
-3. **Finds closest meaning** — Returns content that means the same thing, not just shares the same words
+1. **Your pages are split into passages**, and each passage is turned into an embedding: a vector that stands for what it means.
+2. **The reader's question is embedded the same way.**
+3. **The closest passages are retrieved**, and a language model writes the answer from them, citing the pages they came from.
 
-The result: users find answers on the first try, even when they don't know the exact terminology.
+Because retrieval works on passages, a section that names its own subject retrieves better than one that leans on the heading above it.
 
-## What changes for the business when search works?
+## What does Docsbook do with search?
 
-### Fewer support tickets
+Every Docsbook site gets a search box, and the misses become work for the agent:
 
-A reader who finds the answer on the page does not open a ticket. That is the whole mechanism, and it is worth stating as a mechanism rather than a percentage: semantic search matches the reader's phrasing against the meaning of your pages, so the question that used to return nothing now returns the page that answers it.
+- **Search box** — full-text search over every page, with titles weighted above body text.
+- **Ask AI** — with the [AI chat](../ai-chat/README.md) on (Pro), the search box offers to ask the question instead. The chat answers with the pages it used, cited; with **Semantic Search** on in **Settings ▸ Agent**, it finds those pages by meaning.
+- **Every miss is recorded** — a search that returns nothing is logged once the reader stops typing; the agent reads those misses, and the **Write the pages readers wanted** [trigger](../agent/triggers.md) wakes on them.
+- **The agent writes the missing page** — the **Write the pages readers wanted** trigger wakes on a search with no results; **File the search gaps** files the misses as a ranked issue every day.
 
-Measure it on your own product rather than trusting an industry average. Tag support tickets for one month with "the answer already exists in our docs" and watch that count after the switch — that number is yours and it is real, where a benchmark percentage from someone else's product is neither.
+<!-- widget:callout type=tip -->
 
-### Higher feature adoption
+A better search engine finds the page you have. Only a new page answers the question you don't cover yet, which is why Docsbook routes every miss to the agent ([Find wins fast](../find-wins-fast.md)).
 
-Features don't get used if users can't find how to use them. AI search surfaces relevant documentation proactively — users discover features they didn't know existed.
+<!-- /widget -->
 
-### Better onboarding
+## What should you measure?
 
-New users navigating unfamiliar products ask vague questions. AI search handles vague well. "Where do I start" becomes a valid search query.
+Three numbers show whether readers find their answers:
 
-## How does on-site search relate to AI discoverability?
+- **Searches with no results** — each one names a page or a section that is missing.
+- **Chat questions nobody answered** — the **Answer what the chat could not** trigger works from these.
+- **Tickets the docs already answer** — tag them for a month; if the count stays high, the answer exists but readers can't find it.
 
-Here's something most documentation platforms miss: AI search isn't just for humans anymore.
+In Docsbook the first two are collected for you. You can also ask your agent in one sentence ([Get discovered](../get-discovered.md)):
 
-ChatGPT, Perplexity, Gemini, and Claude answer developer questions by searching the web. If your documentation is structured for AI crawlers and indexed correctly, **AI assistants will cite your docs** when answering questions about your product.
+```text
+Read last month's failed searches and unanswered chat questions, and write the three pages that would answer most of them.
+```
 
-This is a new distribution channel. When a developer asks ChatGPT "how does Docsbook handle multi-language docs?" — your documentation page could be the answer.
+## FAQ
 
-Docsbook optimizes for this automatically:
-- Generates `llms.txt` for AI crawler guidance
-- Adds semantic structure (JSON-LD) to every page
-- Exposes a documentation API for programmatic access
-- Ensures fast load times for crawler efficiency
+<!-- widget:accordion -->
 
-## Should you build AI search or buy it?
+### Is AI search the same as an AI chat?
 
-Building semantic search from scratch requires:
-- A vector database (Pinecone, Weaviate, or pgvector)
-- An embedding model (OpenAI, Cohere, or open-source)
-- An indexing pipeline that runs on every doc update
-- A query API
-- A frontend search UI
-- Ongoing maintenance as models improve
+No. AI search finds the passages that mean what the reader asked; an AI chat also writes the answer from them, and Docsbook's cites the pages it used.
 
-That's a 3–6 week engineering project, minimum.
+### Does AI search replace good headings?
 
-Docsbook ships AI search out of the box. Zero configuration. Works on day one.
+No. Retrieval works on passages, and a passage whose heading and first sentence name the subject is easier to find by keyword and by meaning.
 
-## The bottom line
+### Do I have to build a vector database?
 
-Keyword search matches strings; readers ask questions. Semantic search closes that gap by matching meaning, which is why a query phrased in the reader's words can reach a page written in yours. It is no longer a differentiator between documentation platforms — it is the baseline, and the thing worth comparing is what each platform reports back to you about the searches that still fail.
+Not on Docsbook: turn on **Semantic Search** in **Settings ▸ Agent** and the index is built from your repository and kept current, billed as AI usage. Building your own means owning the embeddings, the index updates and the answer model.
 
-Docsbook includes semantic search and reports the queries that returned nothing, so the gaps arrive as a list of pages to write.
-
-[Start free — no credit card](https://docsbook.io/?start=1)
+<!-- /widget -->
 
 ## Next steps
 
-- [Documentation analytics: the metrics worth tracking](./documentation-analytics-what-to-track.md) — what to do with the failed searches this surfaces
-- [Documentation SEO guide](./documentation-seo-guide.md) — the off-site half of the same findability problem
-- [How to get your documentation cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — when the search happens inside an assistant instead
-- [AI chat for documentation: should you build or buy?](./ai-chat-for-documentation-build-vs-buy.md) — the cost side of the build-vs-buy question above
+<!-- widget:cards plain cols=2 arrow=hover -->
+
+- [AI chat](../ai-chat/README.md) — Answers for your readers, with the pages cited {messages-square}
+- [Find wins fast](../find-wins-fast.md) — How failed searches become the next page {zap}
+- [Analytics](../analytics/README.md) — What readers searched, asked and rated {chart-line}
+- [Get cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — When the search happens inside an AI engine {quote}
+
+<!-- /widget -->

@@ -1,146 +1,105 @@
 ---
 title: "How to host documentation from a GitHub repository"
-description: "Three ways to turn a GitHub repository into a live documentation site — GitHub Pages, Docusaurus and Docsbook — with the setup steps and tradeoffs of each."
+description: "Three ways to turn a GitHub repository into a documentation site — GitHub Pages, Docusaurus and Docsbook — with the steps, limits and trade-offs of each."
 ---
 
 # How to host documentation from a GitHub repository
 
-You have markdown files in a GitHub repo. You want them to live at a real URL — searchable, branded, indexed by Google, readable on mobile. The repo is the source of truth; the website is the surface.
+Publish the repository's Markdown with GitHub Pages, build and host a Docusaurus site yourself, or connect the repository to Docsbook, which hosts it with no config file and no build.
 
-There are three common paths to get there. This tutorial walks through each one, with the actual setup steps and tradeoffs.
+All three keep the Markdown in your repository; they differ in how much you set up, what the site does for readers, and who maintains it.
 
-## What do you already have?
+Facts about GitHub Pages and Docusaurus are from their own docs as of September 2026.
 
-A typical docs repository looks like this:
+## Which option fits?
 
-```
-my-product/
-├── README.md
-├── docs/
-│   ├── getting-started.md
-│   ├── api-reference.md
-│   └── guides/
-│       └── webhooks.md
-```
+| | GitHub Pages | Docusaurus | Docsbook |
+|---|---|---|---|
+| Setup | Pick a branch and folder in the repository settings; Jekyll builds the Markdown | A React project with its own config, built and deployed by you | Import the repository; nothing is added to it |
+| Search | Add your own | Not built in: Algolia DocSearch or a community plugin | Search box on every site; [AI chat](../ai-chat/README.md) on Pro |
+| Free limits | 1 GB site, 100 GB a month soft bandwidth, 10 builds an hour | Whatever your host allows | 14-day Pro trial; after it the site stays published without the AI features |
+| Custom domain | Yes | Through your host | Yes, once you subscribe or the trial has ended |
+| Who maintains it | You | You | Docsbook, plus an agent that improves the pages (Pro) |
 
-You want this to become a website. The three realistic options are:
+## Option 1: GitHub Pages
 
-1. **GitHub Pages** — free, raw, manual
-2. **Docusaurus** — code-heavy, self-hosted, customisable down to the theme component
-3. **Docsbook** — instant, managed, paste-the-URL
+GitHub Pages serves a static site straight from a repository, with built-in Jekyll support for Markdown. On GitHub Free the repository must be public.
 
-## Option 1: GitHub Pages with Jekyll
+1. Open the repository's **Settings ▸ Pages**.
+2. Under **Build and deployment ▸ Source**, choose **Deploy from a branch**.
+3. Pick the branch and the `/docs` folder (or the root), then **Save**.
 
-GitHub Pages serves static sites from a repo branch for free. With a `_config.yml` it picks up Jekyll and renders your markdown.
-
-### Steps
-
-1. Create `_config.yml` in the repo root:
-   ```yaml
-   theme: jekyll-theme-minimal
-   title: My Product Docs
-   ```
-2. Go to **Settings → Pages** in your repo
-3. Set source to `main` branch, `/docs` folder
-4. Wait a few minutes — your site is live at `username.github.io/repo`
-
-### What you get
-- A working URL
-- Basic theme
-- Free hosting
-
-### What's missing
-- No search
-- No navigation sidebar without manual configuration
-- No analytics
-- Jekyll themes look like 2014
-- Custom domain works but you set up DNS and SSL yourself
-- No AI features, no translations, no SEO out of the box
-
-Good for an internal wiki. Not good if your docs are a customer-facing product surface.
+The site appears at `https://<owner>.github.io/<repo>`. Navigation, search and analytics are yours to add, and GitHub says Pages is not for running an online business or a site mainly about commercial transactions or SaaS.
 
 ## Option 2: Docusaurus
 
-Docusaurus is Meta's open-source documentation framework. It is React-based and themeable down to individual components — if you are willing to maintain it.
+Docusaurus is Meta's open-source static-site generator built on React, with MDX, versioning and translations. You own the build and the hosting.
 
-### Steps
+```bash
+npx create-docusaurus@latest my-website classic
+cd my-website
+npm run build
+```
 
-1. Install Node.js 18+ locally
-2. Scaffold the project:
-   ```bash
-   npx create-docusaurus@latest my-docs classic
-   cd my-docs
-   ```
-3. Move your existing markdown files into the `docs/` folder Docusaurus created
-4. Edit `docusaurus.config.js` — set the site title, base URL, sidebar structure, theme colors, navbar items
-5. Edit `sidebars.js` — declare which files appear in which order
-6. Run `npm run start` to preview locally
-7. Build: `npm run build`
-8. Deploy to Vercel, Netlify, or GitHub Pages — set up the deploy pipeline, environment variables, build commands
-9. Configure a custom domain — point DNS, wait for SSL provisioning
-10. Add analytics — integrate Plausible, GA, or your tool of choice manually
-11. Add search — pay for Algolia DocSearch (or self-host Meilisearch)
-12. Update everything on every product release
-
-### What you get
-- Total control over design and structure
-- A React codebase you can extend
-- A long-lived open source community
-
-### What's missing
-- Time. Real setup is a 2–3 day project, then ongoing maintenance every time a dependency updates
-- AI search, AI chat, AI translation — not included
-- You own every line of config
-
-Good if documentation is itself a product your team owns and ships. Painful if what you want is your docs online.
+Move your Markdown into `docs/`, set the site up in `docusaurus.config.js`, and deploy the `build/` folder to GitHub Pages or another host. Search and major upgrades, such as v3's move to MDX v3, are yours too; [Docusaurus alternatives in 2026](./docusaurus-vs-docsbook.md) weighs that work in full.
 
 ## Option 3: Docsbook
 
-Docsbook is a managed platform that turns a GitHub repo into a documentation site instantly. No CI/CD, no config files, no build pipeline.
+Docsbook publishes the Markdown in your repository as it is: `README.md` becomes the home page, folders become the sidebar, and there is no build to run.
 
-### Steps
+<!-- widget:stepper -->
 
-1. Go to [docsbook.io](https://docsbook.io)
-2. Sign in with GitHub
-3. Paste your repo URL (e.g. `github.com/your-org/your-repo`)
-4. Done — your site is live at `docsbook.io/your-org/your-repo`
+### Import the repository
 
-That's it. Every `git push` to main updates the site automatically.
+[Start on Docsbook](https://docsbook.io/?start=1) and import the repository, or paste its GitHub URL.
 
-### What you get out of the box
+### Open the site
 
-- **AI chatbot** trained on your docs, so users get answers instead of search results
-- **AI translation** into 15 languages, each indexed separately by Google
-- **Custom domain** like `docs.yourcompany.com` with free SSL
-- **SEO** — meta tags, sitemap, OpenGraph, JSON-LD, all automatic
-- **`llms.txt`** generated for AI search engines (ChatGPT, Perplexity, Claude)
-- **Analytics** — page views, top pages, referrers, AI questions asked
-- **Brand customization** — logo, colors, fonts, theme — without touching code
-- **MCP server** so AI agents can read and manage your docs programmatically
+It is live at `https://<owner>.docsbook.io/<repo>`, with search, a sitemap, `llms.txt` and a **Copy page** menu that opens any page in ChatGPT or Claude.
 
-### What's missing
+### Add your domain
 
-- You don't own the rendering pipeline — but your markdown stays in your repo, so there's no lock-in. Cancel any time and your docs come with you.
+Attach `docs.example.com` in **Settings ▸ Domain & API** and add one DNS record; the values are on the [custom domain](../site/custom-domain.md) page.
 
-## Which option should you pick?
+<!-- /widget -->
 
-| Use case | Pick |
-|---|---|
-| Personal project, internal wiki | GitHub Pages |
-| You have a frontend team and design opinions | Docusaurus |
-| You want docs live this afternoon and SEO-ready | Docsbook |
+Edits made in Docsbook, in the web editor or by the agent, publish at once. Commits pushed straight to GitHub are picked up on their own, within a day.
 
-The honest answer: if documentation isn't your product, don't build a documentation platform. Use one.
+## What happens after the site is live?
 
-## Try it
+Hosting gets the pages online; it does not get them read. On Docsbook Pro, the [agent](../agent/README.md) keeps working after publishing:
 
-Hosting docs from GitHub used to mean a config repository, a deploy pipeline, and recurring cleanup. Paste your repository URL and the site is live; the Markdown never leaves the repo, so the move is reversible.
+- **It writes the pages readers searched for** and did not find.
+- **It checks every page** against [299 published rules](../agent/expertise.md) for search, AI answers and readability.
+- **It asks the answer engines** whether they cite you, and fixes what makes them cite someone else.
 
-[Start free — no credit card](https://docsbook.io/?start=1)
+Each change arrives as a pull request with its reason. See [Find wins fast](../find-wins-fast.md), and [Get discovered](../get-discovered.md) to hand it work in one sentence.
+
+## FAQ
+
+<!-- widget:accordion -->
+
+### Do I need a GitHub account to use Docsbook?
+
+No. Create a project without a repository and Docsbook hosts one for you; you can move it to your own GitHub account or organization later.
+
+### Does Docsbook work with private repositories?
+
+Yes. Install the Docsbook GitHub App on the repository, and choose in **Settings ▸ Access** whether the published site is public or private.
+
+### Is it free?
+
+GitHub Pages and Docusaurus are free software you run yourself. Docsbook starts with a 14-day Pro trial with $5 of AI credit and no card; Pro is $20 a month per project ([Plans and pricing](../plans-and-pricing.md)).
+
+<!-- /widget -->
 
 ## Next steps
 
-- [Turn your README.md into a documentation site](./readme-md-to-docs-site.md) — the shortest version of option 3
-- [Custom domain for docs](./custom-domain-for-docs-howto.md) — moving the finished site to `docs.yourcompany.com`
-- [Free documentation hosting compared](./free-docs-hosting-comparison.md) — the same three paths against three more
-- [Documentation SEO guide](./documentation-seo-guide.md) — making the published site findable
+<!-- widget:cards plain cols=2 arrow=hover -->
+
+- [Quickstart](../quickstart.md) — From a repository to a live site {rocket}
+- [Edit and publish](../site/editing.md) — Web editor, GitHub sync and review mode {git-branch}
+- [Turn your README into a docs site](./readme-md-to-docs-site.md) — The one-file version of option 3 {file-text}
+- [Free documentation hosting compared](./free-docs-hosting-comparison.md) — Six free options side by side {scale}
+
+<!-- /widget -->

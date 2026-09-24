@@ -1,82 +1,117 @@
 ---
 title: "Mintlify vs Docsbook: pricing, setup, AI and SEO compared"
-description: "Mintlify and Docsbook compared on configuration, GitHub sync, AI search and multi-language SEO — including the cases where Mintlify is the better pick."
+description: "Mintlify vs Docsbook as of September 2026: plan prices, docs.json versus no config, AI assistant and agents, SEO and GEO, and when Mintlify fits better."
 ---
 
-# Mintlify vs Docsbook: pricing, setup, AI and SEO compared
+# Mintlify vs Docsbook
 
-Mintlify and Docsbook are both managed, GitHub-native documentation platforms with AI built in. The difference that decides most evaluations is configuration: Mintlify expects a config file describing your site, and Docsbook reads the Markdown already in your repository. The second difference is how each one charges.
+Mintlify is configured through `docs.json` and puts its AI assistant on a Pro plan at $450 a month billed annually; Docsbook reads your folders with no config file and includes AI on Pro at $20 a month per project.
 
-We make Docsbook. This page names the cases where Mintlify is the better choice, and it quotes no competitor price we could not read on the vendor's own page.
+Both publish docs from Git with AI built in. Mintlify facts below come from [mintlify.com/pricing](https://www.mintlify.com/pricing) and the [Mintlify docs](https://www.mintlify.com/docs), as of September 2026.
 
-## Side-by-side comparison
+## Mintlify vs Docsbook at a glance
 
-| Feature | Mintlify | Docsbook |
+| | Mintlify | Docsbook |
 |---|---|---|
-| Configuration | `mint.json` with a defined schema | None required — reads `README.md` and `docs/` |
-| GitHub sync | Yes | Yes |
-| AI search | Yes | Yes, with citations back to the source page |
-| AI search over an API | Not documented | Yes — the same answers can be embedded in your product |
-| Custom domain | Paid | Supported, with automatic SSL |
-| MDX support | Yes | Yes |
-| Multi-language | Limited | 15 languages, each indexed separately per locale |
-| Footer credit | Removable on higher tiers | Not removable — every Docsbook site carries one |
-| Structured data | Meta tags | JSON-LD per page, sitemap, Open Graph images, `llms.txt` |
-| Pricing model | Per-plan subscription | Pay-as-you-go balance held per project |
+| Setup | `docs.json`, the required config file that declares navigation, appearance and integrations | No config file: folders become the sidebar, `README.md` the home page |
+| Page format | MDX, with built-in and custom components | Markdown, plus [widget](../site/widgets.md) markers that stay invisible on GitHub |
+| Free start | Starter: $0 a month, 5 editor seats, custom domain, web editor, MCP server | 14-day Pro trial with $5 of AI credit, no card |
+| Paid plan | Pro: $450 a month billed annually, $540 billed monthly | [Pro](../plans-and-pricing.md): $20 a month per project, $20 of AI usage included |
+| AI answers for readers | Assistant on Pro, 25 credits per answer | [AI chat](../ai-chat/README.md) that cites the pages it used, on Pro |
+| Writing agent | Agent and automations on Pro | The [Docsbook agent](../agent/README.md) on Pro: 49 ready-made triggers, 299 published rules |
+| Analytics | Pro and up | During the trial and on paid plans |
+| AI translations | Pro and up | [15 languages](../site/translations.md) on Pro |
+| `llms.txt`, Markdown pages, MCP server | Every plan | Every site |
+| White label | Enterprise | Every site shows a Powered by Docsbook badge |
 
 ## How much does each one cost?
 
-Mintlify's starter plan starts at **$150/month**. For early-stage startups and indie developers, that's a significant commitment before you've validated your product. Check the current figure on [mintlify.com/pricing](https://mintlify.com/pricing) before you budget — plans move, and this page cannot move with them.
+Mintlify prices by plan and credits; Docsbook prices by project and AI usage.
 
-Docsbook does not sell tiers at all. Each project carries its own balance, and the balance is spent on AI usage; publishing the site, hosting it, serving a custom domain and every page a reader opens draw nothing from it. Current numbers live on [docsbook.io/pricing](https://docsbook.io/pricing), which is generated from the live pricing constants on every request — which is why it is worth reading and this paragraph is not worth quoting a number into.
+- **Mintlify Starter** — $0 a month for up to 5 editor seats, without the assistant or analytics.
+- **Mintlify Pro** — $450 a month billed annually ($540 monthly), with 10,000 AI credits a month and $0.01 per credit after that.
+- **Docsbook Pro** — $20 a month per project; the $20 comes back as AI usage, and past it usage continues up to a cap you set ($200 a month by default).
+- **Enterprise** — both sell it through a conversation, with no published price.
+
+Current Docsbook numbers live on [Plans and pricing](../plans-and-pricing.md).
 
 ## How different is the setup?
 
-Both platforms are GitHub-native: connect the repository, and the site redeploys on every push. The difference is what has to exist before the first deploy.
+Mintlify needs `docs.json` before the first deploy: every page you want in the navigation is listed there. Docsbook needs nothing but the Markdown.
 
-**Mintlify** requires a `mint.json` configuration file with a specific schema. It is capable — navigation, theming and API reference are all declared there — and it is a file you have to write and keep correct.
+```text
+README.md              → Introduction (home page)
+quickstart.md          → Quickstart
+guides/README.md       → Guides ▸ Introduction
+guides/webhooks.md     → Guides ▸ Webhooks
+```
 
-**Docsbook** reads your Markdown as it is. An existing `README.md` and a `docs/` folder publish without a config file; navigation and branding are set afterwards in the dashboard or over MCP, not as a prerequisite.
+Every `.md` and `.mdx` file becomes a page, and the sidebar follows your folders in reading order: pages named like `introduction` or `quickstart` first, `reference`, `changelog` and `faq` last. Each page's search title and description come from its frontmatter.
 
-## How do the AI features differ?
+Branding and header links are set later, in the panel or by [telling your agent](../get-discovered.md).
 
-Both answer natural-language questions from your own content, so the differentiator is what happens around the answer.
+## What does the AI do on each platform?
 
-Mintlify's AI search supports natural language queries and surfaces answers from across your docs.
+Both answer readers from the docs and both have a writing agent that opens pull requests. Docsbook's agent is built to find the next win on its own.
 
-Docsbook's assistant cites the page each claim came from, works across the translated locales rather than English only, and is reachable over an API — so the same answers can run inside your product, not only on the docs site. Docsbook also runs an MCP server, which is how Claude Code and Cursor read and edit the docs directly.
+- **It reads the signals** — searches that found nothing, chat questions nobody answered, pages readers rated down, AI answers that cite someone else.
+- **It checks the pages** against [299 published rules](../agent/expertise.md) of documentation craft, each with a source.
+- **It sends a pull request** with the reason, a prediction and a date to check the result.
 
-## Why does documentation SEO favour separate pages per locale?
+The 49 ready-made [triggers](../agent/triggers.md), such as **Organic search audit** and **Do AI engines cite you**, run these loops on a schedule. See [Find wins fast](../find-wins-fast.md).
 
-Because a search engine indexes URLs, not languages. If your Japanese and German readers see translated text at the same URL as the English version, only one version is in the index, and the other locales are invisible to search in their own language.
+## How do they compare on SEO and AI visibility?
 
-Docsbook publishes each locale at its own URL with `hreflang` between them, so a query typed in German can return the German page. Alongside that, every page ships JSON-LD, a generated sitemap, per-page meta titles and descriptions, an auto-generated Open Graph image, and `llms.txt` for AI crawlers.
+Both generate the technical basics on every plan; the difference is what happens with the results.
 
-None of that promises a ranking. It removes the mechanical reasons a page cannot rank, which is a different and smaller claim. See [Multi-language documentation SEO](./multi-language-documentation-seo.md) for the full mechanism.
+- **Mintlify** — lists SEO, GEO and agent optimizations on every plan, with the site description, indexing and meta tags set in `docs.json`.
+- **Docsbook** — every page gets a canonical URL, JSON-LD and an Open Graph image; the site gets a sitemap and `llms.txt`; each translated page gets its own URL with `hreflang`.
+- **After publishing** — Docsbook's **Organic search audit** and **Do AI engines cite you** triggers check what search and AI engines do with the site and fix what they can, and **Analytics ▸ SEO** and **Analytics ▸ GEO** show the results.
 
 ## When should you choose Mintlify?
 
-- Your team already runs Mintlify and the migration cost is higher than the annoyance.
-- You need advanced MDX component customisation inside docs pages.
-- Your product is primarily an API and you want the most mature OpenAPI reference rendering in this category.
-- Budget is not the constraint, and you want the larger ecosystem.
+Mintlify is a strong pick for API-first teams that live in MDX. Choose it when:
+
+- **You build pages from components** — MDX with custom components, custom CSS and JS are on every Mintlify plan.
+- **You publish versions side by side** — Mintlify's navigation has a versions pattern; Docsbook has no version switcher.
+- **Five editors or fewer, no AI needed** — Starter is $0 and includes a custom domain.
+- **You qualify for a program** — Mintlify offers Pro free to eligible startups and to non-commercial open-source projects.
+- **You need enterprise controls** — SSO, SCIM, RBAC, and self-hosting or EU hosting are available on Mintlify Enterprise.
 
 ## When should you choose Docsbook?
 
-- You are early-stage and watching burn rate, and a fixed monthly subscription before product-market fit is the wrong shape.
-- You want the site live from the repository you already have, without writing a config file first.
-- You need documentation in more than one language, indexed separately per locale.
-- You want AI discoverability — `llms.txt`, an MCP server, JSON-LD — as part of the platform rather than as a project.
+Docsbook fits teams whose docs are Markdown in Git and who want the AI to do the upkeep. Choose it when:
 
-## The bottom line
+- **Your docs are Markdown in GitHub** and you would rather not maintain a config file next to them.
+- **You want reader AI chat and an agent** for $20 a month per project.
+- **You want the docs to improve without a docs team** — the agent picks the work and sends it as pull requests.
+- **You publish in several languages** and want each translated page at its own URL with `hreflang`.
 
-Mintlify is a strong product, and for an API-first company already inside its ecosystem it is a reasonable place to stay. Docsbook is the better fit when the docs already live in a GitHub repository, when the site should exist before the config file does, and when what you want to pay for is AI usage rather than a seat at a tier.
+## FAQ
 
-[Start free — no credit card](https://docsbook.io/?start=1)
+<!-- widget:accordion -->
+
+### Does Mintlify have llms.txt and an MCP server?
+
+Yes: as of September 2026, Mintlify hosts `llms.txt`, Markdown versions of pages and an MCP server for every docs site. Docsbook does the same; see [llms.txt and Markdown for AI](../geo/llms-txt.md).
+
+### Can I move from Mintlify to Docsbook?
+
+Your Markdown and MDX files move as they are, and the folders become the sidebar in place of `docs.json`. MDX components do not run on Docsbook, so replace them with [widgets](../site/widgets.md) or plain Markdown.
+
+### Is Docsbook free?
+
+Every account gets one 14-day Pro trial with $5 of AI credit and no card. Without a plan afterwards the site stays published; the AI chat, agents, translations and analytics views switch off until you subscribe.
+
+<!-- /widget -->
 
 ## Next steps
 
-- [AI documentation platforms compared](./ai-docs-platform-comparison.md) — the same question across four managed platforms
-- [Docusaurus alternatives in 2026: 9 platforms compared](./docusaurus-vs-docsbook.md) — the wider field including self-hosted options
-- [Multi-language documentation SEO](./multi-language-documentation-seo.md) — why per-locale URLs decide whether translations earn traffic
-- [MCP server for documentation](./mcp-server-for-documentation.md) — what agents do with your docs once they can read them
+<!-- widget:cards plain cols=2 arrow=hover -->
+
+- [Quickstart](../quickstart.md) — From a repository to a live site {rocket}
+- [Find wins fast](../find-wins-fast.md) — How the agent picks the change that moves a number {zap}
+- [AI chat](../ai-chat/README.md) — Answers for your readers, with the pages cited {messages-square}
+- [GitBook vs Docsbook](./gitbook-vs-docsbook.md) — The same comparison against GitBook {git-compare}
+
+<!-- /widget -->

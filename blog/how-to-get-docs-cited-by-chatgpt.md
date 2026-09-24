@@ -1,133 +1,94 @@
 ---
 title: "How to get your documentation cited by ChatGPT in 2026"
-description: "A working checklist for making docs readable and quotable by ChatGPT, Claude, Perplexity and Gemini — structure, crawler access, and honest measurement."
+description: "A checklist built on OpenAI, Google, Anthropic and Perplexity docs: let the right crawlers in, stay indexable, write quotable passages, and measure citations."
 ---
 
-# How to get your documentation cited by ChatGPT in 2026
+# How to get your documentation cited by ChatGPT
 
-When a developer asks ChatGPT "how do I use feature X in product Y", one of two things happens. Either ChatGPT cites your docs and quotes you correctly, or it hallucinates an API surface that does not exist. Which one happens depends on the work you have done.
+ChatGPT search only shows sites its search crawler may fetch, and it quotes pages that answer the question in a passage it can lift, so the work is crawler access first, then pages written to be quoted, then measuring what the engines say.
 
-This is the working checklist we use at Docsbook for our own docs and for customers.
+Crawler and eligibility facts below come from each vendor's own documentation as of September 2026.
 
-## TL;DR
+## Which crawlers need access?
 
-1. Publish a clean `llms.txt` at your root
-2. Serve clean HTML with content visible without JavaScript
-3. Write factual, declarative prose — not marketing copy
-4. Add a TL;DR or summary block at the top of every page
-5. Use JSON-LD: `TechArticle`, `FAQPage`, `SoftwareApplication`
-6. Keep page response under 1 second
-7. Make sure your robots.txt allows the right AI crawlers
+Each AI vendor runs several crawlers with different jobs, and a `robots.txt` rule for one does not touch the others.
 
-The rest of this post is the why and how for each.
+| Crawler | Vendor | What it does |
+|---|---|---|
+| `OAI-SearchBot` | [OpenAI](https://developers.openai.com/api/docs/bots) | Surfaces sites in ChatGPT search; sites that block it are not shown in ChatGPT search answers |
+| `GPTBot` | [OpenAI](https://developers.openai.com/api/docs/bots) | Crawls content that may be used to train OpenAI's models |
+| `ChatGPT-User` | [OpenAI](https://developers.openai.com/api/docs/bots) | Visits a page when a ChatGPT user's question needs it; robots.txt rules may not apply |
+| `Claude-SearchBot` | [Anthropic](https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler) | Indexes content to improve Claude's search results |
+| `Claude-User` | [Anthropic](https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler) | Fetches a page when someone asks Claude a question |
+| `PerplexityBot` | [Perplexity](https://docs.perplexity.ai/guides/bots) | Surfaces and links sites in Perplexity's search results; not used for model training |
+| `Google-Extended` | [Google](https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers) | Controls use in Gemini training and grounding; no effect on Google Search inclusion or ranking |
 
-## 1. llms.txt is the new robots.txt
+OpenAI treats these settings as independent: you can allow `OAI-SearchBot` to appear in ChatGPT search and still disallow `GPTBot` to keep your pages out of training.
 
-ChatGPT, Claude, and Perplexity now look for `/llms.txt` on first contact with a domain. A well-formed `llms.txt` cuts hallucination rates dramatically because the agent uses your shortlist instead of guessing URLs.
+On Docsbook, the default `robots.txt` lets these crawlers in. The **AI engines** switch in **Settings ▸ Access** turns AI crawlers away as a group when you want your docs kept out of AI answers.
 
-See [the complete llms.txt guide](./llms-txt-guide.md). Docsbook generates one automatically per workspace.
+## Can the engines read your pages?
 
-## 2. Render content without JavaScript
+For Google's AI Overviews and AI Mode, a page must be indexed and eligible to show a snippet; Google says no special files or markup are needed ([AI features guide](https://developers.google.com/search/docs/appearance/ai-features)).
 
-AI crawlers run lightweight HTML parsers. Most do not execute JavaScript. If your docs are a single-page app that fetches content after `DOMContentLoaded`, AI sees a blank page.
+- **No `noindex` or `nosnippet`** on pages you want quoted.
+- **Text in the HTML** — a crawler that does not run JavaScript sees only what the server sends. Docsbook renders every page on the server.
+- **Public pages** — a site behind a password or SSO sign-in cannot be quoted.
 
-Three checks:
+## How do you write a passage an engine can quote?
 
-```bash
-curl -s https://yourdomain.com/docs/page | grep -c "your unique phrase"
+Answer engines retrieve passages, not whole pages, so each section has to stand on its own:
+
+- **Lead with the answer** — the first sentence under each heading says what is true or what to do.
+- **Name the subject in every section** — "Rotate an API key", not "How to do it".
+- **Use specifics** — names, numbers, limits and prices a reader can check.
+- **Keep headings stable** — every heading on a Docsbook page gets its own anchor, which is the link an engine can cite.
+
+These are rules from the Docsbook [expertise catalog](../agent/expertise.md): 299 rules, each tied to a published source, grouped into axes such as **Passages** and **Eligibility** on **Analytics ▸ Audit**.
+
+## How do you measure AI citations?
+
+Ask the engines the questions your customers ask, and record whether they cite you and who they cite instead.
+
+- **Analytics ▸ GEO** — for each prompt you track, whether the AI answer cited your docs, and in **GEO Competitors**, whose pages the engines returned.
+- **Do AI engines cite you** — a weekly trigger that asks the answer engines about your product and fixes what makes them cite someone else.
+- **Where competitors get named** — a weekly trigger that finds the questions you should own and someone else is answering.
+
+## What should I tell my agent?
+
+You don't have to run this checklist by hand. Tell the Docsbook agent in one sentence, from Claude Code, Cursor or the panel chat ([Get discovered](../get-discovered.md)):
+
+```text
+Check whether ChatGPT and Perplexity cite our docs for our top five questions, and fix the pages that lose to competitors.
 ```
 
-If the count is 0, you are invisible to AI.
+It works through [pull requests](../agent/review.md), each with a reason and a date to check the result. [Find wins fast](../find-wins-fast.md) explains how it picks what to fix first.
 
-- Use server-side rendering or static generation
-- Avoid hydration-only patterns for primary content
-- Test with `curl` and `lynx`, not just Chrome
+## FAQ
 
-## 3. Write factual prose, not marketing
+<!-- widget:accordion -->
 
-AI models prefer declarative sentences over hedged marketing language. Compare:
+### Does llms.txt get my docs cited by ChatGPT?
 
-> "Docsbook is a leading platform that empowers teams to revolutionize their documentation workflows."
+No vendor says so: OpenAI's crawler documentation does not mention reading a site's `llms.txt`, and Google says AI text files are not needed. More in [llms.txt explained](./llms-txt-guide.md).
 
-versus
+### Can I allow ChatGPT search but block training?
 
-> "Docsbook publishes a documentation site from a GitHub repository in five seconds. Translations support 15 languages. Pricing is metered on AI usage rather than sold as tiers."
+With OpenAI, yes: allow `OAI-SearchBot` and disallow `GPTBot`. Docsbook's **AI engines** switch treats AI crawlers as one group, on or off.
 
-The second sentence is quotable. The first is filler. Quotable sentences end up in answers; filler does not.
+### How do I know if ChatGPT already cites my docs?
 
-## 4. TL;DR at the top of every page
+Check the answers, not only your traffic. **Analytics ▸ GEO** records whether AI answers cite your docs for the prompts you track.
 
-AI agents are extraction machines. Give them an obvious extraction target.
+<!-- /widget -->
 
-A useful pattern: a `## TL;DR` heading followed by 3–5 bullet points containing the most important facts. AI models lift these almost verbatim into answers.
+## Next steps
 
-Docsbook does this on every blog post. So does every well-cited Stripe documentation page.
+<!-- widget:cards plain cols=2 arrow=hover -->
 
-## 5. JSON-LD that AI actually uses
+- [AI visibility](../geo/ai-visibility.md) — Track AI answers and citations for your docs {radar}
+- [AI engines read and cite you](../geo/README.md) — What Docsbook does for GEO {sparkles}
+- [llms.txt explained](./llms-txt-guide.md) — What the file does, and what it doesn't {file-text}
+- [Find wins fast](../find-wins-fast.md) — How the agent picks the next change {zap}
 
-Three types matter for documentation:
-
-- **`TechArticle`** — for how-to and tutorial pages
-- **`FAQPage`** — for any page with Q&A blocks
-- **`SoftwareApplication`** — for your product overview page (price, OS, ratings)
-
-Docsbook adds these automatically. If you are on a self-built site, the [Documentation SEO guide](./documentation-seo-guide.md) covers implementation.
-
-## 6. Speed matters for crawlers too
-
-AI crawlers have stricter timeouts than Googlebot. A page that takes 3 seconds to first byte gets dropped.
-
-- Run PageSpeed Insights, aim for 90+
-- Avoid blocking analytics scripts in the head
-- Cache aggressively at the CDN
-
-Docsbook pages score 95+ on PageSpeed Insights by default. Static generation, minimal JavaScript, Vercel edge.
-
-## 7. Robots.txt for AI crawlers
-
-The major AI crawlers in 2026:
-
-| Crawler | User-agent | Used by |
-|---|---|---|
-| GPTBot | `GPTBot` | ChatGPT browsing and training |
-| OAI-SearchBot | `OAI-SearchBot` | ChatGPT Search |
-| ClaudeBot | `ClaudeBot` | Claude.ai and Anthropic search |
-| PerplexityBot | `PerplexityBot` | Perplexity |
-| Google-Extended | `Google-Extended` | Gemini, Google AI Overviews |
-| CCBot | `CCBot` | Common Crawl (training data for many models) |
-
-For documentation, you generally want to allow all of them. The default `robots.txt` Docsbook ships does. If you are blocking some — check whether that is intentional.
-
-## 8. Bonus: get cited as the canonical source
-
-ChatGPT prefers to cite a URL that other sites already link to. If your docs are linked from your homepage, your changelog, your blog, and your GitHub README, AI models gain confidence that you are the canonical source for your own product.
-
-Internal linking is undervalued. So is putting `docs.yourcompany.com` in your GitHub repo's About link.
-
-## Common mistakes
-
-- **Cloaking** — Showing different content to crawlers than to users. AI models test this; they downrank inconsistencies.
-- **Excessive marketing copy at the top** — Anything above the first H2 is heavily weighted. Put facts there.
-- **Hidden prerequisites** — A page that assumes "you have set up X" without linking to X traps the AI into half-answers.
-- **No code samples** — Developer queries are heavily code-shaped. Pages without code get cited less.
-
-## How to measure citation
-
-Three signals worth tracking:
-
-1. **Direct referrals from `chat.openai.com`, `perplexity.ai`, `claude.ai`** — visible in your analytics
-2. **AI question logs** — if you run a docs AI chat, the questions tell you what people expect to find
-3. **Mention monitoring** — Google your product name + "ChatGPT" once a month to see anecdotal citations
-
-Docsbook ships AI usage analytics (`get_ai_questions`, `get_ai_unanswered`, `get_failed_searches`) so you can see what people are asking that you do not answer well.
-
-## Related reading
-
-- [llms.txt: the complete guide](./llms-txt-guide.md)
-- [Perplexity citations for docs](./perplexity-citations-for-docs.md)
-- [Documentation SEO guide](./documentation-seo-guide.md)
-- [JSON-LD for documentation](./json-ld-for-documentation.md)
-
----
-
-Docsbook handles `llms.txt`, JSON-LD, server-side rendering, and AI crawler robots.txt automatically. [Publish your docs →](https://docsbook.io/?start=1)
+<!-- /widget -->

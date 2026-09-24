@@ -1,186 +1,83 @@
 ---
 title: "Free documentation hosting compared: six real options"
-description: "Six ways to host documentation for nothing — GitHub Pages, Vercel, Netlify, Cloudflare Pages, ReadTheDocs and Docsbook — and what each one costs in time."
+description: "GitHub Pages, Vercel, Netlify, Cloudflare Pages, Read the Docs and Docsbook compared as of September 2026: free-tier limits, commercial use and what you add."
 ---
 
-# Free documentation hosting compared: six real options
+# Free documentation hosting compared
 
-"Free" rarely means free. Every free docs hosting option has a real cost in setup time, missing features, or eventual upgrade. This is the comparison that tells you which "free" is closest to actually free.
+Every free host below puts your docs online; they differ in their limits, in whether a business may use them, and in how much of a documentation site you still have to build.
 
-We make Docsbook. We list our limitations honestly.
+Figures come from each vendor's own pricing and documentation pages, as of September 2026. Check them again before you commit: free tiers change.
 
-## TL;DR
+## The six options at a glance
 
-| Option | Setup time | Custom domain | AI chat | Search | Analytics | Real cost |
-|---|---|---|---|---|---|---|
-| **Docsbook** | 5 sec | Included, with SSL | Included, metered per project | Included | Included | AI usage draws on a per-project balance |
-| **GitHub Pages** | 1–4 hours | Free + DNS | None | None | None | Your hosting time |
-| **Vercel free** | 1–2 hours | 50/account | None | None | Limited | Build minutes after free tier |
-| **Netlify free** | 1–2 hours | Free | None | None | Limited | Bandwidth caps |
-| **ReadTheDocs free** | 30 min | Paid only | None | Basic | None | Sphinx complexity |
-| **Cloudflare Pages** | 1 hour | Free | None | None | None | Build minutes |
+| Option | Free tier | Limits worth knowing | You still add |
+|---|---|---|---|
+| GitHub Pages | Free; on GitHub Free the repository must be public | 1 GB per site, 100 GB a month soft bandwidth, 10 builds an hour; not for sites mainly about commercial transactions or SaaS | A docs theme, search, analytics |
+| Vercel Hobby | $0 | Non-commercial, personal use only; 100 GB of Fast Data Transfer, 100 deployments a day | Docs framework, search |
+| Netlify Free | $0 | 300 credits a month, hard limit: 15 credits per production deploy, 20 per GB of bandwidth | Docs framework, search |
+| Cloudflare Pages | $0 | Static requests free and unlimited; 500 builds a month, one at a time | Docs framework, search |
+| Read the Docs | Community plan, free for open-source projects | Ad-supported; paid Business plans start at $50 a month | The docs tool it builds: Sphinx, MkDocs, Docusaurus and others |
+| Docsbook | 14-day Pro trial with $5 of AI credit, no card | After the trial the site stays published; AI features need [Pro](../plans-and-pricing.md), $20 a month per project | Nothing to build or deploy |
 
-If your priority is "live today with good defaults," Docsbook wins. If your priority is "I want to own every layer," GitHub Pages + a static generator wins. Everything in between is a tradeoff.
+## What does "free" leave to you?
 
-## Docsbook
+A static host serves files. Everything that makes those files a documentation site is yours to choose, wire up and maintain:
 
-What you get, without paying anything to publish:
+- **A docs framework** — Jekyll, Docusaurus or another generator, and its upgrades.
+- **Search** — a hosted service or a plugin.
+- **Answers** — an AI chat is a separate service with its own bill.
+- **Being found** — sitemaps, structured data, `llms.txt`, and the ongoing work of fixing pages that nobody finds.
 
-- 5-second setup from a GitHub repository
-- Custom brand colours (light and dark), logo, icon, font
-- Search, breadcrumbs, copy-code, theme toggle
-- Header links and social links (GitHub, Discord, X)
-- Analytics — pageviews, top pages, referrers, countries
-- `llms.txt` and `llms-full.txt` for AI discoverability
-- An MCP server, so Claude Code and Cursor can read and edit the docs
-- AI chat trained on your content
+## What does Docsbook include for free?
 
-What it costs, and what it does not:
+Docsbook hosts the site and generates the parts a static host leaves out. After the 14-day trial, a project without a plan stays published as static pages:
 
-- **Publishing, hosting, the custom domain and every page a reader opens cost nothing.** They do not draw on any balance.
-- **AI usage is metered.** Each project carries its own balance, and questions to the assistant and translation runs spend it. Current numbers are on [docsbook.io/pricing](https://docsbook.io/pricing), generated from the live pricing constants on every request.
-- **The footer credit is permanent.** Every Docsbook site renders a small "Powered by Docsbook" link in the page footer. There is no setting and no plan that removes it.
+- **The site** — every Markdown file in your repository, with `README.md` as the home page and folders as the sidebar.
+- **Search** — a search box on every page.
+- **For search engines and AI** — a sitemap, JSON-LD, [`llms.txt`](../geo/llms-txt.md) and a Markdown copy of each page.
+- **Your domain** — attached in **Settings ▸ Domain & API** once the trial has ended or you subscribe.
 
-Best for: OSS projects, indie products, MVPs, and anyone who wants a real docs site without managing hosting.
+What switches off without a plan: the [AI chat](../ai-chat/README.md), the agents, [translations](../site/translations.md) and the analytics views. Every Docsbook site shows a small Powered by Docsbook badge.
 
-## GitHub Pages
+## Which free option should you pick?
 
-What you get:
+<!-- widget:cards plain cols=2 -->
 
-- Free hosting for static sites
-- Custom domain free
-- Jekyll built-in or any static generator via Actions
-- Decent uptime, CDN included
+- **GitHub Pages or Cloudflare Pages** — You want zero cost and you enjoy owning the stack. {server}
+- **Read the Docs** — Your project is open source and you are fine with ads. {book-open}
+- **Check the terms first** — GitHub Pages and Vercel Hobby both restrict commercial use, so a company's product docs may not fit. {scale}
+- **Docsbook** — You want a docs site that answers readers and gets found, with nothing to build. {rocket}
 
-What you do not get:
+<!-- /widget -->
 
-- Out-of-the-box search (you add Algolia or build your own)
-- AI chat (no integrations)
-- Analytics (you add Google Analytics or similar)
-- Automatic builds without writing GitHub Actions
-- Anything beyond what your static generator produces
+Free hosting solves serving; it does not tell you which page readers searched for and never found, or why ChatGPT cites a competitor instead of you. Docsbook's agents work on exactly that: [Find wins fast](../find-wins-fast.md).
 
-Real cost:
+## FAQ
 
-- 1–4 hours initial setup including DNS
-- Recurring hours when your static generator has breaking updates
-- Algolia DocSearch approval (weeks of wait, denial possible)
+<!-- widget:accordion -->
 
-Best for: OSS engineers who enjoy owning the stack and want zero recurring cost.
+### Can I use Vercel's free plan for company docs?
 
-## Vercel free tier
+Vercel's docs restrict the Hobby plan to non-commercial, personal use, as of September 2026. A Pro developer seat is $20 per user a month.
 
-What you get:
+### What happens when Netlify's free credits run out?
 
-- Generous free tier for static and serverless sites
-- Custom domains, automatic SSL
-- Excellent build performance and global CDN
-- Preview deployments for every PR
+The Free plan has a 300-credit monthly hard limit with no automatic recharge. More usage means a paid plan: Personal at $9 a month or Pro from $20 a month.
 
-What you do not get:
+### Is Docsbook free after the trial?
 
-- A docs-aware setup (you bring your own framework)
-- AI chat, search, analytics — all your problem
-- Free is hobbyist tier; commercial use requires Pro
+The site stays published as static pages, with search, for as long as you like. The AI chat, agents, translations and analytics views need Pro at $20 a month per project.
 
-Real cost:
-
-- Setup time depends entirely on the framework you pick (Next.js, Astro, Vite, etc.)
-- Build minutes after free tier
-- The "Pro" upgrade at $20/user/month when you commercialize
-
-Best for: teams that already use Vercel for the rest of their stack and have a docs framework picked.
-
-## Netlify free tier
-
-Similar to Vercel — strong free tier for static sites, custom domains, CDN.
-
-Same caveats: you bring the framework, the search, the AI, the analytics.
-
-Bandwidth caps (100GB/month on free) can bite if your docs go viral.
-
-Best for: same audience as Vercel.
-
-## ReadTheDocs free
-
-What you get:
-
-- Free for OSS projects (paid for commercial)
-- Sphinx and MkDocs supported
-- Versioned docs out of the box
-- Some search
-
-What you do not get:
-
-- Custom domain on free
-- AI chat
-- Modern theming (Sphinx themes are functional, not pretty)
-- Frontmatter-driven workflow
-
-Real cost:
-
-- Sphinx complexity if you do not already use it
-- RST format if you use Sphinx defaults
-- $50/month for commercial use with custom domain
-
-Best for: Python OSS projects with existing Sphinx setup.
-
-## Cloudflare Pages
-
-What you get:
-
-- Generous free tier
-- Custom domain free with Cloudflare DNS
-- CDN performance
-- Build minutes included
-
-What you do not get:
-
-- Docs-aware features
-- Anything pre-built for documentation
-
-Same caveats as Vercel and Netlify — you bring everything above the hosting layer.
-
-Best for: teams already on Cloudflare with strong DevOps capacity.
-
-## The hidden cost: time
-
-The cheapest dollar-cost option is rarely the cheapest total-cost option.
-
-Do this arithmetic with your own numbers rather than with ours: take the hourly cost of the person who would do the setup, multiply by the hours in the table above, and compare that against the alternative. We publish no dollar figure for it, because an hourly rate we invented for you would be a made-up number dressed as a calculation.
-
-What Docsbook trades for those hours is concrete and small: every site carries a "Powered by Docsbook" link in its footer, on every site, with no way to remove it.
-
-## The hidden cost: feature creep
-
-Most teams that pick a self-hosted free option eventually add:
-
-- Algolia DocSearch ($60+/month after approval)
-- A chatbot SaaS ($30–100/month)
-- Analytics ($0–50/month)
-- Translation pipeline (weeks of engineering)
-
-Price that stack against Docsbook on [docsbook.io/pricing](https://docsbook.io/pricing) rather than against a number quoted here. The shape of the comparison is what matters: the self-hosted stack accumulates several fixed monthly subscriptions plus the engineering time to wire them together, while Docsbook charges for AI usage and nothing for the site.
-
-## How to pick
-
-- **Will you spend more than two hours setting up docs hosting?** → Docsbook
-- **Are you a Python OSS team already on Sphinx?** → ReadTheDocs
-- **Do you want to own every layer, and enjoy owning it?** → GitHub Pages or Cloudflare Pages
-- **Do you need `docs.yourcompany.com` on day one?** → Docsbook, Netlify or Cloudflare Pages
-- **Will you publish in several languages?** → Docsbook, which indexes each locale at its own URL
-
-## Why does this page not quote our own price?
-
-Because a price copied into a blog post goes stale without telling anyone, and a stale price is the single most damaging thing a comparison page can carry: it is exactly the sentence a reader — or an AI assistant summarising this page six months from now — will repeat to a buyer.
-
-[docsbook.io/pricing](https://docsbook.io/pricing) is generated from the live pricing constants on every request. It has no "last updated" date because there is nothing on it that can go stale. Read the number there; treat any Docsbook price you find anywhere else, including here, as a rumour.
-
-[Start free — no credit card](https://docsbook.io/?start=1)
+<!-- /widget -->
 
 ## Next steps
 
-- [Best documentation platforms for startups in 2026](./best-docs-platforms-for-startups-2026.md) — the same field ranked by company stage
-- [How to host documentation from GitHub](./how-to-host-docs-from-github.md) — the step-by-step for the three main paths
-- [Turn your README.md into a documentation site](./readme-md-to-docs-site.md) — the shortest path if your docs are one file
-- [Custom domain for documentation](./custom-domain-for-docs-howto.md) — DNS, SSL and redirects for `docs.yourcompany.com`
+<!-- widget:cards plain cols=2 arrow=hover -->
+
+- [Quickstart](../quickstart.md) — From a repository to a live site {rocket}
+- [How to host docs from GitHub](./how-to-host-docs-from-github.md) — GitHub Pages, Docusaurus and Docsbook, step by step {git-branch}
+- [Plans and pricing](../plans-and-pricing.md) — What Pro adds and what AI usage costs {credit-card}
+- [Find wins fast](../find-wins-fast.md) — What the agent fixes first on a new site {zap}
+
+<!-- /widget -->

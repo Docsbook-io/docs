@@ -1,124 +1,113 @@
 ---
 title: "llms.txt explained: the complete guide for docs sites"
-description: "What llms.txt is, how it differs from robots.txt and sitemap.xml, what evidence supports it, and a working example for a documentation site."
+description: "What llms.txt is, what the v2 spec requires, how it differs from robots.txt and sitemap.xml, what the evidence says it does, and what Docsbook generates."
 ---
 
-# llms.txt explained: the complete guide for docs sites
+# llms.txt explained
 
-`llms.txt` is a plain-text file at the root of your domain that tells AI agents what your site is about and which pages are the canonical source for which topic. It is to ChatGPT, Claude, and Perplexity what `robots.txt` was to Googlebot in 2003: a small, voluntary, hugely consequential standard.
+`llms.txt` is a Markdown file at the root of a site that lists its most useful pages for AI tools; it is an open proposal rather than a standard, and Docsbook generates one for every site.
 
-## TL;DR
+The proposal is Jeremy Howard's, published at [llmstxt.org](https://llmstxt.org/): version 1 on September 3, 2024, version 2 on August 10, 2026.
 
-- **File location**: `https://yourdomain.com/llms.txt`
-- **Format**: Markdown with a structured header
-- **Purpose**: Tell AI crawlers what your site is and where to look
-- **Companion file**: `llms-full.txt` — the same idea, but with full content inlined
-- **Status**: Proposed by Jeremy Howard in late 2024, adopted by Mintlify, Docsbook, Cloudflare, Anthropic, Vercel, and others through 2025–2026
+## What goes in an llms.txt file?
 
-## Why it exists
+Version 2 of the proposal describes the file in this order:
 
-AI crawlers have a context window problem. Sitemaps are designed for search engines that index every page; AI agents that answer questions only need the 5–50 pages that actually contain answers. `llms.txt` is a shortlist optimized for that.
+- **An H1 with the name of the project or site** — the only required section.
+- **A blockquote summary** — the key facts needed to understand the rest of the file.
+- **Optional prose** — paragraphs or lists, without headings.
+- **H2 sections of links** — "file lists" pointing at the pages worth reading.
+- **An `Optional` section** — secondary links an agent can skip when it needs a shorter context.
 
-The result, when implemented well: AI assistants cite your pages more often, with the correct URL, and rarely hallucinate non-existent paths under your domain.
+Here is a small file for a product called Acme API, after its opening `# Acme API` line:
 
-## llms.txt vs robots.txt vs sitemap.xml
-
-| | robots.txt | sitemap.xml | llms.txt |
-|---|---|---|---|
-| Audience | Search crawlers | Search crawlers | AI agents and LLMs |
-| Format | Plain text directives | XML | Markdown |
-| Purpose | Allow/disallow paths | List every URL | Curate canonical pages with context |
-| Content | Path rules | URLs + last-modified | URLs + descriptions + categories |
-| Companion | — | — | `llms-full.txt` with inlined content |
-
-All three coexist. `llms.txt` does not replace the other two.
-
-## Minimal valid llms.txt
-
-```
-# Acme API
-
-> Acme is a payments API for indie developers. Built in 2024, used by 12,000 projects.
+```markdown
+> Acme is a payments API. These are the pages an AI tool needs to answer questions about it.
 
 ## Docs
 
-- [Quick start](https://acme.com/docs/quick-start): publish your first charge in 60 seconds
-- [Authentication](https://acme.com/docs/auth): API keys, OAuth, and per-scope tokens
-- [Webhooks](https://acme.com/docs/webhooks): signature verification and retry semantics
+- [Quickstart](https://docs.acme.example/quickstart.md): make a first charge
+- [Authentication](https://docs.acme.example/auth.md): API keys and scopes
 
 ## Optional
 
-- [Changelog](https://acme.com/changelog): all releases since 2024
+- [Changelog](https://docs.acme.example/changelog.md): every release
 ```
 
-Headers (`# project name`, `## section`) and the `>` blockquote summary are not decorative — the spec uses them for parsing.
+The proposal also asks for a clean Markdown version of each listed page, at the page's URL with `.md` appended or with the extension replaced by `.md`.
 
-## llms.txt vs llms-full.txt
+## How is llms.txt different from robots.txt and sitemap.xml?
 
-- `llms.txt` is the index — short, links out
-- `llms-full.txt` is the same structure with the full markdown of each listed page inlined
+The three files answer different questions, and a site usually wants all three.
 
-AI agents fetch `llms-full.txt` when they want one document containing everything they need. Useful for context-window-constrained tasks like "use my docs to write a code snippet."
+| | `robots.txt` | `sitemap.xml` | `llms.txt` |
+|---|---|---|---|
+| Read by | Crawlers, before they fetch | Search engines | AI tools and agents, when asked about your product |
+| Says | Which paths a crawler may fetch | Every URL you want indexed | Which pages matter, with a summary |
+| Format | Plain-text rules | XML | Markdown |
+| Status | Standard (RFC 9309) | Sitemaps protocol | Open proposal |
 
-## How Docsbook generates it
+## Does llms.txt get your docs cited?
 
-When you create a Docsbook workspace, two files appear immediately:
+Not on its own. As of September 2026, none of Google, OpenAI, Anthropic or Perplexity says its crawlers read a third-party `llms.txt`:
 
-- `docsbook.io/yourorg/llms.txt` — workspace index
-- `docsbook.io/yourorg/llms-full.txt` — full content
+- **Google** — its [AI features guide](https://developers.google.com/search/docs/appearance/ai-features) says you don't need new machine-readable files, AI text files or markup to appear in AI Overviews or AI Mode.
+- **OpenAI, Anthropic and Perplexity** — each publishes an `llms.txt` for its own docs, but their crawler pages do not say their bots fetch yours.
 
-The platform itself also serves `docsbook.io/llms.txt` describing Docsbook the product. This is the dogfooded version of the standard.
+Treat it as cheap help for an agent that a person points at your docs, such as a developer's coding assistant. What moves citations is covered in [How to get your docs cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md).
 
-No configuration. No `llms.config.js`. The graph of your docs is the source of both files. See [our docs](https://docsbook.io/geo/llms-txt) for the live example.
+<!-- widget:callout type=note -->
 
-## What to put in your llms.txt
+The Docsbook agent audits against the same evidence: the `llms.txt` axis on **Analytics ▸ Audit** holds 9 rules, each tied to its published source. See [Expertise](../agent/expertise.md).
 
-Order matters. Put the highest-value page first. AI agents truncate when the context budget is tight.
+<!-- /widget -->
 
-A useful structure:
+## What does Docsbook generate?
 
-1. **Product summary** — one paragraph that an AI can lift verbatim when answering "what is X?"
-2. **Most-asked pages first** — quick start, pricing, key features
-3. **Reference material** — API reference, configuration options
-4. **Optional / archival** — changelog, deprecated migrations
+Every Docsbook site gets these with nothing to switch on:
 
-## Common mistakes
+- **`llms.txt`** — every public page with its URL and a link to its Markdown copy, plus the languages the site is published in.
+- **`llms-full.txt`** — the full text of the pages in one file, up to 1,000 pages or 3 MB.
+- **A Markdown copy of every page** — the **View as Markdown** item in each page's **Copy page** menu.
+- **An [MCP server](../brain/mcp-server.md)** — for agents that would rather query your docs than read a file.
 
-- **Listing every page**: this is a sitemap, not an llms.txt. Curate. Aim for 20–80 entries.
-- **No description on each link**: AI agents use descriptions to decide what to fetch. Bare URLs get skipped.
-- **Stale content**: link to a 404 once and the agent stops trusting your `llms.txt` for the session. Re-generate on each docs deploy.
-- **Hiding it behind auth**: it must be publicly accessible at the root.
+Both files live on the site's `docsbook.io` address, for example `https://<owner>.docsbook.io/llms.txt`, and follow the repository as it changes. Turning off **AI engines** in **Settings ▸ Access** removes the project from `llms.txt` and asks AI crawlers to stay away.
 
-## How AI agents actually use it
+## How do I check my llms.txt?
 
-Three behaviors observed in 2025–2026:
-
-1. **First-fetch on a new domain** — when an agent visits your site for the first time, it tries `/llms.txt` before crawling. Saves tokens, finds answers faster.
-2. **Citation grounding** — when answering "what does X say about Y?", agents prefer URLs that came from a well-formed `llms.txt` over guessed paths.
-3. **MCP companion** — if you also expose an MCP server, agents use `llms.txt` for discovery and MCP for actions. See [MCP for documentation](./mcp-server-for-documentation.md).
-
-## Validation
-
-Three quick checks:
+Fetch it and read the top:
 
 ```bash
-curl -s https://yourdomain.com/llms.txt | head -20
+curl -s https://<owner>.docsbook.io/llms.txt | head -20
 ```
 
-- Starts with `# `?
-- Has a `>` blockquote near the top?
-- All links return 200?
+It should open with a `#` heading and a `>` summary, and every link should load. For the full picture of what AI engines do with your site, see [AI visibility](../geo/ai-visibility.md).
 
-For a more thorough check, ask ChatGPT or Claude to "fetch and summarize https://yourdomain.com/llms.txt" — if the summary matches your intent, the file is doing its job.
+## FAQ
 
-## Related reading
+<!-- widget:accordion -->
 
-- [AI search and documentation](./ai-search-documentation.md) — how AI search works under the hood
-- [How to get docs cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — practical citation checklist
-- [Perplexity citations for docs](./perplexity-citations-for-docs.md) — Perplexity-specific guide
+### Is llms.txt an official standard?
 
----
+No. It is an open proposal, now in version 2, and the only section it requires is an H1 naming the project or site.
 
-Docsbook generates `llms.txt` and `llms-full.txt` automatically for every workspace, with nothing to enable and nothing to pay for.
+### What is llms-full.txt?
 
-[Start free — no credit card](https://docsbook.io/?start=1)
+A companion file with the full text of the listed pages inlined; the v2 proposal itself does not define it. Docsbook generates one for every site.
+
+### Does Google use llms.txt?
+
+Google says you don't need AI text files to appear in AI Overviews or AI Mode. A page there must be indexed and eligible to show a snippet.
+
+<!-- /widget -->
+
+## Next steps
+
+<!-- widget:cards plain cols=2 arrow=hover -->
+
+- [llms.txt and Markdown for AI](../geo/llms-txt.md) — Exactly what Docsbook publishes for AI tools {file-text}
+- [How to get cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — What actually moves AI citations {quote}
+- [AI engines read and cite you](../geo/README.md) — The whole GEO side of Docsbook {sparkles}
+- [Find wins fast](../find-wins-fast.md) — How the agent picks the next change {zap}
+
+<!-- /widget -->
