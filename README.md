@@ -91,115 +91,85 @@ Six things every Docsbook site does — and the agent keeps improving on its own
 
 <!-- /widget -->
 
-## How a win ships
+<!-- widget:cta inbox -->
 
-<!-- widget:journey cols=2 -->
+## You bring the facts. It brings the results.
 
-### Signal
+The agent finds the opportunity on its own and asks your team only for the fact it cannot confirm. Then it updates the pages, measures what changed and comes back with the report — and the next opportunity.
 
-A query with impressions and no clicks, a crawler that never reaches a page, a question nobody answered.
+[Learn more](./agent/review.md#what-arrives-in-the-inbox)
 
-- [Hear every reader](./analytics/README.md) {ear}
-- [AI visibility](./geo/ai-visibility.md) {eye}
+### ![Slack](https://docsbook.io/connectors/slack.svg) Thread #growth
 
-### Rule
+- **Docsbook Agent** 10:02 AM
 
-The agent matches the signal to a published rule and ranks the fix by what it is expected to move.
+  Found an opportunity: 4,200 people a month search for **audit log export**, and AI answers recommend your competitors.
 
-- [Expertise](./agent/expertise.md) {graduation-cap}
-- [Find wins fast](./find-wins-fast.md) {trophy}
+- **Docsbook Agent** 10:02 AM
 
-### Change
+  I went through your docs and site but can't confirm you support it. Do you? If yes, how does it work?
 
-A pull request on your repository, with the reason and the prediction written down.
+- **Maya Chen** 10:14 AM
 
-- [Review the agent's work](./agent/review.md) {git-pull-request}
-- [Triggers](./agent/triggers.md) {zap}
+  Yes — through the API, on the Enterprise plan only. Exports go to S3 or Splunk.
 
-### Measure
+- **Docsbook Agent** 10:15 AM
 
-On the date, the number is read and the prediction is judged.
+  That's exactly what I needed. I'll update the product and pricing pages and keep this as confirmed knowledge. Then I'll measure the result and report back in two weeks.
 
-- [Docs analytics](./analytics/insights.md) {chart-line}
-- [Search Console](./seo/search-console.md) {search-check}
+### Inbox
 
-<!-- /widget -->
+- **Audit log export: you're in the AI answers now** *now* {badge:Audit logs} {unread} {chart:21,19,22,20,23,21,22|26,29,31,30,33,35,34,36}
 
-## Built with Docsbook
+  Two weeks ago you said audit logs export through the API, on Enterprise only. I used that to update three pages and make the case clear.
 
-<!-- widget:showcase cols=3 -->
+  **What changed**
 
-- [Cursor](https://cursor.docsbook.io/) — Documentation for the AI code editor {color:#1a1a1a}
+  - **3** pages updated
+  - **12** AI answers updated
+  - **+4** new citations
+  - **+38%** qualified impressions
 
-  ![Cursor documentation built with Docsbook](https://docsbook.io/gallery-cursor-light.png)
+  **What I learned**
 
-- [ClickHouse](https://clickhouse.docsbook.io/) — Column-oriented database for real-time analytics {color:#faff69}
+  ChatGPT and Perplexity now name you for audit log export. A competitor still ranks above you on Google.
 
-  ![ClickHouse documentation built with Docsbook](https://docsbook.io/gallery-clickhouse-light.png)
+  **Next opportunity**
 
-- [Discord Developers](https://discord-developers.docsbook.io/) — Build bots, Activities and apps on Discord {color:#5865F2}
+  Another gap on your comparison page. I need one more fact about team features before I go on.
 
-  ![Discord Developers documentation built with Docsbook](https://docsbook.io/gallery-discord-developers-light.png)
+  - **Asked in #growth** — which roles can see team usage? {message-circle-question}
 
-<!-- /widget -->
+- **September: +$2,970 in new MRR** *1d* {badge:Monthly} {unread} {chart:180,172,190,185,201,214,236,251,247,270,288,301,322,340}
 
-<!-- widget:stats cols=3 -->
+  Six changes shipped and five moved a number. The pricing page did the most: its click rate went from 0.9% to 3.1%.
 
-- **88K+** — visitors in the past month {audio-lines}
-- **750K+** — agent calls in the past month {sparkle}
-- **99.9%** — uptime across all services {clock-fading}
+  - **+3,920** visitors
+  - **+118** trial signups
+  - **+$2,970** new MRR
 
-<!-- /widget -->
+  - **Merged 6 pull requests** {git-merge}
+  - **Forecasts** 5 of 6 came true {target}
 
-## Pricing
+- **Pricing page: click rate 0.9% → 3.1%** *5d* {badge:SEO} {chart:9,9,8,10,9|18,24,27,29,31}
 
-Your docs stay published for free; you pay for the AI work. Every account starts with a 14-day Pro trial that includes $5 of AI credit.
+  A new title and a first line that answers the query. It holds position 6 and now gets three times the clicks.
 
-<!-- widget:pricing -->
+  - **+140** clicks a month
+  - **+11** trial signups
 
-## Free
+  - **Changed 1 page** `+22` `-10` {git-pull-request}
 
-**$0** / month
+- **The SSO page answers what 23 readers asked** *1w* {badge:Support}
 
-Where a project lands after the trial.
+  The chat stopped getting the question the day the page went live, and two of those readers were on an Enterprise trial.
 
-- Hosting, SSL and a custom domain
-- SEO and GEO markup on every page
-- Web editor and GitHub sync
-- ~~AI chat, agents and translations~~
+  - **−23** unanswered questions
+  - **2** Enterprise trials kept
 
-[Create a site](https://docsbook.io/create)
-
-## Pro
-
-**14-day free trial**
-
-**$20** / month
-
-For docs that AI writes, keeps current and answers from.
-
-- $20 of AI usage credited every month
-- AI chat that answers your readers
-- The agent and its 49 ready-made workflows
-- Live auto translations
-
-[Start the free trial](https://docsbook.io/create)
-
-## Enterprise
-
-Custom pricing
-
-For a team that works from one shared balance.
-
-- Everything in Pro
-- SSO, SCIM and RBAC
-- Setup and migration done for you
-
-[Contact sales](mailto:support@docsbook.io?subject=Docsbook%20Enterprise)
+  - **Wrote 1 page** `+146` {file-plus}
 
 <!-- /widget -->
-
-What each part of the AI work costs: [Pricing](./pricing/plans.md).
 
 <!-- widget:cta agents -->
 
