@@ -114,7 +114,11 @@ A change that claims to move a number states its bet. The agent records the read
 | **Competitors**, **Competitor queries** | Who ranks for your queries, and where they sit ahead of you |
 | **Competitor tactics** | Which catalog rules the winning competitor pages apply |
 
+![Analytics ▸ SEO ▸ Queries: each search query with its position, clicks and views, by engine](../images/admin/analytics-seo-dark.webp)
+
 **Analytics ▸ Audit** shows where your pages stand against the three SEO topics of the catalog: Search demand & intent; Crawl, index & speed; Authority & risk.
+
+![Analytics ▸ Audit: documentation rules ranked by priority, each with the share of pages that follow it](../images/admin/analytics-audit-dark.webp)
 
 ## Tell your agent
 

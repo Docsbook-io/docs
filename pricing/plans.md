@@ -117,6 +117,8 @@ Every account starts with a 14-day Pro trial with $5 of AI credit and no card. A
 
 Prices are in US dollars, billed monthly or yearly through Paddle; a yearly Pro still credits $20 of AI usage every month. You manage or cancel a subscription with **Manage subscription** on **Settings ▸ Plan**.
 
+![Settings ▸ Plan: Pro and Enterprise side by side, with the current plan marked](../images/admin/settings-plan-dark.webp)
+
 ## How does the free trial work?
 
 Every account gets one Pro trial, with no card and nothing to switch on:
@@ -158,6 +160,8 @@ A plan's monthly credit is the base. Three things extend or replace it:
 - **Your own AI key** — on Enterprise, add an OpenRouter, OpenAI, Google Gemini, Anthropic or Vercel AI Gateway key on **Settings ▸ Agent ▸ Your own AI API Key**; your provider bills those calls and Docsbook charges nothing for them
 
 **Settings ▸ Usage** shows what the balance went on over the last 24 hours, 7 or 30 days — AI calls, MCP calls and crawls — and what is left.
+
+![Settings ▸ Usage: spending over the period by AI calls, MCP calls and crawls, and the balance left](../images/admin/settings-usage-dark.webp)
 
 ## FAQ
 

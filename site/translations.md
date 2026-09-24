@@ -23,6 +23,8 @@ Tell your agent: "Translate our docs into German and Japanese." It switches the 
 
 Readers then get a language switcher in the sidebar footer (**Customize ▸ Left sidebar ▸ Language Toggle**), and you can add one to the header with **Customize ▸ Header ▸ Language in Header**. Translations live in Docsbook, not in your repository, which stays in its source language.
 
+![Customize ▸ Left sidebar ▸ Language Toggle: the language switcher in the sidebar footer](../images/admin/customize-left-sidebar-language-dark.webp)
+
 ## Keep translations in step with your edits
 
 Out of the box, a language is translated once, when you turn it on. To keep it level with every edit, pick one of these:

@@ -64,6 +64,8 @@ The [Docsbook agent](../agent/README.md) uses the same rows to choose search cha
 
 Search Console only reports queries you already appear for, so Docsbook also checks the results pages themselves. Every day it reads Google and Bing for up to 5 queries per engine, including queries you don't rank for yet; choose them by asking the agent or with [`configure_mentions`](../mcp-tools/settings/configure-mentions.md). The results land in **Analytics ▸ SEO ▸ Google & Bing mentions**.
 
+![Analytics ▸ SEO ▸ Google & Bing mentions: where the docs sit on each engine's results page for the watched queries](../images/admin/analytics-seo-mentions-dark.webp)
+
 You can also push your own daily numbers from Bing, Yandex, DuckDuckGo or a rank tracker, using the project API key from **Settings ▸ Domain & API**:
 
 ```bash

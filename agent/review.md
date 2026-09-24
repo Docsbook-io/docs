@@ -18,7 +18,7 @@ Each write is one atomic commit: pages written, moved and deleted together. When
 
 A pull request is opened for every change, and the **Auto-merge** switch decides what happens next.
 
-![Settings, General: the When a change goes live card with the Auto-merge switch turned on](https://docsbook.io/landing-pull-requests.jpg)
+![Settings ▸ General ▸ When a change goes live: the Auto-merge switch that decides whether a pull request merges itself](../images/admin/settings-general-go-live-dark.webp)
 
 - **Auto-merge on** — the default. The same call merges the pull request as one squashed commit, so the docs update without you, and the diff and the issues behind it stay readable.
 - **Auto-merge off** — the pull request stays open, and nothing reaches the published site until you merge it.
@@ -62,6 +62,8 @@ To see every page waiting on you, ask your MCP client for `get_project_doc_outli
 
 **Inbox** holds what the agent asked you and what it reported:
 
+![Inbox: the agent's reports and questions in a list, the selected report open beside it](../images/admin/inbox-dark.webp)
+
 - **Reports** — what the agent decided was worth your time.
 - **Questions** — decisions only you can make.
 - **The creation report** — what **Generate docs from your site** or **Generate docs from your brief** did, and what it needs you to confirm.
@@ -89,6 +91,8 @@ Open a row for its trace: the run, each attempt and step, and the model call and
 ## Where do I follow the prediction?
 
 **Issues** is one list of every issue and pull request on your repository, with the reason, the prediction and the date to check it.
+
+![Issues: every issue and pull request on the repository with its labels and author](../images/admin/issues-dark.webp)
 
 - **Filter** — with GitHub's own syntax, such as `is:pr`, `state:open` or `label:docs`, plus `is:due` for records past their check date with no reading yet. Sort by **Impact at risk** to see those first.
 - **How far it got** — each pull request shows Opened, Reviewed, Merged and Measured, and once measured, the share of the predicted move that happened.

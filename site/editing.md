@@ -77,7 +77,7 @@ Moving needs full access to the project, and it can change your site's docsbook.
 - **Auto-merge on** (default) — a pull request is still opened for every change, so the diff stays readable, and merged in the same step.
 - **Auto-merge off** — the pull request stays open. Open it in **Issues** and press **Approve and publish** to put it live.
 
-![Settings ▸ General in the Docsbook panel: the When a change goes live card with the Auto-merge switch](https://docsbook.io/landing-pull-requests.jpg)
+![Settings ▸ General ▸ When a change goes live: the Auto-merge switch](../images/admin/settings-general-go-live-dark.webp)
 
 The editor, the panel chat and `write_docs` from your own agent all follow this switch; commits you push yourself don't. A pull request merged on GitHub instead waits for the page cache, like any push. More in [Review changes](../agent/review.md).
 
@@ -107,6 +107,8 @@ The sidebar mirrors your folders. In each folder, pages come before sub-folders,
 - **Everything else** — alphabetical, so a number prefix such as `01-` sets the order (it's ignored when matching the names above)
 
 Labels come from file names: `getting-started.md` shows as **Getting Started**, `README.md` as **Introduction**. To relabel an entry or give it an icon without renaming the file, click it in interactive mode (**Rename**, **Icon**); icons are also in **Customize ▸ Left sidebar ▸ Sidebar Icons**. Top-level folders become tabs under the header in **Customize ▸ Header ▸ Subheader Folders**.
+
+![Customize ▸ Left sidebar ▸ Sidebar Icons: search for a page and give it an icon](../images/admin/customize-left-sidebar-icons-dark.webp)
 
 <!-- widget:callout type=warning -->
 

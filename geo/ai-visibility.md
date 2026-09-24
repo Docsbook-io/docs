@@ -17,6 +17,8 @@ Docsbook measures AI visibility three ways: which AI crawlers read each page and
 | **Indexing** | A crawler is building the index an answer engine retrieves from later | `OAI-SearchBot`, `PerplexityBot`, `Bingbot`, `Applebot`, `YouBot` |
 | **Training** | Text collected to train models; nothing is cited back | `GPTBot`, `ClaudeBot`, `CCBot`, `Applebot-Extended` and others |
 
+![Analytics ▸ GEO ▸ Pages: which pages AI crawlers read, with request counts per page](../images/admin/analytics-geo-pages-dark.webp)
+
 The **Pages** view shows, per page, the requests, the crawlers and how many checked questions cite it. The **Crawlers** view shows each crawler with its company, requests, distinct visitors, and how often that company's engine named you in checked questions.
 
 ## Which readers came from an AI assistant?
@@ -37,6 +39,8 @@ Choose up to 5 questions per engine and Docsbook checks them every day, includin
 | **Bing** (`bing`) | The same on Bing, the index Copilot draws on, where a site that wins on Google can be missing |
 
 AI Overview results land in **Analytics ▸ GEO ▸ Prompt mentions**; Google and Bing in **Analytics ▸ SEO ▸ Google & Bing mentions**. Every question keeps its earlier readings, so each change has a before and an after.
+
+![Analytics ▸ GEO ▸ Prompt mentions: the questions checked against answer engines, their search volume, and whether the site was cited](../images/admin/analytics-geo-dark.webp)
 
 Docsbook does not put questions to ChatGPT, Claude or Perplexity itself. Checks you run there can be recorded with your project API key from **Settings ▸ Domain & API**, and they appear in **Prompt mentions** beside Google's:
 

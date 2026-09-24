@@ -29,6 +29,8 @@ These work on a new project with nothing to set up:
 
 <!-- /widget -->
 
+![Settings ▸ Agent ▸ Semantic Search: the Enable semantic search switch](../images/admin/settings-agent-semantic-search-dark.webp)
+
 ## What the agent does on its own
 
 The agent keeps the brain current, checks your pages against the code, adds what it learns on every run, and answers from it.

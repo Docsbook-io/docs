@@ -17,6 +17,8 @@ https://docsbook.io/<owner>/<repo>/api/mcp/server
 
 With a [custom domain](../site/custom-domain.md) connected, the same server also answers at `https://<your-domain>/api/mcp/server`. The **Public MCP server** card in **Settings ▸ Domain & API** shows your exact address and a Claude Code command to copy.
 
+![Settings ▸ Domain & API ▸ Public MCP server: the server address and a Claude Code command to copy](../images/admin/settings-domain-public-mcp-dark.webp)
+
 ## What can a reader's agent do with it?
 
 The server and its main tools carry your project's name, so an agent knows whose docs it is reading before its first call. The name is your repository's, in lowercase, with each run of other characters turned into one `_`: `acme/api-docs` serves a server called `api_docs-docs`.

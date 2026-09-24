@@ -7,6 +7,8 @@ description: "Customize a Docsbook docs site: logo, favicon, light and dark colo
 
 Everything readers see around your content (logo, colors, fonts, header, sidebars, footer) is set in **Customize**, and your agent can set any of it from one sentence.
 
+![Customize ▸ Branding: background style and the light and dark colours](../images/admin/customize-branding-dark.webp)
+
 Created the project from your website's address? Docsbook already read its accent color, font, logo, favicon, header links, social links and main call to action, so the site starts in your brand.
 
 ![A Docsbook docs site: header links, search and Ask AI along the top, section tabs under it, the sidebar on the left and page actions on the right](https://docsbook.io/landing-docs-screenshot.png)

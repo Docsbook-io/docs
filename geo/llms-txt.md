@@ -71,6 +71,8 @@ Adding `.md` to a page's URL does not return Markdown: it redirects to the page 
 
 The **Copy page** button sits at the top of each page, and its menu holds the rest. All items are on by default; switch each one in **Customize ▸ Content**, or ask your agent to call [`update_ui_settings`](../mcp-tools/settings/update-ui-settings.md).
 
+![Customize ▸ Content: the reading aids and page buttons readers see, each with its own switch](../images/admin/customize-content-dark.webp)
+
 | Item | What it does |
 |---|---|
 | **Copy page** | Copies the page as Markdown, ready to paste into any assistant |

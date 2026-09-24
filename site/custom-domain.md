@@ -13,6 +13,8 @@ Serve your docs at an address you own, such as `docs.acme.com`, with one DNS rec
 
 Open **Settings ▸ Domain & API ▸ Custom Domain**, type the domain, for example `docs.acme.com`, and save.
 
+![Settings ▸ Domain & API: the Custom Domain field above the project's API key and MCP server](../images/admin/settings-domain-dark.webp)
+
 ### Add one DNS record where your domain is managed
 
 | Your domain | Type | Name / Host | Value |

@@ -13,6 +13,8 @@ Close your docs to the public and let readers in with a shared password, your co
 
 Open **Settings ▸ Access ▸ Privacy & Access** and turn off **Public — anyone with the link**.
 
+![Settings ▸ Access ▸ Privacy & Access: the Public — anyone with the link switch](../images/admin/settings-access-privacy-dark.webp)
+
 ### Choose how readers get in
 
 Turn on **Password** and set one of at least 8 characters, or turn on **SSO (bring your own IdP)**, or both.
@@ -37,6 +39,8 @@ Readers land on a sign-in page instead of your docs: **This workspace is private
 - **You and your collaborators** (**Settings ▸ Access ▸ Collaborators**) skip the page while signed in to Docsbook.
 - **Search engines and AI crawlers** get the same sign-in page when they open a page.
 - **Your [public MCP server](../brain/mcp-server.md)** refuses to read a private site for anonymous agents.
+
+![Settings ▸ Access ▸ Collaborators: team members and their access level](../images/admin/settings-access-collaborators-dark.webp)
 
 ## Set up SSO
 

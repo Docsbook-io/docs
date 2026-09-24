@@ -78,6 +78,8 @@ These screens in the panel show the signals above:
 - **Analytics ▸ Insights** — traffic, sources, audience and conversions, covered in [Docs analytics](./insights.md)
 - **Activity ▸ Users** — one row per reader: country, the translation they read, where they came from, the [goals](./goals.md) they reached
 
+![Analytics ▸ Feedback: each rated page with its thumbs-up and thumbs-down counts](../images/admin/analytics-feedback-dark.webp)
+
 <!-- widget:callout type=tip -->
 
 Hear about a downvote or an empty search the moment it happens: send it to Slack, email or your own webhook with [Alerts](./alerts.md).

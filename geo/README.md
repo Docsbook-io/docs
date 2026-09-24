@@ -32,6 +32,8 @@ A few high-volume crawlers are refused by default, on every site:
 
 To close your site to AI engines, switch off **Readable and quotable by AI engines** on **Settings ▸ Access ▸ AI engines**: the project leaves `llms.txt` and `llms-full.txt`, and the named AI crawlers are refused in `robots.txt`. Search engines are unaffected.
 
+![Settings ▸ Access ▸ AI engines: the switch that keeps the site readable and quotable by AI engines](../images/admin/settings-access-ai-engines-dark.webp)
+
 <!-- widget:callout type=note -->
 
 On a [custom domain](../site/custom-domain.md), `llms.txt`, the summary block, the **Updated** date and most of the JSON-LD currently appear on `docsbook.io` addresses only. The Markdown copy of each page works on every address.

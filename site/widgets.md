@@ -77,6 +77,8 @@ Keep each category's posts in their own folder, such as `blog/compare/` and `blo
 
 **Customize ▸ Widgets** shows every widget with a preview and a switch, and all of them are on by default.
 
+![Customize ▸ Widgets: every page widget with a live preview and a switch](../images/admin/customize-widgets-dark.webp)
+
 - **Off** — the widget's markers are ignored and the region renders as plain Markdown. Your files aren't edited, so switching it back on restores it everywhere.
 - **Apply to a page** — turns on click-to-edit on your site, and the next block you click offers that widget first.
 

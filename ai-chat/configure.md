@@ -11,6 +11,8 @@ The reader chat is shaped in four places: **Settings ▸ Prompts** for what it i
 
 **Settings ▸ Prompts** holds what the chat is told.
 
+![Settings ▸ Prompts ▸ System Prompt: the instructions the reader chat follows](../images/admin/settings-prompts-system-dark.webp)
+
 - **Custom Questions** — three suggested questions shown in the empty chat, one field each.
 - **System Prompt** — the chat's persona, tone and rules, up to 16,000 characters, applied on every answer. It is added to Docsbook's own instructions rather than replacing them, so the rule to answer only from your docs stays in place.
 - **Skills** — a [skill](../brain/skills.md) reaches readers only when you tick **Public docs chat** for it; by default a skill runs on **Admin chat** and **Admin MCP** only.
@@ -31,6 +33,8 @@ The **Agent instructions** card on the same tab steers the agent that edits your
 ## Choose what it runs on
 
 **Settings ▸ Agent** decides the model, whose key pays and how the chat finds pages.
+
+![Settings ▸ Agent: the models for the admin chat and the reader chat, and the Semantic Search card](../images/admin/settings-agent-dark.webp)
 
 | Card | What it sets | Plan |
 |---|---|---|

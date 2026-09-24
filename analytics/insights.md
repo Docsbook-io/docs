@@ -7,6 +7,8 @@ description: "See docs traffic, sources, countries and AI-assistant visitors in 
 
 **Analytics ▸ Insights** shows who reads your documentation, where they came from and what they did — and, once you name the page that sells, what those readers were worth.
 
+![Analytics ▸ Insights: visitors, conversions and revenue over the period, with top pages and referrers](../images/admin/analytics-insights-dark.webp)
+
 ## What does the Insights tab show?
 
 A row of figures sits over one chart that draws the figure you select. Above them are the **online** count (readers active in the last 5 minutes), the range switcher and **Open Live Map**.
@@ -65,6 +67,8 @@ Until both are set, Revenue and Revenue/visitor show a dash and **Set up →**, 
 ## Follow one reader
 
 **Activity ▸ Users** lists every reader as one row: a pseudonym, their country, the translation they read, where they came from, when they reached a [goal](./goals.md), and **Potential**.
+
+![Activity ▸ Users: one row per reader with country, source, goals reached and Potential](../images/admin/activity-users-dark.webp)
 
 - **Potential** — what a reader is worth on one scale: full value once they reached your Call To Action URL, and a share of it for everyone else, by how closely they follow a converter's path; it ranks readers and is not a revenue forecast
 - **Filters** — **Close to converting**, **Came back** and **Reached no goal** find who to look at next

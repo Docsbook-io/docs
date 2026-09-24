@@ -45,7 +45,7 @@ The measure is what makes a run checkable: it names what the agent reads before 
 
 ## What is on the Triggers screen?
 
-![The Triggers screen: the Yours and Discover lenses, a search box, and the Docsbook agent card with its Turn on button above the grid of trigger cards](https://docsbook.io/landing-triggers.jpg)
+![Triggers: the Docsbook agent card at the top, then the grid of trigger cards, each with its own switch](../images/admin/triggers-dark.webp)
 
 - **Yours and Discover** — Discover shows every card; Yours shows only the ones you switched on.
 - **The Docsbook agent** — the card at the top. Press **Turn on** and it runs every hour, deciding for itself what your docs need most.

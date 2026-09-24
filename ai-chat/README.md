@@ -80,6 +80,10 @@ Four places show what the chat is doing, from the big picture down to one conver
 - **Activity ▸ Agent runs** — each reader question as a **Reader chat** run with the pages it read, its tokens and its cost, beside the runs your trigger cards started.
 - **Content gaps** — in Activity's **Chat** menu: questions the chat could not answer and searches that found nothing, as they happen.
 
+![Analytics ▸ Chat: what readers asked, grouped by topic, with each topic's answer rate](../images/admin/analytics-chat-dark.webp)
+
+![Activity ▸ Chat: one conversation opened, the transcript beside the reader's profile](../images/admin/activity-chat-dialog-dark.webp)
+
 ## Tell your agent
 
 Say it in one sentence — in the panel chat, or from Claude Code, Cursor or Codex through `docsbook_agent` ([Tell your agent, get discovered](../get-discovered.md)).

@@ -109,13 +109,15 @@ Each run's tokens and cost are in **Activity ▸ Agent runs**. The totals and yo
 
 ## Where do you see it working?
 
-![The Overview screen of the panel: the Docsbook agent card reads Online, on request, and counts what its memory folder holds](https://docsbook.io/landing-dashboard.jpg)
+![Overview ▸ Docsbook agent: the agent card with its status, what it knows about the product and audience, and how many entries its memory folder holds](../images/admin/overview-agent-dark.webp)
 
 - **Overview** — the **Docsbook agent** card: whether it works on request or on a schedule, what its memory folder holds, and its latest report.
 - **Activity ▸ Agent runs** — every run with its status, duration, tokens and cost; open one for a live step-by-step trace.
 - **Inbox** — its reports, and the questions it needs you to answer.
 - **Issues** — its issues and pull requests, each with a reason, a prediction and a date to check it.
 - **Triggers** — a running card turns the accent colour and shows a spinner; click it to open the run.
+
+![Activity ▸ Agent runs: one run's trace, each tool call on a timeline with its tokens and cost](../images/admin/activity-run-trace-dark.webp)
 
 ## FAQ
 
