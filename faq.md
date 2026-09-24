@@ -47,7 +47,7 @@ Claude Code, Cursor, Codex, VS Code, Windsurf, Gemini CLI, ChatGPT and Claude co
 
 ### How much does an agent run cost?
 
-$0.10 per run plus three times what its model tokens cost, capped at $50 a run, paid from your balance. See [pricing](./plans-and-pricing.md).
+$0.10 per run plus three times what its model tokens cost, capped at $50 a run, paid from your balance. See [pricing](./pricing/plans.md).
 
 <!-- /widget -->
 
@@ -89,7 +89,7 @@ No. A visitor is counted by a salted hash of their IP address and your project, 
 
 ### How much does Docsbook cost?
 
-Publishing is free. Pro is $20 a month with $20 of AI usage credited every month, and every account starts with a 14-day Pro trial with $5 of AI credit. See [pricing](./plans-and-pricing.md).
+Publishing is free. Pro is $20 a month with $20 of AI usage credited every month, and every account starts with a 14-day Pro trial with $5 of AI credit. See [pricing](./pricing/plans.md).
 
 ### What happens when the trial ends?
 

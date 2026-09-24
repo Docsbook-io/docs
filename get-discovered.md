@@ -106,7 +106,7 @@ The panel is the other place to say it: the chat button at the bottom right of t
 
 Each page change is a git commit delivered as a pull request — merged at once or left for you, per **Settings ▸ General ▸ When a change goes live** ([reviewing changes](./agent/review.md)). Every run appears in **Activity ▸ Agent runs** with its full trace, and a question the agent can't settle alone lands in **Inbox**.
 
-A run is billed to your balance: $0.10 per run plus three times what its model tokens cost, capped at $50 per run ([pricing](./plans-and-pricing.md)).
+A run is billed to your balance: $0.10 per run plus three times what its model tokens cost, capped at $50 per run ([pricing](./pricing/plans.md)).
 
 ## What else can your connection do?
 
@@ -147,7 +147,7 @@ No. One endpoint serves every project on your account; name the project in your 
 
 ### What does a connection cost?
 
-Discovery calls such as `get_info`, `find_tool` and `list_workspaces` are free. Other tool calls are billed per call from your balance, and agent runs as above — see [pricing](./plans-and-pricing.md).
+Discovery calls such as `get_info`, `find_tool` and `list_workspaces` are free. Other tool calls are billed per call from your balance, and agent runs as above — see [pricing](./pricing/plans.md).
 
 ### Can my readers' agents connect too?
 

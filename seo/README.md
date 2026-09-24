@@ -48,7 +48,7 @@ noindex: true
 
 ## What the agent does on its own
 
-On [Pro](../plans-and-pricing.md), the agent runs these loops from ready-made [triggers](../agent/triggers.md). Each one reads a signal, checks it against the rules of the [expertise catalog](../agent/expertise.md), and changes the docs in a [pull request](../agent/review.md).
+On [Pro](../pricing/plans.md), the agent runs these loops from ready-made [triggers](../agent/triggers.md). Each one reads a signal, checks it against the rules of the [expertise catalog](../agent/expertise.md), and changes the docs in a [pull request](../agent/review.md).
 
 <!-- widget:cards cols=2 icons=inline -->
 

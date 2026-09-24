@@ -493,7 +493,7 @@
     },
     {
       "from": "guides/advanced/premium",
-      "to": "plans-and-pricing",
+      "to": "pricing/plans",
       "at": "2026-09-24T00:00:00.000Z"
     },
     {
@@ -542,8 +542,8 @@
       "at": "2026-09-24T00:00:00.000Z"
     },
     {
-      "from": "pricing",
-      "to": "plans-and-pricing",
+      "from": "plans-and-pricing",
+      "to": "pricing/plans",
       "at": "2026-09-24T00:00:00.000Z"
     },
     {

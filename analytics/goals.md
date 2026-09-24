@@ -92,7 +92,7 @@ The owner server declares goals; it does not read their numbers. Read them in th
 
 **Why was my goal refused?** Definitions that could never measure anything are refused: an `event` goal naming an event your docs never emit, a worth of `0` (leave it empty instead), a funnel step naming a goal that does not exist, or a funnel with fewer than 2 or more than 8 steps. Softer problems — a single page as step 1, a funnel ending on a scroll, more than 6 goals — come back as warnings you can save past.
 
-**Do goals cost anything?** Defining goals and funnels works on every plan. Reading the **Goals & funnels** reports needs Pro, which the 14-day trial includes — see [Plans and pricing](../plans-and-pricing.md).
+**Do goals cost anything?** Defining goals and funnels works on every plan. Reading the **Goals & funnels** reports needs Pro, which the 14-day trial includes — see [Plans and pricing](../pricing/plans.md).
 
 ## Next steps
 

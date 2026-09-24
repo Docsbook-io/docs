@@ -42,7 +42,7 @@ A custom domain needs one DNS record. See [Custom domain](./custom-domain.md).
 | `callout` | An aside: note, info, tip, success, warning or danger | The sentence a reader must not miss |
 | `accordion` | Collapsible rows | FAQs, troubleshooting, reference to scan |
 | `stepper` | Numbered, connected steps | A procedure followed in order |
-| `pricing` | Plan cards, or a comparison matrix from a table | Choosing between plans |
+| `pricing` | Plan cards with a Monthly/Annual switch, or a feature comparison with a sticky plan header (`compare`) | Choosing between plans |
 | `api` | An endpoint playground with a request form | Letting readers send a real REST call |
 | `mcp` | An MCP tool's signature and arguments | Documenting one MCP tool |
 | `cta` | A compact block with buttons | The one next step on a page |

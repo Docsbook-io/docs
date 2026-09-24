@@ -40,7 +40,7 @@ On a [custom domain](../site/custom-domain.md), `llms.txt`, the summary block, t
 
 ## What the agent does on its own
 
-On [Pro](../plans-and-pricing.md), the agent works toward the goal every project has: be found on Google and in AI answers. For AI answers it runs two weekly [triggers](../agent/triggers.md) and a citability check, judged against the GEO axes of the [expertise catalog](../agent/expertise.md): Eligibility, AI crawlers, llms.txt, Passages, Content moves and Measurement.
+On [Pro](../pricing/plans.md), the agent works toward the goal every project has: be found on Google and in AI answers. For AI answers it runs two weekly [triggers](../agent/triggers.md) and a citability check, judged against the GEO axes of the [expertise catalog](../agent/expertise.md): Eligibility, AI crawlers, llms.txt, Passages, Content moves and Measurement.
 
 <!-- widget:cards cols=2 icons=inline -->
 

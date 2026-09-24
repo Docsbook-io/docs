@@ -29,6 +29,6 @@ Webhook alerts (`register_webhook_*`), the agent's [memory folder](../brain/memo
 
 ## Cost and access
 
-Each call has a flat price, shown on its page and charged to your balance — discovery calls such as `get_info` and `find_tool` are free. See [pricing](../plans-and-pricing.md).
+Each call has a flat price, shown on its page and charged to your balance — discovery calls such as `get_info` and `find_tool` are free. See [pricing](../pricing/plans.md).
 
 The pill beside a tool in the sidebar says whether it only **reads** a project or can **change** it.

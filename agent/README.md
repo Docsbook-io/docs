@@ -99,7 +99,7 @@ Yes — the safety is in how changes land, not in a promise:
 
 ## What does it cost?
 
-Agent runs are part of **Pro**: $20 a month, which comes back as $20 of AI usage every month. Every account gets one 14-day Pro trial with $5 of credit — the days count from when you first open a project, and the trial ends at whichever runs out first. See [Plans and pricing](../plans-and-pricing.md).
+Agent runs are part of **Pro**: $20 a month, which comes back as $20 of AI usage every month. Every account gets one 14-day Pro trial with $5 of credit — the days count from when you first open a project, and the trial ends at whichever runs out first. See [Plans and pricing](../pricing/plans.md).
 
 - **A run** costs $0.10 plus three times the model tokens it burns, capped at $50 for one run. A short task costs cents.
 - **Tool calls** the run makes to Docsbook are metered per call, like any MCP call.

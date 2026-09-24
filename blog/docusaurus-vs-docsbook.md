@@ -24,7 +24,7 @@ The licence is free; the hours are not. Price these line items against your own 
 | AI answers for readers | A separate service, plus the work to connect it |
 | Translations | Locale routing is built in; producing the translations is yours |
 
-On Docsbook these lines are part of the platform: hosting, the build and search on every plan, and AI answers and translations on [Pro](../plans-and-pricing.md), $20 a month per project with $20 of AI usage included.
+On Docsbook these lines are part of the platform: hosting, the build and search on every plan, and AI answers and translations on [Pro](../pricing/plans.md), $20 a month per project with $20 of AI usage included.
 
 ## When should you stay on Docusaurus?
 
@@ -97,6 +97,6 @@ The managed ones: Docsbook (AI chat on Pro), Mintlify (Assistant on Pro) and Git
 - [Migrating from Docusaurus](./migrating-from-docusaurus-to-docsbook.md) — Keep your URLs, convert admonitions and tabs {arrow-right-left}
 - [Quickstart](../quickstart.md) — From a repository to a live site {rocket}
 - [Find wins fast](../find-wins-fast.md) — How the agent picks the change that moves a number {zap}
-- [Plans and pricing](../plans-and-pricing.md) — What Pro includes and what AI usage costs {credit-card}
+- [Plans and pricing](../pricing/plans.md) — What Pro includes and what AI usage costs {credit-card}
 
 <!-- /widget -->

@@ -87,7 +87,7 @@ The [Docsbook agent](../agent/README.md) reads the same numbers when it works on
 
 **Why do my percentages carry a warning?** Under 30 visits in a window, a single visit moves a rate by whole points, so Insights says to treat them as a direction, not a measurement.
 
-**What happens to analytics after the trial?** Recording never stops. If the 14-day Pro trial ends, or its balance runs out, with no plan behind it, Docsbook stops showing analytics until you subscribe or top up — your docs stay published. See [Plans and pricing](../plans-and-pricing.md).
+**What happens to analytics after the trial?** Recording never stops. If the 14-day Pro trial ends, or its balance runs out, with no plan behind it, Docsbook stops showing analytics until you subscribe or top up — your docs stay published. See [Plans and pricing](../pricing/plans.md).
 
 ## Next steps
 

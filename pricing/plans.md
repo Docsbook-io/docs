@@ -1,69 +1,121 @@
 ---
 title: "Docsbook pricing: Free, Pro and Enterprise"
-description: "Docsbook pricing: Pro is $20 a month with $20 of AI usage included, every account gets a 14-day Pro trial with $5 of AI credit, and Enterprise is custom."
+description: "Docsbook pricing: Pro is $20 a month or $200 a year with $20 of AI usage included every month, every account gets a 14-day Pro trial with $5 of AI credit, and Enterprise is custom."
 ---
 
 # Pricing
 
-Your docs stay published for free, and you pay for AI work: Pro is $20 a month with $20 of AI usage credited back, and every account starts with a 14-day Pro trial.
+Your docs stay published for free, and you pay for AI work: Pro is $20 a month, or $200 a year with two months free, and every month comes back as $20 of AI usage.
 
-<!-- widget:pricing -->
+<!-- widget:pricing size=large cols=3 -->
 
-## Free
+## Free {rocket}
 
-**$0** / month
+**$0** / mo
 
-Where a project lands after the trial if you don't subscribe.
+For docs that don't need AI yet
+
+Unlimited projects and editors
 
 - Hosting, SSL and a custom domain
 - Web editor and GitHub sync
 - Search and custom branding
 - SEO and GEO markup on every page
+- MCP server for AI agents
 - Private docs and access control
-- Unlimited projects
-- ~~AI chat for your readers~~
-- ~~Agents and auto translations~~
-- ~~Analytics dashboards~~
 
 [Create a site](https://docsbook.io/create)
 
-## Pro
+## Pro {sparkles}
 
-**14-day free trial**
+Monthly: **$20** / mo
 
-**$20** / month
+Annual: **$200** / yr · 2 months free
 
-For docs that AI writes, keeps current, translates and answers from.
+For docs that AI writes and answers from
 
-- $20 of AI usage credited every month
+$20 of AI usage credited every month
+
+- Everything in Free {circle-plus}
 - AI chat that answers your readers
 - Agents that write, audit and maintain the docs
 - Live auto translations
+- Search by meaning
+- Analytics dashboards
 - Your own chat prompt and hooks
-- Overage past the allowance, up to $200 a month
-- Everything in Free
 
-[Start the free trial](https://docsbook.io/create)
+[Start the 14-day trial](https://docsbook.io/create)
 
-## Enterprise
+## Enterprise {building-2}
 
-Custom pricing
+**Custom** pricing
 
-For a team that works on one project from one shared balance.
+For a team on one shared balance
 
-- Everything in Pro
-- Bring your own AI key
+Teammates need no plan of their own
+
+- Everything in Pro {circle-plus}
 - One balance everyone on the project spends
-- Teammates need no plan of their own
+- Bring your own AI key
 - Setup and migration done for you
 - SSO, SCIM and RBAC
-- Priority support and a dedicated support engineer
+- A dedicated support engineer
 
 [Contact sales](mailto:support@docsbook.io?subject=Docsbook%20Enterprise)
 
 <!-- /widget -->
 
-Prices are in US dollars, billed monthly through Paddle. You manage or cancel a subscription with **Manage subscription** on **Settings ▸ Plan**.
+Every account starts with a 14-day Pro trial with $5 of AI credit and no card. Almost everything is in Pro: Enterprise adds a shared project balance, your own AI key and our team, not features Pro is missing.
+
+<!-- widget:pricing compare -->
+
+[Create a site](https://docsbook.io/create) · [Start the trial](https://docsbook.io/create) · [Contact sales](mailto:support@docsbook.io?subject=Docsbook%20Enterprise)
+
+| Platform {layout-grid} | Free {rocket} | Pro {sparkles} | Enterprise {building-2} |
+|---|---|---|---|
+| Projects | Unlimited | Unlimited | Unlimited |
+| Editors | Unlimited | Unlimited | Unlimited |
+| Hosting and SSL | ✓ | ✓ | ✓ |
+| Custom domain | ✓ | ✓ | ✓ |
+| Web editor | ✓ | ✓ | ✓ |
+| GitHub sync | ✓ | ✓ | ✓ |
+| Search | ✓ | ✓ | ✓ |
+| Custom branding | ✓ | ✓ | ✓ |
+| Content widgets | ✓ | ✓ | ✓ |
+| SEO and GEO markup | ✓ | ✓ | ✓ |
+| MCP server | ✓ | ✓ | ✓ |
+| Private docs and access control | ✓ | ✓ | ✓ |
+
+| AI {sparkles} | Free | Pro | Enterprise |
+|---|---|---|---|
+| AI usage included | — | $20 / month | Custom |
+| AI chat for readers | — | ✓ | ✓ |
+| Agents | — | ✓ | ✓ |
+| Autonomous growth agent | — | ✓ | ✓ |
+| Live auto translations | — | ✓ | ✓ |
+| Search by meaning | — | ✓ | ✓ |
+| Own chat prompt and hooks | — | ✓ | ✓ |
+| Overage past the allowance | — | Up to $200 / month | Custom |
+| Bring your own AI key | — | — | ✓ |
+
+| Analytics {chart-line} | Free | Pro | Enterprise |
+|---|---|---|---|
+| Traffic, sources and journeys | — | ✓ | ✓ |
+| Chat questions and dead ends | — | ✓ | ✓ |
+| Google Search rankings | — | ✓ | ✓ |
+| Bot crawls a month | 5,000 | 100,000 | 500,000 |
+
+| Support {life-buoy} | Free | Pro | Enterprise |
+|---|---|---|---|
+| Email support | ✓ | ✓ | ✓ |
+| Setup and migration done for you | — | — | ✓ |
+| SSO, SCIM and RBAC | — | — | ✓ |
+| Priority support | — | — | ✓ |
+| Dedicated support engineer | — | — | ✓ |
+
+<!-- /widget -->
+
+Prices are in US dollars, billed monthly or yearly through Paddle; a yearly Pro still credits $20 of AI usage every month. You manage or cancel a subscription with **Manage subscription** on **Settings ▸ Plan**.
 
 ## How does the free trial work?
 

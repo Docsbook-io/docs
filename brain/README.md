@@ -25,7 +25,7 @@ These work on a new project with nothing to set up:
 
 <!-- widget:callout type=info -->
 
-**Search by meaning is one switch.** Turn on **Enable semantic search** on the **Semantic Search** card in **Settings ▸ Agent** — it is part of [Pro](../plans-and-pricing.md), and on a trial it unlocks once a card is on file. Until then, every search answers by exact words.
+**Search by meaning is one switch.** Turn on **Enable semantic search** on the **Semantic Search** card in **Settings ▸ Agent** — it is part of [Pro](../pricing/plans.md), and on a trial it unlocks once a card is on file. Until then, every search answers by exact words.
 
 <!-- /widget -->
 

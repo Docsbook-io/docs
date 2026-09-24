@@ -89,7 +89,7 @@ Yes. Install the Docsbook GitHub App on the repository, and choose in **Settings
 
 ### Is it free?
 
-GitHub Pages and Docusaurus are free software you run yourself. Docsbook starts with a 14-day Pro trial with $5 of AI credit and no card; Pro is $20 a month per project ([Plans and pricing](../plans-and-pricing.md)).
+GitHub Pages and Docusaurus are free software you run yourself. Docsbook starts with a 14-day Pro trial with $5 of AI credit and no card; Pro is $20 a month per project ([Plans and pricing](../pricing/plans.md)).
 
 <!-- /widget -->
 

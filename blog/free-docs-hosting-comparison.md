@@ -18,7 +18,7 @@ Figures come from each vendor's own pricing and documentation pages, as of Septe
 | Netlify Free | $0 | 300 credits a month, hard limit: 15 credits per production deploy, 20 per GB of bandwidth | Docs framework, search |
 | Cloudflare Pages | $0 | Static requests free and unlimited; 500 builds a month, one at a time | Docs framework, search |
 | Read the Docs | Community plan, free for open-source projects | Ad-supported; paid Business plans start at $50 a month | The docs tool it builds: Sphinx, MkDocs, Docusaurus and others |
-| Docsbook | 14-day Pro trial with $5 of AI credit, no card | After the trial the site stays published; AI features need [Pro](../plans-and-pricing.md), $20 a month per project | Nothing to build or deploy |
+| Docsbook | 14-day Pro trial with $5 of AI credit, no card | After the trial the site stays published; AI features need [Pro](../pricing/plans.md), $20 a month per project | Nothing to build or deploy |
 
 ## What does "free" leave to you?
 
@@ -77,7 +77,7 @@ The site stays published as static pages, with search, for as long as you like. 
 
 - [Quickstart](../quickstart.md) — From a repository to a live site {rocket}
 - [How to host docs from GitHub](./how-to-host-docs-from-github.md) — GitHub Pages, Docusaurus and Docsbook, step by step {git-branch}
-- [Plans and pricing](../plans-and-pricing.md) — What Pro adds and what AI usage costs {credit-card}
+- [Plans and pricing](../pricing/plans.md) — What Pro adds and what AI usage costs {credit-card}
 - [Find wins fast](../find-wins-fast.md) — What the agent fixes first on a new site {zap}
 
 <!-- /widget -->

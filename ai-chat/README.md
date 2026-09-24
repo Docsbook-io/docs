@@ -23,7 +23,7 @@ On a Pro project the chat answers readers from the first publish, with nothing t
 
 ## Which plan, and what an answer costs
 
-Reader chat is part of **Pro** — $20 a month, with $20 of AI usage credited each month — and Enterprise. On Free the chat does not answer readers, even with your own API key; see [Plans and pricing](../plans-and-pricing.md).
+Reader chat is part of **Pro** — $20 a month, with $20 of AI usage credited each month — and Enterprise. On Free the chat does not answer readers, even with your own API key; see [Plans and pricing](../pricing/plans.md).
 
 - **Billed per answer** — each answer draws on your balance by the tokens it used, at the per-1M-token price shown beside the model on **Settings ▸ Agent ▸ AI Visitors Chat Model**.
 - **Your own key** — on Enterprise, answers made with **Your own AI API Key** are billed by your provider and leave the balance alone.

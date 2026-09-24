@@ -63,7 +63,7 @@ description: "Install the Acme CLI on macOS, Linux or Windows and check that it 
 
 - **The trial** — every account gets 14 days of Pro with $5 of AI credit, and no card.
 - **Without a plan** — the site stays published as static pages, search included.
-- **With [Pro](../plans-and-pricing.md)** — $20 a month per project adds the [AI chat](../ai-chat/README.md), the agents, translations and the analytics views.
+- **With [Pro](../pricing/plans.md)** — $20 a month per project adds the [AI chat](../ai-chat/README.md), the agents, translations and the analytics views.
 
 Every Docsbook site shows a small Powered by Docsbook badge.
 

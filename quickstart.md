@@ -7,7 +7,7 @@ description: "Go from a GitHub repo, a website or a short product description to
 
 Open [docsbook.io/create](https://docsbook.io/create), pick where your pages come from, and your documentation site is live the moment you sign in — ready to hand to the Docsbook agent.
 
-Nothing to install and no card. A GitHub account is optional, and every new account starts with a 14-day Pro trial that includes $5 of AI credit ([pricing](./plans-and-pricing.md)).
+Nothing to install and no card. A GitHub account is optional, and every new account starts with a 14-day Pro trial that includes $5 of AI credit ([pricing](./pricing/plans.md)).
 
 ## Create your site
 

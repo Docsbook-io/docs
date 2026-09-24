@@ -173,7 +173,7 @@ Triggers make the agent work; they do not message people. For a Slack, Discord o
 
 ## What does a trigger run cost?
 
-Every trigger run is an [agent run](./README.md), billed the same way: $0.10 plus three times the model tokens it burns, capped at $50 for one run, plus the Docsbook tools it calls. Agent runs are part of Pro — see [Plans and pricing](../plans-and-pricing.md).
+Every trigger run is an [agent run](./README.md), billed the same way: $0.10 plus three times the model tokens it burns, capped at $50 for one run, plus the Docsbook tools it calls. Agent runs are part of Pro — see [Plans and pricing](../pricing/plans.md).
 
 - **Cadence is the lever** — each ready-made card starts at the cadence its job is worth, and you can slow it down.
 - **Events are rate-limited** — an event trigger fires at most once every 10 minutes.

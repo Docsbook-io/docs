@@ -198,7 +198,7 @@ For a team that works from one shared balance.
 
 <!-- /widget -->
 
-What each part of the AI work costs: [Pricing](./plans-and-pricing.md).
+What each part of the AI work costs: [Pricing](./pricing/plans.md).
 
 <!-- widget:cta -->
 

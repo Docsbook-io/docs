@@ -19,7 +19,7 @@ GitBook facts below come from [gitbook.com/pricing](https://www.gitbook.com/pric
 | Navigation | `SUMMARY.md`, which GitBook rewrites when you reorder pages | Your folder tree; no config file |
 | Pricing model | Per site, plus $12 per user a month for additional users | Per project; editing the repository needs no Docsbook seat |
 | Start | Free plan: $0 per site, one user, no custom domain | 14-day Pro trial with $5 of AI credit, no card |
-| Paid plans | Premium $65 and Ultimate $249 per site a month, billed annually | [Pro](../plans-and-pricing.md) $20 a month per project, with $20 of AI usage included |
+| Paid plans | Premium $65 and Ultimate $249 per site a month, billed annually | [Pro](../pricing/plans.md) $20 a month per project, with $20 of AI usage included |
 | AI answers for readers | AI search on Premium; AI Assistant chat on Ultimate | [AI chat](../ai-chat/README.md) that cites the pages it used, on Pro |
 | Agent | GitBook Agent on every plan (10 messages a week on Free) | The [Docsbook agent](../agent/README.md) on Pro: pull requests, 49 ready-made triggers, 299 published rules |
 | `llms.txt`, Markdown pages, MCP server | On every plan | On every site |
@@ -35,7 +35,7 @@ The two bills grow with different things. GitBook charges per site and per edito
 - **Docsbook Pro** — $20 a month per project; the $20 comes back as AI usage for chat answers, agent runs and translations.
 - **Docsbook Enterprise** — arranged with the Docsbook team, with one balance everyone on the project spends.
 
-On Docsbook, anyone who can push to your repository can edit the docs, so adding an engineer adds nothing to the bill. Details are on [Plans and pricing](../plans-and-pricing.md).
+On Docsbook, anyone who can push to your repository can edit the docs, so adding an engineer adds nothing to the bill. Details are on [Plans and pricing](../pricing/plans.md).
 
 ## What happens after the site is live?
 
@@ -94,7 +94,7 @@ No. Every Docsbook site shows a small Powered by Docsbook badge, on every plan.
 
 - [Migrating from GitBook to Docsbook](./migrating-from-gitbook-to-docsbook.md) — Git Sync, block conversion and redirects {arrow-right-left}
 - [Find wins fast](../find-wins-fast.md) — How the agent picks the change that moves a number {zap}
-- [Plans and pricing](../plans-and-pricing.md) — What Pro includes and what AI usage costs {credit-card}
+- [Plans and pricing](../pricing/plans.md) — What Pro includes and what AI usage costs {credit-card}
 - [Quickstart](../quickstart.md) — From a repository to a live site {rocket}
 
 <!-- /widget -->

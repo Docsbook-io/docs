@@ -64,7 +64,7 @@ Ask in plain words: "Which German pages are behind?" See the [MCP tools referenc
 
 ## What it costs
 
-Translations are part of **Pro**, and the 14-day trial includes them; recording your docs' own language is free on every plan. Translating runs on your balance, and a page is only re-translated when its source changed ([Plans and pricing](../plans-and-pricing.md)).
+Translations are part of **Pro**, and the 14-day trial includes them; recording your docs' own language is free on every plan. Translating runs on your balance, and a page is only re-translated when its source changed ([Plans and pricing](../pricing/plans.md)).
 
 On Enterprise, you can pay your AI provider directly: ask the panel chat for the **Bring your own Translations API key** card. It takes a key from OpenRouter, OpenAI, Google Gemini, Anthropic or Vercel AI Gateway.
 
@@ -93,6 +93,6 @@ No. Docsbook stores them, and your repository keeps only the source language.
 - [Triggers](../agent/triggers.md) — The Translate cards and the rest of the catalog {bot}
 - [Custom domain](./custom-domain.md) — Serve every language on your own domain {globe}
 - [Search engines see you](../seo/README.md) — How translated pages feed your rankings {search-check}
-- [Plans and pricing](../plans-and-pricing.md) — What Pro includes {credit-card}
+- [Plans and pricing](../pricing/plans.md) — What Pro includes {credit-card}
 
 <!-- /widget -->

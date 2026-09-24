@@ -40,7 +40,7 @@ Your pick lands in the panel chat's input, naming the exact block. Add what only
 
 The sidebar, header and footer are clickable too: a sidebar entry offers **Rename**, **Icon**, **Move** and **Hide from the sidebar**. Drag a block by its handle to move it, press **+** between two blocks to insert one, or use **Add a page** at the bottom of the sidebar.
 
-The editor and the panel chat run the Docsbook agent, so they draw on your balance ([Plans and pricing](../plans-and-pricing.md)). Editing a file on GitHub costs nothing.
+The editor and the panel chat run the Docsbook agent, so they draw on your balance ([Plans and pricing](../pricing/plans.md)). Editing a file on GitHub costs nothing.
 
 ## Publish from your GitHub repository
 

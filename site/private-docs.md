@@ -81,6 +81,6 @@ The Docsbook agent never changes who can read your site: ask it in the panel cha
 - [Custom domain](./custom-domain.md) — Serve the private site on your own domain {globe}
 - [Edit and publish](./editing.md) — Hosted repositories, GitHub sync and review {pencil}
 - [Public MCP server](../brain/mcp-server.md) — What readers' agents can reach, and what they can't {plug}
-- [Plans and pricing](../plans-and-pricing.md) — What each plan includes {credit-card}
+- [Plans and pricing](../pricing/plans.md) — What each plan includes {credit-card}
 
 <!-- /widget -->

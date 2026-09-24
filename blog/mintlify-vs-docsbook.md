@@ -16,7 +16,7 @@ Both publish docs from Git with AI built in. Mintlify facts below come from [min
 | Setup | `docs.json`, the required config file that declares navigation, appearance and integrations | No config file: folders become the sidebar, `README.md` the home page |
 | Page format | MDX, with built-in and custom components | Markdown, plus [widget](../site/widgets.md) markers that stay invisible on GitHub |
 | Free start | Starter: $0 a month, 5 editor seats, custom domain, web editor, MCP server | 14-day Pro trial with $5 of AI credit, no card |
-| Paid plan | Pro: $450 a month billed annually, $540 billed monthly | [Pro](../plans-and-pricing.md): $20 a month per project, $20 of AI usage included |
+| Paid plan | Pro: $450 a month billed annually, $540 billed monthly | [Pro](../pricing/plans.md): $20 a month per project, $20 of AI usage included |
 | AI answers for readers | Assistant on Pro, 25 credits per answer | [AI chat](../ai-chat/README.md) that cites the pages it used, on Pro |
 | Writing agent | Agent and automations on Pro | The [Docsbook agent](../agent/README.md) on Pro: 49 ready-made triggers, 299 published rules |
 | Analytics | Pro and up | During the trial and on paid plans |
@@ -33,7 +33,7 @@ Mintlify prices by plan and credits; Docsbook prices by project and AI usage.
 - **Docsbook Pro** — $20 a month per project; the $20 comes back as AI usage, and past it usage continues up to a cap you set ($200 a month by default).
 - **Enterprise** — both sell it through a conversation, with no published price.
 
-Current Docsbook numbers live on [Plans and pricing](../plans-and-pricing.md).
+Current Docsbook numbers live on [Plans and pricing](../pricing/plans.md).
 
 ## How different is the setup?
 
