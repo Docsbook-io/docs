@@ -1,13 +1,32 @@
 ---
 title: "Free documentation hosting compared: six real options"
 description: "GitHub Pages, Vercel, Netlify, Cloudflare Pages, Read the Docs and Docsbook compared as of September 2026: free-tier limits, commercial use and what you add."
+layout: landing
 ---
 
+<!-- widget:story share -->
+
+[All posts](../README.md)
+
+**Compare**
+
 # Free documentation hosting compared
+
+[Start free](https://docsbook.io/?start=1)
+
+**Free hosting, compared** {bg:purple}
 
 Every free host below puts your docs online; they differ in their limits, in whether a business may use them, and in how much of a documentation site you still have to build.
 
 Figures come from each vendor's own pricing and documentation pages, as of September 2026. Check them again before you commit: free tiers change.
+
+- **Category** — Compare
+- **Facts checked** — September 2026
+- **Reading time** — 4 min
+
+[Plans and pricing](../../pricing/plans.md)
+
+<!-- /widget -->
 
 ## The six options at a glance
 
@@ -18,7 +37,7 @@ Figures come from each vendor's own pricing and documentation pages, as of Septe
 | Netlify Free | $0 | 300 credits a month, hard limit: 15 credits per production deploy, 20 per GB of bandwidth | Docs framework, search |
 | Cloudflare Pages | $0 | Static requests free and unlimited; 500 builds a month, one at a time | Docs framework, search |
 | Read the Docs | Community plan, free for open-source projects | Ad-supported; paid Business plans start at $50 a month | The docs tool it builds: Sphinx, MkDocs, Docusaurus and others |
-| Docsbook | 14-day Pro trial with $5 of AI credit, no card | After the trial the site stays published; AI features need [Pro](../pricing/plans.md), $20 a month per project | Nothing to build or deploy |
+| Docsbook | 14-day Pro trial with $5 of AI credit, no card | After the trial the site stays published; AI features need [Pro](../../pricing/plans.md), $20 a month per project | Nothing to build or deploy |
 
 ## What does "free" leave to you?
 
@@ -35,10 +54,10 @@ Docsbook hosts the site and generates the parts a static host leaves out. After 
 
 - **The site** — every Markdown file in your repository, with `README.md` as the home page and folders as the sidebar.
 - **Search** — a search box on every page.
-- **For search engines and AI** — a sitemap, JSON-LD, [`llms.txt`](../geo/llms-txt.md) and a Markdown copy of each page.
+- **For search engines and AI** — a sitemap, JSON-LD, [`llms.txt`](../../geo/llms-txt.md) and a Markdown copy of each page.
 - **Your domain** — attached in **Settings ▸ Domain & API** once the trial has ended or you subscribe.
 
-What switches off without a plan: the [AI chat](../ai-chat/README.md), the agents, [translations](../site/translations.md) and the analytics views. Every Docsbook site shows a small Powered by Docsbook badge.
+What switches off without a plan: the [AI chat](../../ai-chat/README.md), the agents, [translations](../../site/translations.md) and the analytics views. Every Docsbook site shows a small Powered by Docsbook badge.
 
 ## Which free option should you pick?
 
@@ -51,7 +70,7 @@ What switches off without a plan: the [AI chat](../ai-chat/README.md), the agent
 
 <!-- /widget -->
 
-Free hosting solves serving; it does not tell you which page readers searched for and never found, or why ChatGPT cites a competitor instead of you. Docsbook's agents work on exactly that: [Find wins fast](../find-wins-fast.md).
+Free hosting solves serving; it does not tell you which page readers searched for and never found, or why ChatGPT cites a competitor instead of you. Docsbook's agents work on exactly that: [Find wins fast](../../find-wins-fast.md).
 
 ## FAQ
 
@@ -75,9 +94,9 @@ The site stays published as static pages, with search, for as long as you like. 
 
 <!-- widget:cards plain cols=2 arrow=hover -->
 
-- [Quickstart](../quickstart.md) — From a repository to a live site {rocket}
-- [How to host docs from GitHub](./how-to-host-docs-from-github.md) — GitHub Pages, Docusaurus and Docsbook, step by step {git-branch}
-- [Plans and pricing](../pricing/plans.md) — What Pro adds and what AI usage costs {credit-card}
-- [Find wins fast](../find-wins-fast.md) — What the agent fixes first on a new site {zap}
+- [Quickstart](../../quickstart.md) — From a repository to a live site {rocket}
+- [How to host docs from GitHub](../migrate/how-to-host-docs-from-github.md) — GitHub Pages, Docusaurus and Docsbook, step by step {git-branch}
+- [Plans and pricing](../../pricing/plans.md) — What Pro adds and what AI usage costs {credit-card}
+- [Find wins fast](../../find-wins-fast.md) — What the agent fixes first on a new site {zap}
 
 <!-- /widget -->

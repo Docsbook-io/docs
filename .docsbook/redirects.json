@@ -257,13 +257,18 @@
       "at": "2026-09-24T00:00:00.000Z"
     },
     {
+      "from": "blog/ai-search-documentation",
+      "to": "blog/get-found/ai-search-documentation",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
       "from": "blog/api-documentation-best-practices-2026",
       "to": "blog/introduction",
       "at": "2026-09-24T00:00:00.000Z"
     },
     {
       "from": "blog/best-docs-platforms-for-startups-2026",
-      "to": "blog/free-docs-hosting-comparison",
+      "to": "blog/compare/free-docs-hosting-comparison",
       "at": "2026-09-24T00:00:00.000Z"
     },
     {
@@ -302,8 +307,13 @@
       "at": "2026-09-24T00:00:00.000Z"
     },
     {
+      "from": "blog/docusaurus-vs-docsbook",
+      "to": "blog/compare/docusaurus-vs-docsbook",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
       "from": "blog/docusaurus-vs-docsbook-2026",
-      "to": "blog/docusaurus-vs-docsbook",
+      "to": "blog/compare/docusaurus-vs-docsbook",
       "at": "2026-09-24T00:00:00.000Z"
     },
     {
@@ -312,13 +322,53 @@
       "at": "2026-09-24T00:00:00.000Z"
     },
     {
+      "from": "blog/free-docs-hosting-comparison",
+      "to": "blog/compare/free-docs-hosting-comparison",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/gitbook-vs-docsbook",
+      "to": "blog/compare/gitbook-vs-docsbook",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/how-to-get-docs-cited-by-chatgpt",
+      "to": "blog/get-found/how-to-get-docs-cited-by-chatgpt",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/how-to-host-docs-from-github",
+      "to": "blog/migrate/how-to-host-docs-from-github",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
       "from": "blog/json-ld-for-documentation",
       "to": "seo/introduction",
       "at": "2026-09-24T00:00:00.000Z"
     },
     {
+      "from": "blog/llms-txt-guide",
+      "to": "blog/get-found/llms-txt-guide",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
       "from": "blog/mcp-server-for-documentation",
       "to": "brain/mcp-server",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/migrating-from-docusaurus-to-docsbook",
+      "to": "blog/migrate/migrating-from-docusaurus-to-docsbook",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/migrating-from-gitbook-to-docsbook",
+      "to": "blog/migrate/migrating-from-gitbook-to-docsbook",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "from": "blog/mintlify-vs-docsbook",
+      "to": "blog/compare/mintlify-vs-docsbook",
       "at": "2026-09-24T00:00:00.000Z"
     },
     {
@@ -337,8 +387,13 @@
       "at": "2026-09-24T00:00:00.000Z"
     },
     {
+      "from": "blog/readme-md-to-docs-site",
+      "to": "blog/migrate/readme-md-to-docs-site",
+      "at": "2026-09-24T00:00:00.000Z"
+    },
+    {
       "from": "blog/readme-vs-docsbook",
-      "to": "blog/readme-md-to-docs-site",
+      "to": "blog/migrate/readme-md-to-docs-site",
       "at": "2026-09-24T00:00:00.000Z"
     },
     {
@@ -353,7 +408,7 @@
     },
     {
       "from": "blog/why-readme-only-projects-need-a-docs-site",
-      "to": "blog/readme-md-to-docs-site",
+      "to": "blog/migrate/readme-md-to-docs-site",
       "at": "2026-09-24T00:00:00.000Z"
     },
     {
@@ -463,7 +518,7 @@
     },
     {
       "from": "gitbook-alternative",
-      "to": "blog/gitbook-vs-docsbook",
+      "to": "blog/compare/gitbook-vs-docsbook",
       "at": "2026-09-24T00:00:00.000Z"
     },
     {
@@ -533,7 +588,7 @@
     },
     {
       "from": "mintlify-alternative",
-      "to": "blog/mintlify-vs-docsbook",
+      "to": "blog/compare/mintlify-vs-docsbook",
       "at": "2026-09-24T00:00:00.000Z"
     },
     {

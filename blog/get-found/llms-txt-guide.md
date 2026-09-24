@@ -1,13 +1,40 @@
 ---
 title: "llms.txt explained: the complete guide for docs sites"
 description: "What llms.txt is, what the v2 spec requires, how it differs from robots.txt and sitemap.xml, what the evidence says it does, and what Docsbook generates."
+layout: landing
 ---
 
+<!-- widget:story share -->
+
+[All posts](../README.md)
+
+**Get found**
+
 # llms.txt explained
+
+[Start free](https://docsbook.io/?start=1)
+
+**llms.txt** {bg:violet}
 
 `llms.txt` is a Markdown file at the root of a site that lists its most useful pages for AI tools; it is an open proposal rather than a standard, and Docsbook generates one for every site.
 
 The proposal is Jeremy Howard's, published at [llmstxt.org](https://llmstxt.org/): version 1 on September 3, 2024, version 2 on August 10, 2026.
+
+- **Category** — Get found
+- **Facts checked** — September 2026
+- **Reading time** — 4 min
+
+[Get discovered](../../get-discovered.md)
+
+<!-- /widget -->
+
+<!-- widget:quote -->
+
+> We propose adding a /llms.txt markdown file to websites to provide LLM-friendly content.
+
+**Jeremy Howard** — author of the llms.txt proposal, [llmstxt.org](https://llmstxt.org/)
+
+<!-- /widget -->
 
 ## What goes in an llms.txt file?
 
@@ -58,7 +85,7 @@ Treat it as cheap help for an agent that a person points at your docs, such as a
 
 <!-- widget:callout type=note -->
 
-The Docsbook agent audits against the same evidence: the `llms.txt` axis on **Analytics ▸ Audit** holds 9 rules, each tied to its published source. See [Expertise](../agent/expertise.md).
+The Docsbook agent audits against the same evidence: the `llms.txt` axis on **Analytics ▸ Audit** holds 9 rules, each tied to its published source. See [Expertise](../../agent/expertise.md).
 
 <!-- /widget -->
 
@@ -69,7 +96,7 @@ Every Docsbook site gets these with nothing to switch on:
 - **`llms.txt`** — every public page with its URL and a link to its Markdown copy, plus the languages the site is published in.
 - **`llms-full.txt`** — the full text of the pages in one file, up to 1,000 pages or 3 MB.
 - **A Markdown copy of every page** — the **View as Markdown** item in each page's **Copy page** menu.
-- **An [MCP server](../brain/mcp-server.md)** — for agents that would rather query your docs than read a file.
+- **An [MCP server](../../brain/mcp-server.md)** — for agents that would rather query your docs than read a file.
 
 Both files live on the site's `docsbook.io` address, for example `https://<owner>.docsbook.io/llms.txt`, and follow the repository as it changes. Turning off **AI engines** in **Settings ▸ Access** removes the project from `llms.txt` and asks AI crawlers to stay away.
 
@@ -81,7 +108,7 @@ Fetch it and read the top:
 curl -s https://<owner>.docsbook.io/llms.txt | head -20
 ```
 
-It should open with a `#` heading and a `>` summary, and every link should load. For the full picture of what AI engines do with your site, see [AI visibility](../geo/ai-visibility.md).
+It should open with a `#` heading and a `>` summary, and every link should load. For the full picture of what AI engines do with your site, see [AI visibility](../../geo/ai-visibility.md).
 
 ## FAQ
 
@@ -105,9 +132,9 @@ Google says you don't need AI text files to appear in AI Overviews or AI Mode. A
 
 <!-- widget:cards plain cols=2 arrow=hover -->
 
-- [llms.txt and Markdown for AI](../geo/llms-txt.md) — Exactly what Docsbook publishes for AI tools {file-text}
+- [llms.txt and Markdown for AI](../../geo/llms-txt.md) — Exactly what Docsbook publishes for AI tools {file-text}
 - [How to get cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — What actually moves AI citations {quote}
-- [AI engines read and cite you](../geo/README.md) — The whole GEO side of Docsbook {sparkles}
-- [Find wins fast](../find-wins-fast.md) — How the agent picks the next change {zap}
+- [AI engines read and cite you](../../geo/README.md) — The whole GEO side of Docsbook {sparkles}
+- [Find wins fast](../../find-wins-fast.md) — How the agent picks the next change {zap}
 
 <!-- /widget -->

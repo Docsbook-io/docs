@@ -1,13 +1,32 @@
 ---
 title: "Migrating from Docusaurus to Docsbook, step by step"
 description: "Move a Docusaurus site to Docsbook: keep your /docs URLs, convert admonitions and tabs, drop sidebars.js and the build, and redirect the pages that changed."
+layout: landing
 ---
+
+<!-- widget:story share -->
+
+[All posts](../README.md)
+
+**Migrate**
 
 # Migrating from Docusaurus to Docsbook
 
+[Start free](https://docsbook.io/?start=1)
+
+**Docusaurus → Docsbook** {bg:rust}
+
 Point Docsbook at the repository that holds your Docusaurus `docs/` folder, convert admonitions and tabs, and your pages keep their `/docs/…` URLs with no build step.
 
-Docusaurus details below are from [docusaurus.io](https://docusaurus.io/docs) as of September 2026. If you are still deciding whether to move, read [Docusaurus alternatives in 2026](./docusaurus-vs-docsbook.md) first.
+Docusaurus details below are from [docusaurus.io](https://docusaurus.io/docs) as of September 2026. If you are still deciding whether to move, read [Docusaurus alternatives in 2026](../compare/docusaurus-vs-docsbook.md) first.
+
+- **Category** — Migrate
+- **Facts checked** — September 2026
+- **Reading time** — 4 min
+
+[Quickstart](../../quickstart.md)
+
+<!-- /widget -->
 
 ## How do I move from Docusaurus to Docsbook?
 
@@ -19,7 +38,7 @@ Docusaurus details below are from [docusaurus.io](https://docusaurus.io/docs) as
 
 ### Convert admonitions and tabs
 
-Docsbook does not compile MDX, so `:::note` shows up as text and tabs lose their switcher. Swap them for [widgets](../site/widgets.md) using the table below.
+Docsbook does not compile MDX, so `:::note` shows up as text and tabs lose their switcher. Swap them for [widgets](../../site/widgets.md) using the table below.
 
 ### Take React out of the pages
 
@@ -33,7 +52,7 @@ Docusaurus serves `static/img/diagram.png` at `/img/diagram.png`. Docsbook resol
 
 Pages whose Docusaurus URL came from a number prefix or a `slug` get a new URL on Docsbook. Rename them, or map the old path in `.docsbook/redirects.json`.
 
-**On a [custom domain](../site/custom-domain.md)** the redirects file does not fire yet — it works on the site's `docsbook.io` address — so keep the old paths wherever you can.
+**On a [custom domain](../../site/custom-domain.md)** the redirects file does not fire yet — it works on the site's `docsbook.io` address — so keep the old paths wherever you can.
 
 ### Move the domain and retire the build
 
@@ -102,15 +121,15 @@ Both sides are page paths without `.md`, up to 500 entries. When the agent renam
 
 ## Can the agent do the conversion?
 
-Yes. Tell the Docsbook agent in one sentence, from Claude Code, Cursor or the panel chat ([Get discovered](../get-discovered.md)):
+Yes. Tell the Docsbook agent in one sentence, from Claude Code, Cursor or the panel chat ([Get discovered](../../get-discovered.md)):
 
 ```text
 Convert the Docusaurus admonitions and tabs in docs/ to Docsbook callouts and tabs, and remove the MDX imports.
 ```
 
-It opens a [pull request](../agent/review.md); with **Auto-merge** off, the change waits for your approval. On a repository in your own GitHub account, install the Docsbook GitHub App with **Contents: Read and write** first.
+It opens a [pull request](../../agent/review.md); with **Auto-merge** off, the change waits for your approval. On a repository in your own GitHub account, install the Docsbook GitHub App with **Contents: Read and write** first.
 
-After the move, the same agent keeps looking for the next win: [Find wins fast](../find-wins-fast.md).
+After the move, the same agent keeps looking for the next win: [Find wins fast](../../find-wins-fast.md).
 
 ## FAQ
 
@@ -134,9 +153,9 @@ Yes. Connecting the repository publishes a second site on a `docsbook.io` addres
 
 <!-- widget:cards plain cols=2 arrow=hover -->
 
-- [Docusaurus alternatives in 2026](./docusaurus-vs-docsbook.md) — When to stay, when to move {git-compare}
-- [Widgets](../site/widgets.md) — Callouts, tabs, steppers and cards in plain Markdown {layers}
-- [Custom domain](../site/custom-domain.md) — Serve the docs from your own domain {globe}
-- [Find wins fast](../find-wins-fast.md) — What the agent fixes first after you move {zap}
+- [Docusaurus alternatives in 2026](../compare/docusaurus-vs-docsbook.md) — When to stay, when to move {git-compare}
+- [Widgets](../../site/widgets.md) — Callouts, tabs, steppers and cards in plain Markdown {layers}
+- [Custom domain](../../site/custom-domain.md) — Serve the docs from your own domain {globe}
+- [Find wins fast](../../find-wins-fast.md) — What the agent fixes first after you move {zap}
 
 <!-- /widget -->

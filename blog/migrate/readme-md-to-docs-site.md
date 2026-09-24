@@ -1,13 +1,31 @@
 ---
 title: "Turn your README.md into a real documentation site"
 description: "Publish your GitHub README.md and Markdown files as a documentation site with search, a sidebar and llms.txt — no config file, no build step, no rewrite."
+layout: landing
 ---
 
+<!-- widget:story share -->
+
+[All posts](../README.md)
+
+**Migrate**
+
 # Turn your README.md into a real documentation site
+
+[Start free](https://docsbook.io/?start=1)
+
+**README.md → docs site** {bg:amber}
 
 Connect the repository to Docsbook and your `README.md` becomes the home page of a documentation site, with every other Markdown file as a page and your folders as the sidebar.
 
 Nothing in the repository changes, and there is no config file or build step to add.
+
+- **Category** — Migrate
+- **Reading time** — 4 min
+
+[Quickstart](../../quickstart.md)
+
+<!-- /widget -->
 
 ## What does a site add to a README?
 
@@ -15,7 +33,7 @@ A README is one long page at one URL. A site gives each topic its own page, whic
 
 - **One URL per topic** — each Markdown file gets its own page, search title and description.
 - **A sidebar and a search box** — readers jump to the section instead of scrolling one file.
-- **Copies for machines** — [`llms.txt`](../geo/llms-txt.md), a Markdown copy of each page and a sitemap.
+- **Copies for machines** — [`llms.txt`](../../geo/llms-txt.md), a Markdown copy of each page and a sitemap.
 - **A Copy page menu** — readers open any page in ChatGPT, Claude or Cursor with one click.
 
 ## How do I publish my README?
@@ -63,20 +81,20 @@ description: "Install the Acme CLI on macOS, Linux or Windows and check that it 
 
 - **The trial** — every account gets 14 days of Pro with $5 of AI credit, and no card.
 - **Without a plan** — the site stays published as static pages, search included.
-- **With [Pro](../pricing/plans.md)** — $20 a month per project adds the [AI chat](../ai-chat/README.md), the agents, translations and the analytics views.
+- **With [Pro](../../pricing/plans.md)** — $20 a month per project adds the [AI chat](../../ai-chat/README.md), the agents, translations and the analytics views.
 
 Every Docsbook site shows a small Powered by Docsbook badge.
 
 ## What should I ask the agent next?
 
-Once the site exists, hand the next step to the Docsbook agent in one sentence, from Claude Code, Cursor or the panel chat ([Get discovered](../get-discovered.md)):
+Once the site exists, hand the next step to the Docsbook agent in one sentence, from Claude Code, Cursor or the panel chat ([Get discovered](../../get-discovered.md)):
 
 ```text
 Split our README into a quickstart, an installation page and a configuration reference.
 Find the questions people search for that our docs don't answer, and write those pages.
 ```
 
-Each change arrives as a pull request; with **Auto-merge** off, it waits for your approval. [Find wins fast](../find-wins-fast.md) shows how the agent decides what to do first.
+Each change arrives as a pull request; with **Auto-merge** off, it waits for your approval. [Find wins fast](../../find-wins-fast.md) shows how the agent decides what to do first.
 
 ## FAQ
 
@@ -92,7 +110,7 @@ No. Logo, colours, fonts, header, sidebars and footer are set under **Customize*
 
 ### Can I leave later?
 
-Yes. Your Markdown never leaves your repository, and the [widget](../site/widgets.md) markers Docsbook reads are HTML comments that stay invisible on GitHub.
+Yes. Your Markdown never leaves your repository, and the [widget](../../site/widgets.md) markers Docsbook reads are HTML comments that stay invisible on GitHub.
 
 ### Does Docsbook support MDX?
 
@@ -104,9 +122,9 @@ Yes. Your Markdown never leaves your repository, and the [widget](../site/widget
 
 <!-- widget:cards plain cols=2 arrow=hover -->
 
-- [Quickstart](../quickstart.md) — From a repository to a live site {rocket}
-- [Edit and publish](../site/editing.md) — Web editor, GitHub sync and review mode {git-branch}
-- [llms.txt and Markdown for AI](../geo/llms-txt.md) — What AI engines read from your site {file-text}
+- [Quickstart](../../quickstart.md) — From a repository to a live site {rocket}
+- [Edit and publish](../../site/editing.md) — Web editor, GitHub sync and review mode {git-branch}
+- [llms.txt and Markdown for AI](../../geo/llms-txt.md) — What AI engines read from your site {file-text}
 - [How to host docs from GitHub](./how-to-host-docs-from-github.md) — The other two ways, compared {git-compare}
 
 <!-- /widget -->
