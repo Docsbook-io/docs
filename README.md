@@ -21,8 +21,6 @@ Docsbook publishes your docs and puts AI agents to work on them. They check your
 
 ![Docsbook](mark:docsbook)
 
-Works with Claude Code, Cursor, Codex and any MCP client.
-
 <!-- /widget -->
 
 <!-- widget:cards feature cols=2 -->
