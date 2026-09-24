@@ -1,6 +1,8 @@
 ---
 title: "Docsbook: docs that AI agents grow, rank and keep true"
 description: "Publish your docs in minutes. Docsbook's AI agents find the fastest wins in Google and AI answers, ship each fix as a pull request and measure what it moved."
+status: generated
+version: "0.2"
 ---
 
 <!-- widget:hero size=large -->
@@ -22,6 +24,13 @@ claude mcp add --transport http docsbook https://docsbook.io/api/mcp/server
 ```
 
 One endpoint for Claude Code, Cursor, Codex and any MCP client.
+
+<!-- /widget -->
+
+<!-- widget:cards feature cols=2 -->
+
+- [Quick start](./quickstart.md) — Go from zero to your first task. {rocket} {color:accent}
+- [Build AI agents](./agent/README.md) — Agent patterns and worked examples. {bot} {color:accent}
 
 <!-- /widget -->
 
