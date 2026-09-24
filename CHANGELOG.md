@@ -41,9 +41,9 @@ Every action a documentation task takes is now a line on a live timeline, privat
 - **The Assistant, Analytics, Customize and Settings shortcuts on the doc toolbar now open beside your doc instead of replacing it.** Clicking one used to leave the page you were reading and load the dashboard in its place, so getting back meant the browser's back button. Each shortcut opens in its own tab now, and the doc you were reading stays exactly where you left it. `Panel`
 - **A conversation started from the floating Ask Docs button now stays docked to the corner it opened from**, as a small widget-style card (a full-width sheet on mobile), for the rest of that conversation. It used to hand off to the same full-viewport view every other entry point uses the moment you sent your first message. Every other way to open chat — the header's Ask AI, a pending search or outline query, the admin toolbar, `?chat=1` — is unchanged. `AI chat`
 - **The install link every agent task uses to enable its live timeline can no longer be taken over by a project name.** That link reached the install script by a coincidence of routing rather than by design; a project created with that exact name would have silently broken every agent task's step-by-step timeline afterward, with nothing anywhere saying why. That name is now reserved and can never belong to a project, the same way a handful of other system paths already are. `Agents`
-- **A collaborator invite now links straight to the docs, not only to the sign-in-gated accept page.** Deciding whether to join a project used to mean creating an account first and looking around after; the invite email now also opens the documentation site itself. `Collaboration`
+- **A collaborator invite now links straight to the docs, not only to the sign-in-gated accept page.** Deciding whether to join a project used to mean creating an account first and looking around after; the invite email now also opens the documentation site itself. `Panel`
 - **The trial-wallet warnings this page promises now actually fire.** A trial without an expiry date (running since 15 September) never triggered its 50%, 75% and 90% notices — a field-name mismatch made every one of them silently read as not running a trial at all, for the five days between shipping and this fix. `Pricing`
-- **The Feedback tab in Logs now shows the same empty state as every other tab on the strip when there is nothing to show**, instead of a plainer placeholder of its own. Its **Fix it** action now opens the admin chat directly. `Logs`
+- **The Feedback tab in Logs now shows the same empty state as every other tab on the strip when there is nothing to show**, instead of a plainer placeholder of its own. Its **Fix it** action now opens the admin chat directly. `Feeds`
 
 ## 2026-09-20 — A translated site, translated all the way through
 
@@ -81,7 +81,7 @@ The panel opens on four cards again — the live site, the commit it serves, the
 - A reading that could not be taken now shows as a dash rather than a zero, and a week-on-week figure with no previous week to compare against shows no percentage at all — **nothing on this page is a number nobody measured**. `Analytics`
 - **The bottom of the sidebar names the organization you have open**, not your own account, so the one label on screen agrees with the row ticked inside the menu. `Panel`
 - **An organization's dashboard keeps that same organization switcher at the bottom** instead of turning into a static name, and its sidebar header now lists that organization's projects — so the panel answers "which project" and "which organization" in the same two places wherever you are. `Panel`
-- A header link now has a **New tab** toggle, so you can keep readers on the current tab for a link that used to force a new one open (and vice versa) instead of that always being decided by whether the URL is external. `Design`
+- A header link now has a **New tab** toggle, so you can keep readers on the current tab for a link that used to force a new one open (and vice versa) instead of that always being decided by whether the URL is external. `Content`
 
 ## 2026-09-19 — A new project in about a second
 
@@ -186,7 +186,7 @@ Make a team in one click and buy one plan for all of its projects, see everythin
 
 ### New releases
 
-- **Organizations**: make a team in one click, invite someone once for access to every project in it, and buy a single plan for the whole team instead of per project. `Organizations`
+- **Organizations**: make a team in one click, invite someone once for access to every project in it, and buy a single plan for the whole team instead of per project. `Panel`
 - **Integrations** is now one grid of everything a project is wired to — 14 built-in connectors plus 2,500 more by search, several accounts per service, and 29 occasions that can wake an agent. `Integrations`
 - Issues and pull requests are now one list, filterable with GitHub's own syntax, each row carrying the outcome it claims to move and how much of that claim actually landed — plus a comment box that puts the assistant to work on the thread. `Issues`
 - Documentation pages can now carry a status — `draft` → `review` → `approved` → `locked` — so an agent knows which pages are actually signed off before it builds on them; only a person, through `set_doc_status`, can approve or lock one. `MCP`
@@ -219,7 +219,7 @@ Canonical URLs, sitemaps, JSON-LD, TL;DRs and FAQ markup ship by default with no
 ### New releases
 
 - A new **Agent activity** view shows every call an agent has made, read as a conversation, with one-click scheduling from hourly to daily. `Agents`
-- Audits became **Opportunities**: a flat, ranked list of searches you don't win yet, each with the competitor holding it today and what winning it would be worth. `Overview`
+- Audits became **Opportunities**: a flat, ranked list of searches you don't win yet, each with the competitor holding it today and what winning it would be worth. `Panel`
 
 ### Improvements
 
@@ -241,7 +241,7 @@ Docsbook watches for pages that fall behind and hands the translating to whateve
 ### Improvements
 
 - Translations moved off Docsbook's own AI budget by default: Docsbook watches for pages that fall behind and hands the actual translating to whatever you register over a `translation.needed` webhook. `Translations`
-- Goals, Questions, Memory and Reminders became one card with four tabs; Issues and Pull Requests became another. `Overview`
+- Goals, Questions, Memory and Reminders became one card with four tabs; Issues and Pull Requests became another. `Panel`
 
 ## 2026-09-12 — One consulting agent instead of 176 tools
 
@@ -255,7 +255,7 @@ The MCP surface was rebuilt around one agent that hands back the steps, the tool
 ### Improvements
 
 - A project with no GitHub repository is no longer turned away — Docsbook can work from your website, a single page, or a couple of sentences about your product. `MCP`
-- The Doc Graph now draws immediately from cache instead of waiting on a similarity query, and its Meaning edges are measured between pages rather than spent entirely on one long page's own headings. `Doc Graph`
+- The Doc Graph now draws immediately from cache instead of waiting on a similarity query, and its Meaning edges are measured between pages rather than spent entirely on one long page's own headings. `Brain`
 
 ## 2026-09-11 — Custom agents and AI Mentions
 
@@ -280,7 +280,7 @@ A one-line fix for teammates who could not be invited into a project's AI chat.
 
 ### Bug fixes
 
-- Inviting a teammate to a project's AI chat was permanently failing with "temporarily unavailable." `AI Chat`
+- Inviting a teammate to a project's AI chat was permanently failing with "temporarily unavailable." `AI chat`
 
 ## 2026-09-05 — Invoices you can read, and changes that score themselves
 
@@ -290,12 +290,12 @@ Billing became a real invoice list with staged overage warnings, every pull requ
 
 - Billing is now a real invoice list — what's owed next, whether the current invoice is paid, every past charge as its own line — with five staged overage warnings (75/85/90/95%/cap) and matching webhooks. `Pricing`
 - Every pull request now scores itself out of 100 — readers served, reach, cost to run, edit quality — with the movements behind it, so whether a merged change worked stops depending on somebody remembering to check. `Changes`
-- The Doc Graph gained read-depth coloring, a Dead ends overlay, and now shows the open pull requests and issues already touching a page you click. `Doc Graph`
+- The Doc Graph gained read-depth coloring, a Dead ends overlay, and now shows the open pull requests and issues already touching a page you click. `Brain`
 
 ### Improvements
 
 - Semantic search (`search`) is on every project now regardless of plan, so a question an assistant asks of your docs is answered instead of refused. `MCP`
-- The docs were reorganized by capability — SEO, GEO, AEO, agent-ready content, chat, analytics, translations — each page stating how the feature is built and what isn't proven yet. `Documentation`
+- The docs were reorganized by capability — SEO, GEO, AEO, agent-ready content, chat, analytics, translations — each page stating how the feature is built and what isn't proven yet. `Content`
 
 ### Bug fixes
 
@@ -311,11 +311,11 @@ Agents now ask "have we already tried this" before proposing anything, and the m
 
 ### Improvements
 
-- AI usage markup cut from the provider's real price **+900%** to **+70%**, in the same dashboard breakdown. `Billing`
+- AI usage markup cut from the provider's real price **+900%** to **+70%**, in the same dashboard breakdown. `Pricing`
 
 ### Bug fixes
 
-- The AI-spend ledger had been under-reporting by 17%, because it read a balance from the row it had just rewritten instead of the one it started from. `Billing`
+- The AI-spend ledger had been under-reporting by 17%, because it read a balance from the row it had just rewritten instead of the one it started from. `Pricing`
 
 ### Removed
 
@@ -331,12 +331,12 @@ Each tool has its own address with every call it served — cost, latency, input
 
 ### Improvements
 
-- Page feedback ("Was this page helpful?") now shows on mobile, where the old sidebar version never rendered. `Page Feedback`
+- Page feedback ("Was this page helpful?") now shows on mobile, where the old sidebar version never rendered. `Content`
 
 ### Bug fixes
 
 - `list_workspaces`/`get_workspace` and fifteen `update_*` tools stopped returning the raw project row, including a live API key and a 2.1MB semantic-index blob. `MCP`
-- A billing-rollover bug had zeroed 399 projects' carried balances while still showing the money as available; page titles and meta descriptions were being built from the wrong source. `Billing`
+- A billing-rollover bug had zeroed 399 projects' carried balances while still showing the money as available; page titles and meta descriptions were being built from the wrong source. `Pricing`
 
 ## 2026-09-02 — GitHub issues inside the panel
 
@@ -372,10 +372,10 @@ The month in one release — analytics rebuilt around revenue, feeds turned into
 ### Improvements
 
 - Every commit now scores itself out of 100 the day it lands — readers served, reach, cost, edit quality — with SEO position and before/after cost tracked alongside it. `Changes`
-- Contextual **Improve**/**Analyze** buttons landed across Analytics, Users, Chat and Changes, so any number on screen can hand itself to the assistant. `AI Chat`
+- Contextual **Improve**/**Analyze** buttons landed across Analytics, Users, Chat and Changes, so any number on screen can hand itself to the assistant. `AI chat`
 - Every empty panel card now shows sample data with a guided "Turn on" walkthrough instead of a blank box. `Panel`
 - MCP calls became billed per call in the background against your project balance, with the whole catalogue browsable as one searchable, filterable table. `MCP`
-- A public content-widget gallery, each block switchable off per project; the interactive API-reference widget now follows your brand's colors. `Content Widgets`
+- A public content-widget gallery, each block switchable off per project; the interactive API-reference widget now follows your brand's colors. `Content`
 
 ## 2026-07-31 — July: private sites, new plans and a chat API
 
@@ -384,18 +384,18 @@ The month in one release — password and SSO-protected sites, Growth and Scale 
 ### New releases
 
 - Anonymous, no-account docs generation at `docsbook.io/create` — paste a URL, a repo or an idea and get a live draft with AI chat before signing up; signing in publishes it exactly as it stands. `Onboarding`
-- Workspaces can be made private, behind a password or your own SSO (Google Workspace, Microsoft Entra ID, Okta). `Privacy & Security`
+- Workspaces can be made private, behind a password or your own SSO (Google Workspace, Microsoft Entra ID, Okta). `Privacy & access`
 - Two new plans, **Growth** ($349) and **Scale** ($899), plus 20%-off annual billing on every paid plan. `Pricing`
 - Analytics Explorer replaced the raw event feed: charts, click-to-filter facets, funnels, retention, and bot-traffic filtering — crawlers had been up to 93% of pageviews on some sites. `Analytics`
 - **Translation Activity**: per-page, per-language coverage and staleness, with one-click re-translation of just what changed. `Translations`
-- Multiplayer AI chat on Growth/Scale — a teammate sees the same answer stream in live, instead of a relay. `AI Chat`
+- Multiplayer AI chat on Growth/Scale — a teammate sees the same answer stream in live, instead of a relay. `AI chat`
 - A public REST endpoint, `POST /api/v1/chat`, for calling a project's AI chat from your own backend. `API`
 
 ### Improvements
 
-- AI usage is billed in real dollars against a per-plan monthly budget, with metered overage instead of a hard stop when it runs out. `Billing`
+- AI usage is billed in real dollars against a per-plan monthly budget, with metered overage instead of a hard stop when it runs out. `Pricing`
 - Real Google Search Console rankings landed in SEO & GEO, with no OAuth needed on a `*.docsbook.io` subdomain. `SEO`
-- The semantic doc index — meaning-based chat answers with page citations — shipped for Business-and-up plans. `AI Chat`
+- The semantic doc index — meaning-based chat answers with page citations — shipped for Business-and-up plans. `AI chat`
 
 ## 2026-05-01 — Docsbook launches
 
