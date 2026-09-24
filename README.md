@@ -19,9 +19,11 @@ Docsbook publishes your docs and puts AI agents to work on them. They check your
 >
 > Paste it into Claude Code, Cursor or Codex: your agent connects Docsbook and takes a first project live.
 
-![Docsbook](mark:docsbook)
+```bash
+claude mcp add --transport http docsbook https://docsbook.io/api/mcp/server
+```
 
-Works with Claude Code, Cursor, Codex and any MCP client.
+One endpoint for Claude Code, Cursor, Codex and any MCP client.
 
 <!-- /widget -->
 
