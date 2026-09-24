@@ -8,13 +8,15 @@ layout: landing
 
 [All posts](../README.md)
 
+![Docsbook](../assets/docsbook-mark-white.png) **Docsbook**
+
 **Compare**
 
 # Mintlify vs Docsbook
 
 [Start free](https://docsbook.io/?start=1)
 
-**Mintlify vs Docsbook** {bg:emerald}
+![A documentation site on Docsbook](https://docsbook.io/gallery-docsbook-dark.png) {bg:emerald}
 
 Mintlify is configured through `docs.json` and puts its AI assistant on a Pro plan at $450 a month billed annually; Docsbook reads your folders with no config file and includes AI on Pro at $20 a month per project.
 

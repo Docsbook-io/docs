@@ -8,13 +8,15 @@ layout: landing
 
 [All posts](../README.md)
 
+![Docsbook](../assets/docsbook-mark-white.png) **Docsbook**
+
 **Migrate**
 
 # How to host documentation from a GitHub repository
 
 [Start free](https://docsbook.io/?start=1)
 
-**GitHub → docs site** {bg:slate}
+![Connecting GitHub in Docsbook](https://docsbook.io/landing-integrations.jpg) {bg:slate}
 
 Publish the repository's Markdown with GitHub Pages, build and host a Docusaurus site yourself, or connect the repository to Docsbook, which hosts it with no config file and no build.
 

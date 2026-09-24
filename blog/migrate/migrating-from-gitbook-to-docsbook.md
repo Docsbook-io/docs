@@ -8,13 +8,15 @@ layout: landing
 
 [All posts](../README.md)
 
+![Docsbook](../assets/docsbook-mark-white.png) **Docsbook**
+
 **Migrate**
 
 # Migrating from GitBook to Docsbook
 
 [Start free](https://docsbook.io/?start=1)
 
-**GitBook → Docsbook** {bg:indigo}
+![A docs repository on GitHub](https://docsbook.io/landing-github-repo.png) {bg:indigo}
 
 Sync your GitBook space to a GitHub repository, point Docsbook at that repository, convert GitBook's `{% hint %}` and `{% tabs %}` blocks, and redirect any URL that changed.
 

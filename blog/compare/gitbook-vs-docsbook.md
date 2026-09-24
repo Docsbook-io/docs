@@ -8,13 +8,15 @@ layout: landing
 
 [All posts](../README.md)
 
+![Docsbook](../assets/docsbook-mark-white.png) **Docsbook**
+
 **Compare**
 
 # GitBook vs Docsbook
 
 [Start free](https://docsbook.io/?start=1)
 
-**GitBook vs Docsbook** {bg:blue}
+![An API page on a Docsbook site](https://docsbook.io/editor-playground-dark.png) {bg:blue}
 
 GitBook is an editor-first docs platform priced per site and per editor; Docsbook publishes the Markdown in your GitHub repository and prices per project.
 

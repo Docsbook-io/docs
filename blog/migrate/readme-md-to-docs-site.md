@@ -8,13 +8,15 @@ layout: landing
 
 [All posts](../README.md)
 
+![Docsbook](../assets/docsbook-mark-white.png) **Docsbook**
+
 **Migrate**
 
 # Turn your README.md into a real documentation site
 
 [Start free](https://docsbook.io/?start=1)
 
-**README.md → docs site** {bg:amber}
+![A README published as a Docsbook site](https://docsbook.io/landing-docs-screenshot.png) {bg:amber}
 
 Connect the repository to Docsbook and your `README.md` becomes the home page of a documentation site, with every other Markdown file as a page and your folders as the sidebar.
 

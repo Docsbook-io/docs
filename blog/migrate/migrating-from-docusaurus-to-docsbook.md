@@ -8,13 +8,15 @@ layout: landing
 
 [All posts](../README.md)
 
+![Docsbook](../assets/docsbook-mark-white.png) **Docsbook**
+
 **Migrate**
 
 # Migrating from Docusaurus to Docsbook
 
 [Start free](https://docsbook.io/?start=1)
 
-**Docusaurus → Docsbook** {bg:rust}
+![Docsbook branding settings](https://docsbook.io/landing-customize.jpg) {bg:rust}
 
 Point Docsbook at the repository that holds your Docusaurus `docs/` folder, convert admonitions and tabs, and your pages keep their `/docs/…` URLs with no build step.
 

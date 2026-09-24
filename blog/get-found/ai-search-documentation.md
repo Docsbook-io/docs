@@ -8,13 +8,15 @@ layout: landing
 
 [All posts](../README.md)
 
+![Docsbook](../assets/docsbook-mark-white.png) **Docsbook**
+
 **Get found**
 
 # AI search for documentation
 
 [Start free](https://docsbook.io/?start=1)
 
-**AI search** {bg:navy}
+![Docsbook analytics](https://docsbook.io/landing-analytics.jpg) {bg:navy}
 
 Keyword search fails when a reader describes the problem in their own words and your page uses different ones; AI search answers by meaning, and the lasting fix is to write the page the failed searches were asking for.
 

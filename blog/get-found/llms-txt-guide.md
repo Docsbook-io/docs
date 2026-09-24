@@ -8,13 +8,15 @@ layout: landing
 
 [All posts](../README.md)
 
+![Docsbook](../assets/docsbook-mark-white.png) **Docsbook**
+
 **Get found**
 
 # llms.txt explained
 
 [Start free](https://docsbook.io/?start=1)
 
-**llms.txt** {bg:violet}
+![Docsbook SEO analytics](https://docsbook.io/landing-seo.jpg) {bg:violet}
 
 `llms.txt` is a Markdown file at the root of a site that lists its most useful pages for AI tools; it is an open proposal rather than a standard, and Docsbook generates one for every site.
 

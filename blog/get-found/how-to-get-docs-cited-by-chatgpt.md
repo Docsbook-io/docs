@@ -8,13 +8,15 @@ layout: landing
 
 [All posts](../README.md)
 
+![Docsbook](../assets/docsbook-mark-white.png) **Docsbook**
+
 **Get found**
 
 # How to get your documentation cited by ChatGPT
 
 [Start free](https://docsbook.io/?start=1)
 
-**Cited by ChatGPT** {bg:green}
+![Docsbook GEO analytics](https://docsbook.io/landing-geo.jpg) {bg:green}
 
 ChatGPT search only shows sites its search crawler may fetch, and it quotes pages that answer the question in a passage it can lift, so the work is crawler access first, then pages written to be quoted, then measuring what the engines say.
 

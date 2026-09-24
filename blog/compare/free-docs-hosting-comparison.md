@@ -8,13 +8,15 @@ layout: landing
 
 [All posts](../README.md)
 
+![Docsbook](../assets/docsbook-mark-white.png) **Docsbook**
+
 **Compare**
 
 # Free documentation hosting compared
 
 [Start free](https://docsbook.io/?start=1)
 
-**Free hosting, compared** {bg:purple}
+![The Docsbook project overview](https://docsbook.io/landing-dashboard.jpg) {bg:purple}
 
 Every free host below puts your docs online; they differ in their limits, in whether a business may use them, and in how much of a documentation site you still have to build.
 

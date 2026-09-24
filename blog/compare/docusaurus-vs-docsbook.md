@@ -8,13 +8,15 @@ layout: landing
 
 [All posts](../README.md)
 
+![Docsbook](../assets/docsbook-mark-white.png) **Docsbook**
+
 **Compare**
 
 # Docusaurus alternatives in 2026
 
 [Start free](https://docsbook.io/?start=1)
 
-**Docusaurus alternatives** {bg:teal}
+![Docsbook settings for pull requests the agent opens](https://docsbook.io/landing-pull-requests.jpg) {bg:teal}
 
 Stay on Docusaurus while someone on your team owns its build; move to a managed platform such as Docsbook when nobody does and the upkeep keeps arriving anyway.
 
