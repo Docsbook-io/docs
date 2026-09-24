@@ -83,13 +83,9 @@ Six things every Docsbook site does — and the agent keeps improving on its own
   - Plain language
   - Freshness
 
-- **Found on Google** — Clicks, impressions and positions per query and per page, and who ranks ahead of you. {badge:SEO} {span:6} {crop:top-right}
+- **Found on Google** — Clicks, impressions and positions per query and per page, who ranks ahead of you, and the fix for the pages losing clicks. {badge:SEO} {span:6} {search}
 
-  ![SEO screen: search queries with clicks and impressions](https://docsbook.io/landing-seo.jpg)
-
-- **Cited by AI engines** — Which assistants and crawlers read each page, and whether an answer names you. {badge:GEO} {span:6} {crop:top-right}
-
-  ![GEO screen: AI answers per page and per crawler](https://docsbook.io/landing-geo.jpg)
+- **Cited by AI engines** — Which AI crawlers read each page, which of your questions name you, and the fix for the pages behind wrong answers. {badge:GEO} {span:6} {sparkles}
 
 <!-- /widget -->
 
