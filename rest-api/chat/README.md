@@ -7,7 +7,7 @@ description: "Ask your documentation a question and get one grounded answer."
 
 Ask your documentation a question and get one grounded answer.
 
-<!-- widget:cards cols=2 -->
+<!-- widget:cards plain cols=2 arrow=hover -->
 
 - [Ask the documentation a question](./ask-docs.md) — Ask this workspace's documentation a question and get one grounded answer back, with the pages it was drawn from.
 

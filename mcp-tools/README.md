@@ -42,7 +42,7 @@ The pill beside a tool in the sidebar says whether it only **reads** a project o
 
 Endpoint: `https://docsbook.io/api/mcp/server`
 
-<!-- widget:cards cols=2 -->
+<!-- widget:cards plain cols=2 arrow=hover -->
 
 - [Settings](./settings/README.md) — Change one thing about the site to a value the user stated.
 - [Content](./content/README.md) — Read and write the documentation itself.

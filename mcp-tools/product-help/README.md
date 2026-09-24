@@ -7,7 +7,7 @@ description: "The craft corpus — `docsbook_assistant` — how the work is done
 
 The craft corpus — `docsbook_assistant` — how the work is done well, from Docsbook's published pages, with the pages it drew on. Served to Docsbook's own agent, not to an owner's token.
 
-<!-- widget:cards cols=2 -->
+<!-- widget:cards plain cols=2 arrow=hover -->
 
 - [`list_docsbook_docs`](./list-docsbook-docs.md) — List EVERY page of Docsbook's own official documentation — the product's full table of contents.
 - [`read_docsbook_doc`](./read-docsbook-doc.md) — Read ONE page of DOCSBOOK'S OWN official documentation in full, verbatim, by the `path` from a `search_docsbook_docs`…

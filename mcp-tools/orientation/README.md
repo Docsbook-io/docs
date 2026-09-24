@@ -7,7 +7,7 @@ description: "Find out what this server is, which project the user means, and �
 
 Find out what this server is, which project the user means, and — on an owner's token — what else this connection can already call.
 
-<!-- widget:cards cols=2 -->
+<!-- widget:cards plain cols=2 arrow=hover -->
 
 - [`call_tool`](./call-tool.md) — Run a tool this connection serves but tools/list does not name — the webhook alert registrars ('notify us when traffic…
 - [`find_tool`](./find-tool.md) — Search this server's own tool catalog by what you're trying to do, in your own words — not a guessed tool name.

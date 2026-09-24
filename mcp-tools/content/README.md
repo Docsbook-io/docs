@@ -7,7 +7,7 @@ description: "Read and write the documentation itself."
 
 Read and write the documentation itself.
 
-<!-- widget:cards cols=2 -->
+<!-- widget:cards plain cols=2 arrow=hover -->
 
 - [`ask_project_docs`](./ask-project-docs.md) — Ask a question about THIS project's own documentation and get back a synthesized, cited answer — the SAME retrieval…
 - [`configure_source`](./configure-source.md) — Change or disconnect one of this project's connected sources (see `list_sources`): rename it, rewrite the `note` every…

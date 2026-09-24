@@ -7,7 +7,7 @@ description: "Change one thing about the site to a value the user stated."
 
 Change one thing about the site to a value the user stated.
 
-<!-- widget:cards cols=2 -->
+<!-- widget:cards plain cols=2 arrow=hover -->
 
 - [`approve_translation`](./approve-translation.md) — Approve a draft translation, moving it to status 'published'.
 - [`configure_mentions`](./configure-mentions.md) — Choose what the mention checks watch on one engine: turn the daily check on or off, and set the queries (up to 5) —…

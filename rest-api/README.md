@@ -30,7 +30,7 @@ Every page below is generated from the OpenAPI document, so it describes the API
 
 28 more operations call MCP tools one by one; each is documented on its own tool page under **MCP Tools**, together with the MCP call it mirrors.
 
-<!-- widget:cards cols=2 -->
+<!-- widget:cards plain cols=2 arrow=hover -->
 
 - [Chat](./chat/README.md) — Ask your documentation a question and get one grounded answer.
 - [Tools](./tools/README.md) — Dispatch any MCP tool by name.
