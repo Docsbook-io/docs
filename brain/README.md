@@ -103,6 +103,8 @@ Only the sections that changed are re-embedded. That cost comes from your balanc
 - **Integrations** — each source's addresses, marked "read by the agent" or "not read yet".
 - **Activity ▸ Agent runs** — every run and chat turn, filtered by door.
 
+![Graph, live: the map of pages with the agents, readers and bots touching them, and the activity feed beside it](../images/admin/brain-dark.webp)
+
 ## Tell your agent
 
 Say it in your own words:

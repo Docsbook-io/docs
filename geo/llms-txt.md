@@ -85,6 +85,8 @@ The **Copy page** button sits at the top of each page, and its menu holds the re
 
 The **Copy page button** switch lives on the **Reading aids** card; the other items are on the **Copy page menu** card.
 
+![Customize ▸ Content ▸ Copy page menu: Skills.md URL, Markdown, ChatGPT, Claude, Cursor and Windsurf switches](../images/admin/customize-content-copy-page-dark.webp)
+
 ## What does the agent check?
 
 The `llms.txt` axis of the [expertise catalog](../agent/expertise.md) is judged on your own files:

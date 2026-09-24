@@ -67,6 +67,8 @@ Two rules keep the folder useful. An entry named after an hour — `run-2026-09-
 
 <!-- /widget -->
 
+![Overview ▸ Docsbook agent: the memory folder's entries counted per folder](../images/admin/overview-agent-dark.webp)
+
 ## Read it from your editor
 
 On [your MCP connection](../get-discovered.md), the five folder tools are reached through `call_tool` — `find_tool` names them:

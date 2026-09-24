@@ -21,6 +21,8 @@ Docsbook measures AI visibility three ways: which AI crawlers read each page and
 
 The **Pages** view shows, per page, the requests, the crawlers and how many checked questions cite it. The **Crawlers** view shows each crawler with its company, requests, distinct visitors, and how often that company's engine named you in checked questions.
 
+![Analytics ▸ GEO ▸ Crawlers: each AI crawler by company with its requests and how often its engine names the site](../images/admin/analytics-geo-crawlers-dark.webp)
+
 ## Which readers came from an AI assistant?
 
 **Analytics ▸ [Insights](../analytics/insights.md)** files a visit under **AI assistant** when an assistant sent it. That covers two cases:
@@ -64,6 +66,8 @@ Send one check per call, or up to 200 as `{"checks": [...]}`.
 ## Who gets named instead of you?
 
 **Competitors** lists the sites engines name or rank for your questions, and **Competitor prompts** shows each question with whether you were named too. **Competitor tactics** shows which [expertise catalog](../agent/expertise.md) rules the pages that win those questions apply.
+
+![Analytics ▸ GEO ▸ Competitors: the sites Google's AI Overview cites for your questions, with prompt counts](../images/admin/analytics-geo-competitors-dark.webp)
 
 ## What does the agent do with these numbers?
 

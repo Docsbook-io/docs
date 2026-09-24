@@ -46,6 +46,8 @@ noindex: true
 
 `noindex: true` (or `robots: noindex`) serves that page with `noindex, follow` and keeps it readable. To take a whole project out of search, switch off **Listed in search results** on **Settings ▸ Access ▸ Search engines**: every page gets `noindex`, the project leaves the sitemap, and search crawlers are refused in `robots.txt`.
 
+![Settings ▸ Access ▸ Search engines: the Listed in search results switch](../images/admin/settings-access-search-engines-dark.webp)
+
 ## What the agent does on its own
 
 On [Pro](../pricing/plans.md), the agent runs these loops from ready-made [triggers](../agent/triggers.md). Each one reads a signal, checks it against the rules of the [expertise catalog](../agent/expertise.md), and changes the docs in a [pull request](../agent/review.md).
@@ -115,6 +117,18 @@ A change that claims to move a number states its bet. The agent records the read
 | **Competitor tactics** | Which catalog rules the winning competitor pages apply |
 
 ![Analytics ▸ SEO ▸ Queries: each search query with its position, clicks and views, by engine](../images/admin/analytics-seo-dark.webp)
+
+<!-- widget:tabs -->
+
+### Pages
+
+![Analytics ▸ SEO ▸ Pages: each page's position, clicks, views and CTR across engines](../images/admin/analytics-seo-pages-dark.webp)
+
+### Competitors
+
+![Analytics ▸ SEO ▸ Competitors: the domains ranking for your queries and how often they sit ahead](../images/admin/analytics-seo-competitors-dark.webp)
+
+<!-- /widget -->
 
 **Analytics ▸ Audit** shows where your pages stand against the three SEO topics of the catalog: Search demand & intent; Crawl, index & speed; Authority & risk.
 

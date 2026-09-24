@@ -159,6 +159,8 @@ A plan's monthly credit is the base. Three things extend or replace it:
 - **Overage** — with a paid Pro subscription, usage past the monthly credit and your top-ups continues up to $200 a month, which is both the default cap and the ceiling, charged to your card every 7 days
 - **Your own AI key** — on Enterprise, add an OpenRouter, OpenAI, Google Gemini, Anthropic or Vercel AI Gateway key on **Settings ▸ Agent ▸ Your own AI API Key**; your provider bills those calls and Docsbook charges nothing for them
 
+![Settings ▸ Agent ▸ Your own AI API Key: a provider key the answers are billed to](../images/admin/settings-agent-key-dark.webp)
+
 **Settings ▸ Usage** shows what the balance went on over the last 24 hours, 7 or 30 days — AI calls, MCP calls and crawls — and what is left.
 
 ![Settings ▸ Usage: spending over the period by AI calls, MCP calls and crawls, and the balance left](../images/admin/settings-usage-dark.webp)

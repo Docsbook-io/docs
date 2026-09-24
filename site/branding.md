@@ -7,8 +7,6 @@ description: "Customize a Docsbook docs site: logo, favicon, light and dark colo
 
 Everything readers see around your content (logo, colors, fonts, header, sidebars, footer) is set in **Customize**, and your agent can set any of it from one sentence.
 
-![Customize ▸ Branding: background style and the light and dark colours](../images/admin/customize-branding-dark.webp)
-
 Created the project from your website's address? Docsbook already read its accent color, font, logo, favicon, header links, social links and main call to action, so the site starts in your brand.
 
 ![A Docsbook docs site: header links, search and Ask AI along the top, section tabs under it, the sidebar on the left and page actions on the right](https://docsbook.io/landing-docs-screenshot.png)
@@ -25,6 +23,34 @@ Created the project from your website's address? Docsbook already read its accen
 | **Footer** | Site Footer, Footer Layout, Footer Links, Footer Brand Block, Footer Extras |
 | **Widgets** | A switch for each [page widget](./widgets.md) |
 
+<!-- widget:tabs -->
+
+### Branding
+
+![Customize ▸ Branding: Background Style presets and the Colors card with the accent colour](../images/admin/customize-branding-dark.webp)
+
+### Left sidebar
+
+![Customize ▸ Left sidebar: theme toggle, language toggle, search bar and folder switches](../images/admin/customize-left-sidebar-dark.webp)
+
+### Right sidebar
+
+![Customize ▸ Right sidebar: Scroll to Top, Ask AI, Copy as Markdown, Rate Page and Edit on GitHub switches](../images/admin/customize-right-sidebar-dark.webp)
+
+### Header
+
+![Customize ▸ Header: the five Header Layout presets with Classic selected](../images/admin/customize-header-dark.webp)
+
+### Content
+
+![Customize ▸ Content: Reading aids and the other page-level switches](../images/admin/customize-content-dark.webp)
+
+### Footer
+
+![Customize ▸ Footer: the Site Footer switch and the Columns, Centered and Minimal layouts](../images/admin/customize-footer-dark.webp)
+
+<!-- /widget -->
+
 A change is live as soon as you save it. The **Find a setting…** box filters the cards on the tab you're on.
 
 ## Colors, fonts and theme
@@ -37,6 +63,26 @@ The **Branding** tab sets the look of every page.
 - **Default Theme** — what a first-time reader gets: light, dark or system. Readers switch with the theme toggle in the sidebar footer, the header or the footer.
 - **Logo** and **Project Icon** — image URLs for the header logo and the browser-tab icon. The site's name is **Project Name** in **Settings ▸ General**.
 
+<!-- widget:tabs -->
+
+### Colors
+
+![Customize ▸ Branding ▸ Colors: accent, muted text, main text and background for the dark theme](../images/admin/customize-branding-colors-dark.webp)
+
+### Font
+
+![Customize ▸ Branding ▸ Font: Inter for headings and for body text](../images/admin/customize-branding-font-dark.webp)
+
+### Default Theme
+
+![Customize ▸ Branding ▸ Default Theme: Light, Dark or System, with System selected](../images/admin/customize-branding-theme-dark.webp)
+
+### Logo
+
+![Customize ▸ Branding ▸ Logo: separate logo URLs for the light and the dark theme](../images/admin/customize-branding-logo-dark.webp)
+
+<!-- /widget -->
+
 ## Header, sidebars and footer
 
 The other tabs arrange the frame around your pages.
@@ -48,6 +94,34 @@ The other tabs arrange the frame around your pages.
 - **Sidebar Icons** and **Folder Visibility** — an icon beside any page or folder, and folders kept out of the sidebar.
 - **Footer** — off until you turn on **Site Footer**; then up to six columns of links, a copyright line, your logo, a button, social icons and a theme picker, in one of three layouts.
 - **Home page as a landing page** — hides the sidebar, the outline and the page chrome on the front page only, and sets its sections in larger type.
+
+<!-- widget:tabs -->
+
+### Header Layout
+
+![Customize ▸ Header ▸ Header Layout: Classic, Search-centric, Search + Ask AI, Tabs in header and Minimal](../images/admin/customize-header-layout-dark.webp)
+
+### Navigation Links
+
+![Customize ▸ Header ▸ Navigation Links: Changelog, Status and a coloured Get API key button](../images/admin/customize-header-nav-links-dark.webp)
+
+### Social Links
+
+![Customize ▸ Header ▸ Social Links: GitHub, X, LinkedIn and Slack addresses](../images/admin/customize-header-social-dark.webp)
+
+### Folder Visibility
+
+![Customize ▸ Left sidebar ▸ Folder Visibility: a switch per top-level folder](../images/admin/customize-left-sidebar-folders-dark.webp)
+
+### Footer Links
+
+![Customize ▸ Footer ▸ Footer Links: link columns with a title and links each](../images/admin/customize-footer-links-dark.webp)
+
+### Landing page
+
+![Customize ▸ Content ▸ Home page as a landing page: hide sidebar, outline and page chrome on the front page](../images/admin/customize-content-landing-dark.webp)
+
+<!-- /widget -->
 
 You can also click the header, a sidebar entry or the footer on the page itself, in [interactive mode](./editing.md): each offers its own actions, such as **Rename** or **Hide**.
 

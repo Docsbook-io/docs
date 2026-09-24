@@ -12,6 +12,8 @@ Two sources are there before you add any:
 - **Your site's own repository** — the one your docs are built from, listed first and never removable.
 - **Your product website** — the address in **Settings ▸ General ▸ Product website**, read for real prices, plans and limits.
 
+![Settings ▸ General ▸ Product website: https://helio.dev, read for prices, plans and limits](../images/admin/settings-general-product-website-dark.webp)
+
 ## What can be a source?
 
 The address decides the kind, whichever card you paste it into:
@@ -44,6 +46,8 @@ Connect from the panel, or ask for it from your editor.
 ### Open the card
 
 In **Integrations**, open **Discover**, pick the **Sources** filter, and open the card for what you have — **GitHub repository**, **Website**, **OpenAPI spec**, **Mintlify**.
+
+![Integrations ▸ Discover: source, connector and alert cards in one catalog](../images/admin/integrations-dark.webp)
 
 ### Paste the addresses
 

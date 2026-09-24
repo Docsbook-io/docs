@@ -42,6 +42,8 @@ Every figure on Insights counts people: crawlers are left out, and so are your o
 - **Analytics ▸ GEO** lists the crawlers themselves — which assistant fetched which page, for live answers, indexing or training; see [AI visibility](../geo/ai-visibility.md)
 - **Analytics ▸ Graph** colours a map of your docs by **AI Answers** (visits that arrived via an AI assistant) or **Training** (hits from AI training crawlers)
 
+![Graph over the last 7 days: the map of pages with the most-touched pages and the busiest routes beside it](../images/admin/brain-history-dark.webp)
+
 ## How do I see revenue from my docs?
 
 Name the page that sells and what a sale is worth, and **Conversion rate**, **Revenue** and **Revenue/visitor** switch on.
@@ -52,9 +54,13 @@ Name the page that sells and what a sale is worth, and **Conversion rate**, **Re
 
 Open **Settings ▸ General** and fill in **Call To Action URL**: your pricing, signup or demo page. A reader who clicks out of the docs to that host is a conversion, and **Conversion rate** appears.
 
+![Settings ▸ General ▸ Call To Action URL: https://helio.dev/pricing](../images/admin/settings-general-cta-dark.webp)
+
 ### Set an Average Product Price
 
 On the same tab, fill in **Average Product Price** — what one conversion is worth to you. **Revenue** and **Revenue/visitor** appear, and rows in the cards can be ranked by Revenue.
+
+![Settings ▸ General ▸ Average Product Price: $299 per conversion](../images/admin/settings-general-price-dark.webp)
 
 ### Read the result
 

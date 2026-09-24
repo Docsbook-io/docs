@@ -20,6 +20,18 @@ Every published site collects these signals with nothing to install:
 - **What gets read** — the headings readers scrolled to, reading time per page, where each visit starts and ends
 - **People, not bots** — crawlers never count as readers, and a reader sent by an AI answer is a channel of its own
 
+<!-- widget:tabs -->
+
+### Rate this page
+
+![Customize ▸ Content ▸ Rate this page: the Was this page helpful? bar under every page](../images/admin/customize-content-rate-dark.webp)
+
+### Rate Page
+
+![Customize ▸ Right sidebar ▸ Rate Page: thumbs up and down beside the outline](../images/admin/customize-right-sidebar-rate-dark.webp)
+
+<!-- /widget -->
+
 Your own testing stays out of reader metrics too: visits from a network where you have the project open in the panel are left out.
 
 ## What the agent does on its own
@@ -79,6 +91,22 @@ These screens in the panel show the signals above:
 - **Activity ▸ Users** — one row per reader: country, the translation they read, where they came from, the [goals](./goals.md) they reached
 
 ![Analytics ▸ Feedback: each rated page with its thumbs-up and thumbs-down counts](../images/admin/analytics-feedback-dark.webp)
+
+<!-- widget:tabs -->
+
+### Feedback ▸ Votes
+
+![Analytics ▸ Feedback ▸ Votes: every vote with its date, from page thumbs and chat answers](../images/admin/analytics-feedback-votes-dark.webp)
+
+### Chat ▸ Questions
+
+![Analytics ▸ Chat ▸ Questions: each question marked Answered or Dead end](../images/admin/analytics-chat-questions-dark.webp)
+
+### Graph
+
+![Graph, live: the map of pages with agents, readers and bots lighting the pages they touch](../images/admin/brain-dark.webp)
+
+<!-- /widget -->
 
 <!-- widget:callout type=tip -->
 

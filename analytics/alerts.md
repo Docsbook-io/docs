@@ -17,6 +17,8 @@ Alerts work on every plan, and deliveries are never metered.
 
 Open **Integrations**, search the catalog and open the destination's card:
 
+![Integrations: the catalog of connectors, alert destinations and sources, each on its own card](../images/admin/integrations-dark.webp)
+
 - **Slack alerts**, **Discord alerts** or **Microsoft Teams alerts** — a message in a channel
 - **PagerDuty** — an incident on a service
 - **Email alerts** — a message in an inbox

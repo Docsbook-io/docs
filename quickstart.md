@@ -43,6 +43,8 @@ Press **Create Agent and Project**. Signed out, you choose **Continue with GitHu
 
 You land in the project's panel with the site already live. A new project built from a template, with a site, a description or files to work from, starts the one-time trigger **Generate docs from your site** — or **Generate docs from your brief** without a site — and the agent's report arrives in **Inbox**.
 
+![Overview: the project's panel with the live site, the Docsbook agent card and the latest numbers](./images/admin/overview-dark.webp)
+
 <!-- /widget -->
 
 The run replaces the template's placeholder wording with your product's real names, features and steps. It is told never to invent a price, a limit or an integration: what it can't confirm comes back as questions in the report.
@@ -78,6 +80,8 @@ Every site gets a `docsbook.io` address the moment it's created:
 | Either, on your own domain | `https://docs.example.com` — see [custom domain](./site/custom-domain.md) |
 
 Change the name in the address on **Settings ▸ General ▸ Site source**; nothing on GitHub moves. For a repository site, `docsbook.io/<owner>/<repo>` redirects to its address too.
+
+![Settings ▸ General ▸ Site source: the name in the site's docsbook.io address](./images/admin/settings-general-source-dark.webp)
 
 ## Hand the rest to your agent
 

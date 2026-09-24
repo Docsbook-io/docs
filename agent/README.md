@@ -107,6 +107,8 @@ Agent runs are part of **Pro**: $20 a month, which comes back as $20 of AI usage
 
 Each run's tokens and cost are in **Activity ▸ Agent runs**. The totals and your balance are in **Settings ▸ Usage**.
 
+![Activity ▸ Agent runs: each run with its status, duration, tool calls, tokens and cost](../images/admin/activity-runs-dark.webp)
+
 ## Where do you see it working?
 
 ![Overview ▸ Docsbook agent: the agent card with its status, what it knows about the product and audience, and how many entries its memory folder holds](../images/admin/overview-agent-dark.webp)

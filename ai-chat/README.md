@@ -31,6 +31,8 @@ Reader chat is part of **Pro** — $20 a month, with $20 of AI usage credited ea
 - **An empty balance** — the chat stops answering until there is balance again.
 - **Where the money went** — **Settings ▸ Usage** shows the chat on its own line, **Readers (AI chat)**.
 
+![Settings ▸ Agent ▸ AI Visitors Chat Model: the reader chat's model and its price per 1M tokens](../images/admin/settings-agent-chat-model-dark.webp)
+
 ## What the agent does on its own
 
 Every question the chat fails on and every page a reader rates down is a signal. Switch a card on under [Triggers](../agent/triggers.md) and the Docsbook agent turns that signal into a page change, then checks whether the signal stops.
@@ -81,6 +83,8 @@ Four places show what the chat is doing, from the big picture down to one conver
 - **Content gaps** — in Activity's **Chat** menu: questions the chat could not answer and searches that found nothing, as they happen.
 
 ![Analytics ▸ Chat: what readers asked, grouped by topic, with each topic's answer rate](../images/admin/analytics-chat-dark.webp)
+
+![Analytics ▸ Chat ▸ Questions: each reader question with its topic, Answered or Dead end, and the number of turns](../images/admin/analytics-chat-questions-dark.webp)
 
 ![Activity ▸ Chat: one conversation opened, the transcript beside the reader's profile](../images/admin/activity-chat-dialog-dark.webp)
 

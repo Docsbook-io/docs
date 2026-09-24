@@ -17,6 +17,8 @@ Turn a language on and Docsbook publishes your docs in it at their own URLs, wit
 
 One of the 15 is the language your docs are written in (**Default Language** in **Settings ▸ General**); translations go into the others. Docs written in another language? **Translate into English** gives you the version most readers and answer engines meet first.
 
+![Settings ▸ General ▸ Default Language: the language the docs are written in](../images/admin/settings-general-language-dark.webp)
+
 ## Turn a language on
 
 Tell your agent: "Translate our docs into German and Japanese." It switches the languages on with `update_languages`, and the first translation pass starts right away, home page first.
@@ -24,6 +26,8 @@ Tell your agent: "Translate our docs into German and Japanese." It switches the 
 Readers then get a language switcher in the sidebar footer (**Customize ▸ Left sidebar ▸ Language Toggle**), and you can add one to the header with **Customize ▸ Header ▸ Language in Header**. Translations live in Docsbook, not in your repository, which stays in its source language.
 
 ![Customize ▸ Left sidebar ▸ Language Toggle: the language switcher in the sidebar footer](../images/admin/customize-left-sidebar-language-dark.webp)
+
+![Customize ▸ Header ▸ Language in Header: a language switcher in the header](../images/admin/customize-header-language-dark.webp)
 
 ## Keep translations in step with your edits
 

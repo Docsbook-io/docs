@@ -17,11 +17,15 @@ The reader chat is shaped in four places: **Settings ▸ Prompts** for what it i
 - **System Prompt** — the chat's persona, tone and rules, up to 16,000 characters, applied on every answer. It is added to Docsbook's own instructions rather than replacing them, so the rule to answer only from your docs stays in place.
 - **Skills** — a [skill](../brain/skills.md) reaches readers only when you tick **Public docs chat** for it; by default a skill runs on **Admin chat** and **Admin MCP** only.
 
+![Settings ▸ Prompts ▸ Custom Questions: three suggested questions shown in the empty chat](../images/admin/settings-prompts-questions-dark.webp)
+
 <!-- widget:callout type=note -->
 
 The **Agent instructions** card on the same tab steers the agent that edits your docs and is never shown to readers. The reader chat's voice is the **System Prompt**.
 
 <!-- /widget -->
+
+![Settings ▸ Prompts ▸ Agent instructions: standing house-style rules for the agent that edits the docs](../images/admin/settings-prompts-agent-instructions-dark.webp)
 
 ## Tell it where to send readers
 
@@ -29,6 +33,18 @@ The **Agent instructions** card on the same tab steers the agent that edits your
 
 - **Support Email** — where the chat sends a reader whose question the docs don't answer. Left empty, the chat still says it doesn't know and tells the reader to contact support, without naming an address.
 - **Call To Action URL** — the page your docs should drive readers to, `https://` only. The chat offers it once, after the answer, when a reader is evaluating, comparing, asking about pricing, limits or plans, or asking what to do next — never on a troubleshooting question. Conversations that reach it count as reaching the goal in Analytics.
+
+<!-- widget:tabs -->
+
+### Support Email
+
+![Settings ▸ General ▸ Support Email: support@helio.dev, where the chat sends readers it cannot help](../images/admin/settings-general-support-email-dark.webp)
+
+### Call To Action URL
+
+![Settings ▸ General ▸ Call To Action URL: the pricing page the chat offers when it fits](../images/admin/settings-general-cta-dark.webp)
+
+<!-- /widget -->
 
 ## Choose what it runs on
 
@@ -45,6 +61,22 @@ The **Agent instructions** card on the same tab steers the agent that edits your
 
 The Pro cards stay locked while a project is on a trial with no card on file. Without Semantic Search the chat still finds pages by keyword.
 
+<!-- widget:tabs -->
+
+### AI Visitors Chat Model
+
+![Settings ▸ Agent ▸ AI Visitors Chat Model: the model that answers readers, with its price per 1M tokens](../images/admin/settings-agent-chat-model-dark.webp)
+
+### Admin & AI Agent Model
+
+![Settings ▸ Agent ▸ Admin & AI Agent Model: the model behind the assistant in the panel](../images/admin/settings-agent-admin-model-dark.webp)
+
+### Your own AI API Key
+
+![Settings ▸ Agent ▸ Your own AI API Key: a provider key that bills answers to your own account](../images/admin/settings-agent-key-dark.webp)
+
+<!-- /widget -->
+
 ## Choose where readers open it
 
 Six entry points open the same chat. Three are on by default.
@@ -59,6 +91,26 @@ Six entry points open the same chat. Three are on by default.
 | Input bar at the bottom of every page | **Customize ▸ Content**, card **Ask AI Entry Points** | No |
 | **Ask AI** in the header, `⌘I` / `Ctrl+I` | **Customize ▸ Header**, card **Ask AI in Header** | No |
 | **Ask AI about this page** in the right sidebar | **Customize ▸ Right sidebar**, card **Ask AI** | No |
+
+<!-- widget:tabs -->
+
+### Reading aids
+
+![Customize ▸ Content ▸ Reading aids: breadcrumbs, Copy page, Ask AI beside the title, Ask AI on selection, previous and next](../images/admin/customize-content-reading-aids-dark.webp)
+
+### Ask AI Entry Points
+
+![Customize ▸ Content ▸ Ask AI Entry Points: the input bar and the floating Ask Docs button](../images/admin/customize-content-ask-ai-dark.webp)
+
+### Ask AI in Header
+
+![Customize ▸ Header ▸ Ask AI in Header: the header button and its colour](../images/admin/customize-header-ask-ai-dark.webp)
+
+### Right sidebar
+
+![Customize ▸ Right sidebar ▸ Ask AI: Ask AI about this page beside the outline](../images/admin/customize-right-sidebar-ask-ai-dark.webp)
+
+<!-- /widget -->
 
 **Header Layout**, on **Customize ▸ Header**, can put **Ask AI** next to a wide search box or show it as an icon only. While the title, header or right-sidebar button is on, the search box also offers to hand a query to the chat.
 

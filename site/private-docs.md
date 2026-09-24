@@ -72,7 +72,11 @@ A failed sign-in shows its reason on the sign-in page: `domain_not_allowed` mean
 - **A Docsbook-hosted repository** turns private on GitHub when the site does. Making the site public again leaves it private until you switch **Public on GitHub** in **Settings ▸ Access ▸ Source repository**.
 - **Your own repository** is never touched. If it's public, anyone can still read the Markdown on GitHub, and the **Source repository** card warns you.
 
+![Settings ▸ Access ▸ Source repository: whether the repository behind the site is public on GitHub](../images/admin/settings-access-source-repo-dark.webp)
+
 To keep a public site out of search results or AI answers without locking readers out, use the **Search engines** and **AI engines** cards on the same tab.
+
+![Settings ▸ Access: Privacy & Access, Collaborators, Source repository, Search engines and AI engines on one tab](../images/admin/settings-access-dark.webp)
 
 ## Tell your agent
 

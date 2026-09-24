@@ -28,6 +28,8 @@ Interactive mode makes every block of your live site clickable.
 
 In **Overview ▸ Your documentation website**, press the pencil (**Open the documentation in edit mode**). On your live site, the same switch is **Interactive mode**, the cursor icon in the panel chat.
 
+![Overview: the documentation website card with its preview and edit button, beside the agent, AI and analytics cards](../images/admin/overview-dark.webp)
+
 ### Click a block
 
 A toolbar opens above it: **Edit text**, **Rewrite with AI**, **Make concise**, **Expand**, **Turn into a widget**, **Change its shape**, **Delete block** and more.
@@ -48,6 +50,8 @@ Docsbook publishes your repository's default branch. Every `.md` and `.mdx` file
 
 - **Unattended writes** — scheduled runs and MCP clients commit through the **Docsbook GitHub App** (Contents: Read and write). If Docsbook can only publish while you're signed in, **Overview ▸ Your documentation website** says so and links to the fix.
 - **Reader fixes** — turn on **Edit on GitHub** in **Customize ▸ Right sidebar**, and every page links to its source file.
+
+![Customize ▸ Right sidebar ▸ Edit on GitHub: the switch that links every page to its source file](../images/admin/customize-right-sidebar-edit-github-dark.webp)
 
 ## No GitHub? Docsbook hosts the repository
 
@@ -109,6 +113,8 @@ The sidebar mirrors your folders. In each folder, pages come before sub-folders,
 Labels come from file names: `getting-started.md` shows as **Getting Started**, `README.md` as **Introduction**. To relabel an entry or give it an icon without renaming the file, click it in interactive mode (**Rename**, **Icon**); icons are also in **Customize ▸ Left sidebar ▸ Sidebar Icons**. Top-level folders become tabs under the header in **Customize ▸ Header ▸ Subheader Folders**.
 
 ![Customize ▸ Left sidebar ▸ Sidebar Icons: search for a page and give it an icon](../images/admin/customize-left-sidebar-icons-dark.webp)
+
+![Customize ▸ Header ▸ Subheader Folders: top-level folders shown as tabs under the header](../images/admin/customize-header-subheader-folders-dark.webp)
 
 <!-- widget:callout type=warning -->
 

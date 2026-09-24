@@ -41,6 +41,8 @@ The first two steps work in either order, so you can add the DNS record first.
 
 To go back to the docsbook.io address, clear the **Custom Domain** field and save; to switch domains, enter the new one. The docsbook.io address itself is set in **Settings ▸ General ▸ Site source**.
 
+![Settings ▸ General ▸ Site source: the site's docsbook.io address](../images/admin/settings-general-source-dark.webp)
+
 ## Which plans include it
 
 Custom domains and their certificates are part of every plan. One exception: while the 14-day free trial runs, the domain can't be set or changed until the plan is paid for. Removing a domain always works. Details in [Plans and pricing](../pricing/plans.md).

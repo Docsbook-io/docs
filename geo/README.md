@@ -91,6 +91,8 @@ A GEO change states its bet like any other: the watched questions it expects to 
 | **Competitors**, **Competitor prompts** | Who the engines name for your questions, and where they name them instead of you |
 | **Competitor tactics** | Which catalog rules the pages engines cite apply |
 
+![Analytics ▸ GEO ▸ Prompt demand: buyer questions with their intent, monthly searches and which engines name you](../images/admin/analytics-geo-demand-dark.webp)
+
 **Analytics ▸ Audit** shows where your pages stand against the two GEO topics: What answer engines require, and Being quoted by models.
 
 ## Tell your agent
