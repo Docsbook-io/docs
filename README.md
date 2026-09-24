@@ -2,7 +2,7 @@
 title: "Docsbook: docs that AI agents grow, rank and keep true"
 description: "Publish your docs in minutes. Docsbook's AI agents find the fastest wins in Google and AI answers, ship each fix as a pull request and measure what it moved."
 status: generated
-version: "0.2"
+version: "0.3"
 ---
 
 <!-- widget:hero size=xl -->
@@ -136,6 +136,14 @@ On the date, the number is read and the prediction is judged.
 - [Discord Developers](https://discord-developers.docsbook.io/) — Build bots, Activities and apps on Discord {color:#5865F2}
 
   ![Discord Developers documentation built with Docsbook](https://docsbook.io/gallery-discord-developers-light.png)
+
+<!-- /widget -->
+
+<!-- widget:stats cols=3 -->
+
+- **88K+** — visitors in the past month {audio-lines}
+- **750K+** — agent calls in the past month {sparkle}
+- **99.9%** — uptime across all services {clock-fading}
 
 <!-- /widget -->
 
