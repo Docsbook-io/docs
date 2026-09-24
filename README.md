@@ -62,13 +62,17 @@ Six things every Docsbook site does — and the agent keeps improving on its own
 
 <!-- widget:bento -->
 
-- **Wakes up on its own** — 49 ready-made workflows run on a schedule, a docs event or a GitHub change: a merged pull request, a search that found nothing, a question the chat could not answer, a thumbs-down. {badge:Triggers} {span:7} {crop:top-left}
+- **Wakes up on its own** — 49 ready-made workflows run on a schedule, a docs event or a GitHub change, and each one is pointed at a number: clicks, citations, answers, customers. {badge:Triggers} {span:7} {triggers}
 
-  ![Triggers screen: ready-made agent workflows, each with its own switch](https://docsbook.io/landing-triggers.jpg)
+  - **Write the release notes** — On every commit · turns what shipped into a page {megaphone} {github} {badge:Release}
+  - **Explain a traffic drop** — Weekly · finds the pages that lost readers {trending-down} {schedule} {badge:SEO}
+  - **Where competitors get named** — Weekly · questions someone else answers {swords} {schedule} {badge:GEO}
+  - **Docs a new customer needs** — Someone paid · checks it is documented {credit-card} {event} {badge:Revenue} {on}
+  - **Do AI engines cite you** — Weekly · fixes why ChatGPT cites others {sparkles} {schedule} {badge:GEO} {on}
+  - **Write the pages readers wanted** — A search found nothing · writes it {search-x} {event} {badge:SEO} {on}
+  - **Answer what the chat could not** — A question went unanswered · writes it {message-circle-question} {event} {badge:Support} {on}
 
-- **Ships through pull requests** — Every change is a commit to your repository with the reason behind it. Review it first, or let it merge. {span:5}
-
-  ![Settings screen with the auto-merge switch](https://docsbook.io/landing-pull-requests.jpg)
+- **Plugs into 1000+ apps** — Slack, Linear, Notion, HubSpot, Google Workspace or any MCP server. The agent reads where the questions get asked and where the launches get planned. {badge:Integrations} {span:5} {count:1000+} {plug}
 
 - **Knows what good documentation looks like** — Analytics ▸ Audit judges your pages against 299 rules from search engines, standards bodies and published research, and turns each miss into work with a forecast. {badge:Expertise} {span:12} {side} {tags} {graduation-cap}
 
