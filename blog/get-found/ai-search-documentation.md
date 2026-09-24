@@ -1,11 +1,31 @@
 ---
 title: "AI search for documentation: why keyword search fails"
 description: "Why documentation search returns nothing for the questions readers type, how AI search answers by meaning, and how to turn every failed search into a page."
+layout: landing
 ---
+
+<!-- widget:story share -->
+
+[All posts](../README.md)
+
+![Docsbook](../assets/docsbook-mark-white.png) **Docsbook**
+
+**Get found**
 
 # AI search for documentation
 
+[Start free](https://docsbook.io/?start=1)
+
+![Docsbook analytics](https://docsbook.io/landing-analytics.jpg) {bg:navy}
+
 Keyword search fails when a reader describes the problem in their own words and your page uses different ones; AI search answers by meaning, and the lasting fix is to write the page the failed searches were asking for.
+
+- **Category** — Get found
+- **Reading time** — 4 min
+
+[Get discovered](../../get-discovered.md)
+
+<!-- /widget -->
 
 ## Why does keyword search return nothing?
 
@@ -34,13 +54,13 @@ Because retrieval works on passages, a section that names its own subject retrie
 Every Docsbook site gets a search box, and the misses become work for the agent:
 
 - **Search box** — full-text search over every page, with titles weighted above body text.
-- **Ask AI** — with the [AI chat](../ai-chat/README.md) on (Pro), the search box offers to ask the question instead. The chat answers with the pages it used, cited; with **Semantic Search** on in **Settings ▸ Agent**, it finds those pages by meaning.
-- **Every miss is recorded** — a search that returns nothing is logged once the reader stops typing; the agent reads those misses, and the **Write the pages readers wanted** [trigger](../agent/triggers.md) wakes on them.
+- **Ask AI** — with the [AI chat](../../ai-chat/README.md) on (Pro), the search box offers to ask the question instead. The chat answers with the pages it used, cited; with **Semantic Search** on in **Settings ▸ Agent**, it finds those pages by meaning.
+- **Every miss is recorded** — a search that returns nothing is logged once the reader stops typing; the agent reads those misses, and the **Write the pages readers wanted** [trigger](../../agent/triggers.md) wakes on them.
 - **The agent writes the missing page** — the **Write the pages readers wanted** trigger wakes on a search with no results; **File the search gaps** files the misses as a ranked issue every day.
 
 <!-- widget:callout type=tip -->
 
-A better search engine finds the page you have. Only a new page answers the question you don't cover yet, which is why Docsbook routes every miss to the agent ([Find wins fast](../find-wins-fast.md)).
+A better search engine finds the page you have. Only a new page answers the question you don't cover yet, which is why Docsbook routes every miss to the agent ([Find wins fast](../../find-wins-fast.md)).
 
 <!-- /widget -->
 
@@ -52,7 +72,7 @@ Three numbers show whether readers find their answers:
 - **Chat questions nobody answered** — the **Answer what the chat could not** trigger works from these.
 - **Tickets the docs already answer** — tag them for a month; if the count stays high, the answer exists but readers can't find it.
 
-In Docsbook the first two are collected for you. You can also ask your agent in one sentence ([Get discovered](../get-discovered.md)):
+In Docsbook the first two are collected for you. You can also ask your agent in one sentence ([Get discovered](../../get-discovered.md)):
 
 ```text
 Read last month's failed searches and unanswered chat questions, and write the three pages that would answer most of them.
@@ -80,9 +100,9 @@ Not on Docsbook: turn on **Semantic Search** in **Settings ▸ Agent** and the i
 
 <!-- widget:cards plain cols=2 arrow=hover -->
 
-- [AI chat](../ai-chat/README.md) — Answers for your readers, with the pages cited {messages-square}
-- [Find wins fast](../find-wins-fast.md) — How failed searches become the next page {zap}
-- [Analytics](../analytics/README.md) — What readers searched, asked and rated {chart-line}
+- [AI chat](../../ai-chat/README.md) — Answers for your readers, with the pages cited {messages-square}
+- [Find wins fast](../../find-wins-fast.md) — How failed searches become the next page {zap}
+- [Analytics](../../analytics/README.md) — What readers searched, asked and rated {chart-line}
 - [Get cited by ChatGPT](./how-to-get-docs-cited-by-chatgpt.md) — When the search happens inside an AI engine {quote}
 
 <!-- /widget -->

@@ -1,13 +1,34 @@
 ---
 title: "How to get your documentation cited by ChatGPT in 2026"
 description: "A checklist built on OpenAI, Google, Anthropic and Perplexity docs: let the right crawlers in, stay indexable, write quotable passages, and measure citations."
+layout: landing
 ---
 
+<!-- widget:story share -->
+
+[All posts](../README.md)
+
+![Docsbook](../assets/docsbook-mark-white.png) **Docsbook**
+
+**Get found**
+
 # How to get your documentation cited by ChatGPT
+
+[Start free](https://docsbook.io/?start=1)
+
+![Docsbook GEO analytics](https://docsbook.io/landing-geo.jpg) {bg:green}
 
 ChatGPT search only shows sites its search crawler may fetch, and it quotes pages that answer the question in a passage it can lift, so the work is crawler access first, then pages written to be quoted, then measuring what the engines say.
 
 Crawler and eligibility facts below come from each vendor's own documentation as of September 2026.
+
+- **Category** — Get found
+- **Facts checked** — September 2026
+- **Reading time** — 5 min
+
+[Get discovered](../../get-discovered.md)
+
+<!-- /widget -->
 
 ## Which crawlers need access?
 
@@ -44,7 +65,7 @@ Answer engines retrieve passages, not whole pages, so each section has to stand 
 - **Use specifics** — names, numbers, limits and prices a reader can check.
 - **Keep headings stable** — every heading on a Docsbook page gets its own anchor, which is the link an engine can cite.
 
-These are rules from the Docsbook [expertise catalog](../agent/expertise.md): 299 rules, each tied to a published source, grouped into axes such as **Passages** and **Eligibility** on **Analytics ▸ Audit**.
+These are rules from the Docsbook [expertise catalog](../../agent/expertise.md): 299 rules, each tied to a published source, grouped into axes such as **Passages** and **Eligibility** on **Analytics ▸ Audit**.
 
 ## How do you measure AI citations?
 
@@ -56,13 +77,13 @@ Ask the engines the questions your customers ask, and record whether they cite y
 
 ## What should I tell my agent?
 
-You don't have to run this checklist by hand. Tell the Docsbook agent in one sentence, from Claude Code, Cursor or the panel chat ([Get discovered](../get-discovered.md)):
+You don't have to run this checklist by hand. Tell the Docsbook agent in one sentence, from Claude Code, Cursor or the panel chat ([Get discovered](../../get-discovered.md)):
 
 ```text
 Check whether ChatGPT and Perplexity cite our docs for our top five questions, and fix the pages that lose to competitors.
 ```
 
-It works through [pull requests](../agent/review.md), each with a reason and a date to check the result. [Find wins fast](../find-wins-fast.md) explains how it picks what to fix first.
+It works through [pull requests](../../agent/review.md), each with a reason and a date to check the result. [Find wins fast](../../find-wins-fast.md) explains how it picks what to fix first.
 
 ## FAQ
 
@@ -86,9 +107,9 @@ Check the answers, not only your traffic. **Analytics ▸ GEO** records whether 
 
 <!-- widget:cards plain cols=2 arrow=hover -->
 
-- [AI visibility](../geo/ai-visibility.md) — Track AI answers and citations for your docs {radar}
-- [AI engines read and cite you](../geo/README.md) — What Docsbook does for GEO {sparkles}
+- [AI visibility](../../geo/ai-visibility.md) — Track AI answers and citations for your docs {radar}
+- [AI engines read and cite you](../../geo/README.md) — What Docsbook does for GEO {sparkles}
 - [llms.txt explained](./llms-txt-guide.md) — What the file does, and what it doesn't {file-text}
-- [Find wins fast](../find-wins-fast.md) — How the agent picks the next change {zap}
+- [Find wins fast](../../find-wins-fast.md) — How the agent picks the next change {zap}
 
 <!-- /widget -->

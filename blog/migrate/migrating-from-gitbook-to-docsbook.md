@@ -1,13 +1,34 @@
 ---
 title: "Migrating from GitBook to Docsbook: step-by-step guide"
 description: "Move your docs from GitBook to Docsbook with Git Sync: convert hint and tab blocks, replace SUMMARY.md, keep every URL working, and connect your custom domain."
+layout: landing
 ---
 
+<!-- widget:story share -->
+
+[All posts](../README.md)
+
+![Docsbook](../assets/docsbook-mark-white.png) **Docsbook**
+
+**Migrate**
+
 # Migrating from GitBook to Docsbook
+
+[Start free](https://docsbook.io/?start=1)
+
+![A docs repository on GitHub](https://docsbook.io/landing-github-repo.png) {bg:indigo}
 
 Sync your GitBook space to a GitHub repository, point Docsbook at that repository, convert GitBook's `{% hint %}` and `{% tabs %}` blocks, and redirect any URL that changed.
 
 GitBook's Git Sync already writes your content to GitHub as Markdown, so most of the move is conversion, not export. GitBook details below are from GitBook's docs as of September 2026.
+
+- **Category** — Migrate
+- **Facts checked** — September 2026
+- **Reading time** — 5 min
+
+[Quickstart](../../quickstart.md)
+
+<!-- /widget -->
 
 ## How do I move from GitBook to Docsbook?
 
@@ -29,11 +50,11 @@ Docsbook does not read GitBook's template tags, so they would show up as text. C
 
 Compare your old URLs with the new ones. For each path that changed, add a redirect to `.docsbook/redirects.json`, as shown further down.
 
-**On a [custom domain](../site/custom-domain.md)** the redirects file does not fire yet — it works on the site's `docsbook.io` address — so keep the old paths wherever you can.
+**On a [custom domain](../../site/custom-domain.md)** the redirects file does not fire yet — it works on the site's `docsbook.io` address — so keep the old paths wherever you can.
 
 ### Move your domain
 
-In **Settings ▸ Domain & API**, enter your domain, then add one DNS record: a `CNAME` to `cname.vercel-dns.com` for a subdomain, as the [custom domain](../site/custom-domain.md) page shows. A custom domain can be attached once you subscribe or the free trial has ended.
+In **Settings ▸ Domain & API**, enter your domain, then add one DNS record: a `CNAME` to `cname.vercel-dns.com` for a subdomain, as the [custom domain](../../site/custom-domain.md) page shows. A custom domain can be attached once you subscribe or the free trial has ended.
 
 ### Switch off Git Sync
 
@@ -47,7 +68,7 @@ The pages move as they are; GitBook-specific syntax and files need a Docsbook eq
 
 | GitBook | Docsbook |
 |---|---|
-| `{% hint style="info" %}` … `{% endhint %}` | A [`callout` widget](../site/widgets.md) with `type=info`; `success`, `warning` and `danger` map one to one |
+| `{% hint style="info" %}` … `{% endhint %}` | A [`callout` widget](../../site/widgets.md) with `type=info`; `success`, `warning` and `danger` map one to one |
 | `{% tabs %}` with `{% tab title="macOS" %}` | A `tabs` widget with one `### macOS` heading per tab |
 | `SUMMARY.md` | Delete it: the folder tree is the sidebar, and a leftover `SUMMARY.md` would publish as a page |
 | `redirects` in `.gitbook.yaml` | Entries in `.docsbook/redirects.json` |
@@ -78,13 +99,13 @@ Rotate the API key before you deploy.
 
 ## Can the agent do the conversion?
 
-Yes. Tell the Docsbook agent what you want, from Claude Code, Cursor or the panel chat ([Get discovered](../get-discovered.md)):
+Yes. Tell the Docsbook agent what you want, from Claude Code, Cursor or the panel chat ([Get discovered](../../get-discovered.md)):
 
 ```text
 Convert every GitBook hint and tabs block in this repository to Docsbook callouts and tabs, and delete SUMMARY.md.
 ```
 
-The work arrives as a [pull request](../agent/review.md); with **Auto-merge** off, it waits for your approval before anything goes live. On a repository in your own GitHub account, install the Docsbook GitHub App with **Contents: Read and write** first, so the agent can open it.
+The work arrives as a [pull request](../../agent/review.md); with **Auto-merge** off, it waits for your approval before anything goes live. On a repository in your own GitHub account, install the Docsbook GitHub App with **Contents: Read and write** first, so the agent can open it.
 
 ## How do I keep my URLs?
 
@@ -105,10 +126,10 @@ Both sides are page paths without `.md`, and the file holds up to 500 entries. W
 
 The site you had, plus the parts that make it findable and keep it current:
 
-- **An [AI chat](../ai-chat/README.md)** that answers readers from your pages and cites them (Pro).
-- **[`llms.txt`](../geo/llms-txt.md), a Markdown copy of every page and an MCP server**, generated for you.
-- **[Translations](../site/translations.md)** into 15 languages, each page at its own URL (Pro).
-- **An agent that finds the next win** — failed searches, unanswered questions, AI answers that cite someone else, on Pro ([Find wins fast](../find-wins-fast.md)).
+- **An [AI chat](../../ai-chat/README.md)** that answers readers from your pages and cites them (Pro).
+- **[`llms.txt`](../../geo/llms-txt.md), a Markdown copy of every page and an MCP server**, generated for you.
+- **[Translations](../../site/translations.md)** into 15 languages, each page at its own URL (Pro).
+- **An agent that finds the next win** — failed searches, unanswered questions, AI answers that cite someone else, on Pro ([Find wins fast](../../find-wins-fast.md)).
 
 ## FAQ
 
@@ -132,9 +153,9 @@ No. The sidebar comes from your folders and file names, in reading order: `READM
 
 <!-- widget:cards plain cols=2 arrow=hover -->
 
-- [GitBook vs Docsbook](./gitbook-vs-docsbook.md) — Pricing, AI and editing compared {git-compare}
-- [Custom domain](../site/custom-domain.md) — Serve the docs from your own domain {globe}
-- [Edit and publish](../site/editing.md) — Editor, GitHub sync, review mode and redirects {git-branch}
-- [Find wins fast](../find-wins-fast.md) — What the agent fixes first after you move {zap}
+- [GitBook vs Docsbook](../compare/gitbook-vs-docsbook.md) — Pricing, AI and editing compared {git-compare}
+- [Custom domain](../../site/custom-domain.md) — Serve the docs from your own domain {globe}
+- [Edit and publish](../../site/editing.md) — Editor, GitHub sync, review mode and redirects {git-branch}
+- [Find wins fast](../../find-wins-fast.md) — What the agent fixes first after you move {zap}
 
 <!-- /widget -->
