@@ -189,14 +189,53 @@ For a team that works from one shared balance.
 
 What each part of the AI work costs: [Pricing](./pricing/plans.md).
 
-<!-- widget:cta -->
+<!-- widget:cta agents -->
 
-**Ready when you are**
+## Give the agent a goal. It brings the customers.
 
-## Give your agent the first goal
-
-Publish a site from a repository, a website or one sentence, then tell the agent what you want it to win.
+One sentence from the panel, Claude Code or Cursor. The agent reads your analytics, rewrites the pages that lose you buyers, ships them as a pull request — and comes back to check that **Google and ChatGPT** now send people your way.
 
 [Start free](https://docsbook.io/?start=1) · [Read the quickstart](./quickstart.md)
+
+- **Translate the docs into German and Japanese** {badge:Panel}
+
+  *Worked for 9 min*
+
+  42 pages in two languages, each with its own search index and sitemap.
+
+  - **2 languages** live on your domain {languages}
+
+- **Our pricing page shows up in Google but nobody clicks** {badge:Cursor}
+
+  *Worked for 2 min*
+
+  `/pricing` appears in 4,100 searches a month at position 6 with a 0.9% click rate. New title, and a first line that answers the query.
+
+  - **Forecast** +140 clicks a month {trending-up}
+
+- **Get us cited when buyers ask ChatGPT for a tool like ours** {badge:Claude Code}
+
+  *Worked for 4 min*
+
+  ChatGPT names two competitors on 5 of your buyers' questions and never you. I rewrote the pages behind those answers answer-first and opened a pull request.
+
+  - **Changed 5 pages** `+318` `-64` {git-pull-request}
+  - Checking the answers again on Oct 8 {calendar-check}
+
+- **Turn this week's unanswered chat questions into pages** {badge:Every Monday}
+
+  *Working…*
+
+  23 readers asked how to set up SSO and got no answer. Writing the page they needed.
+
+  - Drafting **Set up SSO**
+
+- **Bring us leads from the docs, not just readers** {badge:Panel}
+
+  *Worked for 1 min*
+
+  The 8 pages people read to the end now close with a trial button, and every click is tracked back to the page.
+
+  - **8 pages** now end with Start free {mouse-pointer-click}
 
 <!-- /widget -->
