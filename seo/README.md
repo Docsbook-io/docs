@@ -1,147 +1,166 @@
 ---
-title: "SEO for docs: every signal generated, nothing to switch on"
-description: "Docsbook writes the title, description, canonical URL, hreflang set, cards, JSON-LD, robots.txt and sitemap for every page, on every project. You write good headings."
-tldr: "Docsbook generates every classical search signal for every documentation page — title, meta description, canonical URL, hreflang, OpenGraph and X cards, JSON-LD, robots.txt and sitemap.xml — with no configuration and no setting to turn on. Every project is indexable by default. To keep one page out of the index, put noindex: true in that page's frontmatter; to keep a whole project unread, make it private."
+title: "Documentation SEO: get your docs found on Google"
+description: "What Docsbook does for documentation SEO from day one — sitemap, canonical URLs, hreflang, JSON-LD, redirects — and how its agent turns search data into fixes."
 ---
 
-# SEO
+# Search engines see you
 
-Docsbook builds the machine-readable half of your documentation for you. Every page
-it hosts is server-rendered HTML carrying a resolved `<title>`, a cleaned meta
-description, one canonical URL, an `hreflang` set that contains only languages you
-have really translated into, OpenGraph and X cards with a generated image, a JSON-LD
-graph, and an entry in a sitemap that `robots.txt` points at. You write Markdown; the
-head is a consequence.
+Every Docsbook page ships with what Google and Bing need to index it, and the [Docsbook agent](../agent/README.md) keeps fixing whatever your search data says is losing clicks.
 
-This section covers search results — what Google and Bing crawl, index and rank. Two
-neighbours cover the other machine surfaces and do not overlap with it:
-[AEO](../aeo/README.md) is the answer box above the results, and
-[GEO](../geo/README.md) is being cited by an AI assistant instead of ranked.
+## What's on from day one
 
-## What it costs you
+Nothing to switch on: every page on a `docsbook.io` address carries all of this, on every plan.
 
-One thing.
+- **Server-rendered HTML** — the full text is in the first response, readable without running JavaScript
+- **Title and description** — frontmatter `title` and `description`, else the `# H1` and the opening paragraph; your site name is added once
+- **One canonical URL per page** — your [custom domain](../site/custom-domain.md) when you have one
+- **`hreflang`** — only for the languages this page is actually [translated](../site/translations.md) into
+- **`sitemap.xml`** — every page and every real translation, with `lastmod` from the last commit that touched the file
+- **`robots.txt`** — announces your sitemap and lets search and AI crawlers in; 13 high-volume crawlers such as SEO-tool bots, `Bytespider` and `GoogleOther` are refused
+- **Social cards** — Open Graph and X `summary_large_image` tags with a generated 1200×630 image per page
+- **JSON-LD** — `Organization`, `TechArticle` with dates from your git history, and `BreadcrumbList` on every page
+- **`FAQPage` and `HowTo`** — added only when the page has question headings or a "How to…" procedure
+- **Clean URLs** — `guides/setup.md` is served as `…/guides/setup`, and the root `README.md` is the home page
+- **308 redirects** — a moved page keeps its old address working through `.docsbook/redirects.json`
+- **Cached pages** — readers and crawlers get a cached copy, replaced when you publish through Docsbook
 
-1. **Write one clear `# H1` and an opening paragraph that answers the page's
-   question.** They become the title and the description unless you override them.
-2. **Nothing else.** Canonical URLs, the sitemap, `robots.txt`, cards, JSON-LD and
-   the language cluster are managed, and there is no configuration surface for them.
+<!-- widget:callout type=warning -->
 
-> **There used to be a switch here, and turning it on was step one.** SEO was a
-> per-project toggle in **Settings ▸ SEO & GEO**, off on a new project, and while it
-> was off every page was served `noindex, nofollow` — every signal generated, all of
-> them saying "do not index me". It was the single most common reason a Docsbook site
-> was not in Google: on 14 September 2026, two thirds of all projects had it off. The
-> switch is gone and the tab with it. Every project is indexable, and the only
-> opt-outs are per page (`noindex: true`, below) or the whole project going private.
+### On a custom domain
 
-To override the generated line for one page, put it in frontmatter:
+Pages keep their title, description, canonical URL, social card and `TechArticle` markup. The `sitemap.xml`, `hreflang`, moved-page redirects, the rest of the JSON-LD and per-page `noindex` currently work on `docsbook.io` addresses only.
+
+<!-- /widget -->
+
+## How do I control what search engines see?
+
+Set the search title and description, or keep one page out of the index, in the page's frontmatter:
 
 ```markdown
 ---
 title: "Configure a webhook"
-description: "Register a Docsbook webhook, choose its events, and verify the first delivery."
----
-```
-
-To keep one page out of the index while leaving it published and readable:
-
-```markdown
----
+description: "Register a webhook, choose its events, and verify the first delivery."
 noindex: true
 ---
 ```
 
-`robots: noindex`, `noindex: yes` and `noindex: 1` are accepted too. Use it on pages
-that spend crawl budget without ever earning a click — a 90,000-character changelog,
-internal working notes, an unfinished placeholder. This is the only index opt-out
-there is now — there is no site-wide switch to reach for, and the whole-project
-equivalent is making the project private, which stops it being readable at all.
+`noindex: true` (or `robots: noindex`) serves that page with `noindex, follow` and keeps it readable. To take a whole project out of search, switch off **Listed in search results** on **Settings ▸ Access ▸ Search engines**: every page gets `noindex`, the project leaves the sitemap, and search crawlers are refused in `robots.txt`.
 
-## The signals, and where each one is decided
+## What the agent does on its own
 
-| Signal | What Docsbook does | Where |
-|---|---|---|
-| `<title>` | Frontmatter `title` → body `H1` → file name; workspace name appended exactly once | [How it works](./how-it-works.md#what-is-the-title-on-the-page-and-where-does-it-come-from) |
-| `<meta description>` | Frontmatter `description` → opening paragraphs, stripped of markup, at 160 characters | [How it works](./how-it-works.md#what-is-the-meta-description-and-what-is-stripped-out-of-it) |
-| Canonical URL | Custom domain → product path → apex short path → owner subdomain; never a URL that redirects | [How it works](./how-it-works.md#which-url-does-the-page-call-canonical) |
-| `hreflang` | Only locales this page is genuinely translated into, plus `x-default` | [How it works](./how-it-works.md#which-languages-are-advertised-as-alternates) |
-| OpenGraph / X card | `summary_large_image` with a generated 1200×630 image per page | [How it works](./how-it-works.md#what-do-the-social-cards-contain) |
-| Robots directives | Preview build → page `noindex`, in that precedence | [How it works](./how-it-works.md#what-robots-directives-does-a-page-carry) |
-| `sitemap.xml` | Every page plus real translations, `lastmod` from the source commit | [How it works](./how-it-works.md#what-goes-into-sitemapxml) |
-| JSON-LD | `Organization` + `TechArticle` + `BreadcrumbList` on every page | [How it works](./how-it-works.md#what-structured-data-is-emitted) |
-| Discovery and re-crawl | Sitemap, `robots.txt`, IndexNow push, cache timers | [Indexing](./indexing.md) |
-| Google positions | Search Console read into the admin panel, free on every plan | [Indexing](./indexing.md#what-does-the-search-console-integration-actually-do) |
+On [Pro](../plans-and-pricing.md), the agent runs these loops from ready-made [triggers](../agent/triggers.md). Each one reads a signal, checks it against the rules of the [expertise catalog](../agent/expertise.md), and changes the docs in a [pull request](../agent/review.md).
 
-## Why this is the right way (evidence)
+<!-- widget:cards cols=2 icons=inline -->
 
-| What Docsbook does | Why it works on the crawler | Source |
-|---|---|---|
-| Serves complete server-rendered HTML | Google renders JavaScript in a queue where a page "may stay… for a few seconds, but it can take longer", and "not all bots can run JavaScript" | [JavaScript SEO basics](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics) |
-| Gives every page its own title and description | Google's title-link sources begin with "Content in `<title>` elements"; and "Identical or similar descriptions on every page of a site aren't helpful" | [Title links](https://developers.google.com/search/docs/appearance/title-link), [Snippets](https://developers.google.com/search/docs/appearance/snippet) |
-| Points canonical at the URL that answers 200 | `rel="canonical"` is "a strong signal that the specified URL should become canonical" — a signal Google can only follow if the target resolves | [Consolidate duplicate URLs](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls) |
-| Lists only real translations in `hreflang` | "If page X links to page Y, page Y must link back to page X. If this is not the case… those annotations may be ignored" | [Localized versions](https://developers.google.com/search/docs/specialty/international/localized-versions) |
-| Uses real commit dates for `lastmod` | Google uses `<lastmod>` "if it's consistently and verifiably… accurate" | [Build a sitemap](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap) |
-| Emits `FAQPage` / `HowTo` only when the page has that content | "don't add structured data about information that is not visible to the user, even if the information is accurate" | [Intro to structured data](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data) |
-| Renders the sidebar as HTML links on every page | Crawl budget is spent on what is reachable; "If many of these URLs are duplicates… this wastes a lot of Google crawling time on your site" | [Crawl budget](https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget) |
-| Serves a 308 when a page moves | A temporary redirect would leave the dead URL as the canonical one | [Consolidate duplicate URLs](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls) |
+- [Win the clicks you already earn](../agent/triggers.md) — **Organic search audit**, weekly {mouse-pointer-click}
 
-## What Docsbook will not claim
+  - **Watches** — queries at positions 5–20 and pages with views but few clicks
+  - **Changes** — titles, descriptions and first screens; pages competing for one query
+  - **Measures** — Google's clicks and position for the changed page, read again on the check date
+  - **Axes** — Titles & snippets, Intent, Crawl & index
 
-- **None of this makes a page rank.** Every mechanism above makes a page
-  *crawlable*, *unambiguous* and *correctly presented*. Google's page-experience
-  FAQ answers "Is there a single 'page experience signal'…?" with "There is no
-  single signal", and answers how much page experience matters to ranking with
-  "Google Search always seeks to show the most relevant content, even if the page
-  experience is sub-par" ([Page experience](https://developers.google.com/search/docs/appearance/page-experience)).
-  Markup is the floor, not the lever.
-- **Structured data is documented as an eligibility signal, not a ranking one.**
-  Google's own introduction talks about rich results and says nothing about rank.
-- **`priority` and `changefreq` in the sitemap do nothing for Google.** "Google
-  ignores `<priority>` and `<changefreq>` values." Docsbook emits them for the
-  engines that do read them.
-- **Crawl budget is probably not your problem.** Google's crawl-budget guide is
-  addressed to "Large sites (1 million+ unique pages) with content that changes
-  moderately often (once a week)" and "Medium or larger sites (10,000+ unique
-  pages) with very rapidly changing content (daily)" — and says in the same breath
-  that these "are a rough estimate to help you classify your site. These are not
-  exact thresholds." `noindex` on a huge changelog is still worth doing; treating a
-  60-page docs site as a crawl budget emergency is not.
-- **No multiplier.** Traffic depends on your topic, your competition and your
-  domain. Any platform quoting you a percentage is quoting you someone else's site.
+- [Write what readers searched for](../agent/triggers.md) — **Write the pages readers wanted**, **File the search gaps** {search-x}
 
-## Limits
+  - **Watches** — searches on your site that returned nothing, and chat questions without an answer
+  - **Changes** — writes the missing page, or renames the one readers could not find; the daily report files the rest as one ranked issue
+  - **Measures** — whether those searches stop coming back empty
+  - **Axes** — Intent, Depth
 
-- **There is no "index this section, not that one" control.** The granularity is the
-  whole project (private, i.e. unreadable) or one page (`noindex: true`) — nothing in
-  between.
-- **On a custom domain, per-page `noindex` is not honoured** —
-  pages are served `index, follow` unconditionally — and there is no `hreflang`
-  cluster, no `BreadcrumbList`, no sitemap, no moved-page redirect and none of the
-  [GEO](../geo/README.md) page-level signals. The canonical URL, title, description,
-  cards and `TechArticle` node are all correct there. See
-  [How it works](./how-it-works.md#limits-and-open-questions).
-- **Search Console positions cover Docsbook-hosted hosts only.** A site on your own
-  domain is outside the property Docsbook reads. See
-  [Indexing](./indexing.md#limits-and-open-questions).
-- **A rename outside Docsbook leaves no redirect.** Moves made through Docsbook
-  write one automatically; a `git mv` does not.
+- [Keep every link alive](../agent/triggers.md) — **Sweep for broken links**, when content changes {link-2}
 
-## Checklist
+  - **Watches** — internal links, heading anchors and outbound links
+  - **Changes** — fixes the dead ones and names any it could not fix
+  - **Measures** — how many links resolve, and how many dead ones sit on pages readers reach
+  - **Axes** — Crawl & index
 
-- [ ] Every page has one clear `# H1`, or a frontmatter `title`.
-- [ ] The opening paragraph answers the page's question in one or two sentences.
-- [ ] Every page is reachable from the sidebar; no orphans.
-- [ ] Pages that should never rank carry `noindex: true`.
-- [ ] For multilingual docs, [translations are enabled](../translation/settings.md)
-      so each language earns its own indexable URL.
+- [Keep pages light and fast](../agent/triggers.md) — **Keep pages light**, weekly {gauge}
 
-## Related
+  - **Watches** — pages that ship far more than their own content
+  - **Changes** — trims the weight without losing a link, a heading or an indexable word
+  - **Measures** — the weight of the heaviest pages against their own content
+  - **Axes** — Speed
 
-- [How Docsbook builds the head of a page](./how-it-works.md) — the resolution orders.
-- [Indexing](./indexing.md) — discovery, re-crawl and Search Console.
-- [AEO — answer engines and rich results](../aeo/README.md)
-- [GEO — citation by AI assistants](../geo/README.md)
-- [llms.txt](../geo/llms-txt.md)
-- [AI translations](../translation/ai-translations.md)
-- [Search options](../ai-chat/search.md) — the on-site search readers use once they arrive.
+- [Explain a traffic drop](../agent/triggers.md) — **Explain a traffic drop**, weekly {trending-down}
+
+  - **Watches** — traffic per page and per source against earlier periods
+  - **Changes** — fixes causes that are ours: a removed page, a broken link, a rewritten title
+  - **Measures** — names the pages that lost readers, or shows with numbers that the fall is not ours
+  - **Axes** — Intent, Core updates
+
+<!-- /widget -->
+
+Before it writes, the agent researches what people actually search for:
+
+- **Search demand** — Google Keyword Planner volume, cost-per-click and a 12-month series for up to 25 phrases
+- **Real phrasing** — the questions Google autocompletes after up to 10 seed phrases
+- **Direction** — three months of search interest and the queries rising fastest around a topic
+- **Results pages** — Google's results, People Also Ask and AI Overview, and Bing's results for the same query
+- **Links** — how many domains link to a site, and from which pages
+- **Competitor docs** — up to 50 pages of a rival's documentation, read as clean Markdown
+- **Questions asked elsewhere** — Reddit, Hacker News, Stack Overflow and Discourse threads about your product
+
+A change that claims to move a number states its bet. The agent records the reading it expects to move — Google's position, impressions or clicks for a page, or its views — with today's number, the predicted one and a check date. On that date it takes the same reading again, and Docsbook computes the verdict from the two: as predicted, no effect, or went backwards.
+
+## See it working
+
+**Analytics ▸ SEO** is one list with a **View** switch. Rows come from [Google Search Console](./search-console.md) and from the checks the agent runs.
+
+| View | What it shows |
+|---|---|
+| **Queries** | Each search query: clicks, views, CTR and average position, with the engine that reported it |
+| **Pages** | The same numbers per page, with how many queries reach it |
+| **Search demand** | Monthly searches behind a question your buyers ask, split by intent, beside your position |
+| **Google & Bing mentions** | Where your docs sit on Google's and Bing's results page for the queries you watch |
+| **Competitors**, **Competitor queries** | Who ranks for your queries, and where they sit ahead of you |
+| **Competitor tactics** | Which catalog rules the winning competitor pages apply |
+
+**Analytics ▸ Audit** shows where your pages stand against the three SEO families of the catalog: Search demand & intent; Crawl, index & speed; Authority & risk.
+
+## Tell your agent
+
+Say what you want in a sentence, from [Claude Code, Cursor, Codex or the panel chat](../get-discovered.md):
+
+```text
+Find the pages sitting on page two of Google and fix their titles and descriptions.
+Why did docs traffic drop last week? Fix the part that is ours.
+What do people search for that our docs don't answer? Write the top three pages.
+Check every link on the site and fix the broken ones.
+Run the organic search audit every week.
+```
+
+## FAQ
+
+<!-- widget:accordion -->
+
+### Do I need to do anything for SEO?
+
+No setup is needed. Give each page one clear `# H1` and an opening paragraph that answers its question; they become the search title and description unless your frontmatter sets them.
+
+### What happens to links when I move a page?
+
+A move made with `write_docs`, the path the agent writes through, records the old and new address in `.docsbook/redirects.json` in the same commit, and the old URL answers with a permanent 308 redirect. A file you move yourself in git gets no redirect until you add the entry:
+
+```json
+{ "version": 1, "redirects": [{ "from": "guides/old-name", "to": "guides/new-name" }] }
+```
+
+### Do I need to submit my sitemap to Google?
+
+No. On a `docsbook.io` address, your `robots.txt` names the sitemap in a `Sitemap:` line, which Google and Bing read on their own. Submitting it in your own Search Console account is optional; Docsbook only reads Search Console and never submits anything.
+
+### How long does it take to leave or return to Google?
+
+Search engines drop a page within days of seeing `noindex` and take weeks to list it again, so switching **Search engines** off and on is not instant.
+
+<!-- /widget -->
+
+## Next steps
+
+<!-- widget:cards plain cols=2 arrow=hover -->
+
+- [Search data](./search-console.md) — Where the Google numbers come from, and how the agent uses them {chart-line}
+- [AI engines read and cite you](../geo/README.md) — The same work for ChatGPT, Perplexity and Claude {sparkles}
+- [Expertise catalog](../agent/expertise.md) — The 299 rules the agent checks your pages against {book-open}
+- [Triggers](../agent/triggers.md) — Switch on the SEO loops above {zap}
+
+<!-- /widget -->

@@ -15,4 +15,4 @@ There is one live key per project. Resetting it revokes the old key everywhere a
 
 ## What a call costs
 
-`POST /api/v1/chat` spends from the project's balance, the same wallet the Ask AI widget on your site uses. Every other call costs the same flat price as the MCP tool it runs, shown on that tool's page.
+`POST /api/v1/chat` spends from your balance, the same one the Ask AI widget on your site uses. Every other call costs the same flat price as the MCP tool it runs, shown on that tool's page.

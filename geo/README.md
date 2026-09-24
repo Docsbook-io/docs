@@ -1,116 +1,137 @@
 ---
-title: "GEO: what Docsbook adds so an AI assistant can quote you"
-description: "The page-level signals Docsbook injects on every page — TL;DR block, visible last-modified time, Person author JSON-LD — and the honest size of the effect."
-tldr: "GEO is on for every project, on every plan — there is no setting. Docsbook injects a TL;DR block after the H1 (from `tldr:` frontmatter or the lede, capped at 280 characters), a visible Updated date inside a real time element, and makes the JSON-LD author a Person rather than your organisation."
-status: generated
-version: "0.2"
+title: "GEO for docs: get cited by ChatGPT, Perplexity and Claude"
+description: "How Docsbook makes docs citable by AI answer engines: llms.txt, Markdown copies, open AI crawlers, answer-first pages, and an agent that checks the answers."
 ---
 
-# GEO — Generative Engine Optimization
+# AI engines read and cite you
 
-Docsbook GEO is the set of page-level signals that help a generative engine — Perplexity, ChatGPT search, Google AI Overviews, Claude — quote your documentation **and attribute the quote to you**. Every page of every workspace carries them: there is nothing to turn on and no plan that withholds them. (Until 14 September 2026 this was a toggle in an admin **SEO & GEO** tab, alongside an `update_geo` MCP tool. Both are gone — the signals are unconditional now.)
+Every Docsbook site can be read by ChatGPT, Claude, Perplexity and Gemini from day one, and the [Docsbook agent](../agent/README.md) checks what answer engines say about your product and fixes the pages behind wrong answers.
 
-GEO is about being cited inside a generated answer. Its two neighbours cover different surfaces: [SEO](../seo/README.md) is about ranking in a list of blue links, and [AEO](../aeo/README.md) is about answer boxes and voice assistants, which are built from explicit `FAQPage` and `HowTo` markup.
+## What's on from day one
 
-## What does a generative engine actually do with your page?
+Nothing to switch on: every page on a `docsbook.io` address gets all of this, on every plan.
 
-Not one thing — a pipeline, and each stage can drop you. A crawler fetches the page. A retriever scores **passages**, not whole documents: Google describes its passage ranking system as one that identifies "individual sections or 'passages' of a web page to better understand how relevant a page is to a search" ([Google Search Central, ranking systems guide](https://developers.google.com/search/docs/appearance/ranking-systems-guide)). A handful of surviving sources are then placed in a context window — the GEO paper's setup uses "only the top 5 sources fetched from the Google search engine for every query" ([GEO, KDD 2024](https://arxiv.org/abs/2311.09735)) — and a model writes an answer over them, choosing what to quote and whom to credit.
+- **[`llms.txt` and `llms-full.txt`](./llms-txt.md)** — every page with its Markdown address, plus the languages the site is published in
+- **A Markdown copy of every page** — the page as plain text, a fraction of the weight of its HTML
+- **Text in the HTML** — pages are server-rendered, so a crawler that runs no JavaScript still reads every word
+- **AI crawlers welcome** — the crawlers of OpenAI, Anthropic, Perplexity, Google and Apple may read every page
+- **An answer-first summary** — the first paragraph becomes a summary block under the title, up to 280 characters, marked `speakable` in JSON-LD; frontmatter `tldr:` replaces it
+- **Dates and authors** — a visible **Updated** date from the last commit, plus `datePublished`, `dateModified` and a `Person` author in JSON-LD
+- **Buttons that hand a page to AI** — **Copy page** as Markdown, **Open in ChatGPT**, **Open in Claude** and **Connect MCP**
+- **An MCP server for your readers' agents** — each page names it in a `mcp-server` meta tag; see [MCP server](../brain/mcp-server.md)
 
-Two consequences follow, and everything below is downstream of them. Anything that stops you being fetched or retrieved makes the writing irrelevant. Anything that makes a *retrieved* passage easier to lift and attribute is what GEO can actually change.
+A few high-volume crawlers are refused by default, on every site:
 
-## What does Docsbook add to a page?
+| Crawler | Why it is refused |
+|---|---|
+| `Meta-ExternalAgent`, `Meta-ExternalFetcher` | Meta's AI crawlers, very high volume |
+| `Bytespider` | ByteDance's crawler, very high volume |
+| `Amazonbot`, `PetalBot` | Amazon's and Huawei's crawlers, very high volume |
+| `GoogleOther` (and its image and video variants) | Google's generic research crawler, separate from Search and Gemini |
+| `AhrefsBot`, `SemrushBot`, `DataForSeoBot`, `MJ12bot`, `DotBot` | SEO-tool crawlers that build backlink indexes, not readers |
 
-Three things, on every page, all visible in the page's HTML, plus the semantic wrappers around them.
+To close your site to AI engines, switch off **Readable and quotable by AI engines** on **Settings ▸ Access ▸ AI engines**: the project leaves `llms.txt` and `llms-full.txt`, and the named AI crawlers are refused in `robots.txt`. Search engines are unaffected.
 
-### A TL;DR block after the H1
+<!-- widget:callout type=note -->
 
-Docsbook injects a short summary immediately after the leading H1, rendered as `<aside class="tldr" role="note" aria-label="Summary">`. The text is chosen in this order:
+On a [custom domain](../site/custom-domain.md), `llms.txt`, the summary block, the **Updated** date and most of the JSON-LD currently appear on `docsbook.io` addresses only. The Markdown copy of each page works on every address.
 
-1. An explicit `tldr:` field in the page's frontmatter.
-2. Otherwise the document's first real paragraph. Headings, blockquotes, list items, fenced code blocks and image-only lines are skipped while looking for it.
+<!-- /widget -->
 
-Whichever wins is cleaned before it is printed: link syntax, inline code, emphasis marks and raw HTML tags are stripped, and whitespace is collapsed. The result is capped at **280 characters**, truncated at the last word boundary if that boundary falls past the halfway mark, with trailing punctuation removed and a single ellipsis appended.
+## What the agent does on its own
 
-Two behaviours are worth knowing because they are what stop the block being noise:
+On [Pro](../plans-and-pricing.md), the agent works toward the goal every project has: be found on Google and in AI answers. For AI answers it runs two weekly [triggers](../agent/triggers.md) and a citability check, judged against the GEO axes of the [expertise catalog](../agent/expertise.md): Eligibility, AI crawlers, llms.txt, Passages, Content moves and Measurement.
 
-- **A first paragraph shorter than 40 characters produces no TL;DR at all.** A fragment is worse than nothing.
-- **When the TL;DR came from the lede, the lede is removed from the body.** The same sentence never appears twice in a row; when the TL;DR came from frontmatter, your opening paragraph stays exactly where you wrote it.
+<!-- widget:cards cols=2 icons=inline -->
 
-### A visible last-modified time
+- [Find out what AI engines say](../agent/triggers.md) — **Do AI engines cite you**, weekly {message-square-quote}
 
-With GEO on, a line reading *Updated May 25, 2026* is rendered at the end of the article, with the date wrapped in a real `<time dateTime="…">` element so a parser gets the machine value as well as the human one. The date is the committer date of the newest commit touching that file in your repository, falling back to the author date. Docsbook caches the lookup for an hour, and if GitHub does not answer, **the line is omitted rather than guessed** — a wrong date is worse than no date.
+  - **Watches** — Google's AI Overview for the questions a buyer asks, with the sources it cites, and Bing's results, which Copilot draws on
+  - **Changes** — the pages behind wrong answers: an outdated claim repeated, a feature said not to exist, a competitor named instead
+  - **Measures** — how many watched questions come back naming the page, read again on the check date
+  - **Axes** — Measurement, Passages
 
-The same commit history fills `datePublished` in the JSON-LD, from the oldest of the most recent 100 commits touching the file.
+- [Win the questions rivals own](../agent/triggers.md) — **Where competitors get named**, weekly {swords}
 
-### A `Person` author in the JSON-LD
+  - **Watches** — who results pages and AI answers name for the questions this product should own
+  - **Changes** — reads up to 50 pages of a rival's docs, records which catalog rules their winning pages follow, and writes the page you are missing
+  - **Measures** — which questions name a competitor instead of you
+  - **Axes** — Content moves, Passages
 
-Every page carries a `TechArticle` object. Without GEO its `author` is a reference to your workspace's `Organization`. With GEO on it becomes a person:
+- [Keep the doors open](../agent/expertise.md) — citability check {door-open}
 
-```json
-{
-  "@type": "Person",
-  "name": "Jane Doe",
-  "url": "https://github.com/janedoe",
-  "sameAs": ["https://github.com/janedoe"]
-}
+  - **Watches** — `robots.txt` against 7 named AI agents, each page fetched both as a browser and as `OAI-SearchBot`, and at least 200 words readable without JavaScript
+  - **Changes** — whatever blocks a fetch or leaves a page with nothing to quote
+  - **Measures** — five scores out of 100, computed from the fetches rather than written by a model
+  - **Axes** — Eligibility, AI crawlers, llms.txt
+
+<!-- /widget -->
+
+Answer engines score passages, not whole pages, so the agent holds each section to these catalog rules:
+
+- **One question per section** — the section answers it fully on its own
+- **A named subject** — the section says what it is about instead of "it" or "this"
+- **Numbers in place** — every claim's supporting number sits in the same paragraph as the claim
+- **No keyword stuffing** — the catalog records that repeating a phrase performs worse than leaving the page alone
+
+A GEO change states its bet like any other: the watched questions it expects to name the page, today's count, the predicted one and a check date. Docsbook computes the verdict from the before and after readings.
+
+## See it working
+
+**Analytics ▸ GEO** is one list with a **View** switch. The [AI visibility](./ai-visibility.md) page explains each reading and its limits.
+
+| View | What it shows |
+|---|---|
+| **Pages** | Which pages AI crawlers read, split into **AI Answers**, **Indexing** and **Training**, and how many checked questions cite each |
+| **Crawlers** | Each AI crawler by company, with requests, distinct visitors and how often its engine names you |
+| **Prompt mentions** | The questions checked against answer engines, and which ones named you |
+| **Prompt demand** | The search demand behind a question your buyers ask |
+| **Competitors**, **Competitor prompts** | Who the engines name for your questions, and where they name them instead of you |
+| **Competitor tactics** | Which catalog rules the pages engines cite apply |
+
+**Analytics ▸ Audit** shows where your pages stand against the two GEO families: What answer engines require, and Being quoted by models.
+
+## Tell your agent
+
+Say it in a sentence, from [Claude Code, Cursor, Codex or the panel chat](../get-discovered.md):
+
+```text
+What does Google's AI Overview say about our product? Fix what it gets wrong.
+Which questions name a competitor instead of us? Write the pages we're missing.
+Can AI crawlers read our docs? Check and fix whatever blocks them.
+Watch these questions every day: "best API docs tool", "host docs from GitHub".
+Run the weekly check of what AI engines say about us.
 ```
 
-The name comes from `author:` frontmatter when you set it, otherwise from the last commit author of that file. `url` and `sameAs` are filled from `authorUrl:` frontmatter or the author's GitHub profile, and are simply absent when neither exists. If there is no name from either source, the object falls back to the `Organization` reference rather than emitting an empty `Person`.
+## FAQ
 
-### Semantic wrappers
+<!-- widget:accordion -->
 
-The body is rendered inside `<article>`, and the TL;DR block carries `role="note"` and an accessible label — read by assistive technology and by parsers alike. With [AEO](../aeo/README.md) also on, `.tldr` is the first selector in the page's `speakable` specification, so the block a model reads first is the block a voice assistant reads aloud.
+### Does llms.txt get my docs cited?
 
-## How do I check GEO is doing anything?
+There is no evidence that it does. Google says its AI features need no AI text file, and none of OpenAI's, Anthropic's or Perplexity's crawler documentation says they read a site's `llms.txt`. Docsbook generates it because it costs you nothing and gives an agent you point at it a map of your docs.
 
-Ask the MCP tool `collect_ai_citability`. It runs no model at all — every number in it is a fetch — so it cannot invent a finding. In one call it:
+### Which AI crawlers can read my docs?
 
-- reads your `robots.txt` and checks it against **seven named assistant agents** (a dated list, currently as of 2026-08-29), separating search-index agents from training crawlers, because blocking training is a decision and blocking the search-index agent while expecting citations is usually an accident;
-- fetches each sampled page **twice in the same minute** — once as a browser, once as `OAI-SearchBot` — to catch a CDN that serves a person a page and an assistant a challenge;
-- checks that the body prose is present in the raw HTML (at least 200 words, no JavaScript executed);
-- checks whether the page states a date at all;
-- checks that `/llms.txt`, `/llms-full.txt` and `/sitemap.xml` exist.
+All of them by default, except the high-volume crawlers in the table above. Switching off **AI engines** refuses the rest by name.
 
-A probe that times out or hits a 404 is recorded as **null with a reason**, never as a failure — an unreachable check lowers the number of checks, not your score.
+### Can I stay in Google but out of AI answers?
 
-## Why these signals and not others
+Partly. Switching off **AI engines** refuses the named AI crawlers and drops the project from `llms.txt`, but Google's AI Overviews are built from Google's search index, so a page listed in Google can still be quoted there. `robots.txt` is also a request, not a lock: anything already quoted stays quoted until it is crawled again.
 
-| Rule | Why the stack behaves that way | Source |
-|---|---|---|
-| Make each section stand alone | Retrieval scores passages, not pages | [Google ranking systems guide](https://developers.google.com/search/docs/appearance/ranking-systems-guide) |
-| Add quotations, statistics and cited sources | Measured to raise the share of a generated answer attributed to a source. Quotation Addition, Cite Sources and Statistics Addition are the paper's three top methods, reported at "a relative improvement of 30-40% on the Position-Adjusted Word Count metric" over a 10K-query benchmark, with the best of them at 41% | [GEO, KDD 2024](https://arxiv.org/abs/2311.09735) |
-| Say who wrote it | Google asks whether pages "carry a byline, where one might be expected" and "strongly encourage[s] adding accurate authorship information" | [Creating helpful content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) |
-| Use `Person` with a `url` that identifies the author | Google's Article guidance: "Use the `Person` type for people", and link "a web page that uniquely identifies the author" | [Article structured data](https://developers.google.com/search/docs/appearance/structured-data/article) |
-| Do not expect a magic file | "There are no additional requirements to appear in AI Overviews or AI Mode, nor other special optimizations necessary" | [Google AI features](https://developers.google.com/search/docs/appearance/ai-features) |
-| Do not keyword-stuff | The same benchmark files Keyword Stuffing under "Non-Performing" methods, scoring **below** the unmodified baseline — and on a live engine "10% worse than the baseline" | [GEO, KDD 2024](https://arxiv.org/abs/2311.09735) |
+### Do I need a special writing style for AI engines?
 
-## Limits and open questions
+No. Google says its AI features need no special writing style or markup, only a page that is indexed and allowed a snippet. What helps is sections that answer one question on their own.
 
-**How much this moves is small, and conditional.** A 2026 critical survey of 45 GEO studies concludes that the foundational gains are "valid within its experimental setting but conditional on a source already being present in a fixed context", and that "no reviewed technique shows a stable, longitudinal, cross-platform causal effect on organic discoverability or downstream behavior" ([arXiv 2607.14035](https://arxiv.org/abs/2607.14035), Nov 2023–Jul 2026 window). Docsbook will not quote you a citation-rate lift, because none is established.
+<!-- /widget -->
 
-**Under question: does freshness raise citation rate?** What is verifiable is that Google runs "various 'query deserves freshness' systems" for *Search ranking* ([ranking systems guide](https://developers.google.com/search/docs/appearance/ranking-systems-guide)), and that a page with no date gives a model nothing to attribute currency to. What is not verifiable is the common claim that a visible date raises how often an assistant cites you: no primary source measures it. Treat the date as hygiene, not as a lever, until someone publishes a measurement.
+## Next steps
 
-**Answers are not stable enough to A/B by hand.** Independent audits summarised in the same survey: Schulte et al. (2026), across four engines and 45 days, "observe daily source-level Jaccard scores of approximately 0.34–0.42"; Kirsten et al. (2026), across 4,706 queries in the US and Germany, find "page overlap across two months is 18% for AI Overviews, compared with 45% for organic Google". Run a check more than once before believing either a win or a loss.
+<!-- widget:cards plain cols=2 arrow=hover -->
 
-**Version-dependent details.** The visible date renders in US English (*May 25, 2026*) whatever language the page is in. `datePublished` is derived from at most the 100 most recent commits touching the file, so on a very long-lived page it is the oldest commit *in that window*, not the true first. An author taken from git is whoever last touched the file, which may be someone who fixed a typo — set `author:` explicitly when the byline matters.
+- [llms.txt and Markdown](./llms-txt.md) — The machine-readable files and the page buttons for AI tools {file-text}
+- [Track AI citations](./ai-visibility.md) — What the GEO numbers measure, and what they cannot {radar}
+- [Search engines see you](../seo/README.md) — Being indexed comes first; here is what Docsbook does for it {search}
+- [MCP server](../brain/mcp-server.md) — Let your readers' agents search and read your docs {plug}
 
-**GEO does not reach a custom domain.** All three signals on this page are emitted by the Docsbook-hosted render path. A page served on your own domain gets **no TL;DR block, no visible Updated line**, and a single `TechArticle` node whose author is always a `Person` named after the repository owner's GitHub login — regardless of `author:` frontmatter. None of these signals reach a custom domain today. See [SEO limits](../seo/how-it-works.md#limits-and-open-questions) for the rest of what differs there.
-
-**What GEO cannot do.** It does not get an unindexed page indexed, does not unblock a crawler your `robots.txt` disallows, and does not make a client-side-rendered page readable. Those are [SEO](../seo/README.md) problems, and `collect_ai_citability` reports them as critical for exactly that reason.
-
-## What you actually do
-
-Nothing, to switch it on — every page already carries all three signals, on every
-plan ([pricing](https://docsbook.io/pricing)). The one edit worth making is to
-**add a `tldr:` line to the five pages you most want quoted**, so the block an engine
-lifts is a sentence you wrote rather than whichever paragraph happened to open the
-page. That is the whole first pass.
-
-## Related
-
-- [Citation signals](./citation-signals.md) — the writing rules, each with the retrieval behaviour that justifies it.
-- [llms.txt](./llms-txt.md) — the site-level machine index, and what its evidence is actually worth.
-- [SEO](../seo/README.md) — indexing, canonical URLs, sitemap: the stage before any of this matters.
-- [AEO](../aeo/README.md) — `FAQPage`, `HowTo` and `speakable` markup.
-- [AI chat](../ai-chat/chat.md) — the assistant that answers on your own site.
-- [How Docsbook proves what it claims](../evidence.md) — the rule these pages are written to.
+<!-- /widget -->

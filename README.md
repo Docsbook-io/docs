@@ -52,9 +52,9 @@ Six things every Docsbook site does — and the agent keeps improving on its own
 <!-- widget:cards icons=inline cols=3 arrow=hover -->
 
 - [Search engines see you](./seo/README.md) — Server-rendered pages, sitemaps and structured data, and an agent that tunes titles and answers to real queries. {search}
-- [AI engines read and cite you](./geo/README.md) — `llms.txt`, Markdown for every page, and an agent that checks what ChatGPT and Perplexity say about you. {sparkles}
+- [AI engines read and cite you](./geo/README.md) — Open doors for AI crawlers, a Markdown copy of every page, and an agent that fixes the pages behind wrong AI answers. {sparkles}
 - [A second brain for your product](./brain/README.md) — Your pages, your code and what the agent learned, searchable by meaning for you, your readers and their agents. {brain}
-- [AI answers your readers](./ai-chat/README.md) — A chat grounded in your pages, with sources — and every unanswered question turned into a page. {message-circle}
+- [AI answers your readers](./ai-chat/README.md) — A chat grounded in your pages, with sources — and the questions it could not answer turned into pages. {message-circle}
 - [AI writes and updates your docs](./agent/README.md) — One worker that reads, writes, configures and measures, on your word or on a trigger. {bot}
 - [You hear every reader](./analytics/README.md) — Ratings, failed searches, dead ends and chat questions per page, fed straight back to the agent. {ear}
 
@@ -64,7 +64,7 @@ Six things every Docsbook site does — and the agent keeps improving on its own
 
 <!-- widget:bento -->
 
-- **Wakes up on its own** — 49 ready-made workflows run on a schedule or on an event: a push, a search that found nothing, a question the chat could not answer, a thumbs-down. {badge:Triggers} {span:7} {crop:top-left}
+- **Wakes up on its own** — 49 ready-made workflows run on a schedule, a docs event or a GitHub change: a merged pull request, a search that found nothing, a question the chat could not answer, a thumbs-down. {badge:Triggers} {span:7} {crop:top-left}
 
   ![Triggers screen: ready-made agent workflows, each with its own switch](https://docsbook.io/landing-triggers.jpg)
 
@@ -83,7 +83,7 @@ Six things every Docsbook site does — and the agent keeps improving on its own
   - Plain language
   - Freshness
 
-- **Found on Google** — Clicks, impressions and positions per query and per page, and the searches readers ran on your site. {badge:SEO} {span:6} {crop:top-right}
+- **Found on Google** — Clicks, impressions and positions per query and per page, and who ranks ahead of you. {badge:SEO} {span:6} {crop:top-right}
 
   ![SEO screen: search queries with clicks and impressions](https://docsbook.io/landing-seo.jpg)
 
@@ -147,7 +147,53 @@ On the date, the number is read and the prediction is judged.
 
 ## Pricing
 
-PRICING_PLACEHOLDER
+Your docs stay published for free; you pay for the AI work. Every account starts with a 14-day Pro trial that includes $5 of AI credit.
+
+<!-- widget:pricing -->
+
+## Free
+
+**$0** / month
+
+Where a project lands after the trial.
+
+- Hosting, SSL and a custom domain
+- SEO and GEO markup on every page
+- Web editor and GitHub sync
+- ~~AI chat, agents and translations~~
+
+[Create a site](https://docsbook.io/create)
+
+## Pro
+
+**14-day free trial**
+
+**$20** / month
+
+For docs that AI writes, keeps current and answers from.
+
+- $20 of AI usage credited every month
+- AI chat that answers your readers
+- The agent and its 49 ready-made workflows
+- Live auto translations
+
+[Start the free trial](https://docsbook.io/create)
+
+## Enterprise
+
+Custom pricing
+
+For a team that works from one shared balance.
+
+- Everything in Pro
+- SSO, SCIM and RBAC
+- Setup and migration done for you
+
+[Contact sales](mailto:support@docsbook.io?subject=Docsbook%20Enterprise)
+
+<!-- /widget -->
+
+What each part of the AI work costs: [Pricing](./plans-and-pricing.md).
 
 <!-- widget:cta -->
 
