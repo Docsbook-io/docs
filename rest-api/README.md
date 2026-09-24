@@ -11,6 +11,8 @@ Call Docsbook from your own backend with one API key and plain HTTPS. Everything
 
 Open **Settings ▸ Domain & API** in the panel to view, copy or reset the project's API key. Send it as `Authorization: Bearer dbk_…`.
 
+![Settings ▸ Domain & API: the API Key card with a masked dbk_ key, show and copy buttons, its creation date and Reset key, between the Custom Domain and MCP Server cards](../images/admin/settings-domain.webp)
+
 There is one live key per project. Resetting it revokes the old key everywhere at once, so update your callers first — and keep the key on your server, never in a browser or mobile app: it can change your site.
 
 ## How the endpoints are shaped

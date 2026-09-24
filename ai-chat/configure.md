@@ -11,9 +11,13 @@ The reader chat is shaped in four places: **Settings ▸ Prompts** for what it i
 
 **Settings ▸ Prompts** holds what the chat is told.
 
+![Settings ▸ Prompts: the Custom Questions card with three questions filled in, and the Agent instructions card below it](../images/admin/settings-prompts.webp)
+
 - **Custom Questions** — three suggested questions shown in the empty chat, one field each.
 - **System Prompt** — the chat's persona, tone and rules, up to 16,000 characters, applied on every answer. It is added to Docsbook's own instructions rather than replacing them, so the rule to answer only from your docs stays in place.
 - **Skills** — a [skill](../brain/skills.md) reaches readers only when you tick **Public docs chat** for it; by default a skill runs on **Admin chat** and **Admin MCP** only.
+
+![Settings ▸ Prompts ▸ System Prompt: a saved prompt that tells the chat to answer from the docs only, lead with a code sample and link the page it used, with the 241 / 16,000 counter](../images/admin/settings-prompts-system.webp)
 
 <!-- widget:callout type=note -->
 
@@ -25,12 +29,16 @@ The **Agent instructions** card on the same tab steers the agent that edits your
 
 **Settings ▸ General** holds the two addresses the chat hands out.
 
+![Settings ▸ General: the Project Name, Site source and Call To Action URL cards; Support Email is further down the same tab](../images/admin/settings-general.webp)
+
 - **Support Email** — where the chat sends a reader whose question the docs don't answer. Left empty, the chat still says it doesn't know and tells the reader to contact support, without naming an address.
 - **Call To Action URL** — the page your docs should drive readers to, `https://` only. The chat offers it once, after the answer, when a reader is evaluating, comparing, asking about pricing, limits or plans, or asking what to do next — never on a troubleshooting question. Conversations that reach it count as reaching the goal in Analytics.
 
 ## Choose what it runs on
 
 **Settings ▸ Agent** decides the model, whose key pays and how the chat finds pages.
+
+![Settings ▸ Agent: the Admin & AI Agent Model and AI Visitors Chat Model cards with the default model and its price per 1M tokens, and Semantic Search switched on](../images/admin/settings-agent.webp)
 
 | Card | What it sets | Plan |
 |---|---|---|
@@ -56,7 +64,11 @@ Six entry points open the same chat. Three are on by default.
 | **Ask AI** in the header, `⌘I` / `Ctrl+I` | **Customize ▸ Header**, card **Ask AI in Header** | No |
 | **Ask AI about this page** in the right sidebar | **Customize ▸ Right sidebar**, card **Ask AI** | No |
 
+![Customize ▸ Content: the Reading aids card, where Ask AI button near the title and Ask AI on text selection are on](../images/admin/customize-content.webp)
+
 **Header Layout**, on **Customize ▸ Header**, can put **Ask AI** next to a wide search box or show it as an icon only. While the title, header or right-sidebar button is on, the search box also offers to hand a query to the chat.
+
+![Customize ▸ Header: the Header Layout card with five layouts — Classic (selected), Search-centric, Search + Ask AI, Centered and Minimal — each showing where Ask AI sits](../images/admin/customize-header.webp)
 
 ## Change it from your agent
 

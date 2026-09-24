@@ -21,6 +21,8 @@ A win starts with a signal somebody left behind: a reader, a search engine or an
 | **Dead ends and traffic drops** | Pages readers leave without going anywhere, and pages losing visits | **Analytics ▸ Insights**, the Exit tab and visits over time |
 | **Competitors** | Who search results and answer engines name for your questions instead of you | **Analytics ▸ SEO** and **Analytics ▸ GEO**, view Competitors |
 
+![Analytics ▸ SEO, Queries view: search queries ranked by views, each with its landing page, average position, clicks, views and click-through rate, filterable by Google, Bing, Yandex and DuckDuckGo](./images/admin/analytics-seo.webp)
+
 Outside your docs, the agent also reads Google's and Bing's live results — including the AI Overview and the sources it cites — keyword demand, and the Reddit, Hacker News and Stack Overflow threads where your readers ask instead of you.
 
 ## How does the agent pick what to fix first?
@@ -32,6 +34,8 @@ It matches each signal to the rule it breaks in the [expertise catalog](./agent/
 3. **Priority 1 or 2.** Priority weighs how much a rule moves the outcome by how often real docs get it wrong. 117 established rules sit at 1 or 2.
 
 What passes is ranked by priority, then by the lowest share of pages that pass, then by how many pages the fix touches. Work the agent does not finish in the run is filed as a GitHub issue that can carry the same kind of prediction — the metric, today's figure, the target and the date to check it — and it shows up in **Issues**.
+
+![Issues: all issues and pull requests on the project, filterable by Open, Merged, Reading due and Measured live, each row with its labels, author and age](./images/admin/issues.webp)
 
 ### What is each fix worth?
 
@@ -81,6 +85,8 @@ The target has to move in the direction the instrument counts as better, and by 
 ### Merging records the rule as applied
 
 When the pull request merges, each rule is recorded as applied to its page, with the pull request as the evidence. It counts toward that rule's coverage on **Analytics ▸ Audit**.
+
+![Analytics ▸ Audit: the 299 rules ranked by priority, each with its source, its topic and the share of pages that pass it](./images/admin/analytics-audit.webp)
 
 ### On the date, the same reading is taken again
 
@@ -171,7 +177,7 @@ A hypothesis is a rule practitioners repeat with no vendor documentation, standa
 
 - [How the agent works](./agent/README.md) — One worker that reads, writes, configures and measures {bot}
 - [Expertise: 299 rules](./agent/expertise.md) — What the agent checks, axis by axis {clipboard-check}
-- [Triggers](./agent/triggers.md) — 49 ready-made workflows that run the loop on their own {zap}
+- [Triggers](./agent/triggers.md) — 50 ready-made workflows that run the loop on their own {zap}
 - [Tell your agent](./get-discovered.md) — Connect Docsbook to your editor in one line {plug}
 
 <!-- /widget -->

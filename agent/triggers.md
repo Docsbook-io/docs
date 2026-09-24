@@ -1,6 +1,6 @@
 ---
 title: "Triggers: run the docs agent on a schedule or an event"
-description: "Triggers wake the Docsbook agent on a schedule, a docs event or a GitHub change: 49 ready-made workflows for writing, audits, answers, reports and translation."
+description: "Triggers wake the Docsbook agent on a schedule, a docs event or a GitHub change: 50 ready-made workflows for writing, audits, answers, reports and translation."
 ---
 
 # Triggers
@@ -45,13 +45,13 @@ The measure is what makes a run checkable: it names what the agent reads before 
 
 ## What is on the Triggers screen?
 
-![The Triggers screen: the Yours and Discover lenses, a search box, and the Docsbook agent card with its Turn on button above the grid of trigger cards](https://docsbook.io/landing-triggers.jpg)
+![Triggers ▸ Discover: the Yours and Discover lenses, a search box, filter chips with counts from Jobs to Events, the Docsbook agent card marked Online, and trigger cards with their switches and gears — Daily docs audit on and running, the creation cards off](../images/admin/triggers.webp)
 
 - **Yours and Discover** — Discover shows every card; Yours shows only the ones you switched on.
 - **The Docsbook agent** — the card at the top. Press **Turn on** and it runs every hour, deciding for itself what your docs need most.
 - **Filters** — Jobs, Dev, Analytics, SEO, GEO, Translate, Apps, Schedule and Events, each with a count. Sort by Recommended, Name or Recently run.
 - **The switch and the gear** — the switch arms a card. The gear opens its settings: a name, one line about it, the schedule or event, and the **Custom prompt**, filled in on ready-made cards and fully editable.
-- **Running cards** — a card whose run is going now turns the accent colour, shows a spinner and sorts first. Click it to open the run's live trace in **Activity ▸ Agent runs**; the **Triggers** row in the sidebar counts how many are running.
+- **Running cards** — a card whose run is going now turns the accent colour, shows a spinner and sorts first. Click it to open the run's live trace in **Activity ▸ Agent ▸ Agent runs**; the **Triggers** row in the sidebar counts how many are running.
 
 ## Can I write my own trigger?
 
@@ -63,7 +63,7 @@ Yes. Press **Add** on the Triggers screen:
 
 Any event card works the same way: switch it on and write what the agent should do in its **Custom prompt**. Or tell the agent — "every Monday at 9, check the quickstart against the code and fix what drifted" — and it arms the trigger itself.
 
-## The catalog: 49 ready-made workflows
+## The catalog: 50 ready-made workflows
 
 Ready-made cards come in five groups, named after what a run ends in. Each line is the card's name, what it does, and when it wakes; "on every commit" cards need semantic search on.
 
@@ -71,13 +71,14 @@ Ready-made cards come in five groups, named after what a run ends in. Each line 
 
 ### Write {pen-line}
 
-16 cards. A run ends in a page.
+17 cards. A run ends in a page.
 
 - **MCP sync** — Keeps the docs in step with the tools your MCP server actually exposes today. · every day
 - **OpenAPI sync** — Rebuilds the API reference from your spec; swap the demo link in the prompt for your own. · every day
 - **SDK sync** — Keeps the reference in step with what your client SDK actually exports today. · every day
 - **Generate docs from your site** — Turns the template into your docs from your site and your files. · once, when a project is created with a site
 - **Generate docs from your brief** — Drafts your docs from your description, files and screenshots. · once, when a project is created without a site
+- **Generate docs from your repository** — Documents your repository from its README, code and your brief, adding pages beside your files. · once, when a project is created from a GitHub repository
 - **Generate a spec** — Turns what actually shipped into a specification page that matches the code. · on every commit
 - **Write the user stories** — Turns what shipped into stories in the user's words: who, what they want, why. · on every commit
 - **Generate a user flow** — Writes the step-by-step path a real user takes, end to end, and finds where it breaks. · on every commit
@@ -173,7 +174,7 @@ Triggers make the agent work; they do not message people. For a Slack, Discord o
 
 ## What does a trigger run cost?
 
-Every trigger run is an [agent run](./README.md), billed the same way: $0.10 plus three times the model tokens it burns, capped at $50 for one run, plus the Docsbook tools it calls. Agent runs are part of Pro — see [Plans and pricing](../pricing/plans.md).
+Every trigger run is an [agent run](./README.md), billed the same way: $0.10 plus twice what the model tokens it burns cost, capped at $50 for one run, plus the Docsbook tools it calls. Agent runs are part of Pro — see [Plans and pricing](../pricing/plans.md).
 
 - **Cadence is the lever** — each ready-made card starts at the cadence its job is worth, and you can slow it down.
 - **Events are rate-limited** — an event trigger fires at most once every 10 minutes.
@@ -197,7 +198,7 @@ Yes. Say it in your own words — "check the docs every morning", "when the chat
 
 ### Where do I see what a trigger did?
 
-Every run appears in **Activity ▸ Agent runs** with its trace. The one-time creation cards report to your **Inbox**, and a run that fails lands there too.
+Every run appears in **Activity ▸ Agent ▸ Agent runs** with its trace. The one-time creation cards report to your **Inbox**, and a run that fails lands there too.
 
 <!-- /widget -->
 

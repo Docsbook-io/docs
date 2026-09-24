@@ -17,11 +17,11 @@ Docsbook publishes your documentation and puts AI agents to work on it: they che
 
 ### Do I need a GitHub account?
 
-No. Start from a template and Docsbook creates and hosts the repository for you; you need GitHub only to import a repository you already have. See [edit and publish](./site/editing.md).
+No. Describe your product or paste a link to your website on [docsbook.io/connect](https://docsbook.io/connect), and Docsbook creates and hosts the repository for you; you need GitHub only to import a repository you already have. See [edit and publish](./site/editing.md).
 
 ### Can I bring the docs I already have?
 
-Yes. Connect the GitHub repository your Markdown lives in and its pages become the site as they stand, or upload PDF, Word and Markdown files as [sources](./brain/sources.md), each of which becomes a page. Guides for [GitBook](./blog/migrating-from-gitbook-to-docsbook.md) and [Docusaurus](./blog/migrating-from-docusaurus-to-docsbook.md) cover the details.
+Yes. Connect the GitHub repository your Markdown lives in and its pages become the site as they stand, or paste a link to your Mintlify or GitBook docs on [docsbook.io/connect](https://docsbook.io/connect) and the first agent run moves them over page by page. You can also upload PDF, Word and Markdown files as [sources](./brain/sources.md), each of which becomes a page. Guides for [GitBook](./blog/migrating-from-gitbook-to-docsbook.md) and [Docusaurus](./blog/migrating-from-docusaurus-to-docsbook.md) cover the details.
 
 ### Does Docsbook support versioned docs?
 
@@ -35,7 +35,7 @@ Not as a version switcher: a project publishes one branch of one repository. Kee
 
 ### What does the agent do without being asked?
 
-It runs the [triggers](./agent/triggers.md) you switch on — 49 ready-made workflows that wake on a schedule or on an event, such as a search that found nothing or a question the chat could not answer. [Find wins fast](./find-wins-fast.md) explains how it picks what to fix.
+It runs the [triggers](./agent/triggers.md) you switch on — 50 ready-made workflows that wake on a schedule or on an event, such as a search that found nothing or a question the chat could not answer. [Find wins fast](./find-wins-fast.md) explains how it picks what to fix.
 
 ### Will it change my docs without my approval?
 

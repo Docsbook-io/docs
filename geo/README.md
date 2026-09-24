@@ -32,6 +32,8 @@ A few high-volume crawlers are refused by default, on every site:
 
 To close your site to AI engines, switch off **Readable and quotable by AI engines** on **Settings ▸ Access ▸ AI engines**: the project leaves `llms.txt` and `llms-full.txt`, and the named AI crawlers are refused in `robots.txt`. Search engines are unaffected.
 
+![Settings ▸ Access ▸ AI engines: the Readable and quotable by AI engines switch, on, with the note that the project is listed in llms.txt and AI crawlers are welcome in robots.txt](../images/admin/settings-access-ai-engines.webp)
+
 <!-- widget:callout type=note -->
 
 On a [custom domain](../site/custom-domain.md), `llms.txt`, the summary block, the **Updated** date and most of the JSON-LD currently appear on `docsbook.io` addresses only. The Markdown copy of each page works on every address.
@@ -80,6 +82,8 @@ A GEO change states its bet like any other: the watched questions it expects to 
 
 **Analytics ▸ GEO** is one list with a **View** switch. The [AI visibility](./ai-visibility.md) page explains each reading and its limits.
 
+![Analytics ▸ GEO ▸ Pages: the pages AI crawlers read over the last 30 days, split into AI Answers, Indexing and Training, with the crawlers, requests and how many checked questions cite each](../images/admin/analytics-geo-pages.webp)
+
 | View | What it shows |
 |---|---|
 | **Pages** | Which pages AI crawlers read, split into **AI Answers**, **Indexing** and **Training**, and how many checked questions cite each |
@@ -90,6 +94,8 @@ A GEO change states its bet like any other: the watched questions it expects to 
 | **Competitor tactics** | Which catalog rules the pages engines cite apply |
 
 **Analytics ▸ Audit** shows where your pages stand against the two GEO topics: What answer engines require, and Being quoted by models.
+
+![Analytics ▸ Audit: catalog rules sorted by priority, with rules tagged What answer engines require and Being quoted by models below the SEO ones, each with a score](../images/admin/analytics-audit.webp)
 
 ## Tell your agent
 

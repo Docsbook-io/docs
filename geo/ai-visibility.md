@@ -19,12 +19,16 @@ Docsbook measures AI visibility three ways: which AI crawlers read each page and
 
 The **Pages** view shows, per page, the requests, the crawlers and how many checked questions cite it. The **Crawlers** view shows each crawler with its company, requests, distinct visitors, and how often that company's engine named you in checked questions.
 
+![Analytics ▸ GEO ▸ Pages: 73 pages AI crawlers read over the last 30 days, with the AI Answers, Indexing and Training chips, the crawlers per page, requests and how many checked questions cite each](../images/admin/analytics-geo-pages.webp)
+
 ## Which readers came from an AI assistant?
 
 **Analytics ▸ [Insights](../analytics/insights.md)** files a visit under **AI assistant** when an assistant sent it. That covers two cases:
 
 - **A link in an answer** — the visit's referrer is `chatgpt.com`, `perplexity.ai`, `claude.ai`, `gemini.google.com` or `copilot.microsoft.com`
 - **A fetch for a user** — an assistant opened the page on someone's behalf, as `ChatGPT-User`, `Perplexity-User` or `Claude-User`
+
+![Analytics ▸ Insights: the Referrers card ranks chatgpt.com, perplexity.ai and claude.ai beside google.com and github.com, next to the Pages card](../images/admin/analytics-insights.webp)
 
 ## Do answer engines name you?
 
@@ -38,7 +42,13 @@ Choose up to 5 questions per engine and Docsbook checks them every day, includin
 
 AI Overview results land in **Analytics ▸ GEO ▸ Prompt mentions**; Google and Bing in **Analytics ▸ SEO ▸ Google & Bing mentions**. Every question keeps its earlier readings, so each change has a before and an after.
 
-Docsbook does not put questions to ChatGPT, Claude or Perplexity itself. Checks you run there can be recorded with your project API key from **Settings ▸ Domain & API**, and they appear in **Prompt mentions** beside Google's:
+![Analytics ▸ GEO ▸ Prompt mentions: 92 checked questions across ChatGPT, Gemini, Claude, Perplexity, Copilot and Google AI Overview, each with the pages it cites and how many engines named the docs](../images/admin/analytics-geo.webp)
+
+Docsbook does not put questions to ChatGPT, Claude or Perplexity itself. Checks you run there can be recorded with your project API key from **Settings ▸ Domain & API**, and they appear in **Prompt mentions** beside Google's.
+
+![Settings ▸ Domain & API: the Custom Domain card, the API Key card with a masked dbk_ key and Reset key, and the MCP Server URL](../images/admin/settings-domain.webp)
+
+Send the key as a bearer token:
 
 ```bash
 curl -X POST https://docsbook.io/api/v1/mention-checks \

@@ -20,6 +20,8 @@ The Docsbook agent judges your documentation against 299 rules of documentation 
 
 **Analytics ▸ Audit** is one list of all 299 rules, ranked #1 to #299 by priority for documentation as a whole.
 
+![Analytics ▸ Audit: the 299 rules ranked by priority, with the topic picker, the priority sort, the All and Not checked chips and a Run audit button; each row shows the publisher's icon, the rule, its topic and a coverage ring](../images/admin/analytics-audit.webp)
+
 - **Topic** — 11 topics in four groups: SEO, GEO, Writing and Socials.
 - **Status** — All, Not checked, To do, Done and N/A, each with a count.
 - **Sort** — by priority, or by how much of your site has been checked against the rule.

@@ -11,6 +11,8 @@ description: "See docs traffic, sources, countries and AI-assistant visitors in 
 
 A row of figures sits over one chart that draws the figure you select. Above them are the **online** count (readers active in the last 5 minutes), the range switcher and **Open Live Map**.
 
+![Analytics ▸ Insights: 199 online, the Today range and Open Live Map over seven figures from Visitors to Session time, an hourly chart, and the Pages and Referrers cards ranked by revenue](../images/admin/analytics-insights.webp)
+
 | Figure | What it counts |
 |---|---|
 | **Visitors** | People who read the docs in the window, split into new and returning |
@@ -40,6 +42,8 @@ Every figure on Insights counts people: crawlers are left out, and so are your o
 - **Analytics ▸ GEO** lists the crawlers themselves — which assistant fetched which page, for live answers, indexing or training; see [AI visibility](../geo/ai-visibility.md)
 - **Analytics ▸ Graph** colours a map of your docs by **AI Answers** (visits that arrived via an AI assistant) or **Training** (hits from AI training crawlers)
 
+![Analytics ▸ Graph: the docs drawn as a map of 1,000 pages and 2,297 links, coloured by Page views, with the Dead ends, AI Answers and Training chips above it](../images/admin/analytics-graph.webp)
+
 ## How do I see revenue from my docs?
 
 Name the page that sells and what a sale is worth, and **Conversion rate**, **Revenue** and **Revenue/visitor** switch on.
@@ -49,6 +53,8 @@ Name the page that sells and what a sale is worth, and **Conversion rate**, **Re
 ### Set a Call To Action URL
 
 Open **Settings ▸ General** and fill in **Call To Action URL**: your pricing, signup or demo page. A reader who clicks out of the docs to that host is a conversion, and **Conversion rate** appears.
+
+![Settings ▸ General: the Project Name, Site source and Call To Action URL cards, the last one still empty with the placeholder https://example.com/pricing](../images/admin/settings-general.webp)
 
 ### Set an Average Product Price
 
@@ -64,7 +70,9 @@ Until both are set, Revenue and Revenue/visitor show a dash and **Set up →**, 
 
 ## Follow one reader
 
-**Activity ▸ Users** lists every reader as one row: a pseudonym, their country, the translation they read, where they came from, when they reached a [goal](./goals.md), and **Potential**.
+**Activity ▸ Readers ▸ Users** lists every reader as one row: a pseudonym, their country, the translation they read, where they came from, when they reached a [goal](./goals.md), and **Potential**.
+
+![Activity ▸ Readers ▸ Users: one row per reader over 30 days, with a pseudonym, country, language, goal progress, Potential, Spent, source and when they were last seen](../images/admin/activity-users.webp)
 
 - **Potential** — what a reader is worth on one scale: full value once they reached your Call To Action URL, and a share of it for everyone else, by how closely they follow a converter's path; it ranks readers and is not a revenue forecast
 - **Filters** — **Close to converting**, **Came back** and **Reached no goal** find who to look at next

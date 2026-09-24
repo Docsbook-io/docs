@@ -64,7 +64,9 @@ The **Goals & funnels** card on **Analytics ▸ Insights** reads your goals four
 - **User** — the readers behind the completions, one row each, with when they reached a goal and what they are worth
 - **Journey** — everyone who reached one goal, what they touched on the way and how long it took; the median and p90 appear once five readers have completed it
 
-**Activity ▸ Users** filters every reader by goal, and a goal's worth feeds each reader's **Potential** there — see [Docs analytics](./insights.md).
+**Activity ▸ Readers ▸ Users** filters every reader by goal, and a goal's worth feeds each reader's **Potential** there — see [Docs analytics](./insights.md).
+
+![Activity ▸ Readers ▸ Users: one row per reader, with the Completed at column showing when each reached a goal and Potential beside it](../images/admin/activity-users.webp)
 
 ## What the agent does with goals
 

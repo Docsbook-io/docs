@@ -36,15 +36,21 @@ Then ask: "Use the Docsbook agent: our quickstart loses people on step 3, fix it
 
 ### On a trigger {zap}
 
-A [trigger](./triggers.md) wakes the agent on a schedule, on something that happens in your docs, or on a change in GitHub — with the prompt already written. 49 ready-made cards cover writing, audits, answers, reports and translation.
+A [trigger](./triggers.md) wakes the agent on a schedule, on something that happens in your docs, or on a change in GitHub — with the prompt already written. 50 ready-made cards cover writing, audits, answers, reports and translation.
 
 The **Docsbook agent** card at the top of **Triggers** is the autonomous one: switch it on and it runs every hour, deciding for itself what your docs need most.
 
+![Triggers ▸ Discover: the Docsbook agent card marked Online at the top, above ready-made trigger cards with their switches](../images/admin/triggers.webp)
+
 ### At project creation {sparkles}
 
-Create a project with a website and **Generate docs from your site** runs once: it reads about ten pages of your site plus the files you attached, and turns the template into your docs.
+Press **Generate** on [docsbook.io/connect](https://docsbook.io/connect) and one creation run starts, once, picked by what you gave it:
 
-Without a website, **Generate docs from your brief** drafts the docs from your description, files and screenshots, and turns what it could not confirm into questions. Either way, the report lands in your **Inbox**.
+- **Generate docs from your repository** — for a GitHub repository: adds pages beside your files and never rewrites one
+- **Generate docs from your site** — for a website, Mintlify or GitBook link: reads about ten pages of it plus the files you attached
+- **Generate docs from your brief** — for a description, files and screenshots alone, turning what it could not confirm into questions
+
+You watch it write in **Activity ▸ Agent ▸ Agent runs**, and the report lands in your **Inbox**. The [quickstart](../quickstart.md) walks through it.
 
 <!-- /widget -->
 
@@ -105,14 +111,16 @@ Agent runs are part of **Pro**: $20 a month, which comes back as $20 of AI usage
 - **Tool calls** the run makes to Docsbook are metered per call like any MCP call — at twice what serving them costs, a few cents per thousand for most.
 - **To start**, a run needs at least $0.10 of balance. With a paid subscription it can keep going past the monthly allowance on overage, up to a cap you set ($200 by default), billed weekly.
 
-Each run's tokens and cost are in **Activity ▸ Agent runs**. The totals and your balance are in **Settings ▸ Usage**.
+Each run's tokens and cost are in **Activity ▸ Agent ▸ Agent runs**. The totals and your balance are in **Settings ▸ Usage**.
+
+![Activity ▸ Agent ▸ Agent runs: each run with its status, duration, tool calls and turns, tokens and cost](../images/admin/activity-runs.webp)
 
 ## Where do you see it working?
 
-![The Overview screen of the panel: the Docsbook agent card reads Online, on request, and counts what its memory folder holds](https://docsbook.io/landing-dashboard.jpg)
+![Overview ▸ Docsbook agent: the card reads Online, working on a schedule, counts what each folder of its memory holds, and shows its latest report and how many are unread](../images/admin/overview-agent.webp)
 
 - **Overview** — the **Docsbook agent** card: whether it works on request or on a schedule, what its memory folder holds, and its latest report.
-- **Activity ▸ Agent runs** — every run with its status, duration, tokens and cost; open one for a live step-by-step trace.
+- **Activity ▸ Agent ▸ Agent runs** — every run with its status, duration, tokens and cost; open one for a live step-by-step trace.
 - **Inbox** — its reports, and the questions it needs you to answer.
 - **Issues** — its issues and pull requests, each with a reason, a prediction and a date to check it.
 - **Triggers** — a running card turns the accent colour and shows a spinner; click it to open the run.
@@ -143,7 +151,7 @@ Yes. It keeps what it learns about your product in a [memory folder](../brain/me
 
 <!-- widget:cards plain cols=2 arrow=hover -->
 
-- [Triggers](./triggers.md) — The 49 ready-made workflows, and how to write your own {zap}
+- [Triggers](./triggers.md) — The 50 ready-made workflows, and how to write your own {zap}
 - [Expertise](./expertise.md) — The 299 rules the agent checks your docs against {clipboard-check}
 - [Review and publish](./review.md) — Pull requests, page statuses, Inbox and Activity {git-pull-request}
 - [Find wins fast](../find-wins-fast.md) — How the agent picks what to fix first {target}

@@ -16,14 +16,12 @@ Changes go to the repository your site is built from:
 
 Each write is one atomic commit: pages written, moved and deleted together. When a page moves, its old address is recorded in `.docsbook/redirects.json` in the same commit, so links to it keep working.
 
-A pull request is opened for every change, and the **Auto-merge** switch decides what happens next.
+A pull request is opened for every change, and the **Auto-merge** switch on **Settings ▸ General ▸ When a change goes live** decides what happens next.
 
-![Settings, General: the When a change goes live card with the Auto-merge switch turned on](https://docsbook.io/landing-pull-requests.jpg)
+![Settings ▸ General ▸ When a change goes live: the Auto-merge switch turned on, with the note that when it is off a pull request stays open until you merge it](../images/admin/settings-general-go-live.webp)
 
 - **Auto-merge on** — the default. The same call merges the pull request as one squashed commit, so the docs update without you, and the diff and the issues behind it stay readable.
 - **Auto-merge off** — the pull request stays open, and nothing reaches the published site until you merge it.
-
-The switch is the **When a change goes live** card on **Settings ▸ General**.
 
 ## How do I approve or reject a change?
 
@@ -64,8 +62,10 @@ To see every page waiting on you, ask your MCP client for `get_project_doc_outli
 
 - **Reports** — what the agent decided was worth your time.
 - **Questions** — decisions only you can make.
-- **The creation report** — what **Generate docs from your site** or **Generate docs from your brief** did, and what it needs you to confirm.
+- **The creation report** — what **Generate docs from your repository**, **Generate docs from your site** or **Generate docs from your brief** did, and what it needs you to confirm.
 - **Failures** — a trigger run that failed arrives as "… failed", with the reason it gave.
+
+![Inbox: the agent's reports and questions in a list, such as "Translated 38 pages to Japanese" and "Translate to Korean — run failed", with the open letter on the right and its Reply button](../images/admin/inbox.webp)
 
 A trigger run that succeeds writes you a letter only when the agent has something to say.
 
@@ -73,7 +73,9 @@ A trigger run that succeeds writes you a letter only when the agent has somethin
 
 ## How do I watch a run?
 
-**Activity ▸ Agent runs** lists every run on the project: what was asked, where it came from, its status, when it started, how long it took, the tool calls and model turns it made, its tokens and its cost.
+**Activity ▸ Agent ▸ Agent runs** lists every run on the project: what was asked, where it came from, its status, when it started, how long it took, the tool calls and model turns it made, its tokens and its cost.
+
+![Activity ▸ Agent ▸ Agent runs: runs filtered by All, Running, Completed, Failed and Cut short or stopped, each row with its status, start time, duration, tool calls and turns, tokens and cost](../images/admin/activity-runs.webp)
 
 | Status | What it means |
 |---|---|
@@ -86,9 +88,13 @@ A trigger run that succeeds writes you a letter only when the agent has somethin
 
 Open a row for its trace: the run, each attempt and step, and the model call and tool calls inside each step, laid out on one time axis. While the run is open the trace refreshes every two seconds, so you watch it think instead of reading a snapshot.
 
+![Activity ▸ Agent ▸ Agent runs, one run's trace: the run, its attempt and steps with the model call and each tool call on one time axis, and a side panel with its status, tokens, cost and report](../images/admin/activity-run-trace.webp)
+
 ## Where do I follow the prediction?
 
 **Issues** is one list of every issue and pull request on your repository, with the reason, the prediction and the date to check it.
+
+![Issues: every issue and pull request with the All, Open, Merged, Reading due and Measured live chips, a filter box, and each row's labels, author and age](../images/admin/issues.webp)
 
 - **Filter** — with GitHub's own syntax, such as `is:pr`, `state:open` or `label:docs`, plus `is:due` for records past their check date with no reading yet. Sort by **Impact at risk** to see those first.
 - **How far it got** — each pull request shows Opened, Reviewed, Merged and Measured, and once measured, the share of the predicted move that happened.
@@ -106,7 +112,9 @@ What a stopped run already committed stays an ordinary commit, reviewable and re
 
 ## What did it cost?
 
-Each run's tokens and cost are in the **Cost** column of **Activity ▸ Agent runs**. **Settings ▸ Usage** shows your balance and where it went over the last 24 hours, 7 days or 30 days. The price of a run is on [How the agent works](./README.md).
+Each run's tokens and cost are in the **Cost** column of **Activity ▸ Agent ▸ Agent runs**. **Settings ▸ Usage** shows your balance and where it went over the last 24 hours, 7 days or 30 days. The price of a run is on [How the agent works](./README.md).
+
+![Settings ▸ Usage: a 30-day consumption chart by day, the balance with a Top up button, and what was charged to this project](../images/admin/settings-usage.webp)
 
 ## Next steps
 

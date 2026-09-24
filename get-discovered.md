@@ -104,7 +104,9 @@ The panel is the other place to say it: the chat button at the bottom right of t
 | `docsbook_agent_stop` | Ends the job and revokes its credential; committed work stays |
 | `docsbook_agent_tasks` | Every job on your account, newest first |
 
-Each page change is a git commit delivered as a pull request — merged at once or left for you, per **Settings ▸ General ▸ When a change goes live** ([reviewing changes](./agent/review.md)). Every run appears in **Activity ▸ Agent runs** with its full trace, and a question the agent can't settle alone lands in **Inbox**.
+Each page change is a git commit delivered as a pull request — merged at once or left for you, per **Settings ▸ General ▸ When a change goes live** ([reviewing changes](./agent/review.md)). Every run appears in **Activity ▸ Agent ▸ Agent runs** with its full trace, and a question the agent can't settle alone lands in **Inbox**.
+
+![Activity ▸ Agent ▸ Agent runs: every run on the project with its status, start time, duration, tool calls and turns, tokens and cost](./images/admin/activity-runs.webp)
 
 A run is billed to your balance: $0.10 per run plus twice what its model tokens cost, capped at $50 per run ([pricing](./pricing/plans.md)).
 

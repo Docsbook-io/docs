@@ -22,6 +22,8 @@ Every published site collects these signals with nothing to install:
 
 Your own testing stays out of reader metrics too: visits from a network where you have the project open in the panel are left out.
 
+![Customize ▸ Right sidebar: the Scroll to Top, Ask AI, Copy as Markdown and Rate Page cards, each with its switch off](../images/admin/customize-right-sidebar.webp)
+
 ## What the agent does on its own
 
 Each signal can wake the [Docsbook agent](../agent/README.md) through a ready-made card under **Triggers**. Switch a card on and every run follows one loop:
@@ -30,6 +32,8 @@ Each signal can wake the [Docsbook agent](../agent/README.md) through a ready-ma
 2. **The agent reads the evidence** against the rules of the [expertise catalog](../agent/expertise.md)
 3. **It changes the docs** in a [pull request](../agent/review.md), or files an issue when the finding needs your decision
 4. **It names the number to check** — later the pull request reports **As predicted**, **No effect**, **Went backwards** or **Cannot tell**
+
+![Triggers ▸ Discover: 145 ready-made cards filtered by category, the Docsbook agent banner, and cards such as Daily docs audit with their on/off switches](../images/admin/triggers.webp)
 
 <!-- widget:cards cols=2 -->
 
@@ -76,7 +80,9 @@ These screens in the panel show the signals above:
 - **Activity ▸ Chat ▸ Content gaps** — each search that found nothing and each question the chat could not answer, as it happens
 - **Analytics ▸ Graph** — your docs as a map; colour it by **Dead ends** to see which pages end visits
 - **Analytics ▸ Insights** — traffic, sources, audience and conversions, covered in [Docs analytics](./insights.md)
-- **Activity ▸ Users** — one row per reader: country, the translation they read, where they came from, the [goals](./goals.md) they reached
+- **Activity ▸ Readers ▸ Users** — one row per reader: country, the translation they read, where they came from, the [goals](./goals.md) they reached
+
+![Analytics ▸ Feedback: pages ranked by votes over the last 30 days, 168 likes and 32 dislikes in all, each row with its thumbs-up and thumbs-down counts](../images/admin/analytics-feedback.webp)
 
 <!-- widget:callout type=tip -->
 

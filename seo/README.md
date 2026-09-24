@@ -105,6 +105,8 @@ A change that claims to move a number states its bet. The agent records the read
 
 **Analytics ▸ SEO** is one list with a **View** switch. Rows come from [Google Search Console](./search-console.md) and from the checks the agent runs.
 
+![Analytics ▸ SEO: the Queries view, 113 queries from Google, Bing, Yandex and DuckDuckGo, each with its landing page, average position, clicks, views and CTR](../images/admin/analytics-seo.webp)
+
 | View | What it shows |
 |---|---|
 | **Queries** | Each search query: clicks, views, CTR and average position, with the engine that reported it |
@@ -115,6 +117,8 @@ A change that claims to move a number states its bet. The agent records the read
 | **Competitor tactics** | Which catalog rules the winning competitor pages apply |
 
 **Analytics ▸ Audit** shows where your pages stand against the three SEO topics of the catalog: Search demand & intent; Crawl, index & speed; Authority & risk.
+
+![Analytics ▸ Audit: 299 catalog rules sorted by priority, each with its source, its topic such as Search demand & intent or Crawl, index & speed, and a score](../images/admin/analytics-audit.webp)
 
 ## Tell your agent
 

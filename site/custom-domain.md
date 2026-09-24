@@ -11,7 +11,9 @@ Serve your docs at an address you own, such as `docs.acme.com`, with one DNS rec
 
 ### Add the domain in Docsbook
 
-Open **Settings ▸ Domain & API ▸ Custom Domain**, type the domain, for example `docs.acme.com`, and save.
+Open **Settings ▸ Domain & API**, type the domain in **Custom Domain**, for example `docs.acme.com`, and save:
+
+![Settings ▸ Domain & API: the Custom Domain card with docs.helio.dev entered and a Save button, above the API Key and MCP Server cards](../images/admin/settings-domain.webp)
 
 ### Add one DNS record where your domain is managed
 
@@ -37,7 +39,11 @@ The first two steps work in either order, so you can add the DNS record first.
 - **Your [public MCP server](../brain/mcp-server.md)** moves too: `https://docs.acme.com/api/mcp/server`, shown in **Settings ▸ Domain & API ▸ Public MCP server**.
 - **Some extras stay on the docsbook.io address for now** — the sitemap, `llms.txt`, `hreflang`, moved-page redirects and most structured data; see [Search engines see you](../seo/README.md).
 
-To go back to the docsbook.io address, clear the **Custom Domain** field and save; to switch domains, enter the new one. The docsbook.io address itself is set in **Settings ▸ General ▸ Site source**.
+![Settings ▸ Domain & API ▸ Public MCP server: the card with the endpoint https://docs.helio.dev/api/mcp/server and a ready claude mcp add command, both with copy buttons](../images/admin/settings-domain-public-mcp.webp)
+
+To go back to the docsbook.io address, clear the **Custom Domain** field and save; to switch domains, enter the new one. The docsbook.io address itself is set in **Settings ▸ General ▸ Site source**:
+
+![Settings ▸ General ▸ Site source: the card with the name helio, the line Served at helio.docsbook.io and a Save button](../images/admin/settings-general-source.webp)
 
 ## Which plans include it
 

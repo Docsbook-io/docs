@@ -17,6 +17,8 @@ https://docsbook.io/<owner>/<repo>/api/mcp/server
 
 With a [custom domain](../site/custom-domain.md) connected, the same server also answers at `https://<your-domain>/api/mcp/server`. The **Public MCP server** card in **Settings ▸ Domain & API** shows your exact address and a Claude Code command to copy.
 
+![Settings ▸ Domain & API ▸ Public MCP server: the anonymous, read-only endpoint https://docs.helio.dev/api/mcp/server and a claude mcp add command, each with a copy button](../images/admin/settings-domain-public-mcp.webp)
+
 ## What can a reader's agent do with it?
 
 The server and its main tools carry your project's name, so an agent knows whose docs it is reading before its first call. The name is your repository's, in lowercase, with each run of other characters turned into one `_`: `acme/api-docs` serves a server called `api_docs-docs`.
@@ -90,6 +92,8 @@ The **Copy page** menu on every page carries two ways in, both on by default:
 - **Connect to VSCode** — installs the server in VS Code with one click.
 
 Hide either one with the toggles on the **Copy page menu** card in **Customize ▸ Content**.
+
+![Customize ▸ Content: the Reading aids card with the Copy page button and the other page controls switched on, above Home page as a landing page; the Copy page menu card is further down the tab](../images/admin/customize-content.webp)
 
 <!-- widget:callout type=note -->
 

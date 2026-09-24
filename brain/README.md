@@ -29,6 +29,8 @@ These work on a new project with nothing to set up:
 
 <!-- /widget -->
 
+![Settings ▸ Agent ▸ Semantic Search: the card marked Active, with the Enable semantic search switch turned on and when the index was last updated and what it cost](../images/admin/settings-agent-semantic-search.webp)
+
 ## What the agent does on its own
 
 The agent keeps the brain current, checks your pages against the code, adds what it learns on every run, and answers from it.
@@ -57,7 +59,7 @@ The agent keeps the brain current, checks your pages against the code, adds what
 
   - **Watches:** a question from you, a reader, a reader's agent or your backend.
   - **Changes:** searches by meaning first, then reads the matching pages before it answers.
-  - **Shows:** one row per run or chat turn on **Activity ▸ Agent runs**, marked with the door it came through.
+  - **Shows:** one row per run or chat turn on **Activity ▸ Agent ▸ Agent runs**, marked with the door it came through.
 
 <!-- /widget -->
 
@@ -99,7 +101,9 @@ Only the sections that changed are re-embedded. That cost comes from your balanc
 - **Analytics ▸ Graph** — the map of pages, headings and links; the **Search by meaning…** box lights the sections that answer a question.
 - **Settings ▸ Agent** — the **Semantic Search** card, with **Last updated** and what the last run cost.
 - **Integrations** — each source's addresses, marked "read by the agent" or "not read yet".
-- **Activity ▸ Agent runs** — every run and chat turn, filtered by door.
+- **Activity ▸ Agent ▸ Agent runs** — every run and chat turn, filtered by door.
+
+![Analytics ▸ Graph: the map of the site's pages and links, coloured by page views over 7 days, with the Search by meaning box at the bottom](../images/admin/analytics-graph.webp)
 
 ## Tell your agent
 

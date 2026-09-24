@@ -28,6 +28,8 @@ Interactive mode makes every block of your live site clickable.
 
 In **Overview ▸ Your documentation website**, press the pencil (**Open the documentation in edit mode**). On your live site, the same switch is **Interactive mode**, the cursor icon in the panel chat.
 
+![Overview: the Your documentation website card with the GitHub, refresh, pencil and cursor buttons beside Visit, a live preview of the site, and its deployment, status and source branch](../images/admin/overview.webp)
+
 ### Click a block
 
 A toolbar opens above it: **Edit text**, **Rewrite with AI**, **Make concise**, **Expand**, **Turn into a widget**, **Change its shape**, **Delete block** and more.
@@ -48,6 +50,8 @@ Docsbook publishes your repository's default branch. Every `.md` and `.mdx` file
 
 - **Unattended writes** — scheduled runs and MCP clients commit through the **Docsbook GitHub App** (Contents: Read and write). If Docsbook can only publish while you're signed in, **Overview ▸ Your documentation website** says so and links to the fix.
 - **Reader fixes** — turn on **Edit on GitHub** in **Customize ▸ Right sidebar**, and every page links to its source file.
+
+![Customize ▸ Right sidebar ▸ Edit on GitHub: the Link to edit the source file on GitHub switch, turned off](../images/admin/customize-right-sidebar-edit-github.webp)
 
 ## No GitHub? Docsbook hosts the repository
 
@@ -72,12 +76,12 @@ Moving needs full access to the project, and it can change your site's docsbook.
 
 ## Review changes before they go live
 
-**Settings ▸ General ▸ When a change goes live** decides what happens to each change made through Docsbook.
+**Settings ▸ General ▸ When a change goes live** decides what happens to each change made through Docsbook:
+
+![Settings ▸ General ▸ When a change goes live: the Auto-merge switch turned on, with the note on what happens when it is off](../images/admin/settings-general-go-live.webp)
 
 - **Auto-merge on** (default) — a pull request is still opened for every change, so the diff stays readable, and merged in the same step.
 - **Auto-merge off** — the pull request stays open. Open it in **Issues** and press **Approve and publish** to put it live.
-
-![Settings ▸ General in the Docsbook panel: the When a change goes live card with the Auto-merge switch](https://docsbook.io/landing-pull-requests.jpg)
 
 The editor, the panel chat and `write_docs` from your own agent all follow this switch; commits you push yourself don't. A pull request merged on GitHub instead waits for the page cache, like any push. More in [Review changes](../agent/review.md).
 
@@ -107,6 +111,10 @@ The sidebar mirrors your folders. In each folder, pages come before sub-folders,
 - **Everything else** — alphabetical, so a number prefix such as `01-` sets the order (it's ignored when matching the names above)
 
 Labels come from file names: `getting-started.md` shows as **Getting Started**, `README.md` as **Introduction**. To relabel an entry or give it an icon without renaming the file, click it in interactive mode (**Rename**, **Icon**); icons are also in **Customize ▸ Left sidebar ▸ Sidebar Icons**. Top-level folders become tabs under the header in **Customize ▸ Header ▸ Subheader Folders**.
+
+![Customize ▸ Left sidebar ▸ Sidebar Icons: the search box for picking a page or folder to give an icon, with no icons set yet](../images/admin/customize-left-sidebar-icons.webp)
+
+![Customize ▸ Header ▸ Subheader Folders: each top-level folder with its own tab switch, and Add a page as a tab below](../images/admin/customize-header-subheader-folders.webp)
 
 <!-- widget:callout type=warning -->
 

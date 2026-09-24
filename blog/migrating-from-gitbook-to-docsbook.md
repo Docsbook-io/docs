@@ -35,6 +35,8 @@ Compare your old URLs with the new ones. For each path that changed, add a redir
 
 In **Settings ▸ Domain & API**, enter your domain, then add one DNS record: a `CNAME` to `cname.vercel-dns.com` for a subdomain, as the [custom domain](../site/custom-domain.md) page shows. A custom domain can be attached once you subscribe or the free trial has ended.
 
+![Settings ▸ Domain & API: the Custom Domain card with docs.helio.dev entered and a Save button](../images/admin/settings-domain.webp)
+
 ### Switch off Git Sync
 
 When Docsbook serves your domain, turn off Git Sync in GitBook so there is one place to edit.

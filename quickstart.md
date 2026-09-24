@@ -1,67 +1,94 @@
 ---
 title: "Quickstart: publish your docs with Docsbook"
-description: "Go from a GitHub repo, a website or a short product description to a live documentation site in minutes, then hand the writing to the Docsbook agent."
+description: "Describe your product, paste a link to your website, Mintlify, GitBook or GitHub repository, press Generate — and watch the Docsbook agent write your documentation site."
 ---
 
 # Quickstart
 
-Open [docsbook.io/create](https://docsbook.io/create), pick where your pages come from, and your documentation site is live the moment you sign in — ready to hand to the Docsbook agent.
+Open [docsbook.io/connect](https://docsbook.io/connect), say what you're documenting and press **Generate**. The Docsbook agent writes your first pages while you watch.
 
 Nothing to install and no card. A GitHub account is optional, and every new account starts with a 14-day Pro trial that includes $5 of AI credit ([pricing](./pricing/plans.md)).
 
 ## Create your site
 
-The **New project** screen walks through three steps — **Start**, **Your project**, **Your agent** — and only the first one needs an answer. Already signed in, you get the same steps from **Create new project** in the panel's project switcher.
+It all happens on one screen, **What are we documenting?** — for a new visitor and a signed-in owner alike. **Create new project** in the panel's project switcher opens the same screen.
+
+![docsbook.io/connect: the "What are we documenting?" field with a + button and a Generate button, and under "Or start from" a Connect GitHub card beside three template previews](./images/admin/connect.webp)
 
 <!-- widget:stepper -->
 
-### Pick a starting point
+### Describe your product or paste a link
 
-The first tile imports a repository: **Connect GitHub**, or **Select repository** once GitHub is connected. Every other tile is a template — 38 of them in 9 categories, from **Docs shell** to **REST API** — pictured with the pages it will create.
+Type a few sentences about your product, paste a link, or both in one message. The field takes your website, your current docs on Mintlify or GitBook, or a GitHub repository as `github.com/owner/repo`.
 
-### Tell Docsbook about your project
+![docsbook.io/connect with a description typed into the field: "Helio is an event streaming API for product teams — SDKs, webhooks and a CLI. Our site: https://helio.dev", and the Generate button turned blue](./images/admin/connect-typed.webp)
 
-Every field on **Tell us about your project** is optional:
+- **A description** — the fact the agent trusts first, over any site or file
+- **A website link** — read for your colours, logo and fonts, and connected as a [source](./brain/sources.md); up to five sites in one message
+- **A Mintlify or GitBook link** — your existing docs, moved over page by page
+- **A GitHub repository link** — imports that repository as the site
 
-- **Project name** — the site's title, and its address when Docsbook hosts it
-- **Main site** — read for your colours, logo and fonts, and the site the agent checks facts against
-- **Add website** — up to four more sites, connected as [sources](./brain/sources.md)
-- **Attachments** — PDF, DOCX and Markdown files become pages; pictures become images any page can use
-- **What does your product do?** — a paragraph only your agent reads, never published
+### Attach files and screenshots
 
-### Onboard your agent
+**+** adds files or takes a screenshot; dropping or pasting works too. PDF, DOCX, Markdown and text files are material the agent turns into pages.
 
-Copy the one-line prompt for the agent you already use, pick **Channels** where the Docsbook agent posts what it finds (Slack, Telegram and more), and add **Instructions** or a **Model** if you want to. All of it can wait for the panel.
+Pictures are saved to the new site's `assets/` folder for the agent to place on the right page. An imported repository gets nothing written at creation, so pictures are left out there. A file can be up to 15 MB, a picture up to 5 MB.
 
-### Create and sign in
+### Pick a starting point, if you want one
 
-Press **Create Agent and Project**. Signed out, you choose **Continue with GitHub** (recommended — it lets agents commit to your repo), **Continue with Google** or **Continue with Email** with a 6-digit code. Your answers survive the sign-in, and the project exists as soon as you're in.
+Under **Or start from**, the first card is **Connect GitHub** — or **Choose a repository** once GitHub is connected, which swaps the gallery for your repositories. Every other card is a template, pictured with the pages it will create; more load as you scroll.
 
-### Let the first run finish
+![docsbook.io/connect scrolled to "Or start from": the Connect GitHub card and template previews such as Product docs, Onboarding & activation, Plans & billing and Your project API, marked "Optional — the agent adapts it to your product"](./images/admin/connect-templates.webp)
 
-You land in the project's panel with the site already live. A new project built from a template, with a site, a description or files to work from, starts the one-time trigger **Generate docs from your site** — or **Generate docs from your brief** without a site — and the agent's report arrives in **Inbox**.
+A pick gets a blue frame, and a second click undoes it. A template and a repository exclude each other. Without a template, the agent designs the structure itself.
+
+### Press Generate and sign in
+
+**Generate** is the only button that creates anything. Signed out, it opens **Create your account to generate your docs site**: **Continue with GitHub** (recommended — it lets agents commit docs to your repo), **Continue with Google**, or your email and a 6-digit code.
+
+![docsbook.io/connect with the sign-up window open: "Create your account to generate your docs site", Continue with GitHub marked Recommended, Continue with Google, and an email field with Continue with Email](./images/admin/connect-signup.webp)
+
+What you typed, attached and picked survives the sign-in, and the project is created as soon as you're in.
+
+### Watch the first run
+
+When the first run starts, you land on **Activity ▸ Agent ▸ Agent runs**, where it is already writing. Open its row for a live step-by-step trace; the agent's report arrives in **Inbox** when it's done.
+
+![Activity ▸ Agent ▸ Agent runs: a table of agent runs with a Running row at the top, the rest Completed or Stopped, each with its duration, tool calls, turns, tokens and cost](./images/admin/activity-runs.webp)
 
 <!-- /widget -->
 
-The run replaces the template's placeholder wording with your product's real names, features and steps. It is told never to invent a price, a limit or an integration: what it can't confirm comes back as questions in the report.
+## What does the first run do?
+
+Which run starts depends on what you gave it:
+
+| You gave | The run | What it does |
+|---|---|---|
+| A GitHub repository | **Generate docs from your repository** | Adds pages beside your files — getting started, configuration, usage, a reference for what the code exposes. It never rewrites, moves or deletes a file of yours, and every command and name it writes exists in the code. |
+| A website, Mintlify or GitBook link | **Generate docs from your site** | Reads about ten pages of your site — pricing, features, existing docs — and writes your docs from them. Existing docs are moved page by page, up to about thirty. |
+| Only a description or files | **Generate docs from your brief** | Drafts the docs from your material alone, never goes looking for a site, and leaves out what it has nothing to say about. |
+
+A picked template is kept and filled in with your product's real names, features and steps. Each run also fills settings that are still empty — **Product website**, product description, support email, **Call To Action URL** and the site's name — and never replaces your own words.
+
+It is told never to invent a price, a limit or an integration: what it can't confirm comes back as questions in the report.
 
 ## Which starting point fits?
 
 <!-- widget:tabs -->
 
-Only importing a repository needs GitHub. A template runs on a repository Docsbook creates and hosts for you.
+Only importing a repository needs GitHub. Anything else runs on a repository Docsbook creates and hosts for you.
 
 ### Your repo {git-branch}
 
-Choose **Connect GitHub**, then your repository. Its Markdown becomes the site as it stands: Docsbook reads it, writes nothing back, and the one-time run doesn't start. Nothing rewrites your pages until you ask the agent or arm a trigger.
+Paste `github.com/owner/repo`, or choose **Connect GitHub** and then your repository, and press **Generate**. Its Markdown stays the site, and **Generate docs from your repository** adds the missing pages beside it as a pull request.
 
 ### Your website {globe}
 
-Pick a template — **Docs shell** is the blank one — and put your site in **Main site**. **Generate docs from your site** reads about ten of its pages, pricing, features and existing docs first, and rewrites the template pages about your product.
+Paste your site's address, or your Mintlify or GitBook docs, and add a sentence about the product if you like. **Generate docs from your site** writes your docs from what it reads there.
 
 ### A description {file-text}
 
-No site yet? Pick a template, fill in **What does your product do?** and attach any files or screenshots. **Generate docs from your brief** drafts the docs from that material alone and removes the template pages it says nothing about.
+No site yet? Describe the product in a few sentences and attach any files or screenshots. **Generate docs from your brief** drafts the docs from that material alone.
 
 <!-- /widget -->
 
@@ -71,11 +98,15 @@ Every site gets a `docsbook.io` address the moment it's created:
 
 | You started from | Your site's address |
 |---|---|
-| A template (Docsbook hosts the repo) | `https://<project-name>.docsbook.io` |
+| A link, a description or a template (Docsbook hosts the repo) | `https://<project-name>.docsbook.io`, named after your site when you gave one |
 | Your GitHub repository | `https://<owner>.docsbook.io/<repo>` |
 | Either, on your own domain | `https://docs.example.com` — see [custom domain](./site/custom-domain.md) |
 
-Change the name in the address on **Settings ▸ General ▸ Site source**; nothing on GitHub moves. For a repository site, `docsbook.io/<owner>/<repo>` redirects to its address too.
+Change the name in the address on **Settings ▸ General ▸ Site source**; nothing on GitHub moves.
+
+![Settings ▸ General ▸ Site source: the name field set to "helio", with "Served at helio.docsbook.io" under it and a Save button](./images/admin/settings-general-source.webp)
+
+For a repository site, `docsbook.io/<owner>/<repo>` redirects to its address too.
 
 ## Hand the rest to your agent
 
@@ -89,9 +120,11 @@ Then ask for outcomes in your own words — "document our API from the repo", "g
 
 ## FAQ
 
-**Does Docsbook change my repository?** Not when you import it. Later, each change the agent makes arrives as a pull request that merges itself or waits for you, set on **Settings ▸ General ▸ When a change goes live** ([reviewing changes](./agent/review.md)).
+**Does Docsbook change my repository?** Importing writes nothing into it. When you press **Generate**, **Generate docs from your repository** adds new pages beside your files and never rewrites, moves or deletes one. Each change the agent makes arrives as a pull request that merges itself or waits for you, set on **Settings ▸ General ▸ When a change goes live** ([reviewing changes](./agent/review.md)).
 
-**Why didn't the first run start?** It runs once, only for a new project built from a template with something to work from, and only when your balance covers a run. Otherwise your attached files are published as pages as they are, and you can ask the agent at any time.
+**Why didn't the first run start?** It runs once, for a new project with something to work from — a description, a link, a repository or files — and only when your balance covers a run. A template on its own is not enough. Without a run your attached files are published as pages as they are, and you can ask the agent at any time.
+
+**Does connecting a repository from the panel start a run?** No. Connecting one from the panel's project switcher only imports it; the creation run starts when you press **Generate** on [docsbook.io/connect](https://docsbook.io/connect).
 
 ## Next steps
 

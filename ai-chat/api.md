@@ -15,6 +15,8 @@ Every call sends the project's API key as a bearer token.
 2. Copy the key. It starts with `dbk_`.
 3. Send it on each request as `Authorization: Bearer dbk_…`.
 
+![Settings ▸ Domain & API: the API Key card with a masked dbk_ key, its creation date and Reset key, between the Custom Domain and MCP Server cards](../images/admin/settings-domain.webp)
+
 **Reset key** on the same card issues a new key and revokes the old one at once.
 
 <!-- widget:callout type=warning -->

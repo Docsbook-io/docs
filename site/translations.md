@@ -17,11 +17,17 @@ Turn a language on and Docsbook publishes your docs in it at their own URLs, wit
 
 One of the 15 is the language your docs are written in (**Default Language** in **Settings ▸ General**); translations go into the others. Docs written in another language? **Translate into English** gives you the version most readers and answer engines meet first.
 
+![Settings ▸ General ▸ Default Language: the dropdown set to English, the language the docs are written in](../images/admin/settings-general-language.webp)
+
 ## Turn a language on
 
 Tell your agent: "Translate our docs into German and Japanese." It switches the languages on with `update_languages`, and the first translation pass starts right away, home page first.
 
 Readers then get a language switcher in the sidebar footer (**Customize ▸ Left sidebar ▸ Language Toggle**), and you can add one to the header with **Customize ▸ Header ▸ Language in Header**. Translations live in Docsbook, not in your repository, which stays in its source language.
+
+![Customize ▸ Left sidebar ▸ Language Toggle: the Language switcher in the sidebar footer switch turned on](../images/admin/customize-left-sidebar-language.webp)
+
+![Customize ▸ Header ▸ Language in Header: the Language switcher next to the logo switch, turned off](../images/admin/customize-header-language.webp)
 
 ## Keep translations in step with your edits
 
@@ -34,11 +40,15 @@ Out of the box, a language is translated once, when you turn it on. To keep it l
 | `external` mode | Docsbook notifies your webhook which pages need translating; your translator sends them back with `upload_translation` |
 | `manual` mode | Nothing runs by itself; you upload translations and publish them with `approve_translation` |
 
+![Triggers ▸ Discover: the trigger catalog with category filters, Translate among them, the Docsbook agent banner and a grid of trigger cards with switches](../images/admin/triggers.webp)
+
 <!-- widget:callout type=note -->
 
 The **Translate into …** cards wake only when your docs are re-indexed, so they fire only with **Enable semantic search** on in **Settings ▸ Agent ▸ Semantic Search** (Pro; during the trial, once a card is on file). The modes don't need it: `auto` follows your repository on its own. Set a mode with `set_translation_mode`.
 
 <!-- /widget -->
+
+![Settings ▸ Agent ▸ Semantic Search: the Enable semantic search switch turned on, with the Active and Pro badges and the time of the last index update](../images/admin/settings-agent-semantic-search.webp)
 
 ## Per-language URLs and SEO
 

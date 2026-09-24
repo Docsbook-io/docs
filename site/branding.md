@@ -29,6 +29,8 @@ A change is live as soon as you save it. The **Find a setting…** box filters t
 
 The **Branding** tab sets the look of every page.
 
+![Customize ▸ Branding: the Background Style picker with Clean selected next to Muted, Premium and Gradient, and the Colors card below with Light and Dark switches and the accent and muted color fields](../images/admin/customize-branding.webp)
+
 - **Colors** — one accent for both themes, plus muted text, main text and background, set separately under **Light** and **Dark**.
 - **Font** — any Google Font, one for headings and one for body text, with a live preview.
 - **Background Style** — **Clean**, **Muted**, **Premium** (accent light across the top of the page, a card-style chat) or **Gradient**.
@@ -46,6 +48,8 @@ The other tabs arrange the frame around your pages.
 - **Sidebar Icons** and **Folder Visibility** — an icon beside any page or folder, and folders kept out of the sidebar.
 - **Footer** — off until you turn on **Site Footer**; then up to six columns of links, a copyright line, your logo, a button, social icons and a theme picker, in one of three layouts.
 - **Home page as a landing page** — hides the sidebar, the outline and the page chrome on the front page only, and sets its sections in larger type.
+
+![Customize ▸ Header: the Header Layout card with its five presets, Classic selected, then Search-centric, Search + Ask AI, Centered and Minimal, and the Search in Header card below](../images/admin/customize-header.webp)
 
 You can also click the header, a sidebar entry or the footer on the page itself, in [interactive mode](./editing.md): each offers its own actions, such as **Rename** or **Hide**.
 

@@ -83,6 +83,8 @@ The **Copy page** button sits at the top of each page, and its menu holds the re
 
 The **Copy page button** switch lives on the **Reading aids** card; the other items are on the **Copy page menu** card.
 
+![Customize ▸ Content: the Reading aids card with Breadcrumbs, Copy page button, Ask AI button near the title, Ask AI on text selection and Previous / Next navigation, all on](../images/admin/customize-content.webp)
+
 ## What does the agent check?
 
 The `llms.txt` axis of the [expertise catalog](../agent/expertise.md) is judged on your own files:

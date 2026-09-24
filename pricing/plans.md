@@ -24,7 +24,7 @@ Unlimited projects and editors
 - MCP server for AI agents
 - Private docs and access control
 
-[Create a site](https://docsbook.io/create)
+[Create a site](https://docsbook.io/connect)
 
 ## Pro {sparkles}
 
@@ -44,7 +44,7 @@ $20 of AI usage credited every month
 - Analytics dashboards
 - Your own chat prompt and hooks
 
-[Start the 14-day trial](https://docsbook.io/create)
+[Start the 14-day trial](https://docsbook.io/connect)
 
 ## Enterprise {building-2}
 
@@ -69,7 +69,7 @@ Every account starts with a 14-day Pro trial with $5 of AI credit and no card. A
 
 <!-- widget:pricing compare -->
 
-[Create a site](https://docsbook.io/create) · [Start the trial](https://docsbook.io/create) · [Contact sales](mailto:support@docsbook.io?subject=Docsbook%20Enterprise)
+[Create a site](https://docsbook.io/connect) · [Start the trial](https://docsbook.io/connect) · [Contact sales](mailto:support@docsbook.io?subject=Docsbook%20Enterprise)
 
 | Platform {layout-grid} | Free {rocket} | Pro {sparkles} | Enterprise {building-2} |
 |---|---|---|---|
@@ -117,6 +117,8 @@ Every account starts with a 14-day Pro trial with $5 of AI credit and no card. A
 
 Prices are in US dollars, billed monthly or yearly through Paddle; a yearly Pro still credits $20 of AI usage every month. You manage or cancel a subscription with **Manage subscription** on **Settings ▸ Plan**.
 
+![Settings ▸ Plan: Pro at $20 a month beside Enterprise, marked Current plan, each with its list of what it includes](../images/admin/settings-plan.webp)
+
 ## How does the free trial work?
 
 Every account gets one Pro trial, with no card and nothing to switch on:
@@ -145,7 +147,11 @@ Anything that runs a model or does work for you comes off one balance: the plan'
 | **MCP and API calls** | Twice what serving the call costs us: discovery is free and most calls cost $0.01–$0.16 per 1,000; a call that uses model tokens or a paid data source adds twice their price |
 | **Bot crawls** | 5,000 pages a month free on Free, 100,000 on Pro, 500,000 on Enterprise; $0.30 per 1,000 pages after that |
 
-Each model on **Settings ▸ Agent** shows its billed price per 1M tokens, so you can pick a cheaper one to make the balance last longer. Every tool's own price is on its page in the [MCP tools reference](./mcp-tools/README.md) and the [API reference](./rest-api/README.md) — a tool costs the same over both.
+Each model on **Settings ▸ Agent** shows its billed price per 1M tokens, so you can pick a cheaper one to make the balance last longer.
+
+![Settings ▸ Agent: the Admin & AI Agent Model and AI Visitors Chat Model pickers, each showing the default model with its price per 1M tokens, and the Semantic Search card switched on](../images/admin/settings-agent.webp)
+
+ Every tool's own price is on its page in the [MCP tools reference](../mcp-tools/README.md) and the [API reference](../rest-api/README.md) — a tool costs the same over both.
 
 Only AI and search crawlers count as crawls; a person who clicks through from an AI answer is a reader. When the allowance and the balance are both used up, crawlers get `429 Too Many Requests` until next month or a top-up, and people reading your docs are never turned away.
 
@@ -157,7 +163,11 @@ A plan's monthly credit is the base. Three things extend or replace it:
 - **Overage** — with a paid Pro subscription, usage past the monthly credit and your top-ups continues up to $200 a month, which is both the default cap and the ceiling, charged to your card every 7 days
 - **Your own AI key** — on Enterprise, add an OpenRouter, OpenAI, Google Gemini, Anthropic or Vercel AI Gateway key on **Settings ▸ Agent ▸ Your own AI API Key**; your provider bills those calls and Docsbook charges nothing for them
 
+![Settings ▸ Agent ▸ Your own AI API Key: an Enterprise card with an AI Provider picker set to OpenRouter, a Model field, and an API Key field with a Test button](../images/admin/settings-agent-key.webp)
+
 **Settings ▸ Usage** shows what the balance went on over the last 24 hours, 7 or 30 days — AI calls, MCP calls and crawls — and what is left.
+
+![Settings ▸ Usage: a 30-day consumption chart by day, the balance with a Top up button, and what was charged to this project against the event volume logged](../images/admin/settings-usage.webp)
 
 ## FAQ
 
@@ -185,9 +195,9 @@ Yes. Cancel from **Manage subscription**, and take your pages with you: they are
 
 <!-- widget:cards plain cols=2 arrow=hover -->
 
-- [Quickstart](./quickstart.md) — Create a site and start the trial {rocket}
-- [Tell your agent, get discovered](./get-discovered.md) — What one request to the agent does, and costs {bot}
-- [AI chat](./ai-chat/README.md) — The assistant that answers your readers {message-circle}
-- [Translations](./site/translations.md) — Serve the docs in more languages {languages}
+- [Quickstart](../quickstart.md) — Create a site and start the trial {rocket}
+- [Tell your agent, get discovered](../get-discovered.md) — What one request to the agent does, and costs {bot}
+- [AI chat](../ai-chat/README.md) — The assistant that answers your readers {message-circle}
+- [Translations](../site/translations.md) — Serve the docs in more languages {languages}
 
 <!-- /widget -->

@@ -39,6 +39,8 @@ Access is read-only. Docsbook never submits URLs, requests indexing or changes a
 
 The list opens on the **Queries** view: each row shows clicks, views and CTR, with the average position as a chip such as `#6.4`.
 
+![Analytics ▸ SEO: the Queries view, each query with its landing page, a position chip such as #9.5, clicks, views and CTR](../images/admin/analytics-seo.webp)
+
 ### Switch the View to Pages
 
 Each page shows the same numbers and how many queries reach it.
@@ -64,7 +66,13 @@ The [Docsbook agent](../agent/README.md) uses the same rows to choose search cha
 
 Search Console only reports queries you already appear for, so Docsbook also checks the results pages themselves. Every day it reads Google and Bing for up to 5 queries per engine, including queries you don't rank for yet; choose them by asking the agent or with [`configure_mentions`](../mcp-tools/settings/configure-mentions.md). The results land in **Analytics ▸ SEO ▸ Google & Bing mentions**.
 
-You can also push your own daily numbers from Bing, Yandex, DuckDuckGo or a rank tracker, using the project API key from **Settings ▸ Domain & API**:
+![Analytics ▸ SEO ▸ Google & Bing mentions: watched queries sorted not found first, each with the page it should rank for, its position and how many of the two engines found it](../images/admin/analytics-seo-mentions.webp)
+
+You can also push your own daily numbers from Bing, Yandex, DuckDuckGo or a rank tracker, with the project API key from **Settings ▸ Domain & API**:
+
+![Settings ▸ Domain & API: the Custom Domain card, the API Key card with a masked dbk_ key and Reset key, and the MCP Server URL](../images/admin/settings-domain.webp)
+
+Send the key as a bearer token:
 
 ```bash
 curl -X POST https://docsbook.io/api/v1/search-engine-stats \

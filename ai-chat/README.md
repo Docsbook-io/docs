@@ -31,6 +31,8 @@ Reader chat is part of **Pro** — $20 a month, with $20 of AI usage credited ea
 - **An empty balance** — the chat stops answering until there is balance again.
 - **Where the money went** — **Settings ▸ Usage** shows the chat on its own line, **Readers (AI chat)**.
 
+![Settings ▸ Agent: the Admin & AI Agent Model and AI Visitors Chat Model cards, each showing the default model with its price per 1M tokens, and Semantic Search switched on](../images/admin/settings-agent.webp)
+
 ## What the agent does on its own
 
 Every question the chat fails on and every page a reader rates down is a signal. Switch a card on under [Triggers](../agent/triggers.md) and the Docsbook agent turns that signal into a page change, then checks whether the signal stops.
@@ -77,8 +79,10 @@ Four places show what the chat is doing, from the big picture down to one conver
 
 - **Analytics ▸ Chat** — what readers asked over the last 24 hours, 7 or 30 days: by topic with each topic's answer rate, or question by question marked **Answered**, **Dead end** or **Unrated**.
 - **Activity ▸ Chat** — every conversation as a row with its reader, topic, cost and outcome, plus an **Answered** column a model fills in; open a row to read the transcript.
-- **Activity ▸ Agent runs** — each reader question as a **Reader chat** run with the pages it read, its tokens and its cost, beside the runs your trigger cards started.
+- **Activity ▸ Agent ▸ Agent runs** — each reader question as a **Reader chat** run with the pages it read, its tokens and its cost, beside the runs your trigger cards started.
 - **Content gaps** — in Activity's **Chat** menu: questions the chat could not answer and searches that found nothing, as they happen.
+
+![Activity ▸ Chat: one row per conversation with its topic, reader, potential, cost, time, outcome, rating, an Answered check and a reason tag](../images/admin/activity-chat.webp)
 
 ## Tell your agent
 
@@ -120,7 +124,7 @@ No. Each question is answered on its own from the pages found for it, so a reade
 
 - [Configure the chat](./configure.md) — Prompt, questions, model and where readers open it {sliders-horizontal}
 - [Chat API and hooks](./api.md) — Ask your docs from code and run your endpoints around answers {code}
-- [Triggers](../agent/triggers.md) — The 49 ready-made cards, including the four above {zap}
+- [Triggers](../agent/triggers.md) — The 50 ready-made cards, including the four above {zap}
 - [Alerts and webhooks](../analytics/alerts.md) — Get pinged when the chat can't answer {bell}
 
 <!-- /widget -->

@@ -54,6 +54,8 @@ Ask the engines the questions your customers ask, and record whether they cite y
 - **Do AI engines cite you** — a weekly trigger that asks the answer engines about your product and fixes what makes them cite someone else.
 - **Where competitors get named** — a weekly trigger that finds the questions you should own and someone else is answering.
 
+![Analytics ▸ GEO: tracked prompts ranked by demand, with filters for ChatGPT, Gemini, Claude, Perplexity, Copilot and Google AI Overview, the docs pages each answer cites and how many engines named the product](../images/admin/analytics-geo.webp)
+
 ## What should I tell my agent?
 
 You don't have to run this checklist by hand. Tell the Docsbook agent in one sentence, from Claude Code, Cursor or the panel chat ([Get discovered](../get-discovered.md)):

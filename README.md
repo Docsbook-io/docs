@@ -38,7 +38,7 @@ One endpoint for Claude Code, Cursor, Codex and any MCP client.
 
 - **299** — rules of documentation craft the agent checks
 - **194** — published sources behind those rules
-- **49** — ready-made agent workflows
+- **50** — ready-made agent workflows
 - **15** — languages, each indexed on its own
 
 <!-- /widget -->
@@ -73,13 +73,13 @@ Six things every Docsbook site does — and the agent keeps improving on its own
 
 <!-- widget:bento -->
 
-- **Wakes up on its own** — 49 ready-made workflows run on a schedule, a docs event or a GitHub change: a merged pull request, a search that found nothing, a question the chat could not answer, a thumbs-down. {badge:Triggers} {span:7} {crop:top-left}
+- **Wakes up on its own** — 50 ready-made workflows run on a schedule, a docs event or a GitHub change: a merged pull request, a search that found nothing, a question the chat could not answer, a thumbs-down. {badge:Triggers} {span:7} {crop:top-left}
 
-  ![Triggers screen: ready-made agent workflows, each with its own switch](https://docsbook.io/landing-triggers.jpg)
+  ![Triggers ▸ Discover: the Docsbook agent card marked Online above ready-made workflows such as Daily docs audit, MCP sync and OpenAPI sync, each with its own switch](./images/admin/triggers.webp)
 
 - **Ships through pull requests** — Every change is a commit to your repository with the reason behind it. Review it first, or let it merge. {span:5}
 
-  ![Settings screen with the auto-merge switch](https://docsbook.io/landing-pull-requests.jpg)
+  ![Settings ▸ General ▸ When a change goes live: the Auto-merge switch turned on, with the note that when it is off a pull request waits until you merge it](./images/admin/settings-general-go-live.webp)
 
 - **Knows what good documentation looks like** — Analytics ▸ Audit judges your pages against 299 rules from search engines, standards bodies and published research, and turns each miss into work with a forecast. {badge:Expertise} {span:12} {side} {tags} {graduation-cap}
 
@@ -167,7 +167,7 @@ Where a project lands after the trial.
 - Web editor and GitHub sync
 - ~~AI chat, agents and translations~~
 
-[Create a site](https://docsbook.io/create)
+[Create a site](https://docsbook.io/connect)
 
 ## Pro
 
@@ -179,10 +179,10 @@ For docs that AI writes, keeps current and answers from.
 
 - $20 of AI usage credited every month
 - AI chat that answers your readers
-- The agent and its 49 ready-made workflows
+- The agent and its 50 ready-made workflows
 - Live auto translations
 
-[Start the free trial](https://docsbook.io/create)
+[Start the free trial](https://docsbook.io/connect)
 
 ## Enterprise
 

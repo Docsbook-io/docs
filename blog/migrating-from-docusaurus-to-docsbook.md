@@ -39,6 +39,8 @@ Pages whose Docusaurus URL came from a number prefix or a `slug` get a new URL o
 
 Attach the domain in **Settings ▸ Domain & API**, then delete the deploy workflow. The repository stays; only the build goes.
 
+![Settings ▸ Domain & API: the Custom Domain card with docs.helio.dev entered and a Save button](../images/admin/settings-domain.webp)
+
 <!-- /widget -->
 
 ## What changes in the Markdown?

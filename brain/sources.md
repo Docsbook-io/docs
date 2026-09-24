@@ -45,6 +45,8 @@ Connect from the panel, or ask for it from your editor.
 
 In **Integrations**, open **Discover**, pick the **Sources** filter, and open the card for what you have — **GitHub repository**, **Website**, **OpenAPI spec**, **Mintlify**.
 
+![Integrations ▸ Discover: a search box and the All, Apps, Sources, Chat & alerts and AI clients filters with their counts, above the connector cards](../images/admin/integrations.webp)
+
 ### Paste the addresses
 
 Press **Add addresses** and paste as many as you like, one per line. The dialog shows which card each address will land on before you commit.

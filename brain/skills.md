@@ -11,6 +11,8 @@ A skill is a way of working you write once — the house style for API pages, ho
 
 On the **Skills** card in **Settings ▸ Prompts**. Each skill shows where it runs and who it runs for, with a **Running** / **Paused** switch; **Write a skill** opens the editor.
 
+![Settings ▸ Prompts ▸ Skills: three skills, each with the doors it runs behind and a Running switch, plus the Write a skill card](../images/admin/settings-prompts-skills.webp)
+
 Skills sit on your organization's shelf, the same one that holds the agent's [memory](./memory.md), so a skill written on one project works for every project of that organization.
 
 ## Write a skill

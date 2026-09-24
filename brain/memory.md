@@ -67,6 +67,8 @@ Two rules keep the folder useful. An entry named after an hour — `run-2026-09-
 
 <!-- /widget -->
 
+![Overview ▸ Docsbook agent: the card counts the entries in each folder — Product, Decisions, Audience, Under test, House style, Open questions, Memory, Playbooks — with "learned 3h ago" and "2 due a second look" underneath](../images/admin/overview-agent.webp)
+
 ## Read it from your editor
 
 On [your MCP connection](../get-discovered.md), the five folder tools are reached through `call_tool` — `find_tool` names them:

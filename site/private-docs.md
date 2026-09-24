@@ -11,7 +11,9 @@ Close your docs to the public and let readers in with a shared password, your co
 
 ### Switch the site to private
 
-Open **Settings ▸ Access ▸ Privacy & Access** and turn off **Public — anyone with the link**.
+Open **Settings ▸ Access**, and in the **Privacy & Access** card below **Collaborators**, turn off **Public — anyone with the link**.
+
+![Settings ▸ Access ▸ Privacy & Access: the Public — anyone with the link switch; turn it off to make the site private](../images/admin/settings-access-privacy.webp)
 
 ### Choose how readers get in
 
@@ -67,6 +69,8 @@ A failed sign-in shows its reason on the sign-in page: `domain_not_allowed` mean
 
 - **A Docsbook-hosted repository** turns private on GitHub when the site does. Making the site public again leaves it private until you switch **Public on GitHub** in **Settings ▸ Access ▸ Source repository**.
 - **Your own repository** is never touched. If it's public, anyone can still read the Markdown on GitHub, and the **Source repository** card warns you.
+
+![Settings ▸ Access ▸ Source repository: the Public on GitHub switch with the last check of the repository's visibility on GitHub](../images/admin/settings-access-source-repo.webp)
 
 To keep a public site out of search results or AI answers without locking readers out, use the **Search engines** and **AI engines** cards on the same tab.
 

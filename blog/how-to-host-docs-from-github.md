@@ -61,6 +61,8 @@ It is live at `https://<owner>.docsbook.io/<repo>`, with search, a sitemap, `llm
 
 Attach `docs.example.com` in **Settings ▸ Domain & API** and add one DNS record; the values are on the [custom domain](../site/custom-domain.md) page.
 
+![Settings ▸ Domain & API: the Custom Domain card with docs.helio.dev entered and a Save button](../images/admin/settings-domain.webp)
+
 <!-- /widget -->
 
 Edits made in Docsbook, in the web editor or by the agent, publish at once. Commits pushed straight to GitHub are picked up on their own, within a day.

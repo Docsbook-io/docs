@@ -23,6 +23,8 @@ Open **Integrations**, search the catalog and open the destination's card:
 - **Claude** — wakes a Claude Code routine
 - **Custom webhook** — the signed JSON envelope, sent to your own endpoint
 
+![Integrations ▸ Discover: 52 connectors filtered by Apps, Sources, Chat & alerts and AI clients, with cards for Slack alerts, Discord alerts, Microsoft Teams alerts, PagerDuty and Email alerts](../images/admin/integrations.webp)
+
 ### Paste where it goes
 
 Paste the channel's incoming-webhook URL, the PagerDuty integration key, the routine's trigger URL or your endpoint. An email address gets a confirmation link first and receives nothing until it is clicked.

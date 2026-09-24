@@ -18,7 +18,7 @@ Both publish docs from Git with AI built in. Mintlify facts below come from [min
 | Free start | Starter: $0 a month, 5 editor seats, custom domain, web editor, MCP server | 14-day Pro trial with $5 of AI credit, no card |
 | Paid plan | Pro: $450 a month billed annually, $540 billed monthly | [Pro](../pricing/plans.md): $20 a month per project, $20 of AI usage included |
 | AI answers for readers | Assistant on Pro, 25 credits per answer | [AI chat](../ai-chat/README.md) that cites the pages it used, on Pro |
-| Writing agent | Agent and automations on Pro | The [Docsbook agent](../agent/README.md) on Pro: 49 ready-made triggers, 299 published rules |
+| Writing agent | Agent and automations on Pro | The [Docsbook agent](../agent/README.md) on Pro: 50 ready-made triggers, 299 published rules |
 | Analytics | Pro and up | During the trial and on paid plans |
 | AI translations | Pro and up | [15 languages](../site/translations.md) on Pro |
 | `llms.txt`, Markdown pages, MCP server | Every plan | Every site |
@@ -58,7 +58,7 @@ Both answer readers from the docs and both have a writing agent that opens pull 
 - **It checks the pages** against [299 published rules](../agent/expertise.md) of documentation craft, each with a source.
 - **It sends a pull request** with the reason, a prediction and a date to check the result.
 
-The 49 ready-made [triggers](../agent/triggers.md), such as **Organic search audit** and **Do AI engines cite you**, run these loops on a schedule. See [Find wins fast](../find-wins-fast.md).
+The 50 ready-made [triggers](../agent/triggers.md), such as **Organic search audit** and **Do AI engines cite you**, run these loops on a schedule. See [Find wins fast](../find-wins-fast.md).
 
 ## How do they compare on SEO and AI visibility?
 
