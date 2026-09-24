@@ -18,12 +18,6 @@ Ask a question about THIS project's own documentation and get back a synthesized
 | `context` | string | no | Optional: what sharpens the answer — which section or audience you mean, why you're asking. Read as the asker's situation and never cited back as a documented fact; keep it out of `question`, which is what retrieval embeds. |
 | `session_id` | string | no | Optional: reuse the same id across calls to group them as one conversation. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

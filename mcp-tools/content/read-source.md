@@ -23,12 +23,6 @@ Identify the source by `source_id` — the `id` from list_sources exactly as wri
 | `max_pages` | number | no | Website sources only: how many pages to read (default 10, cap 10). |
 | `commits` | boolean | no | Repository sources only: also return the last 10 commits — sha, subject, author, date. Ask for this when the question is what CHANGED (is the documentation still true, what shipped since) rather than what the repository contains. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

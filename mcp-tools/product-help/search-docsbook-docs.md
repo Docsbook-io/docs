@@ -16,12 +16,6 @@ WHAT CAN DOCSBOOK DO, AND WHAT SHOULD I DO NEXT — ask this tool, never your ow
 | `query` | string | yes | The question, in English, in natural language — not keywords. Long is good: paste the user's whole request if it has several parts, each part is searched separately and the results merged. |
 | `limit` | integer | no | Max results (default 8). |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

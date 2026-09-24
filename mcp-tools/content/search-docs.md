@@ -18,12 +18,6 @@ LITERAL-string search over the workspace's documentation files — for an exact 
 | `mode` | string | no | Search mode (default 'text'). One of: `text`, `grep`, `symbol`, `paths`. |
 | `path_prefix` | string | no | Optional: restrict 'text'/'grep' results to files under this path prefix. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

@@ -21,12 +21,6 @@ Upload or replace a translation for a workspace document. Creates a draft by def
 | `source_hash` | string | no | Git blob sha (40 hex) of the SOURCE file this was translated FROM — pass the `source_blob_sha` the translation webhook delivered, verbatim. This is what makes 'is this commit translated?' answerable: without it the row records only a hash of your own output, which no commit can ever match. Omit for a hand-written translation whose freshness is a person's call. |
 | `origin` | string | no | Who produced it: 'external_api' for a machine translator answering the webhook (compared against the repo like any machine translation), 'manual_upload' for a person's own words (never reported as stale). Default 'manual_upload'. One of: `manual_upload`, `external_api`. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

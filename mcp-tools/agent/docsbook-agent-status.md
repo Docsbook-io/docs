@@ -15,12 +15,6 @@ What the Docsbook agent is doing on a job, and what came of it — status, progr
 |---|---|---|---|
 | `task_id` | string | yes | The id docsbook_agent returned. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

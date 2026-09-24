@@ -19,12 +19,6 @@ Choose what the mention checks watch on one engine: turn the daily check on or o
 | `queries` | string[] | no | The queries to check, up to 5. Replaces the saved list. |
 | `cron_expression` | string | no | 5-field UTC cron for the check. Defaults to a daily early-morning slot. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

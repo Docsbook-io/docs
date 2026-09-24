@@ -28,12 +28,6 @@ Write, delete, move and rename markdown documentation files — this is how a si
 | `impact_source` | string | no | Where you read the baseline — a tool name, a URL, a query. |
 | `expectations` | object[] | no | What this change will do, PAGE BY PAGE: which catalog rule it applies to which page, and the two figures an instrument should read before and after. Merging the pull request records those rules as applied to those pages — this is how a verdict is EARNED rather than asserted, and there is no other way to record one. On the check date, call the instrument's own tool again: the comparison and the verdict are computed by code from the two recorded calls, and nothing ever asks you for the answer. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

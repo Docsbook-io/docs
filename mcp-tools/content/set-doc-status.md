@@ -19,12 +19,6 @@ Move ONE documentation page through its lifecycle — the call for 'this spec is
 | `version` | string | no | Optional explicit version, e.g. '1.0' when a draft becomes the first real release. Omit to keep the page's current version — a status change is not an edit. |
 | `note` | string | no | Why, in the approver's own words. Goes into the commit message and the change record. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

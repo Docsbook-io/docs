@@ -20,12 +20,6 @@ ALWAYS give the user `site_url` from the result verbatim; never build a link out
 | `repo_full_name` | string | no | GitHub repository in 'owner/repo' format, e.g. 'acme/docs'. OMIT for a Docsbook-hosted site created from scratch — no GitHub account or repository needed. |
 | `custom_name` | string | no | Display name for the site, e.g. 'Acme API'. Derive it from the product's brand or repo name — never invent one; ask the user if you cannot. It also names the hosted repository, so pass it whenever you create from scratch. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

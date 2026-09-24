@@ -16,12 +16,6 @@ Read ONE documentation page in full — its complete markdown, title and repo pa
 | `workspace_id` | string | no | Workspace ID (optional when MCP endpoint is auto-scoped). Numeric workspace id — OR the project as the user names it: 'owner/repo', the repo name alone, the site's display name, its docs URL or custom domain. Text is resolved server-side; an ambiguous name returns the candidates instead of guessing, so pass what the user said rather than calling list_workspaces first. |
 | `path` | string | yes | The page: a repo file path ('reference/README.md') or its URL slug ('reference/introduction'). |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

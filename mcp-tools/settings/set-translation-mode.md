@@ -17,12 +17,6 @@ Set the translation workflow mode for a workspace: 'auto' (Docsbook AI), 'manual
 | `mode` | string | yes | Translation workflow mode One of: `auto`, `manual`, `external`. |
 | `external_webhook_url` | string | no | Webhook URL (required for 'external' mode, empty string clears) |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

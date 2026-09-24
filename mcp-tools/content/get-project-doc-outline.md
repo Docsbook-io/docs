@@ -17,12 +17,6 @@ List every markdown page in the workspace with a short summary (title, heading c
 | `path_prefix` | string | no | Optional: restrict to pages under this path prefix. |
 | `status` | string | no | Optional: only pages at this lifecycle status. `counts` still covers them all. One of: `generated`, `draft`, `review`, `approved`, `locked`, `deprecated`, `archived`. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

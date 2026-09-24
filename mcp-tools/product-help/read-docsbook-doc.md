@@ -15,12 +15,6 @@ Read ONE page of DOCSBOOK'S OWN official documentation in full, verbatim, by the
 |---|---|---|---|
 | `path` | string | yes | Path in the official docs, from a search_docsbook_docs hit, e.g. 'ai/chat.md'. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

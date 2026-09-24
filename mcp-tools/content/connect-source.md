@@ -22,12 +22,6 @@ REQUIRES a read-write MCP token.
 | `note` | string | no | What this source is for, in the owner's words — read as instruction by every tool that later reads the source. |
 | `label` | string | no | What to call it in the list. Defaults to the repository or host name. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

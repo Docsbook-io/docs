@@ -55,12 +55,6 @@ Show or hide one interface element of the docs site — the header search button
 | `footer_cta_label` | string | no | Label for an optional call-to-action button in the footer's brand block (e.g. 'Get started'). Without a label no button is drawn. Pass an empty string to remove it. |
 | `footer_cta_url` | string | no | Where the footer's call-to-action button goes. Leave unset to reuse the workspace's own cta_url (see get_workspace) rather than repeating it. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

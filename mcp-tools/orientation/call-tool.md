@@ -16,12 +16,6 @@ Run a tool this connection serves but tools/list does not name — the webhook a
 | `name` | string | yes | The tool to run, exactly as find_tool named it — e.g. 'create_claim_link'. |
 | `arguments` | object | no | That tool's own arguments, as an object. Omit for a tool that takes none. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

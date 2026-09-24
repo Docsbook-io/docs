@@ -18,12 +18,6 @@ Add a documentation PAGE to a funnel as its next step, creating the page goal if
 | `funnel` | string | yes | Funnel name to append the step to. Created if it does not exist. |
 | `position` | number | no | 0-based index to insert at. Appends when omitted. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

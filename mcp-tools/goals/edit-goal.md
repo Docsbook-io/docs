@@ -21,12 +21,6 @@ CORRECT a goal that already exists — its label, what one completion is worth, 
 | `label` | string | no | New human label. |
 | `value_usd` | number | no | What ONE completion is worth, in dollars. Pass 0 to clear it — which switches money figures OFF for this goal rather than reporting it as worthless. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

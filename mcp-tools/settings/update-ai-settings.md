@@ -19,12 +19,6 @@ Configure the AI chatbot. REQUIRES PRO plan. Returns upgrade info for FREE works
 | `ai_api_key` | string | no | API key for the AI provider |
 | `custom_questions` | string[] | no | Suggested questions in the AI chat |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

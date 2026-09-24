@@ -16,12 +16,6 @@ Talk to the Docsbook agent about a job that is still open — answer a question 
 | `task_id` | string | yes | The job to reply to. |
 | `text` | string | yes | What you want to tell the agent, in your own words. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

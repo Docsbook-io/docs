@@ -16,12 +16,6 @@ List your Docsbook documentation projects — one line each: id, repo, name, liv
 | `query` | string | no | Narrow to projects matching this — part of a name, a repo, a domain or a URL. Best match first. Omit to list everything. |
 | `limit` | integer | no | Rows to return (default 50). The answer says how many matched in total. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

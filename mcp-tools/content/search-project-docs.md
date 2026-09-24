@@ -17,12 +17,6 @@ FIND A DOCUMENTATION PAGE — start here, and this is the FIRST call for any que
 | `query` | string | yes | What you are looking for, in natural language — a question or a phrase, not keywords. |
 | `limit` | integer | no | Max results (default 8). |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

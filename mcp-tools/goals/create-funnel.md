@@ -19,12 +19,6 @@ Define an ORDERED route through the docs, as a list of goal names. Order is the 
 | `label` | string | no | Human label. Defaults to the key. |
 | `window_hours` | number | no | Conversion window in hours. Clamped to what the plan retains — a window longer than your history can never complete. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

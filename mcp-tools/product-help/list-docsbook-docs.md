@@ -15,12 +15,6 @@ List EVERY page of Docsbook's own official documentation — the product's full 
 |---|---|---|---|
 | `path_prefix` | string | no | Optional: only pages under this prefix, e.g. 'guides/' or 'ai/'. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

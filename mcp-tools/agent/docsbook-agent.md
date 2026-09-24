@@ -17,12 +17,6 @@ THE DOCSBOOK AGENT — a general-purpose worker you delegate to. Say what you wa
 | `request` | string | yes | What you want, in the user's own words, in any language. Say the GOAL and the evidence for it ('support keeps asking how to rotate keys'), not a list of steps — the agent decides the steps. Naming the project here also lets workspace_id be omitted. |
 | `label` | string | no | Short name for this job in the list, e.g. 'API reference pass'. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

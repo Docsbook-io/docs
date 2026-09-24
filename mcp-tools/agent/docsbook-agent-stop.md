@@ -16,12 +16,6 @@ Stop a Docsbook agent job. Work already committed stays — stopping is not an u
 | `task_id` | string | yes | The job to stop. |
 | `reason` | string | no | Why, for the record. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

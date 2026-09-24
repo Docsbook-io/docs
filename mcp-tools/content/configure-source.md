@@ -23,12 +23,6 @@ Identify the source by `source_id` from list_sources, or by `match` (a word from
 | `enabled` | boolean | no | false pauses the source: it stays connected and nothing reads it. |
 | `disconnect` | boolean | no | true removes the source entirely, with any GitHub authorisation attached to it. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

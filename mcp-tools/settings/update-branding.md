@@ -36,16 +36,10 @@ Update visual branding: colors, fonts, logo, theme, the site's call-to-action UR
 | `content_font_family` | string | no | Google Font name for BODY/CONTENT text; falls back to font_family when unset |
 | `default_theme` | string | no | One of: `light`, `dark`, `system`. |
 | `theme_toggle` | boolean | no | Show theme toggle to visitors |
-| `background_style` | string | no | Visual background style: clean (no effect), muted (soft neutral wash), bold (shown as 'Premium': accent light and sheen across the top of the page, Ask docs chat panel styled as a premium accent card — the most upscale option), or gradient (soft radiant glow tied to the accent color — the old background_glow toggle). One of: `clean`, `muted`, `bold`, `gradient`. |
+| `background_style` | string | no | Visual background style: clean (no effect), muted (soft neutral wash), bold (shown as 'Premium': an accent haze across the top of the page — a full hero haze on a front page with the sidebar hidden — and an accent-framed Ask docs chat; the most upscale option), or gradient (soft radiant glow tied to the accent color — the old background_glow toggle). One of: `clean`, `muted`, `bold`, `gradient`. |
 | `background_glow` | boolean | no | Legacy on/off toggle — prefer background_style. true sets it to 'gradient'. |
 | `search_button_color` | string | no | Custom background color (hex) for the header search bar button. Pass an empty string to clear it back to the default muted background. |
 | `ask_ai_button_color` | string | no | Custom background color (hex) for the header Ask AI button. Pass an empty string to clear it back to the default muted background. |
-
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
 
 ### MCP
 
@@ -110,7 +104,7 @@ The same tool is callable as a plain HTTP request, no MCP client required. It ru
 | `content_font_family` | string | no | Google Font name for BODY/CONTENT text; falls back to font_family when unset |
 | `default_theme` | string | no | One of: `light`, `dark`, `system`. |
 | `theme_toggle` | boolean | no | Show theme toggle to visitors |
-| `background_style` | string | no | Visual background style: clean (no effect), muted (soft neutral wash), bold (shown as 'Premium': accent light and sheen across the top of the page, Ask docs chat panel styled as a premium accent card — the most upscale option), or gradient (soft radiant glow tied to the accent color — the old background_glow toggle). One of: `clean`, `muted`, `bold`, `gradient`. |
+| `background_style` | string | no | Visual background style: clean (no effect), muted (soft neutral wash), bold (shown as 'Premium': an accent haze across the top of the page — a full hero haze on a front page with the sidebar hidden — and an accent-framed Ask docs chat; the most upscale option), or gradient (soft radiant glow tied to the accent color — the old background_glow toggle). One of: `clean`, `muted`, `bold`, `gradient`. |
 | `background_glow` | boolean | no | Legacy on/off toggle — prefer background_style. true sets it to 'gradient'. |
 | `search_button_color` | string | no | Custom background color (hex) for the header search bar button. Pass an empty string to clear it back to the default muted background. |
 | `ask_ai_button_color` | string | no | Custom background color (hex) for the header Ask AI button. Pass an empty string to clear it back to the default muted background. |

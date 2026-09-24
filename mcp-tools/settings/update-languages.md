@@ -17,12 +17,6 @@ Set the languages the site is served in — the call for 'we need docs in Spanis
 | `enabled_languages` | string[] | no | ISO language codes to enable |
 | `default_language` | string | no | Default language code |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

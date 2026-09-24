@@ -17,12 +17,6 @@ WATCH THE DOCSBOOK AGENT WORK — the ordered timeline of what a job has actuall
 | `after` | number | no | Resume from here: the `next_after` of your last call. Omit to start at the beginning. |
 | `limit` | number | no | How many steps, 1-200. Default 50. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

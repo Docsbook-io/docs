@@ -16,12 +16,6 @@ Search the Docsbook widget catalog for an interactive UI widget matching the use
 | `query` | string | yes | Free-text description of what the user wants, e.g. 'dark mode toggle' or 'analytics dashboard'. |
 | `mode` | string | no | Restrict matches to widgets available in this mode (admin or user). One of: `admin`, `user`. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

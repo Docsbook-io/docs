@@ -15,12 +15,6 @@ Approve a draft translation, moving it to status 'published'. REQUIRES PRO or hi
 |---|---|---|---|
 | `translation_id` | number | yes | Translation row ID |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

@@ -17,12 +17,6 @@ Get the translation for a specific source path and language. REQUIRES PRO or hig
 | `source_path` | string | yes | Source document path |
 | `language` | string | yes | Target language code |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

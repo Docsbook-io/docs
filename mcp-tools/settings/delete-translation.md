@@ -15,12 +15,6 @@ Delete a translation row. REQUIRES PRO or higher.
 |---|---|---|---|
 | `translation_id` | number | yes | Translation row ID |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

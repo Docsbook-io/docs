@@ -16,12 +16,6 @@ List the widgets that can be embedded directly in documentation markdown (as opp
 | `name` | string | no | Return only this widget (e.g. 'cards'). Omit to list every content widget. |
 | `workspace_id` | string | no | Workspace whose widget settings apply. Omit when the token is scoped to a single repo — that workspace is used. Only affects which widgets are switched off; the markdown contract is the same everywhere. Numeric workspace id — OR the project as the user names it: 'owner/repo', the repo name alone, the site's display name, its docs URL or custom domain. Text is resolved server-side; an ambiguous name returns the candidates instead of guessing, so pass what the user said rather than calling list_workspaces first. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

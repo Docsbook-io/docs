@@ -16,12 +16,6 @@ Change the ADDRESS of the site: the <name> in <name>.docsbook.io — its path na
 | `workspace_id` | string | no | Workspace ID (optional when the MCP endpoint is auto-scoped to a workspace). Numeric workspace id — OR the project as the user names it: 'owner/repo', the repo name alone, the site's display name, its docs URL or custom domain. Text is resolved server-side; an ambiguous name returns the candidates instead of guessing, so pass what the user said rather than calling list_workspaces first. |
 | `name` | string | yes | The new name, as a person would write it — 'Acme API'. It becomes acme-api.docsbook.io. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

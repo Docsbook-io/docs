@@ -21,12 +21,6 @@ Define a goal — one thing you want a reader to do. Matched RETROACTIVELY again
 | `label` | string | no | Human label for the dashboard. Defaults to the key. |
 | `value_usd` | number | no | What ONE completion is worth, in dollars. Omit unless defensible. |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

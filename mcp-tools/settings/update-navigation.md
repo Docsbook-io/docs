@@ -21,22 +21,6 @@ Update every curated link on the docs site: header links, social links, FOOTER l
 | `footer_columns` | object[] | no | The footer's link columns (max 6). Full replacement of the set — pass the complete desired list, not a delta; read the current one from get_workspace `footerColumns`. The footer must also be enabled (update_ui_settings footer_enabled) before a reader sees any of this. Do NOT put social profiles here — they are social_links above, which the footer renders as icons. |
 | `page_labels` | object[] | no | Sidebar label overrides. An override changes ONLY the text in the sidebar — never the page's address and never its position in the tree, so no link breaks and nothing is reordered. Use this for 'rename this page in the navigation'; renaming the file itself is a write_docs move, which changes the address (the old one keeps working through the site's redirect map, but links and citations to it become second-hand). Labels are derived from file names, so every README.md renders as "Introduction" — this is how several of them get told apart. Overridden labels are still offered for translation, so a renamed page stays localized. Full replacement of the set — pass the complete desired list, not a delta (read the current one from get_workspace `pageLabels`). |
 
-<!-- /widget -->
-
-## `social_links` fields
-
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `github` | string | no | — |
-| `twitter` | string | no | — |
-| `linkedin` | string | no | — |
-| `youtube` | string | no | — |
-| `slack` | string | no | — |
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json
@@ -62,6 +46,16 @@ curl -X POST 'https://docsbook.io/api/mcp/server' \
 ```
 
 <!-- /widget -->
+
+## `social_links` fields
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `github` | string | no | — |
+| `twitter` | string | no | — |
+| `linkedin` | string | no | — |
+| `youtube` | string | no | — |
+| `slack` | string | no | — |
 
 ## Try it over REST
 

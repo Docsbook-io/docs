@@ -16,12 +16,6 @@ Search this server's own tool catalog by what you're trying to do, in your own w
 | `query` | string | yes | What you are trying to do, in natural language — a question or a sentence, not keywords. |
 | `limit` | integer | no | Max results (default 8). |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

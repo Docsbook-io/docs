@@ -17,12 +17,6 @@ Start a REAL translation catch-up run for one or more languages: the same batch 
 | `languages` | string[] | no | ISO codes to bring level (default: every language switched on for this project) |
 | `force` | boolean | no | Run even for a language coverage says is already level with the source (default false) |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json

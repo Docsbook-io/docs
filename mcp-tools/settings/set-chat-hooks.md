@@ -18,12 +18,6 @@ Set pre-, post-, and streaming webhook URLs for the AI chatbot. REQUIRES the PRO
 | `post_url` | string | no | Post-LLM hook URL — fire-and-forget POST with {question, answer, tool_calls, latency_ms} |
 | `streaming_url` | string | no | Streaming events webhook URL — fire-and-forget SSE-style events |
 
-<!-- /widget -->
-
-## Call it
-
-<!-- widget:code-group -->
-
 ### MCP
 
 ```json
