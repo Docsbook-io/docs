@@ -41,22 +41,7 @@ curl -X POST 'https://docsbook.io/api/mcp/server' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"docsbook_agent_status","arguments":{"task_id":"<task_id>"}}}'
 ```
 
-<!-- /widget -->
-
-## Try it over REST
-
-The same tool is callable as a plain HTTP request, no MCP client required. It runs on the same server, at the same price.
-
-<!-- widget:api -->
-
-### GET /api/v1/docsbook_agent_status
-
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `task_id` | string | yes | The id docsbook_agent returned. |
-
-#### Request
+### REST
 
 ```bash
 curl 'https://docsbook.io/api/v1/docsbook_agent_status?task_id=%3Ctask_id%3E' \

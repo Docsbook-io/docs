@@ -22,6 +22,27 @@ Also reachable by name at `POST /api/v1/tools/register_webhook_traffic_spike`.
 | `secret` | string | no | Optional shared secret (>=16 chars). One is generated if omitted. |
 | `auth_header` | string | no | Optional Authorization header value sent verbatim on delivery, e.g. 'Bearer sk-…' for endpoints that require auth (Claude Code routine fire URLs). |
 
+### Returns
+
+| Field | Type | Description |
+|---|---|---|
+| `ok` | boolean | Whether the tool itself succeeded. A tool that ran and refused — an exhausted balance, a plan restriction, a bad argument — answers `200` with `ok: false`: the call was made and billed, and that refusal is its answer. |
+| `result` | object | The tool's own JSON answer, already parsed — not a string to parse a second time. |
+| `duration_ms` | integer | Server-side wall time for the call. |
+
+### `result` fields
+
+| Field | Type | Description |
+|---|---|---|
+| `ok` | boolean | — |
+| `webhook_id` | number | — |
+| `workspace_id` | number | — |
+| `event_type` | string | — |
+| `url` | string | — |
+| `channel` | string | slack \| claude \| api — read off the URL's host. |
+| `secret` | string | The HMAC signing secret — generated if one was not given. |
+| `enabled` | boolean | — |
+
 ### Request
 
 ```bash
@@ -31,11 +52,30 @@ curl -X POST 'https://docsbook.io/api/v1/register_webhook_traffic_spike' \
   -d '{}'
 ```
 
-<!-- /widget -->
+### Response
 
-## Responses
+```json
+{
+  "ok": true,
+  "result": {
+    "ok": true,
+    "webhook_id": 0,
+    "workspace_id": 0,
+    "event_type": "<event_type>",
+    "url": "<url>",
+    "channel": "<channel>",
+    "secret": "<secret>",
+    "enabled": true
+  },
+  "duration_ms": 0
+}
+```
+
+### Responses
 
 | Status | Meaning |
 |---|---|
 | `200` | The tool ran. Read `ok` to see whether it succeeded. |
 | `401` | Missing or invalid API key. |
+
+<!-- /widget -->

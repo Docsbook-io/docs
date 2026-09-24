@@ -9,13 +9,9 @@ description: "Ask this workspace's documentation a question and get one grounded
 
 ## POST /api/v1/chat
 
-Ask this workspace's documentation a question and get one grounded answer back,
-with the pages it was drawn from. This is the same retrieval and the same model call the Ask AI
-widget on the published docs site makes — not a second engine — so an answer here and an answer
-there agree, and a fix to one is a fix to both.
+Ask this workspace's documentation a question and get one grounded answer back, with the pages it was drawn from. This is the same retrieval and the same model call the Ask AI widget on the published docs site makes — not a second engine — so an answer here and an answer there agree, and a fix to one is a fix to both.
 
-The call spends from the workspace's own AI budget, the same wallet the widget spends from. There is
-no separate API quota.
+The call spends from the workspace's own AI budget, the same wallet the widget spends from. There is no separate API quota.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -26,6 +22,14 @@ no separate API quota.
 | `sessionId` | string | no | Groups several calls as one conversation, the way a multi-turn chat is. |
 | `mentionedPages` | string[] | no | Page paths to put in front of the model regardless of what retrieval finds. |
 
+### Returns
+
+| Field | Type | Description |
+|---|---|---|
+| `answer` | string | The answer, in markdown. |
+| `refs` | object[] | The pages the answer was drawn from. |
+| `follow_up_questions` | string[] | — |
+
 ### Request
 
 ```bash
@@ -35,9 +39,17 @@ curl -X POST 'https://docsbook.io/api/v1/chat' \
   -d '{"question":"How do I connect a custom domain?","currentPath":"guides/advanced/custom-domain"}'
 ```
 
-<!-- /widget -->
+### Response
 
-## Responses
+```json
+{
+  "answer": "<answer>",
+  "refs": [],
+  "follow_up_questions": []
+}
+```
+
+### Responses
 
 | Status | Meaning |
 |---|---|
@@ -46,3 +58,5 @@ curl -X POST 'https://docsbook.io/api/v1/chat' \
 | `401` | Missing or invalid API key. |
 | `403` | AI chat is switched off for this workspace. |
 | `429` | The workspace's AI spend budget is exhausted. |
+
+<!-- /widget -->

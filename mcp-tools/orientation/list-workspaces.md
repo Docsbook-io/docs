@@ -16,6 +16,17 @@ List your Docsbook documentation projects — one line each: id, repo, name, liv
 | `query` | string | no | Narrow to projects matching this — part of a name, a repo, a domain or a URL. Best match first. Omit to list everything. |
 | `limit` | integer | no | Rows to return (default 50). The answer says how many matched in total. |
 
+### Returns
+
+| Field | Type | Description |
+|---|---|---|
+| `total` | number | — |
+| `matched` | number | — |
+| `shown` | number | — |
+| `query` | string | — |
+| `workspaces` | object[] | { id, repoFullName, customName, site_url, customDomain, plan, visibility, aiEnabled, lastPublishedAt, lastUsedAt, createdAt, publish_mismatch_warning?, site_url_collision_warning? }. |
+| `note` | string | — |
+
 ### MCP
 
 ```json
@@ -40,27 +51,24 @@ curl -X POST 'https://docsbook.io/api/mcp/server' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"list_workspaces","arguments":{}}}'
 ```
 
-<!-- /widget -->
-
-## Try it over REST
-
-The same tool is callable as a plain HTTP request, no MCP client required. It runs on the same server, at the same price.
-
-<!-- widget:api -->
-
-### GET /api/v1/list_workspaces
-
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `query` | string | no | Narrow to projects matching this — part of a name, a repo, a domain or a URL. Best match first. Omit to list everything. |
-| `limit` | integer | no | Rows to return (default 50). The answer says how many matched in total. |
-
-#### Request
+### REST
 
 ```bash
 curl 'https://docsbook.io/api/v1/list_workspaces' \
   -H 'Authorization: Bearer dbk_YOUR_API_KEY'
+```
+
+### Result
+
+```json
+{
+  "total": 0,
+  "matched": 0,
+  "shown": 0,
+  "query": "<query>",
+  "workspaces": [],
+  "note": "<note>"
+}
 ```
 
 <!-- /widget -->

@@ -9,7 +9,7 @@ description: "HAS THIS ORGANIZATION ALREADY BEEN HERE?"
 
 ## GET /api/v1/search_context
 
-HAS THIS ORGANIZATION ALREADY BEEN HERE? — search the folder by words, and get back the files that match with a short extract each. Free. CALL IT BEFORE PROPOSING ANYTHING. A match in `hypotheses/` with a verdict is this customer having already tried your idea and measured what it did; a match in `decisions/` is the owner having already settled it. Proposing either again is the single most expensive thing a run can do, because it looks like work. ⚡ Extracts are short and metered by design — this is for finding the file, not for reading it. Open what matches with read_context.
+HAS THIS ORGANIZATION ALREADY BEEN HERE? — search the folder by words, and get back the files that match with a short extract each. Free. A match in `hypotheses/` with a verdict is this customer having already tried your idea and measured what it did; a match in `decisions/` is the owner having already settled it. Proposing either again is the single most expensive thing a run can do, because it looks like work. ⚡ Extracts are short and metered by design — this is for finding the file, not for reading it. Open what matches with read_context.
 
 **Price** — $0.00003 per call (twice what serving it costs us), charged to the workspace balance, the same as over MCP.
 
@@ -20,6 +20,18 @@ Also reachable by name at `POST /api/v1/tools/search_context`.
 | `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
 | `query` | string | yes | Words to look for, in any language — at least three characters. |
 
+### Returns
+
+| Field | Type | Description |
+|---|---|---|
+| `ok` | boolean | Whether the tool itself succeeded. A tool that ran and refused — an exhausted balance, a plan restriction, a bad argument — answers `200` with `ok: false`: the call was made and billed, and that refusal is its answer. |
+| `result` | string | The tool's own JSON answer, already parsed — not a string to parse a second time. |
+| `duration_ms` | integer | Server-side wall time for the call. |
+
+### Use cases
+
+- CALL IT BEFORE PROPOSING ANYTHING.
+
 ### Request
 
 ```bash
@@ -27,11 +39,21 @@ curl -X GET 'https://docsbook.io/api/v1/search_context?query=%3Cquery%3E' \
   -H 'Authorization: Bearer dbk_YOUR_API_KEY'
 ```
 
-<!-- /widget -->
+### Response
 
-## Responses
+```json
+{
+  "ok": true,
+  "result": "<result>",
+  "duration_ms": 0
+}
+```
+
+### Responses
 
 | Status | Meaning |
 |---|---|
 | `200` | The tool ran. Read `ok` to see whether it succeeded. |
 | `401` | Missing or invalid API key. |
+
+<!-- /widget -->

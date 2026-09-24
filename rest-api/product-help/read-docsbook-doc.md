@@ -9,7 +9,7 @@ description: "Read ONE page of DOCSBOOK'S OWN official documentation in full, ve
 
 ## GET /api/v1/read_docsbook_doc
 
-Read ONE page of DOCSBOOK'S OWN official documentation in full, verbatim, by the `path` from a `search_docsbook_docs` hit (e.g. 'guides/advanced/custom-domain.md'). Use it when the search snippet is not enough to act on: step-by-step setup, the exact list of options a setting takes, what a limit actually is, what a plan actually includes. Reading the page before you answer is the difference between telling a user which switch to flip and inventing one. 🔴 This is Docsbook the PLATFORM's own manual, not the user's documentation — that is the project's own read-page tool (`read_project_doc` on the signed-in server, or the branded one a public endpoint names).
+Read ONE page of DOCSBOOK'S OWN official documentation in full, verbatim, by the `path` from a `search_docsbook_docs` hit (e.g. 'guides/advanced/custom-domain.md'). Reading the page before you answer is the difference between telling a user which switch to flip and inventing one.
 
 **Price** — $0.00003 per call (twice what serving it costs us), charged to the workspace balance, the same as over MCP.
 
@@ -22,6 +22,22 @@ Also reachable by name at `POST /api/v1/tools/read_docsbook_doc`.
 | `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
 | `path` | string | yes | Path in the official docs, from a search_docsbook_docs hit, e.g. 'ai/chat.md'. |
 
+### Returns
+
+| Field | Type | Description |
+|---|---|---|
+| `ok` | boolean | Whether the tool itself succeeded. A tool that ran and refused — an exhausted balance, a plan restriction, a bad argument — answers `200` with `ok: false`: the call was made and billed, and that refusal is its answer. |
+| `result` | string | The tool's own JSON answer, already parsed — not a string to parse a second time. |
+| `duration_ms` | integer | Server-side wall time for the call. |
+
+### Use cases
+
+- Use it when the search snippet is not enough to act on: step-by-step setup, the exact list of options a setting takes, what a limit actually is, what a plan actually includes.
+
+### Limitations
+
+- 🔴 This is Docsbook the PLATFORM's own manual, not the user's documentation — that is the project's own read-page tool (`read_project_doc` on the signed-in server, or the branded one a public endpoint names).
+
 ### Request
 
 ```bash
@@ -29,11 +45,21 @@ curl -X GET 'https://docsbook.io/api/v1/read_docsbook_doc?path=%3Cpath%3E' \
   -H 'Authorization: Bearer dbk_YOUR_API_KEY'
 ```
 
-<!-- /widget -->
+### Response
 
-## Responses
+```json
+{
+  "ok": true,
+  "result": "<result>",
+  "duration_ms": 0
+}
+```
+
+### Responses
 
 | Status | Meaning |
 |---|---|
 | `200` | The tool ran. Read `ok` to see whether it succeeded. |
 | `401` | Missing or invalid API key. |
+
+<!-- /widget -->

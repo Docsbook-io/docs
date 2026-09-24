@@ -9,7 +9,7 @@ description: "CORRECT a goal that already exists — its label, what one complet
 
 ## POST /api/v1/edit_goal
 
-CORRECT a goal that already exists — its label, what one completion is worth, or what it matches — without breaking it. 🔴 Not the same as deleting it and creating it again, which was the only route until 2026-09-12 and silently cost two things every time. A funnel step refers to a goal BY KEY, so archiving the goal breaks every funnel naming it, and a funnel that loses a step reports a BETTER conversion rate than the real one. And `created_at` is when this project started measuring the thing: a re-create resets it, so four months of history reads as a goal created today. The KEY cannot be changed here, deliberately — funnels, MCP callers and the owner's own notes all point at it, and a rename leaves all of them pointing at nothing. A different name is a different goal. Pass only what changes. Warnings come back in `issues` and are worth relaying verbatim.
+CORRECT a goal that already exists — its label, what one completion is worth, or what it matches — without breaking it. A funnel step refers to a goal BY KEY, so archiving the goal breaks every funnel naming it, and a funnel that loses a step reports a BETTER conversion rate than the real one. And `created_at` is when this project started measuring the thing: a re-create resets it, so four months of history reads as a goal created today. A different name is a different goal. Pass only what changes. Warnings come back in `issues` and are worth relaying verbatim.
 
 **Price** — $0.00001 per call (twice what serving it costs us), charged to the workspace balance, the same as over MCP.
 
@@ -25,6 +25,27 @@ Also reachable by name at `POST /api/v1/tools/edit_goal`.
 | `label` | string | no | New human label. |
 | `value_usd` | number | no | What ONE completion is worth, in dollars. Pass 0 to clear it — which switches money figures OFF for this goal rather than reporting it as worthless. |
 
+### Returns
+
+| Field | Type | Description |
+|---|---|---|
+| `ok` | boolean | Whether the tool itself succeeded. A tool that ran and refused — an exhausted balance, a plan restriction, a bad argument — answers `200` with `ok: false`: the call was made and billed, and that refusal is its answer. |
+| `result` | object | The tool's own JSON answer, already parsed — not a string to parse a second time. |
+| `duration_ms` | integer | Server-side wall time for the call. |
+
+### `result` fields
+
+| Field | Type | Description |
+|---|---|---|
+| `workspace_id` | number | — |
+| `goal` | object | — |
+| `issues` | object[] | — |
+
+### Limitations
+
+- 🔴 Not the same as deleting it and creating it again, which was the only route until 2026-09-12 and silently cost two things every time.
+- The KEY cannot be changed here, deliberately — funnels, MCP callers and the owner's own notes all point at it, and a rename leaves all of them pointing at nothing.
+
 ### Request
 
 ```bash
@@ -34,11 +55,25 @@ curl -X POST 'https://docsbook.io/api/v1/edit_goal' \
   -d '{"kind":"page"}'
 ```
 
-<!-- /widget -->
+### Response
 
-## Responses
+```json
+{
+  "ok": true,
+  "result": {
+    "workspace_id": 0,
+    "goal": {},
+    "issues": []
+  },
+  "duration_ms": 0
+}
+```
+
+### Responses
 
 | Status | Meaning |
 |---|---|
 | `200` | The tool ran. Read `ok` to see whether it succeeded. |
 | `401` | Missing or invalid API key. |
+
+<!-- /widget -->

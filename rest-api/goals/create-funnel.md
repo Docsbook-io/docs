@@ -23,6 +23,22 @@ Also reachable by name at `POST /api/v1/tools/create_funnel`.
 | `label` | string | no | Human label. Defaults to the key. |
 | `window_hours` | number | no | Conversion window in hours. Clamped to what the plan retains — a window longer than your history can never complete. |
 
+### Returns
+
+| Field | Type | Description |
+|---|---|---|
+| `ok` | boolean | Whether the tool itself succeeded. A tool that ran and refused — an exhausted balance, a plan restriction, a bad argument — answers `200` with `ok: false`: the call was made and billed, and that refusal is its answer. |
+| `result` | object | The tool's own JSON answer, already parsed — not a string to parse a second time. |
+| `duration_ms` | integer | Server-side wall time for the call. |
+
+### `result` fields
+
+| Field | Type | Description |
+|---|---|---|
+| `workspace_id` | number | — |
+| `funnel` | object | — |
+| `issues` | object[] | — |
+
 ### Request
 
 ```bash
@@ -32,11 +48,25 @@ curl -X POST 'https://docsbook.io/api/v1/create_funnel' \
   -d '{}'
 ```
 
-<!-- /widget -->
+### Response
 
-## Responses
+```json
+{
+  "ok": true,
+  "result": {
+    "workspace_id": 0,
+    "funnel": {},
+    "issues": []
+  },
+  "duration_ms": 0
+}
+```
+
+### Responses
 
 | Status | Meaning |
 |---|---|
 | `200` | The tool ran. Read `ok` to see whether it succeeded. |
 | `401` | Missing or invalid API key. |
+
+<!-- /widget -->

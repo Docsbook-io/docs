@@ -9,7 +9,7 @@ description: "Talk to the Docsbook agent about a job that is still open — answ
 
 ## POST /api/v1/docsbook_agent_reply
 
-Talk to the Docsbook agent about a job that is still open — answer a question it asked, add something it needs (a decision, a fact it could not find, a correction), or just ask it something about how the job is going ('how far is the API reference pass', 'did you find the auth docs'). You do not have to wait for it to ask first: send text any time the job is open and it picks the job back up with the whole exchange in front of it, replying in its next report — read `docsbook_agent_status` or `docsbook_agent_activity` after to see what it said. Only for a job that is still open; a finished one is finished, start a new one with `docsbook_agent`.
+Talk to the Docsbook agent about a job that is still open — answer a question it asked, add something it needs (a decision, a fact it could not find, a correction), or just ask it something about how the job is going ('how far is the API reference pass', 'did you find the auth docs'). You do not have to wait for it to ask first: send text any time the job is open and it picks the job back up with the whole exchange in front of it, replying in its next report — read `docsbook_agent_status` or `docsbook_agent_activity` after to see what it said.
 
 **Price** — $0.00003 per call (twice what serving it costs us), charged to the workspace balance, the same as over MCP.
 
@@ -21,6 +21,18 @@ Also reachable by name at `POST /api/v1/tools/docsbook_agent_reply`.
 | `task_id` | string | no | The job to reply to. |
 | `text` | string | no | What you want to tell the agent, in your own words. |
 
+### Returns
+
+| Field | Type | Description |
+|---|---|---|
+| `ok` | boolean | Whether the tool itself succeeded. A tool that ran and refused — an exhausted balance, a plan restriction, a bad argument — answers `200` with `ok: false`: the call was made and billed, and that refusal is its answer. |
+| `result` | string | The tool's own JSON answer, already parsed — not a string to parse a second time. |
+| `duration_ms` | integer | Server-side wall time for the call. |
+
+### Limitations
+
+- Only for a job that is still open; a finished one is finished, start a new one with `docsbook_agent`.
+
 ### Request
 
 ```bash
@@ -30,11 +42,21 @@ curl -X POST 'https://docsbook.io/api/v1/docsbook_agent_reply' \
   -d '{}'
 ```
 
-<!-- /widget -->
+### Response
 
-## Responses
+```json
+{
+  "ok": true,
+  "result": "<result>",
+  "duration_ms": 0
+}
+```
+
+### Responses
 
 | Status | Meaning |
 |---|---|
 | `200` | The tool ran. Read `ok` to see whether it succeeded. |
 | `401` | Missing or invalid API key. |
+
+<!-- /widget -->

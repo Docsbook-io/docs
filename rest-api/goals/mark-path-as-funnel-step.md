@@ -22,6 +22,24 @@ Also reachable by name at `POST /api/v1/tools/mark_path_as_funnel_step`.
 | `funnel` | string | no | Funnel name to append the step to. Created if it does not exist. |
 | `position` | number | no | 0-based index to insert at. Appends when omitted. |
 
+### Returns
+
+| Field | Type | Description |
+|---|---|---|
+| `ok` | boolean | Whether the tool itself succeeded. A tool that ran and refused — an exhausted balance, a plan restriction, a bad argument — answers `200` with `ok: false`: the call was made and billed, and that refusal is its answer. |
+| `result` | object | The tool's own JSON answer, already parsed — not a string to parse a second time. |
+| `duration_ms` | integer | Server-side wall time for the call. |
+
+### `result` fields
+
+| Field | Type | Description |
+|---|---|---|
+| `workspace_id` | number | — |
+| `funnel` | object | — |
+| `goal` | string | — |
+| `issues` | object[] | — |
+| `unchanged` | string | — |
+
 ### Request
 
 ```bash
@@ -31,11 +49,27 @@ curl -X POST 'https://docsbook.io/api/v1/mark_path_as_funnel_step' \
   -d '{}'
 ```
 
-<!-- /widget -->
+### Response
 
-## Responses
+```json
+{
+  "ok": true,
+  "result": {
+    "workspace_id": 0,
+    "funnel": {},
+    "goal": "<goal>",
+    "issues": [],
+    "unchanged": "<unchanged>"
+  },
+  "duration_ms": 0
+}
+```
+
+### Responses
 
 | Status | Meaning |
 |---|---|
 | `200` | The tool ran. Read `ok` to see whether it succeeded. |
 | `401` | Missing or invalid API key. |
+
+<!-- /widget -->

@@ -9,7 +9,7 @@ description: "Upload or replace a translation for a workspace document."
 
 ## upload_translation
 
-Upload or replace a translation for a workspace document. Creates a draft by default. This is how an EXTERNAL translator returns its work: the translation webhook notifies you, you translate, you call this. Pass back the `source_blob_sha` the webhook gave you as `source_hash` and set origin 'external_api', or the freshness surfaces cannot tell which commit your translation belongs to. The language starts being served to readers as soon as the first page is uploaded — there is no separate activation step. REQUIRES PRO or higher.
+Upload or replace a translation for a workspace document. Creates a draft by default. This is how an EXTERNAL translator returns its work: the translation webhook notifies you, you translate, you call this. Pass back the `source_blob_sha` the webhook gave you as `source_hash` and set origin 'external_api', or the freshness surfaces cannot tell which commit your translation belongs to. The language starts being served to readers as soon as the first page is uploaded — there is no separate activation step.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -20,6 +20,20 @@ Upload or replace a translation for a workspace document. Creates a draft by def
 | `status` | string | no | Status (default: draft) One of: `draft`, `published`, `outdated`. |
 | `source_hash` | string | no | Git blob sha (40 hex) of the SOURCE file this was translated FROM — pass the `source_blob_sha` the translation webhook delivered, verbatim. This is what makes 'is this commit translated?' answerable: without it the row records only a hash of your own output, which no commit can ever match. Omit for a hand-written translation whose freshness is a person's call. |
 | `origin` | string | no | Who produced it: 'external_api' for a machine translator answering the webhook (compared against the repo like any machine translation), 'manual_upload' for a person's own words (never reported as stale). Default 'manual_upload'. One of: `manual_upload`, `external_api`. |
+
+### Returns
+
+| Field | Type | Description |
+|---|---|---|
+| `status` | string | — |
+| `translation` | object | — |
+| `comparable` | boolean | Whether this row can be matched to a commit — true only when a source_hash was supplied AND origin is external_api. False means the owner's coverage surfaces will read it as 'manual': present, but not attributable to any commit. |
+| `replaced_ai_translation` | boolean | — |
+| `replaced` | object | { origin, status, updatedAt } of the row that was overwritten. |
+
+### Limitations
+
+- REQUIRES PRO or higher.
 
 ### MCP
 
@@ -52,34 +66,25 @@ curl -X POST 'https://docsbook.io/api/mcp/server' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"upload_translation","arguments":{"workspace_id":"<workspace_id>","source_path":"<source_path>","language":"<language>","content":"<content>","status":"draft","origin":"manual_upload"}}}'
 ```
 
-<!-- /widget -->
-
-## Try it over REST
-
-The same tool is callable as a plain HTTP request, no MCP client required. It runs on the same server, at the same price.
-
-<!-- widget:api -->
-
-### POST /api/v1/upload_translation
-
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
-| `workspace_id` | string | yes | Numeric workspace id — OR the project as the user names it: 'owner/repo', the repo name alone, the site's display name, its docs URL or custom domain. Text is resolved server-side; an ambiguous name returns the candidates instead of guessing, so pass what the user said rather than calling list_workspaces first. |
-| `source_path` | string | yes | Source document path (e.g. 'guides/quick-start.md') |
-| `language` | string | yes | Target language code (e.g. 'es', 'fr') |
-| `content` | string | yes | Translated content |
-| `status` | string | no | Status (default: draft) One of: `draft`, `published`, `outdated`. |
-| `source_hash` | string | no | Git blob sha (40 hex) of the SOURCE file this was translated FROM — pass the `source_blob_sha` the translation webhook delivered, verbatim. This is what makes 'is this commit translated?' answerable: without it the row records only a hash of your own output, which no commit can ever match. Omit for a hand-written translation whose freshness is a person's call. |
-| `origin` | string | no | Who produced it: 'external_api' for a machine translator answering the webhook (compared against the repo like any machine translation), 'manual_upload' for a person's own words (never reported as stale). Default 'manual_upload'. One of: `manual_upload`, `external_api`. |
-
-#### Request
+### REST
 
 ```bash
 curl -X POST 'https://docsbook.io/api/v1/upload_translation' \
   -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
   -H 'Content-Type: application/json' \
   -d '{"workspace_id":"<workspace_id>","source_path":"<source_path>","language":"<language>","content":"<content>","status":"draft","origin":"manual_upload"}'
+```
+
+### Result
+
+```json
+{
+  "status": "<status>",
+  "translation": {},
+  "comparable": true,
+  "replaced_ai_translation": true,
+  "replaced": {}
+}
 ```
 
 <!-- /widget -->

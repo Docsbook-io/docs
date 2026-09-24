@@ -21,6 +21,25 @@ Also reachable by name at `POST /api/v1/tools/list_workspaces`.
 | `query` | string | no | Narrow to projects matching this — part of a name, a repo, a domain or a URL. Best match first. Omit to list everything. |
 | `limit` | integer | no | Rows to return (default 50). The answer says how many matched in total. |
 
+### Returns
+
+| Field | Type | Description |
+|---|---|---|
+| `ok` | boolean | Whether the tool itself succeeded. A tool that ran and refused — an exhausted balance, a plan restriction, a bad argument — answers `200` with `ok: false`: the call was made and billed, and that refusal is its answer. |
+| `result` | object | The tool's own JSON answer, already parsed — not a string to parse a second time. |
+| `duration_ms` | integer | Server-side wall time for the call. |
+
+### `result` fields
+
+| Field | Type | Description |
+|---|---|---|
+| `total` | number | — |
+| `matched` | number | — |
+| `shown` | number | — |
+| `query` | string | — |
+| `workspaces` | object[] | { id, repoFullName, customName, site_url, customDomain, plan, visibility, aiEnabled, lastPublishedAt, lastUsedAt, createdAt, publish_mismatch_warning?, site_url_collision_warning? }. |
+| `note` | string | — |
+
 ### Request
 
 ```bash
@@ -28,11 +47,28 @@ curl -X GET 'https://docsbook.io/api/v1/list_workspaces' \
   -H 'Authorization: Bearer dbk_YOUR_API_KEY'
 ```
 
-<!-- /widget -->
+### Response
 
-## Responses
+```json
+{
+  "ok": true,
+  "result": {
+    "total": 0,
+    "matched": 0,
+    "shown": 0,
+    "query": "<query>",
+    "workspaces": [],
+    "note": "<note>"
+  },
+  "duration_ms": 0
+}
+```
+
+### Responses
 
 | Status | Meaning |
 |---|---|
 | `200` | The tool ran. Read `ok` to see whether it succeeded. |
 | `401` | Missing or invalid API key. |
+
+<!-- /widget -->

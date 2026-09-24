@@ -7,12 +7,12 @@ description: "THIS ORGANIZATION'S FOLDER — what previous runs worked out about
 
 THIS ORGANIZATION'S FOLDER — what previous runs worked out about this customer, as files the agent reads and writes. Docsbook's own; never on a customer's token.
 
-<!-- widget:cards cols=2 -->
+<!-- widget:endpoints -->
 
-- [List context](./list-context.md) — WHAT THIS ORGANIZATION'S FOLDER ALREADY HOLDS — every file's path, title and date, with no contents.
-- [Read context](./read-context.md) — ONE FILE OUT OF THIS ORGANIZATION'S FOLDER, whole — its header and its prose.
-- [Retire context](./retire-context.md) — A FILE IN THIS ORGANIZATION'S FOLDER STOPPED BEING TRUE — take it out of every later run's reading.
-- [Search context](./search-context.md) — HAS THIS ORGANIZATION ALREADY BEEN HERE?
-- [Write context](./write-context.md) — PUT SOMETHING INTO THIS ORGANIZATION'S FOLDER — what you worked out, so no later run has to work it out again.
+- [List context](./list-context.md) `GET /api/v1/list_context` — WHAT THIS ORGANIZATION'S FOLDER ALREADY HOLDS — every file's path, title and date, with no contents.
+- [Read context](./read-context.md) `GET /api/v1/read_context` — ONE FILE OUT OF THIS ORGANIZATION'S FOLDER, whole — its header and its prose.
+- [Retire context](./retire-context.md) `GET /api/v1/retire_context` — A FILE IN THIS ORGANIZATION'S FOLDER STOPPED BEING TRUE — take it out of every later run's reading.
+- [Search context](./search-context.md) `GET /api/v1/search_context` — HAS THIS ORGANIZATION ALREADY BEEN HERE?
+- [Write context](./write-context.md) `POST /api/v1/write_context` — PUT SOMETHING INTO THIS ORGANIZATION'S FOLDER — what you worked out, so no later run has to work it out again.
 
 <!-- /widget -->
