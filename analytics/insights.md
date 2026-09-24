@@ -79,7 +79,7 @@ The [Docsbook agent](../agent/README.md) reads the same numbers when it works on
 - **Evidence** — visits, how they ended (success, dead end, bounce), the pages readers gave up on, and the routes they took
 - **Improve on a row** — a page, a country, a source, a goal or a reader goes to the agent in the panel chat, numbers attached
 - **Graph actions** — select a page on **Analytics ▸ Graph** for fixes such as **Get this page linked**, **Improve search ranking** or **Verify against code**
-- **Dollar forecasts** — with both revenue settings set and Search Console connected, the agent's recommendations carry a monthly dollar estimate beside the extra clicks they expect; without the settings it never guesses a dollar figure
+- **Dollar forecasts** — with both revenue settings set and Search Console data for the page, the agent's recommendations carry a monthly dollar estimate beside the extra clicks they expect; without the settings it never guesses a dollar figure
 
 ## FAQ
 
@@ -94,7 +94,7 @@ The [Docsbook agent](../agent/README.md) reads the same numbers when it works on
 <!-- widget:cards plain cols=2 arrow=hover -->
 
 - [Goals and funnels](./goals.md) — Declare what a reader should do, and count who did {target}
-- [Hear what readers think](./README.md) — Feedback, failed searches, dead ends and the agent loops {message-square}
+- [You hear every reader](./README.md) — Feedback, failed searches, dead ends and the agent loops {message-square}
 - [AI visibility](../geo/ai-visibility.md) — Which AI engines read and cite your docs {sparkles}
 - [Google Search Console](../seo/search-console.md) — Queries, positions and clicks from Google {search}
 

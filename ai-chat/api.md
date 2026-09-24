@@ -19,7 +19,7 @@ Every call sends the project's API key as a bearer token.
 
 <!-- widget:callout type=warning -->
 
-Keep the key on your server. It can change your project's settings and spend its balance, so it must never ship in a browser bundle or a mobile app.
+Keep the key on your server. It can change your project's settings and spend your balance, so it must never ship in a browser bundle or a mobile app.
 
 <!-- /widget -->
 
@@ -107,7 +107,7 @@ const { answer, refs, follow_up_questions } = await res.json()
 
 An API call is billed like a reader's question.
 
-- **Balance** — it draws on the project's AI balance by the tokens it used, at the price shown on **AI Visitors Chat Model**; there is no separate API quota.
+- **Balance** — it draws on your balance by the tokens it used, at the price shown on **AI Visitors Chat Model**; there is no separate API quota.
 - **Your own key** — answers made with **Your own AI API Key** are billed by your provider.
 - **Events** — each call fires `chat_question_asked`, plus `chat_no_answer` when the chat didn't know, so [alerts](../analytics/alerts.md) and trigger cards see API questions too.
 

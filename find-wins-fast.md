@@ -15,9 +15,9 @@ A win starts with a signal somebody left behind: a reader, a search engine or an
 |---|---|---|
 | **Search queries and CTR** | Which queries show a page, and its clicks, click-through rate and position | **Analytics ▸ SEO**, views Queries and Pages |
 | **AI crawls and answers** | Which assistants fetched a page to answer someone, which crawlers index or train on it, which questions name you | **Analytics ▸ GEO**, views Crawlers and Prompt mentions |
-| **Unanswered chat questions** | What readers asked the [AI chat](./ai-chat/README.md) that it could not answer | **Analytics ▸ Chat**, outcome Dead end |
+| **Unanswered chat questions** | What readers asked the [AI chat](./ai-chat/README.md) that it could not answer | **Activity ▸ Chat ▸ Content gaps**; dead-end conversations on **Analytics ▸ Chat** |
 | **Thumbs-down** | Pages and chat answers readers rated down | **Analytics ▸ Feedback**, chip Dislikes |
-| **Searches with no results** | Words readers typed into your docs search that found nothing | Read by the agent; a [trigger](./agent/triggers.md) can wake it when one happens |
+| **Searches with no results** | Words readers typed into your docs search that found nothing | **Activity ▸ Chat ▸ Content gaps**; a [trigger](./agent/triggers.md) can wake the agent when one happens |
 | **Dead ends and traffic drops** | Pages readers leave without going anywhere, and pages losing visits | **Analytics ▸ Insights**, the Exit tab and visits over time |
 | **Competitors** | Who search results and answer engines name for your questions instead of you | **Analytics ▸ SEO** and **Analytics ▸ GEO**, view Competitors |
 
@@ -104,7 +104,7 @@ A query losing clicks, a question the chat could not answer, a page rated down.
 
 - [Search engines see you](./seo/README.md) {search}
 - [AI engines read and cite you](./geo/README.md) {globe}
-- [Reader feedback](./analytics/README.md) {thumbs-down}
+- [You hear every reader](./analytics/README.md) {thumbs-down}
 
 ### Rule
 
@@ -157,7 +157,7 @@ The verdict says so — No effect or Went backwards — on the pull request in [
 
 ### Do I need Google Search Console?
 
-For click forecasts and reach, yes: both are read from Search Console. Chat, feedback, AI crawler and page-view signals come from Docsbook's own analytics and work without it.
+You don't connect one: Docsbook reads Search Console itself for sites at `<owner>.docsbook.io/<repo>`, and click forecasts and reach come from that data ([Search data](./seo/search-console.md)). Chat, feedback, AI crawler and page-view signals come from Docsbook's own analytics and work without it.
 
 ### Why are hypotheses never turned into work?
 

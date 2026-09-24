@@ -108,6 +108,6 @@ Instructions:
 - [Agent memory](./memory.md) — The facts the agent keeps next to your skills {brain}
 - [AI chat settings](../ai-chat/configure.md) — The reader chat's prompt, questions and model {settings}
 - [MCP server for your docs](./mcp-server.md) — Where the Public project MCP door leads {server}
-- [Your second brain](./README.md) — How skills fit with pages, sources and memory {network}
+- [A second brain for your product](./README.md) — How skills fit with pages, sources and memory {network}
 
 <!-- /widget -->

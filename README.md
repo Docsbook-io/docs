@@ -74,7 +74,7 @@ Six things every Docsbook site does — and the agent keeps improving on its own
 
 - **Knows what good documentation looks like** — Analytics ▸ Audit judges your pages against 299 rules from search engines, standards bodies and published research, and turns each miss into work with a forecast. {badge:Expertise} {span:12} {side} {tags} {graduation-cap}
 
-  - Search intent
+  - Intent
   - Titles & snippets
   - Crawl & index
   - AI crawlers

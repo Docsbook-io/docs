@@ -35,6 +35,7 @@ The first two steps work in either order, so you can add the DNS record first.
 - **Every page** answers at your domain's root: `docs.acme.com/quickstart`, and [translations](./translations.md) at `docs.acme.com/de/quickstart`.
 - **Search engines** are told each page's canonical address is on your domain, so ranking builds up there. The docsbook.io address keeps working.
 - **Your [public MCP server](../brain/mcp-server.md)** moves too: `https://docs.acme.com/api/mcp/server`, shown in **Settings ▸ Domain & API ▸ Public MCP server**.
+- **Some extras stay on the docsbook.io address for now** — the sitemap, `llms.txt`, `hreflang`, moved-page redirects and most structured data; see [Search engines see you](../seo/README.md).
 
 To go back to the docsbook.io address, clear the **Custom Domain** field and save; to switch domains, enter the new one. The docsbook.io address itself is set in **Settings ▸ General ▸ Site source**.
 

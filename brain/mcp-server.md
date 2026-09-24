@@ -107,7 +107,7 @@ The server reads your published pages, plus any skills you choose to place on it
 
 ## FAQ
 
-**Does a reader's agent cost me anything?** Calls are not billed one by one. With search by meaning on, each question is embedded on your project's AI balance; if that balance is empty, `search_<slug>_docs` answers `INSUFFICIENT_BALANCE` while reading pages keeps working.
+**Does a reader's agent cost me anything?** Calls are not billed one by one. With search by meaning on, each question is embedded on your balance; if that balance is empty, `search_<slug>_docs` answers `INSUFFICIENT_BALANCE` while reading pages keeps working.
 
 **Can I switch the server off?** There is no switch for the endpoint itself — it serves the same pages your public site does. You can hide **Connect MCP** and **Connect to VSCode**, or make the site [private](../site/private-docs.md).
 
@@ -120,6 +120,6 @@ The server reads your published pages, plus any skills you choose to place on it
 - [Skills](./skills.md) — Put your house rules in front of readers' agents {sparkles}
 - [Custom domain](../site/custom-domain.md) — Serve the docs, and this server, from your own domain {globe}
 - [Tell your agent, get discovered](../get-discovered.md) — Connect your own agent to Docsbook {terminal}
-- [Your second brain](./README.md) — Everything this server answers from {network}
+- [A second brain for your product](./README.md) — Everything this server answers from {network}
 
 <!-- /widget -->

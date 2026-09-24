@@ -99,7 +99,7 @@ Before it writes, the agent researches what people actually search for:
 - **Competitor docs** — up to 50 pages of a rival's documentation, read as clean Markdown
 - **Questions asked elsewhere** — Reddit, Hacker News, Stack Overflow and Discourse threads about your product
 
-A change that claims to move a number states its bet. The agent records the reading it expects to move — Google's position, impressions or clicks for a page, or its views — with today's number, the predicted one and a check date. On that date it takes the same reading again, and Docsbook computes the verdict from the two: as predicted, no effect, or went backwards.
+A change that claims to move a number states its bet. The agent records the reading it expects to move — Google's position, impressions or clicks for a page, or its views — with today's number, the predicted one and a check date. On that date it takes the same reading again, and Docsbook computes the verdict from the two: as predicted, no effect, went backwards or cannot tell.
 
 ## See it working
 
@@ -114,7 +114,7 @@ A change that claims to move a number states its bet. The agent records the read
 | **Competitors**, **Competitor queries** | Who ranks for your queries, and where they sit ahead of you |
 | **Competitor tactics** | Which catalog rules the winning competitor pages apply |
 
-**Analytics ▸ Audit** shows where your pages stand against the three SEO families of the catalog: Search demand & intent; Crawl, index & speed; Authority & risk.
+**Analytics ▸ Audit** shows where your pages stand against the three SEO topics of the catalog: Search demand & intent; Crawl, index & speed; Authority & risk.
 
 ## Tell your agent
 

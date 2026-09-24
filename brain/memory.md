@@ -117,6 +117,6 @@ Give a project away with a claim link and its own entries — everything under `
 - [Skills](./skills.md) — Turn a house rule into a way of working the agent follows {sparkles}
 - [Sources](./sources.md) — Give the agent the code and sites to learn from {plug}
 - [Tell your agent, get discovered](../get-discovered.md) — Connect Claude Code, Cursor or Codex {terminal}
-- [Your second brain](./README.md) — How memory fits with pages, sources and skills {network}
+- [A second brain for your product](./README.md) — How memory fits with pages, sources and skills {network}
 
 <!-- /widget -->

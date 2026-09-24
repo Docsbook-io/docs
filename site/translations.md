@@ -44,9 +44,9 @@ The **Translate into …** cards wake only when your docs are re-indexed, so the
 
 The language code is the first part of the path: `docs.acme.com/de/quickstart`, while the source-language page keeps `docs.acme.com/quickstart`.
 
-- **Canonical and `hreflang`** — each translated page is its own canonical page and lists every language it exists in, plus `x-default`.
+- **Canonical and `hreflang`** — each translated page is its own canonical page and, on a `docsbook.io` address, lists every language it exists in, plus `x-default`.
 - **Titles and descriptions** — the translated `<title>` and meta description come from the translated page.
-- **Sitemap** — every translated page gets its own entry.
+- **Sitemap** — on a `docsbook.io` address, every translated page gets its own entry.
 - **No duplicates** — a language URL for a page not translated yet shows the original and points search engines at it.
 - **Interface** — search, buttons and page actions ship in all 15 languages; your menu labels, tabs and suggested questions are translated with the pages.
 
@@ -64,9 +64,9 @@ Ask in plain words: "Which German pages are behind?" See the [MCP tools referenc
 
 ## What it costs
 
-Translations are part of **Pro**, and the 14-day trial includes them; recording your docs' own language is free on every plan. Translating runs on your project's AI balance, and a page is only re-translated when its source changed ([Plans and pricing](../plans-and-pricing.md)).
+Translations are part of **Pro**, and the 14-day trial includes them; recording your docs' own language is free on every plan. Translating runs on your balance, and a page is only re-translated when its source changed ([Plans and pricing](../plans-and-pricing.md)).
 
-To pay your AI provider directly, ask the panel chat for the **Bring your own Translations API key** card. It takes a key from OpenRouter, OpenAI, Google Gemini, Anthropic or Vercel AI Gateway.
+On Enterprise, you can pay your AI provider directly: ask the panel chat for the **Bring your own Translations API key** card. It takes a key from OpenRouter, OpenAI, Google Gemini, Anthropic or Vercel AI Gateway.
 
 ## FAQ
 

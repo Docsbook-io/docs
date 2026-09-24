@@ -82,7 +82,7 @@ Put the setup part of the Webhooks page into numbered steps.
 
 - [Edit and publish](./editing.md) — Interactive mode, GitHub sync and review {pencil}
 - [Brand your docs](./branding.md) — Logo, colors, fonts, header and footer {palette}
-- [AI agent writes your docs](../agent/README.md) — How the agent writes and restructures pages {bot}
+- [AI writes and updates your docs](../agent/README.md) — How the agent writes and restructures pages {bot}
 - [Connect your agent](../get-discovered.md) — Send requests from Claude Code, Cursor or Codex {plug}
 
 <!-- /widget -->

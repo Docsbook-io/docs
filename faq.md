@@ -21,7 +21,7 @@ No. Start from a template and Docsbook creates and hosts the repository for you;
 
 ### Can I bring the docs I already have?
 
-Yes, if they are Markdown in a GitHub repository: connect the repository and its pages become the site as they stand. Guides for [GitBook](./blog/migrating-from-gitbook-to-docsbook.md) and [Docusaurus](./blog/migrating-from-docusaurus-to-docsbook.md) cover the details.
+Yes. Connect the GitHub repository your Markdown lives in and its pages become the site as they stand, or upload PDF, Word and Markdown files as [sources](./brain/sources.md), each of which becomes a page. Guides for [GitBook](./blog/migrating-from-gitbook-to-docsbook.md) and [Docusaurus](./blog/migrating-from-docusaurus-to-docsbook.md) cover the details.
 
 ### Does Docsbook support versioned docs?
 
@@ -65,7 +65,7 @@ Not on its own: Google says its AI features need no AI text file, and no major A
 
 ### How do I know whether AI assistants cite my docs?
 
-**Analytics ▸ GEO** shows which AI crawlers read each page, and which of the questions you watch name you in Google's AI Overviews and search results. See [AI visibility](./geo/ai-visibility.md).
+**Analytics ▸ GEO** shows which AI crawlers read each page, and which of the questions you watch name you in Google's AI Overviews; checks you run in ChatGPT, Claude or Perplexity can be added through the API. See [AI visibility](./geo/ai-visibility.md).
 
 <!-- /widget -->
 
@@ -79,7 +79,7 @@ It answers from the pages it found for the question and shows them as sources. W
 
 ### Do reader analytics use cookies?
 
-No. A visitor is counted by a salted hash of their IP address and your project, and history is kept for 30 days. See [hear what readers think](./analytics/README.md).
+No. A visitor is counted by a salted hash of their IP address and your project, and history is kept for 30 days. See [you hear every reader](./analytics/README.md).
 
 <!-- /widget -->
 

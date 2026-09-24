@@ -3,7 +3,7 @@ title: "Your product's second brain: docs, sources and memory"
 description: "One brain of your product: your pages, the code and sites they describe, what the agent learned and your skills. You, your agent, readers and agents can ask it."
 ---
 
-# Your product's second brain
+# A second brain for your product
 
 Docsbook keeps everything it knows about your product in one place — your pages, the code and sites behind them, what its agent has learned — and lets you, your agent, your readers and their AI agents ask it.
 
@@ -67,11 +67,11 @@ The ready-made cards behind the second loop, from [Triggers](../agent/triggers.m
 - **MCP sync**, **OpenAPI sync**, **SDK sync** — daily, each against one machine-readable surface.
 - **Find pages that contradict** — weekly, for two pages telling a reader two different things.
 
-The rules behind all four loops sit on the **Freshness** axis of the **Trust & evidence** family in the [expertise catalog](../agent/expertise.md): a page that was true is not a page that is true.
+The rules behind all four loops sit on the **Freshness** axis of the **Trust & evidence** topic in the [expertise catalog](../agent/expertise.md): a page that was true is not a page that is true.
 
 ## Who can ask it?
 
-The same brain answers through six doors:
+Six kinds of caller reach the same brain:
 
 | Who | Where | How |
 |---|---|---|
@@ -91,7 +91,7 @@ A page Docsbook publishes reaches the index within minutes. A push made straight
 | By exact words | Every page Docsbook publishes; an hourly pass catches pushes made on GitHub | Every plan |
 | By meaning | Every page Docsbook publishes, your branch checked for new commits every five minutes, and an hourly pass as a safety net | Pro, with **Semantic Search** on |
 
-Only the sections that changed are re-embedded. That cost comes from the project's AI balance — or your own AI key — and shows next to **Last updated**; indexing stops when the balance runs out rather than running into overage.
+Only the sections that changed are re-embedded. That cost comes from your balance — or your own AI key — and shows next to **Last updated**; indexing stops when the balance runs out rather than running into overage.
 
 ## See it working
 

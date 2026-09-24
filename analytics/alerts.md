@@ -186,7 +186,7 @@ An alert tells a person. To have the agent act on the same event, switch on a ca
 
 - [AI chat](../ai-chat/README.md) — Where the chat events come from {message-square}
 - [Triggers](../agent/triggers.md) — Wake the agent on the same events {zap}
-- [Reader signals](./README.md) — Page feedback and what readers think of every page {thumbs-up}
+- [You hear every reader](./README.md) — Page feedback and what readers think of every page {thumbs-up}
 - [Chat API and hooks](../ai-chat/api.md) — Your own code before and after every answer {code}
 
 <!-- /widget -->

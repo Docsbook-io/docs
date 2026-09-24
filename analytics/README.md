@@ -3,7 +3,7 @@ title: "Documentation feedback: what readers think of every page"
 description: "Collect page ratings, AI chat thumbs, failed searches and dead ends from docs readers, and let the Docsbook agent turn each signal into a fixed page."
 ---
 
-# Hear what readers think of every page
+# You hear every reader
 
 Docsbook records how readers use every page — ratings, searches, chat questions, where they give up — and its agent turns those signals into fixes you review.
 
@@ -69,10 +69,11 @@ The catalog's **First screen**, **Navigation**, **Intent** and **Scanning** axes
 
 ## See it working
 
-Every signal above has a screen in the panel:
+These screens in the panel show the signals above:
 
 - **Analytics ▸ Feedback** — each rated page with its thumbs-up and thumbs-down counts; switch the view to **Votes** for every vote with its date, or narrow to **Page thumbs** or **Chat answers**
 - **Analytics ▸ Chat** — what readers asked the AI chat, by topic, each conversation marked **Answered**, **Dead end** or **Unrated**
+- **Activity ▸ Chat ▸ Content gaps** — each search that found nothing and each question the chat could not answer, as it happens
 - **Analytics ▸ Graph** — your docs as a map; colour it by **Dead ends** to see which pages end visits
 - **Analytics ▸ Insights** — traffic, sources, audience and conversions, covered in [Docs analytics](./insights.md)
 - **Activity ▸ Users** — one row per reader: country, the translation they read, where they came from, the [goals](./goals.md) they reached

@@ -3,7 +3,7 @@ title: "AI chatbot for documentation that answers from your docs"
 description: "An AI chatbot for your docs that answers readers from your published pages, shows its sources, sends what it can't answer to support, and feeds the agent."
 ---
 
-# AI chat answers your readers
+# AI answers your readers
 
 The AI chat answers your readers' questions from your published pages, shows which pages it used, and turns every question it could not answer into work the [Docsbook agent](../agent/README.md) can pick up.
 
@@ -25,10 +25,10 @@ On a Pro project the chat answers readers from the first publish, with nothing t
 
 Reader chat is part of **Pro** — $20 a month, with $20 of AI usage credited each month — and Enterprise. On Free the chat does not answer readers, even with your own API key; see [Plans and pricing](../plans-and-pricing.md).
 
-- **Billed per answer** — each answer draws on the project's AI balance by the tokens it used, at the per-1M-token price shown beside the model on **Settings ▸ Agent ▸ AI Visitors Chat Model**.
+- **Billed per answer** — each answer draws on your balance by the tokens it used, at the per-1M-token price shown beside the model on **Settings ▸ Agent ▸ AI Visitors Chat Model**.
 - **Your own key** — on Enterprise, answers made with **Your own AI API Key** are billed by your provider and leave the balance alone.
 - **Search is free** — full-text search is never metered.
-- **An empty balance** — the chat stops answering until the project has balance again.
+- **An empty balance** — the chat stops answering until there is balance again.
 - **Where the money went** — **Settings ▸ Usage** shows the chat on its own line, **Readers (AI chat)**.
 
 ## What the agent does on its own
@@ -69,7 +69,7 @@ The agent works from what readers actually typed: each question word for word, g
 - **Failed searches too** — the neighbouring card **Write the pages readers wanted** works searches that found nothing the same way.
 - **Cadence** — event cards wake at most once every 10 minutes; scheduled cards run daily or weekly.
 - **Safe to leave on** — every change is an ordinary git commit you can [review and revert](../agent/review.md), and the pages it writes are marked for your review.
-- **Cost** — trigger runs are part of Pro and draw on the project balance.
+- **Cost** — trigger runs are part of Pro and draw on your balance.
 
 ## See it working
 
@@ -106,7 +106,7 @@ Pick the model readers get on **Settings ▸ Agent ▸ AI Visitors Chat Model** 
 
 ### Can I check what a reader would be told?
 
-Yes. Ask your agent, or call `ask_project_docs`: it runs the same retrieval and model call as the chat on your site, works on every plan and is charged to the project balance.
+Yes. Ask your agent, or call `ask_project_docs`: it runs the same retrieval and model call as the chat on your site, works on every plan and is charged to your balance.
 
 ### Does the chat remember earlier questions?
 

@@ -65,8 +65,8 @@ gemini mcp add --transport http docsbook https://docsbook.io/api/mcp/server
 
 Chat apps take the endpoint as a connector instead:
 
-- **Claude** (desktop app, claude.ai, and Claude Code inside them) — **Settings → Connectors → Add custom connector**, then paste the endpoint
-- **ChatGPT** (paid plans) — **Settings → Connectors → Advanced → Developer mode → Create**, then paste the endpoint
+- **Claude** (desktop app, claude.ai, and Claude Code inside them) — **Settings ▸ Connectors ▸ Add custom connector**, then paste the endpoint
+- **ChatGPT** (paid plans) — **Settings ▸ Connectors ▸ Advanced ▸ Developer mode ▸ Create**, then paste the endpoint
 
 <!-- widget:callout type=warning -->
 

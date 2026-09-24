@@ -118,6 +118,6 @@ Ask the agent, or call `configure_source` from your editor with a read-write tok
 - [Triggers](../agent/triggers.md) — The ready-made cards that read your sources on a schedule or an event {zap}
 - [Agent memory](./memory.md) — Where the agent keeps what a source taught it {brain}
 - [Skills](./skills.md) — Tell the agent how to write from a source {sparkles}
-- [Your second brain](./README.md) — How sources fit with pages, memory and skills {network}
+- [A second brain for your product](./README.md) — How sources fit with pages, memory and skills {network}
 
 <!-- /widget -->

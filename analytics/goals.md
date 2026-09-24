@@ -99,7 +99,7 @@ The owner server declares goals; it does not read their numbers. Read them in th
 <!-- widget:cards plain cols=2 arrow=hover -->
 
 - [Docs analytics](./insights.md) — Traffic, AI visitors and revenue per page {chart-line}
-- [Hear what readers think](./README.md) — Feedback, failed searches, dead ends and the agent loops {message-square}
+- [You hear every reader](./README.md) — Feedback, failed searches, dead ends and the agent loops {message-square}
 - [MCP tools reference](../mcp-tools/README.md) — Every tool your own agent can call {terminal}
 - [Tell your agent, get discovered](../get-discovered.md) — Connect Claude Code, Cursor or Codex {plug}
 

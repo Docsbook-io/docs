@@ -21,7 +21,7 @@ An event trigger fires at most once every 10 minutes, so a busy event buys a reg
 
 ### Commit cards need semantic search
 
-A card that wakes on every commit fires when the semantic index finishes a run that found changed pages, so it only fires with **Enable semantic search** on: **Settings ▸ Agent**, the **Semantic Search** card. That is 24 ready-made cards, all 15 translation cards among them. A change is picked up within minutes, whether it was made in Docsbook or pushed straight to GitHub. Semantic search is part of Pro, and on a trial it switches on once a card is on file.
+A card that wakes on every commit fires when the semantic index finishes a run that found changed pages, so it only fires with **Enable semantic search** on: **Settings ▸ Agent**, the **Semantic Search** card. That is 24 ready-made cards, all 15 translation cards among them. A change is picked up within minutes, whether it was made in Docsbook or pushed straight to GitHub. Semantic search is part of Pro, and on a trial it unlocks once a card is on file.
 
 <!-- /widget -->
 
