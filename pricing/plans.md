@@ -32,7 +32,7 @@ Monthly: **$20** / mo
 
 Annual: **$200** / yr · 2 months free
 
-For docs that AI writes and answers from
+For docs that run on AI
 
 $20 of AI usage credited every month
 
