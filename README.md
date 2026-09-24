@@ -5,21 +5,14 @@ status: generated
 version: "0.2"
 ---
 
-<!-- widget:hero size=large -->
+<!-- widget:hero size=xl -->
 
-**Docsbook documentation**
+# Tell agent, get discovered
 
-# Find wins fast. Tell your agent, get discovered.
+**Publish your docs** and put **AI agents** to work on them.\
+They find the **fastest win** and **ship it as a pull request**.
 
-Docsbook publishes your docs and puts AI agents to work on them. They check your pages against 299 published rules, read what search engines, AI assistants and readers do, and ship the next win as a pull request.
-
-[Start free](https://docsbook.io/?start=1) · [Tell your agent](./get-discovered.md)
-
-> ![Claude](https://docsbook.io/agents/claude.svg) ![OpenAI](https://docsbook.io/agents/openai.svg) ![Cursor](https://docsbook.io/agents/cursor.svg) **Onboard your agent** — Set up Docsbook for me. Fetch https://docsbook.io/get-started.md and follow it.
->
-> Paste it into Claude Code, Cursor or Codex: your agent connects Docsbook and takes a first project live.
-
-![Docsbook](mark:docsbook)
+[Get started](https://docsbook.io/connect) · [![Claude](https://docsbook.io/agents/claude.svg) ![OpenAI](https://docsbook.io/agents/openai.svg) ![Cursor](https://docsbook.io/agents/cursor.svg) Connect agent](https://docsbook.io/get-discovered)
 
 <!-- /widget -->
 
