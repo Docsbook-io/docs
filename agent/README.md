@@ -1,6 +1,8 @@
 ---
-title: "AI documentation agent that writes and updates your docs"
+title: "AI writes and updates your docs"
 description: "The Docsbook agent reads your sources, writes and updates pages, configures the site and measures the result — started from your editor, the panel or a trigger."
+status: generated
+version: "0.2"
 ---
 
 # AI writes and updates your docs
@@ -98,7 +100,7 @@ Yes — the safety is in how changes land, not in a promise:
 
 - **Every change is a pull request** — an ordinary git commit in your repository, reviewable and revertible. Auto-merge decides whether it publishes itself or waits for you ([review](./review.md)).
 - **Writing never approves** — a new page lands at `generated`, an edited `approved` page goes back to `review`, and `locked` and `archived` pages refuse the write. Approval is a separate step, `set_doc_status`.
-- **Scoped to your project** — each run gets a credential fenced to your project and revoked when the run ends. It cannot create projects, change who has access, or grant itself access to a repository.
+- **Scoped to your project** — each run gets a credential fenced to your project and revoked when the run ends. It cannot change who has access, or grant itself access to a repository. It can create new projects (which then become part of the run's scope); at most three projects join per run.
 - **Stops when you say** — `docsbook_agent_stop` ends a job, switching a trigger off stops its next run, and a run is told to wind up when the balance runs out.
 
 ## What does it cost?
