@@ -1,6 +1,8 @@
 ---
-title: "Triggers: run the docs agent on a schedule or an event"
-description: "Triggers wake the Docsbook agent on a schedule, a docs event or a GitHub change: 50 ready-made workflows for writing, audits, answers, reports and translation."
+title: "Triggers: run the Docsbook agent on a schedule or an event"
+description: "Triggers wake the Docsbook agent on a schedule, a docs event or a GitHub change — plus 50 ready-made workflows for writing, audits, answers, reports and translation."
+status: generated
+version: "0.2"
 ---
 
 # Triggers
@@ -27,7 +29,7 @@ A card that wakes on every commit fires when the semantic index finishes a run t
 
 Every card's prompt has three parts — a goal, what to measure, and what a good result looks like — and never a list of steps. This is the prompt behind **Fix what readers rated down**:
 
-```text
+```
 Work the pages readers marked as unhelpful. A downvote says the page failed,
 not how — so read the page as the reader who voted would have, with whatever
 they were trying to do, and find the specific thing it does not say: the
@@ -66,7 +68,7 @@ Any event card works the same way: switch it on and write what the agent should 
 
 ## The catalog: 50 ready-made workflows
 
-Ready-made cards come in five groups, named after what a run ends in. Each line is the card's name, what it does, and when it wakes; "on every commit" cards need semantic search on.
+Ready-made cards come in five groups, named after what a run ends in. Each line is the card's name, what it does, and when it wakes; "on every commit" cards need semantic search on. Use `arm_intent_trigger` to switch one on — or re-point it if it is already armed.
 
 <!-- widget:tabs -->
 
