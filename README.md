@@ -103,71 +103,82 @@ The agent finds the opportunity on its own and asks your team only for the fact 
 
 - **Docsbook Agent** 10:02 AM
 
-  Found an opportunity: 4,200 people a month search for **audit log export**, and AI answers recommend your competitors.
+  Found an opportunity: **4,200 people a month** search for a HIPAA-compliant tool like yours.
+
+  AI answers recommend your competitors.
 
 - **Docsbook Agent** 10:02 AM
 
-  I went through your docs and site but can't confirm you support it. Do you? If yes, how does it work?
+  I checked your docs and site but can't confirm you're HIPAA-compliant. Are you? How does it work?
 
 - **Maya Chen** 10:14 AM
 
-  Yes — through the API, on the Enterprise plan only. Exports go to S3 or Splunk.
+  Yes — through the API, on the Enterprise plan only. We sign a BAA.
 
 - **Docsbook Agent** 10:15 AM
 
-  That's exactly what I needed. I'll update the product and pricing pages and keep this as confirmed knowledge. Then I'll measure the result and report back in two weeks.
+  Great, that's exactly what I needed. I'll update the product pages and use this as confirmed knowledge.
+
+  Then I'll measure the result and report back in two weeks.
 
 ### Inbox
 
-- **Audit log export: you're in the AI answers now** *now* {badge:Audit logs} {unread} {chart:21,19,22,20,23,21,22|26,29,31,30,33,35,34,36}
+- **HIPAA: $96k in Enterprise pipeline** *now* {badge:HIPAA} {unread}
 
-  Two weeks ago you said audit logs export through the API, on Enterprise only. I used that to update three pages and make the case clear.
+  Two weeks ago you said HIPAA works through the API, on **Enterprise** only. I used it to update 3 pages.
+
+  Each now answers "Are you HIPAA-compliant?" in its first line — [the facts AI checks before citing](./agent/expertise.md) {graduation-cap}
 
   **What changed**
 
-  - **3** pages updated
-  - **12** AI answers updated
-  - **+4** new citations
-  - **+38%** qualified impressions
+  - **$96k ARR** in pipeline: 3 Enterprise demos from these pages
+  - **+41** qualified visitors from healthcare companies
+  - **+4** new citations in ChatGPT and Perplexity
+  - **+38%** qualified impressions on Google
+  - **12** AI prompts now answer with your Enterprise plan
 
   **What I learned**
 
-  ChatGPT and Perplexity now name you for audit log export. A competitor still ranks above you on Google.
+  AI answers about HIPAA now name you. A competitor still ranks above you on Google.
 
   **Next opportunity**
 
-  Another gap on your comparison page. I need one more fact about team features before I go on.
+  Your comparison page has another gap. I need one fact about **team features** to go on.
 
-  - **Asked in #growth** — which roles can see team usage? {message-circle-question}
+  **Asked in #growth:** which roles can see team usage?
 
-- **September: +$2,970 in new MRR** *1d* {badge:Monthly} {unread} {chart:180,172,190,185,201,214,236,251,247,270,288,301,322,340}
+- **September: +$2,970 new MRR from the docs** *1d* {badge:Monthly} {unread}
 
-  Six changes shipped and five moved a number. The pricing page did the most: its click rate went from 0.9% to 3.1%.
+  Six changes shipped this month, and five moved a number.
 
-  - **+3,920** visitors
+  **What changed**
+
+  - **+$2,970** new MRR from docs visitors
   - **+118** trial signups
-  - **+$2,970** new MRR
+  - **+3,920** visitors from search and AI answers
+  - **5 of 6** forecasts came true
 
-  - **Merged 6 pull requests** {git-merge}
-  - **Forecasts** 5 of 6 came true {target}
+  **Best change**
 
-- **Pricing page: click rate 0.9% → 3.1%** *5d* {badge:SEO} {chart:9,9,8,10,9|18,24,27,29,31}
+  The pricing page: click rate went from **0.9%** to **3.1%** at the same position.
 
-  A new title and a first line that answers the query. It holds position 6 and now gets three times the clicks.
+- **Pricing page: 3.4× the clicks at the same position** *5d* {badge:SEO}
+
+  It sat at position 6 with a 0.9% click rate. The new title and first line answer the query.
 
   - **+140** clicks a month
   - **+11** trial signups
+  - **3.1%** click rate, up from 0.9%
 
-  - **Changed 1 page** `+22` `-10` {git-pull-request}
+  Why it works: [a quick-fact query needs its answer in 1–2 sentences](./agent/expertise.md) {graduation-cap}
 
-- **The SSO page answers what 23 readers asked** *1w* {badge:Support}
+- **SSO: 23 questions answered, 2 Enterprise trials kept** *1w* {badge:Support}
 
-  The chat stopped getting the question the day the page went live, and two of those readers were on an Enterprise trial.
+  23 readers asked the chat how to set up SSO. A page now answers them.
 
-  - **−23** unanswered questions
+  - **0** SSO questions since the page went live
   - **2** Enterprise trials kept
-
-  - **Wrote 1 page** `+146` {file-plus}
+  - **1** page written
 
 <!-- /widget -->
 
