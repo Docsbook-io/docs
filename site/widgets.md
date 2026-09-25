@@ -1,11 +1,13 @@
 ---
 title: "Docs page widgets: cards, tabs, steps, callouts and more"
-description: "Add card grids, tabs, steps, callouts, API playgrounds and 13 more widgets to Docsbook pages by wrapping plain Markdown in two HTML comments."
+description: "Add card grids, tabs, steps, callouts, API playgrounds, bento cards with trigger stacks and more to Docsbook pages by wrapping plain Markdown in two HTML comments."
+status: generated
+version: "0.2"
 ---
 
 # Page widgets
 
-Wrap plain Markdown in two HTML comments and Docsbook renders it as a card grid, tabs, steps or one of 15 other widgets, while on GitHub the page still reads as ordinary Markdown.
+Wrap plain Markdown in two HTML comments and Docsbook renders it as a card grid, tabs, steps or one of 20 other widgets, while on GitHub the page still reads as ordinary Markdown.
 
 ## How a widget marker works
 
@@ -47,16 +49,28 @@ A custom domain needs one DNS record. See [Custom domain](./custom-domain.md).
 | `mcp` | An MCP tool's signature and arguments | Documenting one MCP tool |
 | `cta` | A compact block with buttons | The one next step on a page |
 | `cta-form` | The same block with one input field | A next step that starts with an email or a URL |
+| `cta inbox` | Slack thread over Inbox reports — messages above, email-like report items below | Closing a front page with the agent's conversation with the team |
 | `recommendations` | Ranked findings with severity badges | "Fix this first" lists and audit results |
 | `hero` | An opener with a lead, quick links and a prompt for the reader's agent | A docs home or a section landing page |
 | `showcase` | A gallery led by screenshots | Customer sites, templates, examples |
 | `stats` | A band of three or four large numbers | Checkable figures on a landing page |
 | `journey` | Lifecycle stages, each with destination cards | "Where am I, and what's next" overviews |
-| `bento` | Mixed-width feature cards with screenshots | Showing what a product looks like |
+| `bento` | Mixed-width feature cards with screenshots, trigger stacks, or count tiles | Showing what a product looks like |
 | `logos` | A row of customer logos | Social proof under a hero |
 | `stories` | Coloured post cards filtered by category chips | A blog or case-study index |
 | `story` | A post header with a brand panel, the lead and a fact column | The top of a blog post |
 | `quote` | A quotation on a card with the speaker's name and role | A real quote in a post |
+
+### Bento card extras
+
+The `bento` widget takes two special modifiers on its items:
+
+- **`{triggers}`** — renders the item's first nested list as a stack of trigger rows dissolving upwards instead of a screenshot. Each row follows `- **Name** — When · what it does {icon} {schedule|event|github} {badge:…} {on}`.
+- **`{count:N}`** — renders one large icon tile with the number pinned to its corner instead of a screenshot. For cards where a single figure is the point (connectors, rules, languages).
+
+### CTA inbox
+
+The `cta inbox` shape is a front-page element: title left, supporting line right, then a Slack-style message thread laid over Inbox reports that fade out to the edges. Write two lists — `### Thread` for the chat messages, then `### Inbox` for the reports. Without both lists it falls back to the regular compact `cta` block.
 
 Each widget's full contract and a copyable example are in **Customize ▸ Widgets** and in `list_content_widgets`. The **Next steps** block at the end of this page is a `cards` widget.
 

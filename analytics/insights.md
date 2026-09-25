@@ -1,6 +1,8 @@
 ---
-title: "Docs analytics: traffic, AI visitors and revenue per page"
+title: "See who reads your docs and what they are worth"
 description: "See docs traffic, sources, countries and AI-assistant visitors in Docsbook, and turn a call-to-action URL and an average price into revenue per visitor."
+status: generated
+version: "0.2"
 ---
 
 # See who reads your docs and what they are worth
@@ -11,10 +13,10 @@ description: "See docs traffic, sources, countries and AI-assistant visitors in 
 
 ## What does the Insights tab show?
 
-A row of figures sits over one chart that draws the figure you select. Above them are the **online** count (readers active in the last 5 minutes), the range switcher and **Open Live Map**.
+A row of figures sits over one chart that draws the figure you select. Above them are the **online** count (human readers active in the last 5 minutes), the range switcher and **Open Live Map**.
 
 | Figure | What it counts |
-|---|---|
+|---|---|---|
 | **Visitors** | People who read the docs in the window, split into new and returning |
 | **Revenue** | Conversions × your average product price |
 | **Conversion rate** | Visitors who clicked through to your Call To Action URL ÷ visitors |
