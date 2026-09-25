@@ -1,6 +1,8 @@
 ---
 title: "Private docs: password or SSO login for readers"
 description: "Make Docsbook docs private: readers unlock them with a shared password or sign in through your own OIDC provider, such as Google Workspace, Entra ID or Okta."
+status: generated
+version: "0.2"
 ---
 
 # Private docs
@@ -41,6 +43,15 @@ Readers land on a sign-in page instead of your docs: **This workspace is private
 - **Your [public MCP server](../brain/mcp-server.md)** refuses to read a private site for anonymous agents.
 
 ![Settings ▸ Access ▸ Collaborators: team members and their access level](../images/admin/settings-access-collaborators-dark.webp)
+
+## Revoke access
+
+The **Collaborators** card shows everyone with access: people who accepted an invite, and those whose invite is still pending.
+
+- **Pending invites** — press **Withdraw**. The person loses their invitation and must be re-invited to regain access.
+- **Accepted members** — press **Revoke** with an inline confirmation. They are removed immediately and lose access to the site. You cannot revoke the project owner or yourself.
+
+Press **Invite** at the bottom of the card to add someone again, using their email.
 
 ## Set up SSO
 
@@ -89,6 +100,6 @@ The Docsbook agent never changes who can read your site: ask it in the panel cha
 - [Custom domain](./custom-domain.md) — Serve the private site on your own domain {globe}
 - [Edit and publish](./editing.md) — Hosted repositories, GitHub sync and review {pencil}
 - [Public MCP server](../brain/mcp-server.md) — What readers' agents can reach, and what they can't {plug}
-- [Plans and pricing](../pricing/plans.md) — What each plan includes {credit-card}
+- [Plans and pricing](./pricing/plans.md) — What each plan includes {credit-card}
 
 <!-- /widget -->

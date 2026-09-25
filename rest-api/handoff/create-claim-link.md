@@ -1,6 +1,8 @@
 ---
 title: "Create claim link"
 description: "Mint a CLAIM LINK that hands this project to whoever opens it — 'give this site to the client', 'transfer ownership', «отдай документацию клиенту», «сделай claim-ссылку»."
+status: generated
+version: "0.2"
 ---
 
 # Create claim link
@@ -9,7 +11,9 @@ description: "Mint a CLAIM LINK that hands this project to whoever opens it — 
 
 ## POST /api/v1/create_claim_link
 
-Mint a CLAIM LINK that hands this project to whoever opens it — 'give this site to the client', 'transfer ownership', «отдай документацию клиенту», «сделай claim-ссылку». The recipient opens it, signs in to Docsbook (GitHub or email — no account needed beforehand), confirms, and the project moves onto THEIR account: its pages, its public address and whatever trial is still on it all stay exactly as they are, and you lose access to it at that moment. One live link per project — calling again returns the same URL with its expiry pushed out (reused: true). If the project was already claimed, the result says so (state: claimed, claimed_by) instead of failing. Typical flow: create_workspace → write_docs (or docsbook_agent) → create_claim_link → send claim_url to the business, verbatim. Moving the docs into the recipient's own GitHub repository is their own later step, from Settings in the panel — it needs their GitHub token, so no tool here does it.
+Mint a CLAIM LINK that hands this project to whoever opens it — 'give this site to the client', 'transfer ownership', «отдай документацию клиенту», «сделай claim-ссылка». The recipient opens the link and sees the documentation with a gift banner telling them the docs belong to someone who wants to give it to them; they press **Claim** to sign in (GitHub or email — no account needed beforehand), confirm, and the project moves onto THEIR account: its pages, its public address and whatever trial is still on it all stay exactly as they are, and you lose access to it at that moment. One live link per project — calling again returns the same URL with its expiry pushed out (reused: true). If the project was already claimed, the result says so (state: claimed, claimed_by) instead of failing. Typical flow: create_workspace → write_docs (or docsbook_agent) → create_claim_link → send claim_url to the business, verbatim. Moving the docs into the recipient's own GitHub repository is their own later step, from Settings in the panel — it needs their GitHub token, so no tool here does it.
+
+Public sites open the docs first (the user never lands on a blank screen). Private sites go straight to the claim page, because the reader cannot preview the docs until they have access. A claim link that points to a workspace that no longer exists stays on the claim page regardless — there is nothing to show and no reason to proceed.
 
 **Price** — free, never metered.
 
@@ -52,7 +56,7 @@ Also reachable by name at `POST /api/v1/tools/create_claim_link`.
 ```bash
 curl -X POST 'https://docsbook.io/api/v1/create_claim_link' \
   -H 'Authorization: Bearer dbk_YOUR_API_KEY' \
-  -H 'Content-Type: application/json' \
+  -H 'Content-Type: json' \
   -d '{}'
 ```
 
