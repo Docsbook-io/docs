@@ -16,30 +16,12 @@ They find the **fastest win** and **ship it as a pull request**.
 
 <!-- /widget -->
 
-<!-- widget:cards feature cols=2 -->
-
-- [Quick start](./quickstart.md) — Go from zero to your first task. {rocket} {color:accent}
-- [Build AI agents](./agent/README.md) — Agent patterns and worked examples. {bot} {color:accent}
-
-<!-- /widget -->
-
 <!-- widget:stats cols=4 -->
 
 - **299** — rules of documentation craft the agent checks
 - **194** — published sources behind those rules
 - **49** — ready-made agent workflows
 - **15** — languages, each indexed on its own
-
-<!-- /widget -->
-
-## Two ideas the product is built on
-
-You don't need to know how to rank, get cited or write docs people finish. The agents know — you delegate.
-
-<!-- widget:cards icons=inline horizontal cols=2 arrow=hover -->
-
-- [Find wins fast](./find-wins-fast.md) — The agent reads every signal your docs produce and ships the change most likely to move a number soonest. {trophy}
-- [Tell your agent, get discovered](./get-discovered.md) — One sentence from Claude Code, Cursor or the panel. The agent does the job; search engines and AI assistants find you. {megaphone}
 
 <!-- /widget -->
 
