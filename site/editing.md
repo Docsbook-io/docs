@@ -1,6 +1,8 @@
 ---
-title: "Edit and publish docs: editor, GitHub sync, review"
+title: "Edit and publish your docs: editor, GitHub sync, review"
 description: "Edit Docsbook docs on the page, in the panel chat, from your agent or on GitHub: how publishing works, hosted repos, auto-merge vs review, redirects."
+status: generated
+version: "0.2"
 ---
 
 # Edit and publish your docs
@@ -11,7 +13,7 @@ Your docs are Markdown files in a GitHub repository: change them on the page, in
 
 | Where | How |
 |---|---|
-| **On the page** | Turn on interactive mode, click a block, edit it directly or hand it to the agent |
+| **On the page** | Use [click-to-edit](#edit-on-the-page) — click a block, edit directly or hand it to the agent |
 | **Panel chat** | Say what to change: "Add a troubleshooting section to the Webhooks page" |
 | **Your agent** | Claude Code, Cursor or Codex, through `write_docs` or the Docsbook agent (`docsbook_agent`) — see [Connect your agent](../get-discovered.md) |
 | **GitHub** | Edit or push the Markdown yourself |
@@ -20,11 +22,11 @@ The first three go through Docsbook, so the site refreshes the moment the change
 
 ## Edit on the page
 
-Interactive mode makes every block of your live site clickable.
+Click-to-edit makes every block of your live site selectable — you can rename sidebar entries, move blocks, swap widgets and more. Admin tools are always available in the panel chat regardless of whether click-to-edit is on.
 
 <!-- widget:stepper -->
 
-### Turn on interactive mode
+### Turn on click-to-edit
 
 In **Overview ▸ Your documentation website**, press the pencil (**Open the documentation in edit mode**). On your live site, the same switch is **Interactive mode**, the cursor icon in the panel chat.
 
