@@ -91,115 +91,98 @@ Six things every Docsbook site does — and the agent keeps improving on its own
 
 <!-- /widget -->
 
-## How a win ships
+<!-- widget:cta inbox -->
 
-<!-- widget:journey cols=2 -->
+## You bring the facts. It brings the results.
 
-### Signal
+The agent finds the opportunity on its own and asks your team only for the fact it cannot confirm. Then it updates the pages, measures what changed and comes back with the report — and the next opportunity.
 
-A query with impressions and no clicks, a crawler that never reaches a page, a question nobody answered.
+[Learn more](./agent/review.md#what-arrives-in-the-inbox)
 
-- [Hear every reader](./analytics/README.md) {ear}
-- [AI visibility](./geo/ai-visibility.md) {eye}
+### ![Slack](https://docsbook.io/connectors/slack.svg) Thread #growth
 
-### Rule
+- **Docsbook Agent** 10:02 AM
 
-The agent matches the signal to a published rule and ranks the fix by what it is expected to move.
+  Found an opportunity: **4,200 people a month** search for a HIPAA-compliant tool like yours.
 
-- [Expertise](./agent/expertise.md) {graduation-cap}
-- [Find wins fast](./find-wins-fast.md) {trophy}
+  AI answers recommend your competitors.
 
-### Change
+- **Docsbook Agent** 10:02 AM
 
-A pull request on your repository, with the reason and the prediction written down.
+  Your docs and site don't say if you're HIPAA-compliant. Are you? How does it work?
 
-- [Review the agent's work](./agent/review.md) {git-pull-request}
-- [Triggers](./agent/triggers.md) {zap}
+- **Maya Chen** 10:14 AM
 
-### Measure
+  Yes — through the API, on the Enterprise plan only. We sign a BAA.
 
-On the date, the number is read and the prediction is judged.
+- **Docsbook Agent** 10:15 AM
 
-- [Docs analytics](./analytics/insights.md) {chart-line}
-- [Search Console](./seo/search-console.md) {search-check}
+  Great, exactly what I needed. I'll update the pages and keep this as confirmed knowledge.
 
-<!-- /widget -->
+  Then I'll measure the result and report back in two weeks.
 
-## Built with Docsbook
+### Inbox
 
-<!-- widget:showcase cols=3 -->
+- **HIPAA: $96k in Enterprise pipeline** *now* {badge:HIPAA} {unread}
 
-- [Cursor](https://cursor.docsbook.io/) — Documentation for the AI code editor {color:#1a1a1a}
+  Two weeks ago you said HIPAA works through the API, on **Enterprise** only. I used it to update 3 pages.
 
-  ![Cursor documentation built with Docsbook](https://docsbook.io/gallery-cursor-light.png)
+  Each page now answers "Are you HIPAA-compliant?" first.
 
-- [ClickHouse](https://clickhouse.docsbook.io/) — Column-oriented database for real-time analytics {color:#faff69}
+  Why it works: [the facts AI checks before citing](./agent/expertise.md) {graduation-cap}
 
-  ![ClickHouse documentation built with Docsbook](https://docsbook.io/gallery-clickhouse-light.png)
+  **What changed**
 
-- [Discord Developers](https://discord-developers.docsbook.io/) — Build bots, Activities and apps on Discord {color:#5865F2}
+  - **$96k ARR** in pipeline: 3 Enterprise demos from these pages
+  - **+41** qualified visitors from healthcare companies
+  - **+4** new citations in ChatGPT and Perplexity
+  - **+38%** qualified impressions on Google
+  - **12** AI prompts now answer with your Enterprise plan
 
-  ![Discord Developers documentation built with Docsbook](https://docsbook.io/gallery-discord-developers-light.png)
+  **What I learned**
 
-<!-- /widget -->
+  AI answers about HIPAA now name you. A competitor still ranks above you on Google.
 
-<!-- widget:stats cols=3 -->
+  **Next opportunity**
 
-- **88K+** — visitors in the past month {audio-lines}
-- **750K+** — agent calls in the past month {sparkle}
-- **99.9%** — uptime across all services {clock-fading}
+  Your comparison page has another gap. I need one fact about **team features** to go on.
 
-<!-- /widget -->
+  **Asked in #growth:** which roles can see team usage?
 
-## Pricing
+- **September: +$2,970 new MRR from the docs** *1d* {badge:Monthly} {unread}
 
-Your docs stay published for free; you pay for the AI work. Every account starts with a 14-day Pro trial that includes $5 of AI credit.
+  Six changes shipped this month, and five moved a number.
 
-<!-- widget:pricing -->
+  **What changed**
 
-## Free
+  - **+$2,970** new MRR from docs visitors
+  - **+118** trial signups
+  - **+3,920** visitors from search and AI answers
+  - **5 of 6** forecasts came true
 
-**$0** / month
+  **Best change**
 
-Where a project lands after the trial.
+  The pricing page: click rate went from **0.9%** to **3.1%** at the same position.
 
-- Hosting, SSL and a custom domain
-- SEO and GEO markup on every page
-- Web editor and GitHub sync
-- ~~AI chat, agents and translations~~
+- **Pricing page: 3.4× the clicks at the same position** *5d* {badge:SEO}
 
-[Create a site](https://docsbook.io/create)
+  It sat at position 6 with a 0.9% click rate. The new title and first line answer the query.
 
-## Pro
+  - **+140** clicks a month
+  - **+11** trial signups
+  - **3.1%** click rate, up from 0.9%
 
-**14-day free trial**
+  Why it works: [a quick-fact query needs its answer in 1–2 sentences](./agent/expertise.md) {graduation-cap}
 
-**$20** / month
+- **SSO: 23 questions answered, 2 Enterprise trials kept** *1w* {badge:Support}
 
-For docs that AI writes, keeps current and answers from.
+  23 readers asked the chat how to set up SSO. A page now answers them.
 
-- $20 of AI usage credited every month
-- AI chat that answers your readers
-- The agent and its 49 ready-made workflows
-- Live auto translations
-
-[Start the free trial](https://docsbook.io/create)
-
-## Enterprise
-
-Custom pricing
-
-For a team that works from one shared balance.
-
-- Everything in Pro
-- SSO, SCIM and RBAC
-- Setup and migration done for you
-
-[Contact sales](mailto:support@docsbook.io?subject=Docsbook%20Enterprise)
+  - **0** SSO questions since the page went live
+  - **2** Enterprise trials kept
+  - **1** page written
 
 <!-- /widget -->
-
-What each part of the AI work costs: [Pricing](./pricing/plans.md).
 
 <!-- widget:cta agents -->
 
