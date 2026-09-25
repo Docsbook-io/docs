@@ -27,7 +27,7 @@ Open the site in a private browser window.
 
 <!-- widget:callout type=warning -->
 
-A private site with no password and no SSO can only be read by you and your collaborators. The card says so until you turn one on.
+A private site with no password and no SSO can only be read by you, your collaborators and members of the Docsbook organization it is filed in. The card says so until you turn one on.
 
 <!-- /widget -->
 
@@ -36,7 +36,7 @@ A private site with no password and no SSO can only be read by you and your coll
 Readers land on a sign-in page instead of your docs: **This workspace is private**, with **Sign in with SSO**, a password field and **Unlock**, or both.
 
 - **After unlocking**, they stay in for 30 days in that browser.
-- **You and your collaborators** (**Settings ▸ Access ▸ Collaborators**) skip the page while signed in to Docsbook.
+- **You, your collaborators and members of the organization** the project is filed in skip the page while signed in to Docsbook. Collaborators are listed in **Settings ▸ Access ▸ Collaborators**.
 - **Search engines and AI crawlers** get the same sign-in page when they open a page.
 - **Your [public MCP server](../brain/mcp-server.md)** refuses to read a private site for anonymous agents.
 

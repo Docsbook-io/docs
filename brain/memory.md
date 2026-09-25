@@ -110,6 +110,8 @@ Give a project away with a claim link and its own entries — everything under `
 
 **Is the folder the same as the AI chat's knowledge?** No. The [AI chat](../ai-chat/README.md) on your site answers readers from your published pages; the folder is for your agent and for you.
 
+**Is this the memory file of my own agent?** No. `CLAUDE.md`, `AGENTS.md` or a Cursor rule is where your own agent keeps its instructions; to tell it which of your projects answers which question, see [Teach your agent where your knowledge lives](../guides/teach-your-agent.md).
+
 **Can I change what the agent wrote?** Yes. Tell it in the admin chat — a newer fact replaces the old entry and keeps the date it was first learned — or call `write_context` or `retire_context` from your editor.
 
 ## Next steps
