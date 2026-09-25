@@ -86,9 +86,9 @@ These screens in the panel show the signals above:
 - **Analytics ▸ Feedback** — each rated page with its thumbs-up and thumbs-down counts; switch the view to **Votes** for every vote with its date, or narrow to **Page thumbs** or **Chat answers**
 - **Analytics ▸ Chat** — what readers asked the AI chat, by topic, each conversation marked **Answered**, **Dead end** or **Unrated**
 - **Activity ▸ Chat ▸ Content gaps** — each search that found nothing and each question the chat could not answer, as it happens
-- **Analytics ▸ Graph** — your docs as a map; colour it by **Dead ends** to see which pages end visits
+- **Graph** — your docs as a map; colour it by **Dead ends** to see which pages end visits
 - **Analytics ▸ Insights** — traffic, sources, audience and conversions, covered in [Docs analytics](./insights.md)
-- **Activity ▸ Users** — one row per reader: country, the translation they read, where they came from, the [goals](./goals.md) they reached
+- **Activity ▸ People ▸ Users** — one row per reader: country, the translation they read, where they came from, the [goals](./goals.md) they reached
 
 ![Analytics ▸ Feedback: each rated page with its thumbs-up and thumbs-down counts](../images/admin/analytics-feedback-dark.webp)
 

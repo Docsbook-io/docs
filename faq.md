@@ -35,7 +35,7 @@ Not as a version switcher: a project publishes one branch of one repository. Kee
 
 ### What does the agent do without being asked?
 
-It runs the [triggers](./agent/triggers.md) you switch on — 49 ready-made workflows that wake on a schedule or on an event, such as a search that found nothing or a question the chat could not answer. [Find wins fast](./find-wins-fast.md) explains how it picks what to fix.
+It runs the [triggers](./agent/triggers.md) you switch on — 50 ready-made workflows that wake on a schedule or on an event, such as a search that found nothing or a question the chat could not answer. [Find wins fast](./find-wins-fast.md) explains how it picks what to fix.
 
 ### Will it change my docs without my approval?
 
@@ -89,11 +89,11 @@ No. A visitor is counted by a salted hash of their IP address and your project, 
 
 ### How much does Docsbook cost?
 
-Publishing is free. Pro is $20 a month with $20 of AI usage credited every month, and every account starts with a 14-day Pro trial with $5 of AI credit. See [pricing](./pricing/plans.md).
+Publishing is free. Pro is $20 a month with $20 of AI usage credited every month, and every account starts with a 14-day Pro trial with starter AI credit. See [pricing](./pricing/plans.md).
 
 ### What happens when the trial ends?
 
-The site, its search, your domain, the editor and GitHub sync keep working. AI chat, agents and translations switch off, and analytics are hidden until you subscribe or top up.
+The site, its search, your domain, the editor and GitHub sync keep working. AI chat, agents and translations switch off, and analytics lock: nothing is recorded or shown until you subscribe or top up. The same happens as soon as the trial's AI credit is spent, even with days left.
 
 ### Can I use my own domain or make the docs private?
 

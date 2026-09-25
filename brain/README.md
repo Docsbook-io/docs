@@ -9,7 +9,7 @@ Docsbook keeps everything it knows about your product in one place — your page
 
 The brain has four parts:
 
-- **Your pages** — searchable by meaning and by exact words, and drawn as a map on **Analytics ▸ Graph**.
+- **Your pages** — searchable by meaning and by exact words, and drawn as a map on **Graph**, a row of its own in the panel sidebar.
 - **[Sources](./sources.md)** — the repositories, websites, specs and files your docs describe.
 - **[Memory](./memory.md)** — one folder per organization of what the agent has learned about your product.
 - **[Skills](./skills.md)** — your house instructions for how the agent works, and where.
@@ -93,12 +93,12 @@ A page Docsbook publishes reaches the index within minutes. A push made straight
 | By exact words | Every page Docsbook publishes; an hourly pass catches pushes made on GitHub | Every plan |
 | By meaning | Every page Docsbook publishes, your branch checked for new commits every five minutes, and an hourly pass as a safety net | Pro, with **Semantic Search** on |
 
-Only the sections that changed are re-embedded. That cost comes from your balance — or your own AI key — and shows next to **Last updated**; indexing stops when the balance runs out rather than running into overage.
+Only the sections that changed are re-embedded. That cost comes from your balance — or your own AI key — and shows next to **Last updated**; indexing stops when the balance runs out.
 
 ## See it working
 
 - **Overview ▸ Docsbook agent** — how many entries the agent filed in each folder, when it last learned something, and what is due a second look.
-- **Analytics ▸ Graph** — the map of pages, headings and links; the **Search by meaning…** box lights the sections that answer a question.
+- **Graph** — the map of pages, headings and links, opening in **Live** on what agents and readers are touching right now; the **Search by meaning…** box lights the sections that answer a question.
 - **Settings ▸ Agent** — the **Semantic Search** card, with **Last updated** and what the last run cost.
 - **Integrations** — each source's addresses, marked "read by the agent" or "not read yet".
 - **Activity ▸ Agent runs** — every run and chat turn, filtered by door.

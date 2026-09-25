@@ -80,10 +80,10 @@ The **Copy page** button sits at the top of each page, and its menu holds the re
 | **View as Markdown** | Opens the Markdown copy in a new tab |
 | **Open in ChatGPT**, **Open in Claude** | Starts a new chat asked to read this page and answer questions about it |
 | **Open in Cursor**, **Open in Windsurf** | Opens the page in that editor |
-| **Connect MCP** | Copies a prompt that installs this site's public [MCP server](../brain/mcp-server.md) in any agent, with no token |
-| **Connect to VSCode** | Installs the same MCP server in VS Code |
 
 The **Copy page button** switch lives on the **Reading aids** card; the other items are on the **Copy page menu** card.
+
+Installing this site's public [MCP server](../brain/mcp-server.md) in a reader's agent is not in this menu: it is the **MCP** button in the chat header.
 
 ![Customize ▸ Content ▸ Copy page menu: Skills.md URL, Markdown, ChatGPT, Claude, Cursor and Windsurf switches](../images/admin/customize-content-copy-page-dark.webp)
 

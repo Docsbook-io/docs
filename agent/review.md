@@ -66,7 +66,7 @@ To see every page waiting on you, ask your MCP client for `get_project_doc_outli
 
 - **Reports** — what the agent decided was worth your time.
 - **Questions** — decisions only you can make.
-- **The creation report** — what **Generate docs from your site** or **Generate docs from your brief** did, and what it needs you to confirm.
+- **The creation report** — what the one-time creation run (**Generate docs from your repository**, **your site** or **your brief**) did, and what it needs you to confirm.
 - **Failures** — a trigger run that failed arrives as "… failed", with the reason it gave.
 
 A trigger run that succeeds writes you a letter only when the agent has something to say.

@@ -24,8 +24,8 @@ Show or hide one interface element of the docs site — the header search button
 | `show_open_in_claude` | boolean | no | Show "Open in Claude" in the Copy page dropdown |
 | `show_open_in_cursor` | boolean | no | Show "Open in Cursor" in the Copy page dropdown |
 | `show_open_in_windsurf` | boolean | no | Show "Open in Windsurf" in the Copy page dropdown |
-| `show_connect_vscode` | boolean | no | Show "Connect to VSCode" in the Copy page dropdown |
-| `show_connect_mcp` | boolean | no | Show "Connect MCP" in the Copy page dropdown — copies a prompt that installs this project's MCP server into any agent |
+| `show_connect_vscode` | boolean | no | No effect (kept for compatibility) — MCP install moved from the Copy page dropdown to the MCP button in the chat header |
+| `show_connect_mcp` | boolean | no | No effect (kept for compatibility) — MCP install moved from the Copy page dropdown to the MCP button in the chat header |
 | `show_prev_next_buttons` | boolean | no | — |
 | `show_breadcrumbs` | boolean | no | — |
 | `home_hide_sidebar` | boolean | no | HOME PAGE ONLY: hide the left navigation rail on the site's front page (its top-level README/index), on desktop — the mobile drawer stays. Every other page keeps its sidebar. It also makes the front page a landing rather than the first doc: it leaves the sidebar tree, and the subheader's "Overview" tab opens the next page instead and is not highlighted on the front page (give the front page its own tab with update_navigation subheader_folders kind:"page" if the owner wants one). |

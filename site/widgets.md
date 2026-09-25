@@ -1,11 +1,11 @@
 ---
 title: "Docs page widgets: cards, tabs, steps, callouts and more"
-description: "Add card grids, tabs, steps, callouts, API playgrounds and 13 more widgets to Docsbook pages by wrapping plain Markdown in two HTML comments."
+description: "Add card grids, tabs, steps, callouts, API playgrounds and 17 more widgets to Docsbook pages by wrapping plain Markdown in two HTML comments."
 ---
 
 # Page widgets
 
-Wrap plain Markdown in two HTML comments and Docsbook renders it as a card grid, tabs, steps or one of 15 other widgets, while on GitHub the page still reads as ordinary Markdown.
+Wrap plain Markdown in two HTML comments and Docsbook renders it as a card grid, tabs, steps or one of 19 other widgets, while on GitHub the page still reads as ordinary Markdown.
 
 ## How a widget marker works
 
@@ -44,11 +44,12 @@ A custom domain needs one DNS record. See [Custom domain](./custom-domain.md).
 | `stepper` | Numbered, connected steps | A procedure followed in order |
 | `pricing` | Plan cards with a Monthly/Annual switch, or a feature comparison with a sticky plan header (`compare`) | Choosing between plans |
 | `api` | An endpoint playground with a request form | Letting readers send a real REST call |
-| `mcp` | An MCP tool's signature and arguments | Documenting one MCP tool |
-| `cta` | A compact block with buttons | The one next step on a page |
+| `mcp` | An MCP tool's signature and arguments, with a **Try it** form and a live JSON-RPC and cURL call | Documenting one MCP tool |
+| `endpoints` | A list of calls as index rows: a verb pill, the name, the path and one line | The index page of an API or MCP reference folder |
+| `cta` | A compact block with buttons; on a front page, `agents` adds a row of agent chat windows and `inbox` a chat thread over an Inbox | The one next step on a page |
 | `cta-form` | The same block with one input field | A next step that starts with an email or a URL |
 | `recommendations` | Ranked findings with severity badges | "Fix this first" lists and audit results |
-| `hero` | An opener with a lead, quick links and a prompt for the reader's agent | A docs home or a section landing page |
+| `hero` | An opener with a lead, quick links and a prompt for the reader's agent; `size=large` or `size=xl` for a front page without a sidebar | A docs home or a section landing page |
 | `showcase` | A gallery led by screenshots | Customer sites, templates, examples |
 | `stats` | A band of three or four large numbers | Checkable figures on a landing page |
 | `journey` | Lifecycle stages, each with destination cards | "Where am I, and what's next" overviews |
@@ -86,7 +87,7 @@ Keep each category's posts in their own folder, such as `blog/compare/` and `blo
 
 The Docsbook agent reads the live catalog with `list_content_widgets` before it writes, and widgets you switched off aren't offered. Every `write_docs` result also carries a `widget_review` that names markers that won't render and regions that should have been a widget.
 
-On the page itself, click a block in [interactive mode](./editing.md) and choose **Turn into a widget**. Or tell your agent:
+On the page itself, click a block in [interactive mode](./editing.md) and pick a widget in the inspector's **Widget** section. Or tell your agent:
 
 ```text
 Turn the install section of the quickstart into code tabs for npm, pnpm and yarn.

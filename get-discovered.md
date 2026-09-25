@@ -15,7 +15,7 @@ Paste this into Claude Code, Cursor, Codex or ChatGPT, and your agent connects i
 Set up Docsbook for me. Fetch https://docsbook.io/get-started.md and follow it.
 ```
 
-The playbook at `docsbook.io/get-started.md` connects the server, adds one line about `docsbook_agent` to your agent's memory file (`CLAUDE.md`, `AGENTS.md`, `GEMINI.md`) and takes one project live. In the panel, **Connect your agent** at the bottom of the sidebar opens Claude, Codex or Cursor with this prompt already sent.
+The playbook at `docsbook.io/get-started.md` connects the server, adds one line about `docsbook_agent` to your agent's memory file (`CLAUDE.md`, `AGENTS.md`, `GEMINI.md`) and takes one project live. In the panel, the **MCP** button in the chat header has **Copy prompt** for this sentence, **Copy MCP URL**, and one-click **Install in Cursor**, **Install in VS Code** and **Install in Claude Code**.
 
 To add the server by hand, use the one endpoint every client and every project shares, `https://docsbook.io/api/mcp/server`:
 

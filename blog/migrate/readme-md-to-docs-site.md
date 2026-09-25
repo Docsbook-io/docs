@@ -20,7 +20,7 @@ layout: landing
 
 Connect the repository to Docsbook and your `README.md` becomes the home page of a documentation site, with every other Markdown file as a page and your folders as the sidebar.
 
-Nothing in the repository changes, and there is no config file or build step to add.
+Nothing in the repository is rewritten, and there is no config file or build step to add.
 
 - **Category** — Migrate
 - **Reading time** — 4 min
@@ -44,7 +44,7 @@ A README is one long page at one URL. A site gives each topic its own page, whic
 
 ### Import the repository
 
-[Start on Docsbook](https://docsbook.io/?start=1) and import the repository, or paste `github.com/<owner>/<repo>`.
+[Start on Docsbook](https://docsbook.io/?start=1) and import the repository, or paste `github.com/<owner>/<repo>`, then press **Generate**. A one-time agent run adds the pages the README is missing, as a pull request, and never rewrites your files.
 
 ### Open the site
 
@@ -81,7 +81,7 @@ description: "Install the Acme CLI on macOS, Linux or Windows and check that it 
 
 ## What does it cost?
 
-- **The trial** — every account gets 14 days of Pro with $5 of AI credit, and no card.
+- **The trial** — every account gets 14 days of Pro with starter AI credit, and no card.
 - **Without a plan** — the site stays published as static pages, search included.
 - **With [Pro](../../pricing/plans.md)** — $20 a month per project adds the [AI chat](../../ai-chat/README.md), the agents, translations and the analytics views.
 

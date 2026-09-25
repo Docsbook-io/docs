@@ -39,7 +39,7 @@ Figures come from each vendor's own pricing and documentation pages, as of Septe
 | Netlify Free | $0 | 300 credits a month, hard limit: 15 credits per production deploy, 20 per GB of bandwidth | Docs framework, search |
 | Cloudflare Pages | $0 | Static requests free and unlimited; 500 builds a month, one at a time | Docs framework, search |
 | Read the Docs | Community plan, free for open-source projects | Ad-supported; paid Business plans start at $50 a month | The docs tool it builds: Sphinx, MkDocs, Docusaurus and others |
-| Docsbook | 14-day Pro trial with $5 of AI credit, no card | After the trial the site stays published; AI features need [Pro](../../pricing/plans.md), $20 a month per project | Nothing to build or deploy |
+| Docsbook | 14-day Pro trial with starter AI credit, no card | After the trial the site stays published; AI features need [Pro](../../pricing/plans.md), $20 a month per project | Nothing to build or deploy |
 
 ## What does "free" leave to you?
 

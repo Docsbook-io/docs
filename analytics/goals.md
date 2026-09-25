@@ -59,12 +59,12 @@ The **Funnel** tab labels the drop-off at every step and names the worst transit
 
 The **Goals & funnels** card on **Analytics ▸ Insights** reads your goals four ways:
 
-- **Goal** — completions per goal in the window, charted over time
+- **Goal** — completions of all goals in the window as one line, with the change against the previous week; the list beside it ranks each goal by **Reached**, **Rate** and **Potential**, and hovering or clicking a goal charts it alone
 - **Funnel** — the route as a narrowing flow; hover a step for its conversion, its value and its top sources and countries
 - **User** — the readers behind the completions, one row each, with when they reached a goal and what they are worth
 - **Journey** — everyone who reached one goal, what they touched on the way and how long it took; the median and p90 appear once five readers have completed it
 
-**Activity ▸ Users** filters every reader by goal, and a goal's worth feeds each reader's **Potential** there — see [Docs analytics](./insights.md).
+**Activity ▸ People ▸ Users** shows when each reader reached a goal, and a goal's worth feeds each reader's **Potential** there — see [Docs analytics](./insights.md).
 
 ## What the agent does with goals
 

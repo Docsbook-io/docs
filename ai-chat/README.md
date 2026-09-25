@@ -128,7 +128,7 @@ No. Each question is answered on its own from the pages found for it, so a reade
 
 - [Configure the chat](./configure.md) — Prompt, questions, model and where readers open it {sliders-horizontal}
 - [Chat API and hooks](./api.md) — Ask your docs from code and run your endpoints around answers {code}
-- [Triggers](../agent/triggers.md) — The 49 ready-made cards, including the four above {zap}
+- [Triggers](../agent/triggers.md) — The 50 ready-made cards, including the four above {zap}
 - [Alerts and webhooks](../analytics/alerts.md) — Get pinged when the chat can't answer {bell}
 
 <!-- /widget -->

@@ -11,7 +11,7 @@ description: "Ask this workspace's documentation a question and get one grounded
 
 Ask this workspace's documentation a question and get one grounded answer back, with the pages it was drawn from. This is the same retrieval and the same model call the Ask AI widget on the published docs site makes — not a second engine — so an answer here and an answer there agree, and a fix to one is a fix to both.
 
-The call spends from the workspace's own AI budget, the same wallet the widget spends from. There is no separate API quota.
+The call spends from the project owner's account balance — for a project in a team, the team owner's — the same balance the widget spends from. There is no separate API quota.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -57,6 +57,6 @@ curl -X POST 'https://docsbook.io/api/v1/chat' \
 | `400` | `question` was missing or empty. |
 | `401` | Missing or invalid API key. |
 | `403` | AI chat is switched off for this workspace. |
-| `429` | The workspace's AI spend budget is exhausted. |
+| `429` | The balance this workspace spends from is used up. |
 
 <!-- /widget -->

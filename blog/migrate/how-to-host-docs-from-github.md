@@ -36,7 +36,7 @@ Facts about GitHub Pages and Docusaurus are from their own docs as of September 
 
 | | GitHub Pages | Docusaurus | Docsbook |
 |---|---|---|---|
-| Setup | Pick a branch and folder in the repository settings; Jekyll builds the Markdown | A React project with its own config, built and deployed by you | Import the repository; nothing is added to it |
+| Setup | Pick a branch and folder in the repository settings; Jekyll builds the Markdown | A React project with its own config, built and deployed by you | Import the repository; no config file or build is added to it |
 | Search | Add your own | Not built in: Algolia DocSearch or a community plugin | Search box on every site; [AI chat](../../ai-chat/README.md) on Pro |
 | Free limits | 1 GB site, 100 GB a month soft bandwidth, 10 builds an hour | Whatever your host allows | 14-day Pro trial; after it the site stays published without the AI features |
 | Custom domain | Yes | Through your host | Yes, once you subscribe or the trial has ended |
@@ -72,7 +72,7 @@ Docsbook publishes the Markdown in your repository as it is: `README.md` becomes
 
 ### Import the repository
 
-[Start on Docsbook](https://docsbook.io/?start=1) and import the repository, or paste its GitHub URL.
+[Start on Docsbook](https://docsbook.io/?start=1) and import the repository, or paste its GitHub URL, then press **Generate**. A one-time agent run adds the pages the repository is missing, as a pull request, and never rewrites your files.
 
 ### Open the site
 
@@ -110,7 +110,7 @@ Yes. Install the Docsbook GitHub App on the repository, and choose in **Settings
 
 ### Is it free?
 
-GitHub Pages and Docusaurus are free software you run yourself. Docsbook starts with a 14-day Pro trial with $5 of AI credit and no card; Pro is $20 a month per project ([Plans and pricing](../../pricing/plans.md)).
+GitHub Pages and Docusaurus are free software you run yourself. Docsbook starts with a 14-day Pro trial with starter AI credit and no card; Pro is $20 a month per project ([Plans and pricing](../../pricing/plans.md)).
 
 <!-- /widget -->
 

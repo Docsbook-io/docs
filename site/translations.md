@@ -50,7 +50,7 @@ The **Translate into …** cards wake only when your docs are re-indexed, so the
 
 The language code is the first part of the path: `docs.acme.com/de/quickstart`, while the source-language page keeps `docs.acme.com/quickstart`.
 
-- **Canonical and `hreflang`** — each translated page is its own canonical page and, on a `docsbook.io` address, lists every language it exists in, plus `x-default`.
+- **Canonical and `hreflang`** — each translated page is its own canonical page and lists every language it exists in, plus `x-default`, on a `docsbook.io` address and on your custom domain alike.
 - **Titles and descriptions** — the translated `<title>` and meta description come from the translated page.
 - **Sitemap** — on a `docsbook.io` address, every translated page gets its own entry.
 - **No duplicates** — a language URL for a page not translated yet shows the original and points search engines at it.

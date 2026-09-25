@@ -36,15 +36,19 @@ Then ask: "Use the Docsbook agent: our quickstart loses people on step 3, fix it
 
 ### On a trigger {zap}
 
-A [trigger](./triggers.md) wakes the agent on a schedule, on something that happens in your docs, or on a change in GitHub — with the prompt already written. 49 ready-made cards cover writing, audits, answers, reports and translation.
+A [trigger](./triggers.md) wakes the agent on a schedule, on something that happens in your docs, or on a change in GitHub — with the prompt already written. 50 ready-made cards cover writing, audits, answers, reports and translation.
 
 The **Docsbook agent** card at the top of **Triggers** is the autonomous one: switch it on and it runs every hour, deciding for itself what your docs need most.
 
 ### At project creation {sparkles}
 
-Create a project with a website and **Generate docs from your site** runs once: it reads about ten pages of your site plus the files you attached, and turns the template into your docs.
+Create a project with **Generate** and one of three cards runs once, picked by what you gave it:
 
-Without a website, **Generate docs from your brief** drafts the docs from your description, files and screenshots, and turns what it could not confirm into questions. Either way, the report lands in your **Inbox**.
+- **A repository** — **Generate docs from your repository** reads its README, code and existing pages and adds the pages that are missing beside them, never rewriting your files.
+- **A website** — **Generate docs from your site** reads about ten pages of your site plus the files you attached, and turns them into your docs.
+- **Neither** — **Generate docs from your brief** drafts the docs from your description, files and screenshots, and turns what it could not confirm into questions.
+
+Whichever runs, the report lands in your **Inbox**.
 
 <!-- /widget -->
 
@@ -99,11 +103,11 @@ Yes — the safety is in how changes land, not in a promise:
 
 ## What does it cost?
 
-Agent runs are part of **Pro**: $20 a month, which comes back as $20 of AI usage every month. Every account gets one 14-day Pro trial with $5 of credit — the days count from when you first open a project, and the trial ends at whichever runs out first. See [Plans and pricing](../pricing/plans.md).
+Agent runs are part of **Pro**: $20 a month, which comes back as $20 of AI usage every month. Every account gets one 14-day Pro trial with starter AI credit — the days count from when you first open a project, and the trial ends at whichever runs out first. See [Plans and pricing](../pricing/plans.md).
 
 - **A run** costs $0.10 plus twice what the model tokens it burns cost, capped at $50 for one run. A short task costs cents.
 - **Tool calls** the run makes to Docsbook are metered per call like any MCP call — at twice what serving them costs, a few cents per thousand for most.
-- **To start**, a run needs at least $0.10 of balance. With a paid subscription it can keep going past the monthly allowance on overage, up to a cap you set ($200 by default), billed weekly.
+- **To start**, a run needs at least $0.10 of balance, and it winds up when the balance reaches zero. Turn on **Auto-recharge** on **Settings ▸ Usage ▸ Balance** to have the card on your subscription top it up before that happens.
 
 Each run's tokens and cost are in **Activity ▸ Agent runs**. The totals and your balance are in **Settings ▸ Usage**.
 
@@ -114,7 +118,7 @@ Each run's tokens and cost are in **Activity ▸ Agent runs**. The totals and yo
 ![Overview ▸ Docsbook agent: the agent card with its status, what it knows about the product and audience, and how many entries its memory folder holds](../images/admin/overview-agent-dark.webp)
 
 - **Overview** — the **Docsbook agent** card: whether it works on request or on a schedule, what its memory folder holds, and its latest report.
-- **Activity ▸ Agent runs** — every run with its status, duration, tokens and cost; open one for a live step-by-step trace.
+- **Activity ▸ Agent runs** — every run with its status, duration, tokens and cost; open one for a live step-by-step trace, with the cost so far while it runs and **Stop** to end it.
 - **Inbox** — its reports, and the questions it needs you to answer.
 - **Issues** — its issues and pull requests, each with a reason, a prediction and a date to check it.
 - **Triggers** — a running card turns the accent colour and shows a spinner; click it to open the run.
@@ -147,7 +151,7 @@ Yes. It keeps what it learns about your product in a [memory folder](../brain/me
 
 <!-- widget:cards plain cols=2 arrow=hover -->
 
-- [Triggers](./triggers.md) — The 49 ready-made workflows, and how to write your own {zap}
+- [Triggers](./triggers.md) — The 50 ready-made workflows, and how to write your own {zap}
 - [Expertise](./expertise.md) — The 299 rules the agent checks your docs against {clipboard-check}
 - [Review and publish](./review.md) — Pull requests, page statuses, Inbox and Activity {git-pull-request}
 - [Find wins fast](../find-wins-fast.md) — How the agent picks what to fix first {target}

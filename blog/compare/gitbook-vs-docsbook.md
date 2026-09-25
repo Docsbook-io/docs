@@ -47,10 +47,10 @@ GitBook facts below come from [gitbook.com/pricing](https://www.gitbook.com/pric
 | Where you write | Block-based visual editor, with two-way Git Sync to GitHub or GitLab | Markdown in your GitHub repository (or one Docsbook hosts), plus a web editor |
 | Navigation | `SUMMARY.md`, which GitBook rewrites when you reorder pages | Your folder tree; no config file |
 | Pricing model | Per site, plus $12 per user a month for additional users | Per project; editing the repository needs no Docsbook seat |
-| Start | Free plan: $0 per site, one user, no custom domain | 14-day Pro trial with $5 of AI credit, no card |
+| Start | Free plan: $0 per site, one user, no custom domain | 14-day Pro trial with starter AI credit, no card |
 | Paid plans | Premium $65 and Ultimate $249 per site a month, billed annually | [Pro](../../pricing/plans.md) $20 a month per project, with $20 of AI usage included |
 | AI answers for readers | AI search on Premium; AI Assistant chat on Ultimate | [AI chat](../../ai-chat/README.md) that cites the pages it used, on Pro |
-| Agent | GitBook Agent on every plan (10 messages a week on Free) | The [Docsbook agent](../../agent/README.md) on Pro: pull requests, 49 ready-made triggers, 299 published rules |
+| Agent | GitBook Agent on every plan (10 messages a week on Free) | The [Docsbook agent](../../agent/README.md) on Pro: pull requests, 50 ready-made triggers, 299 published rules |
 | `llms.txt`, Markdown pages, MCP server | On every plan | On every site |
 | Translations | Auto-updating translations: an add-on on Premium, included on Ultimate | [15 languages](../../site/translations.md) on Pro, each page at its own URL |
 | Custom domain | Premium and up | On every plan, once you subscribe or the free trial has ended |
@@ -109,7 +109,7 @@ You can, but GitBook's Git Sync is two-way, so two tools would write to one repo
 
 ### Is Docsbook free?
 
-Every account gets one 14-day Pro trial with $5 of AI credit and no card. Without a plan afterwards the site stays published; the AI chat, agents, translations and analytics views switch off until you subscribe.
+Every account gets one 14-day Pro trial with starter AI credit and no card. Without a plan afterwards the site stays published; the AI chat, agents, translations and analytics views switch off until you subscribe.
 
 ### Can I remove the Powered by Docsbook badge?
 

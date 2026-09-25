@@ -17,18 +17,10 @@ Nothing to switch on: every page on a `docsbook.io` address gets all of this, on
 - **AI crawlers welcome** — the crawlers of OpenAI, Anthropic, Perplexity, Google and Apple may read every page
 - **An answer-first summary** — the first paragraph becomes a summary block under the title, up to 280 characters, marked `speakable` in JSON-LD; frontmatter `tldr:` replaces it
 - **Dates and authors** — a visible **Updated** date from the last commit, plus `datePublished`, `dateModified` and a `Person` author in JSON-LD
-- **Buttons that hand a page to AI** — **Copy page** as Markdown, **Open in ChatGPT**, **Open in Claude** and **Connect MCP**
+- **Buttons that hand a page to AI** — **Copy page** as Markdown, **Open in ChatGPT** and **Open in Claude**, plus an **MCP** button in the chat header that installs your docs in a reader's agent
 - **An MCP server for your readers' agents** — each page names it in a `mcp-server` meta tag; see [MCP server](../brain/mcp-server.md)
 
-A few high-volume crawlers are refused by default, on every site:
-
-| Crawler | Why it is refused |
-|---|---|
-| `Meta-ExternalAgent`, `Meta-ExternalFetcher` | Meta's AI crawlers, very high volume |
-| `Bytespider` | ByteDance's crawler, very high volume |
-| `Amazonbot`, `PetalBot` | Amazon's and Huawei's crawlers, very high volume |
-| `GoogleOther` (and its image and video variants) | Google's generic research crawler, separate from Search and Gemini |
-| `AhrefsBot`, `SemrushBot`, `DataForSeoBot`, `MJ12bot`, `DotBot` | SEO-tool crawlers that build backlink indexes, not readers |
+No crawler is refused by default. High-volume crawlers such as `Bytespider`, `PetalBot`, `Amazonbot` and `Meta-ExternalAgent` read your site like any other; what they read counts toward your plan's [crawl allowance](../pricing/plans.md) instead.
 
 To close your site to AI engines, switch off **Readable and quotable by AI engines** on **Settings ▸ Access ▸ AI engines**: the project leaves `llms.txt` and `llms-full.txt`, and the named AI crawlers are refused in `robots.txt`. Search engines are unaffected.
 
@@ -117,7 +109,7 @@ There is no evidence that it does. Google says its AI features need no AI text f
 
 ### Which AI crawlers can read my docs?
 
-All of them by default, except the high-volume crawlers in the table above. Switching off **AI engines** refuses the rest by name.
+All of them by default. Switching off **AI engines** refuses the AI crawlers by name.
 
 ### Can I stay in Google but out of AI answers?
 

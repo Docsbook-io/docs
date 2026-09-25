@@ -40,7 +40,7 @@ Every figure on Insights counts people: crawlers are left out, and so are your o
 
 - **Sources ▸ Channels** gives people who clicked through from an answer in ChatGPT, Perplexity, Claude, Copilot or Gemini their own **AI assistant** channel, apart from Organic search, Social, Referral and Direct
 - **Analytics ▸ GEO** lists the crawlers themselves — which assistant fetched which page, for live answers, indexing or training; see [AI visibility](../geo/ai-visibility.md)
-- **Analytics ▸ Graph** colours a map of your docs by **AI Answers** (visits that arrived via an AI assistant) or **Training** (hits from AI training crawlers)
+- **Graph** in the sidebar colours a map of your docs by **AI Answers** (visits that arrived via an AI assistant) or **Training** (hits from AI training crawlers)
 
 ![Graph over the last 7 days: the map of pages with the most-touched pages and the busiest routes beside it](../images/admin/brain-history-dark.webp)
 
@@ -72,12 +72,12 @@ Until both are set, Revenue and Revenue/visitor show a dash and **Set up →**, 
 
 ## Follow one reader
 
-**Activity ▸ Users** lists every reader as one row: a pseudonym, their country, the translation they read, where they came from, when they reached a [goal](./goals.md), and **Potential**.
+**Activity ▸ People ▸ Users** lists every reader as one row: a pseudonym, their country, the translation they read, where they came from, when they reached a [goal](./goals.md), and **Potential**.
 
-![Activity ▸ Users: one row per reader with country, source, goals reached and Potential](../images/admin/activity-users-dark.webp)
+![Activity ▸ People ▸ Users: one row per reader with country, source, goals reached and Potential](../images/admin/activity-users-dark.webp)
 
 - **Potential** — what a reader is worth on one scale: full value once they reached your Call To Action URL, and a share of it for everyone else, by how closely they follow a converter's path; it ranks readers and is not a revenue forecast
-- **Filters** — **Close to converting**, **Came back** and **Reached no goal** find who to look at next
+- **Search and sort** — search by handle, country, language or source, and sort by **Potential** to find who to look at next
 - **Open a row** to see everything that reader did, in order; **Improve** asks the agent where the docs are failing them
 
 **Open Live Map** on Insights shows readers live on a world map: the page each one is on, how long they have been on the docs, and what they just did.
@@ -88,7 +88,7 @@ The [Docsbook agent](../agent/README.md) reads the same numbers when it works on
 
 - **Evidence** — visits, how they ended (success, dead end, bounce), the pages readers gave up on, and the routes they took
 - **Improve on a row** — a page, a country, a source, a goal or a reader goes to the agent in the panel chat, numbers attached
-- **Graph actions** — select a page on **Analytics ▸ Graph** for fixes such as **Get this page linked**, **Improve search ranking** or **Verify against code**
+- **Graph actions** — select a page on **Graph** for fixes such as **Get this page linked**, **Improve search ranking** or **Verify against code**
 - **Dollar forecasts** — with both revenue settings set and Search Console data for the page, the agent's recommendations carry a monthly dollar estimate beside the extra clicks they expect; without the settings it never guesses a dollar figure
 
 ## FAQ
@@ -97,7 +97,7 @@ The [Docsbook agent](../agent/README.md) reads the same numbers when it works on
 
 **Why do my percentages carry a warning?** Under 30 visits in a window, a single visit moves a rate by whole points, so Insights says to treat them as a direction, not a measurement.
 
-**What happens to analytics after the trial?** Recording never stops. If the 14-day Pro trial ends, or its balance runs out, with no plan behind it, Docsbook stops showing analytics until you subscribe or top up — your docs stay published. See [Plans and pricing](../pricing/plans.md).
+**What happens to analytics after the trial?** If the 14-day Pro trial ends, or its balance runs out, with no plan behind it, analytics lock: Docsbook stops showing them and stops recording them until you subscribe or top up, so visits in between are not counted — your docs stay published. See [Plans and pricing](../pricing/plans.md).
 
 ## Next steps
 

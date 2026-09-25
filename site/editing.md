@@ -11,7 +11,7 @@ Your docs are Markdown files in a GitHub repository: change them on the page, in
 
 | Where | How |
 |---|---|
-| **On the page** | Turn on interactive mode, click a block, pick what to do with it |
+| **On the page** | Turn on interactive mode, click a block, edit it directly or hand it to the agent |
 | **Panel chat** | Say what to change: "Add a troubleshooting section to the Webhooks page" |
 | **Your agent** | Claude Code, Cursor or Codex, through `write_docs` or the Docsbook agent (`docsbook_agent`) — see [Connect your agent](../get-discovered.md) |
 | **GitHub** | Edit or push the Markdown yourself |
@@ -32,17 +32,17 @@ In **Overview ▸ Your documentation website**, press the pencil (**Open the doc
 
 ### Click a block
 
-A toolbar opens above it: **Edit text**, **Rewrite with AI**, **Make concise**, **Expand**, **Turn into a widget**, **Change its shape**, **Delete block** and more.
+An inspector takes the chat's corner. Its header switches between **Edit directly** and **Edit with AI**; under it are buttons to move, duplicate, copy as Markdown or delete the block, then its sections: **Content** (the block's Markdown, when editing directly), **Type**, **Widget**, **AI** and **Source**. With nothing selected, it lists the page's blocks.
 
-### Send the request
+### Make the change
 
-Your pick lands in the panel chat's input, naming the exact block. Add what only you know and send it: the agent edits the Markdown and commits.
+With **Edit directly**, edit **Content** or change the kind or widget, and each change is committed to the Markdown on the spot, no model involved. With **Edit with AI**, pick an action in **AI** (**Ask**, **Concise**, **Expand**, a writing skill, a reader insight) and press **Run now** to start an agent run and open its trace, or **Run in background** to stay on the page.
 
 <!-- /widget -->
 
 The sidebar, header and footer are clickable too: a sidebar entry offers **Rename**, **Icon**, **Move** and **Hide from the sidebar**. Drag a block by its handle to move it, press **+** between two blocks to insert one, or use **Add a page** at the bottom of the sidebar.
 
-The editor and the panel chat run the Docsbook agent, so they draw on your balance ([Plans and pricing](../pricing/plans.md)). Editing a file on GitHub costs nothing.
+**Edit with AI** and the panel chat run the Docsbook agent, so they draw on your balance ([Plans and pricing](../pricing/plans.md)). **Edit directly** uses no model and costs nothing, and so does editing a file on GitHub.
 
 ## Publish from your GitHub repository
 
@@ -110,7 +110,7 @@ The sidebar mirrors your folders. In each folder, pages come before sub-folders,
 - **Last** — `reference`, `api`, `api-reference`, `changelog`, `faq`, `faqs`, `troubleshooting`, `glossary`, `migration`
 - **Everything else** — alphabetical, so a number prefix such as `01-` sets the order (it's ignored when matching the names above)
 
-Labels come from file names: `getting-started.md` shows as **Getting Started**, `README.md` as **Introduction**. To relabel an entry or give it an icon without renaming the file, click it in interactive mode (**Rename**, **Icon**); icons are also in **Customize ▸ Left sidebar ▸ Sidebar Icons**. Top-level folders become tabs under the header in **Customize ▸ Header ▸ Subheader Folders**.
+Labels come from file names: `getting-started.md` shows as **Getting Started**, `README.md` as **Introduction**. To relabel an entry or give it an icon without renaming the file, click it in interactive mode (**Rename**, **Icon**); icons are also in **Customize ▸ Left sidebar ▸ Sidebar Icons**. Top-level folders, or any page, become tabs under the header in **Customize ▸ Header ▸ Subheader Folders**; a folder made a tab leaves the sidebar.
 
 ![Customize ▸ Left sidebar ▸ Sidebar Icons: search for a page and give it an icon](../images/admin/customize-left-sidebar-icons-dark.webp)
 

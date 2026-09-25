@@ -16,7 +16,7 @@ Nothing to switch on: every page on a `docsbook.io` address carries all of this,
 - **One canonical URL per page** — your [custom domain](../site/custom-domain.md) when you have one
 - **`hreflang`** — only for the languages this page is actually [translated](../site/translations.md) into
 - **`sitemap.xml`** — every page and every real translation, with `lastmod` from the last commit that touched the file
-- **`robots.txt`** — announces your sitemap and lets search and AI crawlers in; 13 high-volume crawlers such as SEO-tool bots, `Bytespider` and `GoogleOther` are refused
+- **`robots.txt`** — announces your sitemap and lets every crawler in; none is refused by default
 - **Social cards** — Open Graph and X `summary_large_image` tags with a generated 1200×630 image per page
 - **JSON-LD** — `Organization`, `TechArticle` with dates from your git history, and `BreadcrumbList` on every page
 - **`FAQPage` and `HowTo`** — added only when the page has question headings or a "How to…" procedure
@@ -28,7 +28,7 @@ Nothing to switch on: every page on a `docsbook.io` address carries all of this,
 
 ### On a custom domain
 
-Pages keep their title, description, canonical URL, social card and `TechArticle` markup. The `sitemap.xml`, `hreflang`, moved-page redirects, the rest of the JSON-LD and per-page `noindex` currently work on `docsbook.io` addresses only.
+Pages keep their title, description, canonical URL, `hreflang`, social card and `TechArticle` markup. The `sitemap.xml`, moved-page redirects, the rest of the JSON-LD and per-page `noindex` currently work on `docsbook.io` addresses only.
 
 <!-- /widget -->
 

@@ -9,7 +9,7 @@ description: "Register a webhook for the 'usage_overage_limit_reached' event (BU
 
 ## POST /api/v1/register_webhook_usage_overage_limit_reached
 
-Register a webhook for the 'usage_overage_limit_reached' event (BUSINESS) — the direct call for 'notify us when…', 'alert me if…', 'ping our channel when…' about this event. Fires when a workspace's monthly overage spend cap is reached. Delivery is an asynchronous HTTP POST. A Slack (hooks.slack.com) or Discord (discord.com/api/webhooks) incoming-webhook URL is recognised by its host and the message shaped for that platform — paste it as-is; any other URL receives the signed JSON envelope (HMAC-SHA256 in X-Docsbook-Signature-256, event type in X-Docsbook-Event). Below the BUSINESS plan the call returns PLAN_RESTRICTION naming the tier — no pre-check needed.
+Register a webhook for the 'usage_overage_limit_reached' event (BUSINESS) — the direct call for 'notify us when…', 'alert me if…', 'ping our channel when…' about this event. Fires when a workspace's monthly overage spend cap is reached. Overage is switched off in favour of opt-in auto-recharge, so this event does not fire today. Delivery is an asynchronous HTTP POST. A Slack (hooks.slack.com) or Discord (discord.com/api/webhooks) incoming-webhook URL is recognised by its host and the message shaped for that platform — paste it as-is; any other URL receives the signed JSON envelope (HMAC-SHA256 in X-Docsbook-Signature-256, event type in X-Docsbook-Event). Below the BUSINESS plan the call returns PLAN_RESTRICTION naming the tier — no pre-check needed.
 
 **Price** — $0.00001 per call (twice what serving it costs us), charged to the workspace balance, the same as over MCP.
 

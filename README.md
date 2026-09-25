@@ -20,7 +20,7 @@ They find the **fastest win** and **ship it as a pull request**.
 
 - **299** — rules of documentation craft the agent checks
 - **194** — published sources behind those rules
-- **49** — ready-made agent workflows
+- **50** — ready-made agent workflows
 - **15** — languages, each indexed on its own
 
 <!-- /widget -->
@@ -44,7 +44,7 @@ Six things every Docsbook site does — and the agent keeps improving on its own
 
 <!-- widget:bento -->
 
-- **Wakes up on its own** — 49 ready-made workflows run on a schedule, a docs event or a GitHub change, and each one is pointed at a number: clicks, citations, answers, customers. {badge:Triggers} {span:7} {triggers}
+- **Wakes up on its own** — 50 ready-made workflows run on a schedule, a docs event or a GitHub change, and each one is pointed at a number: clicks, citations, answers, customers. {badge:Triggers} {span:7} {triggers}
 
   - **Write the release notes** — On every commit · turns what shipped into a page {megaphone} {github} {badge:Release}
   - **Explain a traffic drop** — Weekly · finds the pages that lost readers {trending-down} {schedule} {badge:SEO}

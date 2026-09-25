@@ -61,7 +61,7 @@ The **Branding** tab sets the look of every page.
 - **Font** — any Google Font, one for headings and one for body text, with a live preview.
 - **Background Style** — **Clean**, **Muted**, **Premium** (accent light across the top of the page, a card-style chat) or **Gradient**.
 - **Default Theme** — what a first-time reader gets: light, dark or system. Readers switch with the theme toggle in the sidebar footer, the header or the footer.
-- **Logo** and **Project Icon** — image URLs for the header logo and the browser-tab icon. The site's name is **Project Name** in **Settings ▸ General**.
+- **Logo** and **Project Icon** — image URLs for the header logo and the browser-tab icon, with an optional icon for the dark theme; with no icon set, a roughly square logo becomes the browser-tab icon. The site's name is **Project Name** in **Settings ▸ General**.
 
 <!-- widget:tabs -->
 
@@ -87,10 +87,10 @@ The **Branding** tab sets the look of every page.
 
 The other tabs arrange the frame around your pages.
 
-- **Header Layout** — five presets: Classic, Search-centric, Search + Ask AI, Centered and Minimal.
+- **Header Layout** — five presets: Classic, Search-centric, Search + Ask AI, Tabs in header and Minimal.
 - **Navigation Links** — links across the header; give one a button color and it becomes your call-to-action button.
 - **Social Links** — GitHub, Twitter / X, LinkedIn, YouTube and Slack icons.
-- **Subheader Folders** — top-level folders shown as tabs under the header.
+- **Subheader Folders** — top-level folders, or any page through **Add a page as a tab**, shown as tabs under the header; a tab can sit left of Overview, and a folder made a tab leaves the sidebar.
 - **Sidebar Icons** and **Folder Visibility** — an icon beside any page or folder, and folders kept out of the sidebar.
 - **Footer** — off until you turn on **Site Footer**; then up to six columns of links, a copyright line, your logo, a button, social icons and a theme picker, in one of three layouts.
 - **Home page as a landing page** — hides the sidebar, the outline and the page chrome on the front page only, and sets its sections in larger type.

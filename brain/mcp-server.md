@@ -86,12 +86,13 @@ Cursor reads `~/.cursor/mcp.json` or `.cursor/mcp.json`, VS Code reads `.vscode/
 
 ## What readers see on your pages
 
-The **Copy page** menu on every page carries two ways in, both on by default:
+The **MCP** button in the header of your site's chat carries the ways in:
 
-- **Connect MCP** — copies a prompt that installs your server in whatever agent the reader uses, and tells the agent to search first and read the page before relying on it.
-- **Connect to VSCode** — installs the server in VS Code with one click.
+- **Install in Cursor**, **Install in VS Code**, **Install in Claude Code** — install your server in that client with one click.
+- **Copy MCP URL** — copies the server address to paste into any other client.
+- **Copy prompt** — copies a prompt that installs your server in whatever agent the reader uses, and tells the agent to search first and read the page before relying on it.
 
-Hide either one with the toggles on the **Copy page menu** card in **Customize ▸ Content**.
+The **Copy page** menu hands over the page itself and has no MCP items.
 
 <!-- widget:callout type=note -->
 
@@ -111,7 +112,7 @@ The server reads your published pages, plus any skills you choose to place on it
 
 **Does a reader's agent cost me anything?** Calls are not billed one by one. With search by meaning on, each question is embedded on your balance; if that balance is empty, `search_<slug>_docs` answers `INSUFFICIENT_BALANCE` while reading pages keeps working.
 
-**Can I switch the server off?** There is no switch for the endpoint itself — it serves the same pages your public site does. You can hide **Connect MCP** and **Connect to VSCode**, or make the site [private](../site/private-docs.md).
+**Can I switch the server off?** There is no switch for the endpoint itself — it serves the same pages your public site does. You can make the site [private](../site/private-docs.md).
 
 **How is this different from llms.txt?** `llms.txt` is an index an AI reads to find your pages; the MCP server lets an agent search and read them while it works. See [llms.txt and Markdown for AI](../geo/llms-txt.md).
 

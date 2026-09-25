@@ -171,7 +171,7 @@ A hypothesis is a rule practitioners repeat with no vendor documentation, standa
 
 - [How the agent works](./agent/README.md) — One worker that reads, writes, configures and measures {bot}
 - [Expertise: 299 rules](./agent/expertise.md) — What the agent checks, axis by axis {clipboard-check}
-- [Triggers](./agent/triggers.md) — 49 ready-made workflows that run the loop on their own {zap}
+- [Triggers](./agent/triggers.md) — 50 ready-made workflows that run the loop on their own {zap}
 - [Tell your agent](./get-discovered.md) — Connect Docsbook to your editor in one line {plug}
 
 <!-- /widget -->

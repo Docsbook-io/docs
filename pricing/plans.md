@@ -1,6 +1,6 @@
 ---
 title: "Docsbook pricing: Free, Pro and Enterprise"
-description: "Docsbook pricing: Pro is $20 a month or $200 a year with $20 of AI usage included every month, every account gets a 14-day Pro trial with $5 of AI credit, and Enterprise is custom."
+description: "Docsbook pricing: Pro is $20 a month or $200 a year with $20 of AI usage included every month, every account gets a 14-day Pro trial with starter AI credit, and Enterprise is custom."
 ---
 
 # Pricing
@@ -65,7 +65,7 @@ Teammates need no plan of their own
 
 <!-- /widget -->
 
-Every account starts with a 14-day Pro trial with $5 of AI credit and no card. Almost everything is in Pro: Enterprise adds a shared project balance, your own AI key and our team, not features Pro is missing.
+Every account starts with a 14-day Pro trial with starter AI credit and no card. Almost everything is in Pro: Enterprise adds a shared project balance, your own AI key and our team, not features Pro is missing.
 
 <!-- widget:pricing compare -->
 
@@ -95,7 +95,7 @@ Every account starts with a 14-day Pro trial with $5 of AI credit and no card. A
 | Live auto translations | — | ✓ | ✓ |
 | Search by meaning | — | ✓ | ✓ |
 | Own chat prompt and hooks | — | ✓ | ✓ |
-| Overage past the allowance | — | Up to $200 / month | Custom |
+| Auto-recharge from your card | — | Opt-in, up to $200 / 30 days | Custom |
 | Bring your own AI key | — | — | ✓ |
 
 | Analytics {chart-line} | Free | Pro | Enterprise |
@@ -124,19 +124,20 @@ Prices are in US dollars, billed monthly or yearly through Paddle; a yearly Pro 
 Every account gets one Pro trial, with no card and nothing to switch on:
 
 - **14 days, once per person** — every project you create runs on Pro, counted from the first time you open one
-- **$5 of AI credit** — spent before any credit you add; the AI stops when 5% of it is left, and the site keeps serving
-- **Nothing is ever charged** — with no card on file there's no overage and no bill
-- **Subscribe early, keep the days** — add a card during the trial and the first $20 charge lands when the trial ends; that month credits $20 minus what you used of the $5
+- **Starter AI credit** — enough to try the AI chat and the agent, spent before any credit you add; the AI stops when 5% of it is left, and the site keeps serving
+- **Nothing is ever charged** — with no card on file there's no automatic charge and no bill
+- **Subscribe early, keep the days** — add a card during the trial and the first $20 charge lands when the trial ends; that month credits $20 minus the trial credit you used
+- **Credit spent before the days** — the trial's AI and analytics lock at once, and **Settings ▸ Plan** offers **Buy access — $20/mo**: charged that day, with the month's $20 of AI usage credited right away
 
 When the trial ends without a subscription or a top-up, your projects move to Free together:
 
 - **Still on** — the published site, its search, your domain, the editor and GitHub sync
 - **Switched off** — AI chat for readers, agents and auto translations
-- **Hidden, not deleted** — analytics keep being collected, and they come back when you subscribe or top up
+- **Locked** — analytics, **Activity**, the **Graph** and the Overview AI card; nothing new is recorded while they are locked, and recording starts again when you subscribe or top up
 
 ## What uses the balance?
 
-Anything that runs a model or does work for you comes off one balance: the plan's monthly credit first, then credit you topped up, then overage on a paid plan.
+Anything that runs a model or does work for you comes off one balance: the plan's monthly credit first, then credit you topped up. At zero the AI stops and the site keeps serving, unless auto-recharge tops the balance up first.
 
 | What | How it's priced |
 |---|---|
@@ -149,14 +150,14 @@ Anything that runs a model or does work for you comes off one balance: the plan'
 
 Each model on **Settings ▸ Agent** shows its billed price per 1M tokens, so you can pick a cheaper one to make the balance last longer. Every tool's own price is on its page in the [MCP tools reference](./mcp-tools/README.md) and the [API reference](./rest-api/README.md) — a tool costs the same over both.
 
-Only AI and search crawlers count as crawls; a person who clicks through from an AI answer is a reader. When the allowance and the balance are both used up, crawlers get `429 Too Many Requests` until next month or a top-up, and people reading your docs are never turned away.
+AI and search crawlers count as crawls, and so does an AI assistant fetching a page to answer someone right now (`ChatGPT-User`, `Claude-Web`, `Perplexity-User`); a person who clicks through from an AI answer is a reader. When the allowance and the balance are both used up, crawlers get `429 Too Many Requests` until next month or a top-up. An assistant's fetch is still served and counted, and people reading your docs are never turned away.
 
-## Top-ups, overage and your own key
+## Top-ups, auto-recharge and your own key
 
 A plan's monthly credit is the base. Three things extend or replace it:
 
-- **Top-ups** — a one-off payment from $20 up to $5,000; nothing recurs and the credit never expires. It lands on the balance every project of the same owner shares — your account's, or your team's
-- **Overage** — with a paid Pro subscription, usage past the monthly credit and your top-ups continues up to $200 a month, which is both the default cap and the ceiling, charged to your card every 7 days
+- **Top-ups** — **Top up** on **Settings ▸ Usage ▸ Balance**, a one-off payment from $20 up to $5,000; nothing recurs and the credit never expires. It lands on the balance every project of the same owner shares — your account's, or, for a team, the team owner's
+- **Auto-recharge** — off until you switch it on, on the same **Balance** card. When the balance falls below your threshold ($1–$100, $5 by default), the card on your subscription is charged your amount ($20–$200, $20 by default) and the credit lands as a top-up — at most $200 in any 30 days
 - **Your own AI key** — on Enterprise, add an OpenRouter, OpenAI, Google Gemini, Anthropic or Vercel AI Gateway key on **Settings ▸ Agent ▸ Your own AI API Key**; your provider bills those calls and Docsbook charges nothing for them
 
 ![Settings ▸ Agent ▸ Your own AI API Key: a provider key the answers are billed to](../images/admin/settings-agent-key-dark.webp)
@@ -175,11 +176,11 @@ There's no free plan to buy, and no deadline on your docs either: after the tria
 
 ### Is the balance per project?
 
-No, it's one balance per owner. Every project on your account spends your balance, and projects in a team spend the team's; Pro bought from your account's or team's **Settings ▸ Plan** covers every project there.
+No, it's one balance per owner. Every project on your account spends your balance, and projects in a team spend the team owner's — handing the team to another member moves that to the new owner's balance; Pro bought from your account's or team's **Settings ▸ Plan** covers every project there.
 
 ### What happens when the balance runs out?
 
-On a paid plan, usage continues as overage up to your cap, and then the AI pauses until the next month or a top-up. Without a plan the AI stops. The balance never takes your site offline.
+The AI stops until next month's credit or a top-up. With auto-recharge on, your card tops the balance up before it gets there, up to $200 in any 30 days. The balance never takes your site offline.
 
 ### Can I leave?
 

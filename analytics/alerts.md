@@ -75,7 +75,7 @@ Sixteen events fire today. Each arrives named in underscore form, as below, in t
 | `plan_upgraded` | The project moved up a plan | `workspace_id`, `old_plan`, `new_plan` |
 | `plan_downgraded` | The project dropped a plan: cancelled, past due, or its free credit ran out | `workspace_id`, `old_plan`, `new_plan`, `reason` |
 | `usage_limit_approaching` | Spend crossed a warning step on one of the project's budgets | `workspace_id`, `metric`, `used`, `limit`, `percent` |
-| `usage_overage_limit_reached` | The month's overage cap was reached | `workspace_id`, `overage_spent_cents`, `overage_limit_cents` |
+| `usage_overage_limit_reached` | The month's overage cap was reached. Overage is switched off in favour of auto-recharge, so this event does not fire today | `workspace_id`, `overage_spent_cents`, `overage_limit_cents` |
 | `project_domain_connected` | A custom domain was attached to the project | `domain`, `connected_at` |
 | `project_created` | The project was created; it fires once, so a webhook added later never gets it | `template_id`, `imported`, `created_at` |
 
