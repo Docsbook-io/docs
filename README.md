@@ -109,7 +109,7 @@ The agent finds the opportunity on its own and asks your team only for the fact 
 
 - **Docsbook Agent** 10:02 AM
 
-  I checked your docs and site but can't confirm you're HIPAA-compliant. Are you? How does it work?
+  Your docs and site don't say if you're HIPAA-compliant. Are you? How does it work?
 
 - **Maya Chen** 10:14 AM
 
@@ -117,7 +117,7 @@ The agent finds the opportunity on its own and asks your team only for the fact 
 
 - **Docsbook Agent** 10:15 AM
 
-  Great, that's exactly what I needed. I'll update the product pages and use this as confirmed knowledge.
+  Great, exactly what I needed. I'll update the pages and keep this as confirmed knowledge.
 
   Then I'll measure the result and report back in two weeks.
 
@@ -127,7 +127,9 @@ The agent finds the opportunity on its own and asks your team only for the fact 
 
   Two weeks ago you said HIPAA works through the API, on **Enterprise** only. I used it to update 3 pages.
 
-  Each now answers "Are you HIPAA-compliant?" in its first line — [the facts AI checks before citing](./agent/expertise.md) {graduation-cap}
+  Each page now answers "Are you HIPAA-compliant?" first.
+
+  Why it works: [the facts AI checks before citing](./agent/expertise.md) {graduation-cap}
 
   **What changed**
 
