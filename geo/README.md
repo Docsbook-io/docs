@@ -1,6 +1,8 @@
 ---
-title: "GEO for docs: get cited by ChatGPT, Perplexity and Claude"
+title: "AI engines read and cite you"
 description: "How Docsbook makes docs citable by AI answer engines: llms.txt, Markdown copies, open AI crawlers, answer-first pages, and an agent that checks the answers."
+status: generated
+version: "0.2"
 ---
 
 # AI engines read and cite you
@@ -72,20 +74,13 @@ A GEO change states its bet like any other: the watched questions it expects to 
 
 ## See it working
 
-**Analytics ▸ GEO** is one list with a **View** switch. The [AI visibility](./ai-visibility.md) page explains each reading and its limits.
+Go to **Analytics ▸ Insights** and look at the **Channels** card — it splits visitors into Organic, Direct, Referral, Social and **AI assistant** channels, so you can see how many readers came through an AI answer.
 
-| View | What it shows |
-|---|---|
-| **Pages** | Which pages AI crawlers read, split into **AI Answers**, **Indexing** and **Training**, and how many checked questions cite each |
-| **Crawlers** | Each AI crawler by company, with requests, distinct visitors and how often its engine names you |
-| **Prompt mentions** | The questions checked against answer engines, and which ones named you |
-| **Prompt demand** | The search demand behind a question your buyers ask |
-| **Competitors**, **Competitor prompts** | Who the engines name for your questions, and where they name them instead of you |
-| **Competitor tactics** | Which catalog rules the pages engines cite apply |
+**Analytics ▸ Opportunities** shows which phrases you should win — where competitors rank higher than you, or where you appear but don't rank — with each phrase's monthly search volume and demand level.
 
-![Analytics ▸ GEO ▸ Prompt demand: buyer questions with their intent, monthly searches and which engines name you](../images/admin/analytics-geo-demand-dark.webp)
+**Analytics ▸ Audit** compares your docs side-by-side with rivals for each query you care about, ranking their strengths and weakness against yours.
 
-**Analytics ▸ Audit** shows where your pages stand against the two GEO topics: What answer engines require, and Being quoted by models.
+**Analytics ▸ GEO** tracks which AI crawlers visited your docs, and which checked questions cited you — the same surface used to power the weekly citation check.
 
 ## Tell your agent
 
@@ -124,7 +119,6 @@ No. Google says its AI features need no special writing style or markup, only a 
 ## Next steps
 
 <!-- widget:cards plain cols=2 arrow=hover -->
-
 - [llms.txt and Markdown](./llms-txt.md) — The machine-readable files and the page buttons for AI tools {file-text}
 - [Track AI citations](./ai-visibility.md) — What the GEO numbers measure, and what they cannot {radar}
 - [Search engines see you](../seo/README.md) — Being indexed comes first; here is what Docsbook does for it {search}

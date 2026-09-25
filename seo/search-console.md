@@ -1,11 +1,13 @@
 ---
-title: "Google Search Console data for your documentation"
+title: "Search data: where it comes from"
 description: "Docsbook reads Google Search Console for your docs with nothing to connect: which sites it covers, what syncs, how fresh it is, and how the agent uses it."
+status: generated
+version: "0.2"
 ---
 
 # Search data: where it comes from
 
-Docsbook reads Google Search Console for you, with no Google account to connect, and shows each query's clicks, views, CTR and position in **Analytics ▸ SEO**.
+Docsbook reads Google Search Console for you, with no Google account to connect, and shows each query's clicks, views, CTR and position in **Analytics ▸ Insights**. The **Keywords** card breaks traffic down by search query.
 
 ## Which sites does it cover?
 
@@ -35,17 +37,17 @@ Access is read-only. Docsbook never submits URLs, requests indexing or changes a
 
 <!-- widget:stepper -->
 
-### Open Analytics ▸ SEO
+### Open Analytics ▸ Insights
 
-The list opens on the **Queries** view: each row shows clicks, views and CTR, with the average position as a chip such as `#6.4`.
+The page opens showing your top metrics.
 
-### Switch the View to Pages
+### Go to the Keywords card
 
-Each page shows the same numbers and how many queries reach it.
+It lists each search query with clicks, impressions, CTR and average position.
 
 ### Sort by position, best first
 
-Read down to the rows between `#5` and `#20` with many views. Google already shows these pages; a better title or first screen is what wins the click.
+Read down to the rows between `#5` and `#20` with many impressions. Google already shows these pages; a better title or first screen is what wins the click.
 
 <!-- /widget -->
 
@@ -59,31 +61,6 @@ The [Docsbook agent](../agent/README.md) uses the same rows to choose search cha
 - **Refuses to guess** — under 30 impressions in 28 days a page gets no forecast, never a zero
 - **Judges the change** — Google's position, impressions and clicks for the page, before against after, with the day of the change left out
 - **Explains drops** — the **Explain a traffic drop** [trigger](../agent/triggers.md) names the pages and sources that lost readers
-
-## What about Bing and other engines?
-
-Search Console only reports queries you already appear for, so Docsbook also checks the results pages themselves. Every day it reads Google and Bing for up to 5 queries per engine, including queries you don't rank for yet; choose them by asking the agent or with [`configure_mentions`](../mcp-tools/settings/configure-mentions.md). The results land in **Analytics ▸ SEO ▸ Google & Bing mentions**.
-
-![Analytics ▸ SEO ▸ Google & Bing mentions: where the docs sit on each engine's results page for the watched queries](../images/admin/analytics-seo-mentions-dark.webp)
-
-You can also push your own daily numbers from Bing, Yandex, DuckDuckGo or a rank tracker, using the project API key from **Settings ▸ Domain & API**:
-
-```bash
-curl -X POST https://docsbook.io/api/v1/search-engine-stats \
-  -H "Authorization: Bearer <your-api-key>" \
-  -H "Content-Type: application/json" \
-  -d '{"engine": "bing", "date": "2026-09-20", "query": "docs hosting", "page": "/quickstart", "views": 120, "clicks": 9, "position": 6.2}'
-```
-
-The rows appear beside Google's in **Queries** and **Pages**, marked with their engine. Send one row per call, or up to 200 as `{"stats": [...]}`.
-
-| Field | Value |
-|---|---|
-| `engine` | `google`, `bing`, `yandex` or `duckduckgo` |
-| `date` | The day the numbers belong to, as `YYYY-MM-DD` |
-| `query` | The search query |
-| `page` | The page it led to (optional) |
-| `views`, `clicks`, `position` | The engine's figures (optional) |
 
 ## FAQ
 
@@ -106,7 +83,6 @@ Google publishes Search Console data about two days late. The newest day shown i
 ## Next steps
 
 <!-- widget:cards plain cols=2 arrow=hover -->
-
 - [Search engines see you](./README.md) — Everything Docsbook does for SEO, and the agent's search loops {search}
 - [Track AI citations](../geo/ai-visibility.md) — The same view for ChatGPT, Perplexity and Google's AI Overview {sparkles}
 

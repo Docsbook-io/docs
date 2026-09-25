@@ -1,6 +1,8 @@
 ---
-title: "Documentation SEO: get your docs found on Google"
+title: "Search engines see you"
 description: "What Docsbook does for documentation SEO from day one — sitemap, canonical URLs, hreflang, JSON-LD, redirects — and how its agent turns search data into fixes."
+status: generated
+version: "0.2"
 ---
 
 # Search engines see you
@@ -105,34 +107,11 @@ A change that claims to move a number states its bet. The agent records the read
 
 ## See it working
 
-**Analytics ▸ SEO** is one list with a **View** switch. Rows come from [Google Search Console](./search-console.md) and from the checks the agent runs.
+Go to **Analytics ▸ Insights** for search performance. The **Keywords** card shows each query's clicks, impressions and average position; the **Sources** card breaks those figures down by keyword, referrer and channel. The **Exit** tab ranks pages by bounce rate and low click-through.
 
-| View | What it shows |
-|---|---|
-| **Queries** | Each search query: clicks, views, CTR and average position, with the engine that reported it |
-| **Pages** | The same numbers per page, with how many queries reach it |
-| **Search demand** | Monthly searches behind a question your buyers ask, split by intent, beside your position |
-| **Google & Bing mentions** | Where your docs sit on Google's and Bing's results page for the queries you watch |
-| **Competitors**, **Competitor queries** | Who ranks for your queries, and where they sit ahead of you |
-| **Competitor tactics** | Which catalog rules the winning competitor pages apply |
+**Analytics ▸ Opportunities** lists the phrases you should win — where competitors rank higher than you, or where you appear but don't rank — with each phrase's monthly search volume, demand and which engine surfaced it.
 
-![Analytics ▸ SEO ▸ Queries: each search query with its position, clicks and views, by engine](../images/admin/analytics-seo-dark.webp)
-
-<!-- widget:tabs -->
-
-### Pages
-
-![Analytics ▸ SEO ▸ Pages: each page's position, clicks, views and CTR across engines](../images/admin/analytics-seo-pages-dark.webp)
-
-### Competitors
-
-![Analytics ▸ SEO ▸ Competitors: the domains ranking for your queries and how often they sit ahead](../images/admin/analytics-seo-competitors-dark.webp)
-
-<!-- /widget -->
-
-**Analytics ▸ Audit** shows where your pages stand against the three SEO topics of the catalog: Search demand & intent; Crawl, index & speed; Authority & risk.
-
-![Analytics ▸ Audit: documentation rules ranked by priority, each with the share of pages that follow it](../images/admin/analytics-audit-dark.webp)
+**Analytics ▸ Audit** shows where your pages stand against the catalog axes. It replaced the previous flat rankings with a competitive audit that compares your docs side-by-side with rivals for each query you care about.
 
 ## Tell your agent
 
@@ -175,8 +154,7 @@ Search engines drop a page within days of seeing `noindex` and take weeks to lis
 ## Next steps
 
 <!-- widget:cards plain cols=2 arrow=hover -->
-
-- [Search data](./search-console.md) — Where the Google numbers come from, and how the agent uses them {chart-line}
+- [Analytics overview](../analytics/insights.md) — Traffic, sources, AI visitors and revenue per page {chart-line}
 - [AI engines read and cite you](../geo/README.md) — The same work for ChatGPT, Perplexity and Claude {sparkles}
 - [Expertise catalog](../agent/expertise.md) — The 299 rules the agent checks your pages against {book-open}
 - [Triggers](../agent/triggers.md) — Switch on the SEO loops above {zap}
