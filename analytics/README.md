@@ -1,6 +1,8 @@
 ---
 title: "Documentation feedback: what readers think of every page"
 description: "Collect page ratings, AI chat thumbs, failed searches and dead ends from docs readers, and let the Docsbook agent turn each signal into a fixed page."
+status: generated
+version: "0.1"
 ---
 
 # You hear every reader
