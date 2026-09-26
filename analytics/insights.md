@@ -2,7 +2,7 @@
 title: "Docs analytics: traffic, AI visitors and revenue per page"
 description: "See docs traffic, sources, countries and AI-assistant visitors in Docsbook, and turn a call-to-action URL and an average price into revenue per visitor."
 status: generated
-version: "0.2"
+version: "0.3"
 ---
 
 # See who reads your docs and what they are worth
@@ -42,7 +42,7 @@ Every figure on Insights counts people: crawlers are left out, and so are your o
 
 - **Sources ▸ Channels** gives people who clicked through from an answer in ChatGPT, Perplexity, Claude, Copilot or Gemini their own **AI assistant** channel, apart from Organic search, Social, Referral and Direct
 - **Analytics ▸ GEO** lists the crawlers themselves — which assistant fetched which page, for live answers, indexing or training; see [AI visibility](../geo/ai-visibility.md)
-- **Graph** in the sidebar colours a map of your docs by **AI Answers** (visits that arrived via an AI assistant) or **Training** (hits from AI training crawlers)
+- **Graph** in the sidebar shows pages lit up by agents, readers and bots; click a walker in the feed to frame every page it touched, **Replay** it, or **Follow** the newest touch
 
 ![Graph over the last 7 days: the map of pages with the most-touched pages and the busiest routes beside it](../images/admin/brain-history-dark.webp)
 
