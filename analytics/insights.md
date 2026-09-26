@@ -1,6 +1,8 @@
 ---
 title: "Docs analytics: traffic, AI visitors and revenue per page"
 description: "See docs traffic, sources, countries and AI-assistant visitors in Docsbook, and turn a call-to-action URL and an average price into revenue per visitor."
+status: generated
+version: "0.2"
 ---
 
 # See who reads your docs and what they are worth
@@ -11,7 +13,7 @@ description: "See docs traffic, sources, countries and AI-assistant visitors in 
 
 ## What does the Insights tab show?
 
-A row of figures sits over one chart that draws the figure you select. Above them are the **online** count (readers active in the last 5 minutes), the range switcher and **Open Live Map**.
+A row of figures sits over one chart that draws the figure you select. Above them are the **online** count (readers active in the last 5 minutes), the range switcher and the **Goals & funnels** card.
 
 | Figure | What it counts |
 |---|---|
@@ -79,8 +81,6 @@ Until both are set, Revenue and Revenue/visitor show a dash and **Set up →**, 
 - **Potential** — what a reader is worth on one scale: full value once they reached your Call To Action URL, and a share of it for everyone else, by how closely they follow a converter's path; it ranks readers and is not a revenue forecast
 - **Search and sort** — search by handle, country, language or source, and sort by **Potential** to find who to look at next
 - **Open a row** to see everything that reader did, in order; **Improve** asks the agent where the docs are failing them
-
-**Open Live Map** on Insights shows readers live on a world map: the page each one is on, how long they have been on the docs, and what they just did.
 
 ## What the agent reads from here
 
