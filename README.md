@@ -16,27 +16,41 @@ They find the **fastest win** and **ship it as a pull request**.
 
 <!-- /widget -->
 
+<!-- widget:tabs product -->
+
+### Visibility {eye}
+
+![Growth ▸ Visibility: search phrases with monthly searches, Google position, clicks, views and CTR for each](./images/admin/growth-visibility.webp#gh-light-mode-only)
+![Growth ▸ Visibility: search phrases with monthly searches, Google position, clicks, views and CTR for each](./images/admin/growth-visibility-dark.webp#gh-dark-mode-only)
+
+### Opportunities {target}
+
+![Growth ▸ Opportunities: phrases marked Others cited, Shared or You're cited, sorted by what to win first](./images/admin/growth-opportunities.webp#gh-light-mode-only)
+![Growth ▸ Opportunities: phrases marked Others cited, Shared or You're cited, sorted by what to win first](./images/admin/growth-opportunities-dark.webp#gh-dark-mode-only)
+
+### Audit {clipboard-check}
+
+![Growth ▸ Audit: competitor comparison turned into actions — Replicate, Explain better, Exploit, Keep](./images/admin/growth-audit.webp#gh-light-mode-only)
+![Growth ▸ Audit: competitor comparison turned into actions — Replicate, Explain better, Exploit, Keep](./images/admin/growth-audit-dark.webp#gh-dark-mode-only)
+
+### Issues {circle-dot}
+
+![Growth ▸ Issues: agent-filed issues, each with a forecast metric and a check date](./images/admin/growth-issues.webp#gh-light-mode-only)
+![Growth ▸ Issues: agent-filed issues, each with a forecast metric and a check date](./images/admin/growth-issues-dark.webp#gh-dark-mode-only)
+
+### Pull requests {git-pull-request}
+
+![Growth ▸ Pull requests: merged agent pull requests, each verified with its measured result](./images/admin/growth-pull-requests.webp#gh-light-mode-only)
+![Growth ▸ Pull requests: merged agent pull requests, each verified with its measured result](./images/admin/growth-pull-requests-dark.webp#gh-dark-mode-only)
+
+<!-- /widget -->
+
 <!-- widget:stats cols=4 -->
 
 - **299** — rules of documentation craft the agent checks
 - **194** — published sources behind those rules
 - **50** — ready-made agent workflows
 - **15** — languages, each indexed on its own
-
-<!-- /widget -->
-
-## What your docs get
-
-Six things every Docsbook site does — and the agent keeps improving on its own.
-
-<!-- widget:cards icons=inline cols=3 arrow=hover -->
-
-- [Search engines see you](./seo/README.md) — Server-rendered pages, sitemaps and structured data, and an agent that tunes titles and answers to real queries. {search}
-- [AI engines read and cite you](./geo/README.md) — Open doors for AI crawlers, a Markdown copy of every page, and an agent that fixes the pages behind wrong AI answers. {sparkles}
-- [A second brain for your product](./brain/README.md) — Your pages, your code and what the agent learned, searchable by meaning for you, your readers and their agents. {brain}
-- [AI answers your readers](./ai-chat/README.md) — A chat grounded in your pages, with sources — and the questions it could not answer turned into pages. {message-circle}
-- [AI writes and updates your docs](./agent/README.md) — One worker that reads, writes, configures and measures, on your word or on a trigger. {bot}
-- [You hear every reader](./analytics/README.md) — Ratings, failed searches, dead ends and chat questions per page, fed straight back to the agent. {ear}
 
 <!-- /widget -->
 
