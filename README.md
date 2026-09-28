@@ -67,7 +67,8 @@ They find the **fastest win** and **ship it as a pull request**.
     - **Agent** — Reading 412 guest reviews · "are pets OK?" asked 37 times {star} {tool}
     - **Agent** — Comparing rivals' sites · 5 with galleries and a FAQ {swords} {tool}
     - **Agent** — Pricing the gap · €140 a night, 4 nights a stay {calculator} {tool}
-    - **Agent** — **€9,800 a month in direct bookings.** 2,600 people a month look for a pet-friendly stay in Lisbon — you allow pets and never say so. I'm building those pages first, photos included. {win}
+    - **Agent** — **+€9,800 a month** · direct bookings from pet owners {win}
+    - **Agent** — 2,600 people a month look for a pet-friendly stay in Lisbon. You allow pets and never say so — I'm building those pages first, photos included.
   - **Restaurant** {utensils}
     - **You** — We run a Mediterranean restaurant in Austin. Our site is `oliveandthyme.com`.
     - **Agent** — Reading your site and menus · 64 dishes, 2 menus as PDF {utensils} {tool}
@@ -77,7 +78,8 @@ They find the **fastest win** and **ship it as a pull request**.
     - **Agent** — Reading 860 reviews · "gluten-free?" asked 52 times {star} {tool}
     - **Agent** — Comparing rivals' sites · menus with photos and prices {swords} {tool}
     - **Agent** — Pricing the gap · $62 average bill {calculator} {tool}
-    - **Agent** — **$7,300 a month from private dining.** 1,200 people a month look for a private room for 20 — you have one, and your site hides it in a PDF. Its page goes up first, with photos. {win}
+    - **Agent** — **+$7,300 a month** · private dining bookings {win}
+    - **Agent** — 1,200 people a month look for a private room for 20. You have one, and your site hides it in a PDF — its page goes up first, with photos.
   - **Tours** {mountain}
     - **You** — We run small-group trips — the Dolomites, Cappadocia, the Maldives. Our site is `wanderco.travel`.
     - **Agent** — Reading your site · 18 trips, 540 photos, 3 languages {globe} {tool}
@@ -87,7 +89,8 @@ They find the **fastest win** and **ship it as a pull request**.
     - **Agent** — Reading 1,240 reviews · "is it OK for kids?" asked 64 times {star} {tool}
     - **Agent** — Comparing rivals' sites · day-by-day plans with maps and photos {swords} {tool}
     - **Agent** — Pricing the gap · €180 a seat {calculator} {tool}
-    - **Agent** — **€11,200 a month in direct bookings.** 3,400 people a month plan a family trip to Lake Braies — your trips take kids from 6, and no page says so. I'm writing it first, with the photos. {win}
+    - **Agent** — **+€11,200 a month** · direct bookings from families {win}
+    - **Agent** — 3,400 people a month plan a family trip to Lake Braies. Your trips take kids from 6, and no page says so — I'm writing it first, with the photos.
   - **Software** {code}
     - **You** — We make scheduling software for clinics. Our site is `acme.health`.
     - **Agent** — Reading your site · 38 pages, 3 plans, 40 help articles {globe} {tool}
@@ -97,7 +100,8 @@ They find the **fastest win** and **ship it as a pull request**.
     - **Agent** — Reading rivals' docs · Calendly, Cal.com, Jane {swords} {tool}
     - **Agent** — Mining support questions · 40 asked, 12 never answered {message-circle-question} {tool}
     - **Agent** — Pricing the gap · $280 average order {calculator} {tool}
-    - **Agent** — **$8,400 a month is on the table.** 3,100 people a month ask if they can cancel for free before they book — only your rivals answer. I'm writing those pages first. {win}
+    - **Agent** — **+$8,400 a month** · is on the table {win}
+    - **Agent** — 3,100 people a month ask if they can cancel for free before they book. Only your rivals answer — I'm writing those pages first.
 
 - **It builds your site in your brand** — Photos and galleries, navigation, search, AI chat and your own domain — in the logo, colours and type from your website. Every page is written for you and lands as a change you can review. {badge:Site} {scene:browser}
 
@@ -191,17 +195,17 @@ They find the **fastest win** and **ship it as a pull request**.
   - Claude
   - Gemini
 
-- **It keeps growing on its own** — Triggers wake the agent on a release, a traffic drop or an unanswered question — and it comes back with the fix. {badge:Always on} {triggers}
+- **It keeps growing on its own** — Triggers wake the agent when there is money to win — a page close to a sale, a rival's new page, an unanswered question — and it comes back with the fix. {badge:Always on} {triggers}
 
-  - **Write the release notes** — On every release · turns what shipped into a page {git-merge} {github} {badge:Release}
-  - **Explain a traffic drop** — Weekly · finds the pages that lost readers {trending-down} {schedule} {badge:SEO}
-  - **Do AI engines cite you** — Weekly · fixes why ChatGPT cites others {sparkles} {schedule} {badge:GEO}
-  - **Answer what the chat could not** — A question went unanswered · writes it {message-circle-question} {event} {badge:Support}
-  - **Beat a rival's new page** — Daily · answers it before it ranks {swords} {schedule} {badge:Market}
-  - **Fix what went stale** — On every merge · rewrites pages the code changed {file-pen} {github} {badge:Accuracy}
-  - **Fill a search gap** — Weekly · writes the page people search for {search} {schedule} {badge:SEO}
+  - **Grow the page that sells** — Weekly · sharpens the page closest to a sale {wallet} {schedule} {badge:Revenue} {gain:+$3,400/mo}
+  - **Answer what buyers ask** — A question went unanswered · writes the page {message-circle-question} {event} {badge:Sales} {gain:+$2,600/mo}
+  - **Beat a rival's new page** — Daily · answers it before it ranks {swords} {schedule} {badge:Market} {gain:+$1,900/mo}
+  - **Get cited by ChatGPT** — Weekly · fixes why AI answers name others {sparkles} {schedule} {badge:GEO} {gain:+$1,400/mo}
+  - **Win back lost traffic** — Weekly · rewrites the pages that lost readers {trending-down} {schedule} {badge:SEO} {gain:+$1,100/mo}
+  - **Fill a search gap** — Weekly · writes the page people search for {search} {schedule} {badge:SEO} {gain:+$700/mo}
   - **Translate new pages** — A page was published · ships it in 12 languages {languages} {event} {badge:Global}
-  - **Grow the page that sells** — Weekly · sharpens the page closest to a sale {wallet} {schedule} {badge:Revenue}
+  - **Fix what went stale** — On every merge · rewrites pages the code changed {file-pen} {github} {badge:Accuracy}
+  - **Write the release notes** — On every release · turns what shipped into a page {git-merge} {github} {badge:Release}
 
 <!-- /widget -->
 
