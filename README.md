@@ -202,6 +202,14 @@ They find the **fastest win** and **ship it as a pull request**.
   - **Fill a search gap** — Weekly · writes the page people search for {search} {schedule} {badge:SEO}
   - **Translate new pages** — A page was published · ships it in 12 languages {languages} {event} {badge:Global}
   - **Grow the page that sells** — Weekly · sharpens the page closest to a sale {wallet} {schedule} {badge:Revenue}
+  - **Win back the buyers who left** — Weekly · rewrites the page where people drop off before paying {shopping-cart} {schedule} {badge:Conversion}
+  - **Answer what reviews keep asking** — New reviews · turns repeat questions into pages {star} {event} {badge:Reviews}
+  - **Launch a new product the same day** — A product was added · page, photos and FAQ ready to sell {rocket} {event} {badge:Launch}
+  - **Get ahead of the season** — Monthly · writes the pages people will search next month {calendar} {schedule} {badge:Season}
+  - **Open a new market** — Monthly · finds a city or a language with demand and ships its pages {map-pin} {schedule} {badge:Growth}
+  - **Match a rival's price change** — Daily · updates your comparison when theirs moves {tag} {schedule} {badge:Market}
+  - **Catch a broken page first** — Hourly · fixes dead links and missing photos before buyers see them {shield-check} {schedule} {badge:Health}
+  - **Report what the pages earned** — Every Monday · leads, bookings and the next best move {chart-no-axes-column} {schedule} {badge:Report}
 
 <!-- /widget -->
 
