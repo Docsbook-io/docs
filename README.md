@@ -119,84 +119,83 @@ The agent finds the opportunity on its own and asks your team only for the fact 
 
 - **Docsbook Agent** 10:02 AM
 
-  Found an opportunity: **4,200 people a month** search for a HIPAA-compliant tool like yours.
+  Found an opportunity: **3,100 people a month** ask Google and ChatGPT whether they can cancel for free before they buy from a business like yours.
 
-  AI answers recommend your competitors.
+  The answers recommend your competitors.
 
 - **Docsbook Agent** 10:02 AM
 
-  Your docs and site don't say if you're HIPAA-compliant. Are you? How does it work?
+  Your site never says. Can customers cancel for free? Until when?
 
 - **Maya Chen** 10:14 AM
 
-  Yes — through the API, on the Enterprise plan only. We sign a BAA.
+  Yes — free up to 48 hours before. After that we refund 80%.
 
 - **Docsbook Agent** 10:15 AM
 
-  Great, exactly what I needed. I'll update the pages and keep this as confirmed knowledge.
+  Exactly what I needed. I'll update the pages and remember this as a confirmed fact.
 
   Then I'll measure the result and report back in two weeks.
 
 ### Inbox
 
-- **HIPAA: $96k in Enterprise pipeline** *now* {badge:HIPAA} {unread}
+- **Free cancellation: +$8,400 in sales** *now* {badge:Sales} {unread}
 
-  Two weeks ago you said HIPAA works through the API, on **Enterprise** only. I used it to update 3 pages.
+  Two weeks ago you told me: free cancellation up to 48 hours before. I put it on 3 pages — each now answers "Can I cancel for free?" in its first line.
 
-  Each page now answers "Are you HIPAA-compliant?" first.
+  **What changed** {trending-up}
 
-  Why it works: [the facts AI checks before citing](./agent/expertise.md) {graduation-cap}
+  - **+$8,400** in sales from these 3 pages {wallet}
+  - **+310** visitors who came ready to buy {users}
+  - **+4** answers in ChatGPT and Perplexity now name you {sparkles}
+  - **+38%** more people see you on Google {search}
 
-  **What changed**
+  **Why it works** {graduation-cap}
 
-  - **$96k ARR** in pipeline: 3 Enterprise demos from these pages
-  - **+41** qualified visitors from healthcare companies
-  - **+4** new citations in ChatGPT and Perplexity
-  - **+38%** qualified impressions on Google
-  - **12** AI prompts now answer with your Enterprise plan
+  Google and ChatGPT show the page that answers the question plainly. Their own guides say so:
 
-  **What I learned**
+  - [Google: how Search finds and ranks pages](https://developers.google.com/search/docs/fundamentals/how-search-works) {logos:google-icon}
+  - [Google: how AI Overviews choose the pages they link](https://developers.google.com/search/docs/appearance/ai-features) {logos:google-icon}
+  - [OpenAI: how ChatGPT search picks its sources](https://help.openai.com/en/articles/9237897-chatgpt-search) {simple-icons:openai}
 
-  AI answers about HIPAA now name you. A competitor still ranks above you on Google.
+  **Next opportunity** {target}
 
-  **Next opportunity**
+  People also ask about discounts, and your prices page doesn't say.
 
-  Your comparison page has another gap. I need one fact about **team features** to go on.
+  > **Asked in #growth:** do you give a discount for longer stays or bigger orders?
 
-  **Asked in #growth:** which roles can see team usage?
-
-- **September: +$2,970 new MRR from the docs** *1d* {badge:Monthly} {unread}
+- **September: +$2,970 from your site** *1d* {badge:Monthly} {unread}
 
   Six changes shipped this month, and five moved a number.
 
-  **What changed**
+  **What changed** {trending-up}
 
-  - **+$2,970** new MRR from docs visitors
-  - **+118** trial signups
-  - **+3,920** visitors from search and AI answers
-  - **5 of 6** forecasts came true
+  - **+$2,970** new revenue from site visitors {wallet}
+  - **+118** new leads {users}
+  - **+3,920** visitors from Google and AI answers {search}
+  - **5 of 6** forecasts came true {circle-check}
 
-  **Best change**
+  **Best change** {trophy}
 
-  The pricing page: click rate went from **0.9%** to **3.1%** at the same position.
+  The prices page: the share of people clicking it on Google went from **0.9%** to **3.1%** — same spot in the results.
 
-- **Pricing page: 3.4× the clicks at the same position** *5d* {badge:SEO}
+- **Prices page: 3.4× the clicks from Google** *5d* {badge:Google}
 
-  It sat at position 6 with a 0.9% click rate. The new title and first line answer the query.
+  It sat 6th on Google and only 0.9% of people clicked. The new title and first line answer the question right away.
 
-  - **+140** clicks a month
-  - **+11** trial signups
-  - **3.1%** click rate, up from 0.9%
+  - **+140** clicks a month {mouse-pointer-click}
+  - **+11** new customers {users}
+  - **3.1%** click rate, up from 0.9% {trending-up}
 
-  Why it works: [a quick-fact query needs its answer in 1–2 sentences](./agent/expertise.md) {graduation-cap}
+  Proof: [Google: write titles that say what the page answers](https://developers.google.com/search/docs/appearance/title-link) {logos:google-icon}
 
-- **SSO: 23 questions answered, 2 Enterprise trials kept** *1w* {badge:Support}
+- **Payment methods: 23 questions answered, 2 sales saved** *1w* {badge:Support}
 
-  23 readers asked the chat how to set up SSO. A page now answers them.
+  23 visitors asked the chat which payment methods you accept. A page now answers them.
 
-  - **0** SSO questions since the page went live
-  - **2** Enterprise trials kept
-  - **1** page written
+  - **0** payment questions since the page went live {message-circle}
+  - **2** sales that would have been lost {wallet}
+  - **1** page written {file-text}
 
 <!-- /widget -->
 
