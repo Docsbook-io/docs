@@ -45,6 +45,7 @@ A custom domain needs one DNS record. See [Custom domain](./custom-domain.md).
 | `pricing` | Plan cards with a Monthly/Annual switch, or a feature comparison with a sticky plan header (`compare`) | Choosing between plans |
 | `api` | An endpoint playground with a request form | Letting readers send a real REST call |
 | `mcp` | An MCP tool's signature and arguments, with a **Try it** form and a live JSON-RPC and cURL call | Documenting one MCP tool |
+| `mcp-connect` | The chat's **MCP** button on the page: Install in Cursor, VS Code or Claude Code, Copy MCP URL, Copy prompt | Letting readers connect your docs to their own agent |
 | `endpoints` | A list of calls as index rows: a verb pill, the name, the path and one line | The index page of an API or MCP reference folder |
 | `cta` | A compact block with buttons; on a front page, `agents` adds a row of agent chat windows and `inbox` a chat thread over an Inbox | The one next step on a page |
 | `cta-form` | The same block with one input field | A next step that starts with an email or a URL |
@@ -74,6 +75,36 @@ layout: landing
 ```
 
 Keep each category's posts in their own folder, such as `blog/compare/` and `blog/migrate/`, and give the index one heading per folder inside a `stories` widget: each heading becomes a filter chip, and `?category=compare` opens the index on that chip. Open each post with a `story` widget. This site's [blog](../blog/README.md) is built this way.
+
+## Let readers connect your docs to their agent
+
+An `mcp-connect` widget puts the chat's **MCP** button on the page itself. The menu installs your project's MCP server in Cursor, VS Code or Claude Code in one click, or copies its URL or a ready prompt for any other client:
+
+```markdown
+<!-- widget:mcp-connect -->
+
+### Use these docs from your agent
+
+Connect the documentation to Cursor, VS Code or Claude Code over MCP — your agent then searches and quotes these pages instead of guessing.
+
+<!-- /widget -->
+```
+
+On the site, that becomes:
+
+<!-- widget:mcp-connect -->
+
+### Use these docs from your agent
+
+Connect the documentation to Cursor, VS Code or Claude Code over MCP — your agent then searches and quotes these pages instead of guessing.
+
+<!-- /widget -->
+
+- **No address to write** — Docsbook fills in your project's own server when the page renders. It is public and read-only: `search`, `read_doc` and `get_doc_outline` over your published pages, no account needed.
+- **Your product's own server** — put its `https://` address as a link inside the region, such as `[Acme MCP](https://mcp.acme.dev/mcp)`, and the menu installs that server instead.
+- **On GitHub** — the region reads as its heading and sentence.
+
+Or tell your agent: `Add an MCP connect button under the intro of the quickstart.`
 
 ## Collect enquiries with a form
 
