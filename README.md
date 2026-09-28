@@ -119,29 +119,25 @@ The agent finds the opportunity on its own and asks your team only for the fact 
 
 - **Docsbook Agent** 10:02 AM
 
-  Found an opportunity: **3,100 people a month** ask Google and ChatGPT whether they can cancel for free before they buy from a business like yours.
-
-  The answers recommend your competitors.
-
-- **Docsbook Agent** 10:02 AM
-
-  Your site never says. Can customers cancel for free? Until when?
+  **3,100 people a month** ask Google and ChatGPT if they can cancel for free before they buy. The answers name your competitors — your site never says. Can customers cancel for free? Until when?
 
 - **Maya Chen** 10:14 AM
 
-  Yes — free up to 48 hours before. After that we refund 80%.
+  Free up to 48 hours before. After that we refund 80%.
 
 - **Docsbook Agent** 10:15 AM
 
-  Exactly what I needed. I'll update the pages and remember this as a confirmed fact.
+  Got it. Once the pages say so, I expect **~30 more customers** a month — at your **$280 average order**, about **$8,400**.
 
-  Then I'll measure the result and report back in two weeks.
+- **Docsbook Agent** 10:15 AM
+
+  I'll update 3 pages and check back in two weeks. I'll tell you whether it worked.
 
 ### Inbox
 
 - **Free cancellation: +$8,400 in sales** *now* {badge:Sales} {unread}
 
-  Two weeks ago you told me: free cancellation up to 48 hours before. I put it on 3 pages — each now answers "Can I cancel for free?" in its first line.
+  Two weeks ago you told me: free cancellation up to 48 hours before. I put it on 3 pages — each now answers "Can I cancel for free?" in its first line. The forecast was $8,400; here is what came in.
 
   **What changed** {trending-up}
 
@@ -154,9 +150,9 @@ The agent finds the opportunity on its own and asks your team only for the fact 
 
   Google and ChatGPT show the page that answers the question plainly. Their own guides say so:
 
-  - [Google: how Search finds and ranks pages](https://developers.google.com/search/docs/fundamentals/how-search-works) {logos:google-icon}
-  - [Google: how AI Overviews choose the pages they link](https://developers.google.com/search/docs/appearance/ai-features) {logos:google-icon}
-  - [OpenAI: how ChatGPT search picks its sources](https://help.openai.com/en/articles/9237897-chatgpt-search) {simple-icons:openai}
+  - [Google Search guide — ranks first the page that answers the searcher's question most directly](./agent/expertise.md) {logos:google-icon}
+  - [Google AI features guide — AI Overviews link pages that already answer well in Search](./agent/expertise.md) {logos:google-icon}
+  - [OpenAI help center — ChatGPT search answers with links to the pages it used](./agent/expertise.md) {simple-icons:openai}
 
   **Next opportunity** {target}
 
@@ -187,7 +183,7 @@ The agent finds the opportunity on its own and asks your team only for the fact 
   - **+11** new customers {users}
   - **3.1%** click rate, up from 0.9% {trending-up}
 
-  Proof: [Google: write titles that say what the page answers](https://developers.google.com/search/docs/appearance/title-link) {logos:google-icon}
+  Proof: [Google title-link guide — write a descriptive, concise title for every page](./agent/expertise.md) {logos:google-icon}
 
 - **Payment methods: 23 questions answered, 2 sales saved** *1w* {badge:Support}
 
