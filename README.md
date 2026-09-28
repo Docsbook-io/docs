@@ -172,7 +172,7 @@ The agent finds the opportunity on its own and asks your team only for the fact 
 
 One sentence from the panel, Claude Code or Cursor. The agent reads your analytics, rewrites the pages that lose you buyers, ships them as a pull request — and comes back to check that **Google and ChatGPT** now send people your way.
 
-[Start free](https://docsbook.io/?start=1) · [Read the quickstart](./quickstart.md)
+[Get Started](https://docsbook.io/?start=1) · [Read the quickstart](./quickstart.md)
 
 - **Translate the docs into German and Japanese** {badge:Panel}
 
@@ -213,6 +213,21 @@ One sentence from the panel, Claude Code or Cursor. The agent reads your analyti
 
   The 8 pages people read to the end now close with a trial button, and every click is tracked back to the page.
 
-  - **8 pages** now end with Start free {mouse-pointer-click}
+  - **8 pages** now end with Get Started {mouse-pointer-click}
+
+<!-- /widget -->
+
+<!-- widget:cta start -->
+
+## What are we documenting?
+
+Describe your product or paste a link — the agent writes your first pages.
+
+- Tell us about your product…
+- Paste a link to your website…
+- Paste a link to your Mintlify docs…
+- Paste a link to your GitBook…
+
+[Generate](https://docsbook.io/connect)
 
 <!-- /widget -->
