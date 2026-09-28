@@ -243,10 +243,10 @@ The agent finds the opportunity on its own and asks your team only for the fact 
 
   **What changed** {trending-up}
 
-  - **+$8,400** in sales from these 3 pages {wallet}
-  - **+310** visitors who came ready to buy {users}
-  - **+4** answers in ChatGPT and Perplexity now name you {sparkles}
-  - **+38%** more people see you on Google {search}
+  - **+$8,400** in sales from these 3 pages {wallet} {badge:Measured}
+  - **+310** visitors who came ready to buy {users} {badge:Measured}
+  - **+4** answers in ChatGPT and Perplexity now name you {sparkles} {badge:Measured}
+  - **+38%** more people see you on Google {search} {badge:Measured}
 
   **Why it works** {graduation-cap}
 
@@ -268,9 +268,9 @@ The agent finds the opportunity on its own and asks your team only for the fact 
 
   **What changed** {trending-up}
 
-  - **+$2,970** new revenue from site visitors {wallet}
-  - **+118** new leads {users}
-  - **+3,920** visitors from Google and AI answers {search}
+  - **+$2,970** new revenue from site visitors {wallet} {badge:Measured}
+  - **+118** new leads {users} {badge:Measured}
+  - **+3,920** visitors from Google and AI answers {search} {badge:Measured}
   - **5 of 6** forecasts came true {circle-check}
 
   **Best change** {trophy}
@@ -281,8 +281,8 @@ The agent finds the opportunity on its own and asks your team only for the fact 
 
   It sat 6th on Google and only 0.9% of people clicked. The new title and first line answer the question right away.
 
-  - **+140** clicks a month {mouse-pointer-click}
-  - **+11** new customers {users}
+  - **+140** clicks a month {mouse-pointer-click} {badge:Measured}
+  - **+11** new customers {users} {badge:Measured}
   - **3.1%** click rate, up from 0.9% {trending-up}
 
   Proof: [Google title-link guide — write a descriptive, concise title for every page](./agent/expertise.md) {logos:google-icon}
