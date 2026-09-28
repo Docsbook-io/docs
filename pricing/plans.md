@@ -61,7 +61,7 @@ Teammates need no plan of their own
 - SSO, SCIM and RBAC
 - A dedicated support engineer
 
-[Contact sales](mailto:support@docsbook.io?subject=Docsbook%20Enterprise)
+[Contact sales](https://docsbook.io/sales)
 
 <!-- /widget -->
 
@@ -69,7 +69,7 @@ Every account starts with a 14-day Pro trial with starter AI credit and no card.
 
 <!-- widget:pricing compare -->
 
-[Create a site](https://docsbook.io/create) · [Start the trial](https://docsbook.io/create) · [Contact sales](mailto:support@docsbook.io?subject=Docsbook%20Enterprise)
+[Create a site](https://docsbook.io/create) · [Start the trial](https://docsbook.io/create) · [Contact sales](https://docsbook.io/sales)
 
 | Platform {layout-grid} | Free {rocket} | Pro {sparkles} | Enterprise {building-2} |
 |---|---|---|---|

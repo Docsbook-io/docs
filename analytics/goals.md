@@ -1,6 +1,8 @@
 ---
 title: "Goals and funnels for documentation: track what readers do"
 description: "Define goals for what a docs reader should do, chain them into funnels, and see where the route breaks, who converted and how long it took."
+status: generated
+version: "0.2"
 ---
 
 # Goals and funnels
@@ -57,21 +59,20 @@ The **Funnel** tab labels the drop-off at every step and names the worst transit
 
 ## Where do the numbers show?
 
-The **Goals & funnels** card on **Analytics ▸ Insights** reads your goals four ways:
+The **Goals & funnels** card on **Analytics ▸ Insights** reads your goals three ways:
 
 - **Goal** — completions of all goals in the window as one line, with the change against the previous week; the list beside it ranks each goal by **Reached**, **Rate** and **Potential**, and hovering or clicking a goal charts it alone
 - **Funnel** — the route as a narrowing flow; hover a step for its conversion, its value and its top sources and countries
-- **User** — the readers behind the completions, one row each, with when they reached a goal and what they are worth
 - **Journey** — everyone who reached one goal, what they touched on the way and how long it took; the median and p90 appear once five readers have completed it
 
-**Activity ▸ People ▸ Users** shows when each reader reached a goal, and a goal's worth feeds each reader's **Potential** there — see [Docs analytics](./insights.md).
+**Activity ▸ People ▸ Users** lists the readers behind the completions — one row each, sorted by **Potential**, with outcomes per reader — and feeds **Potential** back into the Goals & funnels card.
 
 ## What the agent does with goals
 
 - **Sets them up** — **Generate with AI** creates goals from your docs; on the **Funnel** tab it maps how readers move, then declares the route
 - **Works a weak goal** — **Improve** on a goal row traces the route readers took to it, compares readers who reached it with those who did not, and first checks that the goal can fire at all
 - **Works a leaking step** — **Improve** on a funnel step, or on the "route breaks" note, asks why readers stop there and what would carry them on
-- **Answers questions** — ask the [Docsbook agent](../agent/README.md) "who reached pricing this week, and from where?" and it reads the goal reports for you
+- **Answers questions** — ask the [Docsbook agent](./README.md) "who reached pricing this week, and from where?" and it reads the goal reports for you
 
 ## Set goals from your own agent
 

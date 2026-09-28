@@ -1,6 +1,8 @@
 ---
 title: "Docs analytics: traffic, AI visitors and revenue per page"
 description: "See docs traffic, sources, countries and AI-assistant visitors in Docsbook, and turn a call-to-action URL and an average price into revenue per visitor."
+status: generated
+version: "0.3"
 ---
 
 # See who reads your docs and what they are worth
@@ -11,7 +13,7 @@ description: "See docs traffic, sources, countries and AI-assistant visitors in 
 
 ## What does the Insights tab show?
 
-A row of figures sits over one chart that draws the figure you select. Above them are the **online** count (readers active in the last 5 minutes), the range switcher and **Open Live Map**.
+A row of figures sits over one chart that draws the figure you select. Above them are the **online** count (readers active in the last 5 minutes), the range switcher and the **Goals & funnels** card.
 
 | Figure | What it counts |
 |---|---|
@@ -40,7 +42,7 @@ Every figure on Insights counts people: crawlers are left out, and so are your o
 
 - **Sources ▸ Channels** gives people who clicked through from an answer in ChatGPT, Perplexity, Claude, Copilot or Gemini their own **AI assistant** channel, apart from Organic search, Social, Referral and Direct
 - **Analytics ▸ GEO** lists the crawlers themselves — which assistant fetched which page, for live answers, indexing or training; see [AI visibility](../geo/ai-visibility.md)
-- **Graph** in the sidebar colours a map of your docs by **AI Answers** (visits that arrived via an AI assistant) or **Training** (hits from AI training crawlers)
+- **Graph** in the sidebar shows pages lit up by agents, readers and bots; click a walker in the feed to frame every page it touched, **Replay** it, or **Follow** the newest touch
 
 ![Graph over the last 7 days: the map of pages with the most-touched pages and the busiest routes beside it](../images/admin/brain-history-dark.webp)
 
@@ -79,8 +81,6 @@ Until both are set, Revenue and Revenue/visitor show a dash and **Set up →**, 
 - **Potential** — what a reader is worth on one scale: full value once they reached your Call To Action URL, and a share of it for everyone else, by how closely they follow a converter's path; it ranks readers and is not a revenue forecast
 - **Search and sort** — search by handle, country, language or source, and sort by **Potential** to find who to look at next
 - **Open a row** to see everything that reader did, in order; **Improve** asks the agent where the docs are failing them
-
-**Open Live Map** on Insights shows readers live on a world map: the page each one is on, how long they have been on the docs, and what they just did.
 
 ## What the agent reads from here
 

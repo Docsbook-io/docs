@@ -16,6 +16,35 @@ They find the **fastest win** and **ship it as a pull request**.
 
 <!-- /widget -->
 
+<!-- widget:tabs product -->
+
+### Visibility {eye}
+
+![Growth ▸ Visibility: search phrases with monthly searches, Google position, clicks, views and CTR for each](./images/admin/growth-visibility.webp#gh-light-mode-only)
+![Growth ▸ Visibility: search phrases with monthly searches, Google position, clicks, views and CTR for each](./images/admin/growth-visibility-dark.webp#gh-dark-mode-only)
+
+### Opportunities {target}
+
+![Growth ▸ Opportunities: phrases marked Others cited, Shared or You're cited, sorted by what to win first](./images/admin/growth-opportunities.webp#gh-light-mode-only)
+![Growth ▸ Opportunities: phrases marked Others cited, Shared or You're cited, sorted by what to win first](./images/admin/growth-opportunities-dark.webp#gh-dark-mode-only)
+
+### Audit {clipboard-check}
+
+![Growth ▸ Audit: competitor comparison turned into actions — Replicate, Explain better, Exploit, Keep](./images/admin/growth-audit.webp#gh-light-mode-only)
+![Growth ▸ Audit: competitor comparison turned into actions — Replicate, Explain better, Exploit, Keep](./images/admin/growth-audit-dark.webp#gh-dark-mode-only)
+
+### Issues {circle-dot}
+
+![Growth ▸ Issues: agent-filed issues, each with a forecast metric and a check date](./images/admin/growth-issues.webp#gh-light-mode-only)
+![Growth ▸ Issues: agent-filed issues, each with a forecast metric and a check date](./images/admin/growth-issues-dark.webp#gh-dark-mode-only)
+
+### Pull requests {git-pull-request}
+
+![Growth ▸ Pull requests: merged agent pull requests, each verified with its measured result](./images/admin/growth-pull-requests.webp#gh-light-mode-only)
+![Growth ▸ Pull requests: merged agent pull requests, each verified with its measured result](./images/admin/growth-pull-requests-dark.webp#gh-dark-mode-only)
+
+<!-- /widget -->
+
 <!-- widget:stats cols=4 -->
 
 - **299** — rules of documentation craft the agent checks
@@ -25,51 +54,154 @@ They find the **fastest win** and **ship it as a pull request**.
 
 <!-- /widget -->
 
-## What your docs get
+<!-- widget:bento scroll -->
 
-Six things every Docsbook site does — and the agent keeps improving on its own.
+- **Tell it about your product** — Any business: a sentence, your website, a PDF is enough. The agent reads it, studies your market and your rivals, and comes back with money you are leaving on the table. {badge:Brief} {scene:chat}
 
-<!-- widget:cards icons=inline cols=3 arrow=hover -->
+  - **Apartments** {house}
+    - **You** — We rent 24 apartments by the sea in Lisbon. Our site is `casamar.pt`.
+    - **Agent** — Reading your site · 24 apartments, 318 photos {globe} {tool}
+    - **Agent** — Taking your brand · `#0f766e` `#f59e0b` Fraunces {palette} {tool}
+    - **Agent** — Checking Google and Bing · 8,100 searches for Lisbon apartments {tool}
+    - **Agent** — Asking ChatGPT, Perplexity and Gemini · they send guests to Booking.com {tool}
+    - **Agent** — Reading 412 guest reviews · "are pets OK?" asked 37 times {star} {tool}
+    - **Agent** — Comparing rivals' sites · 5 with galleries and a FAQ {swords} {tool}
+    - **Agent** — Pricing the gap · €140 a night, 4 nights a stay {calculator} {tool}
+    - **Agent** — **€9,800 a month in direct bookings.** 2,600 people a month look for a pet-friendly stay in Lisbon — you allow pets and never say so. I'm building those pages first, photos included. {win}
+  - **Restaurant** {utensils}
+    - **You** — We run a Mediterranean restaurant in Austin. Our site is `oliveandthyme.com`.
+    - **Agent** — Reading your site and menus · 64 dishes, 2 menus as PDF {utensils} {tool}
+    - **Agent** — Taking your brand · `#9a3412` `#78350f` Playfair {palette} {tool}
+    - **Agent** — Checking Google · 5,400 searches for brunch and private dining {tool}
+    - **Agent** — Asking ChatGPT and Perplexity · they recommend 3 places, not you {tool}
+    - **Agent** — Reading 860 reviews · "gluten-free?" asked 52 times {star} {tool}
+    - **Agent** — Comparing rivals' sites · menus with photos and prices {swords} {tool}
+    - **Agent** — Pricing the gap · $62 average bill {calculator} {tool}
+    - **Agent** — **$7,300 a month from private dining.** 1,200 people a month look for a private room for 20 — you have one, and your site hides it in a PDF. Its page goes up first, with photos. {win}
+  - **Tours** {mountain}
+    - **You** — We run small-group trips — the Dolomites, Cappadocia, the Maldives. Our site is `wanderco.travel`.
+    - **Agent** — Reading your site · 18 trips, 540 photos, 3 languages {globe} {tool}
+    - **Agent** — Taking your brand · `#0369a1` `#0c4a6e` Poppins {palette} {tool}
+    - **Agent** — Checking Google and Bing · 12,000 searches for Lake Braies tours {tool}
+    - **Agent** — Asking ChatGPT, Perplexity and Gemini · they list GetYourGuide, not you {tool}
+    - **Agent** — Reading 1,240 reviews · "is it OK for kids?" asked 64 times {star} {tool}
+    - **Agent** — Comparing rivals' sites · day-by-day plans with maps and photos {swords} {tool}
+    - **Agent** — Pricing the gap · €180 a seat {calculator} {tool}
+    - **Agent** — **€11,200 a month in direct bookings.** 3,400 people a month plan a family trip to Lake Braies — your trips take kids from 6, and no page says so. I'm writing it first, with the photos. {win}
+  - **Software** {code}
+    - **You** — We make scheduling software for clinics. Our site is `acme.health`.
+    - **Agent** — Reading your site · 38 pages, 3 plans, 40 help articles {globe} {tool}
+    - **Agent** — Taking your brand · `#6d5efc` `#1e1b4b` Inter {palette} {tool}
+    - **Agent** — Checking Google and Bing · 214 searches for clinic booking {tool}
+    - **Agent** — Asking ChatGPT, Perplexity and Gemini · they name 3 rivals, not you {tool}
+    - **Agent** — Reading rivals' docs · Calendly, Cal.com, Jane {swords} {tool}
+    - **Agent** — Mining support questions · 40 asked, 12 never answered {message-circle-question} {tool}
+    - **Agent** — Pricing the gap · $280 average order {calculator} {tool}
+    - **Agent** — **$8,400 a month is on the table.** 3,100 people a month ask if they can cancel for free before they book — only your rivals answer. I'm writing those pages first. {win}
 
-- [Search engines see you](./seo/README.md) — Server-rendered pages, sitemaps and structured data, and an agent that tunes titles and answers to real queries. {search}
-- [AI engines read and cite you](./geo/README.md) — Open doors for AI crawlers, a Markdown copy of every page, and an agent that fixes the pages behind wrong AI answers. {sparkles}
-- [A second brain for your product](./brain/README.md) — Your pages, your code and what the agent learned, searchable by meaning for you, your readers and their agents. {brain}
-- [AI answers your readers](./ai-chat/README.md) — A chat grounded in your pages, with sources — and the questions it could not answer turned into pages. {message-circle}
-- [AI writes and updates your docs](./agent/README.md) — One worker that reads, writes, configures and measures, on your word or on a trigger. {bot}
-- [You hear every reader](./analytics/README.md) — Ratings, failed searches, dead ends and chat questions per page, fed straight back to the agent. {ear}
+- **It builds your site in your brand** — Photos and galleries, navigation, search, AI chat and your own domain — in the logo, colours and type from your website. Every page is written for you and lands as a change you can review. {badge:Site} {scene:browser}
 
-<!-- /widget -->
+  - **Apartments** {house}
+    - `casamar.pt`
+    - `#0f766e`
+    - `#134e4a`
+    - `#f59e0b`
+    - `Fraunces`
+    - **Casa Mar Stays**
+    - **Apartments**
+    - **Sea View Villa** — Three bedrooms, a private pool and the Atlantic from every window. Pets welcome · from €240 a night.
+    - Alfama Loft
+    - Garden Studio
+    - **Your stay**
+    - Check-in and keys
+    - Pets welcome
+    - Free cancellation
+    - [Check availability](#)
+    - ![Sea View Villa](images/landing/stay-villa.webp)
+    - ![Living room](images/landing/stay-living.webp)
+    - ![Bedroom](images/landing/stay-bedroom.webp)
+    - ![Lounge](images/landing/stay-lounge.webp)
+    - ![Kitchen](images/landing/stay-kitchen.webp)
+  - **Restaurant** {utensils}
+    - `oliveandthyme.com`
+    - `#9a3412`
+    - `#78350f`
+    - `#fbbf24`
+    - `Playfair`
+    - **Olive & Thyme**
+    - **Eat with us**
+    - **Private dining** — A candle-lit room for up to 24 guests, a set menu from $65 and a sommelier who stays till the end.
+    - Brunch
+    - Dinner menu
+    - **Visit**
+    - Reservations
+    - Allergies and diets
+    - Gift cards
+    - [Book a table](#)
+    - ![Dining room](images/landing/food-hall.webp)
+    - ![Plates](images/landing/food-plates.webp)
+    - ![Bowl](images/landing/food-bowl.webp)
+    - ![Pizza](images/landing/food-pizza.webp)
+    - ![Table](images/landing/food-table.webp)
+  - **Tours** {mountain}
+    - `wanderco.travel`
+    - `#0369a1`
+    - `#0c4a6e`
+    - `#f97316`
+    - `Poppins`
+    - **Wander & Co.**
+    - **Trips**
+    - **Lake Braies at sunrise** — A small group, a wooden boat and the lake before the crowds. Kids from 6 · from €180.
+    - Cappadocia by balloon
+    - Maldives, slow
+    - **Plan your trip**
+    - What to bring
+    - Travelling with kids
+    - Free cancellation
+    - [Book this trip](#)
+    - ![Lake Braies](images/landing/tour-lake.webp)
+    - ![Boat](images/landing/tour-boat.webp)
+    - ![Balloons](images/landing/tour-balloons.webp)
+    - ![Beach](images/landing/tour-beach.webp)
+    - ![Road](images/landing/tour-road.webp)
+  - **Software** {code}
+    - `docs.acme.health`
+    - `#6d5efc`
+    - `#1e1b4b`
+    - `#f59e0b`
+    - `Inter`
+    - **Acme Health**
+    - **Get started**
+    - **Introduction** — Acme Health books appointments, sends reminders and takes payments for your clinic. Set it up in ten minutes.
+    - Quickstart
+    - Free cancellation
+    - **Guides**
+    - Booking rules
+    - Payments
+    - Reminders
+    - **Reference**
+    - API reference
 
-## Agents that keep working when you stop
+- **It gets you found and cited** — Pages built to rank on Google and to be quoted by ChatGPT, Perplexity and Claude, checked against 299 published rules. {badge:SEO & GEO} {tags}
 
-<!-- widget:bento -->
+  - Google
+  - Bing
+  - ChatGPT
+  - Perplexity
+  - Claude
+  - Gemini
 
-- **Wakes up on its own** — 50 ready-made workflows run on a schedule, a docs event or a GitHub change, and each one is pointed at a number: clicks, citations, answers, customers. {badge:Triggers} {span:7} {triggers}
+- **It keeps growing on its own** — Triggers wake the agent on a release, a traffic drop or an unanswered question — and it comes back with the fix. {badge:Always on} {triggers}
 
-  - **Write the release notes** — On every commit · turns what shipped into a page {megaphone} {github} {badge:Release}
+  - **Write the release notes** — On every release · turns what shipped into a page {git-merge} {github} {badge:Release}
   - **Explain a traffic drop** — Weekly · finds the pages that lost readers {trending-down} {schedule} {badge:SEO}
-  - **Where competitors get named** — Weekly · questions someone else answers {swords} {schedule} {badge:GEO}
-  - **Docs a new customer needs** — Someone paid · checks it is documented {credit-card} {event} {badge:Revenue} {on}
-  - **Do AI engines cite you** — Weekly · fixes why ChatGPT cites others {sparkles} {schedule} {badge:GEO} {on}
-  - **Write the pages readers wanted** — A search found nothing · writes it {search-x} {event} {badge:SEO} {on}
-  - **Answer what the chat could not** — A question went unanswered · writes it {message-circle-question} {event} {badge:Support} {on}
-
-- **Plugs into 1000+ apps** — Slack, Linear, Notion, HubSpot, Google Workspace or any MCP server. The agent reads where the questions get asked and where the launches get planned. {badge:Integrations} {span:5} {count:1000+} {plug}
-
-- **Knows what good documentation looks like** — Analytics ▸ Audit judges your pages against 299 rules from search engines, standards bodies and published research, and turns each miss into work with a forecast. {badge:Expertise} {span:12} {side} {tags} {graduation-cap}
-
-  - Intent
-  - Titles & snippets
-  - Crawl & index
-  - AI crawlers
-  - Passages
-  - First screen
-  - Plain language
-  - Freshness
-
-- **Found on Google** — Clicks, impressions and positions per query and per page, who ranks ahead of you, and the fix for the pages losing clicks. {badge:SEO} {span:6} {search}
-
-- **Cited by AI engines** — Which AI crawlers read each page, which of your questions name you, and the fix for the pages behind wrong answers. {badge:GEO} {span:6} {sparkles}
+  - **Do AI engines cite you** — Weekly · fixes why ChatGPT cites others {sparkles} {schedule} {badge:GEO}
+  - **Answer what the chat could not** — A question went unanswered · writes it {message-circle-question} {event} {badge:Support}
+  - **Beat a rival's new page** — Daily · answers it before it ranks {swords} {schedule} {badge:Market}
+  - **Fix what went stale** — On every merge · rewrites pages the code changed {file-pen} {github} {badge:Accuracy}
+  - **Fill a search gap** — Weekly · writes the page people search for {search} {schedule} {badge:SEO}
+  - **Translate new pages** — A page was published · ships it in 12 languages {languages} {event} {badge:Global}
+  - **Grow the page that sells** — Weekly · sharpens the page closest to a sale {wallet} {schedule} {badge:Revenue}
 
 <!-- /widget -->
 
@@ -85,84 +217,79 @@ The agent finds the opportunity on its own and asks your team only for the fact 
 
 - **Docsbook Agent** 10:02 AM
 
-  Found an opportunity: **4,200 people a month** search for a HIPAA-compliant tool like yours.
-
-  AI answers recommend your competitors.
-
-- **Docsbook Agent** 10:02 AM
-
-  Your docs and site don't say if you're HIPAA-compliant. Are you? How does it work?
+  **3,100 people a month** ask Google and ChatGPT if they can cancel for free before they buy. The answers name your competitors — your site never says. Can customers cancel for free? Until when?
 
 - **Maya Chen** 10:14 AM
 
-  Yes — through the API, on the Enterprise plan only. We sign a BAA.
+  Free up to 48 hours before. After that we refund 80%.
 
 - **Docsbook Agent** 10:15 AM
 
-  Great, exactly what I needed. I'll update the pages and keep this as confirmed knowledge.
+  Got it. Once the pages say so, I expect **~30 more customers** a month — at your **$280 average order**, about **$8,400**.
 
-  Then I'll measure the result and report back in two weeks.
+- **Docsbook Agent** 10:15 AM
+
+  I'll update 3 pages and check back in two weeks. I'll tell you whether it worked.
 
 ### Inbox
 
-- **HIPAA: $96k in Enterprise pipeline** *now* {badge:HIPAA} {unread}
+- **Free cancellation: +$8,400 in sales** *now* {badge:Sales} {unread}
 
-  Two weeks ago you said HIPAA works through the API, on **Enterprise** only. I used it to update 3 pages.
+  Two weeks ago you told me: free cancellation up to 48 hours before. I put it on 3 pages — each now answers "Can I cancel for free?" in its first line. The forecast was $8,400; here is what came in.
 
-  Each page now answers "Are you HIPAA-compliant?" first.
+  **What changed** {trending-up}
 
-  Why it works: [the facts AI checks before citing](./agent/expertise.md) {graduation-cap}
+  - **+$8,400** in sales from these 3 pages {wallet}
+  - **+310** visitors who came ready to buy {users}
+  - **+4** answers in ChatGPT and Perplexity now name you {sparkles}
+  - **+38%** more people see you on Google {search}
 
-  **What changed**
+  **Why it works** {graduation-cap}
 
-  - **$96k ARR** in pipeline: 3 Enterprise demos from these pages
-  - **+41** qualified visitors from healthcare companies
-  - **+4** new citations in ChatGPT and Perplexity
-  - **+38%** qualified impressions on Google
-  - **12** AI prompts now answer with your Enterprise plan
+  Google and ChatGPT show the page that answers the question plainly. Their own guides say so:
 
-  **What I learned**
+  - [Google Search guide — ranks first the page that answers the searcher's question most directly](./agent/expertise.md) {logos:google-icon}
+  - [Google AI features guide — AI Overviews link pages that already answer well in Search](./agent/expertise.md) {logos:google-icon}
+  - [OpenAI help center — ChatGPT search answers with links to the pages it used](./agent/expertise.md) {simple-icons:openai}
 
-  AI answers about HIPAA now name you. A competitor still ranks above you on Google.
+  **Next opportunity** {target}
 
-  **Next opportunity**
+  People also ask about discounts, and your prices page doesn't say.
 
-  Your comparison page has another gap. I need one fact about **team features** to go on.
+  > **Asked in #growth:** do you give a discount for longer stays or bigger orders?
 
-  **Asked in #growth:** which roles can see team usage?
-
-- **September: +$2,970 new MRR from the docs** *1d* {badge:Monthly} {unread}
+- **September: +$2,970 from your site** *1d* {badge:Monthly} {unread}
 
   Six changes shipped this month, and five moved a number.
 
-  **What changed**
+  **What changed** {trending-up}
 
-  - **+$2,970** new MRR from docs visitors
-  - **+118** trial signups
-  - **+3,920** visitors from search and AI answers
-  - **5 of 6** forecasts came true
+  - **+$2,970** new revenue from site visitors {wallet}
+  - **+118** new leads {users}
+  - **+3,920** visitors from Google and AI answers {search}
+  - **5 of 6** forecasts came true {circle-check}
 
-  **Best change**
+  **Best change** {trophy}
 
-  The pricing page: click rate went from **0.9%** to **3.1%** at the same position.
+  The prices page: the share of people clicking it on Google went from **0.9%** to **3.1%** — same spot in the results.
 
-- **Pricing page: 3.4× the clicks at the same position** *5d* {badge:SEO}
+- **Prices page: 3.4× the clicks from Google** *5d* {badge:Google}
 
-  It sat at position 6 with a 0.9% click rate. The new title and first line answer the query.
+  It sat 6th on Google and only 0.9% of people clicked. The new title and first line answer the question right away.
 
-  - **+140** clicks a month
-  - **+11** trial signups
-  - **3.1%** click rate, up from 0.9%
+  - **+140** clicks a month {mouse-pointer-click}
+  - **+11** new customers {users}
+  - **3.1%** click rate, up from 0.9% {trending-up}
 
-  Why it works: [a quick-fact query needs its answer in 1–2 sentences](./agent/expertise.md) {graduation-cap}
+  Proof: [Google title-link guide — write a descriptive, concise title for every page](./agent/expertise.md) {logos:google-icon}
 
-- **SSO: 23 questions answered, 2 Enterprise trials kept** *1w* {badge:Support}
+- **Payment methods: 23 questions answered, 2 sales saved** *1w* {badge:Support}
 
-  23 readers asked the chat how to set up SSO. A page now answers them.
+  23 visitors asked the chat which payment methods you accept. A page now answers them.
 
-  - **0** SSO questions since the page went live
-  - **2** Enterprise trials kept
-  - **1** page written
+  - **0** payment questions since the page went live {message-circle}
+  - **2** sales that would have been lost {wallet}
+  - **1** page written {file-text}
 
 <!-- /widget -->
 

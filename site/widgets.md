@@ -48,6 +48,7 @@ A custom domain needs one DNS record. See [Custom domain](./custom-domain.md).
 | `endpoints` | A list of calls as index rows: a verb pill, the name, the path and one line | The index page of an API or MCP reference folder |
 | `cta` | A compact block with buttons; on a front page, `agents` adds a row of agent chat windows and `inbox` a chat thread over an Inbox | The one next step on a page |
 | `cta-form` | The same block with one input field | A next step that starts with an email or a URL |
+| `form` | A contact form whose answers reach you by email and as a `form.submitted` event | Enquiries, booking and quote requests |
 | `recommendations` | Ranked findings with severity badges | "Fix this first" lists and audit results |
 | `hero` | An opener with a lead, quick links and a prompt for the reader's agent; `size=large` or `size=xl` for a front page without a sidebar | A docs home or a section landing page |
 | `showcase` | A gallery led by screenshots | Customer sites, templates, examples |
@@ -73,6 +74,39 @@ layout: landing
 ```
 
 Keep each category's posts in their own folder, such as `blog/compare/` and `blog/migrate/`, and give the index one heading per folder inside a `stories` widget: each heading becomes a filter chip, and `?category=compare` opens the index on that chip. Open each post with a `story` widget. This site's [blog](../blog/README.md) is built this way.
+
+## Collect enquiries with a form
+
+A `form` widget turns a bulleted list into a form your readers fill in on the page. Each bullet is one field, its text is the label, and a `*` makes it required:
+
+```markdown
+<!-- widget:form name=booking -->
+
+## Request a booking
+
+Tell us your dates and we will confirm within a day.
+
+- Name *
+- Email * — you@example.com
+- Apartment {select}
+  - Studio
+  - One bedroom
+- Check-in {date} {required}
+- Guests {number}
+- Anything we should know? {textarea}
+
+[Send request](#)
+
+> **Thanks — request received.** We will email you within one business day.
+
+<!-- /widget -->
+```
+
+- **Field types** — `{email}`, `{tel}`, `{number}`, `{date}`, `{url}`, `{textarea}`, `{select}`, `{radio}` or `{checkbox}` on the bullet; a nested list gives a drop-down its options, and text after ` — ` is the placeholder
+- **The button** — the link after the list; `#` keeps the reader on the page and shows the quote as the thank-you, any other link is where they go after sending
+- **Where answers go** — every submission is emailed to the project owner and fires `form.submitted` for your [triggers and webhooks](../agent/triggers.md); `name=` tells two forms apart
+
+The markdown never holds an email address or an endpoint, so a form can only ever reach the owner of the site it is on. This site's [Enterprise page](../enterprise.md) takes its leads with one.
 
 ## Switch a widget off
 
