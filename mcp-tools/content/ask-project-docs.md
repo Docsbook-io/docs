@@ -26,6 +26,10 @@ Ask a question about THIS project's own documentation and get back a synthesized
 
 - NOT for browsing the content yourself — that is `search_project_docs` (by meaning), `search_docs` (literal string), `read_project_doc` (one page in full) or `get_project_doc_outline` (what exists).
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

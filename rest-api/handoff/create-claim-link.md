@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/create_claim_link`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `expires_in_days` | integer | no | How long the link stays claimable, in days (default 7, max 30). Also pushes out the expiry of an already-pending link. |
 
 ### Returns

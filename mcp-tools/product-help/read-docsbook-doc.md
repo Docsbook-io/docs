@@ -23,6 +23,10 @@ Read ONE page of DOCSBOOK'S OWN official documentation in full, verbatim, by the
 
 - 🔴 This is Docsbook the PLATFORM's own manual, not the user's documentation — that is the project's own read-page tool (`read_project_doc` on the signed-in server, or the branded one a public endpoint names).
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

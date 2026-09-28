@@ -19,7 +19,7 @@ Also reachable by name at `POST /api/v1/tools/docsbook_agent_activity`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `task_id` | string | no | The job to watch — the id docsbook_agent returned. |
 | `after` | number | no | Resume from here: the `next_after` of your last call. Omit to start at the beginning. |
 | `limit` | number | no | How many steps, 1-200. Default 50. |

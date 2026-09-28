@@ -30,6 +30,10 @@ Read one of this workspace's connected sources (see `list_sources`) — how you 
 
 - Never pass 0 or a guessed id.
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

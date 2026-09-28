@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/upload_translation`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `source_path` | string | no | Source document path (e.g. 'guides/quick-start.md') |
 | `language` | string | no | Target language code (e.g. 'es', 'fr') |
 | `content` | string | no | Translated content |

@@ -23,6 +23,10 @@ Archive a goal by name. Archived rather than destroyed, because a funnel step po
 | `workspace_id` | number | — |
 | `archived` | string | The goal's key. |
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

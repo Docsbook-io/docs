@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/create_goal`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `key` | string | no | Machine name, e.g. 'reached_pricing'. Lowercase and underscores; it is the handle funnels and these tools refer to the goal by. Never put a path, id or email in it. |
 | `kind` | string | no | page = a pageview of a path. event = one of the events the docs emit (see get_analytics event names). section = a heading/anchor came into view — THIS is how a 'scrolled as far as pricing' goal works, and it needs no new tracking. outbound = a click leaving for a host (matched by host, so query strings do not matter). One of: `page`, `event`, `section`, `outbound`. |
 | `match` | string | no | What to match: a path for 'page', an event name for 'event', a heading anchor for 'section' (with or without the '#'), a host for 'outbound'. |

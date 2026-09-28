@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/write_context`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `path` | string | no | `<folder>/<name>.md` for the organization, `projects/<project id>/<folder>/<name>.md` for one project. Lowercase, hyphens, named for what it holds — `pricing-is-per-seat.md`, not `note-3.md`. |
 | `title` | string | no | The one line a later run reads when deciding whether to open this file at all. |
 | `body` | string | no | The knowledge itself, in prose. One thing per file — a file holding three cannot be corrected later, only replaced. |

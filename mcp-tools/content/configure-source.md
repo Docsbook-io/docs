@@ -33,6 +33,10 @@ Change or disconnect one of this project's connected sources (see `list_sources`
 
 - REQUIRES a read-write MCP token.
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

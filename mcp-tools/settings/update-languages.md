@@ -50,6 +50,10 @@ Set the languages the site is served in — the call for 'we need docs in Spanis
 | `publish_mismatch_warning` | string | Present only when the live site does not show what was published. |
 | `…` | … | Plus every other project setting on this row — branding colors/fonts, navigation, UI toggles, SEO/GEO/AEO flags, access rules, domain, languages — minus secrets. |
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

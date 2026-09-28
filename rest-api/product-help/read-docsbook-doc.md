@@ -19,7 +19,7 @@ Also reachable by name at `POST /api/v1/tools/read_docsbook_doc`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `path` | string | yes | Path in the official docs, from a search_docsbook_docs hit, e.g. 'ai/chat.md'. |
 
 ### Returns

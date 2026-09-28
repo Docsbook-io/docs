@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/unregister_webhook`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `webhook_id` | integer | no | Webhook id (from list_webhooks). |
 
 ### Returns

@@ -21,6 +21,10 @@ THE DOCSBOOK AGENT — a general-purpose worker you delegate to. Say what you wa
 
 - SAFE TO HAND WORK TO: every page change is an ordinary git commit in the project's own repository, so it is reviewable and revertible like any other; written pages land at `generated`/`review` status and this path can never mark anything `approved` — sign-off stays a separate, deliberate human act; it asks you rather than guessing when a decision is yours; and `docsbook_agent_stop` ends it at any point.
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

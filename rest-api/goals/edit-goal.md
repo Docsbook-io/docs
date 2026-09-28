@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/edit_goal`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `key` | string | no | The goal's name, from list_goals. Not editable — see the description. |
 | `kind` | string | no | page = a pageview of a path. event = one of the events the docs emit (see get_analytics event names). section = a heading/anchor came into view — THIS is how a 'scrolled as far as pricing' goal works, and it needs no new tracking. outbound = a click leaving for a host (matched by host, so query strings do not matter). One of: `page`, `event`, `section`, `outbound`. |
 | `match` | string | no | New matcher: a path for 'page', an event name for 'event', an anchor for 'section', a host for 'outbound'. |

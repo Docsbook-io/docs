@@ -30,6 +30,10 @@ List the sources this documentation is connected to — the repositories and web
 
 - `id` is a string, not a number, for two kinds of row that were never 'connected' by hand — it equals `origin`: `workspace_repo` is the repository the docs are built from (read it with `read_source source_id: "workspace_repo"`; arm a commit trigger on it with `enable_agent`'s `watch_source_id: "workspace_repo"`, no need to `connect_source` it first); `site_source` is the legacy single URL set in Branding (readable, but not a repository — it cannot be a commit trigger).
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

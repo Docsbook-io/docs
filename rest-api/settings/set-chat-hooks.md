@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/set_chat_hooks`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `pre_url` | string | no | Pre-LLM hook URL — receives {question, session_id, workspace_id}, may return {block, reason} or {inject_context} |
 | `post_url` | string | no | Post-LLM hook URL — fire-and-forget POST with {question, answer, tool_calls, latency_ms} |
 | `streaming_url` | string | no | Streaming events webhook URL — fire-and-forget SSE-style events |

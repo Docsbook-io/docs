@@ -37,6 +37,10 @@ Use get_mentions to read what the checks found.
 - Choose what the mention checks watch on one engine: turn the daily check on or off, and set the queries (up to 5) — the exact words a reader would type or ask.
 - Queries a workspace does NOT rank for are the point: those are the ones Search Console can never report on.
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

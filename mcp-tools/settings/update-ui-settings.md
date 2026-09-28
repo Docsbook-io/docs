@@ -92,6 +92,10 @@ Show or hide one interface element of the docs site — the header search button
 
 - Use it for 'hide the search button', 'remove breadcrumbs', «убери кнопку поиска».
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

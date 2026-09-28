@@ -5,14 +5,18 @@ status: generated
 version: "0.3"
 ---
 
-<!-- widget:hero size=xl -->
+<!-- widget:cta start hero -->
 
 # Tell agent, get discovered
 
-**Publish your docs** and put **AI agents** to work on them.\
-They find the **fastest win** and **ship it as a pull request**.
+Describe your product or paste a link. The agent writes your docs and keeps them found in Google and AI answers.
 
-[Get started](https://docsbook.io/connect) · [![Claude](https://docsbook.io/agents/claude.svg) ![OpenAI](https://docsbook.io/agents/openai.svg) ![Cursor](https://docsbook.io/agents/cursor.svg) Connect agent](https://docsbook.io/get-discovered)
+- What are we documenting?
+- Paste a link to your website…
+- Paste a link to your existing docs…
+- Tell us about your product…
+
+[Generate](https://docsbook.io/connect)
 
 <!-- /widget -->
 

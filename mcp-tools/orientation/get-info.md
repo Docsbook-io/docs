@@ -27,6 +27,10 @@ What this Docsbook MCP server is and how to work it: the plan tiers and what eac
 | `token_scope` | string | — |
 | `write_access` | string | — |
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

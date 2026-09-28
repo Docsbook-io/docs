@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/delete_goal`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `key` | string | no | The goal's name. |
 
 ### Returns

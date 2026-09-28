@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/configure_source`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `source_id` | number | no | The source's id from list_sources. |
 | `match` | string | no | Part of its label or URL, when you do not have the id (e.g. 'acme/api'). |
 | `note` | string | no | Replace what this source is for. Read as instruction by everything that reads the source. |

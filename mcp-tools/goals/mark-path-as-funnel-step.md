@@ -28,6 +28,10 @@ Add a documentation PAGE to a funnel as its next step, creating the page goal if
 | `issues` | object[] | — |
 | `unchanged` | string | — |
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

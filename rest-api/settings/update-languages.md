@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/update_languages`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `enabled_languages` | string[] | no | ISO language codes to enable |
 | `default_language` | string | no | Default language code |
 

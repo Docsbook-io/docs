@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/connect_source`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `url` | string | no | The address to connect: 'https://github.com/acme/api', 'https://acme.com', or one page of it. |
 | `note` | string | no | What this source is for, in the owner's words — read as instruction by every tool that later reads the source. |
 | `label` | string | no | What to call it in the list. Defaults to the repository or host name. |

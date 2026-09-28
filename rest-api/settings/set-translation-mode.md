@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/set_translation_mode`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `mode` | string | no | Translation workflow mode One of: `auto`, `manual`, `external`. |
 | `external_webhook_url` | string | no | Webhook URL (required for 'external' mode, empty string clears) |
 

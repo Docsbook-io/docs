@@ -25,6 +25,10 @@ Change the ADDRESS of the site: the <name> in <name>.docsbook.io — its path na
 - The name is slugged the way the create form slugs it ('Acme API' → acme-api); a taken or reserved name is REFUSED, never silently suffixed into a different URL.
 - 🔴 THIS MOVES A LIVE URL — the old address stops serving the site, so only call it when the user asked for it.
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

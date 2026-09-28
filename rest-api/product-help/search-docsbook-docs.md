@@ -19,7 +19,7 @@ Also reachable by name at `POST /api/v1/tools/search_docsbook_docs`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `query` | string | yes | The question, in English, in natural language — not keywords. Long is good: paste the user's whole request if it has several parts, each part is searched separately and the results merged. |
 | `limit` | integer | no | Max results (default 8). |
 

@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/configure_mentions`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `surface` | string | no | Which engine this arms: ai_overview (Google's AI answer), google or bing (the results page). One of: `ai_overview`, `google`, `bing`. |
 | `enabled` | boolean | no | Whether the daily check runs. Queries are kept either way. |
 | `queries` | string[] | no | The queries to check, up to 5. Replaces the saved list. |

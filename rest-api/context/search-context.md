@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/search_context`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `query` | string | yes | Words to look for, in any language — at least three characters. |
 
 ### Returns

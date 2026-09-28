@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/create_funnel`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `key` | string | no | Machine name, e.g. 'evaluation'. |
 | `steps` | string[] | no | Goal names, in order. Between 2 and 8. Create the goals first with create_goal. |
 | `label` | string | no | Human label. Defaults to the key. |

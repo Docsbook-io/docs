@@ -24,6 +24,10 @@ Read ONE documentation page in full — its complete markdown, title and repo pa
 
 - 🔴 When that is false the page is NOT a source of truth — a machine drafted it, or a human has not signed it off, or it was superseded.
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

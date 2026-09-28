@@ -58,6 +58,10 @@ Create a new Docsbook documentation site (workspace) — the FIRST call for 'mak
 
 - Never pass somebody else's repository — a competitor's, a prospect's, an open-source project you are only reading: naming one does not create documentation from it, it would claim their name on a public Docsbook address.
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

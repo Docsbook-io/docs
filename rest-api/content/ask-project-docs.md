@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/ask_project_docs`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `question` | string | yes | The question, in plain language, any language — the whole question, not a keyword: this is what the corpus is searched by. |
 | `context` | string | no | Optional: what sharpens the answer — which section or audience you mean, why you're asking. Read as the asker's situation and never cited back as a documented fact; keep it out of `question`, which is what retrieval embeds. |
 | `session_id` | string | no | Optional: reuse the same id across calls to group them as one conversation. |
