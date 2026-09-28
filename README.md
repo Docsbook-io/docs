@@ -199,13 +199,21 @@ They find the **fastest win** and **ship it as a pull request**.
 
   - **Grow the page that sells** — Weekly · sharpens the page closest to a sale {wallet} {schedule} {badge:Revenue} {gain:+$3,400/mo}
   - **Answer what buyers ask** — A question went unanswered · writes the page {message-circle-question} {event} {badge:Sales} {gain:+$2,600/mo}
+  - **Win back the buyers who left** — Weekly · rewrites the page where people drop off before paying {shopping-cart} {schedule} {badge:Conversion} {gain:+$2,200/mo}
   - **Beat a rival's new page** — Daily · answers it before it ranks {swords} {schedule} {badge:Market} {gain:+$1,900/mo}
+  - **Open a new market** — Monthly · finds a city or a language with demand and ships its pages {map-pin} {schedule} {badge:Growth} {gain:+$1,700/mo}
   - **Get cited by ChatGPT** — Weekly · fixes why AI answers name others {sparkles} {schedule} {badge:GEO} {gain:+$1,400/mo}
+  - **Get ahead of the season** — Monthly · writes the pages people will search next month {calendar} {schedule} {badge:Season} {gain:+$1,200/mo}
   - **Win back lost traffic** — Weekly · rewrites the pages that lost readers {trending-down} {schedule} {badge:SEO} {gain:+$1,100/mo}
+  - **Match a rival's price change** — Daily · updates your comparison when theirs moves {tag} {schedule} {badge:Market} {gain:+$900/mo}
   - **Fill a search gap** — Weekly · writes the page people search for {search} {schedule} {badge:SEO} {gain:+$700/mo}
+  - **Launch a new product the same day** — A product was added · page, photos and FAQ ready to sell {rocket} {event} {badge:Launch}
+  - **Answer what reviews keep asking** — New reviews · turns repeat questions into pages {star} {event} {badge:Reviews}
   - **Translate new pages** — A page was published · ships it in 12 languages {languages} {event} {badge:Global}
+  - **Catch a broken page first** — Hourly · fixes dead links and missing photos before buyers see them {shield-check} {schedule} {badge:Health}
   - **Fix what went stale** — On every merge · rewrites pages the code changed {file-pen} {github} {badge:Accuracy}
   - **Write the release notes** — On every release · turns what shipped into a page {git-merge} {github} {badge:Release}
+  - **Report what the pages earned** — Every Monday · leads, bookings and the next best move {chart-no-axes-column} {schedule} {badge:Report}
 
 <!-- /widget -->
 
