@@ -54,36 +54,56 @@ They find the **fastest win** and **ship it as a pull request**.
 
 <!-- /widget -->
 
-## Agents that keep working when you stop
+## How it works
 
-<!-- widget:bento -->
+<!-- widget:bento scroll -->
 
-- **Wakes up on its own** — 50 ready-made workflows run on a schedule, a docs event or a GitHub change, and each one is pointed at a number: clicks, citations, answers, customers. {badge:Triggers} {span:7} {triggers}
+- **Tell it about your product** — A sentence, your website, a PDF — whatever you have. The agent reads it and asks only for what it cannot find. {badge:Brief} {scene:chat}
 
-  - **Write the release notes** — On every commit · turns what shipped into a page {megaphone} {github} {badge:Release}
+  - **You** — We make scheduling software for clinics. Our site is `acme.health`.
+  - **Agent** — Reading your site, pricing and help center…
+  - **Agent** — Found 14 features, 3 plans and 40 support questions. Building your docs now.
+
+- **It builds your site** — Navigation, search, AI chat and your own domain, set up the way a docs team would. {badge:Site} {scene:browser}
+
+  - `docs.acme.health`
+  - Introduction
+  - Quickstart
+  - Booking rules
+  - Payments
+  - Reminders
+  - API reference
+
+- **It puts your brand on it** — Logo, colours and type taken from your website, so the docs look like the rest of your product. {badge:Branding} {scene:brand}
+
+  - `#6d5efc`
+  - `#1e1b4b`
+  - `#f59e0b`
+  - Inter
+
+- **It writes every page** — Quickstart, guides, reference and FAQ, in your voice, with the examples your customers ask for. Every page lands as a change you can review. {badge:Content} {scene:pages}
+
+  - Quickstart
+  - Booking rules
+  - Payments
+  - Reminders
+  - API reference
+
+- **It gets you found and cited** — Pages built to rank on Google and to be quoted by ChatGPT, Perplexity and Claude, checked against 299 published rules. {badge:SEO & GEO} {tags}
+
+  - Google
+  - Bing
+  - ChatGPT
+  - Perplexity
+  - Claude
+  - Gemini
+
+- **It keeps growing on its own** — Triggers wake the agent on a release, a traffic drop or an unanswered question — and it comes back with the fix. {badge:Always on} {triggers}
+
+  - **Write the release notes** — On every release · turns what shipped into a page {git-merge} {github} {badge:Release}
   - **Explain a traffic drop** — Weekly · finds the pages that lost readers {trending-down} {schedule} {badge:SEO}
-  - **Where competitors get named** — Weekly · questions someone else answers {swords} {schedule} {badge:GEO}
-  - **Docs a new customer needs** — Someone paid · checks it is documented {credit-card} {event} {badge:Revenue} {on}
-  - **Do AI engines cite you** — Weekly · fixes why ChatGPT cites others {sparkles} {schedule} {badge:GEO} {on}
-  - **Write the pages readers wanted** — A search found nothing · writes it {search-x} {event} {badge:SEO} {on}
-  - **Answer what the chat could not** — A question went unanswered · writes it {message-circle-question} {event} {badge:Support} {on}
-
-- **Plugs into 1000+ apps** — Slack, Linear, Notion, HubSpot, Google Workspace or any MCP server. The agent reads where the questions get asked and where the launches get planned. {badge:Integrations} {span:5} {count:1000+} {plug}
-
-- **Knows what good documentation looks like** — Analytics ▸ Audit judges your pages against 299 rules from search engines, standards bodies and published research, and turns each miss into work with a forecast. {badge:Expertise} {span:12} {side} {tags} {graduation-cap}
-
-  - Intent
-  - Titles & snippets
-  - Crawl & index
-  - AI crawlers
-  - Passages
-  - First screen
-  - Plain language
-  - Freshness
-
-- **Found on Google** — Clicks, impressions and positions per query and per page, who ranks ahead of you, and the fix for the pages losing clicks. {badge:SEO} {span:6} {search}
-
-- **Cited by AI engines** — Which AI crawlers read each page, which of your questions name you, and the fix for the pages behind wrong answers. {badge:GEO} {span:6} {sparkles}
+  - **Do AI engines cite you** — Weekly · fixes why ChatGPT cites others {sparkles} {schedule} {badge:GEO}
+  - **Answer what the chat could not** — A question went unanswered · writes it {message-circle-question} {event} {badge:Support}
 
 <!-- /widget -->
 
