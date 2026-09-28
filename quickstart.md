@@ -2,7 +2,7 @@
 title: "Quickstart: publish your docs with Docsbook"
 description: "Go from a GitHub repo, a website or a short product description to a live documentation site in minutes, then hand the writing to the Docsbook agent."
 status: generated
-version: "0.2"
+version: "0.3"
 ---
 
 # Quickstart
@@ -11,7 +11,7 @@ Open [docsbook.io/connect](https://docsbook.io/connect), describe your product o
 
 Nothing to install and no card. A GitHub account is optional, and every new account starts with a 14-day Pro trial that includes starter AI credit ([pricing](./pricing/plans.md)).
 
-## Create your site
+## Create a documentation site
 
 The creation screen asks one question — **What are we documenting?** — in a single field with a **Generate** button. Already signed in, **Create new project** in the panel's project switcher opens the same screen.
 
@@ -85,9 +85,13 @@ Then ask for outcomes in your own words — "document our API from the repo", "g
 
 ## FAQ
 
+**How do I create a documentation site without a GitHub account?** Describe your product or paste your website in the field and sign in with Google or email. Docsbook creates and hosts the repository for you; GitHub is needed only to connect a repository you already have.
+
 **Does Docsbook change my repository?** Not on a one-click import from the panel. With **Generate**, the first run only adds pages beside yours and never rewrites your files. Every change the agent makes, the first run's included, arrives as a pull request that merges itself or waits for you, set on **Settings ▸ General ▸ When a change goes live** ([reviewing changes](./agent/review.md)).
 
 **Why didn't the first run start?** It runs once, only for a new project made with **Generate** from something to work from — a description, a link, a repository or files; a template alone isn't enough — and only when your balance covers a run. Otherwise your attached files are published as pages as they are, and you can ask the agent at any time.
+
+**How is Docsbook different from Mintlify or GitBook?** No config file, one flat price per project, and an agent that ships fixes as pull requests. The side-by-side pages: [Mintlify vs Docsbook](./blog/compare/mintlify-vs-docsbook.md) and [GitBook vs Docsbook](./blog/compare/gitbook-vs-docsbook.md). More short answers are in the [FAQ](./faq.md).
 
 ## Next steps
 
