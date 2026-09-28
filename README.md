@@ -54,40 +54,133 @@ They find the **fastest win** and **ship it as a pull request**.
 
 <!-- /widget -->
 
-## How it works
-
 <!-- widget:bento scroll -->
 
-- **Tell it about your product** — A sentence, your website, a PDF — whatever you have. The agent reads it and asks only for what it cannot find. {badge:Brief} {scene:chat}
+- **Tell it about your product** — Any business: a sentence, your website, a PDF is enough. The agent reads it, studies your market and your rivals, and comes back with money you are leaving on the table. {badge:Brief} {scene:chat}
 
-  - **You** — We make scheduling software for clinics. Our site is `acme.health`.
-  - **Agent** — Reading your site, pricing and help center…
-  - **Agent** — Found 14 features, 3 plans and 40 support questions. Building your docs now.
+  - **Apartments** {house}
+    - **You** — We rent 24 apartments by the sea in Lisbon. Our site is `casamar.pt`.
+    - **Agent** — Reading your site · 24 apartments, 318 photos {globe} {tool}
+    - **Agent** — Taking your brand · `#0f766e` `#f59e0b` Fraunces {palette} {tool}
+    - **Agent** — Checking Google and Bing · 8,100 searches for Lisbon apartments {tool}
+    - **Agent** — Asking ChatGPT, Perplexity and Gemini · they send guests to Booking.com {tool}
+    - **Agent** — Reading 412 guest reviews · "are pets OK?" asked 37 times {star} {tool}
+    - **Agent** — Comparing rivals' sites · 5 with galleries and a FAQ {swords} {tool}
+    - **Agent** — Pricing the gap · €140 a night, 4 nights a stay {calculator} {tool}
+    - **Agent** — **€9,800 a month in direct bookings.** 2,600 people a month look for a pet-friendly stay in Lisbon — you allow pets and never say so. I'm building those pages first, photos included. {win}
+  - **Restaurant** {utensils}
+    - **You** — We run a Mediterranean restaurant in Austin. Our site is `oliveandthyme.com`.
+    - **Agent** — Reading your site and menus · 64 dishes, 2 menus as PDF {utensils} {tool}
+    - **Agent** — Taking your brand · `#9a3412` `#78350f` Playfair {palette} {tool}
+    - **Agent** — Checking Google · 5,400 searches for brunch and private dining {tool}
+    - **Agent** — Asking ChatGPT and Perplexity · they recommend 3 places, not you {tool}
+    - **Agent** — Reading 860 reviews · "gluten-free?" asked 52 times {star} {tool}
+    - **Agent** — Comparing rivals' sites · menus with photos and prices {swords} {tool}
+    - **Agent** — Pricing the gap · $62 average bill {calculator} {tool}
+    - **Agent** — **$7,300 a month from private dining.** 1,200 people a month look for a private room for 20 — you have one, and your site hides it in a PDF. Its page goes up first, with photos. {win}
+  - **Tours** {mountain}
+    - **You** — We run small-group trips — the Dolomites, Cappadocia, the Maldives. Our site is `wanderco.travel`.
+    - **Agent** — Reading your site · 18 trips, 540 photos, 3 languages {globe} {tool}
+    - **Agent** — Taking your brand · `#0369a1` `#0c4a6e` Poppins {palette} {tool}
+    - **Agent** — Checking Google and Bing · 12,000 searches for Lake Braies tours {tool}
+    - **Agent** — Asking ChatGPT, Perplexity and Gemini · they list GetYourGuide, not you {tool}
+    - **Agent** — Reading 1,240 reviews · "is it OK for kids?" asked 64 times {star} {tool}
+    - **Agent** — Comparing rivals' sites · day-by-day plans with maps and photos {swords} {tool}
+    - **Agent** — Pricing the gap · €180 a seat {calculator} {tool}
+    - **Agent** — **€11,200 a month in direct bookings.** 3,400 people a month plan a family trip to Lake Braies — your trips take kids from 6, and no page says so. I'm writing it first, with the photos. {win}
+  - **Software** {code}
+    - **You** — We make scheduling software for clinics. Our site is `acme.health`.
+    - **Agent** — Reading your site · 38 pages, 3 plans, 40 help articles {globe} {tool}
+    - **Agent** — Taking your brand · `#6d5efc` `#1e1b4b` Inter {palette} {tool}
+    - **Agent** — Checking Google and Bing · 214 searches for clinic booking {tool}
+    - **Agent** — Asking ChatGPT, Perplexity and Gemini · they name 3 rivals, not you {tool}
+    - **Agent** — Reading rivals' docs · Calendly, Cal.com, Jane {swords} {tool}
+    - **Agent** — Mining support questions · 40 asked, 12 never answered {message-circle-question} {tool}
+    - **Agent** — Pricing the gap · $280 average order {calculator} {tool}
+    - **Agent** — **$8,400 a month is on the table.** 3,100 people a month ask if they can cancel for free before they book — only your rivals answer. I'm writing those pages first. {win}
 
-- **It builds your site** — Navigation, search, AI chat and your own domain, set up the way a docs team would. {badge:Site} {scene:browser}
+- **It builds your site in your brand** — Photos and galleries, navigation, search, AI chat and your own domain — in the logo, colours and type from your website. Every page is written for you and lands as a change you can review. {badge:Site} {scene:browser}
 
-  - `docs.acme.health`
-  - Introduction
-  - Quickstart
-  - Booking rules
-  - Payments
-  - Reminders
-  - API reference
-
-- **It puts your brand on it** — Logo, colours and type taken from your website, so the docs look like the rest of your product. {badge:Branding} {scene:brand}
-
-  - `#6d5efc`
-  - `#1e1b4b`
-  - `#f59e0b`
-  - Inter
-
-- **It writes every page** — Quickstart, guides, reference and FAQ, in your voice, with the examples your customers ask for. Every page lands as a change you can review. {badge:Content} {scene:pages}
-
-  - Quickstart
-  - Booking rules
-  - Payments
-  - Reminders
-  - API reference
+  - **Apartments** {house}
+    - `casamar.pt`
+    - `#0f766e`
+    - `#134e4a`
+    - `#f59e0b`
+    - `Fraunces`
+    - **Casa Mar Stays**
+    - **Apartments**
+    - **Sea View Villa** — Three bedrooms, a private pool and the Atlantic from every window. Pets welcome · from €240 a night.
+    - Alfama Loft
+    - Garden Studio
+    - **Your stay**
+    - Check-in and keys
+    - Pets welcome
+    - Free cancellation
+    - [Check availability](#)
+    - ![Sea View Villa](images/landing/stay-villa.webp)
+    - ![Living room](images/landing/stay-living.webp)
+    - ![Bedroom](images/landing/stay-bedroom.webp)
+    - ![Lounge](images/landing/stay-lounge.webp)
+    - ![Kitchen](images/landing/stay-kitchen.webp)
+  - **Restaurant** {utensils}
+    - `oliveandthyme.com`
+    - `#9a3412`
+    - `#78350f`
+    - `#fbbf24`
+    - `Playfair`
+    - **Olive & Thyme**
+    - **Eat with us**
+    - **Private dining** — A candle-lit room for up to 24 guests, a set menu from $65 and a sommelier who stays till the end.
+    - Brunch
+    - Dinner menu
+    - **Visit**
+    - Reservations
+    - Allergies and diets
+    - Gift cards
+    - [Book a table](#)
+    - ![Dining room](images/landing/food-hall.webp)
+    - ![Plates](images/landing/food-plates.webp)
+    - ![Bowl](images/landing/food-bowl.webp)
+    - ![Pizza](images/landing/food-pizza.webp)
+    - ![Table](images/landing/food-table.webp)
+  - **Tours** {mountain}
+    - `wanderco.travel`
+    - `#0369a1`
+    - `#0c4a6e`
+    - `#f97316`
+    - `Poppins`
+    - **Wander & Co.**
+    - **Trips**
+    - **Lake Braies at sunrise** — A small group, a wooden boat and the lake before the crowds. Kids from 6 · from €180.
+    - Cappadocia by balloon
+    - Maldives, slow
+    - **Plan your trip**
+    - What to bring
+    - Travelling with kids
+    - Free cancellation
+    - [Book this trip](#)
+    - ![Lake Braies](images/landing/tour-lake.webp)
+    - ![Boat](images/landing/tour-boat.webp)
+    - ![Balloons](images/landing/tour-balloons.webp)
+    - ![Beach](images/landing/tour-beach.webp)
+    - ![Road](images/landing/tour-road.webp)
+  - **Software** {code}
+    - `docs.acme.health`
+    - `#6d5efc`
+    - `#1e1b4b`
+    - `#f59e0b`
+    - `Inter`
+    - **Acme Health**
+    - **Get started**
+    - **Introduction** — Acme Health books appointments, sends reminders and takes payments for your clinic. Set it up in ten minutes.
+    - Quickstart
+    - Free cancellation
+    - **Guides**
+    - Booking rules
+    - Payments
+    - Reminders
+    - **Reference**
+    - API reference
 
 - **It gets you found and cited** — Pages built to rank on Google and to be quoted by ChatGPT, Perplexity and Claude, checked against 299 published rules. {badge:SEO & GEO} {tags}
 
@@ -104,6 +197,11 @@ They find the **fastest win** and **ship it as a pull request**.
   - **Explain a traffic drop** — Weekly · finds the pages that lost readers {trending-down} {schedule} {badge:SEO}
   - **Do AI engines cite you** — Weekly · fixes why ChatGPT cites others {sparkles} {schedule} {badge:GEO}
   - **Answer what the chat could not** — A question went unanswered · writes it {message-circle-question} {event} {badge:Support}
+  - **Beat a rival's new page** — Daily · answers it before it ranks {swords} {schedule} {badge:Market}
+  - **Fix what went stale** — On every merge · rewrites pages the code changed {file-pen} {github} {badge:Accuracy}
+  - **Fill a search gap** — Weekly · writes the page people search for {search} {schedule} {badge:SEO}
+  - **Translate new pages** — A page was published · ships it in 12 languages {languages} {event} {badge:Global}
+  - **Grow the page that sells** — Weekly · sharpens the page closest to a sale {wallet} {schedule} {badge:Revenue}
 
 <!-- /widget -->
 
