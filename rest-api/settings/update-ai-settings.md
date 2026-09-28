@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/update_ai_settings`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `ai_enabled` | boolean | no | Enable or disable the AI chatbot |
 | `ai_provider` | string | no | One of: `openrouter`, `openai`, `gemini`, `anthropic`, `vercel-ai-gateway`. |
 | `ai_api_key` | string | no | API key for the AI provider |

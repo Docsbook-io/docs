@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/search_docs`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `query` | string | yes | What to find. For 'text'/'grep' a phrase or pattern; for 'symbol' a heading hint; for 'paths' a glob. |
 | `mode` | string | no | Search mode (default 'text'). |
 | `path_prefix` | string | no | Optional: restrict 'text'/'grep' results to files under this path prefix. |

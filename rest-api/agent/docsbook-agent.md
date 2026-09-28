@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/docsbook_agent`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `request` | string | no | What you want, in the user's own words, in any language. Say the GOAL and the evidence for it ('support keeps asking how to rotate keys'), not a list of steps — the agent decides the steps. Naming the project here also lets workspace_id be omitted. |
 | `label` | string | no | Short name for this job in the list, e.g. 'API reference pass'. |
 

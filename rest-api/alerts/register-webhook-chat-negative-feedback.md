@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/register_webhook_chat_negative_fee
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `url` | string | no | HTTPS endpoint to receive POST callbacks |
 | `secret` | string | no | Optional shared secret (>=16 chars). One is generated if omitted. |
 | `auth_header` | string | no | Optional Authorization header value sent verbatim on delivery, e.g. 'Bearer sk-…' for endpoints that require auth (Claude Code routine fire URLs). |

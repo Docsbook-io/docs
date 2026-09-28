@@ -16,6 +16,10 @@ Stop a Docsbook agent job. Work already committed stays — stopping is not an u
 | `task_id` | string | yes | The job to stop. |
 | `reason` | string | no | Why, for the record. |
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

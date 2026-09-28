@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/set_chat_system_prompt`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `system_prompt` | string | no | Custom system prompt text. Pass empty string to clear. |
 
 ### Returns

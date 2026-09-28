@@ -28,6 +28,10 @@ Search the Docsbook widget catalog for an interactive UI widget matching the use
 
 - Use this to discover available widgets (e.g.
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

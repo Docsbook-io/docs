@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/set_doc_status`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `path` | string | no | The page: a repo file path ('specs/auth.md') or its URL slug ('specs/auth'). |
 | `status` | string | no | The status to move it to. One of: `generated`, `draft`, `review`, `approved`, `locked`, `deprecated`, `archived`. |
 | `version` | string | no | Optional explicit version, e.g. '1.0' when a draft becomes the first real release. Omit to keep the page's current version — a status change is not an edit. |

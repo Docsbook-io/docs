@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/write_docs`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `files` | object[] | no | Files to write in full. Committed together with `operations` as a single commit. Optional only when `operations` is given. |
 | `operations` | string[] | no | Structural changes — deletes, moves and renames — applied in the same commit as `files`, in the order given. |
 | `message` | string | no | Commit message (default: 'docs: update via Docsbook MCP'). |

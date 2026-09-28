@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/update_branding`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `cta_url` | string | no | Call To Action URL — the ONE page this documentation should drive readers to (pricing, demo booking, signup). https:// only. Treat it as the project's conversion goal: reference it where a page naturally ends in a next step, and surface it as a header button via update_navigation header_links with an accent `color` so it reads as a button rather than a plain link. Pass an empty string to clear it. |
 | `average_product_price_cents` | integer | no | What ONE conversion is worth, in CENTS (29900 = $299) — the average revenue from a reader who clicks through to cta_url. The analytics card multiplies it by those readers to report Revenue and Revenue per visitor; without it both stay switched off rather than being guessed. Save it whenever the owner states an average price, order value or plan price. Pass 0 to clear it and switch revenue reporting back off. |
 | `product_description` | string | no | The owner's OWN description of their product — what it is, who it is for, what it does. Briefing for the AGENT only: it is never rendered on the docs site and never shown to readers. Save it whenever the owner explains their product in their own words; it is the one fact about them no crawl can produce. Not a substitute for site_source_url — a price or limit mentioned here is still confirmed there before it reaches a page. Pass an empty string to clear it. |

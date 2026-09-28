@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/docsbook_agent_tasks`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `limit` | number | no | How many, 1-100. Default 20. |
 
 ### Returns

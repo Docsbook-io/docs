@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/update_ui_settings`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `show_search_button` | boolean | no | The search button in the site header. |
 | `show_search_in_sidebar` | boolean | no | The search box at the top of the left sidebar. |
 | `sidebar_collapse_top_folders` | boolean | no | First-level sidebar folders become collapsible rows (chevron + name, fold on click, open by themselves around the current page) like second-level folders, instead of always-open uppercase section headings. Their pages stay flush left — no indent and no guide line, which remain the look of the second level. Off by default. |

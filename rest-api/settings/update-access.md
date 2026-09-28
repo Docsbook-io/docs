@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/update_access`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `visibility` | string | no | Whether the workspace requires unlocking to read One of: `public`, `private`. |
 | `password` | string | no | Shared unlock password (min 8 chars), or null to remove password unlock |
 | `sso` | string | no | Bring-your-own OIDC identity provider config, or null to remove SSO unlock |

@@ -21,6 +21,10 @@ WHAT CAN DOCSBOOK DO, AND WHAT SHOULD I DO NEXT — ask this tool, never your ow
 - 🔴 CALL IT FIRST, BEFORE PLANNING OR ANSWERING, whenever the subject is Docsbook itself: 'what can I do here', 'what is Docsbook', 'what does it do', 'what can it do for me', 'what should I do now', 'what do I do next', 'how do I start', 'is X possible', 'can Docsbook do X', 'how does X work', 'how do I turn X on', 'what does this setting do', 'what does my plan include', 'what does it cost', 'why is it behaving like this', «что умеет Docsbook», «что я могу сделать», «что делать дальше», «с чего начать», «как настроить», «сколько стоит», «а можно ли».
 - 🔴 THIS IS DOCSBOOK THE PLATFORM'S OWN MANUAL, NOT THE USER'S DOCUMENTATION — not the workspace you are connected to, not the project this server is scoped to.
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

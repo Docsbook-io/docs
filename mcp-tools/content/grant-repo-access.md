@@ -38,6 +38,10 @@ Whether Docsbook can COMMIT to a GitHub repository — and, when it cannot, the 
 - 🔴 `can_write: true` is not the whole answer — read `works_unattended`.
 - A repository reachable only through a signed-in browser session cannot be published to by an agent, a schedule or an MCP client, which is every caller on this side of the wire: that case reports `route: "your_session"` and still carries a `fix`.
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

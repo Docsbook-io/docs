@@ -36,6 +36,10 @@ Connect a repository, a website or a single page as a SOURCE OF TRUTH for this d
 
 - REQUIRES a read-write MCP token.
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

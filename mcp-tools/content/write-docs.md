@@ -46,6 +46,10 @@ Write, delete, move and rename markdown documentation files — this is how a si
 - This call can never produce `approved` or `locked`, whatever the frontmatter you send says: approving your own output in the same breath as writing it is the one thing the lifecycle exists to prevent.
 - REQUIRES a read-write MCP token — a read-only token gets a READ_ONLY_TOKEN error.
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

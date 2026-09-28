@@ -33,6 +33,10 @@ The goals and funnels defined for this workspace, with what each one MATCHES. A 
 - 🔴 AN EMPTY LIST IS NOT A MISSING GOAL.
 - Never ask the owner to declare a goal, and never create a page-view goal to stand in for being found: decompose the standing goal instead (list_opportunities, add_direction).
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

@@ -25,6 +25,10 @@ FIND A DOCUMENTATION PAGE — start here, and this is the FIRST call for any que
 
 - Do NOT start by listing the outline, grepping or globbing files, or opening pages one by one to look for the answer: that downloads and reads the whole site, takes many times longer and answers worse than one call here.
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

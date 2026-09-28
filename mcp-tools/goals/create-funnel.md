@@ -27,6 +27,10 @@ Define an ORDERED route through the docs, as a list of goal names. Order is the 
 | `funnel` | object | — |
 | `issues` | object[] | — |
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

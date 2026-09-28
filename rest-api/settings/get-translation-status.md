@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/get_translation_status`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `languages` | string[] | no | ISO codes to report on (default: every language switched on for this project) |
 
 ### Returns

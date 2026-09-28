@@ -56,6 +56,10 @@ Configure the AI chatbot. Returns upgrade info for FREE workspaces.
 
 - REQUIRES PRO plan.
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

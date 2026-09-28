@@ -27,6 +27,10 @@ List your Docsbook documentation projects — one line each: id, repo, name, liv
 | `workspaces` | object[] | { id, repoFullName, customName, site_url, customDomain, plan, visibility, aiEnabled, lastPublishedAt, lastUsedAt, createdAt, publish_mismatch_warning?, site_url_collision_warning? }. |
 | `note` | string | — |
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/list_context`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `folder` | string | no | One folder only. Omitted lists all eight, which is what a run starting up wants. |
 | `include_retired` | string | no | Also list what was retired — a rejected claim is the expensive half of what a project knows. Off by default. |
 

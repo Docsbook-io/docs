@@ -20,6 +20,10 @@ Talk to the Docsbook agent about a job that is still open — answer a question 
 
 - Only for a job that is still open; a finished one is finished, start a new one with `docsbook_agent`.
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

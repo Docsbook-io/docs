@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/read_source`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `source_id` | string | no | The source's `id` from list_sources, exactly as written — a number, or "workspace_repo" / "site_source". |
 | `match` | string | no | Part of the source's label or URL, when you do not have its id (e.g. 'github', 'acme.com'). |
 | `path` | string | no | A file path inside a repository source, or a page path ('/pricing') on a website source. Omit to list/scan the whole source. |

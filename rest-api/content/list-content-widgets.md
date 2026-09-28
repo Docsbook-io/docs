@@ -19,7 +19,7 @@ Also reachable by name at `POST /api/v1/tools/list_content_widgets`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `name` | string | no | Return only this widget (e.g. 'cards'). Omit to list every content widget. |
 
 ### Returns

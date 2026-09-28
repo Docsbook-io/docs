@@ -41,6 +41,10 @@ Move ONE documentation page through its lifecycle — the call for 'this spec is
 - `write_docs` cannot set them, so an agent can never approve its own output as part of writing it.
 - REQUIRES a read-write MCP token.
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

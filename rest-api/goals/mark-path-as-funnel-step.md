@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/mark_path_as_funnel_step`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `path` | string | no | The doc path, e.g. '/docs/quickstart'. |
 | `funnel` | string | no | Funnel name to append the step to. Created if it does not exist. |
 | `position` | number | no | 0-based index to insert at. Appends when omitted. |

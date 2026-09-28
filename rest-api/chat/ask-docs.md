@@ -15,7 +15,7 @@ The call spends from the project owner's account balance — for a project in a 
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `question` | string | yes | What to ask the documentation. |
 | `currentPath` | string | no | The page the reader is on, so the answer can prefer nearby context. |
 | `lang` | string | no | Answer in this language. Defaults to the workspace's default language. |

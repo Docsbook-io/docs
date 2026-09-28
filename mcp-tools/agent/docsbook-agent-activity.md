@@ -21,6 +21,10 @@ WATCH THE DOCSBOOK AGENT WORK — the ordered timeline of what a job has actuall
 
 - USE THIS INSTEAD OF GUESSING.
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

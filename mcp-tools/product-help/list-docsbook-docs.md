@@ -24,6 +24,10 @@ List EVERY page of Docsbook's own official documentation — the product's full 
 
 - 🔴 This is Docsbook the platform's own manual, not the user's documentation — that is the project's own outline tool (`get_project_doc_outline` on the signed-in server, or the branded one a public endpoint names).
 
+### Authorization
+
+Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../../rest-api/README.md#get-your-key).
+
 ### MCP
 
 ```json

@@ -17,7 +17,7 @@ Also reachable by name at `POST /api/v1/tools/update_site_address`.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. |
+| `Authorization` | string | yes | Your API key, sent as `Authorization: Bearer dbk_YOUR_API_KEY`. [Get your API key](../README.md#get-your-key). |
 | `name` | string | no | The new name, as a person would write it — 'Acme API'. It becomes acme-api.docsbook.io. |
 
 ### Returns
