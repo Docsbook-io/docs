@@ -1,6 +1,8 @@
 ---
 title: "Docsbook FAQ: agents, SEO, AI answers and pricing"
 description: "Straight answers about Docsbook: what the AI agent does on its own, how docs get found on Google and cited by ChatGPT, what it costs, and who owns your content."
+status: generated
+version: "0.2"
 ---
 
 # FAQ
@@ -15,9 +17,17 @@ Short answers to what people ask before and after they publish, each linking to 
 
 Docsbook publishes your documentation and puts AI agents to work on it: they check the pages against 299 published rules, read what search engines, AI assistants and readers do, and ship improvements as pull requests. Start with the [quickstart](./quickstart.md).
 
+### How do I create a documentation site?
+
+Open [docsbook.io/connect](https://docsbook.io/connect), describe your product or paste your website, docs or repository link, and press **Generate**. The site is live as soon as you sign in, and the agent starts writing its first pages. The [quickstart](./quickstart.md#create-a-documentation-site) walks through each step.
+
 ### Do I need a GitHub account?
 
-No. Start from a template and Docsbook creates and hosts the repository for you; you need GitHub only to import a repository you already have. See [edit and publish](./site/editing.md).
+No. Describe your product or paste a link, sign in with Google or email, and Docsbook creates and hosts the repository for you. You need GitHub only to connect a repository you already have. See [where your site lives](./quickstart.md#where-does-your-site-live).
+
+### How is Docsbook different from Mintlify?
+
+Docsbook needs no `docs.json`: your folders become the sidebar. Pro is one price per project with AI usage included, and an agent ships improvements as pull requests. See [Mintlify vs Docsbook](./blog/compare/mintlify-vs-docsbook.md) and [GitBook vs Docsbook](./blog/compare/gitbook-vs-docsbook.md).
 
 ### Can I bring the docs I already have?
 
