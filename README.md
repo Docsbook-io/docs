@@ -60,55 +60,116 @@ Describe your product or paste a link. The agent writes your docs and keeps them
 
 <!-- widget:bento scroll -->
 
-- **Tell it about your product** — Any business: a sentence, your website, a PDF is enough. The agent reads it, studies your market and your rivals, and comes back with money you are leaving on the table. {badge:Brief} {scene:chat}
+- **Tell it about your product** — Any business: a sentence, your website, a repo or a PDF is enough. The agent reads it, studies your market and your rivals, and comes back with money you are leaving on the table. {badge:Brief} {scene:chat}
 
+  - **Software** {code}
+    - **You** — We're Northstack — edge hosting, Postgres, email. Code: `github.com/northstack`.
+    - **Agent** — Reading the repo · 186 endpoints, 3 SDKs {folder-git-2} {tool}
+    - **Agent** — Taking your brand · `#0ea5e9` `#0f172a` Inter {palette} {tool}
+    - **Agent** — Checking Google and Bing · 9,900 dev searches {tool}
+    - **Agent** — Asking ChatGPT and Gemini · they name 3 rivals {tool}
+    - **Agent** — Reading 2,300 issues · “add a domain?” ×148 {message-circle-question} {tool}
+    - **Agent** — Comparing rivals' docs · quickstarts, playground {swords} {tool}
+    - **Agent** — **+$18,400 MRR** · 460 self-serve teams at $40 {win}
+    - **Agent** — 148 issues ask how to add a domain. I'm writing the quickstart, that guide and the API reference first.
   - **Apartments** {house}
     - **You** — We rent 24 apartments by the sea in Lisbon. Our site is `casamar.pt`.
     - **Agent** — Reading your site · 24 apartments, 318 photos {globe} {tool}
     - **Agent** — Taking your brand · `#0f766e` `#f59e0b` Fraunces {palette} {tool}
-    - **Agent** — Checking Google and Bing · 8,100 searches for Lisbon apartments {tool}
-    - **Agent** — Asking ChatGPT, Perplexity and Gemini · they send guests to Booking.com {tool}
-    - **Agent** — Reading 412 guest reviews · "are pets OK?" asked 37 times {star} {tool}
-    - **Agent** — Comparing rivals' sites · 5 with galleries and a FAQ {swords} {tool}
-    - **Agent** — Pricing the gap · €140 a night, 4 nights a stay {calculator} {tool}
-    - **Agent** — **+€9,800 a month** · direct bookings from pet owners {win}
-    - **Agent** — 2,600 people a month look for a pet-friendly stay in Lisbon. You allow pets and never say so — I'm building those pages first, photos included.
+    - **Agent** — Checking Google and Bing · 8,100 searches {tool}
+    - **Agent** — Asking ChatGPT and Gemini · they name Booking.com {tool}
+    - **Agent** — Reading 412 reviews · “are pets OK?” ×37 {star} {tool}
+    - **Agent** — Comparing rivals' sites · galleries and a FAQ {swords} {tool}
+    - **Agent** — **+€9,800 a month** · pet owners, €140 a night {win}
+    - **Agent** — You allow pets and never say so — 2,600 people a month search for it. Those pages go up first, with photos.
   - **Restaurant** {utensils}
-    - **You** — We run a Mediterranean restaurant in Austin. Our site is `oliveandthyme.com`.
-    - **Agent** — Reading your site and menus · 64 dishes, 2 menus as PDF {utensils} {tool}
+    - **You** — We run a Mediterranean restaurant in Austin: `oliveandthyme.com`.
+    - **Agent** — Reading your site · 64 dishes, 2 PDF menus {utensils} {tool}
     - **Agent** — Taking your brand · `#9a3412` `#78350f` Playfair {palette} {tool}
-    - **Agent** — Checking Google · 5,400 searches for brunch and private dining {tool}
-    - **Agent** — Asking ChatGPT and Perplexity · they recommend 3 places, not you {tool}
-    - **Agent** — Reading 860 reviews · "gluten-free?" asked 52 times {star} {tool}
-    - **Agent** — Comparing rivals' sites · menus with photos and prices {swords} {tool}
-    - **Agent** — Pricing the gap · $62 average bill {calculator} {tool}
-    - **Agent** — **+$7,300 a month** · private dining bookings {win}
-    - **Agent** — 1,200 people a month look for a private room for 20. You have one, and your site hides it in a PDF — its page goes up first, with photos.
+    - **Agent** — Checking Google · 5,400 brunch searches {tool}
+    - **Agent** — Asking ChatGPT and Perplexity · 3 places, not you {tool}
+    - **Agent** — Reading 860 reviews · “gluten-free?” ×52 {star} {tool}
+    - **Agent** — Comparing rivals' sites · menus with photos {swords} {tool}
+    - **Agent** — **+$7,300 a month** · private dining, $62 a head {win}
+    - **Agent** — 1,200 people a month want a private room for 20. Yours hides in a PDF — its page goes up first, with photos.
   - **Tours** {mountain}
-    - **You** — We run small-group trips — the Dolomites, Cappadocia, the Maldives. Our site is `wanderco.travel`.
-    - **Agent** — Reading your site · 18 trips, 540 photos, 3 languages {globe} {tool}
+    - **You** — We run small-group trips in the Dolomites and beyond: `wanderco.travel`.
+    - **Agent** — Reading your site · 18 trips, 540 photos {globe} {tool}
     - **Agent** — Taking your brand · `#0369a1` `#0c4a6e` Poppins {palette} {tool}
-    - **Agent** — Checking Google and Bing · 12,000 searches for Lake Braies tours {tool}
-    - **Agent** — Asking ChatGPT, Perplexity and Gemini · they list GetYourGuide, not you {tool}
-    - **Agent** — Reading 1,240 reviews · "is it OK for kids?" asked 64 times {star} {tool}
-    - **Agent** — Comparing rivals' sites · day-by-day plans with maps and photos {swords} {tool}
-    - **Agent** — Pricing the gap · €180 a seat {calculator} {tool}
-    - **Agent** — **+€11,200 a month** · direct bookings from families {win}
-    - **Agent** — 3,400 people a month plan a family trip to Lake Braies. Your trips take kids from 6, and no page says so — I'm writing it first, with the photos.
+    - **Agent** — Checking Google and Bing · 12,000 searches {tool}
+    - **Agent** — Asking ChatGPT and Gemini · they list GetYourGuide {tool}
+    - **Agent** — Reading 1,240 reviews · “OK for kids?” ×64 {star} {tool}
+    - **Agent** — Comparing rivals' sites · day-by-day plans {swords} {tool}
+    - **Agent** — **+€11,200 a month** · families, €180 a seat {win}
+    - **Agent** — 3,400 families a month plan Lake Braies. Your trips take kids from 6 and no page says so — that one goes first.
+
+- **Connect the tools you already use** — GitHub, Notion, Google Sheets and Drive, Telegram, Slack. The agent reads them, keeps every page in step with them and sets its own triggers — and your team gets a second memory that answers from them. {badge:Connectors} {scene:chat}
+
   - **Software** {code}
-    - **You** — We make scheduling software for clinics. Our site is `acme.health`.
-    - **Agent** — Reading your site · 38 pages, 3 plans, 40 help articles {globe} {tool}
-    - **Agent** — Taking your brand · `#6d5efc` `#1e1b4b` Inter {palette} {tool}
-    - **Agent** — Checking Google and Bing · 214 searches for clinic booking {tool}
-    - **Agent** — Asking ChatGPT, Perplexity and Gemini · they name 3 rivals, not you {tool}
-    - **Agent** — Reading rivals' docs · Calendly, Cal.com, Jane {swords} {tool}
-    - **Agent** — Mining support questions · 40 asked, 12 never answered {message-circle-question} {tool}
-    - **Agent** — Pricing the gap · $280 average order {calculator} {tool}
-    - **Agent** — **+$8,400 a month** · is on the table {win}
-    - **Agent** — 3,100 people a month ask if they can cancel for free before they book. Only your rivals answer — I'm writing those pages first.
+    - **You** — I connected GitHub. Keep the docs in step with the code, and answer my team from it.
+    - **Agent** — Connected GitHub · platform, sdk-js, cli, rfcs {logos:github-icon} {tool}
+    - **Agent** — Reading `rfcs/` · 61 specs, 9 not in the docs {file-text} {tool}
+    - **Agent** — Mapping `openapi.yaml` · 186 endpoints, 42 pages {braces} {tool}
+    - **Agent** — Trigger: merge to `main` · rewrites touched pages {git-merge} {tool}
+    - **Agent** — Trigger: a release · changelog, migration guide {rocket} {tool}
+    - **Agent** — **0 stale pages** · docs follow every merge {win}
+    - **Agent** — From now on, every merge to `main` rewrites the pages it touches, and every release gets its changelog. Ask me anything about Northstack — I answer from your repos.
+    - **You** — How do preview deploys pick their region?
+    - **Agent** — Searching your repos · platform, rfcs {search} {tool}
+    - **Agent** — Reading `0042-preview-regions.md` · shipped in v3.8 {file-text} {tool}
+    - **Agent** — Next to the branch's database: a preview runs in its region, or in `us-east` when the branch has none. From RFC 0042, shipped in v3.8.
+  - **Apartments** {house}
+    - **You** — I connected Notion — the apartments, prices and house rules are there. Take them from there and keep the site up to date.
+    - **Agent** — Connected Notion · 3 databases, 24 apartments {simple-icons:notion} {tool}
+    - **Agent** — Reading prices · 11 changes this season {tag} {tool}
+    - **Agent** — Reading house rules · pets, check-in, parking {scroll-text} {tool}
+    - **Agent** — Trigger: a price changes · page and FAQ, 12 languages {languages} {tool}
+    - **Agent** — Trigger: a new apartment · its page, the same day {house-plus} {tool}
+    - **Agent** — **0 stale prices** · 24 apartments, 12 languages {win}
+    - **Agent** — From now on, when a price or a rule changes in Notion, the page and the FAQ follow in every language — and a new apartment gets its page the same day.
+  - **Restaurant** {utensils}
+    - **You** — Our menu lives in Google Sheets and holiday hours in Google Calendar. Take them from there.
+    - **Agent** — Connected Google Sheets · 64 dishes, 14 allergens {simple-icons:googlesheets} {tool}
+    - **Agent** — Connected Google Calendar · 3 holiday closures {calendar} {tool}
+    - **Agent** — Checking allergens · 9 dishes unlabelled {wheat} {tool}
+    - **Agent** — Trigger: menu edited · dishes, prices, allergens {refresh-cw} {tool}
+    - **Agent** — Trigger: a holiday is set · hours on every page {calendar-clock} {tool}
+    - **Agent** — **0 wrong prices** · menu, allergens and hours {win}
+    - **Agent** — From now on, change a dish in the sheet or add a holiday to the calendar — the menu, the allergens and your hours follow on every page.
+  - **Tours** {mountain}
+    - **You** — Departures and seats are in Google Sheets, and guides drop photos into Google Drive. Keep the trips right.
+    - **Agent** — Connected Google Sheets · 42 departures, seats left {simple-icons:googlesheets} {tool}
+    - **Agent** — Connected Google Drive · 1,900 guide photos {logos:google-drive} {tool}
+    - **Agent** — Trigger: a departure sells out · next date shown {calendar-check} {tool}
+    - **Agent** — Trigger: new photos in Drive · to the trip's gallery {images} {tool}
+    - **Agent** — Trigger: a guide on Telegram · weather notice up {logos:telegram} {tool}
+    - **Agent** — **0 sold-out dead ends** · every trip shows a date {win}
+    - **Agent** — From now on, a sold-out departure points to the next date, new photos land in the gallery, and a guide's weather call reaches the trip page in minutes.
 
 - **It builds your site in your brand** — Photos and galleries, navigation, search, AI chat and your own domain — in the logo, colours and type from your website. Every page is written for you and lands as a change you can review. {badge:Site} {scene:browser}
 
+  - **Software** {code}
+    - `docs.northstack.dev`
+    - `#0ea5e9`
+    - `#0f172a`
+    - `#f59e0b`
+    - `Inter`
+    - **Northstack**
+    - **Get started**
+    - **Quickstart** — Deploy an app to the edge, attach a Postgres database and send your first email — in five minutes.
+    - Custom domains
+    - Preview deploys
+    - **API reference**
+    - Deployments
+    - Databases
+    - Email
+    - **SDKs**
+    - JavaScript
+    - Python
+    - Go
+    - **Resources**
+    - Changelog
+    - Migration guides
   - **Apartments** {house}
     - `casamar.pt`
     - `#0f766e`
@@ -172,23 +233,6 @@ Describe your product or paste a link. The agent writes your docs and keeps them
     - ![Balloons](images/landing/tour-balloons.webp)
     - ![Beach](images/landing/tour-beach.webp)
     - ![Road](images/landing/tour-road.webp)
-  - **Software** {code}
-    - `docs.acme.health`
-    - `#6d5efc`
-    - `#1e1b4b`
-    - `#f59e0b`
-    - `Inter`
-    - **Acme Health**
-    - **Get started**
-    - **Introduction** — Acme Health books appointments, sends reminders and takes payments for your clinic. Set it up in ten minutes.
-    - Quickstart
-    - Free cancellation
-    - **Guides**
-    - Booking rules
-    - Payments
-    - Reminders
-    - **Reference**
-    - API reference
 
 - **It gets you found and cited** — Pages built to rank on Google and to be quoted by ChatGPT, Perplexity and Claude, checked against 299 published rules. {badge:SEO & GEO} {tags}
 
@@ -211,7 +255,7 @@ Describe your product or paste a link. The agent writes your docs and keeps them
   - **Win back lost traffic** — Weekly · rewrites the pages that lost readers {trending-down} {schedule} {badge:SEO} {gain:+$1,100/mo}
   - **Match a rival's price change** — Daily · updates your comparison when theirs moves {tag} {schedule} {badge:Market} {gain:+$900/mo}
   - **Fill a search gap** — Weekly · writes the page people search for {search} {schedule} {badge:SEO} {gain:+$700/mo}
-  - **Launch a new product the same day** — A product was added · page, photos and FAQ ready to sell {rocket} {event} {badge:Launch}
+  - **Launch a product the same day** — A product was added · page, photos and FAQ ready to sell {rocket} {event} {badge:Launch}
   - **Answer what reviews keep asking** — New reviews · turns repeat questions into pages {star} {event} {badge:Reviews}
   - **Translate new pages** — A page was published · ships it in 12 languages {languages} {event} {badge:Global}
   - **Catch a broken page first** — Hourly · fixes dead links and missing photos before buyers see them {shield-check} {schedule} {badge:Health}
