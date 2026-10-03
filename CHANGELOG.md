@@ -10,6 +10,14 @@ version: "0.12"
 
 New features, improvements and bug fixes in Docsbook — newest first. Each update has its own page; filter by type or by the part of the product it touches.
 
+## 2026-10-04 — A faster chat
+
+The Docsbook chat now responds about 20% faster.
+
+### Improvements
+
+- **Chat is about 20% faster.** Replies start and finish sooner, so working with the agent in the chat feels more responsive. `Chat`
+
 ## 2026-09-28 — A front page that shows the product at work
 
 The docsbook.io home page now opens on the Growth panel itself, walks a visitor through what the agent does from a brief to results, and ends where a project starts: one field and Generate.
